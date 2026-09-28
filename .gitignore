@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+*.gguf
+.env
+unsloth_compiled_cache/
+.mlx/
+.DS_Store
+*.safetensors
+/checkpoints/
+Modelfile

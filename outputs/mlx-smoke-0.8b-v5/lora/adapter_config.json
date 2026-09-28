@@ -1,0 +1,19 @@
+{
+  "fine_tune_type": "lora",
+  "num_layers": 24,
+  "model": "Qwen/Qwen3.5-0.8B",
+  "lora_parameters": {
+    "rank": 16,
+    "scale": 1.0,
+    "dropout": 0.0,
+    "keys": [
+      "mlp.down_proj",
+      "mlp.gate_proj",
+      "mlp.up_proj",
+      "self_attn.k_proj",
+      "self_attn.o_proj",
+      "self_attn.q_proj",
+      "self_attn.v_proj"
+    ]
+  }
+}

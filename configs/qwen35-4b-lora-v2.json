@@ -1,0 +1,20 @@
+{
+  "_comment": "v2 data (best so far) with a bf16 base (LoRA, not QLoRA). v4's agent-written additions did not help (4b-v4 ~= 4b-v2 on wild/e2e, -4 to -6 on test-v2/para), and bf16 LoRA beat QLoRA on v1 data.",
+  "base_model": "Qwen/Qwen3.5-4B",
+  "hf_tokenizer": "Qwen/Qwen3.5-4B",
+  "ollama_template_from": "qwen3.5:4b",
+  "instruction_part": "<|im_start|>user\n",
+  "response_part": "<|im_start|>assistant\n",
+  "max_seq_len": 4608,
+  "lora_r": 16,
+  "lora_alpha": 16,
+  "epochs": 2,
+  "lr": 0.0002,
+  "batch_size": 2,
+  "grad_accum": 8,
+  "seed": 3407,
+  "train": "data/generated/train.jsonl",
+  "val": "data/generated/val.jsonl",
+  "out": "outputs/qwen35-4b-lora-v2",
+  "load_in_4bit": false
+}

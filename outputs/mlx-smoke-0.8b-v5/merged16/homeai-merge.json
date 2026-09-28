@@ -1,0 +1,9 @@
+{
+  "base_model": "Qwen/Qwen3.5-0.8B",
+  "adapter": "outputs/mlx-smoke-0.8b-v5/lora",
+  "merged_weights": 96,
+  "scale": 1.0,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "Apple GPU (Metal); a Docker speech-to-text job (10 CPUs, 7 GB) shares this machine: latency indicative only, not comparable with the CUDA boxes"
+}

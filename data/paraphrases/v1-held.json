@@ -1,0 +1,4154 @@
+{
+ "is the {device} on in the {room}": [
+  "is the {room} {device} on right now"
+ ],
+ "is the {room} {device} running": [
+  "did we leave the {room} {device} running"
+ ],
+ "is the {room} window open": [
+  "did we leave the {room} window open"
+ ],
+ "did the {room} {device} close": [
+  "has the {room} {device} closed"
+ ],
+ "is the window open in the {room}": [
+  "did we leave a window open in the {room}"
+ ],
+ "are the {room} {device} closed": [
+  "have the {room} {device} been closed"
+ ],
+ "did we leave the {room} window open": [
+  "was the {room} window left open"
+ ],
+ "did i leave the {room} {device} on": [
+  "is the {room} {device} still on"
+ ],
+ "what temperature is the {room}": [
+  "what's the {room} sitting at temperature wise"
+ ],
+ "are the {device} open in the {room}": [
+  "have the {device} in the {room} been left open"
+ ],
+ "did i leave the {room} light on": [
+  "have i left the light on in the {room}"
+ ],
+ "what's on the tv": [
+  "what's the tv tuned to"
+ ],
+ "what's the temperature in the {room}": [
+  "what's it sitting at in the {room}"
+ ],
+ "is the alarm armed": [
+  "is the security system armed"
+ ],
+ "how cold is it in the {room}": [
+  "how chilly is the {room}"
+ ],
+ "is the {room} tv on": [
+  "is the {room} television running"
+ ],
+ "is the light on in the {room}": [
+  "did we leave a light on in the {room}"
+ ],
+ "is the alarm set": [
+  "has the alarm been set"
+ ],
+ "what's the alarm set to": [
+  "what's the alarm set at"
+ ],
+ "did i lock the {device}": [
+  "is the {device} locked"
+ ],
+ "is the heating on": [
+  "is the heater running"
+ ],
+ "is the {device} locked or not": [
+  "is the {device} locked"
+ ],
+ "is anything playing on the tv": [
+  "is something on the telly"
+ ],
+ "how warm is the {room}": [
+  "how toasty is the {room}"
+ ],
+ "is the alarm on": [
+  "is the alarm active"
+ ],
+ "what's the aircon doing": [
+  "is the aircon running"
+ ],
+ "is the {device} locked": [
+  "is the {device} locked up"
+ ],
+ "are any lights on in the {room}": [
+  "is there a light on in the {room}"
+ ],
+ "is the {room} {device} on": [
+  "has the {room} {device} been turned on"
+ ],
+ "what's the thermostat set to": [
+  "what's the thermostat on"
+ ],
+ "check the {device} for me": [
+  "give the {device} a check"
+ ],
+ "are the {room} {device} on": [
+  "is the {room} {device} on"
+ ],
+ "what's the heating set to": [
+  "what's the heating on"
+ ],
+ "are the {room} lights on": [
+  "did we leave the {room} lights on"
+ ],
+ "is the tv on": [
+  "did we leave the tv on"
+ ],
+ "is the {room} closed": [
+  "did we close the {room}"
+ ],
+ "is the {room} {device} locked": [
+  "did i lock the {room} {device}"
+ ],
+ "check the {room} {device} for me": [
+  "can you check the {room} {device}"
+ ],
+ "is the garage closed": [
+  "did we close the garage"
+ ],
+ "did i lock the {room} {device}": [
+  "is the {room} {device} secured"
+ ],
+ "did i close the garage": [
+  "is the garage door down"
+ ],
+ "is the {device} shut": [
+  "has the {device} been closed"
+ ],
+ "is the {room} {device} locked or not": [
+  "is the {room} {device} secured or not"
+ ],
+ "is the garage open": [
+  "has the garage been left open"
+ ],
+ "how cold is it in {room}": [
+  "what's the temperature like in {room}"
+ ],
+ "are any {device} on in the {room}": [
+  "any {device} running in the {room}"
+ ],
+ "what's the temperature in {room}": [
+  "what's it sitting at in {room}"
+ ],
+ "is the {device} on in {room}": [
+  "has the {device} in {room} been left on"
+ ],
+ "did i close the {room}": [
+  "is the {room} shut up"
+ ],
+ "is the {room} fan running": [
+  "did we leave the {room} fan running"
+ ],
+ "is the {room} open": [
+  "has the {room} been left open"
+ ],
+ "are the {device} open in {room}": [
+  "have the {device} in {room} been left open"
+ ],
+ "is the window open in {room}": [
+  "is {room}'s window open"
+ ],
+ "is the light on in {room}": [
+  "is {room}'s light on"
+ ],
+ "are any lights on in {room}": [
+  "any lights on in {room}"
+ ],
+ "is the {room} {device} shut": [
+  "is the {device} in the {room} shut"
+ ],
+ "how warm is {room}": [
+  "how hot is {room}"
+ ],
+ "are any doors open": [
+  "did we leave a door open"
+ ],
+ "is everything locked": [
+  "is everything secured"
+ ],
+ "are the doors locked": [
+  "have the doors been locked"
+ ],
+ "are the doors shut": [
+  "did we shut the doors"
+ ],
+ "is the house locked up": [
+  "did we lock up the house"
+ ],
+ "is a {device} open somewhere": [
+  "did we leave a {device} open anywhere"
+ ],
+ "how warm is it inside": [
+  "how warm is the house"
+ ],
+ "which room is the warmest": [
+  "which room has the highest temperature"
+ ],
+ "give me the temperatures": [
+  "run me through the temperatures"
+ ],
+ "are we all locked up": [
+  "is everything locked"
+ ],
+ "what's the temperature around the house": [
+  "give me the temperatures around the house"
+ ],
+ "what lights did we leave on": [
+  "which lights did we leave on"
+ ],
+ "are any lights on": [
+  "did we leave any lights on"
+ ],
+ "which lights are on": [
+  "what's lit up right now"
+ ],
+ "is a door open somewhere": [
+  "did we leave a door open somewhere"
+ ],
+ "did we leave any windows open": [
+  "did we forget to shut any windows"
+ ],
+ "which room is coldest": [
+  "where's it coldest in the house"
+ ],
+ "any lights on in the house": [
+  "is a light on anywhere in the house"
+ ],
+ "are all the {device} shut": [
+  "is every {device} closed"
+ ],
+ "are any windows open": [
+  "is a window open somewhere"
+ ],
+ "which windows are open": [
+  "which windows did we leave open"
+ ],
+ "are all the windows shut": [
+  "are all the windows closed"
+ ],
+ "did we leave any {device} open": [
+  "did we forget to close any {device}"
+ ],
+ "are any {device} open": [
+  "any {device} left open"
+ ],
+ "what {device} did we leave on": [
+  "which {device} did we leave on"
+ ],
+ "which {device} are on": [
+  "what {device} are on"
+ ],
+ "which {device} are open": [
+  "what's open among the {device}"
+ ],
+ "any {device} on in the house": [
+  "is a {device} running anywhere in the house"
+ ],
+ "are any {device} on": [
+  "is a {device} on somewhere"
+ ],
+ "where's {person}": [
+  "do you know where {person}'s at"
+ ],
+ "do you know where {person} is": [
+  "where's {person}"
+ ],
+ "where is {person}": [
+  "whereabouts is {person}"
+ ],
+ "where's {person} right now": [
+  "do you know where {person}'s at right now"
+ ],
+ "find {person}": [
+  "see if you can find {person}"
+ ],
+ "any idea where {person} is": [
+  "any clue where {person} is"
+ ],
+ "where is ethan": [
+  "whereabouts is ethan"
+ ],
+ "where is ruby": [
+  "where's ruby"
+ ],
+ "do you know where max is": [
+  "any idea where max is"
+ ],
+ "where's nina": [
+  "has anyone seen nina"
+ ],
+ "do you know where josh is": [
+  "have you got a clue where josh is"
+ ],
+ "where's freya": [
+  "do you know where freya's at"
+ ],
+ "where's tom right now": [
+  "has anyone seen tom just now"
+ ],
+ "where is ben": [
+  "any idea where ben's got to"
+ ],
+ "where is priya": [
+  "whereabouts is priya"
+ ],
+ "where's harry right now": [
+  "any idea where harry is at the moment"
+ ],
+ "find noah": [
+  "track down noah for me"
+ ],
+ "where's lucy": [
+  "has anyone seen lucy"
+ ],
+ "where's jack right now": [
+  "any idea where jack is at the moment"
+ ],
+ "where is max": [
+  "whereabouts is max"
+ ],
+ "do you know where sam is": [
+  "do you happen to know where sam's at"
+ ],
+ "find max": [
+  "locate max"
+ ],
+ "find lucy": [
+  "see if you can find lucy"
+ ],
+ "where is zoe": [
+  "do you know where zoe is"
+ ],
+ "any idea where sophie is": [
+  "any clue where sophie is"
+ ],
+ "any idea where tom is": [
+  "do you know where tom is"
+ ],
+ "any idea where ruby is": [
+  "where's ruby"
+ ],
+ "do you know where ben is": [
+  "where's ben"
+ ],
+ "do you know where yuki is": [
+  "have you got a clue where yuki is"
+ ],
+ "any idea where amelia is": [
+  "where's amelia"
+ ],
+ "where's nina right now": [
+  "has anyone seen nina just now"
+ ],
+ "do you know where sophie is": [
+  "where's sophie"
+ ],
+ "where's ethan right now": [
+  "has anyone seen ethan just now"
+ ],
+ "any idea where grace is": [
+  "any clue where grace is"
+ ],
+ "where's marcus": [
+  "has anyone seen marcus"
+ ],
+ "where is josh": [
+  "where's josh"
+ ],
+ "do you know where jess is": [
+  "where's jess"
+ ],
+ "any idea where marcus is": [
+  "where's marcus"
+ ],
+ "where's noah": [
+  "has anyone seen noah"
+ ],
+ "where's peter right now": [
+  "do you know where peter's at right now"
+ ],
+ "where's owen right now": [
+  "has anyone seen owen just now"
+ ],
+ "do you know where hannah is": [
+  "do you happen to know where hannah's at"
+ ],
+ "where's mia right now": [
+  "where's mia got to right now"
+ ],
+ "any idea where kate is": [
+  "any clue where kate is"
+ ],
+ "do you know where ryan is": [
+  "any idea where ryan is"
+ ],
+ "find dan": [
+  "locate dan"
+ ],
+ "find charlie": [
+  "can you find charlie"
+ ],
+ "do you know where chloe is": [
+  "have you got a clue where chloe is"
+ ],
+ "do you know where alex is": [
+  "any idea where alex is"
+ ],
+ "where's ryan": [
+  "do you know where ryan's at"
+ ],
+ "find freya": [
+  "track down freya for me"
+ ],
+ "do you know where amelia is": [
+  "do you happen to know where amelia's at"
+ ],
+ "any idea where nathan is": [
+  "where's nathan"
+ ],
+ "where's jess": [
+  "whereabouts is jess"
+ ],
+ "where is tara": [
+  "where's tara"
+ ],
+ "do you know where leo is": [
+  "do you happen to know where leo's at"
+ ],
+ "where's charlie": [
+  "any idea where charlie is"
+ ],
+ "where's molly": [
+  "any idea where molly is"
+ ],
+ "do you know where molly is": [
+  "have you got a clue where molly is"
+ ],
+ "where is dan": [
+  "do you know where dan is"
+ ],
+ "where's max right now": [
+  "has anyone seen max just now"
+ ],
+ "do you know where jack is": [
+  "do you happen to know where jack's at"
+ ],
+ "any idea where josh is": [
+  "do you know where josh is"
+ ],
+ "do you know where kai is": [
+  "any idea where kai is"
+ ],
+ "where's marcus right now": [
+  "where's marcus got to right now"
+ ],
+ "where's hannah right now": [
+  "has anyone seen hannah just now"
+ ],
+ "where is grace": [
+  "where's grace"
+ ],
+ "where is liam": [
+  "any idea where liam's got to"
+ ],
+ "where's kai right now": [
+  "has anyone seen kai just now"
+ ],
+ "where's ben right now": [
+  "any idea where ben is at the moment"
+ ],
+ "where's ethan": [
+  "do you know where ethan's at"
+ ],
+ "find sam": [
+  "locate sam"
+ ],
+ "do you know where ella is": [
+  "any idea where ella is"
+ ],
+ "where is harry": [
+  "whereabouts is harry"
+ ],
+ "where's freya right now": [
+  "do you know where freya's at right now"
+ ],
+ "is {person} still in the {room}": [
+  "is {person} still hanging around the {room}"
+ ],
+ "is {person} in the {room}": [
+  "can you tell if {person}'s in the {room}"
+ ],
+ "has {person} gone to the {room}": [
+  "has {person} made it to the {room}"
+ ],
+ "is {person} still in {room}": [
+  "is {person} still hanging around {room}"
+ ],
+ "has {person} gone to {room}": [
+  "did {person} head to {room}"
+ ],
+ "is {person} in {room}": [
+  "has {person} got to {room}"
+ ],
+ "{device} on": [
+  "flick the {device} on"
+ ],
+ "turn on the {device}": [
+  "get the {device} on in here"
+ ],
+ "open the {device}": [
+  "open the {device}"
+ ],
+ "switch the {device} on": [
+  "fire up the {device}"
+ ],
+ "{device} off": [
+  "flick off the {device} in here"
+ ],
+ "switch the {device} off": [
+  "shut the {device} off"
+ ],
+ "close the {device}": [
+  "close the {device}"
+ ],
+ "turn off the {device}": [
+  "kill the {device}"
+ ],
+ "put the {device} on": [
+  "get the {device} on"
+ ],
+ "{device} up": [
+  "bump the {device} up"
+ ],
+ "lamp on": [
+  "can you turn the lamp on"
+ ],
+ "{device} down": [
+  "can you get the {device} down"
+ ],
+ "put the {device} off": [
+  "turn the {device} off"
+ ],
+ "switch the tv on": [
+  "turn the tv on for me"
+ ],
+ "turn on the lamp": [
+  "flick the lamp on"
+ ],
+ "switch the lamp on": [
+  "flip the lamp on"
+ ],
+ "turn on the tv": [
+  "get the telly going"
+ ],
+ "tv on": [
+  "get the tv going"
+ ],
+ "turn off the lamp": [
+  "can you turn the lamp off"
+ ],
+ "turn off the tv": [
+  "can you turn the tv off"
+ ],
+ "lamp off": [
+  "kill the lamp"
+ ],
+ "tv off": [
+  "switch the tv off"
+ ],
+ "switch the tv off": [
+  "can you switch off the tv"
+ ],
+ "switch the lamp off": [
+  "get the lamp switched off"
+ ],
+ "turn off the {device} in the {room}": [
+  "can you turn off the {device} in the {room}"
+ ],
+ "switch on the heater in the {room}": [
+  "can you switch the heater on in the {room}"
+ ],
+ "turn on the {device} in the {room}": [
+  "can you get the {device} going in the {room}"
+ ],
+ "close the {device} in the {room}": [
+  "pull the {device} shut in {room}"
+ ],
+ "turn on the tv in the {room}": [
+  "fire up the tv in the {room}"
+ ],
+ "open the {device} in the {room}": [
+  "crack open the {device} in the {room}"
+ ],
+ "turn off the tv in the {room}": [
+  "switch off the tv in the {room}"
+ ],
+ "switch on the {device} in the {room}": [
+  "turn on the {device} in the {room} for me"
+ ],
+ "start the {device} in the {room}": [
+  "get the {device} going in the {room}"
+ ],
+ "turn on the heater in the {room}": [
+  "flick the heater on in the {room}"
+ ],
+ "start the heater in the {room}": [
+  "fire the heater up in the {room}"
+ ],
+ "start the tv in the {room}": [
+  "get the tv going in the {room}"
+ ],
+ "turn off the heater in the {room}": [
+  "switch off the heater in the {room}"
+ ],
+ "start the dishwasher": [
+  "get the dishwasher going"
+ ],
+ "switch on the irrigation": [
+  "flick the irrigation on"
+ ],
+ "switch on the tv in the {room}": [
+  "can you switch the tv on in the {room}"
+ ],
+ "open the garage {device}": [
+  "can you open the garage {device}"
+ ],
+ "start the ev charger": [
+  "can you start the ev charger"
+ ],
+ "turn off the hot tub": [
+  "shut the hot tub down"
+ ],
+ "turn on the pond pump": [
+  "switch on the pond pump"
+ ],
+ "open the garage": [
+  "can you open the garage"
+ ],
+ "start the sauna": [
+  "get the sauna going"
+ ],
+ "turn off the fan in the {room}": [
+  "switch off the fan in the {room}"
+ ],
+ "switch on the vacuum": [
+  "get the vacuum going"
+ ],
+ "switch on the sprinklers": [
+  "start up the sprinklers"
+ ],
+ "switch on the pool pump": [
+  "can you turn the pool pump on"
+ ],
+ "switch on the fan in the {room}": [
+  "get the fan going in the {room}"
+ ],
+ "turn off the sprinklers": [
+  "switch off the sprinklers"
+ ],
+ "turn on the ev charger": [
+  "get the ev charger going"
+ ],
+ "turn off the pond pump": [
+  "kill the pond pump"
+ ],
+ "turn off the ev charger": [
+  "can you turn the ev charger off"
+ ],
+ "turn off the vacuum": [
+  "can you turn the vacuum off"
+ ],
+ "turn on the dishwasher": [
+  "can you turn the dishwasher on"
+ ],
+ "switch on the air conditioning": [
+  "can you turn the air conditioning on"
+ ],
+ "close the garage door": [
+  "can you close the garage door"
+ ],
+ "switch on the heater in {room}": [
+  "get the heater going in {room}"
+ ],
+ "switch on the hot tub": [
+  "start up the hot tub"
+ ],
+ "switch on the ev charger": [
+  "flick the ev charger on"
+ ],
+ "switch on the pond pump": [
+  "can you switch the pond pump on"
+ ],
+ "start the fish tank light": [
+  "kick on the fish tank light"
+ ],
+ "turn on the tv in {room}": [
+  "can you turn the tv on in {room}"
+ ],
+ "switch on the dishwasher": [
+  "can you switch the dishwasher on"
+ ],
+ "turn on the sprinklers": [
+  "switch on the sprinklers"
+ ],
+ "turn off the sauna": [
+  "switch off the sauna"
+ ],
+ "turn off the heating": [
+  "can you turn the heating off"
+ ],
+ "start the hot tub": [
+  "can you start the hot tub"
+ ],
+ "turn on the driveway gate": [
+  "fire up the driveway gate"
+ ],
+ "turn off the irrigation": [
+  "can you turn the irrigation off"
+ ],
+ "close the garage": [
+  "can you close the garage"
+ ],
+ "start the pool pump": [
+  "can you start the pool pump"
+ ],
+ "switch on the robot vacuum": [
+  "get the robot vacuum going"
+ ],
+ "switch on the tv in {room}": [
+  "can you switch the tv on in {room}"
+ ],
+ "turn off the tv in {room}": [
+  "can you turn the tv off in {room}"
+ ],
+ "turn off the pool pump": [
+  "can you turn the pool pump off"
+ ],
+ "turn on the sauna": [
+  "get the sauna going"
+ ],
+ "turn off the robot vacuum": [
+  "can you turn the robot vacuum off"
+ ],
+ "turn off the dishwasher": [
+  "switch off the dishwasher"
+ ],
+ "switch on the fish tank light": [
+  "flick the fish tank light on"
+ ],
+ "open the {device} in {room}": [
+  "can you open the {device} in {room}"
+ ],
+ "turn on the irrigation": [
+  "can you turn the irrigation on"
+ ],
+ "switch on the driveway gate": [
+  "get the driveway gate going"
+ ],
+ "start the irrigation": [
+  "can you start the irrigation"
+ ],
+ "start the sprinklers": [
+  "fire up the sprinklers"
+ ],
+ "close the tv in the {room}": [
+  "shut the tv in the {room}"
+ ],
+ "switch on the fan in {room}": [
+  "flick on the fan in {room}"
+ ],
+ "start the heating": [
+  "fire up the heating"
+ ],
+ "turn on the heater in {room}": [
+  "get the heater going in {room}"
+ ],
+ "start the tv in {room}": [
+  "get the tv going in {room}"
+ ],
+ "switch on the heating": [
+  "can you turn the heating on"
+ ],
+ "close the blinds in the {room}": [
+  "can you close the blinds in the {room}"
+ ],
+ "switch on the sauna": [
+  "get the sauna going"
+ ],
+ "turn off the fish tank light": [
+  "kill the fish tank light"
+ ],
+ "start the pond pump": [
+  "get the pond pump going"
+ ],
+ "turn off the heater in {room}": [
+  "kill the heater in {room}"
+ ],
+ "start the {device} in {room}": [
+  "kick off the {device} in {room}"
+ ],
+ "turn off the driveway gate": [
+  "switch off the driveway gate"
+ ],
+ "unlock the {device}": [
+  "can you unlock the {device}"
+ ],
+ "disarm the alarm": [
+  "turn the alarm system off"
+ ],
+ "open up the {device}": [
+  "can you open up the {device}"
+ ],
+ "{device} unlock": [
+  "can you unlock the {device}"
+ ],
+ "unlock the {room} {device}": [
+  "unlock the {device} in the {room}"
+ ],
+ "turn off the alarm": [
+  "can you turn the alarm off"
+ ],
+ "alarm off": [
+  "switch the alarm off"
+ ],
+ "{room} {device} unlock": [
+  "get the {room} {device} unlocked"
+ ],
+ "open up the {room} {device}": [
+  "can you open up the {room} {device}"
+ ],
+ "open the {room}": [
+  "can you open the {room}"
+ ],
+ "garage up": [
+  "raise the garage"
+ ],
+ "open the {room} {device}": [
+  "let's get the {device} open in the {room}"
+ ],
+ "{room} up": [
+  "bring the {room} up"
+ ],
+ "what's today": [
+  "remind me what today is"
+ ],
+ "what's the time": [
+  "got the time"
+ ],
+ "are you there": [
+  "you still there"
+ ],
+ "you awake": [
+  "are you awake"
+ ],
+ "got a joke": [
+  "got any jokes for me"
+ ],
+ "what day is it": [
+  "do you know what day it is"
+ ],
+ "what are you able to help with": [
+  "what are you able to do for me"
+ ],
+ "hey there": [
+  "howdy"
+ ],
+ "never mind": [
+  "don't worry about it"
+ ],
+ "what time is it": [
+  "what time have we got"
+ ],
+ "thank you": [
+  "ta"
+ ],
+ "tell me a joke": [
+  "got a joke for me"
+ ],
+ "what can you do": [
+  "what can you help with"
+ ],
+ "cheers": [
+  "cheers for that"
+ ],
+ "cancel that": [
+  "scrap that"
+ ],
+ "hey house": [
+  "house you there"
+ ],
+ "forget it": [
+  "never mind that"
+ ],
+ "thanks": [
+  "cheers"
+ ],
+ "how can you help me": [
+  "how can you assist me"
+ ],
+ "hello": [
+  "hey"
+ ],
+ "is {person} at home": [
+  "is {person} home right now"
+ ],
+ "is {person} here": [
+  "has {person} arrived"
+ ],
+ "is anyone home": [
+  "is somebody home"
+ ],
+ "is {person} in": [
+  "has {person} come in"
+ ],
+ "who's in the house": [
+  "who's inside right now"
+ ],
+ "is {person} home": [
+  "is {person} at home"
+ ],
+ "who's home": [
+  "who's here at the moment"
+ ],
+ "who is at home right now": [
+  "who's around the house right now"
+ ],
+ "is anybody home": [
+  "is somebody around"
+ ],
+ "how's the house looking? we're not home": [
+  "how does the house look, we're not there"
+ ],
+ "give the house a once-over for me": [
+  "can you scan the house for me"
+ ],
+ "we've left for the weekend, can you make sure the house is secure": [
+  "left for the weekend, can you double check the house is secure"
+ ],
+ "is everything okay at home": [
+  "is everything alright at home"
+ ],
+ "we're out, is the house all locked up and okay": [
+  "we're away right now, is the house all secure and okay"
+ ],
+ "we're away for the day, can you check on the house for me": [
+  "we're out for the day, can you keep an eye on the house for me"
+ ],
+ "check on the house": [
+  "take a look at the house"
+ ],
+ "we're out for the night, can you check everything's okay at home": [
+  "gone for the night, can you check everything's okay back home"
+ ],
+ "we're away for the evening, can you check on the house for me": [
+  "we're away this evening, can you check on the house for me"
+ ],
+ "has anything moved in the house since we left": [
+  "any activity in the house since we left"
+ ],
+ "is there anyone home? we're all out": [
+  "is there someone at home, we're all away"
+ ],
+ "is the house empty": [
+  "is there anybody in the house"
+ ],
+ "is anyone in the house right now": [
+  "is anyone currently in the house"
+ ],
+ "see anyone inside": [
+  "any sign of anyone inside"
+ ],
+ "any movement in the house": [
+  "any motion in the house"
+ ],
+ "heading to bed, can you shut the house down": [
+  "going to bed, can you wind the house down"
+ ],
+ "good night house": [
+  "good night, house"
+ ],
+ "i'm going to bed": [
+  "heading to bed now"
+ ],
+ "night night": [
+  "nighty night"
+ ],
+ "goodnight": [
+  "goodnight for now"
+ ],
+ "we're off to bed": [
+  "heading to bed now"
+ ],
+ "time for bed, lock up": [
+  "time to hit the sack, lock everything up"
+ ],
+ "we're heading out": [
+  "we're on our way out"
+ ],
+ "i'm leaving, can you secure the house": [
+  "i'm leaving, can you make sure the house is secure"
+ ],
+ "bye, off to work": [
+  "later, off to work"
+ ],
+ "we're leaving now": [
+  "we're heading out right now"
+ ],
+ "we're going out for a few hours": [
+  "we're stepping out for a few hours"
+ ],
+ "heading off for the day, lock up": [
+  "we're away for the day, lock up"
+ ],
+ "off out, see you later": [
+  "off out, catch you later"
+ ],
+ "how much battery do we have": [
+  "how much charge do we have left"
+ ],
+ "what's the battery at": [
+  "what's the battery sitting at"
+ ],
+ "how much charge is left": [
+  "how much juice is left"
+ ],
+ "what's our state of charge": [
+  "where's our state of charge at"
+ ],
+ "battery level": [
+  "battery check"
+ ],
+ "how's the battery": [
+  "how's our battery looking"
+ ],
+ "how's the solar looking": [
+  "how's the solar performing"
+ ],
+ "how's the system looking": [
+  "how's the whole system doing"
+ ],
+ "how are we doing for power": [
+  "how's our power situation"
+ ],
+ "what's the solar doing": [
+  "how's the solar performing right now"
+ ],
+ "how much solar are we making": [
+  "how much solar power are we generating"
+ ],
+ "power report": [
+  "give me a rundown on power"
+ ],
+ "what's our power situation": [
+  "what's happening with our power"
+ ],
+ "how much power are we using": [
+  "what's our power usage"
+ ],
+ "is the solar producing": [
+  "is the solar making power"
+ ],
+ "what's using power right now": [
+  "what's drawing power right now"
+ ],
+ "what's our load at the moment": [
+  "what's our current load"
+ ],
+ "give me an energy update": [
+  "give me an update on energy"
+ ],
+ "how much are we pulling": [
+  "how much are we drawing"
+ ],
+ "what's the house drawing right now": [
+  "how much is the house drawing right now"
+ ],
+ "how much solar have we made today": [
+  "what's our solar total for today"
+ ],
+ "are we going to run out of power overnight": [
+  "will we run out of power through the night"
+ ],
+ "will the battery last till morning": [
+  "will the battery hold out till morning"
+ ],
+ "have we got enough power for tonight": [
+  "do we have enough power for tonight"
+ ],
+ "are we good for the night": [
+  "are we okay for the night"
+ ],
+ "will we make it through the night": [
+  "are we going to get through the night"
+ ],
+ "is the battery going to be okay overnight": [
+  "will the battery be fine through the night"
+ ],
+ "should i put a load of washing on": [
+  "is now an okay time to put a load of washing on"
+ ],
+ "should i put the oven on": [
+  "is now an okay time to put the oven on"
+ ],
+ "should i put the kettle on": [
+  "should i go ahead and put the kettle on"
+ ],
+ "should i put the dishwasher on": [
+  "do you think i should put the dishwasher on"
+ ],
+ "is it a good time to run the oven": [
+  "is it a decent time to run the oven"
+ ],
+ "should i put the dryer on": [
+  "is it okay to put the dryer on"
+ ],
+ "can i run the oven now": [
+  "am i able to run the oven now"
+ ],
+ "can i run the pool pump for an hour now": [
+  "is it okay to run the pool pump for an hour now"
+ ],
+ "should i put the pool pump for an hour on": [
+  "do you think i should put the pool pump for an hour on"
+ ],
+ "can i run the dishwasher now": [
+  "is it fine to run the dishwasher right now"
+ ],
+ "is there enough power to run the dryer": [
+  "do we have enough power to run the dryer"
+ ],
+ "is there enough power to run a load of washing": [
+  "is there enough power for a load of washing"
+ ],
+ "can i run the washing machine now": [
+  "can i go ahead and run the washing machine now"
+ ],
+ "can i run the kettle now": [
+  "is it fine to run the kettle right now"
+ ],
+ "okay to use the washing machine": [
+  "good to use the washing machine"
+ ],
+ "is it a good time to run the dishwasher": [
+  "is it a good time to have the dishwasher running"
+ ],
+ "can i put the dishwasher on or should i wait": [
+  "can i run the dishwasher now or is it better to wait"
+ ],
+ "can i put the oven on or should i wait": [
+  "is it okay to put the oven on or should i wait a bit"
+ ],
+ "is it a good time to run a load of washing": [
+  "is this a good time to run a load of washing"
+ ],
+ "can i put the kettle on or should i wait": [
+  "can i put the kettle on now or hang on a bit"
+ ],
+ "can i run the dryer now": [
+  "is it fine to run the dryer right now"
+ ],
+ "okay to use the kettle": [
+  "is it alright if i use the kettle now"
+ ],
+ "okay to use the dishwasher": [
+  "good to use the dishwasher"
+ ],
+ "okay to use the pool pump for an hour": [
+  "is it alright if i use the pool pump for an hour now"
+ ],
+ "is there enough power to run the pool pump for an hour": [
+  "is there sufficient power to run the pool pump for an hour"
+ ],
+ "is there enough power to run the dishwasher": [
+  "is there sufficient power to run the dishwasher"
+ ],
+ "is it a good time to run the kettle": [
+  "would now be a good time to run the kettle"
+ ],
+ "okay to use a load of washing": [
+  "is it fine if i use a load of washing"
+ ],
+ "can i put the washing machine on or should i wait": [
+  "should i wait to put the washing machine on or is now fine"
+ ],
+ "is there enough power to run the oven": [
+  "do we have enough power to run the oven"
+ ],
+ "can i run a load of washing now": [
+  "is it fine to run a load of washing right now"
+ ],
+ "can i put a load of washing on or should i wait": [
+  "should i wait to put a load of washing on or is now fine"
+ ],
+ "okay to use the oven": [
+  "is it fine if i use the oven"
+ ],
+ "should i put the washing machine on": [
+  "should i go ahead and put the washing machine on"
+ ],
+ "is there enough power to run the kettle": [
+  "have we got enough power to run the kettle"
+ ],
+ "is it a good time to run the washing machine": [
+  "is now a good time to run the washing machine"
+ ],
+ "is it a good time to run the dryer": [
+  "is this a good time to run the dryer"
+ ],
+ "is there enough power to run the washing machine": [
+  "is there enough power for the washing machine"
+ ],
+ "okay to use the dryer": [
+  "fine to use the dryer"
+ ],
+ "can i put the dryer on or should i wait": [
+  "can i put the dryer on now or should i hold off"
+ ],
+ "can i put the pool pump for an hour on or should i wait": [
+  "is it okay to put the pool pump for an hour on or should i wait a bit"
+ ],
+ "is it a good time to run the pool pump for an hour": [
+  "would now be a good time to run the pool pump for an hour"
+ ],
+ "is there enough power to run the {device}": [
+  "do we have the power to run the {device}"
+ ],
+ "can i put the {device} on or should i wait": [
+  "can i put the {device} on now or should i hold off"
+ ],
+ "what's the weather like": [
+  "what's the weather looking like"
+ ],
+ "how's the weather": [
+  "how's it looking outside"
+ ],
+ "what's the weather doing": [
+  "how's the weather doing right now"
+ ],
+ "what's it like outside": [
+  "how's it out there"
+ ],
+ "when's sunset": [
+  "when's the sun going down"
+ ],
+ "is it going to rain tomorrow": [
+  "are we getting rain tomorrow"
+ ],
+ "what's the temperature outside": [
+  "how warm is it outside"
+ ],
+ "when does the sun come up": [
+  "what time does the sun come up"
+ ],
+ "what's the forecast for tomorrow": [
+  "what does the forecast say for tomorrow"
+ ],
+ "any rain coming": [
+  "is there any rain coming"
+ ],
+ "how cold is it outside": [
+  "how chilly is it outside"
+ ],
+ "weather tomorrow": [
+  "what's the weather like tomorrow"
+ ],
+ "what time is sunrise": [
+  "what time does the sun rise"
+ ],
+ "will it rain tomorrow": [
+  "will there be rain tomorrow"
+ ],
+ "what's tomorrow looking like": [
+  "what's tomorrow's weather looking like"
+ ],
+ "how hot is it out there": [
+  "how scorching is it out there"
+ ],
+ "what time does the sun go down": [
+  "what time's the sun setting"
+ ],
+ "turn on the {room} light": [
+  "switch the lights on in {room}"
+ ],
+ "turn off the {room} light": [
+  "flick off the lights in the {room}"
+ ],
+ "turn the {room} lights on": [
+  "put the lights on in the {room}"
+ ],
+ "turn the {room} lights off": [
+  "flick off the lights in the {room}"
+ ],
+ "turn on the {room} lights": [
+  "flick the lights on in {room}"
+ ],
+ "turn off the {room} lights": [
+  "kill the lights in the {room}"
+ ],
+ "turn the {room} {device} off": [
+  "turn off the {device} in the {room}"
+ ],
+ "turn the {room} {device} on": [
+  "turn on the {device} in the {room}"
+ ],
+ "turn on the {room} {device}": [
+  "flick the {device} on in {room}"
+ ],
+ "close the {room} {device}": [
+  "can you close the {device} in the {room}"
+ ],
+ "the {room} {device} on": [
+  "pop the {device} on in the {room}"
+ ],
+ "turn the lights off in the {room} and the {room2}": [
+  "switch the lights off in {room} and {room2}"
+ ],
+ "switch on the {room} {device}": [
+  "turn on the {device} in the {room}"
+ ],
+ "turn on the lights in the {room} and the {room2}": [
+  "turn on the lights in the {room} and the {room2}"
+ ],
+ "turn on the lights in the {room}": [
+  "let's get some light in the {room}"
+ ],
+ "turn the lights off in the {room}": [
+  "turn off the lights in the {room}"
+ ],
+ "turn off the {room} {device}": [
+  "cut the {device} in {room}"
+ ],
+ "mute the tv in the {room}": [
+  "can you mute the tv in {room}"
+ ],
+ "switch off the {room} {device}": [
+  "turn off the {device} in the {room}"
+ ],
+ "mute the {room} tv": [
+  "turn the sound off on the tv in the {room}"
+ ],
+ "turn the lights on in the {room2} and the {room}": [
+  "let's get some light in the {room2} and the {room}"
+ ],
+ "pause the tv in the {room}": [
+  "freeze the tv in the {room}"
+ ],
+ "switch the {room} tv off": [
+  "switch the tv off in {room}"
+ ],
+ "lights off in the {room2} and the {room}": [
+  "lights off in the {room2} and {room}"
+ ],
+ "the {room} {device} off": [
+  "switch off the {device} in {room}"
+ ],
+ "turn the lights on in the {room}": [
+  "turn on the lights in the {room}"
+ ],
+ "turn on the lights in the {room2} and the {room}": [
+  "put the lights on in both the {room2} and the {room}"
+ ],
+ "turn the lights off in the {room2} and the {room}": [
+  "flick off the lights in both the {room2} and the {room}"
+ ],
+ "switch on the lights in the {room2} and the {room}": [
+  "flick the lights on in {room2} and {room}"
+ ],
+ "pause the {room} tv": [
+  "freeze the tv in the {room}"
+ ],
+ "{device} on in the {room} and the {room2}": [
+  "switch on the {device} in {room} and {room2}"
+ ],
+ "resume the tv in the {room}": [
+  "resume the tv in the {room}"
+ ],
+ "kill the lights in the {room}": [
+  "cut the lights in {room}"
+ ],
+ "turn on the {device} in the {room} and the {room2}": [
+  "get the {device} on in both the {room} and the {room2}"
+ ],
+ "kill the lights in the {room} and the {room2}": [
+  "switch the lights off in {room} and {room2}"
+ ],
+ "put the lights on in the {room}": [
+  "light up {room}"
+ ],
+ "switch on the lights in the {room}": [
+  "switch the lights on in {room}"
+ ],
+ "lights on in the {room2} and the {room}": [
+  "can you get the lights on in both the {room2} and the {room}"
+ ],
+ "close the {device} in {room}": [
+  "shut the {device} in {room}"
+ ],
+ "kill the lights in the {room2} and the {room}": [
+  "turn off the lights in the {room2} and the {room}"
+ ],
+ "turn the {device} on in the {room2} and the {room}": [
+  "start the {device} in the {room2} and {room}"
+ ],
+ "switch off the lights in the {room}": [
+  "lights off in {room}"
+ ],
+ "lights on in the {room} and the {room2}": [
+  "put the lights on in both the {room} and the {room2}"
+ ],
+ "turn off the lights in the {room2} and the {room}": [
+  "can you get the lights off in the {room2} and the {room}"
+ ],
+ "turn off the {room} tv": [
+  "kill the tv in the {room}"
+ ],
+ "turn the {device} off in the {room2} and the {room}": [
+  "cut the {device} in {room2} and {room}"
+ ],
+ "play the {room} tv": [
+  "kick the tv back on in {room}"
+ ],
+ "turn the {device} off in the {room}": [
+  "switch off the {device} in {room}"
+ ],
+ "turn off the lights in the {room} and the {room2}": [
+  "shut the lights off in the {room} and {room2}"
+ ],
+ "turn on the {device} in {room}": [
+  "fire up the {device} in {room}"
+ ],
+ "put the {device} on in the {room}": [
+  "turn on the {device} in the {room}"
+ ],
+ "switch the {room} {device} off": [
+  "can you turn off the {device} in the {room}"
+ ],
+ "turn on the {device} in the {room2} and the {room}": [
+  "get the {device} on in both the {room2} and the {room}"
+ ],
+ "put the lights on in the {room2} and the {room}": [
+  "can you get the lights on in both the {room2} and the {room}"
+ ],
+ "pause the {room} {device}": [
+  "pause whatever's playing on the {device} in {room}"
+ ],
+ "{device} on in the {room}": [
+  "start the {device} in {room}"
+ ],
+ "turn the {device} off in the {room} and the {room2}": [
+  "turn off the {device} in the {room} and the {room2}"
+ ],
+ "put the lights on in the {room} and the {room2}": [
+  "can you get the lights on in both the {room} and the {room2}"
+ ],
+ "resume the {device} in the {room}": [
+  "kick the {device} back on in {room}"
+ ],
+ "lights on in the {room}": [
+  "put the lights on in the {room}"
+ ],
+ "switch off the lights in the {room2} and the {room}": [
+  "turn off the lights in the {room2} and the {room}"
+ ],
+ "switch on the {device} in the {room2} and the {room}": [
+  "flick the {device} on in {room2} and {room}"
+ ],
+ "{device} off in the {room} and the {room2}": [
+  "switch off the {device} in {room} and {room2}"
+ ],
+ "{device} on in the {room2} and the {room}": [
+  "start the {device} in the {room2} and {room}"
+ ],
+ "pause the {device} in the {room}": [
+  "freeze the {device} in the {room}"
+ ],
+ "switch on the lights in the {room} and the {room2}": [
+  "pop the lights on in the {room} and the {room2}"
+ ],
+ "{room} {device} off": [
+  "turn off the {device} in the {room}"
+ ],
+ "kill the {device} in the {room2} and the {room}": [
+  "flick off the {device} in both the {room2} and the {room}"
+ ],
+ "lights off in the {room}": [
+  "flick off the lights in the {room}"
+ ],
+ "turn the lights on in the {room} and the {room2}": [
+  "light up the {room} and {room2}"
+ ],
+ "{room} {device} on": [
+  "get the {device} on in the {room}"
+ ],
+ "switch off the {device} in the {room2} and the {room}": [
+  "cut the {device} in {room2} and {room}"
+ ],
+ "play the {room} {device}": [
+  "unpause the {device} in {room}"
+ ],
+ "mute the {device} in the {room}": [
+  "silence the {device} in {room}"
+ ],
+ "{device} off in the {room2} and the {room}": [
+  "cut the {device} in {room2} and {room}"
+ ],
+ "turn the {device} on in the {room}": [
+  "fire up the {device} in {room}"
+ ],
+ "kill the {device} in the {room}": [
+  "can you turn off the {device} in the {room}"
+ ],
+ "put the lights on in the {room2}, the {room3} and the {room}": [
+  "let's get some light in the {room2}, the {room3} and the {room}"
+ ],
+ "put the {device} on in the {room2} and the {room}": [
+  "fire up the {device} in the {room2} and {room}"
+ ],
+ "switch on the lights in the {room3}, the {room2} and the {room}": [
+  "light up {room3}, the {room2} and {room}"
+ ],
+ "turn on the lights in the {room2} and {room}": [
+  "let's get some light in the {room2} and the {room}"
+ ],
+ "turn on the lights in the {room}, the {room2} and the {room3}": [
+  "pop the lights on in the {room}, the {room2} and the {room3}"
+ ],
+ "switch on the {device} in the {room} and the {room2}": [
+  "can you get the {device} going in both the {room} and the {room2}"
+ ],
+ "put the {device} on in the {room} and the {room2}": [
+  "start the {device} in the {room} and {room2}"
+ ],
+ "unpause the {room} tv": [
+  "resume the tv in the {room}"
+ ],
+ "kill the lights in the {room}, the {room2} and the {room3}": [
+  "shut the lights off in {room}, the {room2} and {room3}"
+ ],
+ "mute the {room} {device}": [
+  "put the {device} on mute in the {room}"
+ ],
+ "turn the lights off in the {room2}, the {room} and the {room3}": [
+  "flick off the lights in the {room2}, {room} and the {room3}"
+ ],
+ "lights on in the {room3}, the {room2} and the {room}": [
+  "flick the lights on in {room3}, {room2} and {room}"
+ ],
+ "turn off the lights in the {room3}, the {room2} and the {room}": [
+  "kill the lights in the {room3}, {room2} and the {room}"
+ ],
+ "turn on the lights in the {room2}, the {room} and the {room3}": [
+  "turn on the lights in the {room2}, the {room} and the {room3}"
+ ],
+ "turn off the {device} in the {room} and the {room2}": [
+  "flick off the {device} in both the {room} and the {room2}"
+ ],
+ "put the lights on in the {room}, the {room3} and the {room2}": [
+  "light up {room}, the {room3} and {room2}"
+ ],
+ "turn the lights off in the {room3}, the {room2} and the {room}": [
+  "shut the lights off in {room3}, the {room2} and {room}"
+ ],
+ "switch off the {device} in the {room} and the {room2}": [
+  "turn off the {device} in the {room} and the {room2}"
+ ],
+ "lights off in the {room} and the {room2}": [
+  "switch the lights off in {room} and {room2}"
+ ],
+ "switch off the {device} in the {room}": [
+  "switch off the {device} in {room}"
+ ],
+ "{device} off in the {room2} and {room}": [
+  "shut the {device} off in the {room2} and {room}"
+ ],
+ "turn the lights off in the {room3}, the {room} and the {room2}": [
+  "can you get the lights off in the {room3}, the {room} and the {room2}"
+ ],
+ "switch off the lights in the {room} and the {room2}": [
+  "turn off the lights in the {room} and the {room2}"
+ ],
+ "turn the lights off in the {room}, the {room2} and the {room3}": [
+  "flick off the lights in the {room}, {room2} and the {room3}"
+ ],
+ "turn off the {device} in the {room2} and the {room}": [
+  "cut the {device} in {room2} and {room}"
+ ],
+ "switch on the {device} in the {room2}, the {room3} and the {room}": [
+  "can you get the {device} going in the {room2}, {room3} and the {room}"
+ ],
+ "turn off the lights in the {room3}, the {room} and the {room2}": [
+  "shut the lights off in {room3}, the {room} and {room2}"
+ ],
+ "turn on the lights in the {room} and {room2}": [
+  "put the lights on in both the {room} and the {room2}"
+ ],
+ "turn the {device} on in the {room3}, the {room} and the {room2}": [
+  "can you get the {device} going in the {room3}, {room} and the {room2}"
+ ],
+ "put the {device} on in the {room3}, the {room} and the {room2}": [
+  "pop the {device} on in the {room3}, the {room} and the {room2}"
+ ],
+ "turn the {device} off in the {room2}, the {room3} and the {room}": [
+  "kill the {device} in the {room2}, {room3} and the {room}"
+ ],
+ "put the {device} on in the {room3}, the {room2} and the {room}": [
+  "can you get the {device} going in the {room3}, {room2} and the {room}"
+ ],
+ "turn the lights off in {room} and the {room2}": [
+  "can you get the lights off in the {room} and the {room2}"
+ ],
+ "{device} off in the {room}": [
+  "shut the {device} off in {room}"
+ ],
+ "put the {device} on in the {room2}, the {room3} and the {room}": [
+  "fire up the {device} in {room2}, the {room3} and {room}"
+ ],
+ "unpause the {room} {device}": [
+  "resume the {device} in the {room}"
+ ],
+ "kill the lights in the {room3}, the {room2} and the {room}": [
+  "can you get the lights off in the {room3}, the {room2} and the {room}"
+ ],
+ "turn the lights on in the {room}, the {room3} and the {room2}": [
+  "flick the lights on in {room}, {room3} and {room2}"
+ ],
+ "kill the {device} in the {room2}, the {room} and the {room3}": [
+  "turn off the {device} in the {room2}, the {room} and the {room3}"
+ ],
+ "turn off the lights in the {room}": [
+  "can you get the lights off in the {room}"
+ ],
+ "turn on the lights in the {room}, the {room3} and the {room2}": [
+  "flick the lights on in {room}, {room3} and {room2}"
+ ],
+ "switch on the {device} in the {room3}, the {room} and the {room2}": [
+  "can you get the {device} going in the {room3}, {room} and the {room2}"
+ ],
+ "turn on the lights in {room} and the {room2}": [
+  "light up the {room} and {room2}"
+ ],
+ "put the lights on in the {room3}, the {room} and the {room2}": [
+  "turn on the lights in the {room3}, the {room} and the {room2}"
+ ],
+ "put the lights on in the {room} and {room2}": [
+  "let's get some light in the {room} and the {room2}"
+ ],
+ "lights on in {room}": [
+  "put the lights on in the {room}"
+ ],
+ "switch on the lights in the {room2}, the {room3} and the {room}": [
+  "light up {room2}, the {room3} and {room}"
+ ],
+ "turn the lights off in {room}, the {room2} and the {room3}": [
+  "flick off the lights in the {room}, {room2} and the {room3}"
+ ],
+ "turn the lights on in {room} and the {room2}": [
+  "let's get some light in the {room} and the {room2}"
+ ],
+ "switch off the {device} in the {room3}, the {room2} and the {room}": [
+  "switch off the {device} in {room3}, {room2} and {room}"
+ ],
+ "turn the lights on in the {room2}, the {room} and the {room3}": [
+  "put the lights on in the {room2}, {room} and the {room3}"
+ ],
+ "turn on the lights in {room2} and the {room}": [
+  "turn on the lights in the {room2} and the {room}"
+ ],
+ "turn the lights off in the {room}, the {room3} and the {room2}": [
+  "shut the lights off in {room}, the {room3} and {room2}"
+ ],
+ "lights on in {room2}, the {room3} and the {room}": [
+  "pop the lights on in the {room2}, the {room3} and the {room}"
+ ],
+ "turn on the lights in the {room2}, {room} and the {room3}": [
+  "flick the lights on in {room2}, {room} and {room3}"
+ ],
+ "{device} on in the {room2}, the {room} and the {room3}": [
+  "can you get the {device} going in the {room2}, {room} and the {room3}"
+ ],
+ "lights on in {room} and the {room2}": [
+  "let's get some light in the {room} and the {room2}"
+ ],
+ "turn the {device} on in the {room}, the {room2} and the {room3}": [
+  "can you get the {device} going in the {room}, {room2} and the {room3}"
+ ],
+ "kill the lights in the {room} and {room2}": [
+  "cut the lights in {room} and {room2}"
+ ],
+ "switch off the lights in the {room}, the {room3} and the {room2}": [
+  "turn off the lights in the {room}, the {room3} and the {room2}"
+ ],
+ "turn on the lights in {room}": [
+  "can you get the lights on in the {room}"
+ ],
+ "turn off the lights in the {room}, the {room3} and the {room2}": [
+  "switch the lights off in {room}, {room3} and {room2}"
+ ],
+ "lights on in the {room}, the {room2} and the {room3}": [
+  "switch the lights on in {room}, {room2} and {room3}"
+ ],
+ "lights off in the {room2}, the {room3} and the {room}": [
+  "cut the lights in {room2}, {room3} and {room}"
+ ],
+ "turn the lights on in the {room3}, the {room2} and the {room}": [
+  "turn on the lights in the {room3}, the {room2} and the {room}"
+ ],
+ "lights on in the {room2}, the {room} and the {room3}": [
+  "put the lights on in the {room2}, {room} and the {room3}"
+ ],
+ "turn on the lights in the {room2}, the {room3} and {room}": [
+  "let's get some light in the {room2}, the {room3} and the {room}"
+ ],
+ "turn the {device} on in the {room2} and {room}": [
+  "can you get the {device} going in both the {room2} and the {room}"
+ ],
+ "switch on the lights in the {room3}, the {room} and the {room2}": [
+  "let's get some light in the {room3}, the {room} and the {room2}"
+ ],
+ "lights off in the {room2}, {room3} and the {room}": [
+  "flick off the lights in the {room2}, {room3} and the {room}"
+ ],
+ "turn the {device} on in {room}": [
+  "switch on the {device} in {room}"
+ ],
+ "switch on the lights in the {room}, the {room3} and the {room2}": [
+  "switch the lights on in {room}, {room3} and {room2}"
+ ],
+ "turn the {device} off in the {room} and {room2}": [
+  "cut the {device} in {room} and {room2}"
+ ],
+ "lights on in the {room3}, {room2} and the {room}": [
+  "switch the lights on in {room3}, {room2} and {room}"
+ ],
+ "put the {device} on in the {room3}, {room2} and the {room}": [
+  "fire up the {device} in {room3}, the {room2} and {room}"
+ ],
+ "turn off the {device} in the {room3}, the {room2} and the {room}": [
+  "shut the {device} off in {room3}, the {room2} and {room}"
+ ],
+ "lights off in {room} and the {room2}": [
+  "cut the lights in {room} and {room2}"
+ ],
+ "{device} off in the {room}, the {room2} and the {room3}": [
+  "shut the {device} off in {room}, the {room2} and {room3}"
+ ],
+ "kill the {device} in the {room}, the {room3} and the {room2}": [
+  "can you turn off the {device} in the {room}, the {room3} and the {room2}"
+ ],
+ "switch on the lights in the {room2}, the {room} and the {room3}": [
+  "let's get some light in the {room2}, the {room} and the {room3}"
+ ],
+ "turn the lights off in the {room}, {room3} and the {room2}": [
+  "shut the lights off in {room}, the {room3} and {room2}"
+ ],
+ "switch on the lights in the {room3}, {room} and the {room2}": [
+  "flick the lights on in {room3}, {room} and {room2}"
+ ],
+ "turn on the {device} in the {room}, the {room2} and the {room3}": [
+  "turn on the {device} in the {room}, the {room2} and the {room3}"
+ ],
+ "turn on the {device} in the {room} and {room2}": [
+  "flick the {device} on in {room} and {room2}"
+ ],
+ "switch off the lights in the {room3}, the {room2} and the {room}": [
+  "cut the lights in {room3}, {room2} and {room}"
+ ],
+ "switch off the lights in {room} and the {room2}": [
+  "shut the lights off in the {room} and {room2}"
+ ],
+ "switch off the {device} in the {room}, the {room2} and the {room3}": [
+  "shut the {device} off in {room}, the {room2} and {room3}"
+ ],
+ "kill the lights in the {room2}, the {room3} and the {room}": [
+  "flick off the lights in the {room2}, {room3} and the {room}"
+ ],
+ "lights off in {room3}, the {room2} and the {room}": [
+  "shut the lights off in {room3}, the {room2} and {room}"
+ ],
+ "turn the {device} on in the {room} and the {room2}": [
+  "turn on the {device} in the {room} and the {room2}"
+ ],
+ "lights off in the {room2} and {room}": [
+  "cut the lights in {room2} and {room}"
+ ],
+ "turn the {device} off in the {room}, the {room2} and the {room3}": [
+  "flick off the {device} in the {room}, {room2} and the {room3}"
+ ],
+ "turn on the {device} in the {room2}, the {room3} and the {room}": [
+  "fire up the {device} in {room2}, the {room3} and {room}"
+ ],
+ "put the lights on in {room2} and the {room}": [
+  "can you get the lights on in both the {room2} and the {room}"
+ ],
+ "{device} off in the {room2}, the {room} and the {room3}": [
+  "cut the {device} in {room2}, {room} and {room3}"
+ ],
+ "turn off the lights in the {room}, the {room2} and the {room3}": [
+  "cut the lights in {room}, {room2} and {room3}"
+ ],
+ "{device} on in the {room3}, the {room} and the {room2}": [
+  "fire up the {device} in {room3}, the {room} and {room2}"
+ ],
+ "lights on in the {room2}, the {room3} and the {room}": [
+  "light up {room2}, the {room3} and {room}"
+ ],
+ "turn the {device} off in the {room}, {room2} and the {room3}": [
+  "can you turn off the {device} in the {room}, the {room2} and the {room3}"
+ ],
+ "turn the {device} on in the {room2}, the {room} and the {room3}": [
+  "pop the {device} on in the {room2}, the {room} and the {room3}"
+ ],
+ "switch on the lights in {room}": [
+  "put the lights on in the {room}"
+ ],
+ "switch on the lights in the {room}, {room2} and the {room3}": [
+  "light up {room}, the {room2} and {room3}"
+ ],
+ "put the lights on in the {room2}, the {room} and the {room3}": [
+  "light up {room2}, the {room} and {room3}"
+ ],
+ "{device} on in the {room2}, the {room3} and the {room}": [
+  "flick the {device} on in {room2}, {room3} and {room}"
+ ],
+ "kill the {device} in the {room} and the {room2}": [
+  "switch off the {device} in {room} and {room2}"
+ ],
+ "turn the {device} off in {room3}, the {room} and the {room2}": [
+  "flick off the {device} in the {room3}, {room} and the {room2}"
+ ],
+ "turn the lights off in the {room2} and {room}": [
+  "shut the lights off in the {room2} and {room}"
+ ],
+ "turn on the {device} in the {room2}, the {room} and the {room3}": [
+  "get the {device} on in the {room2}, {room} and the {room3}"
+ ],
+ "turn on the {device} in the {room}, the {room3} and the {room2}": [
+  "turn on the {device} in the {room}, the {room3} and the {room2}"
+ ],
+ "turn the {device} off in the {room}, the {room3} and the {room2}": [
+  "switch off the {device} in {room}, {room3} and {room2}"
+ ],
+ "switch off the lights in the {room2}, the {room3} and the {room}": [
+  "turn off the lights in the {room2}, the {room3} and the {room}"
+ ],
+ "put the lights on in the {room}, the {room2} and the {room3}": [
+  "light up {room}, the {room2} and {room3}"
+ ],
+ "switch off the lights in the {room3}, the {room} and the {room2}": [
+  "shut the lights off in {room3}, the {room} and {room2}"
+ ],
+ "turn on the lights in the {room2}, the {room3} and the {room}": [
+  "pop the lights on in the {room2}, the {room3} and the {room}"
+ ],
+ "put the lights on in the {room3}, the {room2} and the {room}": [
+  "flick the lights on in {room3}, {room2} and {room}"
+ ],
+ "{device} off in the {room} and {room2}": [
+  "turn off the {device} in the {room} and the {room2}"
+ ],
+ "turn the {device} off in the {room2}, the {room} and the {room3}": [
+  "flick off the {device} in the {room2}, {room} and the {room3}"
+ ],
+ "switch on the lights in {room3}, the {room2} and the {room}": [
+  "can you get the lights on in the {room3}, {room2} and the {room}"
+ ],
+ "kill the lights in {room}": [
+  "flick off the lights in the {room}"
+ ],
+ "turn on the {device} in the {room2}, {room} and the {room3}": [
+  "fire up the {device} in {room2}, the {room} and {room3}"
+ ],
+ "switch off the lights in the {room3}, {room} and the {room2}": [
+  "shut the lights off in {room3}, the {room} and {room2}"
+ ],
+ "switch on the {room} fan": [
+  "can you get the fan going in the {room}"
+ ],
+ "{device} off in the {room3}, the {room2} and the {room}": [
+  "cut the {device} in {room3}, {room2} and {room}"
+ ],
+ "turn off the lights in {room2} and the {room}": [
+  "can you get the lights off in the {room2} and the {room}"
+ ],
+ "turn the {device} off in the {room3}, the {room} and the {room2}": [
+  "shut the {device} off in {room3}, the {room} and {room2}"
+ ],
+ "turn off the {device} in {room}": [
+  "kill the {device} in the {room}"
+ ],
+ "turn on the lights in the {room3}, the {room2} and the {room}": [
+  "flick the lights on in {room3}, {room2} and {room}"
+ ],
+ "turn off the {device} in the {room2}, the {room} and the {room3}": [
+  "flick off the {device} in the {room2}, {room} and the {room3}"
+ ],
+ "switch on the lights in the {room2} and {room}": [
+  "pop the lights on in the {room2} and the {room}"
+ ],
+ "it's dark in here": [
+  "gosh it's dark in here"
+ ],
+ "turn off the light": [
+  "switch the light off"
+ ],
+ "kill the lights": [
+  "switch the lights off"
+ ],
+ "turn on the lights": [
+  "light up in here"
+ ],
+ "turn the light on": [
+  "can you get the light on"
+ ],
+ "lights off": [
+  "cut the lights"
+ ],
+ "turn on the light": [
+  "switch the light on"
+ ],
+ "turn the lights on": [
+  "put the lights on in here"
+ ],
+ "turn the lights off": [
+  "turn off the lights"
+ ],
+ "turn off the lights": [
+  "lights off"
+ ],
+ "lights on": [
+  "let's get some light"
+ ],
+ "turn the {device} off": [
+  "cut the {device}"
+ ],
+ "turn the {device} on": [
+  "can you get the {device} going in here"
+ ],
+ "kill the {device}": [
+  "kill the {device} in here"
+ ],
+ "i'm hot, put the {device} on": [
+  "i'm boiling, get the {device} going"
+ ],
+ "pause the tv": [
+  "pause the tv"
+ ],
+ "pause": [
+  "pause it"
+ ],
+ "pause the {device}": [
+  "freeze the {device}"
+ ],
+ "pause that": [
+  "stop that for a sec"
+ ],
+ "turn the {device} in the {room} off": [
+  "cut the {device} in {room}"
+ ],
+ "switch the {room} {device} on": [
+  "flick the {device} on in {room}"
+ ],
+ "turn the {device} in the {room} on": [
+  "get the {device} on in the {room}"
+ ],
+ "switch the {room} {device} light on": [
+  "can you get the {device} light on in the {room}"
+ ],
+ "turn off the {room} {device} light": [
+  "flick off the {device} light in {room}"
+ ],
+ "turn on the {room} {device} light": [
+  "can you get the {device} light on in the {room}"
+ ],
+ "switch the {room} {device} light off": [
+  "switch the {device} light off in {room}"
+ ],
+ "turn the {device} light in the {room} off": [
+  "flick off the {device} light in {room}"
+ ],
+ "turn off the {device} light in the {room}": [
+  "kill the {device} light in the {room}"
+ ],
+ "turn the {device} in {room} on": [
+  "start the {device} in {room}"
+ ],
+ "turn the {device} light in the {room} on": [
+  "switch the {device} light on in {room}"
+ ],
+ "turn on the {device} light in the {room}": [
+  "pop the {device} light on in the {room}"
+ ],
+ "turn the {device} in {room} off": [
+  "turn off the {device} in the {room}"
+ ],
+ "turn the {device} light on": [
+  "switch the {device} light on"
+ ],
+ "turn the {device} light in {room} off": [
+  "shut the {device} light off in the {room}"
+ ],
+ "switch the {device} light off": [
+  "turn off the {device} light"
+ ],
+ "{device} light off": [
+  "kill the {device} light in here"
+ ],
+ "turn the {device} light off": [
+  "shut the {device} light off"
+ ],
+ "turn on the {device} light in {room}": [
+  "switch the {device} light on in {room}"
+ ],
+ "turn off the {device} light in {room}": [
+  "flick off the {device} light in {room}"
+ ],
+ "turn off the {device} light": [
+  "flick off the {device} light"
+ ],
+ "set the {room} lights to {num}%": [
+  "set the lights in the {room} to {num}%"
+ ],
+ "{room} lights to {num} percent": [
+  "set the lights in the {room} to {num}%"
+ ],
+ "dim the {room} lights to {num} percent": [
+  "can you dim the lights in {room} down to {num} percent"
+ ],
+ "brighten the {room} lights to {num}%": [
+  "take the lights in {room} up to {num} percent"
+ ],
+ "set the lights in the {room} to {num} percent": [
+  "lights in {room} to {num} percent"
+ ],
+ "brightness {num}%": [
+  "lights to {num} percent"
+ ],
+ "set the lights to {num}%": [
+  "lights to {num} percent"
+ ],
+ "{room} {device} to {num} percent": [
+  "set the {device} in the {room} to {num}%"
+ ],
+ "set the {device} in the {room} to {num} percent": [
+  "{device} in {room} to {num} percent"
+ ],
+ "lights to {num} percent": [
+  "put the lights at {num}%"
+ ],
+ "dim the lights to {num} percent": [
+  "dim the lights to {num} percent"
+ ],
+ "set the {room} {device} to {num}%": [
+  "put the {device} in the {room} at {num}%"
+ ],
+ "dim the {room} {device} to {num} percent": [
+  "can you dim the {device} in {room} down to {num} percent"
+ ],
+ "brighten the {room} {device} to {num}%": [
+  "brighten the {device} in the {room} to {num}%"
+ ],
+ "set the {device} to {num}%": [
+  "can you set the {device} to {num} percent"
+ ],
+ "dim the {device} to {num} percent": [
+  "lower the {device} to {num} percent"
+ ],
+ "{device} to {num} percent": [
+  "{device} to {num} percent"
+ ],
+ "set the lights in {room} to {num} percent": [
+  "can you set the lights in {room} to {num} percent"
+ ],
+ "turn off all the lights": [
+  "kill every light in the house"
+ ],
+ "turn off every light in the house": [
+  "switch off all the lights"
+ ],
+ "kill all the lights": [
+  "shut off every light in the house"
+ ],
+ "all lights off": [
+  "kill every light in the house"
+ ],
+ "lights off everywhere": [
+  "get all the lights off"
+ ],
+ "turn off all the {device}": [
+  "switch off all the {device}"
+ ],
+ "all {device} off": [
+  "switch off all the {device}"
+ ],
+ "{device} off everywhere": [
+  "{device} off everywhere"
+ ],
+ "kill all the {device}": [
+  "{device} off everywhere"
+ ],
+ "all lights on": [
+  "switch every light on"
+ ],
+ "turn every light on": [
+  "get all the lights on"
+ ],
+ "turn on all the {device}": [
+  "turn on all the {device}"
+ ],
+ "all {device} on": [
+  "{device} on everywhere"
+ ],
+ "turn off every {device} in the house": [
+  "shut off every {device} in the house"
+ ],
+ "turn on all the lights": [
+  "lights on everywhere"
+ ],
+ "turn on the {room2} lights and then turn off the {room} lights": [
+  "pop the lights on in the {room2} and can you get the lights off in the {room}"
+ ],
+ "turn off the {room2} lights, and turn on the {room} lights": [
+  "shut the lights off in {room2}, then flick the lights on in {room}"
+ ],
+ "turn off the {room} lights, and turn on the {room2} lights": [
+  "can you get the lights off in the {room}, and then pop the lights on in the {room2}"
+ ],
+ "turn on the {room} lights and turn off the {room2} lights": [
+  "flick the lights on in {room}, and shut the lights off in {room2}"
+ ],
+ "turn off the {room} lights and turn on the {room2} lights": [
+  "kill the lights in the {room} and put the lights on in the {room2}"
+ ],
+ "turn off the {room2} lights and then turn on the {room} lights": [
+  "kill the lights in the {room2}, then put the lights on in the {room}"
+ ],
+ "turn on the {room} lights and then turn off the {room2} lights": [
+  "light up {room} and then cut the lights in {room2}"
+ ],
+ "turn off the {room} lights and then turn on the {room2} lights": [
+  "can you get the lights off in the {room}, then pop the lights on in the {room2}"
+ ],
+ "turn on the {room2} lights and turn off the {room} lights": [
+  "turn on the lights in the {room2} and then turn off the lights in the {room}"
+ ],
+ "turn off the {room2} lights and turn on the {room} lights": [
+  "can you get the lights off in the {room2}, then pop the lights on in the {room}"
+ ],
+ "turn on the {room2} lights, and turn off the {room} lights": [
+  "switch the lights on in {room2}, then lights off in {room}"
+ ],
+ "turn off the {room} {device} and then turn on the {room2} lights": [
+  "turn off the {device} in the {room}, and turn on the lights in the {room2}"
+ ],
+ "turn on the {room} lights, and turn off the {room2} lights": [
+  "can you get the lights on in the {room}, and flick off the lights in the {room2}"
+ ],
+ "turn off the {room} {device} and turn on the {room2} lights": [
+  "cut the {device} in {room} and light up {room2}"
+ ],
+ "turn off the {room2} lights and then turn off the {device} in the {room}": [
+  "lights off in {room2} and then shut the {device} off in {room}"
+ ],
+ "turn on the {room} {device} and turn off the {room2} lights": [
+  "flick the {device} on in {room} and then shut the lights off in {room2}"
+ ],
+ "turn on the {room2} {device} and turn off the {room} lights": [
+  "flick the {device} on in {room2}, then shut the lights off in {room}"
+ ],
+ "turn off the {room} lights and turn off the {room2} {device}": [
+  "cut the lights in {room} and then shut the {device} off in {room2}"
+ ],
+ "turn on the {room} {device} and then turn off the {room2} lights": [
+  "can you get the {device} going in the {room} and then flick off the lights in the {room2}"
+ ],
+ "turn off the {room2} {device} and then turn on the {room} lights": [
+  "can you turn off the {device} in the {room2}, and turn on the lights in the {room}"
+ ],
+ "turn off the {room2} lights and turn off the {room} {device}": [
+  "lights off in {room2}, and shut the {device} off in {room}"
+ ],
+ "turn off the {room2} lights and turn off the {device} in the {room}": [
+  "shut the lights off in {room2}, and then cut the {device} in {room}"
+ ],
+ "turn off the {room2} lights, and turn off the {device} in the {room}": [
+  "turn off the lights in the {room2}, then cut the {device} in {room}"
+ ],
+ "turn on the {room} {device}, and turn off the {room2} lights": [
+  "turn on the {device} in the {room} and then turn off the lights in the {room2}"
+ ],
+ "turn on the {room2} {device}, and turn off the {room} lights": [
+  "pop the {device} on in the {room2} and can you get the lights off in the {room}"
+ ],
+ "turn off the {room2} {device}, and turn on the {room} lights": [
+  "shut the {device} off in {room2}, and switch the lights on in {room}"
+ ],
+ "turn off the {room} lights, and turn off the {device} in the {room2}": [
+  "switch the lights off in {room} and switch off the {device} in {room2}"
+ ],
+ "turn off the {room} {device}, and turn on the {room2} lights": [
+  "switch off the {device} in {room}, and then pop the lights on in the {room2}"
+ ],
+ "turn on the {room2} lights, and turn off the {device} in the {room}": [
+  "flick the lights on in {room2}, and then cut the {device} in {room}"
+ ],
+ "turn off the {room2} {device} and turn on the {room} lights": [
+  "cut the {device} in {room2}, then switch the lights on in {room}"
+ ],
+ "turn off the {room} lights and then turn off the {device} in the {room2}": [
+  "flick off the lights in the {room}, and shut the {device} off in {room2}"
+ ],
+ "turn off the {room} lights and then turn off the {room2} {device}": [
+  "turn off the lights in the {room} and then shut the {device} off in {room2}"
+ ],
+ "turn off the {room} lights and turn off the {device} in the {room2}": [
+  "cut the lights in {room}, and then shut the {device} off in {room2}"
+ ],
+ "turn on the {room} lights, and turn off the {device} in the {room2}": [
+  "light up {room} and turn off the {device} in the {room2}"
+ ],
+ "turn on the {room} lights and then turn off the {device} in the {room2}": [
+  "pop the lights on in the {room}, and then turn off the {device} in the {room2}"
+ ],
+ "turn on the {room} lights and turn off the {device} in the {room2}": [
+  "light up {room}, then shut the {device} off in {room2}"
+ ],
+ "turn on the {room2} lights and turn off the {device} in the {room}": [
+  "switch the lights on in {room2}, and switch off the {device} in {room}"
+ ],
+ "turn on the {room} lights and then turn off the {room2} {device}": [
+  "can you get the lights on in the {room}, and then switch off the {device} in {room2}"
+ ],
+ "turn off the {room} lights and turn off the {room2} tv": [
+  "switch the lights off in {room} and can you turn off the tv in the {room2}"
+ ],
+ "turn off the {room2} {device} and turn off the {room} tv": [
+  "turn off the {device} in the {room2}, then turn off the tv in the {room}"
+ ],
+ "turn on the {room2} {device} and then turn off the {room} lights": [
+  "turn on the {device} in the {room2} and then turn off the lights in the {room}"
+ ],
+ "turn off the {room2} lights and turn off the {room} tv": [
+  "kill the lights in the {room2} and then switch the tv off in {room}"
+ ],
+ "turn on the {room2} lights, and turn off the {room} tv": [
+  "switch the lights on in {room2}, and then switch the tv off in {room}"
+ ],
+ "turn on the {room2} lights and then turn off the {device} in the {room}": [
+  "pop the lights on in the {room2} and cut the {device} in {room}"
+ ],
+ "turn off the {room2} lights and then turn off the {room} tv": [
+  "kill the lights in the {room2} and then kill the tv in the {room}"
+ ],
+ "turn on the {room2} lights and then turn off the {room} tv": [
+  "put the lights on in the {room2}, and then switch the tv off in {room}"
+ ],
+ "turn off the {room2} {device} and then turn off the fan in the {room}": [
+  "can you turn off the {device} in the {room2} and then can you turn off the fan in {room}"
+ ],
+ "turn off the {room} lights and close the {device}": [
+  "cut the lights in {room}, and then can you close the {device} in here"
+ ],
+ "turn off the {room} lights, and turn off the {room2} tv": [
+  "switch the lights off in {room} and then shut the telly off in {room2}"
+ ],
+ "turn off the {room} {device}, and turn off the fan in the {room2}": [
+  "shut the {device} off in {room} and switch the fan off in {room2}"
+ ],
+ "turn off the {room} lights, and turn off the {room2} {device}": [
+  "turn off the lights in the {room}, then cut the {device} in {room2}"
+ ],
+ "turn off the {room2} lights and turn off the {device} in {room}": [
+  "turn off the lights in the {room2} and then turn off the {device} in the {room}"
+ ],
+ "turn on the {room2} {device} and then turn off the fan in the {room}": [
+  "start the {device} in {room2}, and then switch the fan off in {room}"
+ ],
+ "turn on the {room2} {device}, and turn off the {room} tv": [
+  "pop the {device} on in the {room2}, and shut the telly off in {room}"
+ ],
+ "turn off the {room} {device} and then turn off the {room2} tv": [
+  "turn off the {device} in the {room} and then shut the telly off in {room2}"
+ ],
+ "turn on the {room} {device} and turn off the {room2} tv": [
+  "flick the {device} on in {room} and kill the tv in the {room2}"
+ ],
+ "turn on the {room} {device} and turn off the fan in the {room2}": [
+  "turn on the {device} in the {room}, then turn off the fan in the {room2}"
+ ],
+ "turn on the {room2} lights and turn off the {room} {device}": [
+  "flick the lights on in {room2}, and then switch off the {device} in {room}"
+ ],
+ "turn off the {room2} lights, and turn off the {room} {device}": [
+  "shut the lights off in {room2}, then cut the {device} in {room}"
+ ],
+ "turn off the {room} lights and then turn off the {room2} tv": [
+  "cut the lights in {room}, then turn off the tv in the {room2}"
+ ],
+ "turn on the {room} {device}, and turn off the {room2} tv": [
+  "switch on the {device} in {room} and then shut the telly off in {room2}"
+ ],
+ "turn on the {room2} {device} and then turn off the {room} tv": [
+  "turn on the {device} in the {room2} and then turn off the tv in the {room}"
+ ],
+ "turn on the {room} lights, and turn off the {room2} {device}": [
+  "turn on the lights in the {room}, and turn off the {device} in the {room2}"
+ ],
+ "turn off the {room2} {device} and turn off the fan in the {room}": [
+  "switch off the {device} in {room2}, and kill the fan in the {room}"
+ ],
+ "turn off the {room2} {device}, and turn off the fan in the {room}": [
+  "kill the {device} in the {room2}, and switch the fan off in {room}"
+ ],
+ "turn off the {room2} lights and then turn off the {room} {device}": [
+  "flick off the lights in the {room2}, and shut the {device} off in {room}"
+ ],
+ "turn off the {room2} lights, and turn off the {device} in {room}": [
+  "lights off in {room2} and turn off the {device} in the {room}"
+ ],
+ "turn on the {room} lights, and close the {device}": [
+  "turn on the lights in the {room}, then close the {device}"
+ ],
+ "turn off the {room} {device} and close the blinds": [
+  "shut the {device} off in {room}, and shut the blinds"
+ ],
+ "turn on the {room} lights, and turn off the {device} in {room2}": [
+  "turn on the lights in the {room}, then shut the {device} off in {room2}"
+ ],
+ "turn off the {room} lights, and turn off the {device} in {room2}": [
+  "cut the lights in {room}, then switch off the {device} in {room2}"
+ ],
+ "turn on the {room2} lights and then turn off the {room} {device}": [
+  "light up {room2} and then switch off the {device} in {room}"
+ ],
+ "turn off the {room} lights and then close the {device}": [
+  "cut the lights in {room} and then close the {device}"
+ ],
+ "turn on the {room2} lights and turn off the {room} tv": [
+  "can you get the lights on in the {room2} and then shut the telly off in {room}"
+ ],
+ "turn off the {room} {device} and turn off the fan in the {room2}": [
+  "turn off the {device} in the {room} and switch the fan off in {room2}"
+ ],
+ "turn off the {room} {device} and turn off the {room2} tv": [
+  "cut the {device} in {room} and then kill the tv in the {room2}"
+ ],
+ "turn off the {room} {device} and then close the blinds": [
+  "cut the {device} in {room} and can you close the blinds in here"
+ ],
+ "turn on the {room} {device} and then close the blinds": [
+  "pop the {device} on in the {room}, and close the blinds"
+ ],
+ "turn off the {room} {device}, and turn off the fan in {room2}": [
+  "turn off the {device} in the {room}, and then can you turn off the fan in {room2}"
+ ],
+ "turn off the {room2} lights, and turn off the {room} tv": [
+  "turn off the lights in the {room2} and then kill the tv in the {room}"
+ ],
+ "turn off the {room2} {device} and then turn off the {room} tv": [
+  "shut the {device} off in {room2}, and turn off the tv in the {room}"
+ ],
+ "turn on the {room} lights and turn off the {room2} tv": [
+  "flick the lights on in {room} and turn off the tv in the {room2}"
+ ],
+ "turn on the {room} {device} and then turn off the fan in the {room2}": [
+  "flick the {device} on in {room}, then can you turn off the fan in {room2}"
+ ],
+ "turn on the {room2} {device} and turn off the fan in the {room}": [
+  "start the {device} in {room2}, then switch the fan off in {room}"
+ ],
+ "turn on the {room} lights and close the {device}": [
+  "let's get some light in the {room} and then shut the {device}"
+ ],
+ "turn off the {room2} {device}, and turn off the {room} tv": [
+  "can you turn off the {device} in the {room2}, and shut the telly off in {room}"
+ ],
+ "turn on the {room} lights and then turn off the {room2} tv": [
+  "flick the lights on in {room} and shut the telly off in {room2}"
+ ],
+ "turn off the {room} {device} and then turn off the fan in the {room2}": [
+  "turn off the {device} in the {room} and turn off the fan in the {room2}"
+ ],
+ "turn on the {room2} {device}, and turn off the fan in the {room}": [
+  "fire up the {device} in {room2}, and then switch the fan off in {room}"
+ ],
+ "set the temperature to {num}": [
+  "can you set the temperature to {num} degrees"
+ ],
+ "it's too warm in here": [
+  "it's really warm in here"
+ ],
+ "make it {num} degrees": [
+  "i want it {num} degrees"
+ ],
+ "set the temperature in the {room} to {num}": [
+  "i want it {num} degrees in the {room}"
+ ],
+ "i'm hot": [
+  "i'm really hot"
+ ],
+ "it's cold in here": [
+  "it's way too cold in here"
+ ],
+ "i'm cold": [
+  "i'm really cold"
+ ],
+ "make it {num} degrees in the {room}": [
+  "make it {num} degrees in the {room}"
+ ],
+ "turn off the aircon": [
+  "turn off the aircon"
+ ],
+ "set the aircon to {num} degrees": [
+  "put the aircon in here on {num} degrees"
+ ],
+ "heating to {num}": [
+  "get the heating to {num} degrees"
+ ],
+ "turn the heating off": [
+  "shut the heating off"
+ ],
+ "set the heating to {num} degrees": [
+  "put the heating in here on {num} degrees"
+ ],
+ "aircon to {num}": [
+  "set the aircon to {num} degrees"
+ ],
+ "turn on the heating": [
+  "turn on the heating"
+ ],
+ "aircon in the {room} to {num}": [
+  "set the aircon in the {room} to {num} degrees"
+ ],
+ "switch off the heating in the {room}": [
+  "shut the heating off in the {room}"
+ ],
+ "turn on the aircon": [
+  "turn on the aircon"
+ ],
+ "turn the aircon off": [
+  "can you turn off the aircon"
+ ],
+ "put the heating on": [
+  "fire up the heating"
+ ],
+ "set the heating in the {room} to {num} degrees": [
+  "can you set the heater in {room} to {num}"
+ ],
+ "switch off the heating": [
+  "shut the heating off"
+ ],
+ "warm up the house": [
+  "get the house warmed up"
+ ],
+ "switch off the aircon": [
+  "can you turn off the aircon"
+ ],
+ "cool down the {room}": [
+  "cool down the {room}"
+ ],
+ "heating in {room} to {num}": [
+  "can you set the heater in {room} to {num}"
+ ],
+ "heating in the {room} to {num}": [
+  "put the heating in the {room} on {num} degrees"
+ ],
+ "turn off the aircon in the {room}": [
+  "switch the aircon off in {room}"
+ ],
+ "set the temperature in {room} to {num}": [
+  "can you set the temperature in {room} to {num} degrees"
+ ],
+ "make it {num} degrees in {room}": [
+  "set the temperature in the {room} to {num}"
+ ],
+ "set the aircon in the {room} to {num} degrees": [
+  "set the aircon in the {room} to {num} degrees"
+ ],
+ "heating in here to {num}": [
+  "can you set the heater to {num}"
+ ],
+ "put the aircon on": [
+  "put the aircon on in here"
+ ],
+ "turn the heating in the {room} off": [
+  "can you turn off the heater in {room}"
+ ],
+ "make it {num} degrees in here": [
+  "i want it {num} degrees"
+ ],
+ "aircon in {room} to {num}": [
+  "put the aircon in the {room} on {num} degrees"
+ ],
+ "set the temperature in here to {num}": [
+  "i want it {num} degrees"
+ ],
+ "cool down the house": [
+  "cool down the house"
+ ],
+ "turn on the aircon in the {room}": [
+  "put the aircon on in the {room}"
+ ],
+ "set the heating in {room} to {num} degrees": [
+  "set the heating in the {room} to {num} degrees"
+ ],
+ "put the heating on in {room}": [
+  "can you get the heater going in {room}"
+ ],
+ "put the aircon on in the {room}": [
+  "switch the aircon on in {room}"
+ ],
+ "warm up the {room}": [
+  "can you warm {room} up"
+ ],
+ "switch off the heating in {room}": [
+  "turn off the heating in the {room}"
+ ],
+ "cool down {room}": [
+  "cool down the {room}"
+ ],
+ "switch off the aircon in the {room}": [
+  "turn off the aircon in the {room}"
+ ],
+ "turn off the aircon in here": [
+  "can you turn off the aircon"
+ ],
+ "turn off the heating in {room}": [
+  "shut the heating off in the {room}"
+ ],
+ "set the aircon in {room} to {num} degrees": [
+  "put the aircon in the {room} on {num} degrees"
+ ],
+ "warm up {room}": [
+  "can you warm {room} up"
+ ],
+ "turn off the heating in the {room}": [
+  "turn off the heating in the {room}"
+ ],
+ "aircon in here to {num}": [
+  "set the aircon to {num} degrees"
+ ],
+ "turn on the heating in here": [
+  "turn on the heating"
+ ],
+ "put the heating on in the {room}": [
+  "can you get the heater going in {room}"
+ ],
+ "turn the aircon in {room} off": [
+  "can you turn off the aircon in {room}"
+ ],
+ "turn the aircon in here off": [
+  "shut the aircon off"
+ ],
+ "turn on the aircon in {room}": [
+  "can you get the aircon going in {room}"
+ ],
+ "switch off the aircon in {room}": [
+  "can you turn off the aircon in {room}"
+ ],
+ "turn off the aircon in {room}": [
+  "switch the aircon off in {room}"
+ ],
+ "set the aircon in here to {num} degrees": [
+  "can you set the aircon to {num}"
+ ],
+ "turn the aircon in the {room} off": [
+  "turn off the aircon in the {room}"
+ ],
+ "put the heating on in here": [
+  "fire up the heating"
+ ],
+ "turn off the heating in here": [
+  "switch the heating off"
+ ],
+ "turn on the heating in {room}": [
+  "switch the heating on in {room}"
+ ],
+ "turn on the aircon in here": [
+  "can you get the aircon going"
+ ],
+ "put the aircon on in here": [
+  "can you get the aircon going"
+ ],
+ "turn the heating in {room} off": [
+  "switch the heating off in {room}"
+ ],
+ "lock the {device}": [
+  "make sure the {device} in here is locked"
+ ],
+ "{device}, lock": [
+  "can you lock the {device}"
+ ],
+ "make sure the {device} is locked": [
+  "lock the {device}"
+ ],
+ "lock everything": [
+  "make sure everything is locked"
+ ],
+ "lock all the doors": [
+  "make sure all the doors are locked"
+ ],
+ "lock the {room} {device}": [
+  "lock the {device} in the {room}"
+ ],
+ "lock up": [
+  "make sure everything's locked"
+ ],
+ "make sure the {room} {device} is locked": [
+  "get the {device} in {room} locked"
+ ],
+ "{room} {device}, lock": [
+  "make sure the {device} in the {room} is locked"
+ ],
+ "lock the doors": [
+  "get the doors locked"
+ ],
+ "play {media} in the {room}": [
+  "put {media} on for the {room}"
+ ],
+ "play {media}": [
+  "throw on {media}"
+ ],
+ "put on some {media} in the {room}": [
+  "put some {media} on in the {room}"
+ ],
+ "play some {media} in the {room}": [
+  "play a bit of {media} in the {room}"
+ ],
+ "put on {media} in the {room}": [
+  "get {media} on in the {room}"
+ ],
+ "can we have {media} in the {room}": [
+  "any chance of {media} in the {room}"
+ ],
+ "play {media} please in the {room}": [
+  "put {media} on for the {room}"
+ ],
+ "play the {media} playlist in the {room}": [
+  "can you play the {media} playlist in the {room}"
+ ],
+ "play {media} in {room}": [
+  "stick {media} on in the {room}"
+ ],
+ "turn on {media} in the {room}": [
+  "flick on {media} in the {room}"
+ ],
+ "put on the album {media} in the {room}": [
+  "put the {media} album on in the {room}"
+ ],
+ "play some {media}": [
+  "chuck on some {media}"
+ ],
+ "play the {media} podcast in the {room}": [
+  "stick on the {media} podcast in the {room}"
+ ],
+ "put on the latest {media} in the {room}": [
+  "get the latest {media} going in the {room}"
+ ],
+ "start the {media} playlist in the {room}": [
+  "begin the {media} playlist in the {room}"
+ ],
+ "put {media} on in the {room}": [
+  "throw {media} on in the {room}"
+ ],
+ "put on some {media}": [
+  "throw some {media} on"
+ ],
+ "put on my {media} playlist in the {room}": [
+  "chuck on my {media} playlist in the {room}"
+ ],
+ "play the {media} playlist": [
+  "stick the {media} playlist on"
+ ],
+ "play some music in the {room}": [
+  "can we get some music going in the {room}"
+ ],
+ "can we have {media}": [
+  "is there any {media} we can have"
+ ],
+ "play the whole of {media} in the {room}": [
+  "play {media} start to finish in the {room}"
+ ],
+ "put on {media}": [
+  "stick {media} on"
+ ],
+ "play something in the {room}": [
+  "get something going in the {room}"
+ ],
+ "tune in to {media} in the {room}": [
+  "get {media} tuned in in the {room}"
+ ],
+ "put on my {media} playlist": [
+  "can you play my {media} playlist"
+ ],
+ "start the {media} playlist": [
+  "kick off the {media} playlist"
+ ],
+ "turn on {media}": [
+  "get {media} playing"
+ ],
+ "can we have {media} in {room}": [
+  "is there any {media} we can have in the {room}"
+ ],
+ "play the whole of {media}": [
+  "stick on the whole {media}"
+ ],
+ "put on the latest {media}": [
+  "get the latest {media} going"
+ ],
+ "play the {media} podcast": [
+  "get the {media} podcast going"
+ ],
+ "put some music on in the {room}": [
+  "can you get some music on in the {room}"
+ ],
+ "put on {media} in {room}": [
+  "get {media} on in the {room}"
+ ],
+ "tune in to {media}": [
+  "get {media} tuned in"
+ ],
+ "put {media} on": [
+  "stick {media} on"
+ ],
+ "music please in the {room}": [
+  "get some tunes going in the {room}"
+ ],
+ "music": [
+  "tunes please"
+ ],
+ "put on some {media} in {room}": [
+  "play a bit of {media} in the {room}"
+ ],
+ "put {media} on in {room}": [
+  "get {media} on in the {room}"
+ ],
+ "put on the album {media} in {room}": [
+  "stick the album {media} on in the {room}"
+ ],
+ "tune in to {media} in {room}": [
+  "dial up {media} in the {room}"
+ ],
+ "play {media} please in {room}": [
+  "can you play {media} in the {room}"
+ ],
+ "put on the album {media}": [
+  "stick the album {media} on"
+ ],
+ "play the whole of {media} in {room}": [
+  "chuck on the full {media} in the {room}"
+ ],
+ "play some {media} in {room}": [
+  "can we get some {media} going in the {room}"
+ ],
+ "put some music on": [
+  "throw some music on"
+ ],
+ "put some music on in {room}": [
+  "throw some music on in the {room}"
+ ],
+ "play {person}'s mix in the {room}": [
+  "stick {person}'s mix on in the {room}"
+ ],
+ "put on my {person}'s mix playlist in the {room}": [
+  "can you play {person}'s mix playlist in the {room}"
+ ],
+ "start the {person}'s mix playlist in the {room}": [
+  "kick off {person}'s mix playlist in the {room}"
+ ],
+ "put on the latest {media} in {room}": [
+  "can you play the latest {media} in the {room}"
+ ],
+ "play something": [
+  "chuck something on"
+ ],
+ "play {person}'s mix in {room}": [
+  "chuck on {person}'s mix in the {room}"
+ ],
+ "put on my {media} playlist in {room}": [
+  "chuck on my {media} playlist in the {room}"
+ ],
+ "play {person}'s mix": [
+  "can you play {person}'s mix"
+ ],
+ "play some music": [
+  "get some music happening"
+ ],
+ "play some music in {room}": [
+  "put some tunes on in the {room}"
+ ],
+ "play the {media} playlist in {room}": [
+  "stick the {media} playlist on in the {room}"
+ ],
+ "play the {media} podcast in {room}": [
+  "chuck on the {media} podcast in the {room}"
+ ],
+ "play the {person}'s mix playlist": [
+  "stick {person}'s mix playlist on"
+ ],
+ "turn on {media} in {room}": [
+  "switch on {media} in the {room}"
+ ],
+ "put on my {person}'s mix playlist": [
+  "chuck on my {person}'s mix playlist"
+ ],
+ "start the {media} playlist in {room}": [
+  "kick off the {media} playlist in the {room}"
+ ],
+ "start the {person}'s mix playlist": [
+  "fire up {person}'s mix playlist"
+ ],
+ "play the {person}'s mix playlist in the {room}": [
+  "chuck on {person}'s mix playlist in the {room}"
+ ],
+ "put on my {person}'s mix playlist in {room}": [
+  "stick {person}'s mix playlist on in the {room}"
+ ],
+ "music please in {room}": [
+  "music in the {room} thanks"
+ ],
+ "who sings this in the {room}": [
+  "who's this in the {room}"
+ ],
+ "what is this in the {room}": [
+  "what is this in the {room}"
+ ],
+ "what's this song in the {room}": [
+  "what's this song called in the {room}"
+ ],
+ "what's playing in the {room}": [
+  "what's playing in the {room}"
+ ],
+ "what song is this in the {room}": [
+  "what track is playing in the {room}"
+ ],
+ "what song is this": [
+  "what tune is this"
+ ],
+ "what's playing": [
+  "what's this that's playing"
+ ],
+ "what's this song": [
+  "what song is playing"
+ ],
+ "who sings this": [
+  "who sings this"
+ ],
+ "what is this": [
+  "what's this"
+ ],
+ "who sings this in {room}": [
+  "who sings this in the {room}"
+ ],
+ "what's this song in {room}": [
+  "what song is playing in the {room}"
+ ],
+ "what song is this in {room}": [
+  "what song is this in the {room}"
+ ],
+ "what's playing in {room}": [
+  "what's on in the {room}"
+ ],
+ "what is this in {room}": [
+  "what is this song in the {room}"
+ ],
+ "set the volume to {num} percent": [
+  "can you set it to {num} percent"
+ ],
+ "turn it to {num} percent": [
+  "set it to {num} percent"
+ ],
+ "volume {num}": [
+  "volume {num}"
+ ],
+ "volume to {num} in the {room}": [
+  "set the level to {num} in the {room}"
+ ],
+ "a bit louder": [
+  "nudge the volume up"
+ ],
+ "volume to {num}": [
+  "take it to {num}"
+ ],
+ "volume {num} in the {room}": [
+  "can you make it {num} in the {room}"
+ ],
+ "volume down": [
+  "turn the volume down"
+ ],
+ "quieter": [
+  "can you make it quieter"
+ ],
+ "a bit quieter": [
+  "can you make it a bit quieter"
+ ],
+ "louder in the {room}": [
+  "can you turn it up in the {room}"
+ ],
+ "crank it in the {room}": [
+  "crank it up in the {room}"
+ ],
+ "crank it": [
+  "turn it right up"
+ ],
+ "sound back on": [
+  "bring the sound back"
+ ],
+ "turn it up": [
+  "up the volume"
+ ],
+ "volume up": [
+  "increase the volume"
+ ],
+ "mute in the {room}": [
+  "can you mute it in the {room}"
+ ],
+ "quieter in the {room}": [
+  "turn it down a touch in the {room}"
+ ],
+ "a bit quieter in the {room}": [
+  "a touch quieter in the {room}"
+ ],
+ "mute the music in the {room}": [
+  "kill the music in the {room}"
+ ],
+ "mute the music": [
+  "kill the music"
+ ],
+ "mute": [
+  "silence it"
+ ],
+ "volume down in the {room}": [
+  "bring the volume down in the {room}"
+ ],
+ "too loud in the {room}": [
+  "this is way too loud in the {room}"
+ ],
+ "turn it to {num} percent in the {room}": [
+  "set it to {num} percent in the {room}"
+ ],
+ "turn it down in the {room}": [
+  "wind it down in the {room}"
+ ],
+ "turn it down": [
+  "can you turn it down"
+ ],
+ "set the volume to {num} percent in the {room}": [
+  "can you set it to {num} percent in the {room}"
+ ],
+ "unmute in the {room}": [
+  "turn the mute off in the {room}"
+ ],
+ "shh in the {room}": [
+  "hush in the {room}"
+ ],
+ "a bit louder in the {room}": [
+  "nudge the volume up in the {room}"
+ ],
+ "too loud": [
+  "that's really loud"
+ ],
+ "louder": [
+  "turn it up"
+ ],
+ "unmute": [
+  "bring the sound back"
+ ],
+ "turn it up in the {room}": [
+  "crank the volume in the {room}"
+ ],
+ "turn it down a bit": [
+  "can you turn it down slightly"
+ ],
+ "volume up in the {room}": [
+  "can you turn the volume up in the {room}"
+ ],
+ "a bit louder in {room}": [
+  "nudge the volume up in the {room}"
+ ],
+ "turn it down a bit in the {room}": [
+  "lower it a bit in the {room}"
+ ],
+ "turn it up in {room}": [
+  "up the volume in the {room}"
+ ],
+ "unmute in {room}": [
+  "bring the sound back in the {room}"
+ ],
+ "sound back on in the {room}": [
+  "get the sound going again in the {room}"
+ ],
+ "set the volume to {num} percent in {room}": [
+  "volume at {num} percent in the {room} thanks"
+ ],
+ "crank it in {room}": [
+  "crank it up in the {room}"
+ ],
+ "mute the music in {room}": [
+  "cut the music in the {room}"
+ ],
+ "a bit quieter in {room}": [
+  "bring it down a bit in the {room}"
+ ],
+ "turn it to {num} percent in {room}": [
+  "can you get it to {num} percent in the {room}"
+ ],
+ "mute in {room}": [
+  "mute that in the {room}"
+ ],
+ "quieter in {room}": [
+  "quiet it down in the {room}"
+ ],
+ "volume up in {room}": [
+  "increase the volume in the {room}"
+ ],
+ "volume to {num} in {room}": [
+  "get the volume to {num} in the {room}"
+ ],
+ "silence, everywhere": [
+  "kill the music in every room"
+ ],
+ "stop the music everywhere": [
+  "kill the music in every room"
+ ],
+ "turn off the music in the whole house": [
+  "stop the music everywhere"
+ ],
+ "stop all the music": [
+  "shut the music off in the whole house"
+ ],
+ "pause everything": [
+  "pause the music everywhere"
+ ],
+ "pause the music in the {room}": [
+  "put it on hold in the {room}"
+ ],
+ "pause the music": [
+  "hold the music"
+ ],
+ "resume": [
+  "carry on playing"
+ ],
+ "skip in the {room}": [
+  "next in the {room}"
+ ],
+ "hold the music": [
+  "pause the music"
+ ],
+ "next song": [
+  "can we have the next song"
+ ],
+ "pause in the {room}": [
+  "put it on hold in the {room}"
+ ],
+ "next song please in the {room}": [
+  "next one in the {room}"
+ ],
+ "i don't like this one, skip it": [
+  "not this one, skip it"
+ ],
+ "skip": [
+  "next"
+ ],
+ "unpause": [
+  "unpause"
+ ],
+ "play the last song again": [
+  "put the last song back on"
+ ],
+ "turn shuffle on": [
+  "turn on shuffle"
+ ],
+ "keep playing": [
+  "let it keep playing"
+ ],
+ "keep playing in the {room}": [
+  "carry on in the {room}"
+ ],
+ "shuffle": [
+  "shuffle the playlist"
+ ],
+ "pause that in the {room}": [
+  "pause that in the {room}"
+ ],
+ "skip this song in the {room}": [
+  "can you skip this song in the {room}"
+ ],
+ "that's enough music in the {room}": [
+  "that's enough for now in the {room}"
+ ],
+ "hold the music in the {room}": [
+  "put it on hold in the {room}"
+ ],
+ "resume in the {room}": [
+  "resume in the {room}"
+ ],
+ "next track": [
+  "move to the next track"
+ ],
+ "play in the {room}": [
+  "get it playing in the {room}"
+ ],
+ "stop": [
+  "cut it"
+ ],
+ "skip this song": [
+  "skip this song"
+ ],
+ "stop the music": [
+  "turn the music off"
+ ],
+ "mix it up in the {room}": [
+  "give it a shuffle in the {room}"
+ ],
+ "mix it up": [
+  "put it on shuffle"
+ ],
+ "pause that in {room}": [
+  "put it on hold in the {room}"
+ ],
+ "turn the music off": [
+  "shut the music off"
+ ],
+ "go back a track": [
+  "back a track"
+ ],
+ "turn shuffle on in the {room}": [
+  "turn shuffle on in the {room}"
+ ],
+ "resume in {room}": [
+  "resume in the {room}"
+ ],
+ "unpause in the {room}": [
+  "carry on playing in the {room}"
+ ],
+ "i don't like this one, skip it in the {room}": [
+  "i don't like this one, skip it in the {room}"
+ ],
+ "play this on repeat": [
+  "put this on repeat"
+ ],
+ "play": [
+  "get it playing"
+ ],
+ "stop in the {room}": [
+  "stop the music in the {room}"
+ ],
+ "that's enough music": [
+  "we're done with the music"
+ ],
+ "go back a track in the {room}": [
+  "play the previous track in the {room}"
+ ],
+ "shuffle in the {room}": [
+  "shuffle in the {room}"
+ ],
+ "i don't like this one, skip it in {room}": [
+  "skip it, i don't like this in the {room}"
+ ],
+ "play the last song again in {room}": [
+  "can we hear the last song again in the {room}"
+ ],
+ "previous track in {room}": [
+  "can we go back a track in the {room}"
+ ],
+ "stop in {room}": [
+  "stop the music in the {room}"
+ ],
+ "pause in {room}": [
+  "hold the music in the {room}"
+ ],
+ "skip this song in {room}": [
+  "move past this song in the {room}"
+ ],
+ "previous track": [
+  "go back a track"
+ ],
+ "play this on repeat in {room}": [
+  "put this on repeat in the {room}"
+ ],
+ "shuffle in {room}": [
+  "put it on shuffle in the {room}"
+ ],
+ "stop the music in {room}": [
+  "stop the music in the {room}"
+ ],
+ "skip in {room}": [
+  "skip in the {room}"
+ ],
+ "repeat this song": [
+  "repeat this song"
+ ],
+ "repeat this song in {room}": [
+  "play this song again and again in the {room}"
+ ],
+ "previous track in the {room}": [
+  "previous one in the {room}"
+ ],
+ "loop this track": [
+  "loop this song"
+ ],
+ "turn the music off in the {room}": [
+  "turn the music off in the {room}"
+ ],
+ "next track in the {room}": [
+  "next track in the {room}"
+ ],
+ "play it in the {room} too": [
+  "add the {room} to this"
+ ],
+ "play the music through the whole house": [
+  "play this in every room"
+ ],
+ "put the music on in the {room} too": [
+  "add the {room} to this"
+ ],
+ "play this everywhere": [
+  "play this everywhere"
+ ],
+ "add the {room}": [
+  "add {room} to this"
+ ],
+ "play this in the {room} as well": [
+  "play it in the {room} as well"
+ ],
+ "put this on all the speakers": [
+  "put it on in every room"
+ ],
+ "add {room}": [
+  "get the {room} playing this too"
+ ],
+ "play it in {room} too": [
+  "play it in the {room} as well"
+ ],
+ "play this in {room} as well": [
+  "can we also have it in the {room}"
+ ],
+ "is anything being watered right now": [
+  "is anything watering right now"
+ ],
+ "stop all the sprinklers": [
+  "turn off every sprinkler"
+ ],
+ "shut off the watering everywhere": [
+  "shut down the irrigation everywhere"
+ ],
+ "is the irrigation running": [
+  "are any sprinklers going"
+ ],
+ "that's enough water on the vegie beds": [
+  "cut the water to the vegie beds"
+ ],
+ "are the sprinklers on": [
+  "is anything watering right now"
+ ],
+ "water the orchard": [
+  "get the sprinklers going on the orchard"
+ ],
+ "turn off all the irrigation": [
+  "shut down the irrigation everywhere"
+ ],
+ "that's enough water on the orchard": [
+  "turn off the orchard sprinklers"
+ ],
+ "start watering the vegie beds for {num} minutes": [
+  "put the vegie beds irrigation on for {num} minutes"
+ ],
+ "turn on the orchard irrigation for {num} minutes": [
+  "run the orchard for {num} minutes"
+ ],
+ "start watering the house lawn for {num} minutes": [
+  "put the house lawn irrigation on for {num} minutes"
+ ],
+ "turn on the house lawn irrigation for {num} minutes": [
+  "run the house lawn for {num} minutes"
+ ],
+ "water the vegie beds for {num} minutes": [
+  "run the vegie beds for {num} minutes"
+ ],
+ "turn off the orchard irrigation": [
+  "cut the water to the orchard"
+ ],
+ "run the orchard sprinklers for {num} minutes": [
+  "give the orchard {num} minutes of water"
+ ],
+ "start watering the orchard for {num} minutes": [
+  "give the orchard {num} minutes of water"
+ ],
+ "stop watering the vegie beds": [
+  "cut the water to the vegie beds"
+ ],
+ "turn off the front lawn irrigation": [
+  "turn off the front lawn sprinklers"
+ ],
+ "turn on the orchard irrigation": [
+  "chuck some water on the orchard"
+ ],
+ "stop watering the house lawn": [
+  "cut the water to the house lawn"
+ ],
+ "turn on the back lawn irrigation for {num} minutes": [
+  "put the back lawn irrigation on for {num} minutes"
+ ],
+ "run the house lawn sprinklers for {num} minutes": [
+  "get the house lawn sprinklers going for {num} minutes"
+ ],
+ "turn off the house lawn irrigation": [
+  "turn off the house lawn sprinklers"
+ ],
+ "water the house lawn": [
+  "turn the house lawn watering on"
+ ],
+ "that's enough water on the house lawn": [
+  "turn off the house lawn sprinklers"
+ ],
+ "start watering the orchard": [
+  "turn the orchard watering on"
+ ],
+ "turn off the vegie beds irrigation": [
+  "turn off the vegie beds sprinklers"
+ ],
+ "water the orchard for {num} minutes": [
+  "put the orchard irrigation on for {num} minutes"
+ ],
+ "turn on the vegie beds irrigation for {num} minutes": [
+  "get the vegie beds sprinklers going for {num} minutes"
+ ],
+ "turn on the front lawn irrigation for {num} minutes": [
+  "run the front lawn for {num} minutes"
+ ],
+ "turn off the fruit trees irrigation": [
+  "that'll do for the fruit trees"
+ ],
+ "run the front lawn sprinklers for {num} minutes": [
+  "run the front lawn for {num} minutes"
+ ],
+ "run the greenhouse sprinklers for {num} minutes": [
+  "get the greenhouse sprinklers going for {num} minutes"
+ ],
+ "water the front lawn": [
+  "get the sprinklers going on the front lawn"
+ ],
+ "start watering the fruit trees for {num} minutes": [
+  "get the fruit trees sprinklers going for {num} minutes"
+ ],
+ "water the house lawn for {num} minutes": [
+  "give the house lawn {num} minutes of water"
+ ],
+ "water the greenhouse for {num} minutes": [
+  "run the greenhouse for {num} minutes"
+ ],
+ "start watering the vegie beds": [
+  "get the sprinklers going on the vegie beds"
+ ],
+ "turn on the greenhouse irrigation for {num} minutes": [
+  "run the greenhouse for {num} minutes"
+ ],
+ "start watering the house lawn": [
+  "turn the house lawn watering on"
+ ],
+ "stop watering the orchard": [
+  "cut the water to the orchard"
+ ],
+ "that's enough water on the greenhouse": [
+  "cut the water to the greenhouse"
+ ],
+ "that's enough water on the back lawn": [
+  "cut the water to the back lawn"
+ ],
+ "water the vegie beds": [
+  "get the sprinklers going on the vegie beds"
+ ],
+ "turn on the fruit trees irrigation for {num} minutes": [
+  "get the fruit trees sprinklers going for {num} minutes"
+ ],
+ "stop watering the fruit trees": [
+  "turn off the fruit trees sprinklers"
+ ],
+ "start watering the fruit trees": [
+  "get the sprinklers going on the fruit trees"
+ ],
+ "water the fruit trees": [
+  "chuck some water on the fruit trees"
+ ],
+ "turn on the back lawn irrigation": [
+  "get the sprinklers going on the back lawn"
+ ],
+ "water the back lawn for {num} minutes": [
+  "get the back lawn sprinklers going for {num} minutes"
+ ],
+ "water the greenhouse": [
+  "turn the greenhouse watering on"
+ ],
+ "turn on the vegie beds irrigation": [
+  "turn the vegie beds watering on"
+ ],
+ "turn on the house lawn irrigation": [
+  "chuck some water on the house lawn"
+ ],
+ "run the fruit trees sprinklers for {num} minutes": [
+  "give the fruit trees {num} minutes of water"
+ ],
+ "start watering the back lawn for {num} minutes": [
+  "get the back lawn sprinklers going for {num} minutes"
+ ],
+ "start watering the front lawn": [
+  "chuck some water on the front lawn"
+ ],
+ "run the house lawn sprinklers": [
+  "give the house lawn a water"
+ ],
+ "stop watering the front lawn": [
+  "cut the water to the front lawn"
+ ],
+ "run the vegie beds sprinklers for {num} minutes": [
+  "get the vegie beds sprinklers going for {num} minutes"
+ ],
+ "did someone leave the fridge open": [
+  "did someone forget to shut the fridge"
+ ],
+ "is the dishwasher finished": [
+  "has the dishwasher finished"
+ ],
+ "what's the oven doing": [
+  "what stage is the oven at"
+ ],
+ "how long left on the dishwasher": [
+  "when's the dishwasher done"
+ ],
+ "what's the dishwasher doing": [
+  "how's the dishwasher going"
+ ],
+ "is the fridge okay": [
+  "is the fridge alright"
+ ],
+ "is the oven finished": [
+  "has the oven wrapped up"
+ ],
+ "is the dishwasher done": [
+  "has the dishwasher finished up"
+ ],
+ "is the dishwasher still going": [
+  "hasn't the dishwasher finished yet"
+ ],
+ "is the oven still going": [
+  "is the oven still working"
+ ],
+ "is the oven done": [
+  "is the oven finished"
+ ],
+ "how long left on the oven": [
+  "how long till the oven finishes"
+ ],
+ "is the fridge {device} open": [
+  "is the fridge {device} still open"
+ ],
+ "is the fridge door open": [
+  "is the fridge shut properly"
+ ],
+ "is the dryer done": [
+  "is the dryer through yet"
+ ],
+ "did someone leave the freezer open": [
+  "is the freezer still open"
+ ],
+ "is the washing machine done": [
+  "has the washing machine finished up"
+ ],
+ "is the freezer okay": [
+  "is the freezer working fine"
+ ],
+ "what's the washing machine doing": [
+  "what's the washing machine up to"
+ ],
+ "what's the air fryer doing": [
+  "how's the air fryer going"
+ ],
+ "what's the dryer doing": [
+  "what stage is the dryer at"
+ ],
+ "is the washing machine still going": [
+  "hasn't the washing machine finished yet"
+ ],
+ "is the dryer finished": [
+  "did the dryer finish"
+ ],
+ "how long left on the washing machine": [
+  "how much longer on the washing machine"
+ ],
+ "how long left on the dryer": [
+  "how long till the dryer finishes"
+ ],
+ "is the freezer {device} open": [
+  "is the {device} on the freezer open"
+ ],
+ "is the air fryer still going": [
+  "is the air fryer not done yet"
+ ],
+ "is the washing machine finished": [
+  "has the washing machine wrapped up"
+ ],
+ "is the dryer still going": [
+  "hasn't the dryer finished yet"
+ ],
+ "how long left on the air fryer": [
+  "how long till the air fryer finishes"
+ ],
+ "is the air fryer done": [
+  "did the air fryer finish"
+ ],
+ "turn off the oven": [
+  "cut the oven off"
+ ],
+ "switch the oven off": [
+  "knock the oven off"
+ ],
+ "stop the dishwasher": [
+  "shut the dishwasher down"
+ ],
+ "stop the oven": [
+  "knock the oven off"
+ ],
+ "turn off the washing machine": [
+  "shut the washing machine down"
+ ],
+ "kill the dishwasher": [
+  "shut the dishwasher down"
+ ],
+ "kill the dryer": [
+  "cut the dryer off"
+ ],
+ "switch the dishwasher off": [
+  "power down the dishwasher"
+ ],
+ "kill the oven": [
+  "shut the oven down"
+ ],
+ "run the dishwasher": [
+  "fire up the dishwasher"
+ ],
+ "switch the dryer off": [
+  "power down the dryer"
+ ],
+ "stop the washing machine": [
+  "shut the washing machine down"
+ ],
+ "run the oven": [
+  "put the oven on"
+ ],
+ "stop the dryer": [
+  "power down the dryer"
+ ],
+ "kill the washing machine": [
+  "power down the washing machine"
+ ],
+ "turn on the oven": [
+  "crank up the oven"
+ ],
+ "start the washing machine": [
+  "fire up the washing machine"
+ ],
+ "turn off the dryer": [
+  "power down the dryer"
+ ],
+ "run the washing machine": [
+  "fire up the washing machine"
+ ],
+ "switch the washing machine off": [
+  "shut the washing machine down"
+ ],
+ "turn off the air fryer": [
+  "knock the air fryer off"
+ ],
+ "switch the air fryer off": [
+  "power down the air fryer"
+ ],
+ "start the dryer": [
+  "get the dryer going"
+ ],
+ "start the oven": [
+  "fire up the oven"
+ ],
+ "turn on the air fryer": [
+  "get the air fryer going"
+ ],
+ "stop the air fryer": [
+  "knock the air fryer off"
+ ],
+ "turn on the washing machine": [
+  "get the washing machine going"
+ ],
+ "run the dryer": [
+  "fire up the dryer"
+ ],
+ "kill the air fryer": [
+  "power down the air fryer"
+ ],
+ "turn on the dryer": [
+  "fire up the dryer"
+ ],
+ "how's the tank looking": [
+  "how's the tank going"
+ ],
+ "has the pump been running": [
+  "has the water pump been on"
+ ],
+ "what's the water level": [
+  "what's the tank level at"
+ ],
+ "how full is the tank": [
+  "what level is the tank at"
+ ],
+ "are we low on water": [
+  "are we short on water"
+ ],
+ "how much water have we got": [
+  "how much water is left"
+ ],
+ "is the pump running": [
+  "is the water pump working"
+ ],
+ "is the {device} on": [
+  "is the {device} running"
+ ],
+ "is the water pump on": [
+  "is the pump going"
+ ],
+ "is byd shark locked": [
+  "is the ute locked"
+ ],
+ "is byd shark charged": [
+  "is the ute charged"
+ ],
+ "how much range has byd shark got": [
+  "how much range has the shark got"
+ ],
+ "did we plug byd shark in": [
+  "did we plug the shark in"
+ ],
+ "what's byd shark at": [
+  "what's the ute at"
+ ],
+ "is byd shark plugged in": [
+  "is the shark plugged in"
+ ],
+ "how charged is byd shark": [
+  "how much battery has byd shark got"
+ ],
+ "how much range has the car got": [
+  "how much range has the shark got"
+ ],
+ "is byd shark charging": [
+  "is the shark charging"
+ ],
+ "is byd shark here": [
+  "is the ute here"
+ ],
+ "is the car here": [
+  "is the ute here"
+ ],
+ "did we plug the car in": [
+  "did we plug byd shark in"
+ ],
+ "did i lock byd shark": [
+  "did i remember to lock byd shark"
+ ],
+ "what's the car at": [
+  "what's the shark at"
+ ],
+ "is the car plugged in": [
+  "is the car on charge"
+ ],
+ "where's byd shark": [
+  "where's the ute"
+ ],
+ "how charged is the car": [
+  "how charged is the ute"
+ ],
+ "is the car locked": [
+  "is byd shark locked"
+ ],
+ "did i lock the car": [
+  "did i lock the shark"
+ ],
+ "is the car home": [
+  "is the ute home"
+ ],
+ "is byd shark home": [
+  "is the ute home"
+ ],
+ "is the car charged": [
+  "is the shark charged"
+ ],
+ "where's the car": [
+  "whereabouts is the car"
+ ],
+ "is the car charging": [
+  "is the shark charging"
+ ],
+ "where's sofia right now": [
+  "has anyone seen sofia"
+ ],
+ "find ella": [
+  "where's ella"
+ ],
+ "where's zoe right now": [
+  "do you know where zoe is"
+ ],
+ "find peter": [
+  "any idea where peter is"
+ ],
+ "where is molly": [
+  "track down molly"
+ ],
+ "where's elena right now": [
+  "do you know where elena is"
+ ],
+ "where is sophie": [
+  "has anyone seen sophie"
+ ],
+ "where's yuki right now": [
+  "track down yuki"
+ ],
+ "do you know where amber is": [
+  "find amber"
+ ],
+ "any idea where oliver is": [
+  "do you know where oliver is"
+ ],
+ "do you know where charlie is": [
+  "any idea where charlie is"
+ ],
+ "do you know where liam is": [
+  "any idea where liam is"
+ ],
+ "find molly": [
+  "any idea where molly is"
+ ],
+ "where is mia": [
+  "find mia"
+ ],
+ "do you know where ruby is": [
+  "any idea where ruby is"
+ ],
+ "where is hannah": [
+  "where's hannah at"
+ ],
+ "where's elena": [
+  "do you know where elena is"
+ ],
+ "any idea where tara is": [
+  "do you know where tara is"
+ ],
+ "where is kate": [
+  "find kate"
+ ],
+ "find kai": [
+  "where's kai"
+ ],
+ "where's leo right now": [
+  "has anyone seen leo"
+ ],
+ "where's yuki": [
+  "find yuki"
+ ],
+ "find sofia": [
+  "any idea where sofia is"
+ ],
+ "any idea where sam is": [
+  "do you know where sam is"
+ ],
+ "do you know where oliver is": [
+  "any idea where oliver is"
+ ],
+ "any idea where jess is": [
+  "do you know where jess is"
+ ],
+ "any idea where elena is": [
+  "where's elena"
+ ],
+ "any idea where jack is": [
+  "track down jack"
+ ],
+ "do you know where elena is": [
+  "find elena"
+ ],
+ "where's owen": [
+  "do you know where owen is"
+ ],
+ "where's tara right now": [
+  "has anyone seen tara"
+ ],
+ "any idea where zoe is": [
+  "do you know where zoe is"
+ ],
+ "where's nathan right now": [
+  "has anyone seen nathan"
+ ],
+ "where's amber": [
+  "do you know where amber is"
+ ],
+ "where's ruby": [
+  "do you know where ruby is"
+ ],
+ "find ben": [
+  "any idea where ben is"
+ ],
+ "do you know where raj is": [
+  "track down raj"
+ ],
+ "find ryan": [
+  "do you know where ryan is"
+ ],
+ "find jack": [
+  "where is jack right now"
+ ],
+ "where's tara": [
+  "do you know where tara is"
+ ],
+ "where's dan right now": [
+  "track down dan"
+ ],
+ "do you know where freya is": [
+  "any idea where freya is"
+ ],
+ "turn on the heating in the {room}": [
+  "warm up the {room}"
+ ],
+ "set the heating in here to {num} degrees": [
+  "put the heating here to {num} degrees"
+ ],
+ "turn the heating in here off": [
+  "switch the heating off in here"
+ ],
+ "switch off the heating in here": [
+  "cut the heating in here"
+ ],
+ "put the aircon on in {room}": [
+  "switch the aircon on in the {room}"
+ ],
+ "switch off the aircon in here": [
+  "turn the aircon off in here"
+ ],
+ "can i run the pool pump now": [
+  "is it okay to run the pool pump now"
+ ],
+ "is there enough power to run the pool pump": [
+  "have we got enough power for the pool pump"
+ ],
+ "okay to use the pool pump": [
+  "is the pool pump okay to run"
+ ],
+ "is it a good time to run the pool pump": [
+  "is it a good moment to put the pool pump on"
+ ],
+ "should i put the pool pump on": [
+  "should i run the pool pump"
+ ],
+ "can i put the pool pump on or should i wait": [
+  "is it better to run the pool pump now or wait"
+ ],
+ "turn the lights on in the {room}, the {room2} and the {room3}": [
+  "switch the lights on in the {room2}, the {room3} and the {room}"
+ ],
+ "mute the {device} in {room}": [
+  "mute the {device} in the {room}"
+ ],
+ "turn the lights off in the {room2}, the {room3} and the {room}": [
+  "kill the lights in the {room}, the {room2} and the {room3}"
+ ],
+ "turn the {device} off in the {room3}, the {room2} and the {room}": [
+  "turn the {device} off in the {room2}, the {room} and the {room3}"
+ ],
+ "turn on the {device} in the {room3}, the {room} and the {room2}": [
+  "switch the {device} on in the {room}, the {room2} and the {room3}"
+ ],
+ "turn on the {device} in the {room3}, the {room2} and the {room}": [
+  "switch the {device} on in the {room2}, the {room} and the {room3}"
+ ],
+ "switch on the lights in {room} and the {room2}": [
+  "switch the lights on in the {room2} and the {room}"
+ ],
+ "switch off the lights in the {room2}, the {room3} and {room}": [
+  "switch the lights off in the {room3}, the {room} and the {room2}"
+ ],
+ "kill the lights in the {room}, the {room3} and the {room2}": [
+  "lights off in the {room2}, the {room3} and the {room}"
+ ],
+ "turn on the lights in the {room3}, the {room} and the {room2}": [
+  "switch the lights on in the {room}, the {room2} and the {room3}"
+ ],
+ "turn off the lights in the {room2}, the {room} and the {room3}": [
+  "lights off in the {room3}, the {room} and the {room2}"
+ ],
+ "lights off in the {room2}, the {room} and the {room3}": [
+  "lights off in the {room3}, the {room} and the {room2}"
+ ],
+ "kill the {device} in the {room3}, the {room2} and {room}": [
+  "shut the {device} off in the {room}, the {room2} and the {room3}"
+ ],
+ "turn the lights on in {room2} and the {room}": [
+  "switch the lights on in the {room} and the {room2}"
+ ],
+ "open the blinds in the {room}": [
+  "let the blinds up in the {room}"
+ ],
+ "turn the lights off in the {room3}, {room2} and the {room}": [
+  "switch the lights off in the {room2}, the {room} and the {room3}"
+ ],
+ "turn the {device} on in the {room2}, the {room3} and the {room}": [
+  "switch the {device} on in the {room3}, the {room} and the {room2}"
+ ],
+ "turn the lights on in the {room3}, {room2} and the {room}": [
+  "switch the lights on in the {room2}, the {room} and the {room3}"
+ ],
+ "lights off in the {room}, the {room2} and {room3}": [
+  "switch the lights off in the {room2}, the {room3} and the {room}"
+ ],
+ "turn on the lights in the {room3}, the {room} and {room2}": [
+  "put the lights on in the {room2}, the {room} and the {room3}"
+ ],
+ "switch on the lights in the {room}, the {room2} and the {room3}": [
+  "switch the lights on in the {room2}, the {room3} and the {room}"
+ ],
+ "{device} off in {room2} and the {room}": [
+  "turn the {device} off in the {room2} and the {room}"
+ ],
+ "kill the lights in the {room2}, the {room} and the {room3}": [
+  "switch the lights off in the {room}, the {room3} and the {room2}"
+ ],
+ "turn off the lights in the {room} and {room2}": [
+  "lights off in the {room2} and the {room}"
+ ],
+ "lights off in the {room3}, the {room2} and the {room}": [
+  "switch the lights off in the {room2}, the {room} and the {room3}"
+ ],
+ "turn the lights on in {room}": [
+  "turn the lights on in the {room}"
+ ],
+ "{device} on in the {room2} and {room}": [
+  "switch the {device} on in the {room} and the {room2}"
+ ],
+ "lights off in the {room3}, the {room} and the {room2}": [
+  "lights off in the {room2}, the {room} and the {room3}"
+ ],
+ "kill the {device} in the {room3}, the {room} and the {room2}": [
+  "turn the {device} off in the {room3}, the {room} and the {room2}"
+ ],
+ "kill the {device} in the {room2} and {room}": [
+  "kill the {device} in the {room2} and the {room}"
+ ],
+ "kill the {device} in the {room2}, the {room3} and the {room}": [
+  "kill the {device} in the {room}, the {room2} and the {room3}"
+ ],
+ "turn the lights off in {room2} and the {room}": [
+  "kill the lights in the {room2} and the {room}"
+ ],
+ "switch off the {room} fan": [
+  "shut off the fan in the {room}"
+ ],
+ "turn on the lights in the {room}, the {room3} and {room2}": [
+  "get the lights on in the {room2}, the {room} and the {room3}"
+ ],
+ "{device} off in the {room3}, the {room} and the {room2}": [
+  "turn the {device} off in the {room3}, the {room} and the {room2}"
+ ],
+ "lights on in the {room}, the {room3} and the {room2}": [
+  "put the lights on in the {room2}, the {room3} and the {room}"
+ ],
+ "pause the {device} in {room}": [
+  "put the {device} on pause in the {room}"
+ ],
+ "switch off the {device} in the {room3}, the {room} and the {room2}": [
+  "switch the {device} off in the {room}, the {room2} and the {room3}"
+ ],
+ "lights off in the {room3}, {room} and {room2}": [
+  "switch the lights off in the {room}, the {room2} and the {room3}"
+ ],
+ "lights off in {room2} and the {room}": [
+  "lights off in the {room} and the {room2}"
+ ],
+ "lights off in {room}": [
+  "lights off in the {room}"
+ ],
+ "turn off the lights in {room2}, the {room} and the {room3}": [
+  "lights off in the {room3}, the {room} and the {room2}"
+ ],
+ "turn the lights on in {room}, the {room3} and the {room2}": [
+  "put the lights on in the {room2}, the {room3} and the {room}"
+ ],
+ "turn the lights off in {room3}, the {room} and the {room2}": [
+  "kill the lights in the {room2}, the {room3} and the {room}"
+ ],
+ "switch off the lights in the {room}, the {room2} and the {room3}": [
+  "kill the lights in the {room3}, the {room} and the {room2}"
+ ],
+ "lights off in the {room2}, {room} and the {room3}": [
+  "kill the lights in the {room3}, the {room2} and the {room}"
+ ],
+ "kill the lights in {room2}, the {room} and the {room3}": [
+  "turn the lights off in the {room2}, the {room} and the {room3}"
+ ],
+ "lights on in the {room2} and {room}": [
+  "turn the lights on in the {room2} and the {room}"
+ ],
+ "{device} off in the {room}, the {room3} and the {room2}": [
+  "switch the {device} off in the {room3}, the {room2} and the {room}"
+ ],
+ "turn on the fan in the {room}": [
+  "switch the fan on in the {room}"
+ ],
+ "turn the lights on in the {room3}, the {room} and the {room2}": [
+  "turn the lights on in the {room}, the {room2} and the {room3}"
+ ],
+ "kill the lights in the {room3}, the {room} and the {room2}": [
+  "turn the lights off in the {room3}, the {room} and the {room2}"
+ ],
+ "switch off the {device} in the {room}, the {room3} and the {room2}": [
+  "shut the {device} off in the {room2}, the {room3} and the {room}"
+ ],
+ "put the lights on in {room} and the {room2}": [
+  "get the lights on in the {room} and the {room2}"
+ ],
+ "put the lights on in the {room}, the {room3} and {room2}": [
+  "get the lights on in the {room2}, the {room} and the {room3}"
+ ],
+ "switch off the lights in {room}": [
+  "lights off in the {room}"
+ ],
+ "{device} on in the {room} and {room2}": [
+  "turn the {device} on in the {room} and the {room2}"
+ ],
+ "switch off the lights in {room}, the {room2} and the {room3}": [
+  "lights off in the {room3}, the {room2} and the {room}"
+ ],
+ "turn on the {device} in the {room2}, the {room3} and {room}": [
+  "turn the {device} on in the {room2}, the {room3} and the {room}"
+ ],
+ "switch off the lights in the {room2}, the {room} and the {room3}": [
+  "switch the lights off in the {room}, the {room3} and the {room2}"
+ ],
+ "put the {device} on in the {room2}, {room} and the {room3}": [
+  "get the {device} going in the {room3}, the {room2} and the {room}"
+ ],
+ "switch on the lights in {room2} and the {room}": [
+  "switch the lights on in the {room} and the {room2}"
+ ],
+ "{device} off in the {room2}, the {room3} and the {room}": [
+  "turn the {device} off in the {room2}, the {room3} and the {room}"
+ ],
+ "turn on the robot vacuum": [
+  "switch the robot vacuum on"
+ ],
+ "open the garage door": [
+  "get the garage door open"
+ ],
+ "open the tv in the {room}": [
+  "open the {room} tv"
+ ],
+ "turn on the fish tank light": [
+  "switch the fish tank light on"
+ ],
+ "start the vacuum": [
+  "put the vacuum on"
+ ],
+ "turn on the air conditioning": [
+  "switch the air conditioning on"
+ ],
+ "start the driveway gate": [
+  "get the driveway gate going"
+ ],
+ "turn on the hot tub": [
+  "put the hot tub on"
+ ],
+ "start the fish tank {device}": [
+  "put the fish tank {device} on"
+ ],
+ "start the robot vacuum": [
+  "get the robot vacuum going"
+ ],
+ "switch on the {device} in {room}": [
+  "turn the {device} on in the {room}"
+ ],
+ "start the heater in {room}": [
+  "turn the heater on in the {room}"
+ ],
+ "turn on the pool pump": [
+  "put the pool pump on"
+ ],
+ "open the fan in the {room}": [
+  "have the fan opened in the {room}"
+ ],
+ "turn on the {room2} lights, and turn off the {room} {device}": [
+  "lights on in the {room2} and kill the {device} in the {room}"
+ ],
+ "turn on the {room} lights and turn off the {room2} {device}": [
+  "turn on the {room} lights then switch off the {room2} {device}"
+ ],
+ "turn on the {room} lights and then close the {device}": [
+  "turn the {room} lights on and close the {device} after"
+ ],
+ "turn off the {room} lights, and close the {device}": [
+  "lights off in the {room}, and close the {device}"
+ ],
+ "turn on the {room} {device} and then turn off the {room2} tv": [
+  "{room} {device} on, then {room2} tv off"
+ ],
+ "turn off the {room2} lights and then turn off the {device} in {room}": [
+  "lights off in the {room2}, then turn off the {device} in {room}"
+ ],
+ "turn on the {room} lights and then turn off the {device} in {room2}": [
+  "get the {room} lights on then switch off the {device} in the {room2}"
+ ],
+ "turn off the {room} lights, and turn off the {device} in {person}'s room": [
+  "turn the {room} lights off and also turn off the {device} in {person}'s room"
+ ],
+ "turn on the {room2} {device} and turn off the {room} tv": [
+  "switch on the {device} in the {room2} and kill the {room} tv"
+ ],
+ "turn on the {room2} lights and turn off the fan in the {room}": [
+  "lights on in the {room2} and kill the fan in the {room}"
+ ],
+ "turn off the {room} {device}, and turn off the {room2} tv": [
+  "{room} {device} off, and {room2} tv off"
+ ],
+ "turn on the {room} lights, and turn off the {room2} tv": [
+  "turn the {room} lights on and turn off the {room2} tv"
+ ],
+ "turn the {device} light in {room} on": [
+  "switch the {device} light on in the {room}"
+ ],
+ "turn on the {device} light": [
+  "get the {device} light on"
+ ],
+ "switch the {device} light on": [
+  "put the {device} light on"
+ ],
+ "{device} light on": [
+  "switch the {device} light on"
+ ],
+ "close the blinds": [
+  "shut those blinds"
+ ],
+ "did the {room} blinds close": [
+  "did the blinds in the {room} shut"
+ ],
+ "is the fan on in the {room}": [
+  "has the fan been turned on in the {room}"
+ ],
+ "turn every {device} on": [
+  "turn all the {device} on"
+ ],
+ "open the blinds": [
+  "open up the blinds"
+ ]
+}

@@ -1,0 +1,239 @@
+{
+  "set": "bigbench-b-bundook",
+  "stt": "base",
+  "condition": "biased",
+  "prompted": true,
+  "host": "magpie",
+  "utterances": 57,
+  "words": 313,
+  "errors": 28,
+  "wer": 0.0895,
+  "exact": 0.7193,
+  "vocab_words": 93,
+  "vocab_errors": 12,
+  "vocab_wer": 0.129,
+  "vocab": {
+    "room": {
+      "n": 16,
+      "err": 0,
+      "wer": 0.0
+    },
+    "device": {
+      "n": 43,
+      "err": 9,
+      "wer": 0.2093
+    },
+    "person": {
+      "n": 5,
+      "err": 1,
+      "wer": 0.2
+    },
+    "number": {
+      "n": 3,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 26,
+      "err": 2,
+      "wer": 0.0769
+    }
+  },
+  "meaning_changed": 0.1228,
+  "meaning_changed_n": 7,
+  "meaning_by_kind": {
+    "room": 0.0,
+    "device": 0.1053,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0351
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 1.2782,
+    "p50": 1.365,
+    "p90": 1.8032,
+    "rtf": 0.4903,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "au-p326": {
+      "turns": 3,
+      "wer": 0.3529,
+      "meaning_changed": 1.0
+    },
+    "au-p374": {
+      "turns": 6,
+      "wer": 0.087,
+      "meaning_changed": 0.0
+    },
+    "gb-alan": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "gb-alba": {
+      "turns": 8,
+      "wer": 0.04,
+      "meaning_changed": 0.125
+    },
+    "gb-cori": {
+      "turns": 15,
+      "wer": 0.0759,
+      "meaning_changed": 0.1333
+    },
+    "gb-jenny": {
+      "turns": 6,
+      "wer": 0.1053,
+      "meaning_changed": 0.0
+    },
+    "gb-northern-m": {
+      "turns": 6,
+      "wer": 0.0571,
+      "meaning_changed": 0.0
+    },
+    "us-amy": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "us-lessac": {
+      "turns": 5,
+      "wer": 0.25,
+      "meaning_changed": 0.2
+    },
+    "us-ryan": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 10,
+      "wer": 0.1395,
+      "meaning_changed": 0.0
+    },
+    "1.0": {
+      "turns": 31,
+      "wer": 0.1038,
+      "meaning_changed": 0.1613
+    },
+    "1.15": {
+      "turns": 16,
+      "wer": 0.0345,
+      "meaning_changed": 0.125
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 57,
+      "wer": 0.0895,
+      "meaning_changed": 0.1228
+    }
+  },
+  "by_set": {
+    "bigbench-b-bundook": {
+      "turns": 57,
+      "wer": 0.0895,
+      "meaning_changed": 0.1228
+    }
+  },
+  "samples": [
+    {
+      "id": "big-bundook_full-plan-14",
+      "turn": 0,
+      "voice": "us-lessac",
+      "written": "tv off",
+      "heard": "Toilet",
+      "lost": [
+        [
+          "device",
+          "tv"
+        ],
+        [
+          "command",
+          "off"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-1",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "turn on the batten lights",
+      "heard": "Turn on the button lights.",
+      "lost": [
+        [
+          "device",
+          "batten lights"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-2",
+      "turn": 0,
+      "voice": "gb-alba",
+      "written": "Turn off the toilet lights, and turn off the kitchen homepod.",
+      "heard": "Turn off the toilet lights and turn off the kitchen hump-od.",
+      "lost": [
+        [
+          "device",
+          "homepod"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-22",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "Lights to 25 percent.",
+      "heard": "Lies 25%",
+      "lost": [
+        [
+          "device",
+          "lights"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-9",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "Shark backup feed on please.",
+      "heard": "Shock, backup feed on please.",
+      "lost": [
+        [
+          "device",
+          "shark backup feed"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_projected-plan-11",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "dim the lights to 100 percent thanks",
+      "heard": "Tim the lights to 100% thanks.",
+      "lost": [
+        [
+          "command",
+          "dim"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_projected-plan-6",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "hey, how charged is BYD Shark",
+      "heard": "Hey, how charged does BWD shock?",
+      "lost": [
+        [
+          "device",
+          "byd shark"
+        ]
+      ]
+    }
+  ]
+}

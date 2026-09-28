@@ -1,0 +1,278 @@
+# home-ai
+
+A small, local LLM that runs under Ollama on an RTX 3080 and acts as the voice brain of an
+off-grid Home Assistant house: room control, "check on the house", "where is Amber",
+battery/solar/load questions, and bedtime/leaving routines.
+
+## How it works
+
+The model never sees the whole house. Its system prompt holds a compact **inventory**
+(each area with the device classes it contains, plus three house-wide groups: `security`,
+`energy`, `weather`) and two tools:
+
+| tool | purpose |
+|---|---|
+| `get_state(areas, classes)` | pull detailed state for just the rooms / device classes a task needs |
+| `call_service(domain, service, target, data)` | act, exactly like a Home Assistant service call (area_id or entity_id targets) |
+
+So a request flows in two stages, which is what the fine-tune teaches:
+
+1. **decide what matters**: "where is Amber" → `get_state(classes=[motion, occupancy])`;
+   "check on the house" → `get_state(classes=[lock, door, window, garage, alarm, light, motion, ...])`;
+   "turn on the bedroom and office lights" → no fetch at all, just `light.turn_on` with two `area_id`s.
+2. **reason over the returned slice and answer or act**, e.g. elimination: two rooms show
+   motion, the speaker is in one of them, one other person is home, so Amber is in the other.
+
+The same prompt builder and tool schema are used for training data, evaluation and the live
+bridge, so the model sees exactly the same format at runtime as in training.
+
+### Why synthetic data on random houses (plus one real profile)
+
+Every training example is built on a freshly generated house (random rooms, devices, people,
+time of day, weather, battery state). The model therefore learns *behaviours* (how to read an
+inventory, what to fetch, how to reason about presence and power, how to phrase spoken answers),
+not the layout of one house. Your real house is injected at runtime by the bridge.
+
+By default 40% of examples use the **Bundook profile** ([profiles.py](homeai/house/profiles.py)),
+the new build as drawn at plan.dolkens.house: Pete's and Amber's offices, the mmWave presence
+sensors in nearly every room, Somfy blinds and window actuators, per-room air conditioning,
+the ~52 kWh battery and ~30 kW array, hydronic heating, heat-pump hot water, and the BYD Shark
+as a portable backup feed. Only the layout is fixed; time, weather, states and where people are
+stay random. People at home are usually in their own office during work hours, in the dining
+hall in the evening and in bed late. Update the profile as the sensor plan changes, regenerate,
+retrain. Tune the mix with `--profile-share`.
+
+## Layout
+
+```
+homeai/house/       schema, random house generator, state text rendering, HA service simulator
+homeai/tools.py     tool schemas (OpenAI/Ollama format) + execution against a House
+homeai/datagen/     scenario builders (control, status, presence, routines, energy) + build CLI
+homeai/train/       Unsloth QLoRA training, GGUF export + Ollama Modelfile
+homeai/bridge/      Home Assistant client, entity->class mapping, agent loop, CLI/HTTP server
+homeai/eval/        teacher-forced eval against the held-out set
+configs/            training configs, bridge.example.json
+tests/              offline checks (no GPU/HA/Ollama needed)
+```
+
+## Quickstart
+
+### 1. Generate data (any machine, stdlib only)
+
+```bash
+make data            # 3000 examples -> data/generated/{train,val,test}.jsonl
+make test            # offline checks of the scorer and the HA mapping
+python -m homeai.datagen.build --n 20 --only presence_where --out /tmp/x   # inspect one scenario type
+```
+
+Optional token check with the real tokenizer (needs `pip install transformers jinja2`):
+
+```bash
+make dry-run
+```
+
+### 2. Train (GPU box with the 3080, Linux or WSL2)
+
+```bash
+python -m venv .venv && source .venv/bin/activate
+pip install -e ".[train]"                     # unsloth pulls compatible torch/trl/transformers
+make train                                    # configs/qwen25-7b.json
+```
+
+Default config is now `configs/qwen35-4b.json` (Qwen3.5-4B, March 2026): it fits a 10 GB card
+comfortably, trains in well under an hour per epoch and is the faster model to serve. Once that
+works end to end, run `make train CONFIG=configs/qwen35-9b.json` for the quality candidate (QLoRA on
+10 GB is tight; drop `max_seq_len` to 4096 or rent a GPU for that one). `configs/qwen25-7b.json`
+stays as the known-good fallback. Qwen3.5 is a hybrid thinking model; the training transcripts carry
+no reasoning, so it learns to answer directly, which is what you want for voice latency. Its tool-call
+format is XML-ish rather than JSON, but that is handled by the chat template on both sides.
+
+Training details: QLoRA r=16, 2 epochs, lr 2e-4,
+batch 1 × grad-accum 16, max 4608 tokens (the Bundook "check on the house" transcripts run to ~4100), loss on assistant turns only. Expect roughly
+7–9 GB of VRAM and around 1–2 hours per epoch on a 3080 for 2700 examples. If you hit OOM,
+switch to `configs/qwen25-3b.json` first to shake out the pipeline, or lower `max_seq_len`
+to 4096 (drops ~40 of the longest Bundook away-check examples) or 3072.
+
+If the 3080 box is awkward to reach, the same script runs on a free Colab T4 or a cheap
+RunPod instance; only `make train` and `make export` need a GPU.
+
+### 3. Export to Ollama
+
+```bash
+scripts/train-docker.sh merge configs/qwen35-4b.json                      # LoRA -> merged 16-bit safetensors (<out>/merged16)
+python -m homeai.train.ollama_import --run outputs/qwen35-4b-r1 --name homeai-4b --base qwen3.5:4b
+```
+
+Why not a GGUF from llama.cpp: Ollama runs Qwen3.5 on its own engine, which expects fused
+attention tensors that llama.cpp's converter does not produce, so such a GGUF fails to load
+("qwen3next: layer N missing attn_qkv/attn_gate projections"). Ollama has to do the conversion
+itself from safetensors (`ollama create --quantize q4_K_M`). The importer copies the merged
+weights into the Ollama container, reuses the base model's `RENDERER`/`PARSER` directives, and
+copies the quantised blob back to `<out>/gguf/<name>-q4_K_M.gguf` as a portable, re-importable file.
+
+Two gotchas from the first night:
+
+- Ollama's converter needs roughly 2.5x the model size in RAM (the 9B needed ~24 GB and was
+  OOM-killed on cassowary's 31 GB). `scripts/convert-on-mac.sh` does the same conversion on the
+  32 GB Mac and ships the result back.
+- Use the **same Ollama version** for conversion as for serving. Newer Ollama stores Qwen3.5
+  imports as per-tensor blobs that 0.21.2 cannot read and drops q4_K_M for this architecture.
+
+### 4. Talk to it
+
+```bash
+python -m homeai.bridge.cli chat --mock --seed 7 --model homeai            # random house, no HA
+python -m homeai.bridge.cli chat --mock --everyone-away --model homeai     # "check on the house" tests
+python -m homeai.bridge.cli chat --mock --model qwen2.5:7b-instruct        # compare with the untuned base
+```
+
+Live house (credentials come from `.env`: `HA_HOSTNAME` plus `HA_TOKEN`, or `HA_USERNAME`/`HA_PASSWORD`):
+
+```bash
+python -m homeai.bridge.cli prompt --config configs/bridge.json       # check the inventory looks right
+python -m homeai.bridge.cli chat   --config configs/bridge.json --speaker Peter --room office
+python -m homeai.bridge.cli serve  --config configs/bridge.json --port 8090
+# POST /chat {"text": "where is amber", "speaker": "Peter", "area": "office", "session": "office-satellite"}
+```
+
+The bridge reads HA's entity, device and area registries over the websocket API and drops
+config/diagnostic, hidden and disabled entities (on the existing house that removes about half of
+them). Remaining noise (camera overlay toggles, "Led indication" switches) is caught by name
+patterns. Only entities with an area, or that classify into security/energy/weather, are shown.
+`configs/bridge.json` currently points at the existing house on the block (grid-connected, soon
+the farm outhouse); its `overrides` are where the SolarEdge/battery sensors should be pinned so
+the auto-classifier doesn't have to guess. Run `prompt` and `chat` with `/state` until the
+inventory matches how you think about the house.
+
+### 5. Evaluate
+
+```bash
+make baseline        # untuned qwen3.5:4b on 60 test examples
+make eval            # fine-tuned model on the full test set
+```
+
+Every assistant turn in the held-out set is scored with the reference history as context:
+
+- **fetch** turns pass when the model's `get_state` covers every entity the reference needed
+  (over-fetch is reported as a ratio, aim for close to 1.0)
+- **act** turns pass when the service and the *resolved* entity set match (area_id and
+  entity_id targets are treated as equivalent)
+- **answer** turns pass when there is no tool call and the required phrases appear
+
+`outputs/eval/<model>/failures.jsonl` holds every miss with the model's output.
+That file is the input to the next iteration.
+
+## Corpus, sampling and paraphrases
+
+Rather than regenerating 3,000 examples per run, keep a large corpus and draw training sets from it:
+
+```bash
+for s in 100 101 102 103 104 105 106 107 108 109; do            # 30k examples, ten shards (seeds differ from the test set)
+  python -m homeai.datagen.build --n 3000 --seed $s --single data/corpus/v1/shard-$s.jsonl
+done
+python -m homeai.datagen.augment --corpus data/corpus/v1 --bank data/paraphrases/v1.json --out data/corpus/v1-aug --share 0.6
+python -m homeai.datagen.sample --corpus data/corpus/v1-aug --n 6000 --out data/generated/train.jsonl \
+    --val-out data/generated/val.jsonl --exclude data/generated/test.jsonl --boost clarify=2 confirm_sensitive=2 check_house=1.5
+```
+
+`data/paraphrases/v1.json` maps slot-skeleton templates (`turn on the {room} lights`) to spoken paraphrases
+written by Claude subagents; the augmenter fills the slots back in, rejects anything that drops a slot or
+flips on/off, and then applies the usual voice-style noise. The test set is never sampled from (house
+seeds are excluded), so numbers stay comparable across runs.
+
+## The improvement loop
+
+1. Run `make eval`, read `failures.jsonl`, group by `category` and `why`.
+2. If a failure is a *data* problem (the reference answer is wrong or awkward), fix the
+   scenario in `homeai/datagen/scenarios/`. If it is a *coverage* problem (a phrasing or
+   situation the model has never seen), add templates or a new scenario, and raise its weight in
+   `homeai/datagen/scenarios/__init__.py`.
+3. Talk to the model with `chat --mock` and write down real misses; turn them into scenarios.
+4. Regenerate, retrain, re-export, re-eval. Keep the previous `outputs/eval` to compare.
+
+Knobs worth knowing:
+
+- `--n` in `make data`: 3000 is a starting point; 8–10k helps once scenarios are diverse.
+- LoRA rank 16 → 32 and 2 → 3 epochs if the model under-fits tool formats; watch val loss.
+- Temperature 0.2 and `num_ctx 8192` are set in the Modelfile; 8k context leaves room for
+  large `get_state` results on a 10 GB card with a q4_k_m 7B model.
+- `homeai/datagen/augment.py` (to add) can paraphrase user utterances with a larger model for more natural variety.
+
+## Deploying the bridge
+
+The bridge has no Home Assistant library dependencies (stdlib only) and runs as its own container,
+decoupled from HA's Python environment. `deploy/Dockerfile` and `deploy/compose.homeai-bridge.yaml`
+follow the ai-stack conventions on cassowary (sits next to Ollama on the `proxy` network; HA is reached
+over the LAN with a long-lived token in `/ai/homeai-bridge/.env`). It could equally be packaged as a
+Supervisor add-on on the HA host; the compose route keeps it next to the GPU. The HA side is a thin
+custom conversation agent that forwards Assist text plus the satellite's area to `POST /chat`.
+
+## Evaluation sets
+
+**Wild set** (`data/generated/wild.jsonl`, 303 conversations): written by Claude subagents against twelve
+houses the training never saw, deliberately off-template (indirect requests, corrections, mixed intents,
+pre-confirmed sensitive actions, elimination presence, energy judgement). Build more with:
+
+```bash
+python -m homeai.eval.wild_pack --out /tmp/wild --houses 12 --seed 900000      # house packs for the agents
+# agents write /tmp/wild/specs/<agent>/house-<seed>.json following the spec inside each pack
+python -m homeai.eval.wild_build --packs /tmp/wild --specs /tmp/wild/specs/<agent> --out /tmp/wild/<agent>.jsonl
+```
+
+The builder validates every entity id, area, service and answer phrase against the simulated house and
+executes the tool calls so tool results are real. Score with `run_eval --data data/generated/wild.jsonl`.
+Template-set scores (below) measure generalisation to new houses and states; the wild set measures
+generalisation to how people actually talk.
+
+
+`data/generated/test-v1.jsonl` is the 150-example set every run in the first results page was scored
+on (no media/appliance/water/vehicle categories). `data/generated/test-v2.jsonl` (also copied to
+`test.jsonl`) is the current generator's set: it adds media (generic and Music Assistant players),
+appliances, water/irrigation, vehicle, lock and away-motion categories. Scores across v1 and v2 are not
+directly comparable; `scripts/overnight.sh` phase 2 scores the v1 models on v2 as well so the gap is visible.
+
+Training data v3 (`configs/*-v3.json`): the v2 corpus re-paraphrased with 80% of the bank
+(`data/paraphrases/v1-train.json`), plus 451 agent-written wild-style training conversations
+(`data/generated/wildtrain.jsonl`, houses 800000+, included twice). The held-out 20% of paraphrases
+(`v1-held.json`) rewrites test v2 into `test-v2-para.jsonl`, a phrasing test no training run has seen.
+
+Training data v2 (`configs/*-v2.json`) is 5,855 examples sampled from the 30k augmented corpus
+(`data/corpus/v2-aug`), 60% of them with paraphrased first utterances, with clarify/confirm/check-house/
+presence/media boosted.
+
+## Design B: rooms-only prompt for very large houses
+
+Design A (the default) lists every room's device names in the system prompt; at 10k-20k entities its whole-house
+`get_state` results overflow the context. Design B (`homeai/tools_b.py`, `system_prompt_b` in `homeai/house/snapshot.py`)
+lists areas with per-class device counts only, and adds `find_devices(areas, classes, name)` (entity ids, no state,
+40 rows) and a bounded `get_state` (`name`, `entity_ids`, `where` such as on / open / unlocked / power>100, `sort`
+power_desc / value_desc / value_asc / recent, `limit`; cut-off results say how many more and in which rooms).
+Examples opt in with `"toolset": "b"`; `e2e`, `run_eval` and the bridge (`--toolset b`) pick prompt, schemas and executor
+from it. The same scenario builders write B transcripts (`Conv.toolset = "b"`), with identical requests and answers:
+
+```bash
+PYTHONPATH=. python3 -m homeai.datagen.bigbench --toolset b --out data/generated/bigbench-b.jsonl
+PYTHONPATH=. python3 -m homeai.datagen.train_b --mix data/generated/train-v5.jsonl --add clarify_in_room=144 act_only_one=150
+PYTHONPATH=. python3 -m homeai.datagen.convert_b --data data/generated/test-v2.jsonl --out data/generated/test-v2-b.jsonl
+PYTHONPATH=. python3 -m homeai.datagen.convert_b --prompt-only --data data/generated/wild.jsonl --out data/generated/wild-b.jsonl
+```
+
+## Wiring into the voice pipeline
+
+Whisper (or HA's Assist STT) produces text; send it to `serve`'s `/chat` with the satellite's
+area as `area` and the identified speaker as `speaker`; pipe `reply` to Piper/TTS. Knowing the
+satellite's area is what makes "turn on the lights" and the presence elimination logic work.
+A thin Home Assistant custom conversation agent that forwards to `/chat` is the natural next
+step so this plugs straight into Assist pipelines.
+
+## Roadmap
+
+- [ ] first training run + baseline vs fine-tune eval
+- [ ] `augment.py`: LLM paraphrasing of user utterances
+- [ ] pin the existing house's SolarEdge/battery entities in `configs/bridge.json` overrides
+- [ ] smoke alarms as a class (8 in the plan) for the away-check
+- [ ] Shark logistics: "how charged is the Shark", "is the Shark plugged in", charge-at-old-house planning
+- [ ] history tool (`get_history(entity, hours)`) for "when did Amber get home", energy trends
+- [ ] HA custom conversation agent wrapping `/chat`
+- [ ] proactive mode: scheduled "battery won't last the night" notifications using the same tools
+- [ ] base-model bake-off: `configs/qwen25-7b.json` (known-good tooling), `configs/qwen35-9b.json` and `configs/qwen35-4b.json` (Qwen3.5, March 2026, needs Ollama >= 0.17.4). Same data, same eval; pick on eval pass rate and per-request latency on the 3080

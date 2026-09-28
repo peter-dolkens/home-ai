@@ -1,0 +1,19 @@
+{
+  "_comment": "v5 data: leak-free v3 template corpus (5,855) + all agent-written training conversations once (1,174; energy fetches widened to the whole group, 12 explicit room actions act directly) + targeted template batches from the wild-e2e failure analysis: 'which light?' clarifications from the app (224), solar-forecast-for-tomorrow questions (117), other clarify/energy (200). 7,570 examples.",
+  "base_model": "Qwen/Qwen3.5-4B",
+  "hf_tokenizer": "Qwen/Qwen3.5-4B",
+  "ollama_template_from": "qwen3.5:4b",
+  "instruction_part": "<|im_start|>user\n",
+  "response_part": "<|im_start|>assistant\n",
+  "max_seq_len": 5120,
+  "lora_r": 16,
+  "lora_alpha": 16,
+  "epochs": 2,
+  "lr": 0.0002,
+  "batch_size": 2,
+  "grad_accum": 8,
+  "seed": 3407,
+  "train": "data/generated/train-v5.jsonl",
+  "val": "data/generated/val-v3.jsonl",
+  "out": "outputs/qwen35-4b-v5"
+}

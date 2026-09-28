@@ -1,0 +1,91 @@
+{
+  "model": "lfm2.5-1.2b",
+  "data": "data/generated/wild.jsonl",
+  "mode": "e2e",
+  "examples": 303,
+  "turns": 409,
+  "pass": 0.3545232273838631,
+  "conversation_pass": 0.2739273927392739,
+  "seconds_per_turn": 1.091688360284876,
+  "calls_per_request": 1.6503667481662592,
+  "by_kind": {
+    "act": {
+      "n": 185,
+      "ok": 42
+    },
+    "state": {
+      "n": 409,
+      "ok": 266
+    },
+    "reply": {
+      "n": 409,
+      "ok": 288
+    },
+    "answer": {
+      "n": 224,
+      "ok": 103
+    }
+  },
+  "by_category": {
+    "wild_control": {
+      "n": 60,
+      "ok": 15
+    },
+    "wild_missing": {
+      "n": 23,
+      "ok": 23
+    },
+    "wild_appliance": {
+      "n": 20,
+      "ok": 7
+    },
+    "wild_media": {
+      "n": 44,
+      "ok": 13
+    },
+    "wild_clarify": {
+      "n": 36,
+      "ok": 15
+    },
+    "wild_presence": {
+      "n": 29,
+      "ok": 5
+    },
+    "wild_routine": {
+      "n": 27,
+      "ok": 3
+    },
+    "wild_smalltalk": {
+      "n": 17,
+      "ok": 17
+    },
+    "wild_energy": {
+      "n": 40,
+      "ok": 5
+    },
+    "wild_vehicle": {
+      "n": 8,
+      "ok": 0
+    },
+    "wild_water": {
+      "n": 19,
+      "ok": 2
+    },
+    "wild_confirm": {
+      "n": 37,
+      "ok": 21
+    },
+    "wild_status": {
+      "n": 33,
+      "ok": 15
+    },
+    "wild_mixed": {
+      "n": 16,
+      "ok": 4
+    }
+  },
+  "half_credit_rescored": true,
+  "half_credit_turns": 0,
+  "mentions_rescored": true,
+  "mentions_flipped": 0
+}

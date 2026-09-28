@@ -1,0 +1,116 @@
+{
+  "model": "homeai-4b-lora",
+  "examples": 150,
+  "turns": 326,
+  "pass": 0.9325153374233128,
+  "seconds_per_turn": 0.7671166000190688,
+  "think": "off",
+  "by_kind": {
+    "answer": {
+      "n": 174,
+      "ok": 158
+    },
+    "act": {
+      "n": 72,
+      "ok": 67
+    },
+    "fetch": {
+      "n": 80,
+      "ok": 79
+    }
+  },
+  "by_category": {
+    "missing": {
+      "n": 5,
+      "ok": 5
+    },
+    "control_area": {
+      "n": 32,
+      "ok": 32
+    },
+    "control_named": {
+      "n": 36,
+      "ok": 35
+    },
+    "status_aggregate": {
+      "n": 16,
+      "ok": 15
+    },
+    "presence_where": {
+      "n": 25,
+      "ok": 24
+    },
+    "control_brightness": {
+      "n": 8,
+      "ok": 8
+    },
+    "control_compound": {
+      "n": 18,
+      "ok": 18
+    },
+    "control_climate": {
+      "n": 8,
+      "ok": 6
+    },
+    "energy_night": {
+      "n": 5,
+      "ok": 5
+    },
+    "who_home": {
+      "n": 6,
+      "ok": 6
+    },
+    "check_house": {
+      "n": 41,
+      "ok": 36
+    },
+    "smalltalk": {
+      "n": 6,
+      "ok": 6
+    },
+    "control_all_lights": {
+      "n": 6,
+      "ok": 6
+    },
+    "control_here": {
+      "n": 10,
+      "ok": 10
+    },
+    "energy_status": {
+      "n": 12,
+      "ok": 12
+    },
+    "confirm_sensitive": {
+      "n": 19,
+      "ok": 15
+    },
+    "leaving": {
+      "n": 11,
+      "ok": 7
+    },
+    "presence_in_room": {
+      "n": 6,
+      "ok": 6
+    },
+    "clarify": {
+      "n": 14,
+      "ok": 10
+    },
+    "status_entity": {
+      "n": 24,
+      "ok": 24
+    },
+    "energy_appliance": {
+      "n": 12,
+      "ok": 12
+    },
+    "weather": {
+      "n": 6,
+      "ok": 6
+    }
+  },
+  "overfetch_mean": 0.9875,
+  "rescored_flips": 0,
+  "half_credit_rescored": true,
+  "half_credit_turns": 0
+}

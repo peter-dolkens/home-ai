@@ -1,0 +1,354 @@
+{
+  "set": "probe",
+  "stt": "kroko",
+  "condition": "lowmic",
+  "prompted": false,
+  "host": "magpie",
+  "utterances": 100,
+  "words": 639,
+  "errors": 76,
+  "wer": 0.1189,
+  "exact": 0.6,
+  "vocab_words": 184,
+  "vocab_errors": 18,
+  "vocab_wer": 0.0978,
+  "vocab": {
+    "room": {
+      "n": 47,
+      "err": 3,
+      "wer": 0.0638
+    },
+    "device": {
+      "n": 71,
+      "err": 8,
+      "wer": 0.1127
+    },
+    "person": {
+      "n": 3,
+      "err": 2,
+      "wer": 0.6667
+    },
+    "number": {
+      "n": 4,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 59,
+      "err": 5,
+      "wer": 0.0847
+    }
+  },
+  "meaning_changed": 0.14,
+  "meaning_changed_n": 14,
+  "meaning_by_kind": {
+    "room": 0.03,
+    "device": 0.06,
+    "person": 0.02,
+    "number": 0.0,
+    "command": 0.05
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 0.1515,
+    "p50": 0.1412,
+    "p90": 0.2291,
+    "rtf": 0.0536,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "au-p326": {
+      "turns": 12,
+      "wer": 0.2639,
+      "meaning_changed": 0.3333
+    },
+    "au-p374": {
+      "turns": 12,
+      "wer": 0.2174,
+      "meaning_changed": 0.1667
+    },
+    "gb-alan": {
+      "turns": 6,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "gb-alba": {
+      "turns": 6,
+      "wer": 0.0962,
+      "meaning_changed": 0.1667
+    },
+    "gb-cori": {
+      "turns": 8,
+      "wer": 0.2157,
+      "meaning_changed": 0.25
+    },
+    "gb-jenny": {
+      "turns": 17,
+      "wer": 0.0603,
+      "meaning_changed": 0.0
+    },
+    "gb-northern-m": {
+      "turns": 13,
+      "wer": 0.0909,
+      "meaning_changed": 0.0769
+    },
+    "gb-southern-f": {
+      "turns": 8,
+      "wer": 0.1186,
+      "meaning_changed": 0.25
+    },
+    "us-amy": {
+      "turns": 8,
+      "wer": 0.037,
+      "meaning_changed": 0.0
+    },
+    "us-lessac": {
+      "turns": 8,
+      "wer": 0.0938,
+      "meaning_changed": 0.25
+    },
+    "us-ryan": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 26,
+      "wer": 0.1524,
+      "meaning_changed": 0.1154
+    },
+    "1.0": {
+      "turns": 51,
+      "wer": 0.1311,
+      "meaning_changed": 0.1765
+    },
+    "1.15": {
+      "turns": 23,
+      "wer": 0.0647,
+      "meaning_changed": 0.087
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 100,
+      "wer": 0.1189,
+      "meaning_changed": 0.14
+    }
+  },
+  "by_set": {
+    "bigbench-bundook": {
+      "turns": 15,
+      "wer": 0.1154,
+      "meaning_changed": 0.2
+    },
+    "test-v2": {
+      "turns": 25,
+      "wer": 0.1615,
+      "meaning_changed": 0.16
+    },
+    "wild": {
+      "turns": 30,
+      "wer": 0.1031,
+      "meaning_changed": 0.1333
+    },
+    "wild2": {
+      "turns": 30,
+      "wer": 0.1106,
+      "meaning_changed": 0.1
+    }
+  },
+  "samples": [
+    {
+      "id": "wild-900002-disarm-alarm",
+      "turn": 0,
+      "voice": "au-p374",
+      "written": "Disarm the alarm.",
+      "heard": "To summer law",
+      "lost": [
+        [
+          "command",
+          "disarm"
+        ],
+        [
+          "device",
+          "alarm"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920002-fan-here",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "fan on in here",
+      "heard": "Vanol in here.",
+      "lost": [
+        [
+          "device",
+          "fan"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "1-1482",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "where is Tara",
+      "heard": "Raised her?",
+      "lost": [
+        [
+          "person",
+          "tara"
+        ]
+      ]
+    },
+    {
+      "id": "1-1539",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "Put on jazz in the master bedroom.",
+      "heard": "For Don Jaz and the master bedroom",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "1-222",
+      "turn": 0,
+      "voice": "us-lessac",
+      "written": "fan on",
+      "heard": "Turn on.",
+      "lost": [
+        [
+          "device",
+          "fan"
+        ]
+      ]
+    },
+    {
+      "id": "1-222",
+      "turn": 1,
+      "voice": "us-lessac",
+      "written": "Lounge.",
+      "heard": "Mounge.",
+      "lost": [
+        [
+          "room",
+          "lounge"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-1",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "turn on the batten lights",
+      "heard": "turn on the button lights.",
+      "lost": [
+        [
+          "device",
+          "batten lights"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_projected-plan-2",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "ok switch the pendant 3 on",
+      "heard": "a case which the pendant three ore",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_projected-plan-6",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "hey, how charged is BYD Shark",
+      "heard": "Hey, how charge this BYD sharp",
+      "lost": [
+        [
+          "device",
+          "byd shark"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900001-no-pool",
+      "turn": 0,
+      "voice": "gb-alba",
+      "written": "can you fire up the pool pump",
+      "heard": "Can you fire up the pool pum?",
+      "lost": [
+        [
+          "device",
+          "pump"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900004-clarify-which-light",
+      "turn": 1,
+      "voice": "gb-northern-m",
+      "written": "ensuite",
+      "heard": "And so",
+      "lost": [
+        [
+          "room",
+          "ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900005-anyone-home",
+      "turn": 1,
+      "voice": "gb-southern-f",
+      "written": "how long has mia been out for",
+      "heard": "How long has never been out for?",
+      "lost": [
+        [
+          "person",
+          "mia"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920006-r1",
+      "turn": 1,
+      "voice": "gb-southern-f",
+      "written": "and the workshop light, if it's on",
+      "heard": "and the works of light to fit on.",
+      "lost": [
+        [
+          "room",
+          "workshop"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920008-r1",
+      "turn": 2,
+      "voice": "au-p374",
+      "written": "and lock the mudroom door, it's sitting unlocked",
+      "heard": "I locked the mudroom door, it sitting unlocked.",
+      "lost": [
+        [
+          "command",
+          "lock"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "_comment": "Gemma 4 E4B on v5 data (the champion's data), QLoRA, with the tool-response mask fixed: homeai-gemma4-e4b-v2 masked the <|tool_response> marker the model must emit after each call, so it chained calls in one turn (acted_instead_of_fetching / extra_calls). Compare with homeai-4b-v5 (same data, QLoRA on Qwen3.5-4B).",
+  "base_model": "unsloth/gemma-4-E4B-it",
+  "hf_tokenizer": "google/gemma-4-E4B-it",
+  "ollama_template_from": "gemma4:e4b",
+  "instruction_part": "<|turn>user\n",
+  "response_part": "<|turn>model\n",
+  "max_seq_len": 4608,
+  "lora_r": 16,
+  "lora_alpha": 16,
+  "epochs": 2,
+  "lr": 0.0002,
+  "batch_size": 2,
+  "grad_accum": 8,
+  "seed": 3407,
+  "train": "data/generated/train-v5.jsonl",
+  "val": "data/generated/val-v3.jsonl",
+  "out": "outputs/gemma4-e4b-v5",
+  "load_in_4bit": true,
+  "mask_spans": [
+    [
+      "<|tool_response>",
+      "<tool_response|>",
+      "keep_open"
+    ]
+  ]
+}

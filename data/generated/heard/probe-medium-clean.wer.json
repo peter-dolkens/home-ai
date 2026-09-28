@@ -1,0 +1,276 @@
+{
+  "set": "probe",
+  "stt": "medium",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "utterances": 100,
+  "words": 639,
+  "errors": 40,
+  "wer": 0.0626,
+  "exact": 0.75,
+  "vocab_words": 184,
+  "vocab_errors": 10,
+  "vocab_wer": 0.0543,
+  "vocab": {
+    "room": {
+      "n": 47,
+      "err": 2,
+      "wer": 0.0426
+    },
+    "device": {
+      "n": 71,
+      "err": 3,
+      "wer": 0.0423
+    },
+    "person": {
+      "n": 3,
+      "err": 1,
+      "wer": 0.3333
+    },
+    "number": {
+      "n": 4,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 59,
+      "err": 4,
+      "wer": 0.0678
+    }
+  },
+  "meaning_changed": 0.08,
+  "meaning_changed_n": 8,
+  "meaning_by_kind": {
+    "room": 0.02,
+    "device": 0.03,
+    "person": 0.01,
+    "number": 0.0,
+    "command": 0.04
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 9.4661,
+    "p50": 9.3276,
+    "p90": 11.0302,
+    "rtf": 3.3514,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "au-p326": {
+      "turns": 12,
+      "wer": 0.1806,
+      "meaning_changed": 0.0833
+    },
+    "au-p374": {
+      "turns": 12,
+      "wer": 0.1594,
+      "meaning_changed": 0.25
+    },
+    "gb-alan": {
+      "turns": 6,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "gb-alba": {
+      "turns": 6,
+      "wer": 0.0577,
+      "meaning_changed": 0.1667
+    },
+    "gb-cori": {
+      "turns": 8,
+      "wer": 0.0588,
+      "meaning_changed": 0.125
+    },
+    "gb-jenny": {
+      "turns": 17,
+      "wer": 0.0086,
+      "meaning_changed": 0.0
+    },
+    "gb-northern-m": {
+      "turns": 13,
+      "wer": 0.0519,
+      "meaning_changed": 0.0769
+    },
+    "gb-southern-f": {
+      "turns": 8,
+      "wer": 0.0847,
+      "meaning_changed": 0.125
+    },
+    "us-amy": {
+      "turns": 8,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "us-lessac": {
+      "turns": 8,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "us-ryan": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 26,
+      "wer": 0.0793,
+      "meaning_changed": 0.1154
+    },
+    "1.0": {
+      "turns": 51,
+      "wer": 0.0689,
+      "meaning_changed": 0.0588
+    },
+    "1.15": {
+      "turns": 23,
+      "wer": 0.0353,
+      "meaning_changed": 0.087
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 100,
+      "wer": 0.0626,
+      "meaning_changed": 0.08
+    }
+  },
+  "by_set": {
+    "bigbench-bundook": {
+      "turns": 15,
+      "wer": 0.0897,
+      "meaning_changed": 0.1333
+    },
+    "test-v2": {
+      "turns": 25,
+      "wer": 0.0154,
+      "meaning_changed": 0.0
+    },
+    "wild": {
+      "turns": 30,
+      "wer": 0.0583,
+      "meaning_changed": 0.1
+    },
+    "wild2": {
+      "turns": 30,
+      "wer": 0.0865,
+      "meaning_changed": 0.1
+    }
+  },
+  "samples": [
+    {
+      "id": "wild-900002-disarm-alarm",
+      "turn": 0,
+      "voice": "au-p374",
+      "written": "Disarm the alarm.",
+      "heard": "Tassam Alam",
+      "lost": [
+        [
+          "command",
+          "disarm"
+        ],
+        [
+          "device",
+          "alarm"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920002-fan-here",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "fan on in here",
+      "heard": "They're not in here.",
+      "lost": [
+        [
+          "device",
+          "fan"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-1",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "turn on the batten lights",
+      "heard": "Turn on the Baton lights.",
+      "lost": [
+        [
+          "device",
+          "batten lights"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_projected-plan-10",
+      "turn": 1,
+      "voice": "au-p374",
+      "written": "Pete's office.",
+      "heard": "Pizza office.",
+      "lost": [
+        [
+          "room",
+          "petes office"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900004-clarify-which-light",
+      "turn": 1,
+      "voice": "gb-northern-m",
+      "written": "ensuite",
+      "heard": "Insert.",
+      "lost": [
+        [
+          "room",
+          "ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900005-anyone-home",
+      "turn": 1,
+      "voice": "gb-southern-f",
+      "written": "how long has mia been out for",
+      "heard": "How long has me been out for?",
+      "lost": [
+        [
+          "person",
+          "mia"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920001-pete-aircon",
+      "turn": 0,
+      "voice": "gb-alba",
+      "written": "stick the aircon on in Pete's office, 22, he'll be in there soon",
+      "heard": "Stick the air cannon in Pete's office. 22. He'll be in there soon.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920008-r1",
+      "turn": 2,
+      "voice": "au-p374",
+      "written": "and lock the mudroom door, it's sitting unlocked",
+      "heard": "Unlock the mudroom door, it's sitting unlocked.",
+      "lost": [
+        [
+          "command",
+          "lock"
+        ]
+      ]
+    }
+  ]
+}

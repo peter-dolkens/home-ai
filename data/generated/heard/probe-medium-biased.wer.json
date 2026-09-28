@@ -1,0 +1,220 @@
+{
+  "set": "probe",
+  "stt": "medium",
+  "condition": "biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "utterances": 100,
+  "words": 639,
+  "errors": 33,
+  "wer": 0.0516,
+  "exact": 0.81,
+  "vocab_words": 184,
+  "vocab_errors": 5,
+  "vocab_wer": 0.0272,
+  "vocab": {
+    "room": {
+      "n": 47,
+      "err": 0,
+      "wer": 0.0
+    },
+    "device": {
+      "n": 71,
+      "err": 2,
+      "wer": 0.0282
+    },
+    "person": {
+      "n": 3,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 4,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 59,
+      "err": 3,
+      "wer": 0.0508
+    }
+  },
+  "meaning_changed": 0.04,
+  "meaning_changed_n": 4,
+  "meaning_by_kind": {
+    "room": 0.0,
+    "device": 0.02,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.03
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 16.2436,
+    "p50": 15.9322,
+    "p90": 19.1668,
+    "rtf": 5.7509,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "au-p326": {
+      "turns": 12,
+      "wer": 0.1806,
+      "meaning_changed": 0.0833
+    },
+    "au-p374": {
+      "turns": 12,
+      "wer": 0.1594,
+      "meaning_changed": 0.1667
+    },
+    "gb-alan": {
+      "turns": 6,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "gb-alba": {
+      "turns": 6,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "gb-cori": {
+      "turns": 8,
+      "wer": 0.0196,
+      "meaning_changed": 0.125
+    },
+    "gb-jenny": {
+      "turns": 17,
+      "wer": 0.0086,
+      "meaning_changed": 0.0
+    },
+    "gb-northern-m": {
+      "turns": 13,
+      "wer": 0.026,
+      "meaning_changed": 0.0
+    },
+    "gb-southern-f": {
+      "turns": 8,
+      "wer": 0.0678,
+      "meaning_changed": 0.0
+    },
+    "us-amy": {
+      "turns": 8,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "us-lessac": {
+      "turns": 8,
+      "wer": 0.0312,
+      "meaning_changed": 0.0
+    },
+    "us-ryan": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 26,
+      "wer": 0.0488,
+      "meaning_changed": 0.0385
+    },
+    "1.0": {
+      "turns": 51,
+      "wer": 0.0623,
+      "meaning_changed": 0.0392
+    },
+    "1.15": {
+      "turns": 23,
+      "wer": 0.0353,
+      "meaning_changed": 0.0435
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 100,
+      "wer": 0.0516,
+      "meaning_changed": 0.04
+    }
+  },
+  "by_set": {
+    "bigbench-bundook": {
+      "turns": 15,
+      "wer": 0.0769,
+      "meaning_changed": 0.0667
+    },
+    "test-v2": {
+      "turns": 25,
+      "wer": 0.0231,
+      "meaning_changed": 0.0
+    },
+    "wild": {
+      "turns": 30,
+      "wer": 0.0314,
+      "meaning_changed": 0.0333
+    },
+    "wild2": {
+      "turns": 30,
+      "wer": 0.0817,
+      "meaning_changed": 0.0667
+    }
+  },
+  "samples": [
+    {
+      "id": "wild-920002-fan-here",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "fan on in here",
+      "heard": "They're not in here.",
+      "lost": [
+        [
+          "device",
+          "fan"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-1",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "turn on the batten lights",
+      "heard": "Turn on the Baton Lights.",
+      "lost": [
+        [
+          "device",
+          "batten lights"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900002-disarm-alarm",
+      "turn": 0,
+      "voice": "au-p374",
+      "written": "Disarm the alarm.",
+      "heard": "The Sun Alarm",
+      "lost": [
+        [
+          "command",
+          "disarm"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920008-r1",
+      "turn": 2,
+      "voice": "au-p374",
+      "written": "and lock the mudroom door, it's sitting unlocked",
+      "heard": "Unlock the mudroom door, it's sitting unlocked.",
+      "lost": [
+        [
+          "command",
+          "lock"
+        ]
+      ]
+    }
+  ]
+}

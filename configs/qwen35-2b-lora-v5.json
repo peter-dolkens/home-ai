@@ -1,0 +1,20 @@
+{
+  "_comment": "Design E fast model (Peter, 27 Sep): Qwen3.5-2B fine-tuned as a full assistant on the champion's v5 data, to act immediately while the slow model runs independently and a reconciler fixes disagreements. Also a speed-champion candidate. Trained on lapwing (RTX 3080).",
+  "base_model": "Qwen/Qwen3.5-2B",
+  "hf_tokenizer": "Qwen/Qwen3.5-2B",
+  "ollama_template_from": "qwen3.5:2b",
+  "instruction_part": "<|im_start|>user\n",
+  "response_part": "<|im_start|>assistant\n",
+  "max_seq_len": 4608,
+  "lora_r": 16,
+  "lora_alpha": 16,
+  "epochs": 2,
+  "lr": 0.0002,
+  "batch_size": 1,
+  "grad_accum": 16,
+  "seed": 3407,
+  "train": "data/generated/train-v5.jsonl",
+  "val": "data/generated/val-v3.jsonl",
+  "out": "outputs/qwen35-2b-lora-v5",
+  "load_in_4bit": false
+}

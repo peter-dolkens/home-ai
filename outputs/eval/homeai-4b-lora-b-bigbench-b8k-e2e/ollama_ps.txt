@@ -1,0 +1,3 @@
+NAME                          ID              SIZE      PROCESSOR    CONTEXT    UNTIL   
+homeai-4b-lora-b:latest       3f8fdf1920ad    6.3 GB    100% GPU     8192       Forever    
+homeai-4b-lora-orch:latest    76ed7cc7352e    6.3 GB    100% GPU     8192       Forever    

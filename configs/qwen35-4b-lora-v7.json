@@ -1,0 +1,20 @@
+{
+  "_comment": "v7 data = v5 + Peter's clarification rules (26 Sep): 144 'which lamp?' questions when the speaker's room has two matches (rule 2) and 150 direct actions when only one device in the house matches (rule 4). Small on purpose: v6's 600 extra clarify/confirm examples cost general accuracy. Champion method (bf16 LoRA r16, 2 epochs); compare with homeai-4b-lora-v5.",
+  "base_model": "Qwen/Qwen3.5-4B",
+  "hf_tokenizer": "Qwen/Qwen3.5-4B",
+  "ollama_template_from": "qwen3.5:4b",
+  "instruction_part": "<|im_start|>user\n",
+  "response_part": "<|im_start|>assistant\n",
+  "max_seq_len": 4608,
+  "lora_r": 16,
+  "lora_alpha": 16,
+  "epochs": 2,
+  "lr": 0.0002,
+  "batch_size": 2,
+  "grad_accum": 8,
+  "seed": 3407,
+  "train": "data/generated/train-v7.jsonl",
+  "val": "data/generated/val-v3.jsonl",
+  "out": "outputs/qwen35-4b-lora-v7",
+  "load_in_4bit": false
+}

@@ -1,0 +1,13 @@
+{
+  "model": "homeai-4b-lora-v5",
+  "data": "data/generated/test-v2.jsonl",
+  "requests": 60,
+  "cold_mean": 1.7039743279106916,
+  "cold_p50": 1.599305484443903,
+  "cold_p90": 2.4555526562035084,
+  "warm_mean": 1.704692345423003,
+  "warm_p90": 2.498676098883152,
+  "calls_per_request": 2.033333333333333,
+  "seconds_per_call": 0.8161751235421333,
+  "training_running": false
+}

@@ -1,0 +1,20 @@
+{
+  "_comment": "Room-type leaf 'bedroom' (Peter, 27 Sep): Qwen3.5-2B on rooms of this type across generated houses plus the Bundook rooms of this type (homeai/leaf/types.py). Reused by every room of the type.",
+  "base_model": "Qwen/Qwen3.5-2B",
+  "hf_tokenizer": "Qwen/Qwen3.5-2B",
+  "ollama_template_from": "qwen3.5:2b",
+  "instruction_part": "<|im_start|>user\n",
+  "response_part": "<|im_start|>assistant\n",
+  "max_seq_len": 2048,
+  "lora_r": 16,
+  "lora_alpha": 16,
+  "epochs": 2,
+  "lr": 0.0002,
+  "batch_size": 2,
+  "grad_accum": 8,
+  "seed": 3407,
+  "train": "data/generated/leaf-type/bedroom-train.jsonl",
+  "val": "data/generated/leaf-type/bedroom-val.jsonl",
+  "out": "outputs/leaf-type-bedroom",
+  "load_in_4bit": false
+}

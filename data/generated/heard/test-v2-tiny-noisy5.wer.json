@@ -1,0 +1,866 @@
+{
+  "set": "test-v2",
+  "stt": "tiny",
+  "condition": "noisy5",
+  "prompted": false,
+  "host": "magpie",
+  "utterances": 174,
+  "words": 1027,
+  "errors": 819,
+  "wer": 0.7975,
+  "exact": 0.1264,
+  "vocab_words": 332,
+  "vocab_errors": 179,
+  "vocab_wer": 0.5392,
+  "vocab": {
+    "room": {
+      "n": 89,
+      "err": 49,
+      "wer": 0.5506
+    },
+    "device": {
+      "n": 123,
+      "err": 71,
+      "wer": 0.5772
+    },
+    "person": {
+      "n": 14,
+      "err": 11,
+      "wer": 0.7857
+    },
+    "number": {
+      "n": 9,
+      "err": 5,
+      "wer": 0.5556
+    },
+    "command": {
+      "n": 97,
+      "err": 43,
+      "wer": 0.4433
+    }
+  },
+  "meaning_changed": 0.5862,
+  "meaning_changed_n": 102,
+  "meaning_by_kind": {
+    "room": 0.1954,
+    "device": 0.2989,
+    "person": 0.0632,
+    "number": 0.023,
+    "command": 0.2414
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 1.1025,
+    "p50": 0.9086,
+    "p90": 1.2893,
+    "rtf": 0.4125,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "au-p326": {
+      "turns": 15,
+      "wer": 0.878,
+      "meaning_changed": 0.6667
+    },
+    "au-p374": {
+      "turns": 14,
+      "wer": 0.6404,
+      "meaning_changed": 0.5
+    },
+    "gb-alan": {
+      "turns": 13,
+      "wer": 0.5181,
+      "meaning_changed": 0.5385
+    },
+    "gb-alba": {
+      "turns": 15,
+      "wer": 0.8539,
+      "meaning_changed": 0.6667
+    },
+    "gb-cori": {
+      "turns": 19,
+      "wer": 1.422,
+      "meaning_changed": 0.7368
+    },
+    "gb-jenny": {
+      "turns": 13,
+      "wer": 1.0357,
+      "meaning_changed": 0.6154
+    },
+    "gb-northern-m": {
+      "turns": 15,
+      "wer": 0.7262,
+      "meaning_changed": 0.6
+    },
+    "gb-southern-f": {
+      "turns": 20,
+      "wer": 0.8615,
+      "meaning_changed": 0.7
+    },
+    "us-amy": {
+      "turns": 13,
+      "wer": 0.3662,
+      "meaning_changed": 0.3846
+    },
+    "us-lessac": {
+      "turns": 18,
+      "wer": 1.21,
+      "meaning_changed": 0.7222
+    },
+    "us-ryan": {
+      "turns": 19,
+      "wer": 0.2836,
+      "meaning_changed": 0.2632
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 41,
+      "wer": 0.8814,
+      "meaning_changed": 0.6585
+    },
+    "1.0": {
+      "turns": 84,
+      "wer": 0.7343,
+      "meaning_changed": 0.5476
+    },
+    "1.15": {
+      "turns": 49,
+      "wer": 0.8327,
+      "meaning_changed": 0.5918
+    }
+  },
+  "by_noise": {
+    "kitchen": {
+      "turns": 85,
+      "wer": 0.5628,
+      "meaning_changed": 0.5765
+    },
+    "tv": {
+      "turns": 89,
+      "wer": 1.0018,
+      "meaning_changed": 0.5955
+    }
+  },
+  "by_set": {
+    "test-v2": {
+      "turns": 174,
+      "wer": 0.7975,
+      "meaning_changed": 0.5862
+    }
+  },
+  "samples": [
+    {
+      "id": "1-1347",
+      "turn": 0,
+      "voice": "gb-northern-m",
+      "written": "turn on the mudroom lights, and turn off the workshop lights",
+      "heard": "Turn on the module light, and turn off the version light. I told you.",
+      "lost": [
+        [
+          "room",
+          "mudroom"
+        ],
+        [
+          "device",
+          "lights"
+        ],
+        [
+          "room",
+          "workshop"
+        ],
+        [
+          "device",
+          "lights"
+        ]
+      ]
+    },
+    {
+      "id": "1-0",
+      "turn": 0,
+      "voice": "us-lessac",
+      "written": "hey house, unlock the front door",
+      "heard": "They have a lot of fun doing.",
+      "lost": [
+        [
+          "device",
+          "house"
+        ],
+        [
+          "command",
+          "unlock"
+        ],
+        [
+          "device",
+          "front door"
+        ]
+      ]
+    },
+    {
+      "id": "1-1087",
+      "turn": 0,
+      "voice": "us-lessac",
+      "written": "Is the fan on in the guest ensuite?",
+      "heard": "It's the far end of the castle, isn't it?",
+      "lost": [
+        [
+          "device",
+          "fan"
+        ],
+        [
+          "command",
+          "on"
+        ],
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "1-1172",
+      "turn": 0,
+      "voice": "us-lessac",
+      "written": "Start the fan in Amber's office.",
+      "heard": "Don't turn it on for his office. Prices are down.",
+      "lost": [
+        [
+          "command",
+          "start"
+        ],
+        [
+          "device",
+          "fan"
+        ],
+        [
+          "room",
+          "ambers office"
+        ]
+      ]
+    },
+    {
+      "id": "1-1603",
+      "turn": 0,
+      "voice": "us-lessac",
+      "written": "is the fan on in the dining room",
+      "heard": "It's a very long time.",
+      "lost": [
+        [
+          "device",
+          "fan"
+        ],
+        [
+          "command",
+          "on"
+        ],
+        [
+          "room",
+          "dining room"
+        ]
+      ]
+    },
+    {
+      "id": "1-1968",
+      "turn": 0,
+      "voice": "au-p374",
+      "written": "could you turn off the vanity lights, and turn on the bathroom lights",
+      "heard": "Could you turn off the vanity light and turn on the back of the light?",
+      "lost": [
+        [
+          "device",
+          "lights"
+        ],
+        [
+          "room",
+          "bathroom"
+        ],
+        [
+          "device",
+          "lights"
+        ]
+      ]
+    },
+    {
+      "id": "1-2684",
+      "turn": 0,
+      "voice": "gb-alba",
+      "written": "hey house, is the heating on",
+      "heard": "It has, is the heat in all.",
+      "lost": [
+        [
+          "device",
+          "house"
+        ],
+        [
+          "device",
+          "heating"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "1-2758",
+      "turn": 0,
+      "voice": "gb-southern-f",
+      "written": "Turn on the towel rail in the guest ensuite.",
+      "heard": "Time of the tower rail in the gas station.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ],
+        [
+          "device",
+          "towel rail"
+        ],
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "1-127",
+      "turn": 0,
+      "voice": "us-lessac",
+      "written": "front door, lock please",
+      "heard": "20 from door. Look, please. Coming up after.",
+      "lost": [
+        [
+          "device",
+          "front door"
+        ],
+        [
+          "command",
+          "lock"
+        ]
+      ]
+    },
+    {
+      "id": "1-1285",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "lights off everywhere",
+      "heard": "That's why I'm here.",
+      "lost": [
+        [
+          "device",
+          "lights"
+        ],
+        [
+          "command",
+          "off"
+        ]
+      ]
+    },
+    {
+      "id": "1-1327",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "how's the house looking? We're not home",
+      "heard": "That's it, how's it? We love it.",
+      "lost": [
+        [
+          "device",
+          "house"
+        ],
+        [
+          "device",
+          "home"
+        ]
+      ]
+    },
+    {
+      "id": "1-1449",
+      "turn": 0,
+      "voice": "gb-southern-f",
+      "written": "is Priya at home",
+      "heard": "It's clear I think.",
+      "lost": [
+        [
+          "person",
+          "priya"
+        ],
+        [
+          "device",
+          "home"
+        ]
+      ]
+    },
+    {
+      "id": "1-1458",
+      "turn": 0,
+      "voice": "gb-alan",
+      "written": "Turn the workshop lights on.",
+      "heard": "Turn the camera off and light it's on.",
+      "lost": [
+        [
+          "room",
+          "workshop"
+        ],
+        [
+          "device",
+          "lights"
+        ]
+      ]
+    },
+    {
+      "id": "1-146",
+      "turn": 0,
+      "voice": "gb-northern-m",
+      "written": "Turn off the alarm.",
+      "heard": "It's enough to allow you to hit 38.",
+      "lost": [
+        [
+          "command",
+          "off"
+        ],
+        [
+          "device",
+          "alarm"
+        ]
+      ]
+    },
+    {
+      "id": "1-1535",
+      "turn": 0,
+      "voice": "us-ryan",
+      "written": "the laundry toilet fan on",
+      "heard": "The 112 has been on.",
+      "lost": [
+        [
+          "room",
+          "laundry toilet"
+        ],
+        [
+          "device",
+          "fan"
+        ]
+      ]
+    },
+    {
+      "id": "1-1933",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "Can you open the blinds in the kitchen?",
+      "heard": "I don't want to talk about it.",
+      "lost": [
+        [
+          "command",
+          "open"
+        ],
+        [
+          "room",
+          "kitchen"
+        ]
+      ]
+    },
+    {
+      "id": "1-1963",
+      "turn": 0,
+      "voice": "gb-southern-f",
+      "written": "are the blinds open in the lounge",
+      "heard": "I'll take a line so I'm through in the lounge. Coming up after...",
+      "lost": [
+        [
+          "device",
+          "blinds"
+        ],
+        [
+          "command",
+          "open"
+        ]
+      ]
+    },
+    {
+      "id": "1-2123",
+      "turn": 0,
+      "voice": "us-amy",
+      "written": "is Peter home",
+      "heard": "It's peanut powder.",
+      "lost": [
+        [
+          "person",
+          "peter"
+        ],
+        [
+          "device",
+          "home"
+        ]
+      ]
+    },
+    {
+      "id": "1-222",
+      "turn": 0,
+      "voice": "us-lessac",
+      "written": "fan on",
+      "heard": "I'm coming up at the end of the break, the best.",
+      "lost": [
+        [
+          "device",
+          "fan"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "1-2387",
+      "turn": 0,
+      "voice": "gb-alba",
+      "written": "Turn off the lights in the kitchen and Sam's room.",
+      "heard": "turn off the lights in the picture and sounds gross the country.",
+      "lost": [
+        [
+          "room",
+          "kitchen"
+        ],
+        [
+          "room",
+          "sams room"
+        ]
+      ]
+    },
+    {
+      "id": "1-2448",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "Switch off the heating in here.",
+      "heard": "So we chopped the empty room here and sent across.",
+      "lost": [
+        [
+          "command",
+          "off"
+        ],
+        [
+          "device",
+          "heating"
+        ]
+      ]
+    },
+    {
+      "id": "1-2462",
+      "turn": 0,
+      "voice": "us-ryan",
+      "written": "switch the dishwasher off thanks",
+      "heard": "Watch this watch, you're all thanks.",
+      "lost": [
+        [
+          "device",
+          "dishwasher"
+        ],
+        [
+          "command",
+          "off"
+        ]
+      ]
+    },
+    {
+      "id": "1-2484",
+      "turn": 0,
+      "voice": "gb-southern-f",
+      "written": "is Isla in the lounge",
+      "heard": "It's right there to bring that orange over.",
+      "lost": [
+        [
+          "person",
+          "isla"
+        ],
+        [
+          "room",
+          "lounge"
+        ]
+      ]
+    },
+    {
+      "id": "1-2528",
+      "turn": 0,
+      "voice": "gb-southern-f",
+      "written": "Turn on the hot water.",
+      "heard": "Then we'll help you with that.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ],
+        [
+          "device",
+          "hot water"
+        ]
+      ]
+    },
+    {
+      "id": "1-2538",
+      "turn": 0,
+      "voice": "gb-jenny",
+      "written": "did we leave any windows open",
+      "heard": "I think we'll be able to do this again.",
+      "lost": [
+        [
+          "device",
+          "windows"
+        ],
+        [
+          "command",
+          "open"
+        ]
+      ]
+    },
+    {
+      "id": "1-2704",
+      "turn": 0,
+      "voice": "gb-alba",
+      "written": "is Amber still in the entry",
+      "heard": "It's understood in the culture.",
+      "lost": [
+        [
+          "person",
+          "amber"
+        ],
+        [
+          "room",
+          "entry"
+        ]
+      ]
+    },
+    {
+      "id": "1-2711",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "switch the fan off",
+      "heard": "Switch the panel.",
+      "lost": [
+        [
+          "device",
+          "fan"
+        ],
+        [
+          "command",
+          "off"
+        ]
+      ]
+    },
+    {
+      "id": "1-2711",
+      "turn": 1,
+      "voice": "au-p326",
+      "written": "The dining hall one.",
+      "heard": "and I'll see you in the next video.",
+      "lost": [
+        [
+          "room",
+          "dining hall"
+        ],
+        [
+          "number",
+          "1"
+        ]
+      ]
+    },
+    {
+      "id": "1-2952",
+      "turn": 0,
+      "voice": "gb-southern-f",
+      "written": "can I put the oven on or should I wait",
+      "heard": "Can I put the... Every human should I wait? We're...",
+      "lost": [
+        [
+          "device",
+          "oven"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "1-326",
+      "turn": 0,
+      "voice": "gb-alba",
+      "written": "quick question, did I leave the rumpus room light on",
+      "heard": "Quick question, did I only think that running is really like to us?",
+      "lost": [
+        [
+          "room",
+          "rumpus room"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "1-420",
+      "turn": 0,
+      "voice": "gb-southern-f",
+      "written": "can you lock the back door",
+      "heard": "Can you open that door?",
+      "lost": [
+        [
+          "command",
+          "lock"
+        ],
+        [
+          "device",
+          "back door"
+        ]
+      ]
+    },
+    {
+      "id": "1-457",
+      "turn": 0,
+      "voice": "gb-alba",
+      "written": "Tv on.",
+      "heard": "See you next time.",
+      "lost": [
+        [
+          "device",
+          "tv"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "1-652",
+      "turn": 0,
+      "voice": "au-p374",
+      "written": "um, lights off everywhere",
+      "heard": "Oh, I'm not sure how to do it.",
+      "lost": [
+        [
+          "device",
+          "lights"
+        ],
+        [
+          "command",
+          "off"
+        ]
+      ]
+    },
+    {
+      "id": "1-66",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "ok lamp off please",
+      "heard": "A P.L.M. A P.L.M.",
+      "lost": [
+        [
+          "device",
+          "lamp"
+        ],
+        [
+          "command",
+          "off"
+        ]
+      ]
+    },
+    {
+      "id": "1-66",
+      "turn": 1,
+      "voice": "gb-cori",
+      "written": "The lounge one.",
+      "heard": "the challenge 23 and 23",
+      "lost": [
+        [
+          "room",
+          "lounge"
+        ],
+        [
+          "number",
+          "1"
+        ]
+      ]
+    },
+    {
+      "id": "1-664",
+      "turn": 0,
+      "voice": "us-lessac",
+      "written": "um, are any lights on",
+      "heard": "Um, we're pretty ready to like summer tea.",
+      "lost": [
+        [
+          "device",
+          "lights"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "1-771",
+      "turn": 0,
+      "voice": "gb-jenny",
+      "written": "Volume up in the guest bedroom.",
+      "heard": "Now you might be the best guys in the world.",
+      "lost": [
+        [
+          "command",
+          "up"
+        ],
+        [
+          "room",
+          "guest bedroom"
+        ]
+      ]
+    },
+    {
+      "id": "1-78",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "can you disarm the alarm",
+      "heard": "I told you already. You decide to be the nun. Please, or ask me.",
+      "lost": [
+        [
+          "command",
+          "disarm"
+        ],
+        [
+          "device",
+          "alarm"
+        ]
+      ]
+    },
+    {
+      "id": "1-989",
+      "turn": 0,
+      "voice": "gb-southern-f",
+      "written": "Turn off the lights in the master bedroom and the guest ensuite.",
+      "heard": "Turn up the lights and the master bedroom and the guest room too.",
+      "lost": [
+        [
+          "command",
+          "off"
+        ],
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "1-112",
+      "turn": 0,
+      "voice": "gb-southern-f",
+      "written": "Music please in Owen's room.",
+      "heard": "23 head 30 and use it piece with Erin's room and I don't want to talk about it.",
+      "lost": [
+        [
+          "room",
+          "owens room"
+        ]
+      ]
+    }
+  ]
+}

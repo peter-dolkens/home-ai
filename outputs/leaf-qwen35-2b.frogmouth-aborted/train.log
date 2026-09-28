@@ -1,0 +1,6 @@
+train: 8000 examples (dropped 0 over 2048 tokens); mean 780 tokens, max 1316
+label check: 2225 trained tokens in the first 50 examples
+val: 200 examples (dropped 0 over 2048 tokens)
+LoRA r=16 alpha=16 on 7 module kinds ['mlp.down_proj', 'mlp.gate_proj', 'mlp.up_proj', 'self_attn.k_proj', 'self_attn.o_proj', 'self_attn.q_proj', 'self_attn.v_proj']: 10.91M trainable
+steps: 1000 (2 epochs x 500), warmup 50, effective batch 16
+step 1/1000 loss 0.2682 lr 0.00e+00 gnorm 1.083 37 tok/s peak 5.8 GB eta 108.33 h

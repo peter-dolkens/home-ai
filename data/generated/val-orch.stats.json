@@ -1,0 +1,256 @@
+{
+ "src": "data/generated/val-b.jsonl",
+ "dst": "data/generated/val-orch.jsonl",
+ "examples": 150,
+ "errors": 0,
+ "error_samples": [],
+ "by_category": {
+  "act_only_one": {
+   "examples": 4,
+   "ask_rooms": 4,
+   "requests": 4,
+   "call_service_kept": 0,
+   "with_ask_rooms": 4
+  },
+  "appliance_control": {
+   "examples": 2,
+   "ask_rooms": 2,
+   "requests": 2,
+   "call_service_kept": 0,
+   "with_ask_rooms": 2
+  },
+  "appliance_status": {
+   "examples": 3,
+   "ask_rooms": 0,
+   "requests": 0,
+   "call_service_kept": 0,
+   "with_ask_rooms": 0
+  },
+  "away_motion": {
+   "examples": 4,
+   "ask_rooms": 0,
+   "requests": 0,
+   "call_service_kept": 0,
+   "with_ask_rooms": 0
+  },
+  "check_house": {
+   "examples": 11,
+   "ask_rooms": 9,
+   "requests": 64,
+   "call_service_kept": 9,
+   "with_ask_rooms": 9
+  },
+  "clarify": {
+   "examples": 20,
+   "ask_rooms": 19,
+   "requests": 19,
+   "call_service_kept": 1,
+   "with_ask_rooms": 19,
+   "kept room call": 1
+  },
+  "clarify_in_room": {
+   "examples": 2,
+   "ask_rooms": 2,
+   "requests": 2,
+   "call_service_kept": 0,
+   "with_ask_rooms": 2
+  },
+  "confirm_sensitive": {
+   "examples": 10,
+   "ask_rooms": 1,
+   "requests": 1,
+   "call_service_kept": 6,
+   "with_ask_rooms": 1
+  },
+  "control_area": {
+   "examples": 10,
+   "ask_rooms": 10,
+   "requests": 14,
+   "call_service_kept": 0,
+   "with_ask_rooms": 10
+  },
+  "control_brightness": {
+   "examples": 2,
+   "ask_rooms": 2,
+   "requests": 2,
+   "call_service_kept": 0,
+   "with_ask_rooms": 2
+  },
+  "control_climate": {
+   "examples": 4,
+   "ask_rooms": 4,
+   "requests": 4,
+   "call_service_kept": 0,
+   "with_ask_rooms": 4
+  },
+  "control_compound": {
+   "examples": 2,
+   "ask_rooms": 2,
+   "requests": 4,
+   "call_service_kept": 0,
+   "with_ask_rooms": 2
+  },
+  "control_here": {
+   "examples": 2,
+   "ask_rooms": 2,
+   "requests": 2,
+   "call_service_kept": 0,
+   "with_ask_rooms": 2
+  },
+  "control_lock": {
+   "examples": 2,
+   "ask_rooms": 0,
+   "requests": 0,
+   "call_service_kept": 2,
+   "with_ask_rooms": 0
+  },
+  "control_named": {
+   "examples": 1,
+   "ask_rooms": 1,
+   "requests": 1,
+   "call_service_kept": 0,
+   "with_ask_rooms": 1
+  },
+  "energy_appliance": {
+   "examples": 2,
+   "ask_rooms": 0,
+   "requests": 0,
+   "call_service_kept": 0,
+   "with_ask_rooms": 0
+  },
+  "energy_night": {
+   "examples": 1,
+   "ask_rooms": 0,
+   "requests": 0,
+   "call_service_kept": 0,
+   "with_ask_rooms": 0
+  },
+  "energy_status": {
+   "examples": 8,
+   "ask_rooms": 0,
+   "requests": 0,
+   "call_service_kept": 0,
+   "with_ask_rooms": 0
+  },
+  "goodnight": {
+   "examples": 6,
+   "ask_rooms": 6,
+   "requests": 28,
+   "call_service_kept": 8,
+   "with_ask_rooms": 6
+  },
+  "irrigation_control": {
+   "examples": 3,
+   "ask_rooms": 0,
+   "requests": 0,
+   "call_service_kept": 3,
+   "with_ask_rooms": 0
+  },
+  "leaving": {
+   "examples": 2,
+   "ask_rooms": 2,
+   "requests": 2,
+   "call_service_kept": 3,
+   "with_ask_rooms": 2
+  },
+  "media_multiroom": {
+   "examples": 2,
+   "ask_rooms": 0,
+   "requests": 0,
+   "call_service_kept": 2,
+   "with_ask_rooms": 0,
+   "kept room call": 2
+  },
+  "media_play": {
+   "examples": 9,
+   "ask_rooms": 5,
+   "requests": 5,
+   "call_service_kept": 9,
+   "with_ask_rooms": 5,
+   "kept room call": 9
+  },
+  "media_transport": {
+   "examples": 3,
+   "ask_rooms": 1,
+   "requests": 1,
+   "call_service_kept": 0,
+   "with_ask_rooms": 1
+  },
+  "media_volume": {
+   "examples": 3,
+   "ask_rooms": 3,
+   "requests": 3,
+   "call_service_kept": 0,
+   "with_ask_rooms": 3
+  },
+  "media_what": {
+   "examples": 2,
+   "ask_rooms": 0,
+   "requests": 0,
+   "call_service_kept": 0,
+   "with_ask_rooms": 0
+  },
+  "missing": {
+   "examples": 1,
+   "ask_rooms": 0,
+   "requests": 0,
+   "call_service_kept": 0,
+   "with_ask_rooms": 0
+  },
+  "presence_in_room": {
+   "examples": 5,
+   "ask_rooms": 0,
+   "requests": 0,
+   "call_service_kept": 0,
+   "with_ask_rooms": 0
+  },
+  "presence_where": {
+   "examples": 8,
+   "ask_rooms": 0,
+   "requests": 0,
+   "call_service_kept": 0,
+   "with_ask_rooms": 0
+  },
+  "status_aggregate": {
+   "examples": 2,
+   "ask_rooms": 0,
+   "requests": 0,
+   "call_service_kept": 0,
+   "with_ask_rooms": 0
+  },
+  "status_entity": {
+   "examples": 7,
+   "ask_rooms": 0,
+   "requests": 0,
+   "call_service_kept": 0,
+   "with_ask_rooms": 0
+  },
+  "vehicle_status": {
+   "examples": 3,
+   "ask_rooms": 0,
+   "requests": 0,
+   "call_service_kept": 0,
+   "with_ask_rooms": 0
+  },
+  "water_status": {
+   "examples": 2,
+   "ask_rooms": 0,
+   "requests": 0,
+   "call_service_kept": 0,
+   "with_ask_rooms": 0
+  },
+  "who_home": {
+   "examples": 2,
+   "ask_rooms": 0,
+   "requests": 0,
+   "call_service_kept": 0,
+   "with_ask_rooms": 0
+  }
+ },
+ "reasons": {
+  "kept room call: no leaf tool for media_player.shuffle_set": 5,
+  "kept room call: no leaf tool for media_player.play_media": 4,
+  "kept room call: no leaf tool for media_player.join": 2,
+  "kept room call: light.turn_on leaf calls do not match": 1
+ }
+}

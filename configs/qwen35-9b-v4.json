@@ -1,0 +1,19 @@
+{
+  "_comment": "v4 data: train-v3 + ~900 more agent-written training conversations (x2) aimed at the wild-set weak spots: speaker-relative requests, look-before-acting, mixed intents, missing devices, presence, routines, energy judgement, vague media follow-ups.",
+  "base_model": "unsloth/Qwen3.5-9B",
+  "hf_tokenizer": "unsloth/Qwen3.5-9B",
+  "ollama_template_from": "qwen3.5:9b",
+  "instruction_part": "<|im_start|>user\n",
+  "response_part": "<|im_start|>assistant\n",
+  "max_seq_len": 5120,
+  "lora_r": 16,
+  "lora_alpha": 16,
+  "epochs": 2,
+  "lr": 0.0002,
+  "batch_size": 1,
+  "grad_accum": 16,
+  "seed": 3407,
+  "train": "data/generated/train-v4.jsonl",
+  "val": "data/generated/val-v3.jsonl",
+  "out": "outputs/qwen35-9b-v4"
+}

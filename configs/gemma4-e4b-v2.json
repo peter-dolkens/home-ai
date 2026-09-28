@@ -1,0 +1,26 @@
+{
+  "_comment": "Gemma 4 E4B (8B stored, ~4B effective) on v2 data. QLoRA: the bf16 base (~16 GB) plus activations OOM'd the 3090 next to the ~6 GB other services hold. Compare with homeai-4b-v2 (same data, same method on Qwen3.5-4B).",
+  "base_model": "unsloth/gemma-4-E4B-it",
+  "hf_tokenizer": "google/gemma-4-E4B-it",
+  "ollama_template_from": "gemma4:e4b",
+  "instruction_part": "<|turn>user\n",
+  "response_part": "<|turn>model\n",
+  "max_seq_len": 4608,
+  "lora_r": 16,
+  "lora_alpha": 16,
+  "epochs": 2,
+  "lr": 0.0002,
+  "batch_size": 2,
+  "grad_accum": 8,
+  "seed": 3407,
+  "train": "data/generated/train.jsonl",
+  "val": "data/generated/val.jsonl",
+  "out": "outputs/gemma4-e4b-v2",
+  "load_in_4bit": true,
+  "mask_spans": [
+    [
+      "<|tool_response>",
+      "<tool_response|>"
+    ]
+  ]
+}

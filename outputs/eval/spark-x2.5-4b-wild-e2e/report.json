@@ -1,0 +1,91 @@
+{
+  "model": "hf.co/XHToken/Spark-X2.5-4B-GGUF:Q4_K_M",
+  "data": "data/generated/wild.jsonl",
+  "mode": "e2e",
+  "examples": 303,
+  "turns": 409,
+  "pass": 0.5660146699266504,
+  "conversation_pass": 0.47854785478547857,
+  "seconds_per_turn": 1.3480964166701108,
+  "calls_per_request": 2.726161369193154,
+  "by_kind": {
+    "act": {
+      "n": 185,
+      "ok": 107
+    },
+    "state": {
+      "n": 409,
+      "ok": 317
+    },
+    "reply": {
+      "n": 409,
+      "ok": 279
+    },
+    "answer": {
+      "n": 224,
+      "ok": 124.5
+    }
+  },
+  "by_category": {
+    "wild_control": {
+      "n": 60,
+      "ok": 37
+    },
+    "wild_missing": {
+      "n": 23,
+      "ok": 14.5
+    },
+    "wild_appliance": {
+      "n": 20,
+      "ok": 14
+    },
+    "wild_media": {
+      "n": 44,
+      "ok": 21
+    },
+    "wild_clarify": {
+      "n": 36,
+      "ok": 16
+    },
+    "wild_presence": {
+      "n": 29,
+      "ok": 22
+    },
+    "wild_routine": {
+      "n": 27,
+      "ok": 8
+    },
+    "wild_smalltalk": {
+      "n": 17,
+      "ok": 15
+    },
+    "wild_energy": {
+      "n": 40,
+      "ok": 17
+    },
+    "wild_vehicle": {
+      "n": 8,
+      "ok": 4
+    },
+    "wild_water": {
+      "n": 19,
+      "ok": 9
+    },
+    "wild_confirm": {
+      "n": 37,
+      "ok": 30.0
+    },
+    "wild_status": {
+      "n": 33,
+      "ok": 15
+    },
+    "wild_mixed": {
+      "n": 16,
+      "ok": 9
+    }
+  },
+  "half_credit_rescored": true,
+  "half_credit_turns": 9,
+  "mentions_rescored": true,
+  "mentions_flipped": 1
+}

@@ -1,0 +1,32 @@
+# Drop into /ai/compose/homeai-bridge.yaml on cassowary (follows the ai-stack conventions:
+# container_name = service name, proxy network, secrets in /ai/homeai-bridge/.env).
+name: homeai-bridge
+
+services:
+  homeai-bridge:
+    build:
+      context: /ai/experiments/home-ai
+      dockerfile: deploy/Dockerfile
+    image: homeai-bridge:local
+    container_name: homeai-bridge
+    restart: unless-stopped
+    environment:
+      - OLLAMA_URL=http://ollama:11434
+      - HOMEAI_MODEL=homeai-4b
+      - HOMEAI_THINK=off
+    env_file:
+      - /ai/homeai-bridge/.env        # HA_URL=https://your-ha.example  HA_TOKEN=<long-lived token>
+    volumes:
+      - /ai/homeai-bridge/config:/config   # bridge.json (floors, overrides, media_backend ...)
+    networks:
+      - proxy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://localhost:8090/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+networks:
+  proxy:
+    external: true
+    name: proxy

@@ -1,0 +1,7 @@
+{
+  "_comment": "Existing house (set by HA_HOSTNAME in .env; grid-connected, becoming the farm outhouse). Used as a live bridge test target.",
+  "house_description": "a rural home on a farm (grid-connected, with solar and a battery)",
+  "exclude_areas": ["poe", "network", "server_room", "shark"],
+  "battery_capacity_kwh": null,
+  "overrides": {}
+}

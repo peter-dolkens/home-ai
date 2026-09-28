@@ -1,0 +1,318 @@
+{
+  "set": "test-v2-b",
+  "stt": "base",
+  "condition": "biased",
+  "prompted": true,
+  "host": "magpie",
+  "utterances": 174,
+  "words": 1027,
+  "errors": 69,
+  "wer": 0.0672,
+  "exact": 0.7644,
+  "vocab_words": 332,
+  "vocab_errors": 14,
+  "vocab_wer": 0.0422,
+  "vocab": {
+    "room": {
+      "n": 89,
+      "err": 4,
+      "wer": 0.0449
+    },
+    "device": {
+      "n": 123,
+      "err": 2,
+      "wer": 0.0163
+    },
+    "person": {
+      "n": 14,
+      "err": 3,
+      "wer": 0.2143
+    },
+    "number": {
+      "n": 9,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 97,
+      "err": 5,
+      "wer": 0.0515
+    }
+  },
+  "meaning_changed": 0.0747,
+  "meaning_changed_n": 13,
+  "meaning_by_kind": {
+    "room": 0.023,
+    "device": 0.0115,
+    "person": 0.0115,
+    "number": 0.0,
+    "command": 0.0287
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 1.6286,
+    "p50": 1.61,
+    "p90": 1.8406,
+    "rtf": 0.6094,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "au-p326": {
+      "turns": 15,
+      "wer": 0.1098,
+      "meaning_changed": 0.2
+    },
+    "au-p374": {
+      "turns": 14,
+      "wer": 0.0562,
+      "meaning_changed": 0.0714
+    },
+    "gb-alan": {
+      "turns": 13,
+      "wer": 0.0361,
+      "meaning_changed": 0.0
+    },
+    "gb-alba": {
+      "turns": 15,
+      "wer": 0.1011,
+      "meaning_changed": 0.1333
+    },
+    "gb-cori": {
+      "turns": 19,
+      "wer": 0.1284,
+      "meaning_changed": 0.0526
+    },
+    "gb-jenny": {
+      "turns": 13,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "gb-northern-m": {
+      "turns": 15,
+      "wer": 0.0238,
+      "meaning_changed": 0.0
+    },
+    "gb-southern-f": {
+      "turns": 20,
+      "wer": 0.1231,
+      "meaning_changed": 0.15
+    },
+    "us-amy": {
+      "turns": 13,
+      "wer": 0.0282,
+      "meaning_changed": 0.0
+    },
+    "us-lessac": {
+      "turns": 18,
+      "wer": 0.07,
+      "meaning_changed": 0.1667
+    },
+    "us-ryan": {
+      "turns": 19,
+      "wer": 0.0149,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 41,
+      "wer": 0.0672,
+      "meaning_changed": 0.0976
+    },
+    "1.0": {
+      "turns": 84,
+      "wer": 0.0771,
+      "meaning_changed": 0.0952
+    },
+    "1.15": {
+      "turns": 49,
+      "wer": 0.0498,
+      "meaning_changed": 0.0204
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 174,
+      "wer": 0.0672,
+      "meaning_changed": 0.0747
+    }
+  },
+  "by_set": {
+    "test-v2-b": {
+      "turns": 174,
+      "wer": 0.0672,
+      "meaning_changed": 0.0747
+    }
+  },
+  "samples": [
+    {
+      "id": "1-1087",
+      "turn": 0,
+      "voice": "us-lessac",
+      "written": "Is the fan on in the guest ensuite?",
+      "heard": "Is the fan on and the guest ensued?",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "1-1147",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "Play Daft Punk.",
+      "heard": "Flight Def Punk.",
+      "lost": [
+        [
+          "command",
+          "play"
+        ]
+      ]
+    },
+    {
+      "id": "1-1172",
+      "turn": 0,
+      "voice": "us-lessac",
+      "written": "Start the fan in Amber's office.",
+      "heard": "Dark the fan and Amber's office.",
+      "lost": [
+        [
+          "command",
+          "start"
+        ]
+      ]
+    },
+    {
+      "id": "1-1285",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "lights off everywhere",
+      "heard": "Lights of everywhere.",
+      "lost": [
+        [
+          "command",
+          "off"
+        ]
+      ]
+    },
+    {
+      "id": "1-1482",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "where is Tara",
+      "heard": "Way Star.",
+      "lost": [
+        [
+          "person",
+          "tara"
+        ]
+      ]
+    },
+    {
+      "id": "1-1532",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "quick question, we're away for the day, can you check on the house for me",
+      "heard": "Quick question, it's high for the day. I'm going to check on them.",
+      "lost": [
+        [
+          "device",
+          "house"
+        ]
+      ]
+    },
+    {
+      "id": "1-1914",
+      "turn": 0,
+      "voice": "au-p374",
+      "written": "Are the doors shut?",
+      "heard": "Other Dosh Shed?",
+      "lost": [
+        [
+          "command",
+          "shut"
+        ]
+      ]
+    },
+    {
+      "id": "1-222",
+      "turn": 0,
+      "voice": "us-lessac",
+      "written": "fan on",
+      "heard": "Turn on.",
+      "lost": [
+        [
+          "device",
+          "fan"
+        ]
+      ]
+    },
+    {
+      "id": "1-2472",
+      "turn": 0,
+      "voice": "gb-alba",
+      "written": "please turn off the guest robe light please",
+      "heard": "Please turn off the guest role, please.",
+      "lost": [
+        [
+          "room",
+          "guest robe"
+        ]
+      ]
+    },
+    {
+      "id": "1-2484",
+      "turn": 0,
+      "voice": "gb-southern-f",
+      "written": "is Isla in the lounge",
+      "heard": "It's finally in the lounge.",
+      "lost": [
+        [
+          "person",
+          "isla"
+        ]
+      ]
+    },
+    {
+      "id": "1-2758",
+      "turn": 0,
+      "voice": "gb-southern-f",
+      "written": "Turn on the towel rail in the guest ensuite.",
+      "heard": "Turn on the towel rail in the guest-in suit.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "1-457",
+      "turn": 0,
+      "voice": "gb-alba",
+      "written": "Tv on.",
+      "heard": "TV Vaughn",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "1-989",
+      "turn": 0,
+      "voice": "gb-southern-f",
+      "written": "Turn off the lights in the master bedroom and the guest ensuite.",
+      "heard": "Turn off the lights in the Master Bedroom and the guest ensued.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    }
+  ]
+}

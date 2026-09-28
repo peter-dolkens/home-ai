@@ -1,0 +1,36 @@
+{
+  "_comment": "LFM2.5 1.2b (Liquid AI) with the champion recipe: bf16 LoRA r16 on v5 data. ChatML turns; tool results sit in their own 'tool' turns, masked out of the loss. Re-run 28 Sep with LFM2's own module names (the first run adapted only q/k/v in the 6 attention layers).",
+  "base_model": "LiquidAI/LFM2.5-1.2B-Instruct",
+  "hf_tokenizer": "LiquidAI/LFM2.5-1.2B-Instruct",
+  "ollama_template_from": "lfm2.5-1.2b",
+  "instruction_part": "<|im_start|>user\n",
+  "response_part": "<|im_start|>assistant\n",
+  "max_seq_len": 4608,
+  "lora_r": 16,
+  "lora_alpha": 16,
+  "epochs": 2,
+  "lr": 0.0002,
+  "batch_size": 2,
+  "grad_accum": 8,
+  "seed": 3407,
+  "train": "data/generated/train-v5.jsonl",
+  "val": "data/generated/val-v3.jsonl",
+  "out": "outputs/lfm25-1.2b-lora-v5-fix",
+  "load_in_4bit": false,
+  "mask_spans": [
+    [
+      "<|im_start|>tool\n",
+      "<|im_end|>"
+    ]
+  ],
+  "target_modules": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "out_proj",
+    "in_proj",
+    "w1",
+    "w2",
+    "w3"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "_comment": "Room leaf for the tiered designs (C/D): Qwen3.5-0.8B fine-tuned on the generic leaf data (homeai/leaf/chat.py; 8,000 single-turn room instructions, each with its own room's tools; negatives decline with no call). Trained on lapwing (RTX 3080). Scored with homeai.leaf.eval --ollama against Needle 3 (about 60% end state) and untuned Qwen3.5-4B (86%).",
+  "base_model": "Qwen/Qwen3.5-0.8B",
+  "hf_tokenizer": "Qwen/Qwen3.5-0.8B",
+  "ollama_template_from": "qwen3.5:0.8b",
+  "instruction_part": "<|im_start|>user\n",
+  "response_part": "<|im_start|>assistant\n",
+  "max_seq_len": 2048,
+  "lora_r": 16,
+  "lora_alpha": 16,
+  "epochs": 2,
+  "lr": 0.0002,
+  "batch_size": 4,
+  "grad_accum": 4,
+  "seed": 3407,
+  "train": "data/generated/leaf-generic-chat-train.jsonl",
+  "val": "data/generated/leaf-generic-chat-val.jsonl",
+  "out": "outputs/leaf-qwen35-0.8b",
+  "load_in_4bit": false
+}

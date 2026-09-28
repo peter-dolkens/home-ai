@@ -1,0 +1,15 @@
+WARNING:2026-09-26 21:24:29,198:jax._src.xla_bridge:1000: Platform 'METAL' is experimental and not all JAX functionality may be correctly supported!
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+W0000 00:00:1790421869.198485 11194488 mps_client.cc:510] WARNING: JAX Apple GPU support is experimental and not all JAX functionality is correctly supported!
+Metal device set to: Apple M5
+I0000 00:00:1790421869.225462 11194488 service.cc:145] XLA service 0x942ea6e00 initialized for platform METAL (this does not guarantee that XLA will be used). Devices:
+I0000 00:00:1790421869.225492 11194488 service.cc:153]   StreamExecutor device (0): Metal, <undefined>
+I0000 00:00:1790421869.229966 11194488 mps_client.cc:406] Using Simple allocator.
+I0000 00:00:1790421869.229993 11194488 mps_client.cc:384] XLA backend will use up to 26800144384 bytes on device 0 for SimpleAllocator.
+  backend   metal  float32
+  depth     20 layers
+  data      8000 examples  seq_len 1024  cap 1024
+  numerics  CQ W4 STE + A8 (matches export)
+  lora      rank 16  alpha 32  5 weight groups
+  holdout   400 examples for validation
+  schedule  1425 steps  warmup 71  cosine decay  clip 1.0  (compiling...)

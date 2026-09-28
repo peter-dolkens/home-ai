@@ -1,0 +1,82 @@
+{
+  "model": "homeai-4b-lora-v7",
+  "data": "data/generated/wild.jsonl",
+  "examples": 303,
+  "turns": 825,
+  "pass": 0.7848484848484848,
+  "seconds_per_turn": 0.7784922388828162,
+  "think": "off",
+  "by_kind": {
+    "act": {
+      "n": 185,
+      "ok": 142
+    },
+    "answer": {
+      "n": 409,
+      "ok": 329.5
+    },
+    "fetch": {
+      "n": 231,
+      "ok": 176
+    }
+  },
+  "by_category": {
+    "wild_control": {
+      "n": 128,
+      "ok": 108
+    },
+    "wild_missing": {
+      "n": 24,
+      "ok": 13
+    },
+    "wild_appliance": {
+      "n": 49,
+      "ok": 46
+    },
+    "wild_media": {
+      "n": 102,
+      "ok": 79
+    },
+    "wild_clarify": {
+      "n": 64,
+      "ok": 46
+    },
+    "wild_presence": {
+      "n": 54,
+      "ok": 35
+    },
+    "wild_routine": {
+      "n": 66,
+      "ok": 43
+    },
+    "wild_smalltalk": {
+      "n": 22,
+      "ok": 21
+    },
+    "wild_energy": {
+      "n": 78,
+      "ok": 60
+    },
+    "wild_vehicle": {
+      "n": 16,
+      "ok": 16
+    },
+    "wild_water": {
+      "n": 43,
+      "ok": 40
+    },
+    "wild_confirm": {
+      "n": 76,
+      "ok": 59.5
+    },
+    "wild_status": {
+      "n": 67,
+      "ok": 55
+    },
+    "wild_mixed": {
+      "n": 36,
+      "ok": 26
+    }
+  },
+  "overfetch_mean": 1.6211195307897222
+}

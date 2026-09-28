@@ -1,0 +1,10 @@
+  fetch     checkpoints/needle3.safetensors  downloading from Hugging Face
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+  backend   cpu  float32
+  depth     20 layers
+  fetch     tokenizer tokenizer  downloading from Hugging Face
+  data      8000 examples  seq_len 1024  cap 1024
+  numerics  CQ W4 STE + A8 (matches export)
+  lora      rank 16  alpha 32  5 weight groups
+  holdout   400 examples for validation
+  schedule  1425 steps  warmup 71  cosine decay  clip 1.0  (compiling...)

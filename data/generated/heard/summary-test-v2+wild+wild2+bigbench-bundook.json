@@ -1,0 +1,408 @@
+{
+  "sets": [
+    "test-v2",
+    "wild",
+    "wild2",
+    "bigbench-bundook"
+  ],
+  "table": {
+    "tiny": {
+      "clean": {
+        "wer": 0.117,
+        "vocab_wer": 0.1014,
+        "meaning_changed": 0.1433,
+        "utterances": 984,
+        "sets": 4
+      },
+      "biased": {
+        "wer": 0.1105,
+        "vocab_wer": 0.0781,
+        "meaning_changed": 0.1128,
+        "utterances": 984,
+        "sets": 4
+      },
+      "farfield": {
+        "wer": 0.31,
+        "vocab_wer": 0.308,
+        "meaning_changed": 0.3618,
+        "utterances": 984,
+        "sets": 4
+      },
+      "noisy10": {
+        "wer": 0.4782,
+        "vocab_wer": 0.3613,
+        "meaning_changed": 0.4278,
+        "utterances": 984,
+        "sets": 4
+      },
+      "noisy5": {
+        "wer": 0.7722,
+        "vocab_wer": 0.5487,
+        "meaning_changed": 0.5803,
+        "utterances": 984,
+        "sets": 4
+      },
+      "lowmic": {
+        "wer": 0.147,
+        "vocab_wer": 0.1353,
+        "meaning_changed": 0.188,
+        "utterances": 984,
+        "sets": 4
+      }
+    },
+    "base": {
+      "clean": {
+        "wer": 0.0918,
+        "vocab_wer": 0.0781,
+        "meaning_changed": 0.1118,
+        "utterances": 984,
+        "sets": 4
+      },
+      "biased": {
+        "wer": 0.0842,
+        "vocab_wer": 0.0515,
+        "meaning_changed": 0.0772,
+        "utterances": 984,
+        "sets": 4
+      },
+      "farfield": {
+        "wer": 0.2224,
+        "vocab_wer": 0.2191,
+        "meaning_changed": 0.2846,
+        "utterances": 984,
+        "sets": 4
+      },
+      "noisy10": {
+        "wer": 0.3436,
+        "vocab_wer": 0.2656,
+        "meaning_changed": 0.3384,
+        "utterances": 984,
+        "sets": 4
+      },
+      "noisy5": {
+        "wer": 0.5995,
+        "vocab_wer": 0.4304,
+        "meaning_changed": 0.4878,
+        "utterances": 984,
+        "sets": 4
+      },
+      "lowmic": {
+        "wer": 0.1165,
+        "vocab_wer": 0.1036,
+        "meaning_changed": 0.1453,
+        "utterances": 984,
+        "sets": 4
+      }
+    },
+    "parakeet": {
+      "clean": {
+        "wer": 0.0737,
+        "vocab_wer": 0.0668,
+        "meaning_changed": 0.0904,
+        "utterances": 984,
+        "sets": 4
+      },
+      "farfield": {
+        "wer": 0.1405,
+        "vocab_wer": 0.1393,
+        "meaning_changed": 0.1809,
+        "utterances": 984,
+        "sets": 4
+      },
+      "noisy10": {
+        "wer": 0.2368,
+        "vocab_wer": 0.201,
+        "meaning_changed": 0.2541,
+        "utterances": 984,
+        "sets": 4
+      },
+      "noisy5": {
+        "wer": 0.4168,
+        "vocab_wer": 0.3686,
+        "meaning_changed": 0.435,
+        "utterances": 984,
+        "sets": 4
+      },
+      "lowmic": {
+        "wer": 0.0913,
+        "vocab_wer": 0.081,
+        "meaning_changed": 0.1118,
+        "utterances": 984,
+        "sets": 4
+      }
+    },
+    "moonshine-tiny": {
+      "clean": {
+        "wer": 0.1609,
+        "vocab_wer": 0.1467,
+        "meaning_changed": 0.1931,
+        "utterances": 984,
+        "sets": 4
+      },
+      "farfield": {
+        "wer": 0.366,
+        "vocab_wer": 0.3879,
+        "meaning_changed": 0.4411,
+        "utterances": 984,
+        "sets": 4
+      },
+      "noisy10": {
+        "wer": 0.5206,
+        "vocab_wer": 0.3788,
+        "meaning_changed": 0.4461,
+        "utterances": 984,
+        "sets": 4
+      },
+      "noisy5": {
+        "wer": 0.7886,
+        "vocab_wer": 0.5946,
+        "meaning_changed": 0.6209,
+        "utterances": 984,
+        "sets": 4
+      },
+      "lowmic": {
+        "wer": 0.1856,
+        "vocab_wer": 0.1738,
+        "meaning_changed": 0.2378,
+        "utterances": 984,
+        "sets": 4
+      }
+    },
+    "moonshine-base": {
+      "clean": {
+        "wer": 0.1117,
+        "vocab_wer": 0.1053,
+        "meaning_changed": 0.1402,
+        "utterances": 984,
+        "sets": 4
+      },
+      "farfield": {
+        "wer": 0.2332,
+        "vocab_wer": 0.2486,
+        "meaning_changed": 0.3089,
+        "utterances": 984,
+        "sets": 4
+      },
+      "noisy10": {
+        "wer": 0.4284,
+        "vocab_wer": 0.2945,
+        "meaning_changed": 0.3618,
+        "utterances": 984,
+        "sets": 4
+      },
+      "noisy5": {
+        "wer": 0.6711,
+        "vocab_wer": 0.5011,
+        "meaning_changed": 0.5437,
+        "utterances": 984,
+        "sets": 4
+      },
+      "lowmic": {
+        "wer": 0.1291,
+        "vocab_wer": 0.1183,
+        "meaning_changed": 0.1646,
+        "utterances": 984,
+        "sets": 4
+      }
+    },
+    "kroko": {
+      "clean": {
+        "wer": 0.1087,
+        "vocab_wer": 0.1065,
+        "meaning_changed": 0.1433,
+        "utterances": 984,
+        "sets": 4
+      },
+      "farfield": {
+        "wer": 0.1847,
+        "vocab_wer": 0.2016,
+        "meaning_changed": 0.2642,
+        "utterances": 984,
+        "sets": 4
+      },
+      "noisy10": {
+        "wer": 0.279,
+        "vocab_wer": 0.2118,
+        "meaning_changed": 0.2642,
+        "utterances": 984,
+        "sets": 4
+      },
+      "noisy5": {
+        "wer": 0.4709,
+        "vocab_wer": 0.3732,
+        "meaning_changed": 0.4482,
+        "utterances": 984,
+        "sets": 4
+      },
+      "lowmic": {
+        "wer": 0.1173,
+        "vocab_wer": 0.1104,
+        "meaning_changed": 0.1565,
+        "utterances": 984,
+        "sets": 4
+      }
+    }
+  },
+  "latency": {
+    "tiny": {
+      "threads": 4,
+      "n": 40,
+      "mean": 0.212,
+      "p50": 0.211,
+      "p90": 0.239,
+      "max": 0.245,
+      "rtf": 0.075,
+      "audio_s_mean": 2.83,
+      "load_s": 0.7,
+      "beam_size": 5,
+      "host": "frogmouth",
+      "cpu": "aarch64",
+      "cpus": 10,
+      "host_load_at_start": "1.85 4.15 4.63"
+    },
+    "base": {
+      "threads": 4,
+      "n": 40,
+      "mean": 0.333,
+      "p50": 0.318,
+      "p90": 0.402,
+      "max": 0.471,
+      "rtf": 0.118,
+      "audio_s_mean": 2.83,
+      "load_s": 0.7,
+      "beam_size": 5,
+      "host": "frogmouth",
+      "cpu": "aarch64",
+      "cpus": 10,
+      "host_load_at_start": "1.85 4.15 4.63"
+    },
+    "small": {
+      "threads": 4,
+      "n": 40,
+      "mean": 0.969,
+      "p50": 0.882,
+      "p90": 0.993,
+      "max": 2.757,
+      "rtf": 0.342,
+      "audio_s_mean": 2.83,
+      "load_s": 0.7,
+      "beam_size": 5,
+      "host": "frogmouth",
+      "cpu": "aarch64",
+      "cpus": 10,
+      "host_load_at_start": "1.85 4.15 4.63"
+    },
+    "medium": {
+      "threads": 4,
+      "n": 40,
+      "mean": 2.5,
+      "p50": 2.469,
+      "p90": 2.733,
+      "max": 3.096,
+      "rtf": 0.883,
+      "audio_s_mean": 2.83,
+      "load_s": 1.5,
+      "beam_size": 5,
+      "host": "frogmouth",
+      "cpu": "aarch64",
+      "cpus": 10,
+      "host_load_at_start": "1.85 4.15 4.63"
+    },
+    "large-v3-turbo": {
+      "threads": 4,
+      "n": 40,
+      "mean": 4.893,
+      "p50": 3.89,
+      "p90": 9.312,
+      "max": 10.214,
+      "rtf": 1.728,
+      "audio_s_mean": 2.83,
+      "load_s": 1.9,
+      "beam_size": 5,
+      "host": "frogmouth",
+      "cpu": "aarch64",
+      "cpus": 10,
+      "host_load_at_start": "1.85 4.15 4.63"
+    },
+    "distil-large-v3": {
+      "threads": 4,
+      "n": 40,
+      "mean": 5.226,
+      "p50": 5.302,
+      "p90": 5.509,
+      "max": 5.663,
+      "rtf": 1.846,
+      "audio_s_mean": 2.83,
+      "load_s": 6.8,
+      "beam_size": 5,
+      "host": "frogmouth",
+      "cpu": "aarch64",
+      "cpus": 10,
+      "host_load_at_start": "1.85 4.15 4.63"
+    },
+    "parakeet": {
+      "threads": 4,
+      "n": 40,
+      "mean": 0.17,
+      "p50": 0.151,
+      "p90": 0.263,
+      "max": 0.328,
+      "rtf": 0.06,
+      "audio_s_mean": 2.83,
+      "load_s": 1.3,
+      "beam_size": null,
+      "host": "frogmouth",
+      "cpu": "aarch64",
+      "cpus": 10,
+      "host_load_at_start": "1.85 4.15 4.63"
+    },
+    "moonshine-tiny": {
+      "threads": 4,
+      "n": 40,
+      "mean": 0.047,
+      "p50": 0.046,
+      "p90": 0.074,
+      "max": 0.097,
+      "rtf": 0.017,
+      "audio_s_mean": 2.83,
+      "load_s": 0.5,
+      "beam_size": null,
+      "host": "frogmouth",
+      "cpu": "aarch64",
+      "cpus": 10,
+      "host_load_at_start": "1.85 4.15 4.63"
+    },
+    "moonshine-base": {
+      "threads": 4,
+      "n": 40,
+      "mean": 0.093,
+      "p50": 0.088,
+      "p90": 0.147,
+      "max": 0.174,
+      "rtf": 0.033,
+      "audio_s_mean": 2.83,
+      "load_s": 1.9,
+      "beam_size": null,
+      "host": "frogmouth",
+      "cpu": "aarch64",
+      "cpus": 10,
+      "host_load_at_start": "1.85 4.15 4.63"
+    },
+    "kroko": {
+      "threads": 4,
+      "n": 40,
+      "mean": 0.09,
+      "p50": 0.081,
+      "p90": 0.135,
+      "max": 0.16,
+      "rtf": 0.032,
+      "audio_s_mean": 2.83,
+      "load_s": 1.2,
+      "beam_size": null,
+      "host": "frogmouth",
+      "cpu": "aarch64",
+      "cpus": 10,
+      "host_load_at_start": "1.85 4.15 4.63"
+    }
+  }
+}

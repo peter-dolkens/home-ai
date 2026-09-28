@@ -1,0 +1,13 @@
+{
+  "model": "homeai-4b-v2",
+  "data": "data/generated/test-v2.jsonl",
+  "requests": 60,
+  "cold_mean": 1.602433031362792,
+  "cold_p50": 1.5138115920126438,
+  "cold_p90": 2.3036777656525373,
+  "warm_mean": 1.6008367428245645,
+  "warm_p90": 2.3114291597157717,
+  "calls_per_request": 2.0166666666666666,
+  "seconds_per_call": 0.7721912681487285,
+  "training_running": false
+}

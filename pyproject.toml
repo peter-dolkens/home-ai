@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "homeai"
+version = "0.1.0"
+description = "Train and run a small local LLM for Home Assistant voice control, presence reasoning and off-grid power management"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+# GPU box: QLoRA fine-tuning + GGUF export. Unsloth pins compatible torch/trl/transformers.
+train = ["unsloth", "datasets", "trl", "transformers"]
+# Optional: paraphrase user utterances with Claude for more natural variety.
+augment = ["anthropic"]
+dev = ["transformers"]
+
+[tool.setuptools.packages.find]
+include = ["homeai*"]

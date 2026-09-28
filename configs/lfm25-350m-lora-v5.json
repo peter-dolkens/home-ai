@@ -1,0 +1,26 @@
+{
+  "_comment": "LFM2.5 350m (Liquid AI) with the champion recipe: bf16 LoRA r16 on v5 data. ChatML turns; tool results sit in their own 'tool' turns, masked out of the loss.",
+  "base_model": "LiquidAI/LFM2.5-350M",
+  "hf_tokenizer": "LiquidAI/LFM2.5-350M",
+  "ollama_template_from": "lfm2.5-350m",
+  "instruction_part": "<|im_start|>user\n",
+  "response_part": "<|im_start|>assistant\n",
+  "max_seq_len": 4608,
+  "lora_r": 16,
+  "lora_alpha": 16,
+  "epochs": 2,
+  "lr": 0.0002,
+  "batch_size": 2,
+  "grad_accum": 8,
+  "seed": 3407,
+  "train": "data/generated/train-v5.jsonl",
+  "val": "data/generated/val-v3.jsonl",
+  "out": "outputs/lfm25-350m-lora-v5",
+  "load_in_4bit": false,
+  "mask_spans": [
+    [
+      "<|im_start|>tool\n",
+      "<|im_end|>"
+    ]
+  ]
+}

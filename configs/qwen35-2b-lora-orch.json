@@ -1,0 +1,20 @@
+{
+  "_comment": "Design C with a faster orchestrator (Peter, 28 Sep): qwen35-4b-lora-orch's recipe and data (train-orch / val-orch: B's rooms-only prompt and lookup tools plus ask_rooms) on Qwen3.5-2B. Trained with MLX on frogmouth (homeai/train/train_mlx.py).",
+  "base_model": "Qwen/Qwen3.5-2B",
+  "hf_tokenizer": "Qwen/Qwen3.5-2B",
+  "ollama_template_from": "qwen3.5:2b",
+  "instruction_part": "<|im_start|>user\n",
+  "response_part": "<|im_start|>assistant\n",
+  "max_seq_len": 6144,
+  "lora_r": 16,
+  "lora_alpha": 16,
+  "epochs": 2,
+  "lr": 0.0002,
+  "batch_size": 1,
+  "grad_accum": 16,
+  "seed": 3407,
+  "train": "data/generated/train-orch.jsonl",
+  "val": "data/generated/val-orch.jsonl",
+  "out": "outputs/qwen35-2b-lora-orch",
+  "load_in_4bit": false
+}

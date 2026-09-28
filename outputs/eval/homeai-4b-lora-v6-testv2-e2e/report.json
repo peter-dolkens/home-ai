@@ -1,0 +1,165 @@
+{
+  "model": "homeai-4b-lora-v6",
+  "data": "data/generated/test-v2.jsonl",
+  "mode": "e2e",
+  "examples": 150,
+  "turns": 174,
+  "pass": 0.8936781609195402,
+  "conversation_pass": 0.8666666666666667,
+  "seconds_per_turn": 0.8100667499297158,
+  "calls_per_request": 2.057471264367816,
+  "by_kind": {
+    "answer": {
+      "n": 94,
+      "ok": 80.5
+    },
+    "state": {
+      "n": 174,
+      "ok": 163
+    },
+    "reply": {
+      "n": 174,
+      "ok": 163
+    },
+    "act": {
+      "n": 80,
+      "ok": 75
+    }
+  },
+  "by_category": {
+    "status_entity": {
+      "n": 6,
+      "ok": 5
+    },
+    "control_area": {
+      "n": 15,
+      "ok": 15
+    },
+    "control_climate": {
+      "n": 4,
+      "ok": 4
+    },
+    "presence_where": {
+      "n": 9,
+      "ok": 8
+    },
+    "check_house": {
+      "n": 20,
+      "ok": 19
+    },
+    "control_named": {
+      "n": 5,
+      "ok": 5
+    },
+    "presence_in_room": {
+      "n": 2,
+      "ok": 2
+    },
+    "goodnight": {
+      "n": 4,
+      "ok": 1
+    },
+    "missing": {
+      "n": 4,
+      "ok": 4
+    },
+    "confirm_sensitive": {
+      "n": 12,
+      "ok": 10.5
+    },
+    "media_what": {
+      "n": 1,
+      "ok": 1
+    },
+    "media_play": {
+      "n": 11,
+      "ok": 11
+    },
+    "control_lock": {
+      "n": 4,
+      "ok": 4
+    },
+    "energy_appliance": {
+      "n": 4,
+      "ok": 2
+    },
+    "vehicle_status": {
+      "n": 4,
+      "ok": 4
+    },
+    "energy_night": {
+      "n": 8,
+      "ok": 8
+    },
+    "control_compound": {
+      "n": 3,
+      "ok": 3
+    },
+    "control_all_lights": {
+      "n": 3,
+      "ok": 3
+    },
+    "media_volume": {
+      "n": 5,
+      "ok": 5
+    },
+    "energy_status": {
+      "n": 4,
+      "ok": 4
+    },
+    "status_aggregate": {
+      "n": 10,
+      "ok": 10
+    },
+    "away_motion": {
+      "n": 3,
+      "ok": 1
+    },
+    "media_transport": {
+      "n": 1,
+      "ok": 1
+    },
+    "leaving": {
+      "n": 2,
+      "ok": 0
+    },
+    "weather": {
+      "n": 3,
+      "ok": 3
+    },
+    "who_home": {
+      "n": 3,
+      "ok": 3
+    },
+    "smalltalk": {
+      "n": 1,
+      "ok": 1
+    },
+    "control_here": {
+      "n": 2,
+      "ok": 2
+    },
+    "appliance_status": {
+      "n": 5,
+      "ok": 5
+    },
+    "appliance_control": {
+      "n": 1,
+      "ok": 1
+    },
+    "clarify": {
+      "n": 12,
+      "ok": 7
+    },
+    "water_status": {
+      "n": 1,
+      "ok": 1
+    },
+    "control_brightness": {
+      "n": 2,
+      "ok": 2
+    }
+  },
+  "mentions_rescored": true,
+  "mentions_flipped": 1
+}

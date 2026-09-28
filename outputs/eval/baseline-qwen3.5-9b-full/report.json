@@ -1,0 +1,114 @@
+{
+  "model": "qwen3.5:9b",
+  "examples": 150,
+  "turns": 326,
+  "pass": 0.6104294478527608,
+  "by_kind": {
+    "answer": {
+      "n": 174,
+      "ok": 137.0
+    },
+    "act": {
+      "n": 72,
+      "ok": 37
+    },
+    "fetch": {
+      "n": 80,
+      "ok": 25
+    }
+  },
+  "by_category": {
+    "missing": {
+      "n": 5,
+      "ok": 2
+    },
+    "control_area": {
+      "n": 32,
+      "ok": 28
+    },
+    "control_named": {
+      "n": 36,
+      "ok": 19
+    },
+    "status_aggregate": {
+      "n": 16,
+      "ok": 11
+    },
+    "presence_where": {
+      "n": 25,
+      "ok": 13
+    },
+    "control_brightness": {
+      "n": 8,
+      "ok": 7
+    },
+    "control_compound": {
+      "n": 18,
+      "ok": 16
+    },
+    "control_climate": {
+      "n": 8,
+      "ok": 4
+    },
+    "energy_night": {
+      "n": 5,
+      "ok": 2
+    },
+    "who_home": {
+      "n": 6,
+      "ok": 0
+    },
+    "check_house": {
+      "n": 41,
+      "ok": 23
+    },
+    "smalltalk": {
+      "n": 6,
+      "ok": 6
+    },
+    "control_all_lights": {
+      "n": 6,
+      "ok": 4
+    },
+    "control_here": {
+      "n": 10,
+      "ok": 7
+    },
+    "energy_status": {
+      "n": 12,
+      "ok": 6
+    },
+    "confirm_sensitive": {
+      "n": 19,
+      "ok": 13.0
+    },
+    "leaving": {
+      "n": 11,
+      "ok": 3
+    },
+    "presence_in_room": {
+      "n": 6,
+      "ok": 5
+    },
+    "clarify": {
+      "n": 14,
+      "ok": 7
+    },
+    "status_entity": {
+      "n": 24,
+      "ok": 19
+    },
+    "energy_appliance": {
+      "n": 12,
+      "ok": 1
+    },
+    "weather": {
+      "n": 6,
+      "ok": 3
+    }
+  },
+  "overfetch_mean": 0.6461828789303747,
+  "rescored_flips": 2,
+  "half_credit_rescored": true,
+  "half_credit_turns": 2
+}

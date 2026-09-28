@@ -1,0 +1,270 @@
+{
+  "_doc": "Models under comparison: Ollama name -> training config (null for untuned baselines). Used by homeai.eval.champions for the champion pick and outputs/results.csv. Append new runs at the end.",
+  "qwen3.5:4b": {
+    "config": null,
+    "method": "untuned",
+    "data": "-",
+    "train_examples": 0,
+    "tier": "4B"
+  },
+  "qwen3.5:9b": {
+    "config": null,
+    "method": "untuned",
+    "data": "-",
+    "train_examples": 0,
+    "tier": "8-9B"
+  },
+  "gemma4:e4b": {
+    "config": null,
+    "method": "untuned",
+    "data": "-",
+    "train_examples": 0,
+    "note": "Ollama gemma4:e4b Q4_K_M, thinking off",
+    "tier": "8B (Gemma E4B, ~4B active)"
+  },
+  "lfm2.5-1.2b": {
+    "config": null,
+    "method": "untuned",
+    "data": "-",
+    "train_examples": 0,
+    "note": "LiquidAI GGUF Q4_K_M, RENDERER/PARSER lfm2",
+    "tier": "1-2B"
+  },
+  "lfm2.5-350m": {
+    "config": null,
+    "method": "untuned",
+    "data": "-",
+    "train_examples": 0,
+    "note": "LiquidAI GGUF Q4_K_M, RENDERER/PARSER lfm2",
+    "tier": "<1B"
+  },
+  "lfm2.5-230m": {
+    "config": null,
+    "method": "untuned",
+    "data": "-",
+    "train_examples": 0,
+    "note": "LiquidAI GGUF Q4_K_M, RENDERER/PARSER lfm2",
+    "tier": "<1B"
+  },
+  "spark-x2.5-4b": {
+    "config": null,
+    "method": "untuned",
+    "data": "-",
+    "train_examples": 0,
+    "note": "XHToken/Spark-X2.5-4B Q4_K_M via Ollama 0.34.4 (ollama-next :11435), thinking off",
+    "ollama": "http://localhost:11435",
+    "ollama_container": "ollama-next",
+    "tier": "4B"
+  },
+  "homeai-4b": {
+    "config": "configs/qwen35-4b.json",
+    "method": "QLoRA",
+    "data": "v1",
+    "train_examples": 3000,
+    "retired": "dominated by homeai-4b-v2 on test-v2 and wild; no further evals",
+    "tier": "4B"
+  },
+  "homeai-9b": {
+    "config": "configs/qwen35-9b.json",
+    "method": "QLoRA",
+    "data": "v1",
+    "train_examples": 3000,
+    "retired": "dominated by homeai-4b-v2 on test-v2 and wild; no further evals",
+    "tier": "8-9B"
+  },
+  "homeai-4b-lora": {
+    "config": "configs/qwen35-4b-lora.json",
+    "method": "bf16 LoRA",
+    "data": "v1",
+    "train_examples": 3000,
+    "retired": "dominated by homeai-4b-v2 on test-v2 and wild; no further evals",
+    "tier": "4B"
+  },
+  "homeai-4b-v2": {
+    "config": "configs/qwen35-4b-v2.json",
+    "method": "QLoRA",
+    "data": "v2",
+    "train_examples": 5855,
+    "tier": "4B"
+  },
+  "homeai-9b-v2": {
+    "config": "configs/qwen35-9b-v2.json",
+    "method": "QLoRA",
+    "data": "v2",
+    "train_examples": 5855,
+    "tier": "8-9B"
+  },
+  "homeai-4b-v4": {
+    "config": "configs/qwen35-4b-v4.json",
+    "method": "QLoRA",
+    "data": "v4",
+    "train_examples": 8341,
+    "tier": "4B"
+  },
+  "homeai-4b-lora-v2": {
+    "config": "configs/qwen35-4b-lora-v2.json",
+    "method": "bf16 LoRA",
+    "data": "v2",
+    "train_examples": 5855,
+    "tier": "4B"
+  },
+  "homeai-4b-rft1": {
+    "config": "configs/qwen35-4b-rft1.json",
+    "method": "RFT on homeai-4b-lora-v2",
+    "data": "rft(v2)",
+    "train_examples": 2378,
+    "tier": "4B"
+  },
+  "homeai-4b-rft2": {
+    "config": "configs/qwen35-4b-rft2.json",
+    "method": "RFT on homeai-4b-lora-v2 (strict facts, confirm sensitive)",
+    "data": "rft(v2)",
+    "train_examples": 2284,
+    "tier": "4B"
+  },
+  "homeai-4b-v5": {
+    "config": "configs/qwen35-4b-v5.json",
+    "method": "QLoRA",
+    "data": "v5",
+    "train_examples": 7570,
+    "tier": "4B"
+  },
+  "homeai-gemma4-e4b-v2": {
+    "config": "configs/gemma4-e4b-v2.json",
+    "method": "QLoRA (Gemma 4 E4B)",
+    "data": "v2",
+    "train_examples": 5855,
+    "note": "first GGUF crashed on load (merge dropped text_config.global_head_dim); reconverted 26 Sep",
+    "tier": "8B (Gemma E4B, ~4B active)"
+  },
+  "homeai-4b-lora-v5": {
+    "config": "configs/qwen35-4b-lora-v5.json",
+    "method": "bf16 LoRA",
+    "data": "v5",
+    "train_examples": 7570,
+    "tier": "4B"
+  },
+  "homeai-4b-lora-v6": {
+    "config": "configs/qwen35-4b-lora-v6.json",
+    "method": "bf16 LoRA",
+    "data": "v6",
+    "train_examples": 8156,
+    "tier": "4B"
+  },
+  "homeai-lfm25-1.2b-lora-v5": {
+    "config": "configs/lfm25-1.2b-lora-v5.json",
+    "method": "bf16 LoRA (LFM2.5 1.2b)",
+    "data": "v5",
+    "train_examples": 7570,
+    "tier": "1-2B"
+  },
+  "homeai-lfm25-350m-lora-v5": {
+    "config": "configs/lfm25-350m-lora-v5.json",
+    "method": "bf16 LoRA (LFM2.5 350m)",
+    "data": "v5",
+    "train_examples": 7570,
+    "tier": "<1B"
+  },
+  "homeai-lfm25-230m-lora-v5": {
+    "config": "configs/lfm25-230m-lora-v5.json",
+    "method": "bf16 LoRA (LFM2.5 230m)",
+    "data": "v5",
+    "train_examples": 7570,
+    "retired": "not competitive (outcome ~36%); teacher-forced evals hang on runaway generations (2 min timeouts)",
+    "tier": "<1B"
+  },
+  "homeai-spark-x25-4b-lora-v5": {
+    "config": "configs/spark-x25-4b-lora-v5.json",
+    "method": "bf16 LoRA (Spark X2.5 4B, transformers+PEFT)",
+    "data": "v5",
+    "train_examples": 7570,
+    "ollama": "http://localhost:11435",
+    "ollama_container": "ollama-next",
+    "tier": "4B"
+  },
+  "homeai-gemma4-e4b-v5": {
+    "config": "configs/gemma4-e4b-v5.json",
+    "method": "QLoRA (Gemma 4 E4B, tool-response mask fixed)",
+    "data": "v5",
+    "train_examples": 7570,
+    "tier": "8B (Gemma E4B, ~4B active)"
+  },
+  "homeai-4b-lora-v5-r32": {
+    "config": "configs/qwen35-4b-lora-v5-r32.json",
+    "method": "bf16 LoRA r32",
+    "data": "v5",
+    "train_examples": 7570,
+    "tier": "4B"
+  },
+  "homeai-4b-lora-v7": {
+    "config": "configs/qwen35-4b-lora-v7.json",
+    "method": "bf16 LoRA",
+    "data": "v7",
+    "train_examples": 7864,
+    "tier": "4B"
+  },
+  "homeai-4b-lora-b": {
+    "config": "configs/qwen35-4b-lora-b.json",
+    "method": "bf16 LoRA, design B tools",
+    "data": "b",
+    "train_examples": 6536,
+    "track": "architecture",
+    "tier": "4B"
+  },
+  "homeai-4b-lora-orch": {
+    "config": "configs/qwen35-4b-lora-orch.json",
+    "method": "bf16 LoRA, design C/D orchestrator",
+    "data": "orch",
+    "train_examples": 6536,
+    "track": "architecture",
+    "tier": "4B"
+  },
+  "homeai-2b-lora-v5": {
+    "config": "configs/qwen35-2b-lora-v5.json",
+    "method": "bf16 LoRA (Qwen3.5-2B, design E fast model)",
+    "data": "v5",
+    "train_examples": 7570,
+    "ollama": "http://lapwing.dolkens.net:11500",
+    "host": "lapwing",
+    "tier": "2B"
+  },
+  "homeai-4b-lora-v8": {
+    "config": "configs/qwen35-4b-lora-v8.json",
+    "method": "bf16 LoRA, 8k sequences",
+    "data": "v8",
+    "train_examples": 9363,
+    "tier": "4B"
+  },
+  "qwen3.8:27b": {
+    "config": null,
+    "method": "untuned (Qwen3.8 27B dense, Aug 2026)",
+    "data": "-",
+    "note": "candidate slow model (design E), orchestrator or quality ceiling; 17.7 GB q4_K_M, partly CPU-offloaded on the 3090",
+    "tier": "27B"
+  },
+  "homeai-gemma4-e4b-v8": {
+    "config": "configs/gemma4-e4b-v8.json",
+    "method": "QLoRA (Gemma 4 E4B, v8 data)",
+    "data": "v8",
+    "train_examples": 9363,
+    "tier": "8B (Gemma E4B, ~4B active)"
+  },
+  "homeai-lfm25-1.2b-lora-v5-fix": {
+    "config": "configs/lfm25-1.2b-lora-v5-fix.json",
+    "method": "bf16 LoRA (LFM2.5 1.2b, LFM2 module names)",
+    "data": "v5",
+    "train_examples": 7570,
+    "tier": "1-2B",
+    "ollama": "http://lapwing.dolkens.net:11500",
+    "host": "lapwing"
+  },
+  "homeai-lfm25-350m-lora-v5-fix": {
+    "config": "configs/lfm25-350m-lora-v5-fix.json",
+    "method": "bf16 LoRA (LFM2.5 350m, LFM2 module names)",
+    "data": "v5",
+    "train_examples": 7570,
+    "tier": "<1B",
+    "ollama": "http://lapwing.dolkens.net:11500",
+    "host": "lapwing"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "_comment": "Gemma 4 E4B on v8 data (v5 + clarification rules + 1,499 large-house conversations), QLoRA, tool-response mask fixed. Gemma is the fastest 4B-class model (1.15 s/request, 83.8% outcome on v5 data): candidate fast model for design E and speed champion. 6,144-token sequences (QLoRA at 8k likely OOMs next to the ~6 GB other services hold). Converted on the Mac.",
+  "base_model": "unsloth/gemma-4-E4B-it",
+  "hf_tokenizer": "google/gemma-4-E4B-it",
+  "ollama_template_from": "gemma4:e4b",
+  "instruction_part": "<|turn>user\n",
+  "response_part": "<|turn>model\n",
+  "max_seq_len": 6144,
+  "lora_r": 16,
+  "lora_alpha": 16,
+  "epochs": 2,
+  "lr": 0.0002,
+  "batch_size": 1,
+  "grad_accum": 16,
+  "seed": 3407,
+  "train": "data/generated/train-v8.jsonl",
+  "val": "data/generated/val-v3.jsonl",
+  "out": "outputs/gemma4-e4b-v8",
+  "load_in_4bit": true,
+  "mask_spans": [
+    [
+      "<|tool_response>",
+      "<tool_response|>",
+      "keep_open"
+    ]
+  ]
+}

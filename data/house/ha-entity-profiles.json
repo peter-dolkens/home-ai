@@ -1,0 +1,4803 @@
+{
+ "source": "read-only dump of the existing house's HA registries, 26 Sep 2026; per-model stats only, no names",
+ "enabled_entities": 3499,
+ "by_category": {
+  "config": 839,
+  "diagnostic": 707,
+  "primary": 1953
+ },
+ "models": {
+  "Home Assistant | Home Assistant Supervisor": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "Home Assistant | Home Assistant Core": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "Home Assistant | Home Assistant Operating System": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "? | ?": {
+   "devices": 2,
+   "entities_per_device": 6.5,
+   "primary_per_device": 2,
+   "primary_kinds": [
+    [
+     "binary_sensor/safety",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "sensor",
+     2
+    ],
+    [
+     "sensor/timestamp",
+     1
+    ],
+    [
+     "binary_sensor",
+     1
+    ],
+    [
+     "binary_sensor/safety",
+     1
+    ]
+   ]
+  },
+  "Google | Google Translate TTS": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 1,
+   "primary_kinds": [
+    [
+     "tts",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "tts",
+     1
+    ]
+   ]
+  },
+  "Official apps | Home Assistant App": {
+   "devices": 5,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     5
+    ]
+   ]
+  },
+  "Cloudflared | Home Assistant App": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "Met.no | Forecast": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 1,
+   "primary_kinds": [
+    [
+     "weather",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "weather",
+     1
+    ]
+   ]
+  },
+  "Home Assistant App: Zigbee2MQTT | Home Assistant App": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "piitaya | plugin": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "hacs.xyz | ?": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "Apple | iPhone16,1": {
+   "devices": 2,
+   "entities_per_device": 24.5,
+   "primary_per_device": 23,
+   "primary_kinds": [
+    [
+     "sensor/battery",
+     2
+    ],
+    [
+     "sensor",
+     2
+    ],
+    [
+     "notify",
+     1
+    ],
+    [
+     "binary_sensor",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "device_tracker",
+     2
+    ],
+    [
+     "sensor/battery",
+     2
+    ],
+    [
+     "sensor",
+     2
+    ],
+    [
+     "binary_sensor",
+     1
+    ],
+    [
+     "notify",
+     1
+    ]
+   ]
+  },
+  "Google | Pixel 7": {
+   "devices": 1,
+   "entities_per_device": 5,
+   "primary_per_device": 1,
+   "primary_kinds": [
+    [
+     "notify",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "device_tracker",
+     1
+    ],
+    [
+     "notify",
+     1
+    ],
+    [
+     "sensor/enum",
+     1
+    ],
+    [
+     "sensor/battery",
+     1
+    ]
+   ]
+  },
+  "kalkih | plugin": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "Clooos | plugin": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "bachya's Home Assistant Add-ons | Home Assistant App": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "Makin-Things | plugin": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "EuleMitKeule | integration": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "aukedejong | plugin": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "albertogeniola | integration": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "Apple | HomePod Mini": {
+   "devices": 4,
+   "entities_per_device": 2,
+   "primary_per_device": 2,
+   "primary_kinds": [
+    [
+     "media_player",
+     4
+    ],
+    [
+     "remote",
+     4
+    ]
+   ],
+   "all_kinds": [
+    [
+     "media_player",
+     4
+    ],
+    [
+     "remote",
+     4
+    ]
+   ]
+  },
+  "Broadlink | RM4 pro": {
+   "devices": 1,
+   "entities_per_device": 3,
+   "primary_per_device": 3,
+   "primary_kinds": [
+    [
+     "infrared/emitter",
+     1
+    ],
+    [
+     "remote",
+     1
+    ],
+    [
+     "radio_frequency",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "infrared/emitter",
+     1
+    ],
+    [
+     "remote",
+     1
+    ],
+    [
+     "radio_frequency",
+     1
+    ]
+   ]
+  },
+  "smartHomeHub | integration": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "Apple | iPad13,4": {
+   "devices": 1,
+   "entities_per_device": 29,
+   "primary_per_device": 27,
+   "primary_kinds": [
+    [
+     "binary_sensor",
+     1
+    ],
+    [
+     "notify",
+     1
+    ],
+    [
+     "sensor/battery",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "device_tracker",
+     1
+    ],
+    [
+     "sensor/battery",
+     1
+    ],
+    [
+     "binary_sensor",
+     1
+    ],
+    [
+     "notify",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ]
+   ]
+  },
+  "ankohanse | integration": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "DAB Pumps | esybox_mini_maxiCPU": {
+   "devices": 1,
+   "entities_per_device": 69,
+   "primary_per_device": 33,
+   "primary_kinds": [
+    [
+     "sensor/volume_flow_rate",
+     1
+    ],
+    [
+     "sensor/water",
+     1
+    ],
+    [
+     "sensor/voltage",
+     1
+    ],
+    [
+     "sensor/enum",
+     1
+    ],
+    [
+     "sensor/current",
+     1
+    ],
+    [
+     "sensor/duration",
+     1
+    ],
+    [
+     "sensor/energy",
+     1
+    ],
+    [
+     "sensor/temperature",
+     1
+    ],
+    [
+     "sensor/power_factor",
+     1
+    ],
+    [
+     "switch/switch",
+     1
+    ],
+    [
+     "select",
+     1
+    ],
+    [
+     "sensor/pressure",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "sensor/volume_flow_rate",
+     1
+    ],
+    [
+     "sensor/water",
+     1
+    ],
+    [
+     "sensor/voltage",
+     1
+    ],
+    [
+     "sensor/enum",
+     1
+    ],
+    [
+     "sensor/current",
+     1
+    ],
+    [
+     "sensor/duration",
+     1
+    ],
+    [
+     "sensor/data_size",
+     1
+    ],
+    [
+     "number/pressure",
+     1
+    ],
+    [
+     "sensor/energy",
+     1
+    ],
+    [
+     "sensor/temperature",
+     1
+    ],
+    [
+     "sensor/power_factor",
+     1
+    ],
+    [
+     "switch/switch",
+     1
+    ],
+    [
+     "button",
+     1
+    ],
+    [
+     "select",
+     1
+    ],
+    [
+     "sensor/pressure",
+     1
+    ],
+    [
+     "time",
+     1
+    ],
+    [
+     "sensor/power",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ]
+   ]
+  },
+  "ollo69 | integration": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "alexander0042 | integration": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "jpettitt | plugin": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "Ecowitt | GW1100C": {
+   "devices": 1,
+   "entities_per_device": 49,
+   "primary_per_device": 38,
+   "primary_kinds": [
+    [
+     "sensor/humidity",
+     1
+    ],
+    [
+     "sensor/temperature",
+     1
+    ],
+    [
+     "sensor/irradiance",
+     1
+    ],
+    [
+     "sensor/pressure",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "sensor",
+     1
+    ],
+    [
+     "sensor/humidity",
+     1
+    ],
+    [
+     "sensor/temperature",
+     1
+    ],
+    [
+     "binary_sensor/battery",
+     1
+    ],
+    [
+     "sensor/pressure",
+     1
+    ],
+    [
+     "sensor/irradiance",
+     1
+    ],
+    [
+     "sensor/duration",
+     1
+    ],
+    [
+     "sensor/voltage",
+     1
+    ]
+   ]
+  },
+  "Zigbee2MQTT | Bridge": {
+   "devices": 2,
+   "entities_per_device": 3,
+   "primary_per_device": 1,
+   "primary_kinds": [
+    [
+     "switch",
+     1
+    ],
+    [
+     "button/restart",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "binary_sensor/connectivity",
+     2
+    ],
+    [
+     "select",
+     1
+    ],
+    [
+     "button/restart",
+     1
+    ],
+    [
+     "switch",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ]
+   ]
+  },
+  "ESPresense (esp32) | ESP32-D0WDQ6-V3": {
+   "devices": 12,
+   "entities_per_device": 11,
+   "primary_per_device": 1,
+   "primary_kinds": [
+    [
+     "binary_sensor/connectivity",
+     12
+    ]
+   ],
+   "all_kinds": [
+    [
+     "number",
+     12
+    ],
+    [
+     "binary_sensor/connectivity",
+     12
+    ],
+    [
+     "button",
+     12
+    ],
+    [
+     "switch",
+     12
+    ],
+    [
+     "sensor",
+     12
+    ]
+   ]
+  },
+  "LG | TLVA5BA-TL (WASHER)": {
+   "devices": 1,
+   "entities_per_device": 16,
+   "primary_per_device": 15,
+   "primary_kinds": [
+    [
+     "binary_sensor/problem",
+     1
+    ],
+    [
+     "binary_sensor",
+     1
+    ],
+    [
+     "switch/switch",
+     1
+    ],
+    [
+     "button/update",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "binary_sensor/problem",
+     1
+    ],
+    [
+     "binary_sensor",
+     1
+    ],
+    [
+     "switch/switch",
+     1
+    ],
+    [
+     "button/update",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ]
+   ]
+  },
+  "custom-cards | plugin": {
+   "devices": 2,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     2
+    ]
+   ]
+  },
+  "iantrich | plugin": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "PirateWeather | ?": {
+   "devices": 1,
+   "entities_per_device": 15,
+   "primary_per_device": 15,
+   "primary_kinds": [
+    [
+     "sensor/timestamp",
+     1
+    ],
+    [
+     "weather",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "sensor/timestamp",
+     1
+    ],
+    [
+     "weather",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ]
+   ]
+  },
+  "ESPresense (esp32) | ESP32-D0WD-V3": {
+   "devices": 1,
+   "entities_per_device": 11,
+   "primary_per_device": 1,
+   "primary_kinds": [
+    [
+     "binary_sensor/connectivity",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "number",
+     1
+    ],
+    [
+     "binary_sensor/connectivity",
+     1
+    ],
+    [
+     "button",
+     1
+    ],
+    [
+     "switch",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ]
+   ]
+  },
+  "ESPresense (esp32) | ESP32-D0WDQ6": {
+   "devices": 2,
+   "entities_per_device": 11,
+   "primary_per_device": 1,
+   "primary_kinds": [
+    [
+     "binary_sensor/connectivity",
+     2
+    ]
+   ],
+   "all_kinds": [
+    [
+     "number",
+     2
+    ],
+    [
+     "binary_sensor/connectivity",
+     2
+    ],
+    [
+     "button",
+     2
+    ],
+    [
+     "switch",
+     2
+    ],
+    [
+     "sensor",
+     2
+    ]
+   ]
+  },
+  "Raspberry Pi | ?": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "binary_sensor/problem",
+     1
+    ]
+   ]
+  },
+  "Philips | Hue white A21 bulb B22 with Bluetooth (1600 Lumen)": {
+   "devices": 8,
+   "entities_per_device": 6,
+   "primary_per_device": 1,
+   "primary_kinds": [
+    [
+     "light",
+     8
+    ]
+   ],
+   "all_kinds": [
+    [
+     "number",
+     8
+    ],
+    [
+     "light",
+     8
+    ],
+    [
+     "button/identify",
+     8
+    ],
+    [
+     "text",
+     8
+    ],
+    [
+     "update/firmware",
+     8
+    ],
+    [
+     "select",
+     8
+    ]
+   ]
+  },
+  "Philips | Hue motion sensor": {
+   "devices": 11,
+   "entities_per_device": 9,
+   "primary_per_device": 3,
+   "primary_kinds": [
+    [
+     "sensor/illuminance",
+     11
+    ],
+    [
+     "binary_sensor/occupancy",
+     11
+    ],
+    [
+     "sensor/temperature",
+     11
+    ]
+   ],
+   "all_kinds": [
+    [
+     "binary_sensor/occupancy",
+     11
+    ],
+    [
+     "number",
+     11
+    ],
+    [
+     "sensor/illuminance",
+     11
+    ],
+    [
+     "sensor/temperature",
+     11
+    ],
+    [
+     "sensor/battery",
+     11
+    ],
+    [
+     "button/identify",
+     11
+    ],
+    [
+     "update/firmware",
+     11
+    ],
+    [
+     "select",
+     11
+    ],
+    [
+     "switch",
+     11
+    ]
+   ]
+  },
+  "Aqara | Door and window sensor": {
+   "devices": 21,
+   "entities_per_device": 4,
+   "primary_per_device": 1,
+   "primary_kinds": [
+    [
+     "binary_sensor/window",
+     13
+    ],
+    [
+     "binary_sensor/door",
+     8
+    ]
+   ],
+   "all_kinds": [
+    [
+     "sensor/temperature",
+     21
+    ],
+    [
+     "sensor/battery",
+     21
+    ],
+    [
+     "button/identify",
+     21
+    ],
+    [
+     "binary_sensor/window",
+     13
+    ],
+    [
+     "binary_sensor/door",
+     8
+    ]
+   ]
+  },
+  "Philips | Hue white A60 bulb E27 bluetooth": {
+   "devices": 1,
+   "entities_per_device": 6,
+   "primary_per_device": 1,
+   "primary_kinds": [
+    [
+     "light",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "number",
+     1
+    ],
+    [
+     "light",
+     1
+    ],
+    [
+     "button/identify",
+     1
+    ],
+    [
+     "text",
+     1
+    ],
+    [
+     "update/firmware",
+     1
+    ],
+    [
+     "select",
+     1
+    ]
+   ]
+  },
+  "Philips | Hue motion outdoor sensor": {
+   "devices": 7,
+   "entities_per_device": 9,
+   "primary_per_device": 3,
+   "primary_kinds": [
+    [
+     "sensor/illuminance",
+     7
+    ],
+    [
+     "binary_sensor/occupancy",
+     7
+    ],
+    [
+     "sensor/temperature",
+     7
+    ]
+   ],
+   "all_kinds": [
+    [
+     "binary_sensor/occupancy",
+     7
+    ],
+    [
+     "number",
+     7
+    ],
+    [
+     "sensor/illuminance",
+     7
+    ],
+    [
+     "sensor/temperature",
+     7
+    ],
+    [
+     "sensor/battery",
+     7
+    ],
+    [
+     "button/identify",
+     7
+    ],
+    [
+     "update/firmware",
+     7
+    ],
+    [
+     "select",
+     7
+    ],
+    [
+     "switch",
+     7
+    ]
+   ]
+  },
+  "Aqara | Presence sensor FP1": {
+   "devices": 6,
+   "entities_per_device": 9,
+   "primary_per_device": 6,
+   "primary_kinds": [
+    [
+     "select",
+     6
+    ],
+    [
+     "binary_sensor/occupancy",
+     6
+    ],
+    [
+     "button",
+     6
+    ],
+    [
+     "sensor",
+     6
+    ]
+   ],
+   "all_kinds": [
+    [
+     "binary_sensor/occupancy",
+     6
+    ],
+    [
+     "sensor/temperature",
+     6
+    ],
+    [
+     "button",
+     6
+    ],
+    [
+     "update/firmware",
+     6
+    ],
+    [
+     "select",
+     6
+    ],
+    [
+     "sensor",
+     6
+    ]
+   ]
+  },
+  "Philips | Hue Discover white and color ambiance flood light": {
+   "devices": 1,
+   "entities_per_device": 6,
+   "primary_per_device": 1,
+   "primary_kinds": [
+    [
+     "light",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "number",
+     1
+    ],
+    [
+     "light",
+     1
+    ],
+    [
+     "button/identify",
+     1
+    ],
+    [
+     "text",
+     1
+    ],
+    [
+     "update/firmware",
+     1
+    ],
+    [
+     "select",
+     1
+    ]
+   ]
+  },
+  "Philips | Hue white A60 bulb E27 806lm bluetooth": {
+   "devices": 4,
+   "entities_per_device": 6,
+   "primary_per_device": 1,
+   "primary_kinds": [
+    [
+     "light",
+     4
+    ]
+   ],
+   "all_kinds": [
+    [
+     "number",
+     4
+    ],
+    [
+     "light",
+     4
+    ],
+    [
+     "button/identify",
+     4
+    ],
+    [
+     "text",
+     4
+    ],
+    [
+     "update/firmware",
+     4
+    ],
+    [
+     "select",
+     4
+    ]
+   ]
+  },
+  "Philips | Hue smart button": {
+   "devices": 3,
+   "entities_per_device": 2,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "sensor/battery",
+     3
+    ],
+    [
+     "update/firmware",
+     3
+    ]
+   ]
+  },
+  "Philips | Hue Fuzo outdoor wall light": {
+   "devices": 2,
+   "entities_per_device": 6,
+   "primary_per_device": 1,
+   "primary_kinds": [
+    [
+     "light",
+     2
+    ]
+   ],
+   "all_kinds": [
+    [
+     "number",
+     2
+    ],
+    [
+     "light",
+     2
+    ],
+    [
+     "button/identify",
+     2
+    ],
+    [
+     "text",
+     2
+    ],
+    [
+     "update/firmware",
+     2
+    ],
+    [
+     "select",
+     2
+    ]
+   ]
+  },
+  "Develco | Air quality sensor": {
+   "devices": 1,
+   "entities_per_device": 7,
+   "primary_per_device": 4,
+   "primary_kinds": [
+    [
+     "sensor/temperature",
+     1
+    ],
+    [
+     "sensor/humidity",
+     1
+    ],
+    [
+     "sensor/volatile_organic_compounds",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "sensor/humidity",
+     1
+    ],
+    [
+     "sensor/temperature",
+     1
+    ],
+    [
+     "binary_sensor/battery",
+     1
+    ],
+    [
+     "sensor/battery",
+     1
+    ],
+    [
+     "sensor/volatile_organic_compounds",
+     1
+    ],
+    [
+     "update/firmware",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ]
+   ]
+  },
+  "Philips | Hue Go portable light": {
+   "devices": 1,
+   "entities_per_device": 6,
+   "primary_per_device": 1,
+   "primary_kinds": [
+    [
+     "light",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "number",
+     1
+    ],
+    [
+     "light",
+     1
+    ],
+    [
+     "button/identify",
+     1
+    ],
+    [
+     "text",
+     1
+    ],
+    [
+     "update/firmware",
+     1
+    ],
+    [
+     "select",
+     1
+    ]
+   ]
+  },
+  "Schneider Electric | Clipsal Wiser smoke alarm": {
+   "devices": 3,
+   "entities_per_device": 7,
+   "primary_per_device": 2,
+   "primary_kinds": [
+    [
+     "binary_sensor",
+     3
+    ],
+    [
+     "binary_sensor/smoke",
+     3
+    ]
+   ],
+   "all_kinds": [
+    [
+     "binary_sensor/tamper",
+     3
+    ],
+    [
+     "sensor/battery",
+     3
+    ],
+    [
+     "binary_sensor",
+     3
+    ],
+    [
+     "binary_sensor/smoke",
+     3
+    ],
+    [
+     "binary_sensor/battery",
+     3
+    ]
+   ]
+  },
+  "Forecast.Solar | public": {
+   "devices": 1,
+   "entities_per_device": 8,
+   "primary_per_device": 8,
+   "primary_kinds": [
+    [
+     "sensor/timestamp",
+     1
+    ],
+    [
+     "sensor/energy",
+     1
+    ],
+    [
+     "sensor/power",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "sensor/timestamp",
+     1
+    ],
+    [
+     "sensor/energy",
+     1
+    ],
+    [
+     "sensor/power",
+     1
+    ]
+   ]
+  },
+  "mikey0000 | integration": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "Aqara | Roller shade driver E1": {
+   "devices": 1,
+   "entities_per_device": 9,
+   "primary_per_device": 4,
+   "primary_kinds": [
+    [
+     "binary_sensor",
+     1
+    ],
+    [
+     "cover",
+     1
+    ],
+    [
+     "switch",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "cover",
+     1
+    ],
+    [
+     "sensor/temperature",
+     1
+    ],
+    [
+     "sensor/battery",
+     1
+    ],
+    [
+     "binary_sensor",
+     1
+    ],
+    [
+     "update/firmware",
+     1
+    ],
+    [
+     "select",
+     1
+    ],
+    [
+     "switch",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ]
+   ]
+  },
+  "Shelly | Shelly Pro 3EM": {
+   "devices": 12,
+   "entities_per_device": 4.6,
+   "primary_per_device": 4.1,
+   "primary_kinds": [
+    [
+     "sensor/current",
+     9
+    ],
+    [
+     "sensor/apparent_power",
+     9
+    ],
+    [
+     "sensor/energy",
+     9
+    ],
+    [
+     "sensor/power_factor",
+     9
+    ],
+    [
+     "sensor/power",
+     9
+    ],
+    [
+     "sensor/temperature",
+     3
+    ],
+    [
+     "sensor/voltage",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "sensor/current",
+     9
+    ],
+    [
+     "sensor/apparent_power",
+     9
+    ],
+    [
+     "sensor/energy",
+     9
+    ],
+    [
+     "sensor/power_factor",
+     9
+    ],
+    [
+     "sensor/power",
+     9
+    ],
+    [
+     "button/restart",
+     3
+    ],
+    [
+     "sensor/temperature",
+     3
+    ],
+    [
+     "update/firmware",
+     3
+    ],
+    [
+     "sensor/voltage",
+     1
+    ]
+   ]
+  },
+  "Shelly | Shelly Pro 4PM": {
+   "devices": 5,
+   "entities_per_device": 7.4,
+   "primary_per_device": 3,
+   "primary_kinds": [
+    [
+     "sensor/energy",
+     4
+    ],
+    [
+     "sensor/current",
+     4
+    ],
+    [
+     "sensor/power",
+     4
+    ],
+    [
+     "sensor/voltage",
+     2
+    ],
+    [
+     "switch",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "sensor/current",
+     4
+    ],
+    [
+     "sensor/energy",
+     4
+    ],
+    [
+     "sensor/temperature",
+     4
+    ],
+    [
+     "binary_sensor/problem",
+     4
+    ],
+    [
+     "sensor/power",
+     4
+    ],
+    [
+     "sensor/voltage",
+     2
+    ],
+    [
+     "button/restart",
+     1
+    ],
+    [
+     "update/firmware",
+     1
+    ],
+    [
+     "switch",
+     1
+    ]
+   ]
+  },
+  "bremor,makin-things | integration": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "jekalmin | integration": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "acon96 | integration": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "proudelm | integration": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "WillCodeForCats | integration": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "Apple | Apple TV 4K (gen 3)": {
+   "devices": 1,
+   "entities_per_device": 3,
+   "primary_per_device": 3,
+   "primary_kinds": [
+    [
+     "media_player",
+     1
+    ],
+    [
+     "remote",
+     1
+    ],
+    [
+     "binary_sensor",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "media_player",
+     1
+    ],
+    [
+     "remote",
+     1
+    ],
+    [
+     "binary_sensor",
+     1
+    ]
+   ]
+  },
+  "ofekashery | plugin": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "Home Assistant Community Apps | Home Assistant App": {
+   "devices": 3,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     3
+    ]
+   ]
+  },
+  "RomRider | plugin": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "Mammotion | Luba2AWD5000": {
+   "devices": 1,
+   "entities_per_device": 114,
+   "primary_per_device": 14,
+   "primary_kinds": [
+    [
+     "lawn_mower",
+     1
+    ],
+    [
+     "button",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "device_tracker",
+     1
+    ],
+    [
+     "number/distance",
+     1
+    ],
+    [
+     "number",
+     1
+    ],
+    [
+     "sensor/enum",
+     1
+    ],
+    [
+     "sensor/speed",
+     1
+    ],
+    [
+     "number/speed",
+     1
+    ],
+    [
+     "sensor/distance",
+     1
+    ],
+    [
+     "sensor/timestamp",
+     1
+    ],
+    [
+     "sensor/battery",
+     1
+    ],
+    [
+     "lawn_mower",
+     1
+    ],
+    [
+     "button",
+     1
+    ],
+    [
+     "update/firmware",
+     1
+    ],
+    [
+     "select",
+     1
+    ],
+    [
+     "sensor/duration",
+     1
+    ],
+    [
+     "sensor/signal_strength",
+     1
+    ],
+    [
+     "binary_sensor/battery_charging",
+     1
+    ],
+    [
+     "switch",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ]
+   ]
+  },
+  "NOAA | Aurora Visibility Sensor": {
+   "devices": 1,
+   "entities_per_device": 2,
+   "primary_per_device": 2,
+   "primary_kinds": [
+    [
+     "binary_sensor",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "binary_sensor",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ]
+   ]
+  },
+  "dolezsa | integration": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "rautesamtr | plugin": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "gcobb321 | integration": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "frenck | integration": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "Home Assistant | ?": {
+   "devices": 2,
+   "entities_per_device": 29,
+   "primary_per_device": 0.5,
+   "primary_kinds": [
+    [
+     "event",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "button",
+     2
+    ],
+    [
+     "sensor",
+     2
+    ],
+    [
+     "button/restart",
+     1
+    ],
+    [
+     "event",
+     1
+    ]
+   ]
+  },
+  "MindFreeze | plugin": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "Unknown Manufacturer | GW1200C": {
+   "devices": 1,
+   "entities_per_device": 52,
+   "primary_per_device": 41,
+   "primary_kinds": [
+    [
+     "sensor/humidity",
+     1
+    ],
+    [
+     "sensor/distance",
+     1
+    ],
+    [
+     "sensor/temperature",
+     1
+    ],
+    [
+     "binary_sensor",
+     1
+    ],
+    [
+     "sensor/irradiance",
+     1
+    ],
+    [
+     "sensor/pressure",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "sensor/duration",
+     1
+    ],
+    [
+     "sensor/humidity",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ],
+    [
+     "sensor/distance",
+     1
+    ],
+    [
+     "sensor/temperature",
+     1
+    ],
+    [
+     "binary_sensor/battery",
+     1
+    ],
+    [
+     "binary_sensor",
+     1
+    ],
+    [
+     "sensor/irradiance",
+     1
+    ],
+    [
+     "sensor/pressure",
+     1
+    ],
+    [
+     "sensor/voltage",
+     1
+    ]
+   ]
+  },
+  "SolarEdge | SE8250H-AUSNBBX14": {
+   "devices": 1,
+   "entities_per_device": 36,
+   "primary_per_device": 12,
+   "primary_kinds": [
+    [
+     "binary_sensor/power",
+     1
+    ],
+    [
+     "sensor/current",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ],
+    [
+     "sensor/frequency",
+     1
+    ],
+    [
+     "sensor/energy",
+     1
+    ],
+    [
+     "sensor/power",
+     1
+    ],
+    [
+     "sensor/voltage",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "binary_sensor/power",
+     1
+    ],
+    [
+     "sensor/voltage",
+     1
+    ],
+    [
+     "sensor/enum",
+     1
+    ],
+    [
+     "sensor/current",
+     1
+    ],
+    [
+     "number",
+     1
+    ],
+    [
+     "sensor/frequency",
+     1
+    ],
+    [
+     "sensor/timestamp",
+     1
+    ],
+    [
+     "sensor/energy",
+     1
+    ],
+    [
+     "sensor/temperature",
+     1
+    ],
+    [
+     "binary_sensor",
+     1
+    ],
+    [
+     "button",
+     1
+    ],
+    [
+     "select",
+     1
+    ],
+    [
+     "switch",
+     1
+    ],
+    [
+     "sensor/power",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ]
+   ]
+  },
+  "SolarEdge | SE-MTR-3Y-400V-B": {
+   "devices": 1,
+   "entities_per_device": 22,
+   "primary_per_device": 18,
+   "primary_kinds": [
+    [
+     "sensor/current",
+     1
+    ],
+    [
+     "sensor/apparent_power",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ],
+    [
+     "sensor/frequency",
+     1
+    ],
+    [
+     "sensor/energy",
+     1
+    ],
+    [
+     "sensor/power_factor",
+     1
+    ],
+    [
+     "select",
+     1
+    ],
+    [
+     "sensor/reactive_power",
+     1
+    ],
+    [
+     "sensor/power",
+     1
+    ],
+    [
+     "sensor/voltage",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "sensor/current",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ],
+    [
+     "sensor/apparent_power",
+     1
+    ],
+    [
+     "sensor/frequency",
+     1
+    ],
+    [
+     "sensor/timestamp",
+     1
+    ],
+    [
+     "sensor/energy",
+     1
+    ],
+    [
+     "sensor/power_factor",
+     1
+    ],
+    [
+     "select",
+     1
+    ],
+    [
+     "sensor/reactive_power",
+     1
+    ],
+    [
+     "sensor/power",
+     1
+    ],
+    [
+     "sensor/voltage",
+     1
+    ]
+   ]
+  },
+  "SolarEdge | SE Energy Bank": {
+   "devices": 1,
+   "entities_per_device": 16,
+   "primary_per_device": 8,
+   "primary_kinds": [
+    [
+     "sensor/current",
+     1
+    ],
+    [
+     "sensor/energy",
+     1
+    ],
+    [
+     "sensor/battery",
+     1
+    ],
+    [
+     "sensor/energy_storage",
+     1
+    ],
+    [
+     "sensor/power",
+     1
+    ],
+    [
+     "sensor/voltage",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "sensor/enum",
+     1
+    ],
+    [
+     "sensor/current",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ],
+    [
+     "sensor/temperature",
+     1
+    ],
+    [
+     "sensor/energy",
+     1
+    ],
+    [
+     "sensor/battery",
+     1
+    ],
+    [
+     "sensor/energy_storage",
+     1
+    ],
+    [
+     "sensor/timestamp",
+     1
+    ],
+    [
+     "sensor/power",
+     1
+    ],
+    [
+     "sensor/voltage",
+     1
+    ]
+   ]
+  },
+  "Electricity Maps | ?": {
+   "devices": 1,
+   "entities_per_device": 2,
+   "primary_per_device": 2,
+   "primary_kinds": [
+    [
+     "sensor",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "sensor",
+     1
+    ]
+   ]
+  },
+  "Unknown Manufacturer | GW3000C": {
+   "devices": 1,
+   "entities_per_device": 45,
+   "primary_per_device": 35,
+   "primary_kinds": [
+    [
+     "sensor/humidity",
+     1
+    ],
+    [
+     "sensor/distance",
+     1
+    ],
+    [
+     "sensor/temperature",
+     1
+    ],
+    [
+     "binary_sensor",
+     1
+    ],
+    [
+     "sensor/irradiance",
+     1
+    ],
+    [
+     "sensor/pressure",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "sensor/duration",
+     1
+    ],
+    [
+     "sensor/humidity",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ],
+    [
+     "sensor/distance",
+     1
+    ],
+    [
+     "sensor/temperature",
+     1
+    ],
+    [
+     "binary_sensor",
+     1
+    ],
+    [
+     "sensor/irradiance",
+     1
+    ],
+    [
+     "sensor/pressure",
+     1
+    ],
+    [
+     "sensor/voltage",
+     1
+    ]
+   ]
+  },
+  "toreamun | integration": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "Apple | HomePod (gen 2)": {
+   "devices": 2,
+   "entities_per_device": 2,
+   "primary_per_device": 2,
+   "primary_kinds": [
+    [
+     "media_player",
+     2
+    ],
+    [
+     "remote",
+     2
+    ]
+   ],
+   "all_kinds": [
+    [
+     "media_player",
+     2
+    ],
+    [
+     "remote",
+     2
+    ]
+   ]
+  },
+  "bacco007 | integration": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "bwooce | integration": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "VictorPest.com | Rat Trap": {
+   "devices": 2,
+   "entities_per_device": 10,
+   "primary_per_device": 1,
+   "primary_kinds": [
+    [
+     "binary_sensor/occupancy",
+     2
+    ]
+   ],
+   "all_kinds": [
+    [
+     "binary_sensor/occupancy",
+     2
+    ],
+    [
+     "sensor/temperature",
+     2
+    ],
+    [
+     "sensor/battery",
+     2
+    ],
+    [
+     "sensor/timestamp",
+     2
+    ],
+    [
+     "sensor/signal_strength",
+     2
+    ],
+    [
+     "sensor",
+     2
+    ]
+   ]
+  },
+  "LG | 75QNED91TSA.AAUFLJD": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 1,
+   "primary_kinds": [
+    [
+     "media_player/tv",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "media_player/tv",
+     1
+    ]
+   ]
+  },
+  "American Power Conversion  | Smart-UPS_750": {
+   "devices": 1,
+   "entities_per_device": 14,
+   "primary_per_device": 3,
+   "primary_kinds": [
+    [
+     "sensor/battery",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "sensor/enum",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ],
+    [
+     "sensor/battery",
+     1
+    ],
+    [
+     "sensor/duration",
+     1
+    ],
+    [
+     "sensor/voltage",
+     1
+    ]
+   ]
+  },
+  "TOSHIBA  | HDWG21E": {
+   "devices": 1,
+   "entities_per_device": 5,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "binary_sensor/safety",
+     1
+    ],
+    [
+     "sensor/temperature",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ]
+   ]
+  },
+  "TOSHIBA  | MG08ACA16TE": {
+   "devices": 2,
+   "entities_per_device": 5,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "binary_sensor/safety",
+     2
+    ],
+    [
+     "sensor/temperature",
+     2
+    ],
+    [
+     "sensor",
+     2
+    ]
+   ]
+  },
+  "TOSHIBA  | MG09ACA18TE": {
+   "devices": 1,
+   "entities_per_device": 5,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "binary_sensor/safety",
+     1
+    ],
+    [
+     "sensor/temperature",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ]
+   ]
+  },
+  "Synology | DS418": {
+   "devices": 2,
+   "entities_per_device": 7.5,
+   "primary_per_device": 4,
+   "primary_kinds": [
+    [
+     "sensor",
+     2
+    ],
+    [
+     "sensor/data_rate",
+     1
+    ],
+    [
+     "sensor/data_size",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "sensor/temperature",
+     2
+    ],
+    [
+     "sensor",
+     2
+    ],
+    [
+     "sensor/uptime",
+     1
+    ],
+    [
+     "update",
+     1
+    ],
+    [
+     "button",
+     1
+    ],
+    [
+     "select",
+     1
+    ],
+    [
+     "button/restart",
+     1
+    ],
+    [
+     "sensor/data_rate",
+     1
+    ],
+    [
+     "sensor/data_size",
+     1
+    ]
+   ]
+  },
+  "thomasloven | plugin": {
+   "devices": 3,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     3
+    ]
+   ]
+  },
+  "xZetsubou | integration": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "Tuya | UC552HA (bf8e3d6e09c0fff72fr1jd)": {
+   "devices": 1,
+   "entities_per_device": 2,
+   "primary_per_device": 1,
+   "primary_kinds": [
+    [
+     "light",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "number",
+     1
+    ],
+    [
+     "light",
+     1
+    ]
+   ]
+  },
+  "Tuya | UC552HA (bfb640baf82fad1e20eqd8)": {
+   "devices": 1,
+   "entities_per_device": 2,
+   "primary_per_device": 1,
+   "primary_kinds": [
+    [
+     "light",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "number",
+     1
+    ],
+    [
+     "light",
+     1
+    ]
+   ]
+  },
+  "Tuya | Smart Planter Ivy (bf081a9369aadc3f8dhard)": {
+   "devices": 1,
+   "entities_per_device": 6,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "sensor/water",
+     1
+    ],
+    [
+     "sensor/humidity",
+     1
+    ],
+    [
+     "binary_sensor/presence",
+     1
+    ],
+    [
+     "sensor/illuminance",
+     1
+    ],
+    [
+     "sensor/temperature",
+     1
+    ],
+    [
+     "sensor/battery",
+     1
+    ]
+   ]
+  },
+  "krahabb | integration": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "Meross | mss310 8.0.0": {
+   "devices": 1,
+   "entities_per_device": 12,
+   "primary_per_device": 7,
+   "primary_kinds": [
+    [
+     "sensor/enum",
+     1
+    ],
+    [
+     "sensor/current",
+     1
+    ],
+    [
+     "sensor/energy",
+     1
+    ],
+    [
+     "switch/outlet",
+     1
+    ],
+    [
+     "sensor/power",
+     1
+    ],
+    [
+     "sensor/voltage",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "sensor/enum",
+     1
+    ],
+    [
+     "sensor/current",
+     1
+    ],
+    [
+     "light/DNDMode",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ],
+    [
+     "sensor/energy",
+     1
+    ],
+    [
+     "switch/switch",
+     1
+    ],
+    [
+     "switch/outlet",
+     1
+    ],
+    [
+     "button/restart",
+     1
+    ],
+    [
+     "sensor/power",
+     1
+    ],
+    [
+     "sensor/voltage",
+     1
+    ]
+   ]
+  },
+  "Home Assistant | Home Assistant Backup": {
+   "devices": 1,
+   "entities_per_device": 5,
+   "primary_per_device": 5,
+   "primary_kinds": [
+    [
+     "sensor/timestamp",
+     1
+    ],
+    [
+     "sensor/enum",
+     1
+    ],
+    [
+     "event",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "sensor/timestamp",
+     1
+    ],
+    [
+     "sensor/enum",
+     1
+    ],
+    [
+     "event",
+     1
+    ]
+   ]
+  },
+  "Tuya | UC552HA (bf90d59c37c4bb1ba86cpl)": {
+   "devices": 1,
+   "entities_per_device": 2,
+   "primary_per_device": 1,
+   "primary_kinds": [
+    [
+     "light",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "number",
+     1
+    ],
+    [
+     "light",
+     1
+    ]
+   ]
+  },
+  "Tuya | UC552HA (bfbc713b2e412ea026mdxd)": {
+   "devices": 1,
+   "entities_per_device": 2,
+   "primary_per_device": 1,
+   "primary_kinds": [
+    [
+     "light",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "number",
+     1
+    ],
+    [
+     "light",
+     1
+    ]
+   ]
+  },
+  "dbuezas | plugin": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "Sensy-One | E1 mmWave Sensor": {
+   "devices": 2,
+   "entities_per_device": 122,
+   "primary_per_device": 111,
+   "primary_kinds": [
+    [
+     "binary_sensor/motion",
+     2
+    ],
+    [
+     "number",
+     2
+    ],
+    [
+     "binary_sensor/presence",
+     2
+    ],
+    [
+     "sensor",
+     2
+    ]
+   ],
+   "all_kinds": [
+    [
+     "number",
+     2
+    ],
+    [
+     "binary_sensor/presence",
+     2
+    ],
+    [
+     "binary_sensor/motion",
+     2
+    ],
+    [
+     "sensor/temperature",
+     2
+    ],
+    [
+     "binary_sensor/connectivity",
+     2
+    ],
+    [
+     "button",
+     2
+    ],
+    [
+     "switch",
+     2
+    ],
+    [
+     "button/restart",
+     2
+    ],
+    [
+     "sensor",
+     2
+    ]
+   ]
+  },
+  "wessamlauf | theme": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "greghesp, AdrianGarside | integration": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "Meross | mss305 8.0.0": {
+   "devices": 8,
+   "entities_per_device": 12.8,
+   "primary_per_device": 7.4,
+   "primary_kinds": [
+    [
+     "sensor/enum",
+     8
+    ],
+    [
+     "sensor/current",
+     8
+    ],
+    [
+     "sensor/energy",
+     8
+    ],
+    [
+     "sensor/power",
+     8
+    ],
+    [
+     "sensor/voltage",
+     8
+    ],
+    [
+     "switch/outlet",
+     7
+    ],
+    [
+     "fan",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "sensor/voltage",
+     8
+    ],
+    [
+     "sensor/enum",
+     8
+    ],
+    [
+     "sensor/current",
+     8
+    ],
+    [
+     "light/DNDMode",
+     8
+    ],
+    [
+     "sensor/energy",
+     8
+    ],
+    [
+     "sensor/power",
+     8
+    ],
+    [
+     "switch/switch",
+     8
+    ],
+    [
+     "button/restart",
+     8
+    ],
+    [
+     "sensor",
+     8
+    ],
+    [
+     "switch/outlet",
+     7
+    ],
+    [
+     "fan",
+     1
+    ]
+   ]
+  },
+  "Rishi8078 | plugin": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "gcobb321 | Integration": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 1,
+   "primary_kinds": [
+    [
+     "sensor",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "sensor",
+     1
+    ]
+   ]
+  },
+  "ElevatedSensors | BedPresenceMk1": {
+   "devices": 2,
+   "entities_per_device": 27,
+   "primary_per_device": 8,
+   "primary_kinds": [
+    [
+     "binary_sensor/occupancy",
+     2
+    ],
+    [
+     "sensor",
+     2
+    ]
+   ],
+   "all_kinds": [
+    [
+     "binary_sensor/occupancy",
+     2
+    ],
+    [
+     "number",
+     2
+    ],
+    [
+     "sensor/duration",
+     2
+    ],
+    [
+     "binary_sensor/connectivity",
+     2
+    ],
+    [
+     "update",
+     2
+    ],
+    [
+     "button",
+     2
+    ],
+    [
+     "select",
+     2
+    ],
+    [
+     "button/restart",
+     2
+    ],
+    [
+     "sensor/signal_strength",
+     2
+    ],
+    [
+     "switch",
+     2
+    ],
+    [
+     "sensor",
+     2
+    ]
+   ]
+  },
+  "Ubiquiti | G3 Instant": {
+   "devices": 3,
+   "entities_per_device": 28.3,
+   "primary_per_device": 6,
+   "primary_kinds": [
+    [
+     "binary_sensor/motion",
+     3
+    ],
+    [
+     "binary_sensor",
+     3
+    ],
+    [
+     "button/restart",
+     3
+    ],
+    [
+     "sensor/timestamp",
+     3
+    ],
+    [
+     "media_player/speaker",
+     3
+    ],
+    [
+     "camera",
+     3
+    ]
+   ],
+   "all_kinds": [
+    [
+     "number",
+     3
+    ],
+    [
+     "sensor/data_size",
+     3
+    ],
+    [
+     "sensor/timestamp",
+     3
+    ],
+    [
+     "binary_sensor/motion",
+     3
+    ],
+    [
+     "sensor/data_rate",
+     3
+    ],
+    [
+     "binary_sensor",
+     3
+    ],
+    [
+     "button/restart",
+     3
+    ],
+    [
+     "select",
+     3
+    ],
+    [
+     "media_player/speaker",
+     3
+    ],
+    [
+     "sensor/signal_strength",
+     3
+    ],
+    [
+     "camera",
+     3
+    ],
+    [
+     "switch",
+     3
+    ]
+   ]
+  },
+  "Ubiquiti | UA G2 PRO": {
+   "devices": 1,
+   "entities_per_device": 18,
+   "primary_per_device": 4,
+   "primary_kinds": [
+    [
+     "binary_sensor",
+     1
+    ],
+    [
+     "binary_sensor/motion",
+     1
+    ],
+    [
+     "media_player/speaker",
+     1
+    ],
+    [
+     "camera",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "number",
+     1
+    ],
+    [
+     "sensor/data_size",
+     1
+    ],
+    [
+     "binary_sensor/motion",
+     1
+    ],
+    [
+     "binary_sensor",
+     1
+    ],
+    [
+     "select",
+     1
+    ],
+    [
+     "media_player/speaker",
+     1
+    ],
+    [
+     "sensor/data_rate",
+     1
+    ],
+    [
+     "camera",
+     1
+    ],
+    [
+     "switch",
+     1
+    ]
+   ]
+  },
+  "Ubiquiti | G5 Turret Ultra": {
+   "devices": 2,
+   "entities_per_device": 42,
+   "primary_per_device": 15,
+   "primary_kinds": [
+    [
+     "binary_sensor/motion",
+     2
+    ],
+    [
+     "event",
+     2
+    ],
+    [
+     "binary_sensor",
+     2
+    ],
+    [
+     "binary_sensor/carbon_monoxide",
+     2
+    ],
+    [
+     "sensor/timestamp",
+     2
+    ],
+    [
+     "button/restart",
+     2
+    ],
+    [
+     "camera",
+     2
+    ]
+   ],
+   "all_kinds": [
+    [
+     "number",
+     2
+    ],
+    [
+     "sensor/data_size",
+     2
+    ],
+    [
+     "sensor/timestamp",
+     2
+    ],
+    [
+     "binary_sensor/motion",
+     2
+    ],
+    [
+     "event",
+     2
+    ],
+    [
+     "binary_sensor",
+     2
+    ],
+    [
+     "binary_sensor/carbon_monoxide",
+     2
+    ],
+    [
+     "select",
+     2
+    ],
+    [
+     "button/restart",
+     2
+    ],
+    [
+     "sensor/data_rate",
+     2
+    ],
+    [
+     "camera",
+     2
+    ],
+    [
+     "switch",
+     2
+    ]
+   ]
+  },
+  "Ubiquiti | G5 Pro": {
+   "devices": 1,
+   "entities_per_device": 43,
+   "primary_per_device": 15,
+   "primary_kinds": [
+    [
+     "binary_sensor/motion",
+     1
+    ],
+    [
+     "event",
+     1
+    ],
+    [
+     "binary_sensor",
+     1
+    ],
+    [
+     "binary_sensor/carbon_monoxide",
+     1
+    ],
+    [
+     "sensor/timestamp",
+     1
+    ],
+    [
+     "button/restart",
+     1
+    ],
+    [
+     "camera",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "number",
+     1
+    ],
+    [
+     "sensor/data_size",
+     1
+    ],
+    [
+     "sensor/timestamp",
+     1
+    ],
+    [
+     "binary_sensor/motion",
+     1
+    ],
+    [
+     "event",
+     1
+    ],
+    [
+     "binary_sensor",
+     1
+    ],
+    [
+     "binary_sensor/carbon_monoxide",
+     1
+    ],
+    [
+     "select",
+     1
+    ],
+    [
+     "button/restart",
+     1
+    ],
+    [
+     "sensor/data_rate",
+     1
+    ],
+    [
+     "camera",
+     1
+    ],
+    [
+     "switch",
+     1
+    ]
+   ]
+  },
+  "Ubiquiti | G5 PTZ": {
+   "devices": 3,
+   "entities_per_device": 34,
+   "primary_per_device": 11,
+   "primary_kinds": [
+    [
+     "binary_sensor/motion",
+     3
+    ],
+    [
+     "event",
+     3
+    ],
+    [
+     "binary_sensor",
+     3
+    ],
+    [
+     "binary_sensor/carbon_monoxide",
+     3
+    ],
+    [
+     "camera",
+     3
+    ]
+   ],
+   "all_kinds": [
+    [
+     "number",
+     3
+    ],
+    [
+     "sensor/data_size",
+     3
+    ],
+    [
+     "binary_sensor/motion",
+     3
+    ],
+    [
+     "event",
+     3
+    ],
+    [
+     "binary_sensor",
+     3
+    ],
+    [
+     "binary_sensor/carbon_monoxide",
+     3
+    ],
+    [
+     "select",
+     3
+    ],
+    [
+     "sensor/data_rate",
+     3
+    ],
+    [
+     "camera",
+     3
+    ],
+    [
+     "switch",
+     3
+    ]
+   ]
+  },
+  "Ubiquiti | UDM SE": {
+   "devices": 1,
+   "entities_per_device": 9,
+   "primary_per_device": 1,
+   "primary_kinds": [
+    [
+     "alarm_control_panel",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "sensor/temperature",
+     1
+    ],
+    [
+     "alarm_control_panel",
+     1
+    ],
+    [
+     "sensor/timestamp",
+     1
+    ],
+    [
+     "switch",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ]
+   ]
+  },
+  "Mammotion | RTKBAU241425775": {
+   "devices": 1,
+   "entities_per_device": 8,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "sensor/signal_strength",
+     1
+    ],
+    [
+     "sensor/enum",
+     1
+    ],
+    [
+     "update/firmware",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ]
+   ]
+  },
+  "exxamalte | integration": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "Australian Bureau of Meteorology | Weather Sensor": {
+   "devices": 2,
+   "entities_per_device": 26.5,
+   "primary_per_device": 26.5,
+   "primary_kinds": [
+    [
+     "sensor/precipitation",
+     2
+    ],
+    [
+     "sensor",
+     2
+    ],
+    [
+     "sensor/timestamp",
+     1
+    ],
+    [
+     "weather",
+     1
+    ],
+    [
+     "sensor/humidity",
+     1
+    ],
+    [
+     "sensor/temperature",
+     1
+    ],
+    [
+     "sensor/wind_speed",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "sensor/precipitation",
+     2
+    ],
+    [
+     "sensor",
+     2
+    ],
+    [
+     "sensor/timestamp",
+     1
+    ],
+    [
+     "weather",
+     1
+    ],
+    [
+     "sensor/humidity",
+     1
+    ],
+    [
+     "sensor/temperature",
+     1
+    ],
+    [
+     "sensor/wind_speed",
+     1
+    ]
+   ]
+  },
+  "jnimmo | integration": {
+   "devices": 2,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     2
+    ]
+   ]
+  },
+  "Intesis | 550": {
+   "devices": 1,
+   "entities_per_device": 9,
+   "primary_per_device": 2,
+   "primary_kinds": [
+    [
+     "climate",
+     1
+    ],
+    [
+     "sensor/temperature",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "sensor/temperature",
+     1
+    ],
+    [
+     "binary_sensor/connectivity",
+     1
+    ],
+    [
+     "binary_sensor/problem",
+     1
+    ],
+    [
+     "climate",
+     1
+    ],
+    [
+     "button",
+     1
+    ],
+    [
+     "switch",
+     1
+    ],
+    [
+     "sensor/duration",
+     1
+    ]
+   ]
+  },
+  "Sensy One Add-ons | Home Assistant App": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "Sensy-One | S1 mmWave Sensor": {
+   "devices": 2,
+   "entities_per_device": 124,
+   "primary_per_device": 111,
+   "primary_kinds": [
+    [
+     "binary_sensor/motion",
+     2
+    ],
+    [
+     "number",
+     2
+    ],
+    [
+     "binary_sensor/presence",
+     2
+    ],
+    [
+     "sensor",
+     2
+    ]
+   ],
+   "all_kinds": [
+    [
+     "number",
+     2
+    ],
+    [
+     "binary_sensor/presence",
+     2
+    ],
+    [
+     "binary_sensor/motion",
+     2
+    ],
+    [
+     "sensor/temperature",
+     2
+    ],
+    [
+     "binary_sensor/connectivity",
+     2
+    ],
+    [
+     "button",
+     2
+    ],
+    [
+     "switch",
+     2
+    ],
+    [
+     "button/restart",
+     2
+    ],
+    [
+     "sensor",
+     2
+    ]
+   ]
+  },
+  "Ecowitt | WFC01": {
+   "devices": 4,
+   "entities_per_device": 11,
+   "primary_per_device": 4,
+   "primary_kinds": [
+    [
+     "switch",
+     4
+    ],
+    [
+     "sensor/water",
+     4
+    ],
+    [
+     "sensor/temperature",
+     4
+    ]
+   ],
+   "all_kinds": [
+    [
+     "sensor/water",
+     4
+    ],
+    [
+     "binary_sensor/heat",
+     4
+    ],
+    [
+     "binary_sensor/moisture",
+     4
+    ],
+    [
+     "sensor/temperature",
+     4
+    ],
+    [
+     "binary_sensor/connectivity",
+     4
+    ],
+    [
+     "sensor/battery",
+     4
+    ],
+    [
+     "binary_sensor/problem",
+     4
+    ],
+    [
+     "binary_sensor/cold",
+     4
+    ],
+    [
+     "switch",
+     4
+    ],
+    [
+     "binary_sensor/battery",
+     4
+    ]
+   ]
+  },
+  "Ubiquiti | G6 PTZ": {
+   "devices": 2,
+   "entities_per_device": 48,
+   "primary_per_device": 17,
+   "primary_kinds": [
+    [
+     "binary_sensor/motion",
+     2
+    ],
+    [
+     "event",
+     2
+    ],
+    [
+     "binary_sensor",
+     2
+    ],
+    [
+     "binary_sensor/carbon_monoxide",
+     2
+    ],
+    [
+     "media_player/speaker",
+     2
+    ],
+    [
+     "camera",
+     2
+    ]
+   ],
+   "all_kinds": [
+    [
+     "number",
+     2
+    ],
+    [
+     "sensor/data_size",
+     2
+    ],
+    [
+     "binary_sensor/motion",
+     2
+    ],
+    [
+     "select",
+     2
+    ],
+    [
+     "event",
+     2
+    ],
+    [
+     "binary_sensor",
+     2
+    ],
+    [
+     "binary_sensor/carbon_monoxide",
+     2
+    ],
+    [
+     "switch",
+     2
+    ],
+    [
+     "media_player/speaker",
+     2
+    ],
+    [
+     "sensor/data_rate",
+     2
+    ],
+    [
+     "camera",
+     2
+    ]
+   ]
+  },
+  "blakeblackshear, dermotduffy, NickM-27 | integration": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "Frigate | 5.15.4/0.17.1-416a9b7": {
+   "devices": 11,
+   "entities_per_device": 27.7,
+   "primary_per_device": 22.2,
+   "primary_kinds": [
+    [
+     "binary_sensor/occupancy",
+     10
+    ],
+    [
+     "binary_sensor/motion",
+     10
+    ],
+    [
+     "camera/camera",
+     10
+    ],
+    [
+     "image",
+     10
+    ],
+    [
+     "sensor",
+     10
+    ]
+   ],
+   "all_kinds": [
+    [
+     "binary_sensor/occupancy",
+     10
+    ],
+    [
+     "binary_sensor/motion",
+     10
+    ],
+    [
+     "camera/camera",
+     10
+    ],
+    [
+     "image",
+     10
+    ],
+    [
+     "switch",
+     10
+    ],
+    [
+     "sensor",
+     10
+    ],
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "OpenAI | gpt-5.4": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 1,
+   "primary_kinds": [
+    [
+     "conversation",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "conversation",
+     1
+    ]
+   ]
+  },
+  "jkaberg | integration": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "imhotep | integration": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "Unifi | UA-Hub-Door-Mini": {
+   "devices": 1,
+   "entities_per_device": 10,
+   "primary_per_device": 7,
+   "primary_kinds": [
+    [
+     "event/doorbell",
+     1
+    ],
+    [
+     "binary_sensor/occupancy",
+     1
+    ],
+    [
+     "event",
+     1
+    ],
+    [
+     "binary_sensor/door",
+     1
+    ],
+    [
+     "lock",
+     1
+    ],
+    [
+     "select",
+     1
+    ],
+    [
+     "image",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "event/doorbell",
+     1
+    ],
+    [
+     "binary_sensor/occupancy",
+     1
+    ],
+    [
+     "number",
+     1
+    ],
+    [
+     "sensor/timestamp",
+     1
+    ],
+    [
+     "event",
+     1
+    ],
+    [
+     "binary_sensor/door",
+     1
+    ],
+    [
+     "lock",
+     1
+    ],
+    [
+     "select",
+     1
+    ],
+    [
+     "image",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ]
+   ]
+  },
+  "Unifi | UAH-DOOR": {
+   "devices": 1,
+   "entities_per_device": 10,
+   "primary_per_device": 7,
+   "primary_kinds": [
+    [
+     "event/doorbell",
+     1
+    ],
+    [
+     "binary_sensor/occupancy",
+     1
+    ],
+    [
+     "event",
+     1
+    ],
+    [
+     "binary_sensor/door",
+     1
+    ],
+    [
+     "lock",
+     1
+    ],
+    [
+     "select",
+     1
+    ],
+    [
+     "image",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "event/doorbell",
+     1
+    ],
+    [
+     "binary_sensor/occupancy",
+     1
+    ],
+    [
+     "number",
+     1
+    ],
+    [
+     "sensor/timestamp",
+     1
+    ],
+    [
+     "event",
+     1
+    ],
+    [
+     "binary_sensor/door",
+     1
+    ],
+    [
+     "lock",
+     1
+    ],
+    [
+     "select",
+     1
+    ],
+    [
+     "image",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ]
+   ]
+  },
+  "Unifi | UAH": {
+   "devices": 1,
+   "entities_per_device": 2,
+   "primary_per_device": 2,
+   "primary_kinds": [
+    [
+     "switch",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "switch",
+     1
+    ]
+   ]
+  },
+  "Sunricher | Constant Current Zigbee LED dimmable driver": {
+   "devices": 1,
+   "entities_per_device": 2,
+   "primary_per_device": 1,
+   "primary_kinds": [
+    [
+     "light",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "select",
+     1
+    ],
+    [
+     "light",
+     1
+    ]
+   ]
+  },
+  "BYD | BYD SHARK": {
+   "devices": 1,
+   "entities_per_device": 116,
+   "primary_per_device": 40,
+   "primary_kinds": [
+    [
+     "sensor/speed",
+     1
+    ],
+    [
+     "switch",
+     1
+    ],
+    [
+     "sensor/distance",
+     1
+    ],
+    [
+     "binary_sensor/lock",
+     1
+    ],
+    [
+     "binary_sensor/connectivity",
+     1
+    ],
+    [
+     "sensor/battery",
+     1
+    ],
+    [
+     "sensor/temperature",
+     1
+    ],
+    [
+     "lock",
+     1
+    ],
+    [
+     "binary_sensor/door",
+     1
+    ],
+    [
+     "binary_sensor",
+     1
+    ],
+    [
+     "climate",
+     1
+    ],
+    [
+     "button",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "device_tracker",
+     1
+    ],
+    [
+     "binary_sensor/power",
+     1
+    ],
+    [
+     "sensor/timestamp",
+     1
+    ],
+    [
+     "sensor/temperature",
+     1
+    ],
+    [
+     "binary_sensor/door",
+     1
+    ],
+    [
+     "climate",
+     1
+    ],
+    [
+     "binary_sensor/window",
+     1
+    ],
+    [
+     "sensor/distance",
+     1
+    ],
+    [
+     "sensor/battery",
+     1
+    ],
+    [
+     "binary_sensor/problem",
+     1
+    ],
+    [
+     "binary_sensor",
+     1
+    ],
+    [
+     "switch",
+     1
+    ],
+    [
+     "sensor/duration",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ],
+    [
+     "sensor/speed",
+     1
+    ],
+    [
+     "binary_sensor/lock",
+     1
+    ],
+    [
+     "lock",
+     1
+    ],
+    [
+     "button",
+     1
+    ],
+    [
+     "sensor/pressure",
+     1
+    ],
+    [
+     "sensor/power",
+     1
+    ]
+   ]
+  },
+  "lbbrhzn, drc38 | integration": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update",
+     1
+    ]
+   ]
+  },
+  "Bambu Lab | X1C": {
+   "devices": 1,
+   "entities_per_device": 52,
+   "primary_per_device": 37,
+   "primary_kinds": [
+    [
+     "sensor/enum",
+     1
+    ],
+    [
+     "light",
+     1
+    ],
+    [
+     "binary_sensor/running",
+     1
+    ],
+    [
+     "sensor/distance",
+     1
+    ],
+    [
+     "sensor/weight",
+     1
+    ],
+    [
+     "sensor/temperature",
+     1
+    ],
+    [
+     "binary_sensor",
+     1
+    ],
+    [
+     "sensor/timestamp",
+     1
+    ],
+    [
+     "sensor/duration",
+     1
+    ],
+    [
+     "image",
+     1
+    ],
+    [
+     "camera",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "binary_sensor/update",
+     1
+    ],
+    [
+     "sensor/enum",
+     1
+    ],
+    [
+     "light",
+     1
+    ],
+    [
+     "binary_sensor/running",
+     1
+    ],
+    [
+     "sensor/distance",
+     1
+    ],
+    [
+     "sensor/weight",
+     1
+    ],
+    [
+     "sensor/temperature",
+     1
+    ],
+    [
+     "binary_sensor/problem",
+     1
+    ],
+    [
+     "binary_sensor",
+     1
+    ],
+    [
+     "binary_sensor/door",
+     1
+    ],
+    [
+     "sensor/timestamp",
+     1
+    ],
+    [
+     "sensor/duration",
+     1
+    ],
+    [
+     "sensor/signal_strength",
+     1
+    ],
+    [
+     "image",
+     1
+    ],
+    [
+     "camera",
+     1
+    ],
+    [
+     "switch",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ]
+   ]
+  },
+  "Bambu Lab | External Spool": {
+   "devices": 1,
+   "entities_per_device": 2,
+   "primary_per_device": 2,
+   "primary_kinds": [
+    [
+     "binary_sensor/running",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "binary_sensor/running",
+     1
+    ],
+    [
+     "sensor",
+     1
+    ]
+   ]
+  },
+  "Bambu Lab | AMS HT": {
+   "devices": 2,
+   "entities_per_device": 7,
+   "primary_per_device": 7,
+   "primary_kinds": [
+    [
+     "sensor/humidity",
+     2
+    ],
+    [
+     "binary_sensor/running",
+     2
+    ],
+    [
+     "sensor/temperature",
+     2
+    ],
+    [
+     "sensor/duration",
+     2
+    ],
+    [
+     "sensor",
+     2
+    ]
+   ],
+   "all_kinds": [
+    [
+     "sensor/humidity",
+     2
+    ],
+    [
+     "binary_sensor/running",
+     2
+    ],
+    [
+     "sensor/temperature",
+     2
+    ],
+    [
+     "sensor/duration",
+     2
+    ],
+    [
+     "sensor",
+     2
+    ]
+   ]
+  },
+  "Raspberry Pi | 5": {
+   "devices": 1,
+   "entities_per_device": 1,
+   "primary_per_device": 0,
+   "primary_kinds": [],
+   "all_kinds": [
+    [
+     "update/firmware",
+     1
+    ]
+   ]
+  },
+  "Shelly | Shelly Pro Dual Cover PM": {
+   "devices": 3,
+   "entities_per_device": 6.7,
+   "primary_per_device": 3.3,
+   "primary_kinds": [
+    [
+     "sensor/power",
+     2
+    ],
+    [
+     "sensor/energy",
+     2
+    ],
+    [
+     "cover/shutter",
+     2
+    ],
+    [
+     "binary_sensor/power",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "sensor/power",
+     2
+    ],
+    [
+     "sensor/energy",
+     2
+    ],
+    [
+     "cover/shutter",
+     2
+    ],
+    [
+     "binary_sensor/problem",
+     2
+    ],
+    [
+     "binary_sensor/power",
+     1
+    ],
+    [
+     "button/restart",
+     1
+    ],
+    [
+     "update/firmware",
+     1
+    ]
+   ]
+  },
+  "Espressif | esp32-s3-devkitc-1": {
+   "devices": 1,
+   "entities_per_device": 6,
+   "primary_per_device": 5,
+   "primary_kinds": [
+    [
+     "select",
+     1
+    ],
+    [
+     "climate",
+     1
+    ],
+    [
+     "switch/switch",
+     1
+    ],
+    [
+     "sensor/temperature",
+     1
+    ]
+   ],
+   "all_kinds": [
+    [
+     "sensor/temperature",
+     1
+    ],
+    [
+     "climate",
+     1
+    ],
+    [
+     "switch/switch",
+     1
+    ],
+    [
+     "select",
+     1
+    ],
+    [
+     "sensor/signal_strength",
+     1
+    ]
+   ]
+  }
+ }
+}

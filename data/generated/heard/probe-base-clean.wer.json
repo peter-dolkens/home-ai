@@ -1,0 +1,307 @@
+{
+  "set": "probe",
+  "stt": "base",
+  "condition": "clean",
+  "prompted": false,
+  "host": "magpie",
+  "utterances": 100,
+  "words": 639,
+  "errors": 58,
+  "wer": 0.0908,
+  "exact": 0.71,
+  "vocab_words": 184,
+  "vocab_errors": 14,
+  "vocab_wer": 0.0761,
+  "vocab": {
+    "room": {
+      "n": 47,
+      "err": 5,
+      "wer": 0.1064
+    },
+    "device": {
+      "n": 71,
+      "err": 6,
+      "wer": 0.0845
+    },
+    "person": {
+      "n": 3,
+      "err": 2,
+      "wer": 0.6667
+    },
+    "number": {
+      "n": 4,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 59,
+      "err": 1,
+      "wer": 0.0169
+    }
+  },
+  "meaning_changed": 0.11,
+  "meaning_changed_n": 11,
+  "meaning_by_kind": {
+    "room": 0.04,
+    "device": 0.04,
+    "person": 0.02,
+    "number": 0.0,
+    "command": 0.01
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 1.3273,
+    "p50": 1.3011,
+    "p90": 1.6016,
+    "rtf": 0.4699,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "au-p326": {
+      "turns": 12,
+      "wer": 0.1389,
+      "meaning_changed": 0.1667
+    },
+    "au-p374": {
+      "turns": 12,
+      "wer": 0.2029,
+      "meaning_changed": 0.1667
+    },
+    "gb-alan": {
+      "turns": 6,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "gb-alba": {
+      "turns": 6,
+      "wer": 0.0192,
+      "meaning_changed": 0.0
+    },
+    "gb-cori": {
+      "turns": 8,
+      "wer": 0.098,
+      "meaning_changed": 0.125
+    },
+    "gb-jenny": {
+      "turns": 17,
+      "wer": 0.0517,
+      "meaning_changed": 0.0
+    },
+    "gb-northern-m": {
+      "turns": 13,
+      "wer": 0.1299,
+      "meaning_changed": 0.1538
+    },
+    "gb-southern-f": {
+      "turns": 8,
+      "wer": 0.1356,
+      "meaning_changed": 0.25
+    },
+    "us-amy": {
+      "turns": 8,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "us-lessac": {
+      "turns": 8,
+      "wer": 0.0938,
+      "meaning_changed": 0.25
+    },
+    "us-ryan": {
+      "turns": 2,
+      "wer": 0.0833,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 26,
+      "wer": 0.1402,
+      "meaning_changed": 0.1154
+    },
+    "1.0": {
+      "turns": 51,
+      "wer": 0.0885,
+      "meaning_changed": 0.1176
+    },
+    "1.15": {
+      "turns": 23,
+      "wer": 0.0471,
+      "meaning_changed": 0.087
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 100,
+      "wer": 0.0908,
+      "meaning_changed": 0.11
+    }
+  },
+  "by_set": {
+    "bigbench-bundook": {
+      "turns": 15,
+      "wer": 0.1538,
+      "meaning_changed": 0.2
+    },
+    "test-v2": {
+      "turns": 25,
+      "wer": 0.0615,
+      "meaning_changed": 0.12
+    },
+    "wild": {
+      "turns": 30,
+      "wer": 0.0717,
+      "meaning_changed": 0.1
+    },
+    "wild2": {
+      "turns": 30,
+      "wer": 0.1058,
+      "meaning_changed": 0.0667
+    }
+  },
+  "samples": [
+    {
+      "id": "1-1482",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "where is Tara",
+      "heard": "Wait Star",
+      "lost": [
+        [
+          "person",
+          "tara"
+        ]
+      ]
+    },
+    {
+      "id": "1-222",
+      "turn": 0,
+      "voice": "us-lessac",
+      "written": "fan on",
+      "heard": "Turn on.",
+      "lost": [
+        [
+          "device",
+          "fan"
+        ]
+      ]
+    },
+    {
+      "id": "1-222",
+      "turn": 1,
+      "voice": "us-lessac",
+      "written": "Lounge.",
+      "heard": "Down.",
+      "lost": [
+        [
+          "room",
+          "lounge"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-1",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "turn on the batten lights",
+      "heard": "Turn on the baton lights.",
+      "lost": [
+        [
+          "device",
+          "batten lights"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_projected-plan-10",
+      "turn": 1,
+      "voice": "au-p374",
+      "written": "Pete's office.",
+      "heard": "Heat Surface",
+      "lost": [
+        [
+          "room",
+          "petes office"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_projected-plan-6",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "hey, how charged is BYD Shark",
+      "heard": "Hey, how charged does BWD shock?",
+      "lost": [
+        [
+          "device",
+          "byd shark"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900002-disarm-alarm",
+      "turn": 0,
+      "voice": "au-p374",
+      "written": "Disarm the alarm.",
+      "heard": "to sound the alarm.",
+      "lost": [
+        [
+          "command",
+          "disarm"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900004-clarify-which-light",
+      "turn": 1,
+      "voice": "gb-northern-m",
+      "written": "ensuite",
+      "heard": "Insert",
+      "lost": [
+        [
+          "room",
+          "ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900005-anyone-home",
+      "turn": 1,
+      "voice": "gb-southern-f",
+      "written": "how long has mia been out for",
+      "heard": "How long has it been out for?",
+      "lost": [
+        [
+          "person",
+          "mia"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920006-r1",
+      "turn": 1,
+      "voice": "gb-southern-f",
+      "written": "and the workshop light, if it's on",
+      "heard": "and the works up like to fit on.",
+      "lost": [
+        [
+          "room",
+          "workshop"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920010-h10-dishwasher-off",
+      "turn": 0,
+      "voice": "gb-northern-m",
+      "written": "Is the dishwasher going?",
+      "heard": "is the dish we should go in.",
+      "lost": [
+        [
+          "device",
+          "dishwasher"
+        ]
+      ]
+    }
+  ]
+}

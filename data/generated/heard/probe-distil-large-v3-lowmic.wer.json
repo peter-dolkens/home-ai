@@ -1,0 +1,363 @@
+{
+  "set": "probe",
+  "stt": "distil-large-v3",
+  "condition": "lowmic",
+  "prompted": false,
+  "host": "magpie",
+  "utterances": 100,
+  "words": 639,
+  "errors": 61,
+  "wer": 0.0955,
+  "exact": 0.65,
+  "vocab_words": 184,
+  "vocab_errors": 16,
+  "vocab_wer": 0.087,
+  "vocab": {
+    "room": {
+      "n": 47,
+      "err": 4,
+      "wer": 0.0851
+    },
+    "device": {
+      "n": 71,
+      "err": 6,
+      "wer": 0.0845
+    },
+    "person": {
+      "n": 3,
+      "err": 1,
+      "wer": 0.3333
+    },
+    "number": {
+      "n": 4,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 59,
+      "err": 5,
+      "wer": 0.0847
+    }
+  },
+  "meaning_changed": 0.15,
+  "meaning_changed_n": 15,
+  "meaning_by_kind": {
+    "room": 0.04,
+    "device": 0.06,
+    "person": 0.01,
+    "number": 0.0,
+    "command": 0.05
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 18.6533,
+    "p50": 18.4926,
+    "p90": 19.8874,
+    "rtf": 6.6041,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "au-p326": {
+      "turns": 12,
+      "wer": 0.1667,
+      "meaning_changed": 0.1667
+    },
+    "au-p374": {
+      "turns": 12,
+      "wer": 0.2174,
+      "meaning_changed": 0.3333
+    },
+    "gb-alan": {
+      "turns": 6,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "gb-alba": {
+      "turns": 6,
+      "wer": 0.0769,
+      "meaning_changed": 0.1667
+    },
+    "gb-cori": {
+      "turns": 8,
+      "wer": 0.1176,
+      "meaning_changed": 0.25
+    },
+    "gb-jenny": {
+      "turns": 17,
+      "wer": 0.0259,
+      "meaning_changed": 0.0
+    },
+    "gb-northern-m": {
+      "turns": 13,
+      "wer": 0.1299,
+      "meaning_changed": 0.1538
+    },
+    "gb-southern-f": {
+      "turns": 8,
+      "wer": 0.1695,
+      "meaning_changed": 0.375
+    },
+    "us-amy": {
+      "turns": 8,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "us-lessac": {
+      "turns": 8,
+      "wer": 0.0312,
+      "meaning_changed": 0.125
+    },
+    "us-ryan": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 26,
+      "wer": 0.1463,
+      "meaning_changed": 0.1923
+    },
+    "1.0": {
+      "turns": 51,
+      "wer": 0.1049,
+      "meaning_changed": 0.1569
+    },
+    "1.15": {
+      "turns": 23,
+      "wer": 0.0294,
+      "meaning_changed": 0.087
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 100,
+      "wer": 0.0955,
+      "meaning_changed": 0.15
+    }
+  },
+  "by_set": {
+    "bigbench-bundook": {
+      "turns": 15,
+      "wer": 0.0641,
+      "meaning_changed": 0.2
+    },
+    "test-v2": {
+      "turns": 25,
+      "wer": 0.0769,
+      "meaning_changed": 0.08
+    },
+    "wild": {
+      "turns": 30,
+      "wer": 0.0717,
+      "meaning_changed": 0.1
+    },
+    "wild2": {
+      "turns": 30,
+      "wer": 0.1442,
+      "meaning_changed": 0.2333
+    }
+  },
+  "samples": [
+    {
+      "id": "wild-920002-fan-here",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "fan on in here",
+      "heard": "Fair not here.",
+      "lost": [
+        [
+          "device",
+          "fan"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "1-1539",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "Put on jazz in the master bedroom.",
+      "heard": "for Dunjazz in the master bedroom.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "1-222",
+      "turn": 0,
+      "voice": "us-lessac",
+      "written": "fan on",
+      "heard": "Turn on.",
+      "lost": [
+        [
+          "device",
+          "fan"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-1",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "turn on the batten lights",
+      "heard": "Turn on the baton lights.",
+      "lost": [
+        [
+          "device",
+          "batten lights"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_projected-plan-10",
+      "turn": 1,
+      "voice": "au-p374",
+      "written": "Pete's office.",
+      "heard": "Pizza office.",
+      "lost": [
+        [
+          "room",
+          "petes office"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_projected-plan-2",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "ok switch the pendant 3 on",
+      "heard": "\"'Okay, switch the pendant three o'an.'",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900002-disarm-alarm",
+      "turn": 0,
+      "voice": "au-p374",
+      "written": "Disarm the alarm.",
+      "heard": "To sound a alarm.",
+      "lost": [
+        [
+          "command",
+          "disarm"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900004-clarify-which-light",
+      "turn": 1,
+      "voice": "gb-northern-m",
+      "written": "ensuite",
+      "heard": "In suit.",
+      "lost": [
+        [
+          "room",
+          "ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900005-anyone-home",
+      "turn": 1,
+      "voice": "gb-southern-f",
+      "written": "how long has mia been out for",
+      "heard": "How long has me been out for?",
+      "lost": [
+        [
+          "person",
+          "mia"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920001-pete-aircon",
+      "turn": 0,
+      "voice": "gb-alba",
+      "written": "stick the aircon on in Pete's office, 22, he'll be in there soon",
+      "heard": "Stick the Erkanon and Pete's office. 22. He'll be in there soon.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920006-r1",
+      "turn": 1,
+      "voice": "gb-southern-f",
+      "written": "and the workshop light, if it's on",
+      "heard": "and the works applied to fit on.",
+      "lost": [
+        [
+          "room",
+          "workshop"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920006-r1",
+      "turn": 2,
+      "voice": "gb-southern-f",
+      "written": "last thing, is the alarm set",
+      "heard": "Last thing is the Alarnset.",
+      "lost": [
+        [
+          "device",
+          "alarm"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920008-r1",
+      "turn": 1,
+      "voice": "au-p374",
+      "written": "good, turn the mudroom light off, hurts my eyes this early",
+      "heard": "Fid turn the mudrum light off, it's my eyes this early.",
+      "lost": [
+        [
+          "room",
+          "mudroom"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920008-r1",
+      "turn": 2,
+      "voice": "au-p374",
+      "written": "and lock the mudroom door, it's sitting unlocked",
+      "heard": "I lock the mudrum door, it's sitting unlocked.",
+      "lost": [
+        [
+          "device",
+          "mudroom door"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920010-h10-dishwasher-off",
+      "turn": 0,
+      "voice": "gb-northern-m",
+      "written": "Is the dishwasher going?",
+      "heard": "Is the dish we should going?",
+      "lost": [
+        [
+          "device",
+          "dishwasher"
+        ]
+      ]
+    }
+  ]
+}

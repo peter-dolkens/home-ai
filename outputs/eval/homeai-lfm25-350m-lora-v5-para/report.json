@@ -1,0 +1,160 @@
+{
+  "model": "homeai-lfm25-350m-lora-v5",
+  "data": "data/generated/test-v2-para.jsonl",
+  "examples": 150,
+  "turns": 339,
+  "pass": 0.4306784660766962,
+  "seconds_per_turn": 0.12739407348070172,
+  "think": "off",
+  "by_kind": {
+    "fetch": {
+      "n": 85,
+      "ok": 28
+    },
+    "answer": {
+      "n": 174,
+      "ok": 105
+    },
+    "act": {
+      "n": 80,
+      "ok": 13
+    }
+  },
+  "by_category": {
+    "status_entity": {
+      "n": 12,
+      "ok": 5
+    },
+    "control_area": {
+      "n": 30,
+      "ok": 13
+    },
+    "control_climate": {
+      "n": 8,
+      "ok": 4
+    },
+    "presence_where": {
+      "n": 15,
+      "ok": 4
+    },
+    "check_house": {
+      "n": 37,
+      "ok": 13
+    },
+    "control_named": {
+      "n": 14,
+      "ok": 7
+    },
+    "presence_in_room": {
+      "n": 4,
+      "ok": 4
+    },
+    "goodnight": {
+      "n": 12,
+      "ok": 2
+    },
+    "missing": {
+      "n": 4,
+      "ok": 0
+    },
+    "confirm_sensitive": {
+      "n": 20,
+      "ok": 11
+    },
+    "media_what": {
+      "n": 2,
+      "ok": 0
+    },
+    "media_play": {
+      "n": 22,
+      "ok": 11
+    },
+    "control_lock": {
+      "n": 12,
+      "ok": 9
+    },
+    "energy_appliance": {
+      "n": 8,
+      "ok": 2
+    },
+    "vehicle_status": {
+      "n": 8,
+      "ok": 4
+    },
+    "energy_night": {
+      "n": 15,
+      "ok": 7
+    },
+    "control_compound": {
+      "n": 6,
+      "ok": 2
+    },
+    "control_all_lights": {
+      "n": 6,
+      "ok": 3
+    },
+    "media_volume": {
+      "n": 10,
+      "ok": 5
+    },
+    "energy_status": {
+      "n": 8,
+      "ok": 7
+    },
+    "status_aggregate": {
+      "n": 20,
+      "ok": 7
+    },
+    "away_motion": {
+      "n": 6,
+      "ok": 5
+    },
+    "media_transport": {
+      "n": 2,
+      "ok": 1
+    },
+    "leaving": {
+      "n": 6,
+      "ok": 0
+    },
+    "weather": {
+      "n": 6,
+      "ok": 5
+    },
+    "who_home": {
+      "n": 3,
+      "ok": 0
+    },
+    "smalltalk": {
+      "n": 1,
+      "ok": 0
+    },
+    "control_here": {
+      "n": 4,
+      "ok": 1
+    },
+    "appliance_status": {
+      "n": 10,
+      "ok": 4
+    },
+    "appliance_control": {
+      "n": 3,
+      "ok": 2
+    },
+    "clarify": {
+      "n": 19,
+      "ok": 6
+    },
+    "water_status": {
+      "n": 2,
+      "ok": 1
+    },
+    "control_brightness": {
+      "n": 4,
+      "ok": 1
+    }
+  },
+  "overfetch_mean": 2.0002812863509223,
+  "mentions_rescored": true,
+  "mentions_flipped": 0
+}

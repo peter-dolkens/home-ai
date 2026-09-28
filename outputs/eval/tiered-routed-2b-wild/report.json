@@ -1,0 +1,143 @@
+{
+  "model": "homeai-4b-lora-orch",
+  "orchestrator_url": "http://cassowary.dolkens.net:11434",
+  "leaves": {
+    "default": "homeai-leaf-qwen35-2b@http://127.0.0.1:11500",
+    "by_kind": {},
+    "by_area": {}
+  },
+  "data": "data/generated/wild-b.jsonl",
+  "mode": "e2e-tiered",
+  "pipeline": "routed",
+  "max_rounds": 4,
+  "examples": 303,
+  "turns": 409,
+  "pass": 0.773838630806846,
+  "conversation_pass": 0.7227722772277227,
+  "errors": 0,
+  "history_errors": 0,
+  "seconds_per_turn": 1.5766934977698437,
+  "calls_per_request": 2.122249388753056,
+  "latency": {
+    "turn_s": {
+      "n": 409,
+      "mean": 3.345,
+      "p50": 3.038,
+      "p95": 6.211
+    },
+    "orch_calls_per_turn": 2.122,
+    "orch_s_per_call": {
+      "n": 868,
+      "mean": 1.479,
+      "p50": 1.329,
+      "p95": 2.782
+    },
+    "orch_s_per_turn": 3.138,
+    "leaf_calls_per_turn": 0.655,
+    "leaf_s_per_call": {
+      "n": 268,
+      "mean": 0.764,
+      "p50": 0.434,
+      "p95": 2.011
+    },
+    "leaf_s_per_turn": 0.501,
+    "leaf_wall_s_per_ask": {
+      "n": 159,
+      "mean": 0.532,
+      "p50": 0.394,
+      "p95": 1.335
+    },
+    "leaf_wall_s_per_turn": 0.207,
+    "eval_wall_s": 1368.6
+  },
+  "routing": {
+    "ask_rooms_per_turn": 0.391,
+    "rooms_asked_per_turn": 0.658,
+    "rooms_acted_per_turn": 0.577,
+    "room_call_service": 12,
+    "turns_with_room_call_service": 11,
+    "leaf_errors": 0
+  },
+  "by_kind": {
+    "act": {
+      "n": 185,
+      "ok": 151
+    },
+    "state": {
+      "n": 409,
+      "ok": 354
+    },
+    "reply": {
+      "n": 409,
+      "ok": 359
+    },
+    "answer": {
+      "n": 224,
+      "ok": 165.5
+    }
+  },
+  "by_scale": {
+    "small": {
+      "n": 409,
+      "ok": 316.5
+    }
+  },
+  "by_category": {
+    "wild_control": {
+      "n": 60,
+      "ok": 50
+    },
+    "wild_missing": {
+      "n": 23,
+      "ok": 23
+    },
+    "wild_appliance": {
+      "n": 20,
+      "ok": 18
+    },
+    "wild_media": {
+      "n": 44,
+      "ok": 32
+    },
+    "wild_clarify": {
+      "n": 36,
+      "ok": 21
+    },
+    "wild_presence": {
+      "n": 29,
+      "ok": 18
+    },
+    "wild_routine": {
+      "n": 27,
+      "ok": 12
+    },
+    "wild_smalltalk": {
+      "n": 17,
+      "ok": 16
+    },
+    "wild_energy": {
+      "n": 40,
+      "ok": 34
+    },
+    "wild_vehicle": {
+      "n": 8,
+      "ok": 8
+    },
+    "wild_water": {
+      "n": 19,
+      "ok": 16
+    },
+    "wild_confirm": {
+      "n": 37,
+      "ok": 33.5
+    },
+    "wild_status": {
+      "n": 33,
+      "ok": 24
+    },
+    "wild_mixed": {
+      "n": 16,
+      "ok": 11
+    }
+  }
+}

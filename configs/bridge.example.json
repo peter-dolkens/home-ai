@@ -1,0 +1,21 @@
+{
+  "_comment": "Copy to configs/bridge.json. Only devices in an HA area (or classified into security/energy/weather) are shown to the model.",
+  "house_description": "an off-grid rural home",
+  "floors": ["new_build"],
+  "media_backend": "music_assistant",
+  "battery_capacity_kwh": 51.7,
+  "battery_power_positive_is_discharge": false,
+  "exclude_entities": ["sensor.some_noisy_thing"],
+  "overrides": {
+    "sensor.victron_battery_soc": {"cls": "battery", "kind": "soc", "name": "Battery Charge"},
+    "sensor.victron_battery_power": {"cls": "battery", "kind": "power", "name": "Battery Power"},
+    "sensor.victron_pv_power": {"cls": "solar", "kind": "power", "name": "Solar Power"},
+    "sensor.victron_pv_yield_today": {"cls": "solar", "kind": "energy_today", "name": "Solar Energy Today"},
+    "sensor.victron_ac_loads": {"cls": "load", "name": "House Load"},
+    "sensor.solcast_forecast_remaining_today": {"cls": "forecast", "kind": "remaining_today", "name": "Solar Forecast Rest Of Today"},
+    "sensor.solcast_forecast_tomorrow": {"cls": "forecast", "kind": "tomorrow", "name": "Solar Forecast Tomorrow"},
+    "switch.hot_water_element": {"power_w": 3000},
+    "switch.office_heater": {"power_sensor": "sensor.office_heater_power"},
+    "binary_sensor.office_mmwave": {"cls": "occupancy"}
+  }
+}

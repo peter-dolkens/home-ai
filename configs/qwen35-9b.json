@@ -1,0 +1,19 @@
+{
+  "_comment": "Qwen3.5-9B (released 2026-03). Hybrid thinking model: our data has no <think> blocks, which Unsloth's guide says is fine. Repo id and Ollama tag verified 2026-09-23; run --dry-run and check that response_part matches the rendered template. QLoRA 4-bit on a 10GB 3080 will be tight; fall back to qwen35-4b.json if it OOMs.",
+  "base_model": "unsloth/Qwen3.5-9B",
+  "hf_tokenizer": "unsloth/Qwen3.5-9B",
+  "ollama_template_from": "qwen3.5:9b",
+  "instruction_part": "<|im_start|>user\n",
+  "response_part": "<|im_start|>assistant\n",
+  "max_seq_len": 4608,
+  "lora_r": 16,
+  "lora_alpha": 16,
+  "epochs": 2,
+  "lr": 0.0002,
+  "batch_size": 1,
+  "grad_accum": 16,
+  "seed": 3407,
+  "train": "data/generated/train.jsonl",
+  "val": "data/generated/val.jsonl",
+  "out": "outputs/qwen35-9b-r1"
+}

@@ -1,0 +1,366 @@
+{
+  "set": "probe",
+  "stt": "base",
+  "condition": "lowmic",
+  "prompted": false,
+  "host": "magpie",
+  "utterances": 100,
+  "words": 639,
+  "errors": 74,
+  "wer": 0.1158,
+  "exact": 0.65,
+  "vocab_words": 184,
+  "vocab_errors": 21,
+  "vocab_wer": 0.1141,
+  "vocab": {
+    "room": {
+      "n": 47,
+      "err": 6,
+      "wer": 0.1277
+    },
+    "device": {
+      "n": 71,
+      "err": 12,
+      "wer": 0.169
+    },
+    "person": {
+      "n": 3,
+      "err": 1,
+      "wer": 0.3333
+    },
+    "number": {
+      "n": 4,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 59,
+      "err": 2,
+      "wer": 0.0339
+    }
+  },
+  "meaning_changed": 0.14,
+  "meaning_changed_n": 14,
+  "meaning_by_kind": {
+    "room": 0.05,
+    "device": 0.09,
+    "person": 0.01,
+    "number": 0.0,
+    "command": 0.02
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 1.3744,
+    "p50": 1.3195,
+    "p90": 1.66,
+    "rtf": 0.4866,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "au-p326": {
+      "turns": 12,
+      "wer": 0.1528,
+      "meaning_changed": 0.0833
+    },
+    "au-p374": {
+      "turns": 12,
+      "wer": 0.2464,
+      "meaning_changed": 0.25
+    },
+    "gb-alan": {
+      "turns": 6,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "gb-alba": {
+      "turns": 6,
+      "wer": 0.0192,
+      "meaning_changed": 0.0
+    },
+    "gb-cori": {
+      "turns": 8,
+      "wer": 0.1176,
+      "meaning_changed": 0.125
+    },
+    "gb-jenny": {
+      "turns": 17,
+      "wer": 0.0431,
+      "meaning_changed": 0.0
+    },
+    "gb-northern-m": {
+      "turns": 13,
+      "wer": 0.1818,
+      "meaning_changed": 0.2308
+    },
+    "gb-southern-f": {
+      "turns": 8,
+      "wer": 0.2203,
+      "meaning_changed": 0.5
+    },
+    "us-amy": {
+      "turns": 8,
+      "wer": 0.037,
+      "meaning_changed": 0.0
+    },
+    "us-lessac": {
+      "turns": 8,
+      "wer": 0.125,
+      "meaning_changed": 0.25
+    },
+    "us-ryan": {
+      "turns": 2,
+      "wer": 0.0833,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 26,
+      "wer": 0.1585,
+      "meaning_changed": 0.1538
+    },
+    "1.0": {
+      "turns": 51,
+      "wer": 0.1246,
+      "meaning_changed": 0.1569
+    },
+    "1.15": {
+      "turns": 23,
+      "wer": 0.0588,
+      "meaning_changed": 0.087
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 100,
+      "wer": 0.1158,
+      "meaning_changed": 0.14
+    }
+  },
+  "by_set": {
+    "bigbench-bundook": {
+      "turns": 15,
+      "wer": 0.0897,
+      "meaning_changed": 0.1333
+    },
+    "test-v2": {
+      "turns": 25,
+      "wer": 0.1077,
+      "meaning_changed": 0.12
+    },
+    "wild": {
+      "turns": 30,
+      "wer": 0.0942,
+      "meaning_changed": 0.1
+    },
+    "wild2": {
+      "turns": 30,
+      "wer": 0.1538,
+      "meaning_changed": 0.2
+    }
+  },
+  "samples": [
+    {
+      "id": "1-1347",
+      "turn": 0,
+      "voice": "gb-northern-m",
+      "written": "turn on the mudroom lights, and turn off the workshop lights",
+      "heard": "Turn on the bedroom light and turn off the works of light.",
+      "lost": [
+        [
+          "room",
+          "mudroom"
+        ],
+        [
+          "device",
+          "lights"
+        ],
+        [
+          "room",
+          "workshop"
+        ],
+        [
+          "device",
+          "lights"
+        ]
+      ]
+    },
+    {
+      "id": "1-222",
+      "turn": 0,
+      "voice": "us-lessac",
+      "written": "fan on",
+      "heard": "Tenon",
+      "lost": [
+        [
+          "device",
+          "fan"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900002-disarm-alarm",
+      "turn": 0,
+      "voice": "au-p374",
+      "written": "Disarm the alarm.",
+      "heard": "Desound her along.",
+      "lost": [
+        [
+          "command",
+          "disarm"
+        ],
+        [
+          "device",
+          "alarm"
+        ]
+      ]
+    },
+    {
+      "id": "1-652",
+      "turn": 0,
+      "voice": "au-p374",
+      "written": "um, lights off everywhere",
+      "heard": "I'm light off everywhere.",
+      "lost": [
+        [
+          "device",
+          "lights"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-1",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "turn on the batten lights",
+      "heard": "Turn on the baton lights.",
+      "lost": [
+        [
+          "device",
+          "batten lights"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_projected-plan-6",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "hey, how charged is BYD Shark",
+      "heard": "Hey, how charged does BWD shot?",
+      "lost": [
+        [
+          "device",
+          "byd shark"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900004-clarify-which-light",
+      "turn": 1,
+      "voice": "gb-northern-m",
+      "written": "ensuite",
+      "heard": "Insert",
+      "lost": [
+        [
+          "room",
+          "ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900005-anyone-home",
+      "turn": 1,
+      "voice": "gb-southern-f",
+      "written": "how long has mia been out for",
+      "heard": "How long has maybe been out for?",
+      "lost": [
+        [
+          "person",
+          "mia"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920006-r1",
+      "turn": 0,
+      "voice": "gb-southern-f",
+      "written": "doing the bedtime round - kill the hallway and lounge lights",
+      "heard": "Do the better time round, kill the hallway and land lights.",
+      "lost": [
+        [
+          "room",
+          "lounge"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920006-r1",
+      "turn": 1,
+      "voice": "gb-southern-f",
+      "written": "and the workshop light, if it's on",
+      "heard": "and the works up like to fit on.",
+      "lost": [
+        [
+          "room",
+          "workshop"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920006-r1",
+      "turn": 2,
+      "voice": "gb-southern-f",
+      "written": "last thing, is the alarm set",
+      "heard": "Last thing is the lawn set.",
+      "lost": [
+        [
+          "device",
+          "alarm"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920008-r1",
+      "turn": 1,
+      "voice": "au-p374",
+      "written": "good, turn the mudroom light off, hurts my eyes this early",
+      "heard": "If I turn the muddrum light off, that's my asus early.",
+      "lost": [
+        [
+          "room",
+          "mudroom"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920009-h9-shark",
+      "turn": 0,
+      "voice": "us-lessac",
+      "written": "Is the Shark charged up?",
+      "heard": "Is the shock charged up?",
+      "lost": [
+        [
+          "device",
+          "shark"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920010-h10-dishwasher-off",
+      "turn": 0,
+      "voice": "gb-northern-m",
+      "written": "Is the dishwasher going?",
+      "heard": "is the dish we should go in.",
+      "lost": [
+        [
+          "device",
+          "dishwasher"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "model": "homeai-4b",
+  "examples": 30,
+  "turns": 61,
+  "pass": 0.9672131147540983,
+  "by_kind": {
+    "answer": {
+      "n": 34,
+      "ok": 33
+    },
+    "act": {
+      "n": 15,
+      "ok": 14
+    },
+    "fetch": {
+      "n": 12,
+      "ok": 12
+    }
+  },
+  "by_category": {
+    "missing": {
+      "n": 2,
+      "ok": 2
+    },
+    "control_area": {
+      "n": 6,
+      "ok": 6
+    },
+    "control_named": {
+      "n": 9,
+      "ok": 9
+    },
+    "status_aggregate": {
+      "n": 6,
+      "ok": 5
+    },
+    "presence_where": {
+      "n": 6,
+      "ok": 6
+    },
+    "control_brightness": {
+      "n": 6,
+      "ok": 6
+    },
+    "control_compound": {
+      "n": 2,
+      "ok": 2
+    },
+    "control_climate": {
+      "n": 2,
+      "ok": 1
+    },
+    "energy_night": {
+      "n": 3,
+      "ok": 3
+    },
+    "who_home": {
+      "n": 3,
+      "ok": 3
+    },
+    "check_house": {
+      "n": 11,
+      "ok": 11
+    },
+    "smalltalk": {
+      "n": 1,
+      "ok": 1
+    },
+    "control_all_lights": {
+      "n": 2,
+      "ok": 2
+    },
+    "control_here": {
+      "n": 2,
+      "ok": 2
+    }
+  },
+  "overfetch_mean": 1.0,
+  "half_credit_rescored": true,
+  "half_credit_turns": 0
+}

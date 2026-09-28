@@ -1,0 +1,81 @@
+{
+  "model": "qwen3.5:9b",
+  "examples": 30,
+  "turns": 61,
+  "pass": 0.6885245901639344,
+  "by_kind": {
+    "answer": {
+      "n": 34,
+      "ok": 29
+    },
+    "act": {
+      "n": 15,
+      "ok": 9
+    },
+    "fetch": {
+      "n": 12,
+      "ok": 4
+    }
+  },
+  "by_category": {
+    "missing": {
+      "n": 2,
+      "ok": 1
+    },
+    "control_area": {
+      "n": 6,
+      "ok": 6
+    },
+    "control_named": {
+      "n": 9,
+      "ok": 5
+    },
+    "status_aggregate": {
+      "n": 6,
+      "ok": 5
+    },
+    "presence_where": {
+      "n": 6,
+      "ok": 3
+    },
+    "control_brightness": {
+      "n": 6,
+      "ok": 5
+    },
+    "control_compound": {
+      "n": 2,
+      "ok": 2
+    },
+    "control_climate": {
+      "n": 2,
+      "ok": 1
+    },
+    "energy_night": {
+      "n": 3,
+      "ok": 2
+    },
+    "who_home": {
+      "n": 3,
+      "ok": 0
+    },
+    "check_house": {
+      "n": 11,
+      "ok": 9
+    },
+    "smalltalk": {
+      "n": 1,
+      "ok": 1
+    },
+    "control_all_lights": {
+      "n": 2,
+      "ok": 1
+    },
+    "control_here": {
+      "n": 2,
+      "ok": 1
+    }
+  },
+  "overfetch_mean": 0.711832788671024,
+  "half_credit_rescored": true,
+  "half_credit_turns": 0
+}

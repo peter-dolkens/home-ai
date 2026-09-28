@@ -1,0 +1,19 @@
+{
+  "_comment": "v2 data: 6k sampled from the augmented 30k corpus (media, appliances, water, vehicle, clarify/confirm boosts).",
+  "base_model": "Qwen/Qwen3.5-4B",
+  "hf_tokenizer": "Qwen/Qwen3.5-4B",
+  "ollama_template_from": "qwen3.5:4b",
+  "instruction_part": "<|im_start|>user\n",
+  "response_part": "<|im_start|>assistant\n",
+  "max_seq_len": 5120,
+  "lora_r": 16,
+  "lora_alpha": 16,
+  "epochs": 2,
+  "lr": 0.0002,
+  "batch_size": 2,
+  "grad_accum": 8,
+  "seed": 3407,
+  "train": "data/generated/train.jsonl",
+  "val": "data/generated/val.jsonl",
+  "out": "outputs/qwen35-4b-v2"
+}

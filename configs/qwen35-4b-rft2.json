@@ -1,0 +1,21 @@
+{
+  "_comment": "Rejection-sampling reinforcement from homeai-4b-lora-v2: fine-tune its adapter on its own outcome-verified attempts (fewest calls wins) mixed with a slice of its original training data against drift.",
+  "base_model": "Qwen/Qwen3.5-4B",
+  "hf_tokenizer": "Qwen/Qwen3.5-4B",
+  "ollama_template_from": "qwen3.5:4b",
+  "instruction_part": "<|im_start|>user\n",
+  "response_part": "<|im_start|>assistant\n",
+  "max_seq_len": 4608,
+  "lora_r": 16,
+  "lora_alpha": 16,
+  "epochs": 1,
+  "lr": 5e-05,
+  "batch_size": 2,
+  "grad_accum": 8,
+  "seed": 3407,
+  "train": "data/generated/train-rft2.jsonl",
+  "val": "data/generated/val.jsonl",
+  "out": "outputs/qwen35-4b-rft2",
+  "load_in_4bit": false,
+  "init_adapter": "outputs/qwen35-4b-lora-v2/lora"
+}

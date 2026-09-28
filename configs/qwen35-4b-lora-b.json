@@ -1,0 +1,20 @@
+{
+  "_comment": "Architecture track, design B (Peter, 26 Sep): rooms-only prompt + find_devices / filtered get_state (homeai/tools_b.py). Template data only (v5 category mix + v7 rule batches; the agent-written conversations can't be converted), 30% on big houses (3k-20k entities, Bundook plan). Champion method (bf16 LoRA r16, 2 epochs); batch 1 x 16 for the longer big-house sequences. Judged on bigbench-b against design A (homeai-4b-lora-v5 on bigbench).",
+  "base_model": "Qwen/Qwen3.5-4B",
+  "hf_tokenizer": "Qwen/Qwen3.5-4B",
+  "ollama_template_from": "qwen3.5:4b",
+  "instruction_part": "<|im_start|>user\n",
+  "response_part": "<|im_start|>assistant\n",
+  "max_seq_len": 6144,
+  "lora_r": 16,
+  "lora_alpha": 16,
+  "epochs": 2,
+  "lr": 0.0002,
+  "batch_size": 1,
+  "grad_accum": 16,
+  "seed": 3407,
+  "train": "data/generated/train-b-split.jsonl",
+  "val": "data/generated/val-b.jsonl",
+  "out": "outputs/qwen35-4b-lora-b",
+  "load_in_4bit": false
+}

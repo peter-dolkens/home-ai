@@ -1,0 +1,20 @@
+{
+  "_comment": "Champion recipe (v5 data, bf16 LoRA, 2 epochs) with twice the adapter capacity: rank 32, alpha 32. v6 showed targeted data can cost general accuracy; this tests capacity alone. Compare with homeai-4b-lora-v5 (rank 16).",
+  "base_model": "Qwen/Qwen3.5-4B",
+  "hf_tokenizer": "Qwen/Qwen3.5-4B",
+  "ollama_template_from": "qwen3.5:4b",
+  "instruction_part": "<|im_start|>user\n",
+  "response_part": "<|im_start|>assistant\n",
+  "max_seq_len": 4608,
+  "lora_r": 32,
+  "lora_alpha": 32,
+  "epochs": 2,
+  "lr": 0.0002,
+  "batch_size": 2,
+  "grad_accum": 8,
+  "seed": 3407,
+  "train": "data/generated/train-v5.jsonl",
+  "val": "data/generated/val-v3.jsonl",
+  "out": "outputs/qwen35-4b-lora-v5-r32",
+  "load_in_4bit": false
+}

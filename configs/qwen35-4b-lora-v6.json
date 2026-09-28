@@ -1,0 +1,20 @@
+{
+  "_comment": "v6 = v5 minus the 14 agent conversations that unlock/disarm without asking + 150 confirmations with reasons/indirect asks (kept light: Peter prioritises general accuracy over confirmation behaviour, 25 Sep) + 450 clarifications incl. named devices in several rooms. bf16 LoRA like the champion.",
+  "base_model": "Qwen/Qwen3.5-4B",
+  "hf_tokenizer": "Qwen/Qwen3.5-4B",
+  "ollama_template_from": "qwen3.5:4b",
+  "instruction_part": "<|im_start|>user\n",
+  "response_part": "<|im_start|>assistant\n",
+  "max_seq_len": 4608,
+  "lora_r": 16,
+  "lora_alpha": 16,
+  "epochs": 2,
+  "lr": 0.0002,
+  "batch_size": 2,
+  "grad_accum": 8,
+  "seed": 3407,
+  "train": "data/generated/train-v6.jsonl",
+  "val": "data/generated/val-v3.jsonl",
+  "out": "outputs/qwen35-4b-lora-v6",
+  "load_in_4bit": false
+}

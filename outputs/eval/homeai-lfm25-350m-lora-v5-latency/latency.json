@@ -1,0 +1,13 @@
+{
+  "model": "homeai-lfm25-350m-lora-v5",
+  "data": "data/generated/test-v2.jsonl",
+  "requests": 60,
+  "cold_mean": 0.24768014637132485,
+  "cold_p50": 0.22803489677608013,
+  "cold_p90": 0.3402149695903063,
+  "warm_mean": 0.23821504811445873,
+  "warm_p90": 0.33106223680078983,
+  "calls_per_request": 2.0166666666666666,
+  "seconds_per_call": 0.12178955303453323,
+  "training_running": false
+}

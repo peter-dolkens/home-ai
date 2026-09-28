@@ -1,0 +1,42 @@
+{
+  "model": "homeai-4b-lora-v7",
+  "data": "data/generated/test-rules.jsonl",
+  "examples": 200,
+  "turns": 577,
+  "pass": 0.8232235701906413,
+  "seconds_per_turn": 0.7348679537583058,
+  "think": "off",
+  "by_kind": {
+    "act": {
+      "n": 200,
+      "ok": 196
+    },
+    "answer": {
+      "n": 300,
+      "ok": 202
+    },
+    "fetch": {
+      "n": 77,
+      "ok": 77
+    }
+  },
+  "by_category": {
+    "rule1_control_here": {
+      "n": 100,
+      "ok": 99
+    },
+    "rule2_clarify_in_room": {
+      "n": 200,
+      "ok": 150
+    },
+    "rule3_clarify": {
+      "n": 175,
+      "ok": 126
+    },
+    "rule4_act_only_one": {
+      "n": 102,
+      "ok": 100
+    }
+  },
+  "overfetch_mean": 1.0
+}

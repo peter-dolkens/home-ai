@@ -1,0 +1,247 @@
+{
+  "model": "homeai-4b-lora-orch",
+  "orchestrator_url": "http://cassowary.dolkens.net:11434",
+  "leaves": {
+    "default": "homeai-leaf-qwen35-2b@http://127.0.0.1:11500",
+    "by_kind": {},
+    "by_area": {}
+  },
+  "data": "data/generated/bigbench-b.jsonl",
+  "mode": "e2e-tiered",
+  "pipeline": "fanout",
+  "max_rounds": 4,
+  "examples": 200,
+  "turns": 232,
+  "pass": 0.4698275862068966,
+  "conversation_pass": 0.455,
+  "errors": 0,
+  "history_errors": 0,
+  "seconds_per_turn": 9.28038065326255,
+  "calls_per_request": 1.2456896551724137,
+  "latency": {
+    "turn_s": {
+      "n": 232,
+      "mean": 11.291,
+      "p50": 9.428,
+      "p95": 20.889
+    },
+    "orch_calls_per_turn": 1.246,
+    "orch_s_per_call": {
+      "n": 289,
+      "mean": 2.306,
+      "p50": 1.59,
+      "p95": 3.768
+    },
+    "orch_s_per_turn": 2.873,
+    "leaf_calls_per_turn": 41.504,
+    "leaf_s_per_call": {
+      "n": 9629,
+      "mean": 1.493,
+      "p50": 1.456,
+      "p95": 2.22
+    },
+    "leaf_s_per_turn": 61.953,
+    "leaf_wall_s_per_ask": {
+      "n": 232,
+      "mean": 8.377,
+      "p50": 7.612,
+      "p95": 17.045
+    },
+    "leaf_wall_s_per_turn": 8.377,
+    "eval_wall_s": 2682.0
+  },
+  "routing": {
+    "ask_rooms_per_turn": 1,
+    "rooms_asked_per_turn": 41.504,
+    "rooms_acted_per_turn": 12.647,
+    "room_call_service": 10,
+    "turns_with_room_call_service": 9,
+    "leaf_errors": 0
+  },
+  "by_kind": {
+    "answer": {
+      "n": 133,
+      "ok": 70.0
+    },
+    "state": {
+      "n": 232,
+      "ok": 149
+    },
+    "reply": {
+      "n": 232,
+      "ok": 179
+    },
+    "act": {
+      "n": 99,
+      "ok": 39
+    }
+  },
+  "by_scale": {
+    "bundook_full": {
+      "n": 29,
+      "ok": 14.5
+    },
+    "bundook_projected": {
+      "n": 28,
+      "ok": 9
+    },
+    "random 10000": {
+      "n": 60,
+      "ok": 25.0
+    },
+    "random 20000": {
+      "n": 59,
+      "ok": 32
+    },
+    "random 3000": {
+      "n": 56,
+      "ok": 28.5
+    }
+  },
+  "by_category": {
+    "energy_status": {
+      "n": 7,
+      "ok": 1
+    },
+    "presence_where": {
+      "n": 12,
+      "ok": 11
+    },
+    "anything_on": {
+      "n": 8,
+      "ok": 0
+    },
+    "control_named": {
+      "n": 11,
+      "ok": 8
+    },
+    "presence_in_room": {
+      "n": 4,
+      "ok": 4
+    },
+    "top_power": {
+      "n": 8,
+      "ok": 4
+    },
+    "status_aggregate": {
+      "n": 14,
+      "ok": 10
+    },
+    "clarify_in_room": {
+      "n": 6,
+      "ok": 2
+    },
+    "weather": {
+      "n": 4,
+      "ok": 1
+    },
+    "check_house": {
+      "n": 15,
+      "ok": 2
+    },
+    "media_play": {
+      "n": 7,
+      "ok": 4
+    },
+    "control_brightness": {
+      "n": 4,
+      "ok": 1
+    },
+    "clarify": {
+      "n": 16,
+      "ok": 4
+    },
+    "confirm_sensitive": {
+      "n": 14,
+      "ok": 7.0
+    },
+    "control_lock": {
+      "n": 3,
+      "ok": 3
+    },
+    "media_what": {
+      "n": 3,
+      "ok": 2
+    },
+    "who_home": {
+      "n": 4,
+      "ok": 4
+    },
+    "control_area": {
+      "n": 6,
+      "ok": 2
+    },
+    "leaving": {
+      "n": 4,
+      "ok": 0
+    },
+    "away_motion": {
+      "n": 4,
+      "ok": 3
+    },
+    "open_check": {
+      "n": 7,
+      "ok": 5
+    },
+    "control_compound": {
+      "n": 8,
+      "ok": 3
+    },
+    "act_only_one": {
+      "n": 2,
+      "ok": 1
+    },
+    "control_here": {
+      "n": 6,
+      "ok": 2
+    },
+    "appliance_status": {
+      "n": 5,
+      "ok": 4
+    },
+    "irrigation_control": {
+      "n": 3,
+      "ok": 2
+    },
+    "control_climate": {
+      "n": 6,
+      "ok": 4
+    },
+    "media_transport": {
+      "n": 3,
+      "ok": 1
+    },
+    "media_multiroom": {
+      "n": 4,
+      "ok": 0
+    },
+    "water_status": {
+      "n": 5,
+      "ok": 2
+    },
+    "energy_appliance": {
+      "n": 3,
+      "ok": 1
+    },
+    "vehicle_status": {
+      "n": 5,
+      "ok": 3
+    },
+    "status_entity": {
+      "n": 6,
+      "ok": 4
+    },
+    "goodnight": {
+      "n": 5,
+      "ok": 0
+    },
+    "media_volume": {
+      "n": 2,
+      "ok": 1
+    },
+    "energy_night": {
+      "n": 8,
+      "ok": 3
+    }
+  }
+}
