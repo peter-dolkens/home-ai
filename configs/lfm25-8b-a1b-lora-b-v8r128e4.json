@@ -35,5 +35,11 @@
  ],
  "note": "its own chat template (Liquid's repo; tokenizer re-issued for tool calls, commit feb5e04)",
  "prompt_layout": "user_context",
- "hf_cache": "/ai/models/homeai/hf-cache"
+ "hf_cache": "/ai/models/homeai/hf-cache",
+ "env": {
+  "UNSLOTH_COMPILE_DISABLE": "1"
+ },
+ "from_pretrained_kwargs": {
+  "experts_implementation": "eager"
+ }
 }

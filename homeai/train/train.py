@@ -240,12 +240,16 @@ def main():
     if cfg.get("backend") == "hf":
         return run_hf(cfg, train, val)
 
+    # per-config environment and from_pretrained extras (14 Oct, LFM2.5 8B-A1B MoE: the 3090 has no torch._grouped_mm, so
+    # "experts_implementation": "eager" loops over the experts, and UNSLOTH_COMPILE_DISABLE keeps Dynamo off that loop)
+    os.environ.update({k: str(v) for k, v in (cfg.get("env") or {}).items()})
     from unsloth import FastLanguageModel
     from unsloth.chat_templates import train_on_responses_only
     from datasets import Dataset
 
     model, tokenizer = FastLanguageModel.from_pretrained(
         model_name=cfg["base_model"], max_seq_length=cfg["max_seq_len"], load_in_4bit=cfg.get("load_in_4bit", True), dtype=None,
+        **(cfg.get("from_pretrained_kwargs") or {}),
     )
     processor, tokenizer = tokenizer, text_tokenizer(tokenizer)  # text-only training on a possibly-VL checkpoint
     if cfg.get("chat_template_from"):

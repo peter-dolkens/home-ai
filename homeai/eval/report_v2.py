@@ -77,7 +77,7 @@ def champions_section(ch, dc):
     lh_req = per_request(rep(f"{lh.get('model')}-bigbench32k-e2e")) if lh else None
     rows = [
         ("A · single model", "everyday houses", ch.get("best"), f"{fmt(best.get('quality'))} quality · {fmt(best.get('outcome'))} outcome",
-         "mean of test v2, wild, wild 2 and their outcome evals", best.get("s_per_request")),
+         "mean of test v2, wild, wild 2 and their outcome evals", lat_now(ch.get("best"), best.get("s_per_request"))),
         ("A · single model", "large houses, 32k window", lh.get("model"), f"{fmt(lh.get('pass'))} large-house outcome",
          "200 conversations, 3k–20k entities + the Bundook plan", lh_req),
         ("B · lookup tools", "rooms-only prompt", b.get("model"), f"{fmt(b.get('score'))} outcome",
@@ -93,11 +93,21 @@ def champions_section(ch, dc):
          f"{fmt(voice_scores('homeai-4b-lora-v9', ('testv2', 'wild', 'wild2'))['parakeet-clean'])} heard · "
          f"{fmt(voice_scores('homeai-4b-lora-v9', ('testv2', 'wild', 'wild2'))['confusions'])} misheard-word suite",
          "v9: v8 plus speech-to-text round trips of its own training turns; ties v5 and v8 on typed text",
-         per_request(rep("homeai-4b-lora-v9-wild-e2e"))),
+         lat_now("homeai-4b-lora-v9", per_request(rep("homeai-4b-lora-v9-wild-e2e")))),
         ("E · fast + slow", "reconciled", (e.get("pair") or "being measured").replace("homeai-", "").replace("__", " → "),
          f"{fmt(e.get('reconciled_pass'))} final · {fmt(e.get('flicker_rate'))} flicker" if e else "–",
          "fast model acts, slow model runs independently, reconciler fixes differences", e.get("time_to_first_action_s_acting")),
     ]
+    # the 3090's own house champion (Peter, 14 Oct: the two tiers need not share a model): best house heard mean among models
+    # timed on the 3090 within the speed target, whatever the family
+    timed = {g["model"]: mean_req([f"{g['model']}-{t}-e2e" for t in B_TAGS]) for g in house_voice_groups()}
+    gpu = [g for g in house_voice_groups() if timed.get(g["model"]) and timed[g["model"]] <= GPU_TARGET_S]
+    if gpu:
+        h = max(gpu, key=lambda g: g["heard"])
+        rows.insert(0, ("The house, spoken", f"best heard mean among models under {GPU_TARGET_S:.0f} s / request on the 3090",
+                        h["model"].replace("homeai-", ""), f"{fmt(h['heard'])} heard · {fmt(h['typed'])} typed",
+                        f"{h['seeds']} seed{'s' if h['seeds'] > 1 else ''}; seed alone moves this by 0.2-1.7 points (see the house table)",
+                        timed[h["model"]]))
     out = ['<div class="scroll"><table class="champ"><thead><tr><th>Design</th><th>Champion</th><th>Score</th><th>Speed</th></tr></thead><tbody>']
     for design, sub, model, score, basis, req in rows:
         out.append(f'<tr><td><b>{esc(design)}</b><span class="sub">{esc(sub)}</span></td><td class="mono">{esc(model or "–")}</td>'
@@ -107,6 +117,7 @@ def champions_section(ch, dc):
 
 
 MAC_TARGET_S = 1.0   # warm reply on the Mac within which a model counts as fast enough (Peter: best and best <= 1 s)
+GPU_TARGET_S = 2.0   # per request on the 3090 (Peter's target: most requests under 2 s)
 
 
 def mac_rows():
@@ -161,12 +172,18 @@ def mac_champions_section():
                              'rows), prompt cache on; warm = a request whose house prompt is cached. Never compared with the 3090 numbers.</p>')
 
 
+def lat_now(model, fallback):
+    """Seconds per request from the idle-3090 latency bench on the current Ollama (0.40.3) when re-run there."""
+    r = load(f"{EVAL}/{model}-latency-o040/latency.json") if model else None
+    return (r or {}).get("cold_mean") or fallback
+
+
 def fmt(v):
     return "–" if v is None else f"{v * 100:.1f}%"
 
 
 def mean_req(names):
-    xs = [per_request(rep(n)) for n in names]
+    xs = [per_request(rep(f"{n}-o040") or rep(n)) for n in names]   # cassowary's current Ollama (0.40.3) when re-run there
     xs = [x for x in xs if x is not None]
     return sum(xs) / len(xs) if xs else None
 

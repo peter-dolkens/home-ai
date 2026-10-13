@@ -13,17 +13,28 @@ The target is the new Bundook build: about 11,600 Home Assistant entities, voice
 apart, each with its own champions: a **low-power Mac mini** (M2 Pro, MLX, ~5-10 W idle) as the always-on voice box, and a
 **3090-equipped** GPU box (cassowary) for training, evaluation and anything heavy.
 
-| | Mac mini (6-bit MLX) | RTX 3090 (Ollama 0.40.3) |
-|---|---|---|
-| **Pick: LFM2.5 1.2B, design B** (house heard 81.9%, typed 89.3%) | 0.73 s warm, ~1.2 s from end of speech to action | 0.21 s warm |
-| Fast option: LFM2.5 350M (heard 77.0%) | 0.32 s warm | 0.16 s |
-| LFM2.5 230M (heard 76.4%) | 0.24 s | 0.13 s |
-| LFM2.5 2.6B (heard 82.2%, matches the pick) | 2.6 s: too slow for the Mac | 0.41 s |
-| Spark X2.5 4B, design B (typed 90.4%, best on unfamiliar houses) | - | 0.72 s |
+Each tier is ranked on its own hardware; the champions need not be the same model or family.
+
+**Low-power Mac mini** (M2 Pro, 6-bit MLX, warm reply with the house prompt cached):
+
+| | model | house heard | warm reply |
+|---|---|---|---|
+| Champion (best within 1 s) | LFM2.5 1.2B, design B | 81.9% (typed 89.3%) | 0.73 s, ~1.2 s end of speech to action |
+| Fastest | LFM2.5 230M, design B | 76.4% | 0.24 s |
+| Fast option | LFM2.5 350M, design B | 77.0% | 0.32 s |
+| Too slow here | LFM2.5 2.6B, design B | 82.2% | 2.6 s |
+
+**3090-equipped** (cassowary, Ollama 0.40.3):
+
+| | model | score | speed |
+|---|---|---|---|
+| House, spoken | LFM2.5 2.6B, design B | 82.2% heard (1 seed; 1.2B 81.9%, Spark 81.2%: within seed noise) | 0.5 s / request |
+| Design B, unfamiliar houses | Spark X2.5 4B (3 epochs) | 85.5% on the B sets | 0.9 s / request |
+| Design A | Qwen3.5 4B v9 | 85.4% quality | 1.2 s / request |
 
 - **Design B** (rooms-only prompt plus lookup tools, below) won or tied every comparison; designs A (whole inventory in the
   prompt), C/D (orchestrator plus per-room models) and E (fast model acts, slow model checks) are kept as baselines.
-- **Training recipe of the pick**: LoRA r256, 4 epochs, `data/generated/train-b-v8.jsonl` (random houses, hard far-field /
+- **Training recipe of the Mac champion** (also used for every LFM size above): LoRA r256, 4 epochs, `data/generated/train-b-v8.jsonl` (random houses, hard far-field /
   TV-noise speech augmentation, 1,650 conversations on the Bundook plan, verified wild transcripts); config
   `configs/lfm25-1.2b-lora-b-v8r256e4.json`. More epochs, 8-bit, a lower learning rate or a second augmentation draw did not help.
 - **Speech-to-text**: Whisper medium with the house's device and room names as its initial prompt (11-12% word error at 3 m
