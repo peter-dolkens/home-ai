@@ -1,0 +1,43 @@
+{
+ "_comment": "Model soup (14 Oct): weight average of the two seeds of lfm25-350m-lora-b-v8r256e4 (seeds 3407, 1234); built with scripts/soup.py, no training.",
+ "base_model": "LiquidAI/LFM2.5-350M",
+ "hf_tokenizer": "LiquidAI/LFM2.5-350M",
+ "ollama_template_from": "lfm2.5-350m",
+ "instruction_part": "<|im_start|>user\n",
+ "response_part": "<|im_start|>assistant\n",
+ "max_seq_len": 4608,
+ "lora_r": 256,
+ "lora_alpha": 256,
+ "epochs": 4,
+ "lr": 0.0002,
+ "batch_size": 2,
+ "grad_accum": 8,
+ "seed": 3407,
+ "train": "data/generated/train-b-v8.jsonl",
+ "val": "data/generated/val-b.jsonl",
+ "out": "outputs/lfm25-350m-soup-b-v8r256e4",
+ "load_in_4bit": false,
+ "mask_spans": [
+  [
+   "<|im_start|>tool\n",
+   "<|im_end|>"
+  ]
+ ],
+ "target_modules": [
+  "q_proj",
+  "k_proj",
+  "v_proj",
+  "out_proj",
+  "in_proj",
+  "w1",
+  "w2",
+  "w3"
+ ],
+ "chat_template_from": "LiquidAI/LFM2.5-350M",
+ "note": "350M's LFM2.5 template (as the 1.2B pick)",
+ "prompt_layout": "user_context",
+ "soup_of": [
+  "outputs/lfm25-350m-lora-b-v8r256e4",
+  "outputs/lfm25-350m-lora-b-v8r256e4s2"
+ ]
+}

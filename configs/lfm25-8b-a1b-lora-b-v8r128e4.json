@@ -41,5 +41,6 @@
  },
  "from_pretrained_kwargs": {
   "experts_implementation": "eager"
- }
+ },
+ "cuda_memory_gb": 19.0
 }

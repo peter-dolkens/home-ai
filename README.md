@@ -50,6 +50,33 @@ Ollama builds) and a dev Mac (`scripts/train-mlx.sh`, `scripts/falcon-mlx-build.
 newly trained run out to the house heard evals, the cassowary benchmark (`outputs/bench-o040.sh` pattern) and falcon;
 `scripts/report-refresh.sh` rebuilds the results page (`homeai/eval/report_v2.py`) from every host's reports.
 
+## Training methods tried (Sep-Oct 2026)
+
+All runs use supervised fine-tuning on the synthetic transcripts (loss on assistant turns only, tool results masked), then
+outcome evals on held-out houses and, for voice, on transcribed speech. What each lever bought:
+
+| Method / lever | Where | Result |
+|---|---|---|
+| **QLoRA** (4-bit base, LoRA r16) | Qwen3.5 4B / 9B, Gemma 4 E4B | Works; slightly behind bf16 LoRA on the same data (4B v5: 83.0 vs 84.0 quality). Only useful to fit bigger models. |
+| **bf16 LoRA** | every current model | The workhorse. Unsloth on CUDA; `homeai/train/train_mlx.py` reproduces it with MLX on Apple silicon (the 0.8B was trained on the Mac mini). |
+| **LoRA rank** r16 -> r256 | LFM2.5 1.2B | The biggest model-side lever: house heard ~74% -> ~79% (r16 to r256); the 2B stopped gaining at r32, Spark 4B at r32. |
+| **Epochs** 2 / 3 / 4 / 6 | LFM2.5 1.2B r256; 350M; 230M | 4 is best for the 1.2B (heard 79.0 / 79.7 / 81.9 / 81.0); 6 no better for the small LFMs; 3 helps Spark. |
+| **Learning rate** 2e-4 vs 1e-4 | LFM 1.2B | No difference. |
+| **Rejection-sampling RL** (keep the model's own successful samples, retrain) | Qwen 4B (rft1, rft2) | No gain: 88% of training turns were already solved and the unsolved ones can't be learned this way; rft1 also learned to skip confirmations. |
+| **Self / teacher distillation** (sequence level: the 4B's own verified transcripts of wild-style conversations) | 4B, 2B, LFM | +4 points on unfamiliar houses for the 4B and LFM; neutral or negative for the 2B. Now part of the training mix (B-v8). |
+| **Speech (ASR) augmentation** (training turns round-tripped through TTS + STT, hard far-field / noise draws) | all voice models | The biggest data lever for spoken requests (LFM +4.3 at 3 m); a second draw or medium-Whisper-only augmentation added nothing. |
+| **Prompt layouts** (classic, stable_prefix, user_context, clock_in_user) | 4B v10-v12, design B | Accuracy-neutral; user_context makes the Mac's prompt cache hit (6 s -> 2.6 s warm for the 4B). |
+| **Designs** A-E (whole inventory, lookup tools, tiered rooms, fan-out, fast+slow pairs) | all | Design B (lookup tools) won or tied every comparison. |
+| **Base models** | Qwen3.5 0.8B-27B, Gemma 4 E4B, Spark X2.5 4B, LFM2.5 230M-2.6B, Cactus Needle | LFM2.5 1.2B is the Mac champion; untuned models score 31-60%. |
+| **Seeds** | picks | Two seeds per pick: seed alone moves the heard mean by 0.2-1.7 points. |
+
+Running (14 Oct): **full fine-tuning** of the 230M and 350M (`"full_finetune": true` in a training config: every weight, lr 2e-5,
+3 epochs), **seed averaging** ("model soup", `scripts/soup.py`) of the 1.2B and 350M picks, and the LFM2.5 **8B-A1B MoE** (LoRA on
+attention, convs and dense layers; experts frozen).
+
+Not yet tried: continued pretraining, preference optimisation (DPO / ORPO / KTO on the models' own failures), logit-level
+distillation from a larger model, quantisation-aware training (or DWQ) for the Mac's 6-bit builds.
+
 ## How it works
 
 The model never sees the whole house. Its system prompt holds a compact **inventory**

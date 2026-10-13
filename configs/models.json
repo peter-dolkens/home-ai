@@ -792,5 +792,41 @@
   "track": "architecture",
   "tier": "8-9B",
   "prompt_layout": "user_context"
+ },
+ "homeai-lfm25-350m-full-b-v8e3": {
+  "config": "configs/lfm25-350m-full-b-v8e3.json",
+  "method": "bf16 FULL fine-tune (LFM2.5 350m), lr 2e-5, 3 epochs, design B tools, train-b-v8, user_context; trained on lapwing",
+  "data": "b-v8",
+  "train_examples": 7863,
+  "track": "architecture",
+  "tier": "<1B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-lfm25-230m-full-b-v8e3": {
+  "config": "configs/lfm25-230m-full-b-v8e3.json",
+  "method": "bf16 FULL fine-tune (LFM2.5 230m), lr 2e-5, 3 epochs, design B tools, train-b-v8, user_context; trained on lapwing",
+  "data": "b-v8",
+  "train_examples": 7863,
+  "track": "architecture",
+  "tier": "<1B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-lfm25-1.2b-soup-b-v8r256e4": {
+  "config": "configs/lfm25-1.2b-soup-b-v8r256e4.json",
+  "method": "model soup: weight average of the two LoRA r256 seeds (LFM2.5 1.2b), design B",
+  "data": "b-v8",
+  "train_examples": 7863,
+  "track": "architecture",
+  "tier": "1-2B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-lfm25-350m-soup-b-v8r256e4": {
+  "config": "configs/lfm25-350m-soup-b-v8r256e4.json",
+  "method": "model soup: weight average of the two LoRA r256 seeds (LFM2.5 350m), design B",
+  "data": "b-v8",
+  "train_examples": 7863,
+  "track": "architecture",
+  "tier": "<1B",
+  "prompt_layout": "user_context"
  }
 }

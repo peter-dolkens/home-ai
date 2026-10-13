@@ -243,13 +243,17 @@ def main():
     # per-config environment and from_pretrained extras (14 Oct, LFM2.5 8B-A1B MoE: the 3090 has no torch._grouped_mm, so
     # "experts_implementation": "eager" loops over the experts, and UNSLOTH_COMPILE_DISABLE keeps Dynamo off that loop)
     os.environ.update({k: str(v) for k, v in (cfg.get("env") or {}).items()})
+    if cfg.get("cuda_memory_gb"):  # cap this process so a near-full card fails our run, not Frigate's decoders sharing the GPU
+        import torch
+        torch.cuda.set_per_process_memory_fraction(min(1.0, cfg["cuda_memory_gb"] * 2**30 / torch.cuda.get_device_properties(0).total_memory))
     from unsloth import FastLanguageModel
     from unsloth.chat_templates import train_on_responses_only
     from datasets import Dataset
 
+    full = bool(cfg.get("full_finetune"))   # 14 Oct: train every weight instead of a LoRA adapter (small LFMs: is capacity the limit?)
     model, tokenizer = FastLanguageModel.from_pretrained(
-        model_name=cfg["base_model"], max_seq_length=cfg["max_seq_len"], load_in_4bit=cfg.get("load_in_4bit", True), dtype=None,
-        **(cfg.get("from_pretrained_kwargs") or {}),
+        model_name=cfg["base_model"], max_seq_length=cfg["max_seq_len"], load_in_4bit=False if full else cfg.get("load_in_4bit", True),
+        dtype=None, **({"full_finetuning": True} if full else {}), **(cfg.get("from_pretrained_kwargs") or {}),
     )
     processor, tokenizer = tokenizer, text_tokenizer(tokenizer)  # text-only training on a possibly-VL checkpoint
     if cfg.get("chat_template_from"):
@@ -257,7 +261,8 @@ def main():
         # tool_calls: every tool-call turn trained as an empty reply (29 Sep). Take the template from a repo that renders them.
         from transformers import AutoTokenizer
         tokenizer.chat_template = AutoTokenizer.from_pretrained(cfg["chat_template_from"]).chat_template
-    model = FastLanguageModel.get_peft_model(
+    if not full:
+      model = FastLanguageModel.get_peft_model(
         model, r=cfg["lora_r"], lora_alpha=cfg["lora_alpha"], lora_dropout=0, bias="none",
         # per-architecture override: LFM2 names its projections out_proj / in_proj (conv blocks) / w1 w2 w3 (feed-forward), so the
         # Qwen-style default matched only q/k/v in 6 of 16 layers and the LFM2.5 fine-tunes barely changed the model
@@ -337,8 +342,19 @@ def main():
     print(stats)
 
     lora_dir = os.path.join(cfg["out"], "lora")
-    model.save_pretrained(lora_dir)
-    processor.save_pretrained(lora_dir)
+    if full:
+        # the whole model is the result: save it where the merge step would (merged16), and leave a marker in lora/ so the
+        # queue scripts (train-leaf-qwen.sh, train-docker.sh merge) see training as done and skip the LoRA merge
+        merged = os.path.join(cfg["out"], "merged16")
+        model.save_pretrained(merged, safe_serialization=True)
+        tokenizer.save_pretrained(merged)
+        os.makedirs(lora_dir, exist_ok=True)
+        open(os.path.join(lora_dir, "FULL_FINETUNE"), "w").write("full fine-tune: weights in ../merged16\n")
+        open(os.path.join(cfg["out"], "merge.log"), "w").write("full fine-tune: merged16 written by train.py, no LoRA merge\n")
+        print("saved full fine-tune ->", merged)
+    else:
+        model.save_pretrained(lora_dir)
+        processor.save_pretrained(lora_dir)
     with open(os.path.join(cfg["out"], "config.used.json"), "w") as f:
         json.dump(cfg, f, indent=2)
     print(f"saved LoRA adapter to {lora_dir}")

@@ -1,0 +1,28 @@
+{
+ "_comment": "LFM2.5 230m FULL fine-tune (14 Oct, Peter: try full fine-tuning): every weight trained, lr 2e-5 (a tenth of LoRA's), 3 epochs; otherwise the pick's recipe (design B, train-b-v8). Does capacity still limit the small LFMs (LoRA rank was the biggest lever)?",
+ "base_model": "LiquidAI/LFM2.5-230M",
+ "hf_tokenizer": "LiquidAI/LFM2.5-230M",
+ "ollama_template_from": "lfm2.5-230m",
+ "instruction_part": "<|im_start|>user\n",
+ "response_part": "<|im_start|>assistant\n",
+ "max_seq_len": 4608,
+ "epochs": 3,
+ "lr": 2e-05,
+ "batch_size": 2,
+ "grad_accum": 8,
+ "seed": 3407,
+ "train": "data/generated/train-b-v8.jsonl",
+ "val": "data/generated/val-b.jsonl",
+ "out": "outputs/lfm25-230m-full-b-v8e3",
+ "load_in_4bit": false,
+ "mask_spans": [
+  [
+   "<|im_start|>tool\n",
+   "<|im_end|>"
+  ]
+ ],
+ "chat_template_from": "LiquidAI/LFM2.5-350M",
+ "note": "350M's LFM2.5 template (as the 1.2B pick)",
+ "prompt_layout": "user_context",
+ "full_finetune": true
+}
