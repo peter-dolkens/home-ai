@@ -1,0 +1,302 @@
+{
+  "set": "piper__small__biased",
+  "stt": "small",
+  "condition": "biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 94,
+  "words": 594,
+  "errors": 54,
+  "wer": 0.0909,
+  "exact": 0.6383,
+  "vocab_words": 199,
+  "vocab_errors": 14,
+  "vocab_wer": 0.0704,
+  "vocab": {
+    "room": {
+      "n": 49,
+      "err": 1,
+      "wer": 0.0204
+    },
+    "device": {
+      "n": 84,
+      "err": 9,
+      "wer": 0.1071
+    },
+    "person": {
+      "n": 9,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 15,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 42,
+      "err": 4,
+      "wer": 0.0952
+    }
+  },
+  "meaning_changed": 0.1064,
+  "meaning_changed_n": 10,
+  "meaning_by_kind": {
+    "room": 0.0106,
+    "device": 0.0532,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0426
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 4.3029,
+    "p50": 4.5266,
+    "p90": 5.0588,
+    "rtf": 1.7013,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-ca-p302": {
+      "turns": 13,
+      "wer": 0.0506,
+      "meaning_changed": 0.0
+    },
+    "t-ie-p288": {
+      "turns": 5,
+      "wer": 0.2,
+      "meaning_changed": 0.2
+    },
+    "t-ld-p243": {
+      "turns": 7,
+      "wer": 0.0426,
+      "meaning_changed": 0.0
+    },
+    "t-ni-p304": {
+      "turns": 5,
+      "wer": 0.08,
+      "meaning_changed": 0.0
+    },
+    "t-nz-p335": {
+      "turns": 9,
+      "wer": 0.0678,
+      "meaning_changed": 0.1111
+    },
+    "t-sc-p234": {
+      "turns": 7,
+      "wer": 0.1429,
+      "meaning_changed": 0.0
+    },
+    "t-sc-p237": {
+      "turns": 6,
+      "wer": 0.0976,
+      "meaning_changed": 0.3333
+    },
+    "t-se-p225": {
+      "turns": 5,
+      "wer": 0.0606,
+      "meaning_changed": 0.0
+    },
+    "t-sm-prudence": {
+      "turns": 3,
+      "wer": 0.1333,
+      "meaning_changed": 0.0
+    },
+    "t-sm-spike": {
+      "turns": 9,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-wa-p253": {
+      "turns": 5,
+      "wer": 0.2667,
+      "meaning_changed": 0.4
+    },
+    "t-yk-p267": {
+      "turns": 3,
+      "wer": 0.1667,
+      "meaning_changed": 0.6667
+    },
+    "t-yk-p270": {
+      "turns": 8,
+      "wer": 0.1154,
+      "meaning_changed": 0.125
+    },
+    "t-za-p323": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-za-p347": {
+      "turns": 6,
+      "wer": 0.1212,
+      "meaning_changed": 0.1667
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 23,
+      "wer": 0.0993,
+      "meaning_changed": 0.2174
+    },
+    "1.0": {
+      "turns": 50,
+      "wer": 0.0806,
+      "meaning_changed": 0.04
+    },
+    "1.15": {
+      "turns": 21,
+      "wer": 0.1053,
+      "meaning_changed": 0.1429
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 94,
+      "wer": 0.0909,
+      "meaning_changed": 0.1064
+    }
+  },
+  "by_set": {
+    "piper__small__biased": {
+      "turns": 94,
+      "wer": 0.0909,
+      "meaning_changed": 0.1064
+    }
+  },
+  "samples": [
+    {
+      "id": "b300-1645",
+      "turn": 0,
+      "voice": "t-za-p347",
+      "written": "right, dim the lights to 100 percent",
+      "heard": "Brighten the lights to 100%.",
+      "lost": [
+        [
+          "command",
+          "dim"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2152",
+      "turn": 0,
+      "voice": "t-ie-p288",
+      "written": "um, switch off the heater in study",
+      "heard": "Switch off the heater instead.",
+      "lost": [
+        [
+          "room",
+          "study"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2210",
+      "turn": 0,
+      "voice": "t-yk-p267",
+      "written": "hey house, start the island pendant in kitchen",
+      "heard": "Hey House, Start the Island Pended in Kitchen.",
+      "lost": [
+        [
+          "device",
+          "island pendant"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2689",
+      "turn": 0,
+      "voice": "t-wa-p253",
+      "written": "Is the solar producing?",
+      "heard": "Is it so producing?",
+      "lost": [
+        [
+          "device",
+          "solar"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3209",
+      "turn": 0,
+      "voice": "t-sc-p237",
+      "written": "Chuck on the The Rest Is History podcast in the living room",
+      "heard": "Chuck under the rest is History Podcast in the Living Room.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3701",
+      "turn": 0,
+      "voice": "t-wa-p253",
+      "written": "um, kick off the vacuum thanks",
+      "heard": "I'm kickoff the vacuum, thanks.",
+      "lost": [
+        [
+          "command",
+          "off"
+        ]
+      ]
+    },
+    {
+      "id": "b300-5063",
+      "turn": 0,
+      "voice": "t-yk-p270",
+      "written": "Off to bed, can you shut everything down",
+      "heard": "After bed, can you shut everything down?",
+      "lost": [
+        [
+          "command",
+          "off"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-1615",
+      "turn": 0,
+      "voice": "t-yk-p267",
+      "written": "lights in storage to 20 percent",
+      "heard": "Licensed storage to 20%.",
+      "lost": [
+        [
+          "device",
+          "lights"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-20000-1579",
+      "turn": 0,
+      "voice": "t-sc-p237",
+      "written": "Turn on the lamp 1 in the office.",
+      "heard": "Turn on the lamp on in the office.",
+      "lost": [
+        [
+          "device",
+          "lamp 1"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-6000-442",
+      "turn": 0,
+      "voice": "t-nz-p335",
+      "written": "hey, what's the solar doing",
+      "heard": "Hey, what's the solo doing?",
+      "lost": [
+        [
+          "device",
+          "solar"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

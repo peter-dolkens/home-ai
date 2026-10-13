@@ -1,0 +1,234 @@
+{
+  "set": "kokoro__small__noisy10-biased",
+  "stt": "small",
+  "condition": "noisy10-biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 86,
+  "words": 538,
+  "errors": 29,
+  "wer": 0.0539,
+  "exact": 0.7907,
+  "vocab_words": 195,
+  "vocab_errors": 4,
+  "vocab_wer": 0.0205,
+  "vocab": {
+    "room": {
+      "n": 68,
+      "err": 0,
+      "wer": 0.0
+    },
+    "device": {
+      "n": 62,
+      "err": 1,
+      "wer": 0.0161
+    },
+    "person": {
+      "n": 10,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 5,
+      "err": 1,
+      "wer": 0.2
+    },
+    "command": {
+      "n": 50,
+      "err": 2,
+      "wer": 0.04
+    }
+  },
+  "meaning_changed": 0.0465,
+  "meaning_changed_n": 4,
+  "meaning_by_kind": {
+    "room": 0.0,
+    "device": 0.0116,
+    "person": 0.0,
+    "number": 0.0116,
+    "command": 0.0233
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 7.562,
+    "p50": 7.8135,
+    "p90": 9.2725,
+    "rtf": 2.5456,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nicole": {
+      "turns": 7,
+      "wer": 0.0328,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-nova": {
+      "turns": 5,
+      "wer": 0.2308,
+      "meaning_changed": 0.2
+    },
+    "t-k-af-sarah": {
+      "turns": 10,
+      "wer": 0.037,
+      "meaning_changed": 0.1
+    },
+    "t-k-af-sky": {
+      "turns": 4,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-eric": {
+      "turns": 5,
+      "wer": 0.0909,
+      "meaning_changed": 0.4
+    },
+    "t-k-am-liam": {
+      "turns": 8,
+      "wer": 0.0488,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-onyx": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-puck": {
+      "turns": 5,
+      "wer": 0.129,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 8,
+      "wer": 0.12,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 5,
+      "wer": 0.0556,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 8,
+      "wer": 0.0303,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 7,
+      "wer": 0.0169,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 5,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 18,
+      "wer": 0.0762,
+      "meaning_changed": 0.0
+    },
+    "1.0": {
+      "turns": 42,
+      "wer": 0.0543,
+      "meaning_changed": 0.0714
+    },
+    "1.15": {
+      "turns": 26,
+      "wer": 0.0382,
+      "meaning_changed": 0.0385
+    }
+  },
+  "by_noise": {
+    "kitchen": {
+      "turns": 43,
+      "wer": 0.0481,
+      "meaning_changed": 0.0233
+    },
+    "tv": {
+      "turns": 43,
+      "wer": 0.0597,
+      "meaning_changed": 0.0698
+    }
+  },
+  "by_set": {
+    "kokoro__small__noisy10-biased": {
+      "turns": 86,
+      "wer": 0.0539,
+      "meaning_changed": 0.0465
+    }
+  },
+  "samples": [
+    {
+      "id": "b300-3197",
+      "turn": 0,
+      "voice": "t-k-am-eric",
+      "written": "Play Sunday Morning in the master bedroom.",
+      "heard": "Place Sunday morning in the Master Bedroom.",
+      "lost": [
+        [
+          "command",
+          "play"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-15000-1027",
+      "turn": 1,
+      "voice": "t-k-af-sarah",
+      "written": "The lamp 6 please.",
+      "heard": "The lamp sticks, please.",
+      "lost": [
+        [
+          "device",
+          "lamp 6"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-15000-1042",
+      "turn": 0,
+      "voice": "t-k-am-eric",
+      "written": "hey, power up the christmas tree",
+      "heard": "Paying Power of the Christmas Tree",
+      "lost": [
+        [
+          "command",
+          "up"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-6000-538",
+      "turn": 1,
+      "voice": "t-k-af-nova",
+      "written": "The toilet one.",
+      "heard": "The Toilet won.",
+      "lost": [
+        [
+          "number",
+          "1"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

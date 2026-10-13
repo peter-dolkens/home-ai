@@ -1,0 +1,215 @@
+{
+  "set": "bigbench-bundook",
+  "stt": "small",
+  "condition": "lowmic",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 57,
+  "words": 313,
+  "errors": 28,
+  "wer": 0.0895,
+  "exact": 0.7544,
+  "vocab_words": 93,
+  "vocab_errors": 11,
+  "vocab_wer": 0.1183,
+  "vocab": {
+    "room": {
+      "n": 16,
+      "err": 0,
+      "wer": 0.0
+    },
+    "device": {
+      "n": 43,
+      "err": 9,
+      "wer": 0.2093
+    },
+    "person": {
+      "n": 5,
+      "err": 1,
+      "wer": 0.2
+    },
+    "number": {
+      "n": 3,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 26,
+      "err": 1,
+      "wer": 0.0385
+    }
+  },
+  "meaning_changed": 0.0877,
+  "meaning_changed_n": 5,
+  "meaning_by_kind": {
+    "room": 0.0,
+    "device": 0.0702,
+    "person": 0.0175,
+    "number": 0.0,
+    "command": 0.0175
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 4.2473,
+    "p50": 4.1398,
+    "p90": 5.7755,
+    "rtf": 1.6293,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "au-p326": {
+      "turns": 3,
+      "wer": 0.1765,
+      "meaning_changed": 0.3333
+    },
+    "au-p374": {
+      "turns": 6,
+      "wer": 0.087,
+      "meaning_changed": 0.0
+    },
+    "gb-alan": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "gb-alba": {
+      "turns": 8,
+      "wer": 0.06,
+      "meaning_changed": 0.125
+    },
+    "gb-cori": {
+      "turns": 15,
+      "wer": 0.1519,
+      "meaning_changed": 0.1333
+    },
+    "gb-jenny": {
+      "turns": 6,
+      "wer": 0.0263,
+      "meaning_changed": 0.0
+    },
+    "gb-northern-m": {
+      "turns": 6,
+      "wer": 0.1429,
+      "meaning_changed": 0.1667
+    },
+    "us-amy": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "us-lessac": {
+      "turns": 5,
+      "wer": 0.0833,
+      "meaning_changed": 0.0
+    },
+    "us-ryan": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 10,
+      "wer": 0.2558,
+      "meaning_changed": 0.1
+    },
+    "1.0": {
+      "turns": 31,
+      "wer": 0.082,
+      "meaning_changed": 0.0968
+    },
+    "1.15": {
+      "turns": 16,
+      "wer": 0.023,
+      "meaning_changed": 0.0625
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 57,
+      "wer": 0.0895,
+      "meaning_changed": 0.0877
+    }
+  },
+  "by_set": {
+    "bigbench-bundook": {
+      "turns": 57,
+      "wer": 0.0895,
+      "meaning_changed": 0.0877
+    }
+  },
+  "samples": [
+    {
+      "id": "big-bundook_projected-plan-2",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "ok switch the pendant 3 on",
+      "heard": "Okay, switch the pendant through your arm.",
+      "lost": [
+        [
+          "device",
+          "pendant 3"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-12",
+      "turn": 0,
+      "voice": "gb-alba",
+      "written": "is the house shut up",
+      "heard": "Is the high shut up?",
+      "lost": [
+        [
+          "device",
+          "house"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-22",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "Lights to 25 percent.",
+      "heard": "Lies 25%",
+      "lost": [
+        [
+          "device",
+          "lights"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-6",
+      "turn": 0,
+      "voice": "gb-northern-m",
+      "written": "Where's Amber right now?",
+      "heard": "Where's umber right now?",
+      "lost": [
+        [
+          "person",
+          "amber"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-9",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "Shark backup feed on please.",
+      "heard": "Shock, back up, feed on, please.",
+      "lost": [
+        [
+          "device",
+          "shark backup feed"
+        ]
+      ]
+    }
+  ]
+}

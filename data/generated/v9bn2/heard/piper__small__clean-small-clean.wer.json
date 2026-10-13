@@ -1,0 +1,397 @@
+{
+  "set": "piper__small__clean",
+  "stt": "small",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 65,
+  "words": 456,
+  "errors": 66,
+  "wer": 0.1447,
+  "exact": 0.4769,
+  "vocab_words": 147,
+  "vocab_errors": 25,
+  "vocab_wer": 0.1701,
+  "vocab": {
+    "room": {
+      "n": 62,
+      "err": 13,
+      "wer": 0.2097
+    },
+    "device": {
+      "n": 39,
+      "err": 6,
+      "wer": 0.1538
+    },
+    "person": {
+      "n": 1,
+      "err": 1,
+      "wer": 1.0
+    },
+    "number": {
+      "n": 6,
+      "err": 1,
+      "wer": 0.1667
+    },
+    "command": {
+      "n": 39,
+      "err": 4,
+      "wer": 0.1026
+    }
+  },
+  "meaning_changed": 0.2615,
+  "meaning_changed_n": 17,
+  "meaning_by_kind": {
+    "room": 0.1385,
+    "device": 0.0462,
+    "person": 0.0154,
+    "number": 0.0154,
+    "command": 0.0615
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 3.5768,
+    "p50": 3.8031,
+    "p90": 4.3547,
+    "rtf": 1.3432,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-ca-p302": {
+      "turns": 3,
+      "wer": 0.2857,
+      "meaning_changed": 0.6667
+    },
+    "t-ie-p245": {
+      "turns": 4,
+      "wer": 0.1818,
+      "meaning_changed": 0.0
+    },
+    "t-ie-p288": {
+      "turns": 2,
+      "wer": 0.1818,
+      "meaning_changed": 0.5
+    },
+    "t-ld-p243": {
+      "turns": 6,
+      "wer": 0.1429,
+      "meaning_changed": 0.1667
+    },
+    "t-nz-p335": {
+      "turns": 3,
+      "wer": 0.1333,
+      "meaning_changed": 0.0
+    },
+    "t-sc-p234": {
+      "turns": 3,
+      "wer": 0.1111,
+      "meaning_changed": 0.3333
+    },
+    "t-sc-p237": {
+      "turns": 4,
+      "wer": 0.2564,
+      "meaning_changed": 0.0
+    },
+    "t-se-p225": {
+      "turns": 3,
+      "wer": 0.1364,
+      "meaning_changed": 0.3333
+    },
+    "t-sm-prudence": {
+      "turns": 4,
+      "wer": 0.1515,
+      "meaning_changed": 0.5
+    },
+    "t-sm-spike": {
+      "turns": 4,
+      "wer": 0.0233,
+      "meaning_changed": 0.25
+    },
+    "t-wa-p253": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-yk-p267": {
+      "turns": 7,
+      "wer": 0.225,
+      "meaning_changed": 0.4286
+    },
+    "t-yk-p270": {
+      "turns": 4,
+      "wer": 0.25,
+      "meaning_changed": 0.5
+    },
+    "t-za-p323": {
+      "turns": 10,
+      "wer": 0.0492,
+      "meaning_changed": 0.2
+    },
+    "t-za-p347": {
+      "turns": 5,
+      "wer": 0.1951,
+      "meaning_changed": 0.2
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 16,
+      "wer": 0.1351,
+      "meaning_changed": 0.3125
+    },
+    "1.0": {
+      "turns": 34,
+      "wer": 0.1372,
+      "meaning_changed": 0.2941
+    },
+    "1.15": {
+      "turns": 15,
+      "wer": 0.1681,
+      "meaning_changed": 0.1333
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 65,
+      "wer": 0.1447,
+      "meaning_changed": 0.2615
+    }
+  },
+  "by_set": {
+    "piper__small__clean": {
+      "turns": 65,
+      "wer": 0.1447,
+      "meaning_changed": 0.2615
+    }
+  },
+  "samples": [
+    {
+      "id": "b300-2233",
+      "turn": 0,
+      "voice": "t-sm-prudence",
+      "written": "switch the master ensuite downlights on",
+      "heard": "Switch the master and suped downlight song.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2074",
+      "turn": 0,
+      "voice": "t-ca-p302",
+      "written": "hey house, lock the front door please",
+      "heard": "Hey house, block the front door please.",
+      "lost": [
+        [
+          "command",
+          "lock"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2261",
+      "turn": 0,
+      "voice": "t-za-p323",
+      "written": "ok turn off the kitchen downlights",
+      "heard": "Okay, turn off the kitchen downlight.",
+      "lost": [
+        [
+          "device",
+          "downlights"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3287",
+      "turn": 0,
+      "voice": "t-za-p347",
+      "written": "put on the album Discovery in the alfresco please",
+      "heard": "Put on the album Discovery in the old fresco, please.",
+      "lost": [
+        [
+          "room",
+          "alfresco"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3648",
+      "turn": 0,
+      "voice": "t-yk-p267",
+      "written": "ok get the heater going in the master robe please",
+      "heard": "Okay, get the heater going in the muster row please.",
+      "lost": [
+        [
+          "room",
+          "master robe"
+        ]
+      ]
+    },
+    {
+      "id": "b300-4034",
+      "turn": 0,
+      "voice": "t-yk-p267",
+      "written": "Any idea where Ryan is?",
+      "heard": "Any idea where I am is.",
+      "lost": [
+        [
+          "person",
+          "ryan"
+        ]
+      ]
+    },
+    {
+      "id": "b300-881",
+      "turn": 1,
+      "voice": "t-za-p323",
+      "written": "The kitchen one.",
+      "heard": "The kitchen won.",
+      "lost": [
+        [
+          "number",
+          "1"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-1698",
+      "turn": 0,
+      "voice": "t-sc-p234",
+      "written": "please start up ABC Classic in the master bedroom please",
+      "heard": "Please start a BBC classic in the master bedroom, please.",
+      "lost": [
+        [
+          "command",
+          "up"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-1710",
+      "turn": 1,
+      "voice": "t-ca-p302",
+      "written": "Guest ensuite please.",
+      "heard": "Just in sippies",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-1738",
+      "turn": 0,
+      "voice": "t-sm-prudence",
+      "written": "can you switch the carport batten lights on",
+      "heard": "Can you switch the carport baton lights on?",
+      "lost": [
+        [
+          "device",
+          "batten lights"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1895",
+      "turn": 0,
+      "voice": "t-se-p225",
+      "written": "can you set the temperature in lounge to 19 degrees",
+      "heard": "Can you set the temperature in large to 19 degrees?",
+      "lost": [
+        [
+          "room",
+          "lounge"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-15000-1147",
+      "turn": 0,
+      "voice": "t-sm-spike",
+      "written": "hey house, turn it down a bit in the bedroom 2 please",
+      "heard": "Hey house turn it down a bit in the bedroom to please",
+      "lost": [
+        [
+          "room",
+          "bedroom 2"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-15000-1164",
+      "turn": 1,
+      "voice": "t-ld-p243",
+      "written": "Sunroom.",
+      "heard": "Some room",
+      "lost": [
+        [
+          "room",
+          "sunroom"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-15000-1273",
+      "turn": 0,
+      "voice": "t-ie-p288",
+      "written": "Pull the blinds shut in the library",
+      "heard": "Pull the blind shot in the library.",
+      "lost": [
+        [
+          "command",
+          "shut"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-20000-1569",
+      "turn": 1,
+      "voice": "t-yk-p267",
+      "written": "Games room.",
+      "heard": "Den's room",
+      "lost": [
+        [
+          "room",
+          "games room"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-6000-309",
+      "turn": 0,
+      "voice": "t-yk-p270",
+      "written": "get the iron on in here",
+      "heard": "Get that one on here.",
+      "lost": [
+        [
+          "device",
+          "iron"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-6000-309",
+      "turn": 1,
+      "voice": "t-yk-p270",
+      "written": "Workshop please.",
+      "heard": "Work should please.",
+      "lost": [
+        [
+          "room",
+          "workshop"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

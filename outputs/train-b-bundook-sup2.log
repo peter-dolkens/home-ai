@@ -1,0 +1,48 @@
+1621 examples, 1619 on big houses
+small houses: 35, short: {'clarify': -4, 'energy_status': -2, 'goodnight': -1, 'control_named': -1, 'status_entity': -1, 'away_motion': -1, 'control_brightness': -1, 'control_here': -1, 'energy_night': -1, 'control_lock': -1, 'confirm_sensitive': -2, 'control_compound': -1, 'media_transport': -1, 'control_climate': -1, 'control_area': -2, 'media_volume': -1, 'presence_where': -3, 'check_house': -2, 'appliance_status': -1, 'media_play': -2, 'status_aggregate': -1, 'energy_appliance': -1, 'irrigation_control': -1}
+big houses: 1615 of 1619
+paraphrased first utterances: 901 of 1650
+
+1650 -> data/generated/train-b-bundook-sup2.jsonl
+
+category                want   got   big
+clarify                  177   181   181
+presence_where           120   123   123
+energy_status             97    99    99
+check_house               93    95    95
+control_area              86    88    88
+media_play                84    86    86
+confirm_sensitive         75    77    77
+goodnight                 63    64    64
+status_entity             58    59    59
+control_named             57    58    58
+media_transport           50    51    51
+status_aggregate          43    44    44
+control_here              42    43    43
+media_volume              42    43    43
+energy_night              36    37    37
+control_compound          36    37    37
+control_climate           35    36    36
+away_motion               29    30    30
+control_brightness        29    30    30
+energy_appliance          29    30    30
+irrigation_control        29    30    30
+control_lock              28    29    29
+appliance_status          28    29    29
+leaving                   22    22    22
+vehicle_status            22    22    22
+media_what                22    22    22
+who_home                  22    22    22
+weather                   22    22    22
+water_status              21    21    21
+presence_in_room          21    21    21
+missing                   21    21     0
+media_multiroom           20    20    20
+appliance_control         14    14    14
+control_all_lights        14    14    14
+smalltalk                 14    14     0
+clarify_in_room           10     6     6
+act_only_one              10    10    10
+
+big houses: bundook_full : 1125, bundook_projected : 490
+bundook profile (small): 14

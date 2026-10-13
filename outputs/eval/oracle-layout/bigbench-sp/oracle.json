@@ -1,0 +1,11 @@
+{
+  "data": "data/generated/bigbench-sp.jsonl",
+  "layout": "stable_prefix",
+  "examples": 200,
+  "turns": 232,
+  "pass": 1.0,
+  "conversation_pass": 1.0,
+  "errors": 0,
+  "wrong_layout_calls": 0,
+  "seconds": 1797.7
+}

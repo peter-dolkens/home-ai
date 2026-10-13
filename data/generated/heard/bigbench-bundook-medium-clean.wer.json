@@ -1,0 +1,211 @@
+{
+  "set": "bigbench-bundook",
+  "stt": "medium",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 57,
+  "words": 313,
+  "errors": 19,
+  "wer": 0.0607,
+  "exact": 0.807,
+  "vocab_words": 93,
+  "vocab_errors": 8,
+  "vocab_wer": 0.086,
+  "vocab": {
+    "room": {
+      "n": 16,
+      "err": 1,
+      "wer": 0.0625
+    },
+    "device": {
+      "n": 43,
+      "err": 5,
+      "wer": 0.1163
+    },
+    "person": {
+      "n": 5,
+      "err": 1,
+      "wer": 0.2
+    },
+    "number": {
+      "n": 3,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 26,
+      "err": 1,
+      "wer": 0.0385
+    }
+  },
+  "meaning_changed": 0.0877,
+  "meaning_changed_n": 5,
+  "meaning_by_kind": {
+    "room": 0.0175,
+    "device": 0.0526,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0175
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 8.6939,
+    "p50": 8.6992,
+    "p90": 10.3203,
+    "rtf": 3.335,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "au-p326": {
+      "turns": 3,
+      "wer": 0.3529,
+      "meaning_changed": 0.6667
+    },
+    "au-p374": {
+      "turns": 6,
+      "wer": 0.1304,
+      "meaning_changed": 0.1667
+    },
+    "gb-alan": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "gb-alba": {
+      "turns": 8,
+      "wer": 0.04,
+      "meaning_changed": 0.0
+    },
+    "gb-cori": {
+      "turns": 15,
+      "wer": 0.0506,
+      "meaning_changed": 0.1333
+    },
+    "gb-jenny": {
+      "turns": 6,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "gb-northern-m": {
+      "turns": 6,
+      "wer": 0.0571,
+      "meaning_changed": 0.0
+    },
+    "us-amy": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "us-lessac": {
+      "turns": 5,
+      "wer": 0.0833,
+      "meaning_changed": 0.0
+    },
+    "us-ryan": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 10,
+      "wer": 0.1395,
+      "meaning_changed": 0.0
+    },
+    "1.0": {
+      "turns": 31,
+      "wer": 0.0546,
+      "meaning_changed": 0.0968
+    },
+    "1.15": {
+      "turns": 16,
+      "wer": 0.0345,
+      "meaning_changed": 0.125
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 57,
+      "wer": 0.0607,
+      "meaning_changed": 0.0877
+    }
+  },
+  "by_set": {
+    "bigbench-bundook": {
+      "turns": 57,
+      "wer": 0.0607,
+      "meaning_changed": 0.0877
+    }
+  },
+  "samples": [
+    {
+      "id": "big-bundook_full-plan-1",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "turn on the batten lights",
+      "heard": "Turn on the Baton lights.",
+      "lost": [
+        [
+          "device",
+          "batten lights"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-22",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "Lights to 25 percent.",
+      "heard": "lies 25 percent",
+      "lost": [
+        [
+          "device",
+          "lights"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-9",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "Shark backup feed on please.",
+      "heard": "Shock backup feed on please.",
+      "lost": [
+        [
+          "device",
+          "shark backup feed"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_projected-plan-10",
+      "turn": 1,
+      "voice": "au-p374",
+      "written": "Pete's office.",
+      "heard": "Pizza office.",
+      "lost": [
+        [
+          "room",
+          "petes office"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_projected-plan-11",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "dim the lights to 100 percent thanks",
+      "heard": "Tim the lights to 100% thanks.",
+      "lost": [
+        [
+          "command",
+          "dim"
+        ]
+      ]
+    }
+  ]
+}

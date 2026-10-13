@@ -1,0 +1,122 @@
+6536 rows, 4605 eligible (no held-out user turn), 2941 to round-trip in 10 groups:
+  kokoro  medium    biased             522 conversations,   554 turns
+  kokoro  medium    farfield-biased    733 conversations,   779 turns
+  kokoro  medium    noisy10-biased     616 conversations,   665 turns
+  kokoro  parakeet  farfield           102 conversations,   113 turns
+  kokoro  parakeet  noisy10             99 conversations,   108 turns
+  piper   medium    biased             221 conversations,   242 turns
+  piper   medium    farfield-biased    287 conversations,   302 turns
+  piper   medium    noisy10-biased     276 conversations,   297 turns
+  piper   parakeet  farfield            48 conversations,    51 turns
+  piper   parakeet  noisy10             37 conversations,    41 turns
+  tts 400/2121 145s
+  tts 800/2121 292s
+  tts 1200/2121 459s
+  tts 1600/2121 638s
+  tts 2000/2121 849s
+tts: 2219 turns, 2213 distinct utterances, 2121 synthesised in 904s
+  tts 400/912 73s
+  tts 800/912 146s
+tts: 933 turns, 932 distinct utterances, 912 synthesised in 164s
+tts: 554 turns, 554 distinct utterances, 0 synthesised in 0s
+medium: 554 transcriptions to run (0 cached), 3 workers x 3 threads
+  medium 200/554 747s (3.73s each, 1322s left)
+  medium 400/554 1454s (3.63s each, 560s left)
+  medium 554/554 2003s (3.62s each, 0s left)
+  kokoro__medium__biased-medium-biased-kokoro: WER 2.4%  vocab 1.4%  meaning changed 1.8%  (554 turns)
+tts: 779 turns, 779 distinct utterances, 0 synthesised in 0s
+medium: 779 transcriptions to run (0 cached), 3 workers x 3 threads
+  medium 200/779 965s (4.82s each, 2793s left)
+  medium 400/779 1870s (4.68s each, 1772s left)
+  medium 600/779 2973s (4.95s each, 887s left)
+  medium 779/779 4104s (5.27s each, 0s left)
+  kokoro__medium__farfield-biased-medium-farfield-biased-kokoro: WER 3.3%  vocab 2.3%  meaning changed 3.6%  (779 turns)
+tts: 665 turns, 664 distinct utterances, 0 synthesised in 0s
+medium: 665 transcriptions to run (0 cached), 3 workers x 3 threads
+  medium 200/665 1279s (6.40s each, 2974s left)
+  medium 400/665 2356s (5.89s each, 1561s left)
+  medium 600/665 3382s (5.64s each, 366s left)
+  medium 665/665 3697s (5.56s each, 0s left)
+  kokoro__medium__noisy10-biased-medium-noisy10-biased-kokoro: WER 4.8%  vocab 3.4%  meaning changed 5.6%  (665 turns)
+tts: 113 turns, 113 distinct utterances, 0 synthesised in 0s
+parakeet: 113 transcriptions to run (0 cached), 4 workers x 2 threads
+Unknown CPU vendor. cpuinfo_vendor value: 0
+  parakeet 113/113 17s (0.15s each, 0s left)
+  kokoro__parakeet__farfield-parakeet-farfield-kokoro: WER 6.8%  vocab 6.2%  meaning changed 10.6%  (113 turns)
+tts: 108 turns, 108 distinct utterances, 0 synthesised in 0s
+parakeet: 108 transcriptions to run (0 cached), 4 workers x 2 threads
+
+  parakeet 108/108 16s (0.15s each, 0s left)
+  kokoro__parakeet__noisy10-parakeet-noisy10-kokoro: WER 13.7%  vocab 10.2%  meaning changed 17.6%  (108 turns)
+tts: 242 turns, 242 distinct utterances, 0 synthesised in 0s
+medium: 242 transcriptions to run (0 cached), 3 workers x 3 threads
+  medium 200/242 1080s (5.40s each, 227s left)
+  medium 242/242 1205s (4.98s each, 0s left)
+  piper__medium__biased-medium-biased: WER 7.8%  vocab 3.7%  meaning changed 7.0%  (242 turns)
+tts: 302 turns, 301 distinct utterances, 0 synthesised in 0s
+medium: 302 transcriptions to run (0 cached), 3 workers x 3 threads
+  medium 200/302 951s (4.75s each, 485s left)
+  medium 302/302 1347s (4.46s each, 0s left)
+  piper__medium__farfield-biased-medium-farfield-biased: WER 18.7%  vocab 14.2%  meaning changed 24.8%  (302 turns)
+tts: 297 turns, 297 distinct utterances, 0 synthesised in 0s
+medium: 297 transcriptions to run (0 cached), 3 workers x 3 threads
+  medium 200/297 906s (4.53s each, 439s left)
+  medium 297/297 1287s (4.33s each, 0s left)
+  piper__medium__noisy10-biased-medium-noisy10-biased: WER 21.6%  vocab 16.3%  meaning changed 22.2%  (297 turns)
+tts: 51 turns, 51 distinct utterances, 0 synthesised in 0s
+parakeet: 51 transcriptions to run (0 cached), 4 workers x 2 threads
+
+
+
+  parakeet 51/51 7s (0.13s each, 0s left)
+  piper__parakeet__farfield-parakeet-farfield: WER 26.2%  vocab 31.0%  meaning changed 49.0%  (51 turns)
+tts: 41 turns, 41 distinct utterances, 0 synthesised in 0s
+parakeet: 41 transcriptions to run (0 cached), 4 workers x 2 threads
+  parakeet 41/41 6s (0.15s each, 0s left)
+  piper__parakeet__noisy10-parakeet-noisy10: WER 38.2%  vocab 38.2%  meaning changed 56.1%  (41 turns)
+round trip: tts 1076 s, stt 13916 s (host frogmouth)
+{
+ "casing": 293,
+ "homophone": 327,
+ "homophone:ambiguous": 4,
+ "homophone:homophone": 160,
+ "homophone:number": 65,
+ "homophone:split": 98,
+ "roundtrip": 2796,
+ "roundtrip:kokoro": 2033,
+ "roundtrip:medium-biased": 731,
+ "roundtrip:medium-farfield-biased": 976,
+ "roundtrip:medium-noisy10-biased": 838,
+ "roundtrip:parakeet-farfield": 135,
+ "roundtrip:parakeet-noisy10": 116,
+ "roundtrip:piper": 763,
+ "roundtrip_all_turns_kept_written": 145,
+ "roundtrip_turn_kept_written:garbled": 168,
+ "roundtrip_turn_kept_written:held-out": 3,
+ "roundtrip_turns": 2981,
+ "unchanged": 949,
+ "unchanged_inherited_overlap": 1931
+}
+leakage: {"file": "data/generated/train-b-hm.jsonl", "held_out_utterances": 19012, "augmented_rows": 3416, "augmented_overlap_turns": 0, "augmented_overlap_distinct": 0, "augmented_examples": [], "inherited_overlap_turns": 2249, "inherited_overlap_distinct": 394}
+  [casing] 'can you pause it in the master bedroom' -> 'Can you pause it in the master bedroom?'
+  [casing] 'whereabouts is Marcus' -> 'Whereabouts is Marcus.'
+  [casing] 'do you know where Ruby is' -> 'Do you know where Ruby is?'
+  [homophone:ambiguous] 'right, lock the door in the laundry' -> 'right, look the door in the laundry'
+  [homophone:ambiguous] 'lock up the Deck door' -> 'look up the Deck door'
+  [homophone:ambiguous] 'lock the workshop door' -> 'look the workshop door'
+  [homophone:homophone] 'Shut the lights off' -> 'Shut the likes off'
+  [homophone:homophone] 'um, turn on the battery shed lights and then turn off the guest robe lights' -> 'um, turn on the battery shed lights and then turn of the guest robe lights'
+  [homophone:homophone] 'hey house, can you turn the tv off please' -> 'hey house, can you turn the tv of please'
+  [homophone:number] 'floodlight 2 off' -> 'floodlight two off'
+  [homophone:number] 'Can you set the aircon to 24?' -> 'Can you set the aircon to twenty four?'
+  [homophone:number] 'Lamp 1 thanks.' -> 'Lamp one thanks.'
+  [homophone:split] 'quick question, can you get the lights on in both the living room and the bedroom' -> 'quick question, can you get the lights on in both the living room and the bed room'
+  [homophone:split] 'switch the master ensuite towel rail on' -> 'switch the master en suite towel rail on'
+  [homophone:split] 'um, kill the dishwasher' -> 'um, kill the dish washer'
+  [roundtrip] 'when does sunset happen' -> 'When does something happen?'
+  [roundtrip] 'Make it 24 degrees in the master bedroom.' -> 'Make it 24 degrees in the master bedroom.'
+  [roundtrip] 'Give the vegie beds 10 minutes of water' -> 'Give the veggie beds ten minutes of water.'
+{"file": "data/generated/train-b-v11.jsonl", "held_out_utterances": 19012, "augmented_rows": 4153, "augmented_overlap_turns": 0, "augmented_overlap_distinct": 0, "augmented_examples": [], "inherited_overlap_turns": 2818, "inherited_overlap_distinct": 418}
+  inherited, most common: [('yes please', 148), ('yes', 135), ('go ahead', 119), ('please', 84), ('yes do all that', 71), ('yep', 47), ('do it', 40), ('leave it', 31)]
+{"src": "data/generated/train-b-split.jsonl", "dst": "data/generated/train-b-hm.jsonl", "rows": 6536, "layouts": {"stable_prefix": 6536}, "problems": 0, "examples": []}
+2026-10-06 22:17:23 build-b-v11 done

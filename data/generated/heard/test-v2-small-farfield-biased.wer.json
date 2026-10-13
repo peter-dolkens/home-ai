@@ -1,0 +1,440 @@
+{
+  "set": "test-v2",
+  "stt": "small",
+  "condition": "farfield-biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 174,
+  "words": 1027,
+  "errors": 111,
+  "wer": 0.1081,
+  "exact": 0.6494,
+  "vocab_words": 332,
+  "vocab_errors": 29,
+  "vocab_wer": 0.0873,
+  "vocab": {
+    "room": {
+      "n": 89,
+      "err": 7,
+      "wer": 0.0787
+    },
+    "device": {
+      "n": 123,
+      "err": 12,
+      "wer": 0.0976
+    },
+    "person": {
+      "n": 14,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 9,
+      "err": 1,
+      "wer": 0.1111
+    },
+    "command": {
+      "n": 97,
+      "err": 9,
+      "wer": 0.0928
+    }
+  },
+  "meaning_changed": 0.1207,
+  "meaning_changed_n": 21,
+  "meaning_by_kind": {
+    "room": 0.023,
+    "device": 0.0575,
+    "person": 0.0,
+    "number": 0.0057,
+    "command": 0.0517
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 5.3799,
+    "p50": 5.2762,
+    "p90": 5.8948,
+    "rtf": 2.013,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "au-p326": {
+      "turns": 15,
+      "wer": 0.1585,
+      "meaning_changed": 0.2667
+    },
+    "au-p374": {
+      "turns": 14,
+      "wer": 0.1348,
+      "meaning_changed": 0.2143
+    },
+    "gb-alan": {
+      "turns": 13,
+      "wer": 0.0482,
+      "meaning_changed": 0.0
+    },
+    "gb-alba": {
+      "turns": 15,
+      "wer": 0.0899,
+      "meaning_changed": 0.0667
+    },
+    "gb-cori": {
+      "turns": 19,
+      "wer": 0.1651,
+      "meaning_changed": 0.0526
+    },
+    "gb-jenny": {
+      "turns": 13,
+      "wer": 0.1607,
+      "meaning_changed": 0.1538
+    },
+    "gb-northern-m": {
+      "turns": 15,
+      "wer": 0.1071,
+      "meaning_changed": 0.1333
+    },
+    "gb-southern-f": {
+      "turns": 20,
+      "wer": 0.1692,
+      "meaning_changed": 0.25
+    },
+    "us-amy": {
+      "turns": 13,
+      "wer": 0.0282,
+      "meaning_changed": 0.0
+    },
+    "us-lessac": {
+      "turns": 18,
+      "wer": 0.12,
+      "meaning_changed": 0.1667
+    },
+    "us-ryan": {
+      "turns": 19,
+      "wer": 0.0149,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 41,
+      "wer": 0.1937,
+      "meaning_changed": 0.2683
+    },
+    "1.0": {
+      "turns": 84,
+      "wer": 0.0771,
+      "meaning_changed": 0.0714
+    },
+    "1.15": {
+      "turns": 49,
+      "wer": 0.0854,
+      "meaning_changed": 0.0816
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 174,
+      "wer": 0.1081,
+      "meaning_changed": 0.1207
+    }
+  },
+  "by_set": {
+    "test-v2": {
+      "turns": 174,
+      "wer": 0.1081,
+      "meaning_changed": 0.1207
+    }
+  },
+  "samples": [
+    {
+      "id": "1-1347",
+      "turn": 0,
+      "voice": "gb-northern-m",
+      "written": "turn on the mudroom lights, and turn off the workshop lights",
+      "heard": "Turn on the measuring lights, and turn off the worship lights.",
+      "lost": [
+        [
+          "room",
+          "mudroom"
+        ],
+        [
+          "room",
+          "workshop"
+        ]
+      ]
+    },
+    {
+      "id": "1-1532",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "quick question, we're away for the day, can you check on the house for me",
+      "heard": "Quick questions, either day, give me two comments.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ],
+        [
+          "device",
+          "house"
+        ]
+      ]
+    },
+    {
+      "id": "1-1603",
+      "turn": 0,
+      "voice": "us-lessac",
+      "written": "is the fan on in the dining room",
+      "heard": "Is the Fair Lord in the Dining Room?",
+      "lost": [
+        [
+          "device",
+          "fan"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "1-2758",
+      "turn": 0,
+      "voice": "gb-southern-f",
+      "written": "Turn on the towel rail in the guest ensuite.",
+      "heard": "Turn on the tower rail in the guestensuit.",
+      "lost": [
+        [
+          "device",
+          "towel rail"
+        ],
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "1-1087",
+      "turn": 0,
+      "voice": "us-lessac",
+      "written": "Is the fan on in the guest ensuite?",
+      "heard": "Is the fan on at the guest ensued?",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "1-1147",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "Play Daft Punk.",
+      "heard": "Bye Jack, Thank You.",
+      "lost": [
+        [
+          "command",
+          "play"
+        ]
+      ]
+    },
+    {
+      "id": "1-128",
+      "turn": 0,
+      "voice": "gb-southern-f",
+      "written": "Play the The Rest Is History podcast.",
+      "heard": "Plainer the Rest is History podcast.",
+      "lost": [
+        [
+          "command",
+          "play"
+        ]
+      ]
+    },
+    {
+      "id": "1-1327",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "how's the house looking? We're not home",
+      "heard": "How's the house looking? We love them.",
+      "lost": [
+        [
+          "device",
+          "home"
+        ]
+      ]
+    },
+    {
+      "id": "1-1528",
+      "turn": 1,
+      "voice": "gb-southern-f",
+      "written": "Yeah open it.",
+      "heard": "Yes, over there.",
+      "lost": [
+        [
+          "command",
+          "open"
+        ]
+      ]
+    },
+    {
+      "id": "1-1539",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "Put on jazz in the master bedroom.",
+      "heard": "Put them jazz in the Master Bedroom.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "1-1845",
+      "turn": 0,
+      "voice": "au-p374",
+      "written": "hey, what's our power situation",
+      "heard": "Hey, what's up, how's the situation?",
+      "lost": [
+        [
+          "device",
+          "power"
+        ]
+      ]
+    },
+    {
+      "id": "1-1914",
+      "turn": 0,
+      "voice": "au-p374",
+      "written": "Are the doors shut?",
+      "heard": "Other dust shots.",
+      "lost": [
+        [
+          "command",
+          "shut"
+        ]
+      ]
+    },
+    {
+      "id": "1-222",
+      "turn": 0,
+      "voice": "us-lessac",
+      "written": "fan on",
+      "heard": "Then on.",
+      "lost": [
+        [
+          "device",
+          "fan"
+        ]
+      ]
+    },
+    {
+      "id": "1-231",
+      "turn": 0,
+      "voice": "gb-northern-m",
+      "written": "hey house, how charged is BYD Shark",
+      "heard": "Hey House, how charged is BYD Charlotte?",
+      "lost": [
+        [
+          "device",
+          "byd shark"
+        ]
+      ]
+    },
+    {
+      "id": "1-2528",
+      "turn": 0,
+      "voice": "gb-southern-f",
+      "written": "Turn on the hot water.",
+      "heard": "Ceiling, Hot Water",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "1-2538",
+      "turn": 0,
+      "voice": "gb-jenny",
+      "written": "did we leave any windows open",
+      "heard": "Did we leave any winters open?",
+      "lost": [
+        [
+          "device",
+          "windows"
+        ]
+      ]
+    },
+    {
+      "id": "1-2566",
+      "turn": 0,
+      "voice": "au-p374",
+      "written": "Hot water heat pump off please.",
+      "heard": "I don't want a heat pump off, please.",
+      "lost": [
+        [
+          "device",
+          "hot water heat pump"
+        ]
+      ]
+    },
+    {
+      "id": "1-2638",
+      "turn": 0,
+      "voice": "gb-jenny",
+      "written": "Is BYD Shark plugged in?",
+      "heard": "SPYT Shock plugged in.",
+      "lost": [
+        [
+          "device",
+          "byd shark"
+        ]
+      ]
+    },
+    {
+      "id": "1-2711",
+      "turn": 1,
+      "voice": "au-p326",
+      "written": "The dining hall one.",
+      "heard": "Dining Hall.",
+      "lost": [
+        [
+          "number",
+          "1"
+        ]
+      ]
+    },
+    {
+      "id": "1-457",
+      "turn": 0,
+      "voice": "gb-alba",
+      "written": "Tv on.",
+      "heard": "TV Bonn.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "1-989",
+      "turn": 0,
+      "voice": "gb-southern-f",
+      "written": "Turn off the lights in the master bedroom and the guest ensuite.",
+      "heard": "Turn off the lights in the Master Bedroom and the guesting suit.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    }
+  ]
+}

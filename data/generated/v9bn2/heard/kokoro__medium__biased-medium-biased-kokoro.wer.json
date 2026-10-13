@@ -1,0 +1,216 @@
+{
+  "set": "kokoro__medium__biased",
+  "stt": "medium",
+  "condition": "biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 107,
+  "words": 656,
+  "errors": 17,
+  "wer": 0.0259,
+  "exact": 0.8879,
+  "vocab_words": 191,
+  "vocab_errors": 6,
+  "vocab_wer": 0.0314,
+  "vocab": {
+    "room": {
+      "n": 56,
+      "err": 0,
+      "wer": 0.0
+    },
+    "device": {
+      "n": 72,
+      "err": 4,
+      "wer": 0.0556
+    },
+    "person": {
+      "n": 10,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 13,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 40,
+      "err": 2,
+      "wer": 0.05
+    }
+  },
+  "meaning_changed": 0.028,
+  "meaning_changed_n": 3,
+  "meaning_by_kind": {
+    "room": 0.0,
+    "device": 0.0093,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0187
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 8.488,
+    "p50": 8.7129,
+    "p90": 9.8055,
+    "rtf": 2.8965,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nicole": {
+      "turns": 4,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-nova": {
+      "turns": 8,
+      "wer": 0.0317,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sarah": {
+      "turns": 5,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sky": {
+      "turns": 9,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-eric": {
+      "turns": 11,
+      "wer": 0.0137,
+      "meaning_changed": 0.0909
+    },
+    "t-k-am-liam": {
+      "turns": 10,
+      "wer": 0.0392,
+      "meaning_changed": 0.1
+    },
+    "t-k-am-onyx": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-puck": {
+      "turns": 10,
+      "wer": 0.1,
+      "meaning_changed": 0.1
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 11,
+      "wer": 0.029,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 7,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 8,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 9,
+      "wer": 0.0476,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 7,
+      "wer": 0.0465,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 29,
+      "wer": 0.046,
+      "meaning_changed": 0.0345
+    },
+    "1.0": {
+      "turns": 51,
+      "wer": 0.0226,
+      "meaning_changed": 0.0392
+    },
+    "1.15": {
+      "turns": 27,
+      "wer": 0.0116,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 107,
+      "wer": 0.0259,
+      "meaning_changed": 0.028
+    }
+  },
+  "by_set": {
+    "kokoro__medium__biased": {
+      "turns": 107,
+      "wer": 0.0259,
+      "meaning_changed": 0.028
+    }
+  },
+  "samples": [
+    {
+      "id": "b300-2043",
+      "turn": 0,
+      "voice": "t-k-am-eric",
+      "written": "Lock the front door",
+      "heard": "Log the front door.",
+      "lost": [
+        [
+          "command",
+          "lock"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-10000-943",
+      "turn": 0,
+      "voice": "t-k-am-puck",
+      "written": "hey house, wall light 1 off",
+      "heard": "Hey how's Wallet went off?",
+      "lost": [
+        [
+          "device",
+          "house wall light 1"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-15000-1060",
+      "turn": 0,
+      "voice": "t-k-am-liam",
+      "written": "hey house, dim the lights in the front deck to 30 percent",
+      "heard": "Hay House dimmed the lights in the front deck to 30%.",
+      "lost": [
+        [
+          "command",
+          "dim"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

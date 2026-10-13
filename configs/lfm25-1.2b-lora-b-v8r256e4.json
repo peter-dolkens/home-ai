@@ -1,0 +1,39 @@
+{
+ "_comment": "LFM B-v8 r256, 4 epochs (8 Oct): 3 epochs gave a small, consistent gain over 2 (two seeds each: B sets 83.3 vs 82.7, heard 79.7 vs 79.0, medium names-biased 3 m 78.1 vs 75.9); does a 4th help or overfit?",
+ "base_model": "LiquidAI/LFM2.5-1.2B-Instruct",
+ "hf_tokenizer": "LiquidAI/LFM2.5-1.2B-Instruct",
+ "ollama_template_from": "lfm2.5-1.2b",
+ "instruction_part": "<|im_start|>user\n",
+ "response_part": "<|im_start|>assistant\n",
+ "max_seq_len": 4608,
+ "lora_r": 256,
+ "lora_alpha": 256,
+ "epochs": 4,
+ "lr": 0.0002,
+ "batch_size": 2,
+ "grad_accum": 8,
+ "seed": 3407,
+ "train": "data/generated/train-b-v8.jsonl",
+ "val": "data/generated/val-b.jsonl",
+ "out": "outputs/lfm25-1.2b-lora-b-v8r256e4",
+ "load_in_4bit": false,
+ "mask_spans": [
+  [
+   "<|im_start|>tool\n",
+   "<|im_end|>"
+  ]
+ ],
+ "target_modules": [
+  "q_proj",
+  "k_proj",
+  "v_proj",
+  "out_proj",
+  "in_proj",
+  "w1",
+  "w2",
+  "w3"
+ ],
+ "chat_template_from": "LiquidAI/LFM2.5-350M",
+ "note": "fix2: 350M's LFM2.5 template (the unsloth 1.2B mirror's template drops tool calls)",
+ "prompt_layout": "user_context"
+}

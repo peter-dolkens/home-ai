@@ -1,0 +1,92 @@
+{
+  "model": "homeai-spark-x25-4b-lora-b-v6n-r32",
+  "mode": "e2e",
+  "host": "cassowary",
+  "hardware": "rtx-3090",
+  "ollama": "http://localhost:11435",
+  "prompt_layout": "stable_prefix",
+  "data": "data/generated/wild2-b.jsonl",
+  "examples": 240,
+  "turns": 344,
+  "pass": 0.8197674418604651,
+  "conversation_pass": 0.75,
+  "seconds_per_turn": 0.3249834823472547,
+  "calls_per_request": 2.0406976744186047,
+  "errors": 0,
+  "by_kind": {
+    "act": {
+      "n": 165,
+      "ok": 134
+    },
+    "state": {
+      "n": 344,
+      "ok": 309
+    },
+    "reply": {
+      "n": 344,
+      "ok": 317
+    },
+    "answer": {
+      "n": 179,
+      "ok": 148
+    }
+  },
+  "by_category": {
+    "wild_media": {
+      "n": 46,
+      "ok": 42
+    },
+    "wild_control": {
+      "n": 48,
+      "ok": 37
+    },
+    "wild_status": {
+      "n": 38,
+      "ok": 33
+    },
+    "wild_energy": {
+      "n": 25,
+      "ok": 20
+    },
+    "wild_water": {
+      "n": 15,
+      "ok": 14
+    },
+    "wild_confirm": {
+      "n": 26,
+      "ok": 25
+    },
+    "wild_clarify": {
+      "n": 28,
+      "ok": 21
+    },
+    "wild_missing": {
+      "n": 11,
+      "ok": 11
+    },
+    "wild_presence": {
+      "n": 25,
+      "ok": 16
+    },
+    "wild_appliance": {
+      "n": 18,
+      "ok": 14
+    },
+    "wild_routine": {
+      "n": 26,
+      "ok": 18
+    },
+    "wild_smalltalk": {
+      "n": 11,
+      "ok": 10
+    },
+    "wild_mixed": {
+      "n": 19,
+      "ok": 14
+    },
+    "wild_vehicle": {
+      "n": 8,
+      "ok": 7
+    }
+  }
+}

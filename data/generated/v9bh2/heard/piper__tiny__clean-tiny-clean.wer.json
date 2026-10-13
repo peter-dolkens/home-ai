@@ -1,0 +1,207 @@
+{
+  "set": "piper__tiny__clean",
+  "stt": "tiny",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 17,
+  "words": 96,
+  "errors": 24,
+  "wer": 0.25,
+  "exact": 0.4118,
+  "vocab_words": 33,
+  "vocab_errors": 6,
+  "vocab_wer": 0.1818,
+  "vocab": {
+    "room": {
+      "n": 12,
+      "err": 2,
+      "wer": 0.1667
+    },
+    "device": {
+      "n": 10,
+      "err": 2,
+      "wer": 0.2
+    },
+    "person": {
+      "n": 0,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 3,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 8,
+      "err": 2,
+      "wer": 0.25
+    }
+  },
+  "meaning_changed": 0.2353,
+  "meaning_changed_n": 4,
+  "meaning_by_kind": {
+    "room": 0.1176,
+    "device": 0.1176,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.1176
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 0.3546,
+    "p50": 0.3677,
+    "p90": 0.3956,
+    "rtf": 0.1446,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-ca-p302": {
+      "turns": 3,
+      "wer": 0.2222,
+      "meaning_changed": 0.3333
+    },
+    "t-ie-p245": {
+      "turns": 1,
+      "wer": 0.1667,
+      "meaning_changed": 0.0
+    },
+    "t-ld-p243": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-se-p225": {
+      "turns": 3,
+      "wer": 0.15,
+      "meaning_changed": 0.3333
+    },
+    "t-sm-prudence": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-sm-spike": {
+      "turns": 2,
+      "wer": 0.5,
+      "meaning_changed": 0.0
+    },
+    "t-wa-p253": {
+      "turns": 1,
+      "wer": 0.625,
+      "meaning_changed": 1.0
+    },
+    "t-yk-p267": {
+      "turns": 1,
+      "wer": 0.8,
+      "meaning_changed": 0.0
+    },
+    "t-yk-p270": {
+      "turns": 3,
+      "wer": 0.125,
+      "meaning_changed": 0.3333
+    },
+    "t-za-p347": {
+      "turns": 1,
+      "wer": 0.6667,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 5,
+      "wer": 0.2759,
+      "meaning_changed": 0.2
+    },
+    "1.0": {
+      "turns": 10,
+      "wer": 0.1964,
+      "meaning_changed": 0.2
+    },
+    "1.15": {
+      "turns": 2,
+      "wer": 0.4545,
+      "meaning_changed": 0.5
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 17,
+      "wer": 0.25,
+      "meaning_changed": 0.2353
+    }
+  },
+  "by_set": {
+    "piper__tiny__clean": {
+      "turns": 17,
+      "wer": 0.25,
+      "meaning_changed": 0.2353
+    }
+  },
+  "samples": [
+    {
+      "id": "bbig-bundook_full-plan-49-s2",
+      "turn": 0,
+      "voice": "t-se-p225",
+      "written": "um, switch the floodlight 2 off thanks",
+      "heard": "Switch the floodlight to your thanks.",
+      "lost": [
+        [
+          "device",
+          "floodlight 2"
+        ],
+        [
+          "command",
+          "off"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1397-s2",
+      "turn": 0,
+      "voice": "t-wa-p253",
+      "written": "Start up BBC World Service in Amber's office",
+      "heard": "Start.bbcworldservice in ambus office.",
+      "lost": [
+        [
+          "command",
+          "up"
+        ],
+        [
+          "room",
+          "ambers office"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-1048-s2",
+      "turn": 0,
+      "voice": "t-yk-p270",
+      "written": "what's the solar forecast for tomorrow",
+      "heard": "What's this all forecast for tomorrow?",
+      "lost": [
+        [
+          "device",
+          "solar"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-117-s2",
+      "turn": 0,
+      "voice": "t-ca-p302",
+      "written": "make it 21 degrees in Pete's office",
+      "heard": "Make a 21 degrees in pizza office.",
+      "lost": [
+        [
+          "room",
+          "petes office"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

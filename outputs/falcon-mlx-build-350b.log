@@ -1,0 +1,13 @@
+2026-10-13 13:41:48 mlx_lm.convert mlx6
+[INFO] Loading
+[INFO] Using dtype: bfloat16
+[INFO] Quantizing
+[INFO] Quantized model with 6.502 bits per weight.
+2026-10-13 13:42:02 mlx_lm.convert mlx8
+[INFO] Loading
+[INFO] Using dtype: bfloat16
+[INFO] Quantizing
+[INFO] Quantized model with 8.501 bits per weight.
+2026-10-13 13:42:17 push mlx/homeai-lfm25-350m-lora-b-v8r256e4-mlx6 (279 MB)
+2026-10-13 13:42:35 push mlx/homeai-lfm25-350m-lora-b-v8r256e4-mlx8 (363 MB)
+2026-10-13 13:42:58 homeai-lfm25-350m-lora-b-v8r256e4 MLX artifacts pushed: mlx6 mlx8

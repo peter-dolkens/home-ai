@@ -1,0 +1,359 @@
+{
+  "set": "kokoro__small__clean",
+  "stt": "small",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 176,
+  "words": 1149,
+  "errors": 42,
+  "wer": 0.0366,
+  "exact": 0.8295,
+  "vocab_words": 381,
+  "vocab_errors": 19,
+  "vocab_wer": 0.0499,
+  "vocab": {
+    "room": {
+      "n": 130,
+      "err": 13,
+      "wer": 0.1
+    },
+    "device": {
+      "n": 124,
+      "err": 4,
+      "wer": 0.0323
+    },
+    "person": {
+      "n": 16,
+      "err": 2,
+      "wer": 0.125
+    },
+    "number": {
+      "n": 14,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 97,
+      "err": 0,
+      "wer": 0.0
+    }
+  },
+  "meaning_changed": 0.0795,
+  "meaning_changed_n": 14,
+  "meaning_by_kind": {
+    "room": 0.0568,
+    "device": 0.017,
+    "person": 0.0057,
+    "number": 0.0,
+    "command": 0.0
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 4.1689,
+    "p50": 4.2546,
+    "p90": 4.7529,
+    "rtf": 1.3724,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nicole": {
+      "turns": 14,
+      "wer": 0.0233,
+      "meaning_changed": 0.0714
+    },
+    "t-k-af-nova": {
+      "turns": 13,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sarah": {
+      "turns": 13,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sky": {
+      "turns": 16,
+      "wer": 0.0513,
+      "meaning_changed": 0.125
+    },
+    "t-k-am-eric": {
+      "turns": 7,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-liam": {
+      "turns": 11,
+      "wer": 0.0746,
+      "meaning_changed": 0.1818
+    },
+    "t-k-am-onyx": {
+      "turns": 7,
+      "wer": 0.0455,
+      "meaning_changed": 0.1429
+    },
+    "t-k-am-puck": {
+      "turns": 10,
+      "wer": 0.0222,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 12,
+      "wer": 0.0581,
+      "meaning_changed": 0.1667
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 14,
+      "wer": 0.0455,
+      "meaning_changed": 0.0714
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 5,
+      "wer": 0.0357,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 11,
+      "wer": 0.0545,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 4,
+      "wer": 0.0476,
+      "meaning_changed": 0.25
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 11,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 16,
+      "wer": 0.0333,
+      "meaning_changed": 0.0625
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 12,
+      "wer": 0.0784,
+      "meaning_changed": 0.25
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 41,
+      "wer": 0.0365,
+      "meaning_changed": 0.0488
+    },
+    "1.0": {
+      "turns": 96,
+      "wer": 0.0358,
+      "meaning_changed": 0.0729
+    },
+    "1.15": {
+      "turns": 39,
+      "wer": 0.0386,
+      "meaning_changed": 0.1282
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 176,
+      "wer": 0.0366,
+      "meaning_changed": 0.0795
+    }
+  },
+  "by_set": {
+    "kokoro__small__clean": {
+      "turns": 176,
+      "wer": 0.0366,
+      "meaning_changed": 0.0795
+    }
+  },
+  "samples": [
+    {
+      "id": "b300-1823",
+      "turn": 0,
+      "voice": "t-k-bm-lewis-fable",
+      "written": "Switch the lights off in alfresco and turn off the fan in the master ensuite",
+      "heard": "Switch the lights off in Alfresco and turn off the fan in the master-in-suit.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "b300-1896",
+      "turn": 0,
+      "voice": "t-k-bm-lewis-fable",
+      "written": "right, turn off the guest ensuite lights and turn on the workshop lights",
+      "heard": "Right turn off the guest in suit lights and turn on the workshop lights.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2144",
+      "turn": 0,
+      "voice": "t-k-af-sky",
+      "written": "Switch Molly's room ceiling light off.",
+      "heard": "Switch Mali's room ceiling light off.",
+      "lost": [
+        [
+          "room",
+          "mollys room"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2155",
+      "turn": 0,
+      "voice": "t-k-bf-alice-lily",
+      "written": "Start the downlights in master ensuite",
+      "heard": "Start the downlights in master-in-suit.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3627",
+      "turn": 0,
+      "voice": "t-k-am-onyx",
+      "written": "hey house, which song is this",
+      "heard": "Hey how's which song is this",
+      "lost": [
+        [
+          "device",
+          "house"
+        ]
+      ]
+    },
+    {
+      "id": "b300-4121",
+      "turn": 0,
+      "voice": "t-k-am-liam",
+      "written": "hey house",
+      "heard": "Hey, how's",
+      "lost": [
+        [
+          "device",
+          "house"
+        ]
+      ]
+    },
+    {
+      "id": "b300-990",
+      "turn": 1,
+      "voice": "t-k-bm-george-lewis",
+      "written": "The one in the guest ensuite.",
+      "heard": "The one in the guest and suit.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-1657",
+      "turn": 0,
+      "voice": "t-k-am-liam",
+      "written": "What temperature is the alfresco?",
+      "heard": "What temperature is the olfresco?",
+      "lost": [
+        [
+          "room",
+          "alfresco"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-1711",
+      "turn": 0,
+      "voice": "t-k-bm-daniel-fable",
+      "written": "get the volume to 15 in the alfresco",
+      "heard": "Get the volume to 15 in the Alfresca.",
+      "lost": [
+        [
+          "room",
+          "alfresco"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1844",
+      "turn": 0,
+      "voice": "t-k-bf-emma-isabella",
+      "written": "switch on the master ensuite fan",
+      "heard": "Switch on the master in suit fan.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1948",
+      "turn": 0,
+      "voice": "t-k-af-nicole",
+      "written": "hey, can you turn off the fan in the master ensuite",
+      "heard": "Hey, can you turn off the fan in the master and suit?",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-15000-1266",
+      "turn": 0,
+      "voice": "t-k-af-sky",
+      "written": "fire up the Floodlight 2",
+      "heard": "Fire up the floodlight, too.",
+      "lost": [
+        [
+          "device",
+          "floodlight 2"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-3000-66",
+      "turn": 0,
+      "voice": "t-k-bm-lewis-fable",
+      "written": "Can you play the Conversations podcast in the master ensuite?",
+      "heard": "Can you play the Conversations podcast in the master in suit?",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-6000-536",
+      "turn": 0,
+      "voice": "t-k-bf-alice-lily",
+      "written": "Where's Elena?",
+      "heard": "Where's Elina?",
+      "lost": [
+        [
+          "person",
+          "elena"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

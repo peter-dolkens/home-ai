@@ -1,0 +1,100 @@
+{
+  "source": "data/generated/train-b-split.jsonl",
+  "rows": 6536,
+  "eligible": 4605,
+  "prompt_layout": "stable_prefix",
+  "counts": {
+    "casing": 293,
+    "homophone": 327,
+    "homophone:ambiguous": 4,
+    "homophone:homophone": 160,
+    "homophone:number": 65,
+    "homophone:split": 98,
+    "roundtrip": 2796,
+    "roundtrip:kokoro": 2033,
+    "roundtrip:medium-biased": 731,
+    "roundtrip:medium-farfield-biased": 976,
+    "roundtrip:medium-noisy10-biased": 838,
+    "roundtrip:parakeet-farfield": 135,
+    "roundtrip:parakeet-noisy10": 116,
+    "roundtrip:piper": 763,
+    "roundtrip_all_turns_kept_written": 145,
+    "roundtrip_turn_kept_written:garbled": 168,
+    "roundtrip_turn_kept_written:held-out": 3,
+    "roundtrip_turns": 2981,
+    "unchanged": 949,
+    "unchanged_inherited_overlap": 1931
+  },
+  "leakage": {
+    "file": "data/generated/train-b-hm.jsonl",
+    "held_out_utterances": 19012,
+    "augmented_rows": 3416,
+    "augmented_overlap_turns": 0,
+    "augmented_overlap_distinct": 0,
+    "augmented_examples": [],
+    "inherited_overlap_turns": 2249,
+    "inherited_overlap_distinct": 394
+  },
+  "inherited_top": [
+    [
+      "yes please",
+      115
+    ],
+    [
+      "yes",
+      101
+    ],
+    [
+      "go ahead",
+      94
+    ],
+    [
+      "please",
+      70
+    ],
+    [
+      "yes do all that",
+      62
+    ],
+    [
+      "yep",
+      34
+    ],
+    [
+      "do it",
+      30
+    ],
+    [
+      "leave it",
+      23
+    ],
+    [
+      "lamp on",
+      21
+    ],
+    [
+      "no",
+      21
+    ],
+    [
+      "never mind",
+      20
+    ],
+    [
+      "no thats fine",
+      20
+    ],
+    [
+      "yeah unlock it",
+      20
+    ],
+    [
+      "can you check on the house",
+      19
+    ],
+    [
+      "were out is the house all locked up and ok",
+      17
+    ]
+  ]
+}

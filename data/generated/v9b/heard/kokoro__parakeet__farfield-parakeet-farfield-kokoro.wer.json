@@ -1,0 +1,320 @@
+{
+  "set": "kokoro__parakeet__farfield",
+  "stt": "parakeet",
+  "condition": "farfield",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 128,
+  "words": 807,
+  "errors": 53,
+  "wer": 0.0657,
+  "exact": 0.7266,
+  "vocab_words": 268,
+  "vocab_errors": 16,
+  "vocab_wer": 0.0597,
+  "vocab": {
+    "room": {
+      "n": 77,
+      "err": 7,
+      "wer": 0.0909
+    },
+    "device": {
+      "n": 105,
+      "err": 4,
+      "wer": 0.0381
+    },
+    "person": {
+      "n": 7,
+      "err": 1,
+      "wer": 0.1429
+    },
+    "number": {
+      "n": 11,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 68,
+      "err": 4,
+      "wer": 0.0588
+    }
+  },
+  "meaning_changed": 0.0859,
+  "meaning_changed_n": 11,
+  "meaning_by_kind": {
+    "room": 0.0469,
+    "device": 0.0078,
+    "person": 0.0078,
+    "number": 0.0,
+    "command": 0.0234
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 0.4441,
+    "p50": 0.4259,
+    "p90": 0.5644,
+    "rtf": 0.1495,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nicole": {
+      "turns": 9,
+      "wer": 0.0652,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-nova": {
+      "turns": 4,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sarah": {
+      "turns": 5,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sky": {
+      "turns": 8,
+      "wer": 0.0566,
+      "meaning_changed": 0.125
+    },
+    "t-k-am-eric": {
+      "turns": 11,
+      "wer": 0.075,
+      "meaning_changed": 0.0909
+    },
+    "t-k-am-liam": {
+      "turns": 6,
+      "wer": 0.0811,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-onyx": {
+      "turns": 13,
+      "wer": 0.0366,
+      "meaning_changed": 0.0769
+    },
+    "t-k-am-puck": {
+      "turns": 8,
+      "wer": 0.0781,
+      "meaning_changed": 0.125
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 4,
+      "wer": 0.1852,
+      "meaning_changed": 0.25
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 11,
+      "wer": 0.0769,
+      "meaning_changed": 0.1818
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 11,
+      "wer": 0.125,
+      "meaning_changed": 0.0909
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 12,
+      "wer": 0.0933,
+      "meaning_changed": 0.0833
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 7,
+      "wer": 0.0476,
+      "meaning_changed": 0.1429
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 6,
+      "wer": 0.027,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 10,
+      "wer": 0.0469,
+      "meaning_changed": 0.1
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 37,
+      "wer": 0.0622,
+      "meaning_changed": 0.0541
+    },
+    "1.0": {
+      "turns": 58,
+      "wer": 0.0647,
+      "meaning_changed": 0.1207
+    },
+    "1.15": {
+      "turns": 33,
+      "wer": 0.0711,
+      "meaning_changed": 0.0606
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 128,
+      "wer": 0.0657,
+      "meaning_changed": 0.0859
+    }
+  },
+  "by_set": {
+    "kokoro__parakeet__farfield": {
+      "turns": 128,
+      "wer": 0.0657,
+      "meaning_changed": 0.0859
+    }
+  },
+  "samples": [
+    {
+      "id": "b300-1291",
+      "turn": 0,
+      "voice": "t-k-am-onyx",
+      "written": "right, unlock the front door for me",
+      "heard": "Wright unlocked the front door for me.",
+      "lost": [
+        [
+          "command",
+          "unlock"
+        ]
+      ]
+    },
+    {
+      "id": "b300-1426",
+      "turn": 0,
+      "voice": "t-k-bm-lewis-fable",
+      "written": "shut the lights off in the patio and ensuite",
+      "heard": "shut the lights off in the patio and ensued.",
+      "lost": [
+        [
+          "room",
+          "ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3786",
+      "turn": 0,
+      "voice": "t-k-bm-george-daniel",
+      "written": "whereabouts is Charlie",
+      "heard": "Whereabouts is Charley?",
+      "lost": [
+        [
+          "person",
+          "charlie"
+        ]
+      ]
+    },
+    {
+      "id": "b300-4327",
+      "turn": 0,
+      "voice": "t-k-am-puck",
+      "written": "has the workshop door been locked",
+      "heard": "Is the work shopped been locked?",
+      "lost": [
+        [
+          "device",
+          "workshop door"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-1635",
+      "turn": 0,
+      "voice": "t-k-bf-emma-isabella",
+      "written": "Flick the towel rail on in guest ensuite",
+      "heard": "Flick the towel rail on in guest en suit.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-1771",
+      "turn": 0,
+      "voice": "t-k-bm-daniel-fable",
+      "written": "put the lights on in the master ensuite and the pantry thanks",
+      "heard": "Put the lights on in the master in suit and the pantry thanks.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1834",
+      "turn": 0,
+      "voice": "t-k-bf-emma-lily",
+      "written": "hey, put the homepod on mute in the alfresco",
+      "heard": "Hay put the home pod on mute in the alfresca.",
+      "lost": [
+        [
+          "room",
+          "alfresco"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-20000-1326",
+      "turn": 1,
+      "voice": "t-k-am-eric",
+      "written": "Music room.",
+      "heard": "Music Rome",
+      "lost": [
+        [
+          "room",
+          "music room"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-20000-1423",
+      "turn": 0,
+      "voice": "t-k-af-sky",
+      "written": "Unmute it",
+      "heard": "Unmuted.",
+      "lost": [
+        [
+          "command",
+          "unmute"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-20000-1478",
+      "turn": 1,
+      "voice": "t-k-bf-isabella-alice",
+      "written": "Guest ensuite please.",
+      "heard": "Guest and suit please.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-6000-562",
+      "turn": 0,
+      "voice": "t-k-bf-emma-lily",
+      "written": "close them blinds",
+      "heard": "closed and blinds.",
+      "lost": [
+        [
+          "command",
+          "close"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

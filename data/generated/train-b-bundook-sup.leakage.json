@@ -1,0 +1,74 @@
+[
+  {
+    "file": "data/generated/train-b-bundook-sup.jsonl",
+    "held_out_utterances": 18157,
+    "augmented_rows": 0,
+    "augmented_overlap_turns": 0,
+    "augmented_overlap_distinct": 0,
+    "augmented_examples": [],
+    "inherited_overlap_turns": 545,
+    "inherited_overlap_distinct": 182,
+    "inherited_top": [
+      [
+        "yes",
+        34
+      ],
+      [
+        "yes please",
+        33
+      ],
+      [
+        "go ahead",
+        25
+      ],
+      [
+        "please",
+        14
+      ],
+      [
+        "yep",
+        13
+      ],
+      [
+        "wheres amber",
+        10
+      ],
+      [
+        "do it",
+        10
+      ],
+      [
+        "the 1 in petes office",
+        10
+      ],
+      [
+        "petes office",
+        9
+      ],
+      [
+        "yes do all that",
+        9
+      ],
+      [
+        "actually no",
+        8
+      ],
+      [
+        "carport please",
+        8
+      ],
+      [
+        "leave it",
+        8
+      ],
+      [
+        "petes office 1",
+        7
+      ],
+      [
+        "do you know where peter is",
+        7
+      ]
+    ]
+  }
+]

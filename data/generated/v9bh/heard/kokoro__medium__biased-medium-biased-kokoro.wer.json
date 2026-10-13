@@ -1,0 +1,211 @@
+{
+  "set": "kokoro__medium__biased",
+  "stt": "medium",
+  "condition": "biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 33,
+  "words": 233,
+  "errors": 12,
+  "wer": 0.0515,
+  "exact": 0.7576,
+  "vocab_words": 94,
+  "vocab_errors": 4,
+  "vocab_wer": 0.0426,
+  "vocab": {
+    "room": {
+      "n": 33,
+      "err": 1,
+      "wer": 0.0303
+    },
+    "device": {
+      "n": 32,
+      "err": 3,
+      "wer": 0.0938
+    },
+    "person": {
+      "n": 2,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 5,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 22,
+      "err": 0,
+      "wer": 0.0
+    }
+  },
+  "meaning_changed": 0.0909,
+  "meaning_changed_n": 3,
+  "meaning_by_kind": {
+    "room": 0.0303,
+    "device": 0.0606,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 8.7313,
+    "p50": 8.8091,
+    "p90": 11.2972,
+    "rtf": 2.7163,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nicole": {
+      "turns": 1,
+      "wer": 0.25,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-nova": {
+      "turns": 3,
+      "wer": 0.0385,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sarah": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sky": {
+      "turns": 3,
+      "wer": 0.0714,
+      "meaning_changed": 0.3333
+    },
+    "t-k-am-eric": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-liam": {
+      "turns": 2,
+      "wer": 0.1818,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-onyx": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-puck": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 3,
+      "wer": 0.1667,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 4,
+      "wer": 0.0294,
+      "meaning_changed": 0.25
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 3,
+      "wer": 0.0714,
+      "meaning_changed": 0.3333
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 9,
+      "wer": 0.0333,
+      "meaning_changed": 0.0
+    },
+    "1.0": {
+      "turns": 19,
+      "wer": 0.0576,
+      "meaning_changed": 0.1579
+    },
+    "1.15": {
+      "turns": 5,
+      "wer": 0.0588,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 33,
+      "wer": 0.0515,
+      "meaning_changed": 0.0909
+    }
+  },
+  "by_set": {
+    "kokoro__medium__biased": {
+      "turns": 33,
+      "wer": 0.0515,
+      "meaning_changed": 0.0909
+    }
+  },
+  "samples": [
+    {
+      "id": "bbig-bundook_full-plan-857",
+      "turn": 0,
+      "voice": "t-k-af-sky",
+      "written": "Turn on the floodlight 2.",
+      "heard": "Turn on the floodlight too.",
+      "lost": [
+        [
+          "device",
+          "floodlight 2"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1494",
+      "turn": 0,
+      "voice": "t-k-bm-lewis-fable",
+      "written": "lights off in master ensuite",
+      "heard": "Lights off in Master and Suit.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1520",
+      "turn": 0,
+      "voice": "t-k-bm-george-lewis",
+      "written": "Switch off the bulkhead led strip in dining hall",
+      "heard": "Switch off the bulkhead lead strip in dining hall.",
+      "lost": [
+        [
+          "device",
+          "bulkhead led strip"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

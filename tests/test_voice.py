@@ -113,6 +113,42 @@ def test_confusion_builders():
     assert confusions.relocate(src, 1, house, "kitchen") is None  # same room: nothing to move
 
 
+def test_heard_summary_pairs_turns():
+    from homeai.eval.heard_summary import cell
+    written = {("a", 0): 1.0, ("a", 1): 1.0, ("b", 0): 0.0, ("c", 0): 1.0}
+    heard = {("a", 0): 0.0, ("a", 1): 1.0, ("b", 0): 1.0}          # ("c", 0) not run: left out of both sides
+    c = cell(heard, written, {("a", 0): True})
+    assert c["turns"] == 3 and c["lost"] == 1 and c["regained"] == 1
+    assert abs(c["written_pass"] - 2 / 3) < 1e-3 and abs(c["pass"] - 2 / 3) < 1e-3 and c["drop"] == 0
+    assert c["lost_term_changed"] == 1.0 and c["rest_term_changed"] == 0.0
+    assert cell({}, written, {}) == {"turns": 0}
+
+
+def test_v9_augmentations():
+    from homeai.datagen import asr_v9
+    from homeai.datagen.common import stt_case
+    assert stt_case("hey house is the heating on") == "Hey house, is the heating on?"
+    assert stt_case("um, turn on the kitchen lights") == "Um, turn on the kitchen lights."
+    assert stt_case("Turn off the alarm.") == "Turn off the alarm."
+    house = make_house(900000, "bundook")
+    terms = vocab.Terms(house)
+    sp = asr_v9.splits(terms)
+    assert sp.get("ensuite") == "en suite" and sp.get("mudroom") == "mud room" and sp.get("alfresco") == "al fresco"
+    assert asr_v9.swap_word("Unlock the door", "lock", "look") is None  # whole words only
+    assert asr_v9.swap_word("Turn off the lights", "off", "of") == "Turn of the lights"
+    ex = {"id": "t", "messages": [{"role": "system", "content": "s"}, {"role": "user", "content": "lock the mudroom door"},
+          {"role": "assistant", "content": "", "tool_calls": [{"function": {"name": "call_service", "arguments": {
+              "domain": "lock", "service": "lock", "target": {"entity_id": ["lock.mudroom_door"]}}}}]},
+          {"role": "tool", "content": "ok"}, {"role": "assistant", "content": "Locked."}]}
+    kinds = {k for k, _, _ in asr_v9.near_misses(ex, 1, terms)}
+    assert {"homophone", "split"} <= kinds
+    import collections
+    row = asr_v9.homophone_row(ex, set(), collections.Counter({"homophone": 1}), terms, house)
+    assert row["messages"][1]["content"] == "look the mudroom door" and row["_v9"]["sub"] == "ambiguous"
+    assert row["messages"][-1] == {"role": "assistant", "content": "Did you want the mudroom door locked, or just checked?"}
+    assert asr_v9.said(22) == "twenty two" and asr_v9.said(50) == "fifty"
+
+
 if __name__ == "__main__":
     for name, fn in list(globals().items()):
         if name.startswith("test_"):

@@ -1,0 +1,21 @@
+{
+ "_comment": "2B B-v3h (3 Oct): the Mac's design-B model (2B B-v2u: 80.4% on falcon, 1.77 s warm on the Bundook plan) on B-v3h's data, B-v2's plus 1,650 Bundook-plan conversations; user_context.",
+ "base_model": "Qwen/Qwen3.5-2B",
+ "hf_tokenizer": "Qwen/Qwen3.5-2B",
+ "ollama_template_from": "qwen3.5:2b",
+ "instruction_part": "<|im_start|>user\n",
+ "response_part": "<|im_start|>assistant\n",
+ "max_seq_len": 4608,
+ "lora_r": 16,
+ "lora_alpha": 16,
+ "epochs": 2,
+ "lr": 0.0002,
+ "batch_size": 1,
+ "grad_accum": 16,
+ "seed": 3407,
+ "train": "data/generated/train-b-v3h.jsonl",
+ "val": "data/generated/val-b.jsonl",
+ "out": "outputs/qwen35-2b-lora-b-v3h",
+ "load_in_4bit": false,
+ "prompt_layout": "user_context"
+}

@@ -1,0 +1,4058 @@
+{
+  "tts_caveat": {
+    "parakeet": {
+      "piper": {
+        "turns": 984,
+        "wer": 0.0737,
+        "vocab_wer": 0.0668,
+        "meaning_changed": 0.0904
+      },
+      "kokoro": {
+        "turns": 984,
+        "wer": 0.0342,
+        "vocab_wer": 0.0266,
+        "meaning_changed": 0.0295
+      }
+    },
+    "small": {
+      "piper": {
+        "turns": 984,
+        "wer": 0.0777,
+        "vocab_wer": 0.0657,
+        "meaning_changed": 0.0945
+      },
+      "kokoro": {
+        "turns": 984,
+        "wer": 0.0335,
+        "vocab_wer": 0.0289,
+        "meaning_changed": 0.0346
+      }
+    }
+  },
+  "models": {
+    "homeai-2b-lora-v5 @ lapwing": {
+      "written": {
+        "testv2": {
+          "turns": 174,
+          "pass": 0.8966,
+          "dirs": [
+            "outputs/eval/homeai-2b-lora-v5-testv2-heard-written"
+          ]
+        },
+        "wild": {
+          "turns": 409,
+          "pass": 0.7775,
+          "dirs": [
+            "outputs/eval/homeai-2b-lora-v5-wild-heard-written"
+          ]
+        },
+        "wild2": {
+          "turns": 344,
+          "pass": 0.8125,
+          "dirs": [
+            "outputs/eval/homeai-2b-lora-v5-wild2-heard-written"
+          ]
+        }
+      },
+      "heard": {
+        "medium-biased": {
+          "testv2": {
+            "turns": 174,
+            "pass": 0.8391,
+            "written_pass": 0.8966,
+            "drop": 0.0575,
+            "lost": 12,
+            "regained": 2,
+            "term_changed": 0.023,
+            "lost_term_changed": 0.0833,
+            "rest_term_changed": 0.0185,
+            "pass_when_term_changed": 0.75,
+            "pass_when_term_kept": 0.8412,
+            "dirs": [
+              "outputs/eval/homeai-2b-lora-v5-testv2-heard-medium-biased"
+            ]
+          },
+          "wild": {
+            "turns": 409,
+            "pass": 0.7384,
+            "written_pass": 0.7775,
+            "drop": 0.0391,
+            "lost": 23,
+            "regained": 7,
+            "term_changed": 0.0587,
+            "lost_term_changed": 0.4348,
+            "rest_term_changed": 0.0363,
+            "pass_when_term_changed": 0.375,
+            "pass_when_term_kept": 0.761,
+            "dirs": [
+              "outputs/eval/homeai-2b-lora-v5-wild-heard-medium-biased"
+            ]
+          },
+          "wild2": {
+            "turns": 344,
+            "pass": 0.718,
+            "written_pass": 0.8125,
+            "drop": 0.0945,
+            "lost": 37,
+            "regained": 5,
+            "term_changed": 0.0581,
+            "lost_term_changed": 0.3514,
+            "rest_term_changed": 0.0228,
+            "pass_when_term_changed": 0.25,
+            "pass_when_term_kept": 0.7469,
+            "dirs": [
+              "outputs/eval/homeai-2b-lora-v5-wild2-heard-medium-biased"
+            ]
+          },
+          "all": {
+            "turns": 927,
+            "pass": 0.7497,
+            "written_pass": 0.8128,
+            "drop": 0.0631,
+            "term_changed": 0.0518,
+            "lost": 72,
+            "regained": 14,
+            "sets": [
+              "testv2",
+              "wild",
+              "wild2"
+            ]
+          }
+        },
+        "parakeet-clean": {
+          "testv2": {
+            "turns": 174,
+            "pass": 0.8161,
+            "written_pass": 0.8966,
+            "drop": 0.0805,
+            "lost": 17,
+            "regained": 3,
+            "term_changed": 0.0747,
+            "lost_term_changed": 0.2353,
+            "rest_term_changed": 0.0573,
+            "pass_when_term_changed": 0.5769,
+            "pass_when_term_kept": 0.8354,
+            "dirs": [
+              "outputs/eval/homeai-2b-lora-v5-testv2-heard-parakeet-clean"
+            ]
+          },
+          "wild": {
+            "turns": 409,
+            "pass": 0.7262,
+            "written_pass": 0.7775,
+            "drop": 0.0513,
+            "lost": 30,
+            "regained": 10,
+            "term_changed": 0.0954,
+            "lost_term_changed": 0.3667,
+            "rest_term_changed": 0.0739,
+            "pass_when_term_changed": 0.4872,
+            "pass_when_term_kept": 0.7514,
+            "dirs": [
+              "outputs/eval/homeai-2b-lora-v5-wild-heard-parakeet-clean"
+            ]
+          },
+          "wild2": {
+            "turns": 344,
+            "pass": 0.7297,
+            "written_pass": 0.8125,
+            "drop": 0.0828,
+            "lost": 38,
+            "regained": 10,
+            "term_changed": 0.0901,
+            "lost_term_changed": 0.4474,
+            "rest_term_changed": 0.0458,
+            "pass_when_term_changed": 0.2903,
+            "pass_when_term_kept": 0.7732,
+            "dirs": [
+              "outputs/eval/homeai-2b-lora-v5-wild2-heard-parakeet-clean"
+            ]
+          },
+          "all": {
+            "turns": 927,
+            "pass": 0.7444,
+            "written_pass": 0.8128,
+            "drop": 0.0685,
+            "term_changed": 0.0895,
+            "lost": 85,
+            "regained": 23,
+            "sets": [
+              "testv2",
+              "wild",
+              "wild2"
+            ]
+          }
+        },
+        "parakeet-farfield": {
+          "testv2": {
+            "turns": 174,
+            "pass": 0.7672,
+            "written_pass": 0.8966,
+            "drop": 0.1293,
+            "lost": 25,
+            "regained": 3,
+            "term_changed": 0.1782,
+            "lost_term_changed": 0.52,
+            "rest_term_changed": 0.1208,
+            "pass_when_term_changed": 0.5,
+            "pass_when_term_kept": 0.8252,
+            "dirs": [
+              "outputs/eval/homeai-2b-lora-v5-testv2-heard-parakeet-farfield"
+            ]
+          },
+          "wild": {
+            "turns": 409,
+            "pass": 0.654,
+            "written_pass": 0.7775,
+            "drop": 0.1235,
+            "lost": 62,
+            "regained": 14,
+            "term_changed": 0.2005,
+            "lost_term_changed": 0.5323,
+            "rest_term_changed": 0.1412,
+            "pass_when_term_changed": 0.4451,
+            "pass_when_term_kept": 0.7064,
+            "dirs": [
+              "outputs/eval/homeai-2b-lora-v5-wild-heard-parakeet-farfield"
+            ]
+          },
+          "wild2": {
+            "turns": 344,
+            "pass": 0.6715,
+            "written_pass": 0.8125,
+            "drop": 0.141,
+            "lost": 58,
+            "regained": 10,
+            "term_changed": 0.1599,
+            "lost_term_changed": 0.5345,
+            "rest_term_changed": 0.0839,
+            "pass_when_term_changed": 0.4,
+            "pass_when_term_kept": 0.7232,
+            "dirs": [
+              "outputs/eval/homeai-2b-lora-v5-wild2-heard-parakeet-farfield"
+            ]
+          },
+          "all": {
+            "turns": 927,
+            "pass": 0.6817,
+            "written_pass": 0.8128,
+            "drop": 0.1311,
+            "term_changed": 0.1812,
+            "lost": 145,
+            "regained": 27,
+            "sets": [
+              "testv2",
+              "wild",
+              "wild2"
+            ]
+          }
+        },
+        "parakeet-noisy10": {
+          "testv2": {
+            "turns": 174,
+            "pass": 0.6897,
+            "written_pass": 0.8966,
+            "drop": 0.2069,
+            "lost": 38,
+            "regained": 2,
+            "term_changed": 0.2414,
+            "lost_term_changed": 0.6053,
+            "rest_term_changed": 0.1397,
+            "pass_when_term_changed": 0.3571,
+            "pass_when_term_kept": 0.7955,
+            "dirs": [
+              "outputs/eval/homeai-2b-lora-v5-testv2-heard-parakeet-noisy10"
+            ]
+          },
+          "wild": {
+            "turns": 409,
+            "pass": 0.6284,
+            "written_pass": 0.7775,
+            "drop": 0.1491,
+            "lost": 69,
+            "regained": 11,
+            "term_changed": 0.2616,
+            "lost_term_changed": 0.6232,
+            "rest_term_changed": 0.1882,
+            "pass_when_term_changed": 0.4019,
+            "pass_when_term_kept": 0.7086,
+            "dirs": [
+              "outputs/eval/homeai-2b-lora-v5-wild-heard-parakeet-noisy10"
+            ]
+          },
+          "wild2": {
+            "turns": 344,
+            "pass": 0.6105,
+            "written_pass": 0.8125,
+            "drop": 0.202,
+            "lost": 80,
+            "regained": 11,
+            "term_changed": 0.25,
+            "lost_term_changed": 0.625,
+            "rest_term_changed": 0.1364,
+            "pass_when_term_changed": 0.2616,
+            "pass_when_term_kept": 0.7267,
+            "dirs": [
+              "outputs/eval/homeai-2b-lora-v5-wild2-heard-parakeet-noisy10"
+            ]
+          },
+          "all": {
+            "turns": 927,
+            "pass": 0.6333,
+            "written_pass": 0.8128,
+            "drop": 0.1796,
+            "term_changed": 0.2535,
+            "lost": 187,
+            "regained": 24,
+            "sets": [
+              "testv2",
+              "wild",
+              "wild2"
+            ]
+          }
+        },
+        "small-biased": {
+          "testv2": {
+            "turns": 174,
+            "pass": 0.8448,
+            "written_pass": 0.8966,
+            "drop": 0.0517,
+            "lost": 11,
+            "regained": 2,
+            "term_changed": 0.0575,
+            "lost_term_changed": 0.2727,
+            "rest_term_changed": 0.0429,
+            "pass_when_term_changed": 0.7,
+            "pass_when_term_kept": 0.8537,
+            "dirs": [
+              "outputs/eval/homeai-2b-lora-v5-testv2-heard-small-biased"
+            ]
+          },
+          "wild": {
+            "turns": 409,
+            "pass": 0.7115,
+            "written_pass": 0.7775,
+            "drop": 0.066,
+            "lost": 35,
+            "regained": 9,
+            "term_changed": 0.0636,
+            "lost_term_changed": 0.3714,
+            "rest_term_changed": 0.0348,
+            "pass_when_term_changed": 0.3462,
+            "pass_when_term_kept": 0.7363,
+            "dirs": [
+              "outputs/eval/homeai-2b-lora-v5-wild-heard-small-biased"
+            ]
+          },
+          "wild2": {
+            "turns": 344,
+            "pass": 0.7049,
+            "written_pass": 0.8125,
+            "drop": 0.1076,
+            "lost": 43,
+            "regained": 6,
+            "term_changed": 0.0756,
+            "lost_term_changed": 0.3256,
+            "rest_term_changed": 0.0399,
+            "pass_when_term_changed": 0.3654,
+            "pass_when_term_kept": 0.7327,
+            "dirs": [
+              "outputs/eval/homeai-2b-lora-v5-wild2-heard-small-biased"
+            ]
+          },
+          "all": {
+            "turns": 927,
+            "pass": 0.7341,
+            "written_pass": 0.8128,
+            "drop": 0.0788,
+            "term_changed": 0.0669,
+            "lost": 89,
+            "regained": 17,
+            "sets": [
+              "testv2",
+              "wild",
+              "wild2"
+            ]
+          }
+        },
+        "small-clean": {
+          "testv2": {
+            "turns": 174,
+            "pass": 0.8448,
+            "written_pass": 0.8966,
+            "drop": 0.0517,
+            "lost": 11,
+            "regained": 2,
+            "term_changed": 0.0862,
+            "lost_term_changed": 0.2727,
+            "rest_term_changed": 0.0736,
+            "pass_when_term_changed": 0.7667,
+            "pass_when_term_kept": 0.8522,
+            "dirs": [
+              "outputs/eval/homeai-2b-lora-v5-testv2-heard-small-clean"
+            ]
+          },
+          "wild": {
+            "turns": 409,
+            "pass": 0.7054,
+            "written_pass": 0.7775,
+            "drop": 0.0721,
+            "lost": 36,
+            "regained": 7,
+            "term_changed": 0.0856,
+            "lost_term_changed": 0.4167,
+            "rest_term_changed": 0.0536,
+            "pass_when_term_changed": 0.4,
+            "pass_when_term_kept": 0.734,
+            "dirs": [
+              "outputs/eval/homeai-2b-lora-v5-wild-heard-small-clean"
+            ]
+          },
+          "wild2": {
+            "turns": 344,
+            "pass": 0.7238,
+            "written_pass": 0.8125,
+            "drop": 0.0887,
+            "lost": 38,
+            "regained": 8,
+            "term_changed": 0.1076,
+            "lost_term_changed": 0.4474,
+            "rest_term_changed": 0.0654,
+            "pass_when_term_changed": 0.4595,
+            "pass_when_term_kept": 0.7557,
+            "dirs": [
+              "outputs/eval/homeai-2b-lora-v5-wild2-heard-small-clean"
+            ]
+          },
+          "all": {
+            "turns": 927,
+            "pass": 0.7384,
+            "written_pass": 0.8128,
+            "drop": 0.0744,
+            "term_changed": 0.0939,
+            "lost": 85,
+            "regained": 17,
+            "sets": [
+              "testv2",
+              "wild",
+              "wild2"
+            ]
+          }
+        },
+        "tiny-clean": {
+          "testv2": {
+            "turns": 174,
+            "pass": 0.8333,
+            "written_pass": 0.8966,
+            "drop": 0.0632,
+            "lost": 13,
+            "regained": 2,
+            "term_changed": 0.1322,
+            "lost_term_changed": 0.3846,
+            "rest_term_changed": 0.1118,
+            "pass_when_term_changed": 0.7391,
+            "pass_when_term_kept": 0.8477,
+            "dirs": [
+              "outputs/eval/homeai-2b-lora-v5-testv2-heard-tiny-clean"
+            ]
+          },
+          "wild": {
+            "turns": 409,
+            "pass": 0.6858,
+            "written_pass": 0.7775,
+            "drop": 0.0917,
+            "lost": 46,
+            "regained": 10,
+            "term_changed": 0.132,
+            "lost_term_changed": 0.4348,
+            "rest_term_changed": 0.0937,
+            "pass_when_term_changed": 0.4074,
+            "pass_when_term_kept": 0.7282,
+            "dirs": [
+              "outputs/eval/homeai-2b-lora-v5-wild-heard-tiny-clean"
+            ]
+          },
+          "wild2": {
+            "turns": 344,
+            "pass": 0.6715,
+            "written_pass": 0.8125,
+            "drop": 0.141,
+            "lost": 55,
+            "regained": 7,
+            "term_changed": 0.1599,
+            "lost_term_changed": 0.4182,
+            "rest_term_changed": 0.1107,
+            "pass_when_term_changed": 0.4,
+            "pass_when_term_kept": 0.7232,
+            "dirs": [
+              "outputs/eval/homeai-2b-lora-v5-wild2-heard-tiny-clean"
+            ]
+          },
+          "all": {
+            "turns": 927,
+            "pass": 0.7082,
+            "written_pass": 0.8128,
+            "drop": 0.1046,
+            "term_changed": 0.1424,
+            "lost": 114,
+            "regained": 19,
+            "sets": [
+              "testv2",
+              "wild",
+              "wild2"
+            ]
+          }
+        }
+      },
+      "confusions": {
+        "dirs": [
+          "outputs/eval/homeai-2b-lora-v5-confusions-heard"
+        ],
+        "data": "data/generated/heard/confusions.jsonl",
+        "groups": {
+          "all": {
+            "n": 571,
+            "pass": 0.4343,
+            "paired_n": 517,
+            "paired_pass": 0.4217,
+            "source_written_pass": 0.7901
+          },
+          "kind:homophone": {
+            "n": 41,
+            "pass": 0.5122,
+            "paired_n": 41,
+            "paired_pass": 0.5122,
+            "source_written_pass": 0.8171
+          },
+          "kind:number": {
+            "n": 28,
+            "pass": 0.4643,
+            "paired_n": 24,
+            "paired_pass": 0.4583,
+            "source_written_pass": 0.6667
+          },
+          "kind:observed": {
+            "n": 400,
+            "pass": 0.37,
+            "paired_n": 375,
+            "paired_pass": 0.3627,
+            "source_written_pass": 0.8027
+          },
+          "kind:person": {
+            "n": 34,
+            "pass": 0.5441,
+            "paired_n": 31,
+            "paired_pass": 0.5645,
+            "source_written_pass": 0.6613
+          },
+          "kind:room": {
+            "n": 68,
+            "pass": 0.6985,
+            "paired_n": 46,
+            "paired_pass": 0.7065,
+            "source_written_pass": 0.8152
+          },
+          "recoverable:False": {
+            "n": 10,
+            "pass": 0.1,
+            "paired_n": 10,
+            "paired_pass": 0.1,
+            "source_written_pass": 0.6
+          },
+          "recoverable:True": {
+            "n": 561,
+            "pass": 0.4403,
+            "paired_n": 507,
+            "paired_pass": 0.428,
+            "source_written_pass": 0.7939
+          }
+        }
+      },
+      "speed": [
+        {
+          "run": "homeai-2b-lora-v5-testv2-heard-medium-biased",
+          "seconds_per_turn": 0.99,
+          "seconds_per_call": 0.47,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-2b-lora-v5-testv2-heard-parakeet-clean",
+          "seconds_per_turn": 0.98,
+          "seconds_per_call": 0.46,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-2b-lora-v5-testv2-heard-parakeet-farfield",
+          "seconds_per_turn": 1.01,
+          "seconds_per_call": 0.46,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-2b-lora-v5-testv2-heard-parakeet-noisy10",
+          "seconds_per_turn": 0.96,
+          "seconds_per_call": 0.46,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-2b-lora-v5-testv2-heard-small-biased",
+          "seconds_per_turn": 0.99,
+          "seconds_per_call": 0.47,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-2b-lora-v5-testv2-heard-small-clean",
+          "seconds_per_turn": 0.99,
+          "seconds_per_call": 0.47,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-2b-lora-v5-testv2-heard-tiny-clean",
+          "seconds_per_turn": 0.99,
+          "seconds_per_call": 0.46,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-2b-lora-v5-wild-heard-medium-biased",
+          "seconds_per_turn": 0.99,
+          "seconds_per_call": 0.45,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-2b-lora-v5-wild-heard-parakeet-clean",
+          "seconds_per_turn": 1.0,
+          "seconds_per_call": 0.45,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-2b-lora-v5-wild-heard-parakeet-farfield",
+          "seconds_per_turn": 1.0,
+          "seconds_per_call": 0.45,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-2b-lora-v5-wild-heard-parakeet-noisy10",
+          "seconds_per_turn": 0.98,
+          "seconds_per_call": 0.45,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-2b-lora-v5-wild-heard-small-biased",
+          "seconds_per_turn": 1.0,
+          "seconds_per_call": 0.45,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-2b-lora-v5-wild-heard-small-clean",
+          "seconds_per_turn": 0.99,
+          "seconds_per_call": 0.45,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-2b-lora-v5-wild-heard-tiny-clean",
+          "seconds_per_turn": 1.02,
+          "seconds_per_call": 0.45,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-2b-lora-v5-wild2-heard-medium-biased",
+          "seconds_per_turn": 0.99,
+          "seconds_per_call": 0.45,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-2b-lora-v5-wild2-heard-parakeet-clean",
+          "seconds_per_turn": 0.98,
+          "seconds_per_call": 0.45,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-2b-lora-v5-wild2-heard-parakeet-farfield",
+          "seconds_per_turn": 0.99,
+          "seconds_per_call": 0.45,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-2b-lora-v5-wild2-heard-parakeet-noisy10",
+          "seconds_per_turn": 0.99,
+          "seconds_per_call": 0.45,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-2b-lora-v5-wild2-heard-small-biased",
+          "seconds_per_turn": 0.99,
+          "seconds_per_call": 0.45,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-2b-lora-v5-wild2-heard-small-clean",
+          "seconds_per_turn": 0.98,
+          "seconds_per_call": 0.45,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-2b-lora-v5-wild2-heard-tiny-clean",
+          "seconds_per_turn": 0.99,
+          "seconds_per_call": 0.45,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-2b-lora-v5-testv2-heard-written",
+          "seconds_per_turn": 0.99,
+          "seconds_per_call": 0.47,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-2b-lora-v5-wild-heard-written",
+          "seconds_per_turn": 0.99,
+          "seconds_per_call": 0.45,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-2b-lora-v5-wild2-heard-written",
+          "seconds_per_turn": 0.97,
+          "seconds_per_call": 0.45,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        }
+      ]
+    },
+    "homeai-4b-lora-b @ lapwing": {
+      "written": {},
+      "heard": {},
+      "confusions": {
+        "dirs": [
+          "outputs/eval/homeai-4b-lora-b-confusions-heard"
+        ],
+        "data": "data/generated/heard/confusions.jsonl",
+        "groups": {
+          "all": {
+            "n": 571,
+            "pass": 0.4264,
+            "paired_n": 0,
+            "paired_pass": null,
+            "source_written_pass": null
+          },
+          "kind:homophone": {
+            "n": 41,
+            "pass": 0.5244,
+            "paired_n": 0,
+            "paired_pass": null,
+            "source_written_pass": null
+          },
+          "kind:number": {
+            "n": 28,
+            "pass": 0.5,
+            "paired_n": 0,
+            "paired_pass": null,
+            "source_written_pass": null
+          },
+          "kind:observed": {
+            "n": 400,
+            "pass": 0.3713,
+            "paired_n": 0,
+            "paired_pass": null,
+            "source_written_pass": null
+          },
+          "kind:person": {
+            "n": 34,
+            "pass": 0.5441,
+            "paired_n": 0,
+            "paired_pass": null,
+            "source_written_pass": null
+          },
+          "kind:room": {
+            "n": 68,
+            "pass": 0.6029,
+            "paired_n": 0,
+            "paired_pass": null,
+            "source_written_pass": null
+          },
+          "recoverable:False": {
+            "n": 10,
+            "pass": 0.2,
+            "paired_n": 0,
+            "paired_pass": null,
+            "source_written_pass": null
+          },
+          "recoverable:True": {
+            "n": 561,
+            "pass": 0.4305,
+            "paired_n": 0,
+            "paired_pass": null,
+            "source_written_pass": null
+          }
+        }
+      },
+      "speed": []
+    },
+    "homeai-4b-lora-v5 @ lapwing": {
+      "written": {
+        "testv2": {
+          "turns": 174,
+          "pass": 0.931,
+          "dirs": [
+            "outputs/eval/homeai-4b-lora-v5-testv2-heard-written"
+          ]
+        },
+        "wild": {
+          "turns": 409,
+          "pass": 0.8252,
+          "dirs": [
+            "outputs/eval/homeai-4b-lora-v5-wild-heard-written"
+          ]
+        },
+        "wild2": {
+          "turns": 344,
+          "pass": 0.8677,
+          "dirs": [
+            "outputs/eval/homeai-4b-lora-v5-wild2-heard-written"
+          ]
+        }
+      },
+      "heard": {
+        "medium-biased": {
+          "testv2": {
+            "turns": 174,
+            "pass": 0.8736,
+            "written_pass": 0.931,
+            "drop": 0.0575,
+            "lost": 10,
+            "regained": 0,
+            "term_changed": 0.023,
+            "lost_term_changed": 0.1,
+            "rest_term_changed": 0.0183,
+            "pass_when_term_changed": 0.75,
+            "pass_when_term_kept": 0.8765,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v5-testv2-heard-medium-biased"
+            ]
+          },
+          "wild": {
+            "turns": 409,
+            "pass": 0.7726,
+            "written_pass": 0.8252,
+            "drop": 0.0526,
+            "lost": 23,
+            "regained": 1,
+            "term_changed": 0.0587,
+            "lost_term_changed": 0.3043,
+            "rest_term_changed": 0.044,
+            "pass_when_term_changed": 0.5833,
+            "pass_when_term_kept": 0.7844,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v5-wild-heard-medium-biased"
+            ]
+          },
+          "wild2": {
+            "turns": 344,
+            "pass": 0.7689,
+            "written_pass": 0.8677,
+            "drop": 0.0988,
+            "lost": 39,
+            "regained": 4,
+            "term_changed": 0.0581,
+            "lost_term_changed": 0.3333,
+            "rest_term_changed": 0.023,
+            "pass_when_term_changed": 0.3,
+            "pass_when_term_kept": 0.7978,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v5-wild2-heard-medium-biased"
+            ]
+          },
+          "all": {
+            "turns": 927,
+            "pass": 0.7902,
+            "written_pass": 0.8608,
+            "drop": 0.0707,
+            "term_changed": 0.0518,
+            "lost": 72,
+            "regained": 5,
+            "sets": [
+              "testv2",
+              "wild",
+              "wild2"
+            ]
+          }
+        },
+        "parakeet-clean": {
+          "testv2": {
+            "turns": 174,
+            "pass": 0.8362,
+            "written_pass": 0.931,
+            "drop": 0.0948,
+            "lost": 17,
+            "regained": 0,
+            "term_changed": 0.0747,
+            "lost_term_changed": 0.2941,
+            "rest_term_changed": 0.051,
+            "pass_when_term_changed": 0.5,
+            "pass_when_term_kept": 0.8634,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v5-testv2-heard-parakeet-clean"
+            ]
+          },
+          "wild": {
+            "turns": 409,
+            "pass": 0.7531,
+            "written_pass": 0.8252,
+            "drop": 0.0721,
+            "lost": 32,
+            "regained": 3,
+            "term_changed": 0.0954,
+            "lost_term_changed": 0.3125,
+            "rest_term_changed": 0.0769,
+            "pass_when_term_changed": 0.5128,
+            "pass_when_term_kept": 0.7784,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v5-wild-heard-parakeet-clean"
+            ]
+          },
+          "wild2": {
+            "turns": 344,
+            "pass": 0.7631,
+            "written_pass": 0.8677,
+            "drop": 0.1047,
+            "lost": 42,
+            "regained": 5,
+            "term_changed": 0.0901,
+            "lost_term_changed": 0.3571,
+            "rest_term_changed": 0.053,
+            "pass_when_term_changed": 0.4194,
+            "pass_when_term_kept": 0.7971,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v5-wild2-heard-parakeet-clean"
+            ]
+          },
+          "all": {
+            "turns": 927,
+            "pass": 0.7724,
+            "written_pass": 0.8608,
+            "drop": 0.0885,
+            "term_changed": 0.0895,
+            "lost": 91,
+            "regained": 8,
+            "sets": [
+              "testv2",
+              "wild",
+              "wild2"
+            ]
+          }
+        },
+        "parakeet-farfield": {
+          "testv2": {
+            "turns": 174,
+            "pass": 0.7874,
+            "written_pass": 0.931,
+            "drop": 0.1437,
+            "lost": 25,
+            "regained": 0,
+            "term_changed": 0.1782,
+            "lost_term_changed": 0.52,
+            "rest_term_changed": 0.1208,
+            "pass_when_term_changed": 0.5,
+            "pass_when_term_kept": 0.8497,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v5-testv2-heard-parakeet-farfield"
+            ]
+          },
+          "wild": {
+            "turns": 409,
+            "pass": 0.6883,
+            "written_pass": 0.8252,
+            "drop": 0.1369,
+            "lost": 62,
+            "regained": 8,
+            "term_changed": 0.2005,
+            "lost_term_changed": 0.5645,
+            "rest_term_changed": 0.1354,
+            "pass_when_term_changed": 0.4207,
+            "pass_when_term_kept": 0.7554,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v5-wild-heard-parakeet-farfield"
+            ]
+          },
+          "wild2": {
+            "turns": 344,
+            "pass": 0.7267,
+            "written_pass": 0.8677,
+            "drop": 0.141,
+            "lost": 58,
+            "regained": 9,
+            "term_changed": 0.1599,
+            "lost_term_changed": 0.4828,
+            "rest_term_changed": 0.0944,
+            "pass_when_term_changed": 0.4182,
+            "pass_when_term_kept": 0.7855,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v5-wild2-heard-parakeet-farfield"
+            ]
+          },
+          "all": {
+            "turns": 927,
+            "pass": 0.7212,
+            "written_pass": 0.8608,
+            "drop": 0.1397,
+            "term_changed": 0.1812,
+            "lost": 145,
+            "regained": 17,
+            "sets": [
+              "testv2",
+              "wild",
+              "wild2"
+            ]
+          }
+        },
+        "parakeet-noisy10": {
+          "testv2": {
+            "turns": 174,
+            "pass": 0.7069,
+            "written_pass": 0.931,
+            "drop": 0.2241,
+            "lost": 40,
+            "regained": 0,
+            "term_changed": 0.2414,
+            "lost_term_changed": 0.6,
+            "rest_term_changed": 0.1343,
+            "pass_when_term_changed": 0.3571,
+            "pass_when_term_kept": 0.8182,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v5-testv2-heard-parakeet-noisy10"
+            ]
+          },
+          "wild": {
+            "turns": 409,
+            "pass": 0.6724,
+            "written_pass": 0.8252,
+            "drop": 0.1528,
+            "lost": 72,
+            "regained": 12,
+            "term_changed": 0.2616,
+            "lost_term_changed": 0.6111,
+            "rest_term_changed": 0.1869,
+            "pass_when_term_changed": 0.4346,
+            "pass_when_term_kept": 0.7566,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v5-wild-heard-parakeet-noisy10"
+            ]
+          },
+          "wild2": {
+            "turns": 344,
+            "pass": 0.657,
+            "written_pass": 0.8677,
+            "drop": 0.2108,
+            "lost": 78,
+            "regained": 5,
+            "term_changed": 0.25,
+            "lost_term_changed": 0.6282,
+            "rest_term_changed": 0.1391,
+            "pass_when_term_changed": 0.3023,
+            "pass_when_term_kept": 0.7752,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v5-wild2-heard-parakeet-noisy10"
+            ]
+          },
+          "all": {
+            "turns": 927,
+            "pass": 0.6732,
+            "written_pass": 0.8608,
+            "drop": 0.1877,
+            "term_changed": 0.2535,
+            "lost": 190,
+            "regained": 17,
+            "sets": [
+              "testv2",
+              "wild",
+              "wild2"
+            ]
+          }
+        },
+        "small-biased": {
+          "testv2": {
+            "turns": 174,
+            "pass": 0.8707,
+            "written_pass": 0.931,
+            "drop": 0.0603,
+            "lost": 11,
+            "regained": 0,
+            "term_changed": 0.0575,
+            "lost_term_changed": 0.1818,
+            "rest_term_changed": 0.0491,
+            "pass_when_term_changed": 0.7,
+            "pass_when_term_kept": 0.8811,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v5-testv2-heard-small-biased"
+            ]
+          },
+          "wild": {
+            "turns": 409,
+            "pass": 0.7677,
+            "written_pass": 0.8252,
+            "drop": 0.0575,
+            "lost": 27,
+            "regained": 4,
+            "term_changed": 0.0636,
+            "lost_term_changed": 0.2222,
+            "rest_term_changed": 0.0524,
+            "pass_when_term_changed": 0.6154,
+            "pass_when_term_kept": 0.7781,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v5-wild-heard-small-biased"
+            ]
+          },
+          "wild2": {
+            "turns": 344,
+            "pass": 0.7645,
+            "written_pass": 0.8677,
+            "drop": 0.1032,
+            "lost": 43,
+            "regained": 6,
+            "term_changed": 0.0756,
+            "lost_term_changed": 0.3023,
+            "rest_term_changed": 0.0432,
+            "pass_when_term_changed": 0.4423,
+            "pass_when_term_kept": 0.7909,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v5-wild2-heard-small-biased"
+            ]
+          },
+          "all": {
+            "turns": 927,
+            "pass": 0.7858,
+            "written_pass": 0.8608,
+            "drop": 0.075,
+            "term_changed": 0.0669,
+            "lost": 81,
+            "regained": 10,
+            "sets": [
+              "testv2",
+              "wild",
+              "wild2"
+            ]
+          }
+        },
+        "small-clean": {
+          "testv2": {
+            "turns": 174,
+            "pass": 0.8649,
+            "written_pass": 0.931,
+            "drop": 0.0661,
+            "lost": 12,
+            "regained": 0,
+            "term_changed": 0.0862,
+            "lost_term_changed": 0.5,
+            "rest_term_changed": 0.0556,
+            "pass_when_term_changed": 0.5667,
+            "pass_when_term_kept": 0.8931,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v5-testv2-heard-small-clean"
+            ]
+          },
+          "wild": {
+            "turns": 409,
+            "pass": 0.7592,
+            "written_pass": 0.8252,
+            "drop": 0.066,
+            "lost": 31,
+            "regained": 4,
+            "term_changed": 0.0856,
+            "lost_term_changed": 0.3226,
+            "rest_term_changed": 0.0661,
+            "pass_when_term_changed": 0.5714,
+            "pass_when_term_kept": 0.7767,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v5-wild-heard-small-clean"
+            ]
+          },
+          "wild2": {
+            "turns": 344,
+            "pass": 0.7718,
+            "written_pass": 0.8677,
+            "drop": 0.0959,
+            "lost": 40,
+            "regained": 6,
+            "term_changed": 0.1076,
+            "lost_term_changed": 0.325,
+            "rest_term_changed": 0.0789,
+            "pass_when_term_changed": 0.5405,
+            "pass_when_term_kept": 0.7997,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v5-wild2-heard-small-clean"
+            ]
+          },
+          "all": {
+            "turns": 927,
+            "pass": 0.7837,
+            "written_pass": 0.8608,
+            "drop": 0.0771,
+            "term_changed": 0.0939,
+            "lost": 83,
+            "regained": 10,
+            "sets": [
+              "testv2",
+              "wild",
+              "wild2"
+            ]
+          }
+        },
+        "tiny-clean": {
+          "testv2": {
+            "turns": 174,
+            "pass": 0.8448,
+            "written_pass": 0.931,
+            "drop": 0.0862,
+            "lost": 15,
+            "regained": 0,
+            "term_changed": 0.1322,
+            "lost_term_changed": 0.4,
+            "rest_term_changed": 0.1069,
+            "pass_when_term_changed": 0.6522,
+            "pass_when_term_kept": 0.8742,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v5-testv2-heard-tiny-clean"
+            ]
+          },
+          "wild": {
+            "turns": 409,
+            "pass": 0.7311,
+            "written_pass": 0.8252,
+            "drop": 0.0941,
+            "lost": 46,
+            "regained": 9,
+            "term_changed": 0.132,
+            "lost_term_changed": 0.4348,
+            "rest_term_changed": 0.0937,
+            "pass_when_term_changed": 0.4074,
+            "pass_when_term_kept": 0.7803,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v5-wild-heard-tiny-clean"
+            ]
+          },
+          "wild2": {
+            "turns": 344,
+            "pass": 0.7398,
+            "written_pass": 0.8677,
+            "drop": 0.1279,
+            "lost": 50,
+            "regained": 5,
+            "term_changed": 0.1599,
+            "lost_term_changed": 0.4,
+            "rest_term_changed": 0.119,
+            "pass_when_term_changed": 0.5091,
+            "pass_when_term_kept": 0.7837,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v5-wild2-heard-tiny-clean"
+            ]
+          },
+          "all": {
+            "turns": 927,
+            "pass": 0.7557,
+            "written_pass": 0.8608,
+            "drop": 0.1052,
+            "term_changed": 0.1424,
+            "lost": 111,
+            "regained": 14,
+            "sets": [
+              "testv2",
+              "wild",
+              "wild2"
+            ]
+          }
+        }
+      },
+      "confusions": {
+        "dirs": [
+          "outputs/eval/homeai-4b-lora-v5-confusions-heard"
+        ],
+        "data": "data/generated/heard/confusions.jsonl",
+        "groups": {
+          "all": {
+            "n": 571,
+            "pass": 0.4562,
+            "paired_n": 517,
+            "paired_pass": 0.4536,
+            "source_written_pass": 0.8308
+          },
+          "kind:homophone": {
+            "n": 41,
+            "pass": 0.5488,
+            "paired_n": 41,
+            "paired_pass": 0.5488,
+            "source_written_pass": 0.8415
+          },
+          "kind:number": {
+            "n": 28,
+            "pass": 0.6071,
+            "paired_n": 24,
+            "paired_pass": 0.5833,
+            "source_written_pass": 0.75
+          },
+          "kind:observed": {
+            "n": 400,
+            "pass": 0.3875,
+            "paired_n": 375,
+            "paired_pass": 0.392,
+            "source_written_pass": 0.848
+          },
+          "kind:person": {
+            "n": 34,
+            "pass": 0.5441,
+            "paired_n": 31,
+            "paired_pass": 0.5645,
+            "source_written_pass": 0.6935
+          },
+          "kind:room": {
+            "n": 68,
+            "pass": 0.6985,
+            "paired_n": 46,
+            "paired_pass": 0.7283,
+            "source_written_pass": 0.8152
+          },
+          "recoverable:False": {
+            "n": 10,
+            "pass": 0.2,
+            "paired_n": 10,
+            "paired_pass": 0.2,
+            "source_written_pass": 0.7
+          },
+          "recoverable:True": {
+            "n": 561,
+            "pass": 0.4608,
+            "paired_n": 507,
+            "paired_pass": 0.4586,
+            "source_written_pass": 0.8333
+          }
+        }
+      },
+      "speed": [
+        {
+          "run": "homeai-4b-lora-v5-testv2-heard-medium-biased",
+          "seconds_per_turn": 1.66,
+          "seconds_per_call": 0.8,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v5-testv2-heard-parakeet-clean",
+          "seconds_per_turn": 1.65,
+          "seconds_per_call": 0.8,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v5-testv2-heard-parakeet-farfield",
+          "seconds_per_turn": 1.73,
+          "seconds_per_call": 0.8,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v5-testv2-heard-parakeet-noisy10",
+          "seconds_per_turn": 1.59,
+          "seconds_per_call": 0.78,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v5-testv2-heard-small-biased",
+          "seconds_per_turn": 1.69,
+          "seconds_per_call": 0.81,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v5-testv2-heard-small-clean",
+          "seconds_per_turn": 1.66,
+          "seconds_per_call": 0.8,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v5-testv2-heard-tiny-clean",
+          "seconds_per_turn": 1.64,
+          "seconds_per_call": 0.79,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v5-wild-heard-medium-biased",
+          "seconds_per_turn": 1.62,
+          "seconds_per_call": 0.76,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v5-wild-heard-parakeet-clean",
+          "seconds_per_turn": 1.64,
+          "seconds_per_call": 0.76,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v5-wild-heard-parakeet-farfield",
+          "seconds_per_turn": 1.64,
+          "seconds_per_call": 0.76,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v5-wild-heard-parakeet-noisy10",
+          "seconds_per_turn": 1.67,
+          "seconds_per_call": 0.76,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v5-wild-heard-small-biased",
+          "seconds_per_turn": 1.63,
+          "seconds_per_call": 0.76,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v5-wild-heard-small-clean",
+          "seconds_per_turn": 1.64,
+          "seconds_per_call": 0.76,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v5-wild-heard-tiny-clean",
+          "seconds_per_turn": 1.66,
+          "seconds_per_call": 0.76,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v5-wild2-heard-medium-biased",
+          "seconds_per_turn": 1.63,
+          "seconds_per_call": 0.77,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v5-wild2-heard-parakeet-clean",
+          "seconds_per_turn": 1.65,
+          "seconds_per_call": 0.77,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v5-wild2-heard-parakeet-farfield",
+          "seconds_per_turn": 1.66,
+          "seconds_per_call": 0.77,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v5-wild2-heard-parakeet-noisy10",
+          "seconds_per_turn": 1.63,
+          "seconds_per_call": 0.77,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v5-wild2-heard-small-biased",
+          "seconds_per_turn": 1.65,
+          "seconds_per_call": 0.77,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v5-wild2-heard-small-clean",
+          "seconds_per_turn": 1.63,
+          "seconds_per_call": 0.77,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v5-wild2-heard-tiny-clean",
+          "seconds_per_turn": 1.68,
+          "seconds_per_call": 0.78,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v5-testv2-heard-written",
+          "seconds_per_turn": 1.63,
+          "seconds_per_call": 0.8,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v5-wild-heard-written",
+          "seconds_per_turn": 1.63,
+          "seconds_per_call": 0.76,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v5-wild2-heard-written",
+          "seconds_per_turn": 1.58,
+          "seconds_per_call": 0.76,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        }
+      ]
+    },
+    "homeai-4b-lora-v5 @ magpie": {
+      "written": {
+        "testv2": {
+          "turns": 35,
+          "pass": 0.9,
+          "dirs": [
+            "outputs/eval/homeai-4b-lora-v5-testv2-heard-written-s30"
+          ]
+        }
+      },
+      "heard": {
+        "medium-biased": {
+          "testv2": {
+            "turns": 35,
+            "pass": 0.8429,
+            "written_pass": 0.9,
+            "drop": 0.0571,
+            "lost": 2,
+            "regained": 0,
+            "term_changed": 0.0286,
+            "lost_term_changed": 0.5,
+            "rest_term_changed": 0.0,
+            "pass_when_term_changed": 0.0,
+            "pass_when_term_kept": 0.8676,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v5-testv2-heard-medium-biased-s30"
+            ]
+          },
+          "all": {
+            "turns": 35,
+            "pass": 0.8429,
+            "written_pass": 0.9,
+            "drop": 0.0571,
+            "term_changed": 0.0286,
+            "lost": 2,
+            "regained": 0,
+            "sets": [
+              "testv2"
+            ]
+          }
+        },
+        "parakeet-clean": {
+          "testv2": {
+            "turns": 35,
+            "pass": 0.8143,
+            "written_pass": 0.9,
+            "drop": 0.0857,
+            "lost": 3,
+            "regained": 0,
+            "term_changed": 0.1714,
+            "lost_term_changed": 0.6667,
+            "rest_term_changed": 0.125,
+            "pass_when_term_changed": 0.5,
+            "pass_when_term_kept": 0.8793,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v5-testv2-heard-parakeet-clean-s30"
+            ]
+          },
+          "all": {
+            "turns": 35,
+            "pass": 0.8143,
+            "written_pass": 0.9,
+            "drop": 0.0857,
+            "term_changed": 0.1714,
+            "lost": 3,
+            "regained": 0,
+            "sets": [
+              "testv2"
+            ]
+          }
+        },
+        "parakeet-farfield": {
+          "testv2": {
+            "turns": 35,
+            "pass": 0.8429,
+            "written_pass": 0.9,
+            "drop": 0.0571,
+            "lost": 3,
+            "regained": 1,
+            "term_changed": 0.2286,
+            "lost_term_changed": 1.0,
+            "rest_term_changed": 0.1562,
+            "pass_when_term_changed": 0.5,
+            "pass_when_term_kept": 0.9444,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v5-testv2-heard-parakeet-farfield-s30"
+            ]
+          },
+          "all": {
+            "turns": 35,
+            "pass": 0.8429,
+            "written_pass": 0.9,
+            "drop": 0.0571,
+            "term_changed": 0.2286,
+            "lost": 3,
+            "regained": 1,
+            "sets": [
+              "testv2"
+            ]
+          }
+        },
+        "parakeet-noisy10": {
+          "testv2": {
+            "turns": 35,
+            "pass": 0.7,
+            "written_pass": 0.9,
+            "drop": 0.2,
+            "lost": 7,
+            "regained": 0,
+            "term_changed": 0.3429,
+            "lost_term_changed": 0.8571,
+            "rest_term_changed": 0.2143,
+            "pass_when_term_changed": 0.4167,
+            "pass_when_term_kept": 0.8478,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v5-testv2-heard-parakeet-noisy10-s30"
+            ]
+          },
+          "all": {
+            "turns": 35,
+            "pass": 0.7,
+            "written_pass": 0.9,
+            "drop": 0.2,
+            "term_changed": 0.3429,
+            "lost": 7,
+            "regained": 0,
+            "sets": [
+              "testv2"
+            ]
+          }
+        },
+        "small-biased": {
+          "testv2": {
+            "turns": 35,
+            "pass": 0.8714,
+            "written_pass": 0.9,
+            "drop": 0.0286,
+            "lost": 1,
+            "regained": 0,
+            "term_changed": 0.0857,
+            "lost_term_changed": 0.0,
+            "rest_term_changed": 0.0882,
+            "pass_when_term_changed": 0.6667,
+            "pass_when_term_kept": 0.8906,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v5-testv2-heard-small-biased-s30"
+            ]
+          },
+          "all": {
+            "turns": 35,
+            "pass": 0.8714,
+            "written_pass": 0.9,
+            "drop": 0.0286,
+            "term_changed": 0.0857,
+            "lost": 1,
+            "regained": 0,
+            "sets": [
+              "testv2"
+            ]
+          }
+        },
+        "small-clean": {
+          "testv2": {
+            "turns": 35,
+            "pass": 0.7857,
+            "written_pass": 0.9,
+            "drop": 0.1143,
+            "lost": 4,
+            "regained": 0,
+            "term_changed": 0.1714,
+            "lost_term_changed": 0.75,
+            "rest_term_changed": 0.0968,
+            "pass_when_term_changed": 0.3333,
+            "pass_when_term_kept": 0.8793,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v5-testv2-heard-small-clean-s30"
+            ]
+          },
+          "all": {
+            "turns": 35,
+            "pass": 0.7857,
+            "written_pass": 0.9,
+            "drop": 0.1143,
+            "term_changed": 0.1714,
+            "lost": 4,
+            "regained": 0,
+            "sets": [
+              "testv2"
+            ]
+          }
+        },
+        "tiny-clean": {
+          "testv2": {
+            "turns": 35,
+            "pass": 0.8143,
+            "written_pass": 0.9,
+            "drop": 0.0857,
+            "lost": 4,
+            "regained": 1,
+            "term_changed": 0.2571,
+            "lost_term_changed": 0.75,
+            "rest_term_changed": 0.1935,
+            "pass_when_term_changed": 0.5556,
+            "pass_when_term_kept": 0.9038,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v5-testv2-heard-tiny-clean-s30"
+            ]
+          },
+          "all": {
+            "turns": 35,
+            "pass": 0.8143,
+            "written_pass": 0.9,
+            "drop": 0.0857,
+            "term_changed": 0.2571,
+            "lost": 4,
+            "regained": 1,
+            "sets": [
+              "testv2"
+            ]
+          }
+        }
+      },
+      "confusions": null,
+      "speed": [
+        {
+          "run": "homeai-4b-lora-v5-testv2-heard-medium-biased-s30",
+          "seconds_per_turn": 31.89,
+          "seconds_per_call": 17.17,
+          "host": "magpie",
+          "hardware": "apple-m2",
+          "ollama": "http://10.24.10.150:11600"
+        },
+        {
+          "run": "homeai-4b-lora-v5-testv2-heard-parakeet-clean-s30",
+          "seconds_per_turn": 35.17,
+          "seconds_per_call": 17.34,
+          "host": "magpie",
+          "hardware": "apple-m2",
+          "ollama": "http://10.24.10.150:11600"
+        },
+        {
+          "run": "homeai-4b-lora-v5-testv2-heard-parakeet-farfield-s30",
+          "seconds_per_turn": 35.02,
+          "seconds_per_call": 17.27,
+          "host": "magpie",
+          "hardware": "apple-m2",
+          "ollama": "http://10.24.10.150:11600"
+        },
+        {
+          "run": "homeai-4b-lora-v5-testv2-heard-parakeet-noisy10-s30",
+          "seconds_per_turn": 32.13,
+          "seconds_per_call": 16.79,
+          "host": "magpie",
+          "hardware": "apple-m2",
+          "ollama": "http://10.24.10.150:11600"
+        },
+        {
+          "run": "homeai-4b-lora-v5-testv2-heard-small-biased-s30",
+          "seconds_per_turn": 34.0,
+          "seconds_per_call": 17.5,
+          "host": "magpie",
+          "hardware": "apple-m2",
+          "ollama": "http://10.24.10.150:11600"
+        },
+        {
+          "run": "homeai-4b-lora-v5-testv2-heard-small-clean-s30",
+          "seconds_per_turn": 32.02,
+          "seconds_per_call": 16.73,
+          "host": "magpie",
+          "hardware": "apple-m2",
+          "ollama": "http://10.24.10.150:11600"
+        },
+        {
+          "run": "homeai-4b-lora-v5-testv2-heard-tiny-clean-s30",
+          "seconds_per_turn": 33.66,
+          "seconds_per_call": 17.07,
+          "host": "magpie",
+          "hardware": "apple-m2",
+          "ollama": "http://10.24.10.150:11600"
+        },
+        {
+          "run": "homeai-4b-lora-v5-testv2-heard-written-s30",
+          "seconds_per_turn": 42.3,
+          "seconds_per_call": 22.1,
+          "host": "magpie",
+          "hardware": "apple-m2",
+          "ollama": "http://10.24.10.150:11600"
+        }
+      ]
+    },
+    "homeai-4b-lora-v8 @ lapwing": {
+      "written": {
+        "testv2": {
+          "turns": 174,
+          "pass": 0.9195,
+          "dirs": [
+            "outputs/eval/homeai-4b-lora-v8-testv2-heard-written"
+          ]
+        },
+        "wild": {
+          "turns": 409,
+          "pass": 0.8362,
+          "dirs": [
+            "outputs/eval/homeai-4b-lora-v8-wild-heard-written"
+          ]
+        },
+        "wild2": {
+          "turns": 344,
+          "pass": 0.8474,
+          "dirs": [
+            "outputs/eval/homeai-4b-lora-v8-wild2-heard-written"
+          ]
+        }
+      },
+      "heard": {
+        "medium-biased": {
+          "testv2": {
+            "turns": 174,
+            "pass": 0.8736,
+            "written_pass": 0.9195,
+            "drop": 0.046,
+            "lost": 8,
+            "regained": 0,
+            "term_changed": 0.023,
+            "lost_term_changed": 0.25,
+            "rest_term_changed": 0.012,
+            "pass_when_term_changed": 0.5,
+            "pass_when_term_kept": 0.8824,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v8-testv2-heard-medium-biased"
+            ]
+          },
+          "wild": {
+            "turns": 409,
+            "pass": 0.8044,
+            "written_pass": 0.8362,
+            "drop": 0.0318,
+            "lost": 16,
+            "regained": 2,
+            "term_changed": 0.0587,
+            "lost_term_changed": 0.375,
+            "rest_term_changed": 0.0458,
+            "pass_when_term_changed": 0.5833,
+            "pass_when_term_kept": 0.8182,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v8-wild-heard-medium-biased"
+            ]
+          },
+          "wild2": {
+            "turns": 344,
+            "pass": 0.7645,
+            "written_pass": 0.8474,
+            "drop": 0.0828,
+            "lost": 36,
+            "regained": 7,
+            "term_changed": 0.0581,
+            "lost_term_changed": 0.3611,
+            "rest_term_changed": 0.0227,
+            "pass_when_term_changed": 0.35,
+            "pass_when_term_kept": 0.7901,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v8-wild2-heard-medium-biased"
+            ]
+          },
+          "all": {
+            "turns": 927,
+            "pass": 0.8026,
+            "written_pass": 0.856,
+            "drop": 0.0534,
+            "term_changed": 0.0518,
+            "lost": 60,
+            "regained": 9,
+            "sets": [
+              "testv2",
+              "wild",
+              "wild2"
+            ]
+          }
+        },
+        "parakeet-clean": {
+          "testv2": {
+            "turns": 174,
+            "pass": 0.8333,
+            "written_pass": 0.9195,
+            "drop": 0.0862,
+            "lost": 16,
+            "regained": 1,
+            "term_changed": 0.0747,
+            "lost_term_changed": 0.25,
+            "rest_term_changed": 0.057,
+            "pass_when_term_changed": 0.5385,
+            "pass_when_term_kept": 0.8571,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v8-testv2-heard-parakeet-clean"
+            ]
+          },
+          "wild": {
+            "turns": 409,
+            "pass": 0.7787,
+            "written_pass": 0.8362,
+            "drop": 0.0575,
+            "lost": 28,
+            "regained": 5,
+            "term_changed": 0.0954,
+            "lost_term_changed": 0.3214,
+            "rest_term_changed": 0.0787,
+            "pass_when_term_changed": 0.5641,
+            "pass_when_term_kept": 0.8014,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v8-wild-heard-parakeet-clean"
+            ]
+          },
+          "wild2": {
+            "turns": 344,
+            "pass": 0.7645,
+            "written_pass": 0.8474,
+            "drop": 0.0828,
+            "lost": 36,
+            "regained": 7,
+            "term_changed": 0.0901,
+            "lost_term_changed": 0.4722,
+            "rest_term_changed": 0.0455,
+            "pass_when_term_changed": 0.3548,
+            "pass_when_term_kept": 0.8051,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v8-wild2-heard-parakeet-clean"
+            ]
+          },
+          "all": {
+            "turns": 927,
+            "pass": 0.7837,
+            "written_pass": 0.856,
+            "drop": 0.0723,
+            "term_changed": 0.0895,
+            "lost": 80,
+            "regained": 13,
+            "sets": [
+              "testv2",
+              "wild",
+              "wild2"
+            ]
+          }
+        },
+        "parakeet-farfield": {
+          "testv2": {
+            "turns": 174,
+            "pass": 0.7701,
+            "written_pass": 0.9195,
+            "drop": 0.1494,
+            "lost": 27,
+            "regained": 1,
+            "term_changed": 0.1782,
+            "lost_term_changed": 0.5185,
+            "rest_term_changed": 0.1156,
+            "pass_when_term_changed": 0.4677,
+            "pass_when_term_kept": 0.8357,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v8-testv2-heard-parakeet-farfield"
+            ]
+          },
+          "wild": {
+            "turns": 409,
+            "pass": 0.7066,
+            "written_pass": 0.8362,
+            "drop": 0.1296,
+            "lost": 60,
+            "regained": 8,
+            "term_changed": 0.2005,
+            "lost_term_changed": 0.6,
+            "rest_term_changed": 0.1318,
+            "pass_when_term_changed": 0.4329,
+            "pass_when_term_kept": 0.7752,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v8-wild-heard-parakeet-farfield"
+            ]
+          },
+          "wild2": {
+            "turns": 344,
+            "pass": 0.7078,
+            "written_pass": 0.8474,
+            "drop": 0.1395,
+            "lost": 60,
+            "regained": 12,
+            "term_changed": 0.1599,
+            "lost_term_changed": 0.5167,
+            "rest_term_changed": 0.0845,
+            "pass_when_term_changed": 0.3818,
+            "pass_when_term_kept": 0.7699,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v8-wild2-heard-parakeet-farfield"
+            ]
+          },
+          "all": {
+            "turns": 927,
+            "pass": 0.719,
+            "written_pass": 0.856,
+            "drop": 0.137,
+            "term_changed": 0.1812,
+            "lost": 147,
+            "regained": 21,
+            "sets": [
+              "testv2",
+              "wild",
+              "wild2"
+            ]
+          }
+        },
+        "parakeet-noisy10": {
+          "testv2": {
+            "turns": 174,
+            "pass": 0.727,
+            "written_pass": 0.9195,
+            "drop": 0.1925,
+            "lost": 36,
+            "regained": 2,
+            "term_changed": 0.2414,
+            "lost_term_changed": 0.6667,
+            "rest_term_changed": 0.1304,
+            "pass_when_term_changed": 0.3571,
+            "pass_when_term_kept": 0.8447,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v8-testv2-heard-parakeet-noisy10"
+            ]
+          },
+          "wild": {
+            "turns": 409,
+            "pass": 0.7005,
+            "written_pass": 0.8362,
+            "drop": 0.1357,
+            "lost": 63,
+            "regained": 9,
+            "term_changed": 0.2616,
+            "lost_term_changed": 0.6825,
+            "rest_term_changed": 0.185,
+            "pass_when_term_changed": 0.4533,
+            "pass_when_term_kept": 0.7881,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v8-wild-heard-parakeet-noisy10"
+            ]
+          },
+          "wild2": {
+            "turns": 344,
+            "pass": 0.6613,
+            "written_pass": 0.8474,
+            "drop": 0.186,
+            "lost": 76,
+            "regained": 12,
+            "term_changed": 0.25,
+            "lost_term_changed": 0.6316,
+            "rest_term_changed": 0.1418,
+            "pass_when_term_changed": 0.3256,
+            "pass_when_term_kept": 0.7733,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v8-wild2-heard-parakeet-noisy10"
+            ]
+          },
+          "all": {
+            "turns": 927,
+            "pass": 0.6909,
+            "written_pass": 0.856,
+            "drop": 0.165,
+            "term_changed": 0.2535,
+            "lost": 175,
+            "regained": 23,
+            "sets": [
+              "testv2",
+              "wild",
+              "wild2"
+            ]
+          }
+        },
+        "small-biased": {
+          "testv2": {
+            "turns": 174,
+            "pass": 0.8477,
+            "written_pass": 0.9195,
+            "drop": 0.0718,
+            "lost": 13,
+            "regained": 0,
+            "term_changed": 0.0575,
+            "lost_term_changed": 0.2308,
+            "rest_term_changed": 0.0435,
+            "pass_when_term_changed": 0.5,
+            "pass_when_term_kept": 0.8689,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v8-testv2-heard-small-biased"
+            ]
+          },
+          "wild": {
+            "turns": 409,
+            "pass": 0.7836,
+            "written_pass": 0.8362,
+            "drop": 0.0526,
+            "lost": 24,
+            "regained": 3,
+            "term_changed": 0.0636,
+            "lost_term_changed": 0.25,
+            "rest_term_changed": 0.0519,
+            "pass_when_term_changed": 0.5962,
+            "pass_when_term_kept": 0.7963,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v8-wild-heard-small-biased"
+            ]
+          },
+          "wild2": {
+            "turns": 344,
+            "pass": 0.7849,
+            "written_pass": 0.8474,
+            "drop": 0.0625,
+            "lost": 32,
+            "regained": 10,
+            "term_changed": 0.0756,
+            "lost_term_changed": 0.3438,
+            "rest_term_changed": 0.0481,
+            "pass_when_term_changed": 0.5,
+            "pass_when_term_kept": 0.8082,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v8-wild2-heard-small-biased"
+            ]
+          },
+          "all": {
+            "turns": 927,
+            "pass": 0.7961,
+            "written_pass": 0.856,
+            "drop": 0.0599,
+            "term_changed": 0.0669,
+            "lost": 69,
+            "regained": 13,
+            "sets": [
+              "testv2",
+              "wild",
+              "wild2"
+            ]
+          }
+        },
+        "small-clean": {
+          "testv2": {
+            "turns": 174,
+            "pass": 0.842,
+            "written_pass": 0.9195,
+            "drop": 0.0776,
+            "lost": 14,
+            "regained": 0,
+            "term_changed": 0.0862,
+            "lost_term_changed": 0.2143,
+            "rest_term_changed": 0.075,
+            "pass_when_term_changed": 0.7,
+            "pass_when_term_kept": 0.8553,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v8-testv2-heard-small-clean"
+            ]
+          },
+          "wild": {
+            "turns": 409,
+            "pass": 0.7787,
+            "written_pass": 0.8362,
+            "drop": 0.0575,
+            "lost": 28,
+            "regained": 5,
+            "term_changed": 0.0856,
+            "lost_term_changed": 0.3929,
+            "rest_term_changed": 0.063,
+            "pass_when_term_changed": 0.6,
+            "pass_when_term_kept": 0.7955,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v8-wild-heard-small-clean"
+            ]
+          },
+          "wild2": {
+            "turns": 344,
+            "pass": 0.7703,
+            "written_pass": 0.8474,
+            "drop": 0.077,
+            "lost": 37,
+            "regained": 10,
+            "term_changed": 0.1076,
+            "lost_term_changed": 0.4324,
+            "rest_term_changed": 0.0684,
+            "pass_when_term_changed": 0.4865,
+            "pass_when_term_kept": 0.8046,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v8-wild2-heard-small-clean"
+            ]
+          },
+          "all": {
+            "turns": 927,
+            "pass": 0.7875,
+            "written_pass": 0.856,
+            "drop": 0.0685,
+            "term_changed": 0.0939,
+            "lost": 79,
+            "regained": 15,
+            "sets": [
+              "testv2",
+              "wild",
+              "wild2"
+            ]
+          }
+        },
+        "tiny-clean": {
+          "testv2": {
+            "turns": 174,
+            "pass": 0.8391,
+            "written_pass": 0.9195,
+            "drop": 0.0805,
+            "lost": 14,
+            "regained": 0,
+            "term_changed": 0.1322,
+            "lost_term_changed": 0.5,
+            "rest_term_changed": 0.1,
+            "pass_when_term_changed": 0.6087,
+            "pass_when_term_kept": 0.8742,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v8-testv2-heard-tiny-clean"
+            ]
+          },
+          "wild": {
+            "turns": 409,
+            "pass": 0.7641,
+            "written_pass": 0.8362,
+            "drop": 0.0721,
+            "lost": 38,
+            "regained": 9,
+            "term_changed": 0.132,
+            "lost_term_changed": 0.4474,
+            "rest_term_changed": 0.0997,
+            "pass_when_term_changed": 0.4907,
+            "pass_when_term_kept": 0.8056,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v8-wild-heard-tiny-clean"
+            ]
+          },
+          "wild2": {
+            "turns": 344,
+            "pass": 0.7151,
+            "written_pass": 0.8474,
+            "drop": 0.1323,
+            "lost": 51,
+            "regained": 5,
+            "term_changed": 0.1599,
+            "lost_term_changed": 0.4706,
+            "rest_term_changed": 0.1058,
+            "pass_when_term_changed": 0.4182,
+            "pass_when_term_kept": 0.7716,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v8-wild2-heard-tiny-clean"
+            ]
+          },
+          "all": {
+            "turns": 927,
+            "pass": 0.76,
+            "written_pass": 0.856,
+            "drop": 0.096,
+            "term_changed": 0.1424,
+            "lost": 103,
+            "regained": 14,
+            "sets": [
+              "testv2",
+              "wild",
+              "wild2"
+            ]
+          }
+        }
+      },
+      "confusions": {
+        "dirs": [
+          "outputs/eval/homeai-4b-lora-v8-confusions-heard"
+        ],
+        "data": "data/generated/heard/confusions.jsonl",
+        "groups": {
+          "all": {
+            "n": 571,
+            "pass": 0.4483,
+            "paired_n": 517,
+            "paired_pass": 0.4487,
+            "source_written_pass": 0.8346
+          },
+          "kind:homophone": {
+            "n": 41,
+            "pass": 0.5854,
+            "paired_n": 41,
+            "paired_pass": 0.5854,
+            "source_written_pass": 0.7805
+          },
+          "kind:number": {
+            "n": 28,
+            "pass": 0.5357,
+            "paired_n": 24,
+            "paired_pass": 0.5,
+            "source_written_pass": 0.7917
+          },
+          "kind:observed": {
+            "n": 400,
+            "pass": 0.3837,
+            "paired_n": 375,
+            "paired_pass": 0.3853,
+            "source_written_pass": 0.832
+          },
+          "kind:person": {
+            "n": 34,
+            "pass": 0.5588,
+            "paired_n": 31,
+            "paired_pass": 0.5806,
+            "source_written_pass": 0.9032
+          },
+          "kind:room": {
+            "n": 68,
+            "pass": 0.6544,
+            "paired_n": 46,
+            "paired_pass": 0.7283,
+            "source_written_pass": 0.8804
+          },
+          "recoverable:False": {
+            "n": 10,
+            "pass": 0.1,
+            "paired_n": 10,
+            "paired_pass": 0.1,
+            "source_written_pass": 0.8
+          },
+          "recoverable:True": {
+            "n": 561,
+            "pass": 0.4545,
+            "paired_n": 507,
+            "paired_pass": 0.4556,
+            "source_written_pass": 0.8353
+          }
+        }
+      },
+      "speed": [
+        {
+          "run": "homeai-4b-lora-v8-testv2-heard-medium-biased",
+          "seconds_per_turn": 2.1,
+          "seconds_per_call": 1.02,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v8-testv2-heard-parakeet-clean",
+          "seconds_per_turn": 2.12,
+          "seconds_per_call": 1.02,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v8-testv2-heard-parakeet-farfield",
+          "seconds_per_turn": 2.15,
+          "seconds_per_call": 1.01,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v8-testv2-heard-parakeet-noisy10",
+          "seconds_per_turn": 1.57,
+          "seconds_per_call": 0.78,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v8-testv2-heard-small-biased",
+          "seconds_per_turn": 2.16,
+          "seconds_per_call": 1.03,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v8-testv2-heard-small-clean",
+          "seconds_per_turn": 2.14,
+          "seconds_per_call": 1.02,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v8-testv2-heard-tiny-clean",
+          "seconds_per_turn": 2.13,
+          "seconds_per_call": 1.01,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v8-wild-heard-medium-biased",
+          "seconds_per_turn": 1.58,
+          "seconds_per_call": 0.75,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v8-wild-heard-parakeet-clean",
+          "seconds_per_turn": 1.59,
+          "seconds_per_call": 0.75,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v8-wild-heard-parakeet-farfield",
+          "seconds_per_turn": 1.62,
+          "seconds_per_call": 0.76,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v8-wild-heard-parakeet-noisy10",
+          "seconds_per_turn": 1.61,
+          "seconds_per_call": 0.76,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v8-wild-heard-small-biased",
+          "seconds_per_turn": 1.59,
+          "seconds_per_call": 0.76,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v8-wild-heard-small-clean",
+          "seconds_per_turn": 1.6,
+          "seconds_per_call": 0.76,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v8-wild-heard-tiny-clean",
+          "seconds_per_turn": 1.6,
+          "seconds_per_call": 0.76,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v8-wild2-heard-medium-biased",
+          "seconds_per_turn": 1.66,
+          "seconds_per_call": 0.78,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v8-wild2-heard-parakeet-clean",
+          "seconds_per_turn": 1.62,
+          "seconds_per_call": 0.77,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v8-wild2-heard-parakeet-farfield",
+          "seconds_per_turn": 1.65,
+          "seconds_per_call": 0.77,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v8-wild2-heard-parakeet-noisy10",
+          "seconds_per_turn": 1.61,
+          "seconds_per_call": 0.77,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v8-wild2-heard-small-biased",
+          "seconds_per_turn": 1.64,
+          "seconds_per_call": 0.77,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v8-wild2-heard-small-clean",
+          "seconds_per_turn": 1.64,
+          "seconds_per_call": 0.78,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v8-wild2-heard-tiny-clean",
+          "seconds_per_turn": 1.65,
+          "seconds_per_call": 0.77,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v8-testv2-heard-written",
+          "seconds_per_turn": 2.1,
+          "seconds_per_call": 1.03,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v8-wild-heard-written",
+          "seconds_per_turn": 1.77,
+          "seconds_per_call": 0.85,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v8-wild2-heard-written",
+          "seconds_per_turn": 1.58,
+          "seconds_per_call": 0.76,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        }
+      ]
+    },
+    "homeai-4b-lora-v9 @ lapwing": {
+      "written": {
+        "testv2": {
+          "turns": 174,
+          "pass": 0.9023,
+          "dirs": [
+            "outputs/eval/homeai-4b-lora-v9-testv2-heard-written"
+          ]
+        },
+        "wild": {
+          "turns": 409,
+          "pass": 0.8215,
+          "dirs": [
+            "outputs/eval/homeai-4b-lora-v9-wild-heard-written"
+          ]
+        },
+        "wild2": {
+          "turns": 344,
+          "pass": 0.8721,
+          "dirs": [
+            "outputs/eval/homeai-4b-lora-v9-wild2-heard-written"
+          ]
+        }
+      },
+      "heard": {
+        "medium-biased": {
+          "testv2": {
+            "turns": 174,
+            "pass": 0.8793,
+            "written_pass": 0.9023,
+            "drop": 0.023,
+            "lost": 5,
+            "regained": 1,
+            "term_changed": 0.023,
+            "lost_term_changed": 0.2,
+            "rest_term_changed": 0.0178,
+            "pass_when_term_changed": 0.75,
+            "pass_when_term_kept": 0.8824,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v9-testv2-heard-medium-biased"
+            ]
+          },
+          "wild": {
+            "turns": 409,
+            "pass": 0.8105,
+            "written_pass": 0.8215,
+            "drop": 0.011,
+            "lost": 11,
+            "regained": 6,
+            "term_changed": 0.0587,
+            "lost_term_changed": 0.4545,
+            "rest_term_changed": 0.0477,
+            "pass_when_term_changed": 0.625,
+            "pass_when_term_kept": 0.8221,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v9-wild-heard-medium-biased"
+            ]
+          },
+          "wild2": {
+            "turns": 344,
+            "pass": 0.7791,
+            "written_pass": 0.8721,
+            "drop": 0.093,
+            "lost": 39,
+            "regained": 6,
+            "term_changed": 0.0581,
+            "lost_term_changed": 0.3077,
+            "rest_term_changed": 0.0262,
+            "pass_when_term_changed": 0.4,
+            "pass_when_term_kept": 0.8025,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v9-wild2-heard-medium-biased"
+            ]
+          },
+          "all": {
+            "turns": 927,
+            "pass": 0.8118,
+            "written_pass": 0.8554,
+            "drop": 0.0437,
+            "term_changed": 0.0518,
+            "lost": 55,
+            "regained": 13,
+            "sets": [
+              "testv2",
+              "wild",
+              "wild2"
+            ]
+          }
+        },
+        "parakeet-clean": {
+          "testv2": {
+            "turns": 174,
+            "pass": 0.8621,
+            "written_pass": 0.9023,
+            "drop": 0.0402,
+            "lost": 9,
+            "regained": 2,
+            "term_changed": 0.0747,
+            "lost_term_changed": 0.3333,
+            "rest_term_changed": 0.0606,
+            "pass_when_term_changed": 0.6923,
+            "pass_when_term_kept": 0.8758,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v9-testv2-heard-parakeet-clean"
+            ]
+          },
+          "wild": {
+            "turns": 409,
+            "pass": 0.7958,
+            "written_pass": 0.8215,
+            "drop": 0.0257,
+            "lost": 18,
+            "regained": 8,
+            "term_changed": 0.0954,
+            "lost_term_changed": 0.3333,
+            "rest_term_changed": 0.0844,
+            "pass_when_term_changed": 0.6154,
+            "pass_when_term_kept": 0.8149,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v9-wild-heard-parakeet-clean"
+            ]
+          },
+          "wild2": {
+            "turns": 344,
+            "pass": 0.7965,
+            "written_pass": 0.8721,
+            "drop": 0.0756,
+            "lost": 34,
+            "regained": 7,
+            "term_changed": 0.0901,
+            "lost_term_changed": 0.4412,
+            "rest_term_changed": 0.0516,
+            "pass_when_term_changed": 0.4677,
+            "pass_when_term_kept": 0.8291,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v9-wild2-heard-parakeet-clean"
+            ]
+          },
+          "all": {
+            "turns": 927,
+            "pass": 0.8085,
+            "written_pass": 0.8554,
+            "drop": 0.0469,
+            "term_changed": 0.0895,
+            "lost": 61,
+            "regained": 17,
+            "sets": [
+              "testv2",
+              "wild",
+              "wild2"
+            ]
+          }
+        },
+        "parakeet-farfield": {
+          "testv2": {
+            "turns": 174,
+            "pass": 0.8046,
+            "written_pass": 0.9023,
+            "drop": 0.0977,
+            "lost": 19,
+            "regained": 2,
+            "term_changed": 0.1782,
+            "lost_term_changed": 0.5263,
+            "rest_term_changed": 0.1355,
+            "pass_when_term_changed": 0.629,
+            "pass_when_term_kept": 0.8427,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v9-testv2-heard-parakeet-farfield"
+            ]
+          },
+          "wild": {
+            "turns": 409,
+            "pass": 0.7372,
+            "written_pass": 0.8215,
+            "drop": 0.0844,
+            "lost": 47,
+            "regained": 13,
+            "term_changed": 0.2005,
+            "lost_term_changed": 0.6596,
+            "rest_term_changed": 0.1409,
+            "pass_when_term_changed": 0.5183,
+            "pass_when_term_kept": 0.792,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v9-wild-heard-parakeet-farfield"
+            ]
+          },
+          "wild2": {
+            "turns": 344,
+            "pass": 0.7602,
+            "written_pass": 0.8721,
+            "drop": 0.1119,
+            "lost": 48,
+            "regained": 9,
+            "term_changed": 0.1599,
+            "lost_term_changed": 0.5417,
+            "rest_term_changed": 0.098,
+            "pass_when_term_changed": 0.4909,
+            "pass_when_term_kept": 0.8114,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v9-wild2-heard-parakeet-farfield"
+            ]
+          },
+          "all": {
+            "turns": 927,
+            "pass": 0.7584,
+            "written_pass": 0.8554,
+            "drop": 0.0971,
+            "term_changed": 0.1812,
+            "lost": 114,
+            "regained": 24,
+            "sets": [
+              "testv2",
+              "wild",
+              "wild2"
+            ]
+          }
+        },
+        "parakeet-noisy10": {
+          "testv2": {
+            "turns": 174,
+            "pass": 0.7328,
+            "written_pass": 0.9023,
+            "drop": 0.1695,
+            "lost": 31,
+            "regained": 1,
+            "term_changed": 0.2414,
+            "lost_term_changed": 0.6129,
+            "rest_term_changed": 0.1608,
+            "pass_when_term_changed": 0.5,
+            "pass_when_term_kept": 0.8068,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v9-testv2-heard-parakeet-noisy10"
+            ]
+          },
+          "wild": {
+            "turns": 409,
+            "pass": 0.7164,
+            "written_pass": 0.8215,
+            "drop": 0.1051,
+            "lost": 52,
+            "regained": 10,
+            "term_changed": 0.2616,
+            "lost_term_changed": 0.7692,
+            "rest_term_changed": 0.1877,
+            "pass_when_term_changed": 0.4626,
+            "pass_when_term_kept": 0.8063,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v9-wild-heard-parakeet-noisy10"
+            ]
+          },
+          "wild2": {
+            "turns": 344,
+            "pass": 0.7137,
+            "written_pass": 0.8721,
+            "drop": 0.1584,
+            "lost": 63,
+            "regained": 8,
+            "term_changed": 0.25,
+            "lost_term_changed": 0.5873,
+            "rest_term_changed": 0.1744,
+            "pass_when_term_changed": 0.4535,
+            "pass_when_term_kept": 0.8004,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v9-wild2-heard-parakeet-noisy10"
+            ]
+          },
+          "all": {
+            "turns": 927,
+            "pass": 0.7185,
+            "written_pass": 0.8554,
+            "drop": 0.137,
+            "term_changed": 0.2535,
+            "lost": 146,
+            "regained": 19,
+            "sets": [
+              "testv2",
+              "wild",
+              "wild2"
+            ]
+          }
+        },
+        "small-biased": {
+          "testv2": {
+            "turns": 174,
+            "pass": 0.8793,
+            "written_pass": 0.9023,
+            "drop": 0.023,
+            "lost": 5,
+            "regained": 1,
+            "term_changed": 0.0575,
+            "lost_term_changed": 0.0,
+            "rest_term_changed": 0.0592,
+            "pass_when_term_changed": 0.9,
+            "pass_when_term_kept": 0.878,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v9-testv2-heard-small-biased"
+            ]
+          },
+          "wild": {
+            "turns": 409,
+            "pass": 0.791,
+            "written_pass": 0.8215,
+            "drop": 0.0306,
+            "lost": 21,
+            "regained": 9,
+            "term_changed": 0.0636,
+            "lost_term_changed": 0.3333,
+            "rest_term_changed": 0.049,
+            "pass_when_term_changed": 0.6154,
+            "pass_when_term_kept": 0.8029,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v9-wild-heard-small-biased"
+            ]
+          },
+          "wild2": {
+            "turns": 344,
+            "pass": 0.8009,
+            "written_pass": 0.8721,
+            "drop": 0.0712,
+            "lost": 32,
+            "regained": 6,
+            "term_changed": 0.0756,
+            "lost_term_changed": 0.375,
+            "rest_term_changed": 0.0449,
+            "pass_when_term_changed": 0.4808,
+            "pass_when_term_kept": 0.827,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v9-wild2-heard-small-biased"
+            ]
+          },
+          "all": {
+            "turns": 927,
+            "pass": 0.8112,
+            "written_pass": 0.8554,
+            "drop": 0.0442,
+            "term_changed": 0.0669,
+            "lost": 58,
+            "regained": 16,
+            "sets": [
+              "testv2",
+              "wild",
+              "wild2"
+            ]
+          }
+        },
+        "small-clean": {
+          "testv2": {
+            "turns": 174,
+            "pass": 0.8736,
+            "written_pass": 0.9023,
+            "drop": 0.0287,
+            "lost": 6,
+            "regained": 1,
+            "term_changed": 0.0862,
+            "lost_term_changed": 0.1667,
+            "rest_term_changed": 0.0833,
+            "pass_when_term_changed": 0.8667,
+            "pass_when_term_kept": 0.8742,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v9-testv2-heard-small-clean"
+            ]
+          },
+          "wild": {
+            "turns": 409,
+            "pass": 0.7922,
+            "written_pass": 0.8215,
+            "drop": 0.0293,
+            "lost": 19,
+            "regained": 7,
+            "term_changed": 0.0856,
+            "lost_term_changed": 0.4211,
+            "rest_term_changed": 0.0692,
+            "pass_when_term_changed": 0.6857,
+            "pass_when_term_kept": 0.8021,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v9-wild-heard-small-clean"
+            ]
+          },
+          "wild2": {
+            "turns": 344,
+            "pass": 0.7849,
+            "written_pass": 0.8721,
+            "drop": 0.0872,
+            "lost": 35,
+            "regained": 4,
+            "term_changed": 0.1076,
+            "lost_term_changed": 0.4286,
+            "rest_term_changed": 0.0712,
+            "pass_when_term_changed": 0.5135,
+            "pass_when_term_kept": 0.8176,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v9-wild2-heard-small-clean"
+            ]
+          },
+          "all": {
+            "turns": 927,
+            "pass": 0.8048,
+            "written_pass": 0.8554,
+            "drop": 0.0507,
+            "term_changed": 0.0939,
+            "lost": 60,
+            "regained": 12,
+            "sets": [
+              "testv2",
+              "wild",
+              "wild2"
+            ]
+          }
+        },
+        "tiny-clean": {
+          "testv2": {
+            "turns": 174,
+            "pass": 0.8621,
+            "written_pass": 0.9023,
+            "drop": 0.0402,
+            "lost": 8,
+            "regained": 1,
+            "term_changed": 0.1322,
+            "lost_term_changed": 0.625,
+            "rest_term_changed": 0.1084,
+            "pass_when_term_changed": 0.7391,
+            "pass_when_term_kept": 0.8808,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v9-testv2-heard-tiny-clean"
+            ]
+          },
+          "wild": {
+            "turns": 409,
+            "pass": 0.7738,
+            "written_pass": 0.8215,
+            "drop": 0.0477,
+            "lost": 28,
+            "regained": 9,
+            "term_changed": 0.132,
+            "lost_term_changed": 0.4286,
+            "rest_term_changed": 0.1102,
+            "pass_when_term_changed": 0.5463,
+            "pass_when_term_kept": 0.8085,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v9-wild-heard-tiny-clean"
+            ]
+          },
+          "wild2": {
+            "turns": 344,
+            "pass": 0.7674,
+            "written_pass": 0.8721,
+            "drop": 0.1047,
+            "lost": 46,
+            "regained": 10,
+            "term_changed": 0.1599,
+            "lost_term_changed": 0.4565,
+            "rest_term_changed": 0.1141,
+            "pass_when_term_changed": 0.5545,
+            "pass_when_term_kept": 0.808,
+            "dirs": [
+              "outputs/eval/homeai-4b-lora-v9-wild2-heard-tiny-clean"
+            ]
+          },
+          "all": {
+            "turns": 927,
+            "pass": 0.788,
+            "written_pass": 0.8554,
+            "drop": 0.0674,
+            "term_changed": 0.1424,
+            "lost": 82,
+            "regained": 20,
+            "sets": [
+              "testv2",
+              "wild",
+              "wild2"
+            ]
+          }
+        }
+      },
+      "confusions": {
+        "dirs": [
+          "outputs/eval/homeai-4b-lora-v9-confusions-heard"
+        ],
+        "data": "data/generated/heard/confusions.jsonl",
+        "groups": {
+          "all": {
+            "n": 571,
+            "pass": 0.5727,
+            "paired_n": 517,
+            "paired_pass": 0.5629,
+            "source_written_pass": 0.8453
+          },
+          "kind:homophone": {
+            "n": 41,
+            "pass": 0.6585,
+            "paired_n": 41,
+            "paired_pass": 0.6585,
+            "source_written_pass": 0.8293
+          },
+          "kind:number": {
+            "n": 28,
+            "pass": 0.6429,
+            "paired_n": 24,
+            "paired_pass": 0.625,
+            "source_written_pass": 0.9167
+          },
+          "kind:observed": {
+            "n": 400,
+            "pass": 0.5062,
+            "paired_n": 375,
+            "paired_pass": 0.5053,
+            "source_written_pass": 0.844
+          },
+          "kind:person": {
+            "n": 34,
+            "pass": 0.7941,
+            "paired_n": 31,
+            "paired_pass": 0.8065,
+            "source_written_pass": 0.871
+          },
+          "kind:room": {
+            "n": 68,
+            "pass": 0.7721,
+            "paired_n": 46,
+            "paired_pass": 0.75,
+            "source_written_pass": 0.8152
+          },
+          "recoverable:False": {
+            "n": 10,
+            "pass": 0.2,
+            "paired_n": 10,
+            "paired_pass": 0.2,
+            "source_written_pass": 0.8
+          },
+          "recoverable:True": {
+            "n": 561,
+            "pass": 0.5793,
+            "paired_n": 507,
+            "paired_pass": 0.57,
+            "source_written_pass": 0.8462
+          }
+        }
+      },
+      "speed": [
+        {
+          "run": "homeai-4b-lora-v9-testv2-heard-medium-biased",
+          "seconds_per_turn": 1.62,
+          "seconds_per_call": 0.8,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v9-testv2-heard-parakeet-clean",
+          "seconds_per_turn": 1.62,
+          "seconds_per_call": 0.79,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v9-testv2-heard-parakeet-farfield",
+          "seconds_per_turn": 1.64,
+          "seconds_per_call": 0.79,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v9-testv2-heard-parakeet-noisy10",
+          "seconds_per_turn": 1.62,
+          "seconds_per_call": 0.8,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v9-testv2-heard-small-biased",
+          "seconds_per_turn": 1.64,
+          "seconds_per_call": 0.8,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v9-testv2-heard-small-clean",
+          "seconds_per_turn": 1.63,
+          "seconds_per_call": 0.8,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v9-testv2-heard-tiny-clean",
+          "seconds_per_turn": 1.62,
+          "seconds_per_call": 0.79,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v9-wild-heard-medium-biased",
+          "seconds_per_turn": 1.61,
+          "seconds_per_call": 0.77,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v9-wild-heard-parakeet-clean",
+          "seconds_per_turn": 1.6,
+          "seconds_per_call": 0.77,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v9-wild-heard-parakeet-farfield",
+          "seconds_per_turn": 1.59,
+          "seconds_per_call": 0.76,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v9-wild-heard-parakeet-noisy10",
+          "seconds_per_turn": 1.62,
+          "seconds_per_call": 0.77,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v9-wild-heard-small-biased",
+          "seconds_per_turn": 1.58,
+          "seconds_per_call": 0.76,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v9-wild-heard-small-clean",
+          "seconds_per_turn": 1.61,
+          "seconds_per_call": 0.77,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v9-wild-heard-tiny-clean",
+          "seconds_per_turn": 1.58,
+          "seconds_per_call": 0.76,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v9-wild2-heard-medium-biased",
+          "seconds_per_turn": 1.57,
+          "seconds_per_call": 0.76,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v9-wild2-heard-parakeet-clean",
+          "seconds_per_turn": 1.57,
+          "seconds_per_call": 0.76,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v9-wild2-heard-parakeet-farfield",
+          "seconds_per_turn": 1.59,
+          "seconds_per_call": 0.77,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v9-wild2-heard-parakeet-noisy10",
+          "seconds_per_turn": 1.58,
+          "seconds_per_call": 0.76,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v9-wild2-heard-small-biased",
+          "seconds_per_turn": 1.6,
+          "seconds_per_call": 0.77,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v9-wild2-heard-small-clean",
+          "seconds_per_turn": 1.58,
+          "seconds_per_call": 0.77,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v9-wild2-heard-tiny-clean",
+          "seconds_per_turn": 1.6,
+          "seconds_per_call": 0.77,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v9-testv2-heard-written",
+          "seconds_per_turn": 1.63,
+          "seconds_per_call": 0.81,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v9-wild-heard-written",
+          "seconds_per_turn": 1.57,
+          "seconds_per_call": 0.76,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-4b-lora-v9-wild2-heard-written",
+          "seconds_per_turn": 1.56,
+          "seconds_per_call": 0.76,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        }
+      ]
+    },
+    "homeai-lfm25-1.2b-lora-v5-fix2 @ lapwing": {
+      "written": {
+        "testv2": {
+          "turns": 174,
+          "pass": 0.8966,
+          "dirs": [
+            "outputs/eval/homeai-lfm25-1.2b-lora-v5-fix2-testv2-heard-written"
+          ]
+        },
+        "wild": {
+          "turns": 409,
+          "pass": 0.7457,
+          "dirs": [
+            "outputs/eval/homeai-lfm25-1.2b-lora-v5-fix2-wild-heard-written"
+          ]
+        },
+        "wild2": {
+          "turns": 344,
+          "pass": 0.7602,
+          "dirs": [
+            "outputs/eval/homeai-lfm25-1.2b-lora-v5-fix2-wild2-heard-written"
+          ]
+        }
+      },
+      "heard": {
+        "medium-biased": {
+          "testv2": {
+            "turns": 174,
+            "pass": 0.8477,
+            "written_pass": 0.8966,
+            "drop": 0.0489,
+            "lost": 9,
+            "regained": 0,
+            "term_changed": 0.023,
+            "lost_term_changed": 0.1111,
+            "rest_term_changed": 0.0182,
+            "pass_when_term_changed": 0.75,
+            "pass_when_term_kept": 0.85,
+            "dirs": [
+              "outputs/eval/homeai-lfm25-1.2b-lora-v5-fix2-testv2-heard-medium-biased"
+            ]
+          },
+          "wild": {
+            "turns": 409,
+            "pass": 0.7042,
+            "written_pass": 0.7457,
+            "drop": 0.0416,
+            "lost": 28,
+            "regained": 10,
+            "term_changed": 0.0587,
+            "lost_term_changed": 0.25,
+            "rest_term_changed": 0.0446,
+            "pass_when_term_changed": 0.4167,
+            "pass_when_term_kept": 0.7221,
+            "dirs": [
+              "outputs/eval/homeai-lfm25-1.2b-lora-v5-fix2-wild-heard-medium-biased"
+            ]
+          },
+          "wild2": {
+            "turns": 344,
+            "pass": 0.6933,
+            "written_pass": 0.7602,
+            "drop": 0.0669,
+            "lost": 31,
+            "regained": 6,
+            "term_changed": 0.0581,
+            "lost_term_changed": 0.3548,
+            "rest_term_changed": 0.0288,
+            "pass_when_term_changed": 0.15,
+            "pass_when_term_kept": 0.7269,
+            "dirs": [
+              "outputs/eval/homeai-lfm25-1.2b-lora-v5-fix2-wild2-heard-medium-biased"
+            ]
+          },
+          "all": {
+            "turns": 927,
+            "pass": 0.7271,
+            "written_pass": 0.7794,
+            "drop": 0.0524,
+            "term_changed": 0.0518,
+            "lost": 68,
+            "regained": 16,
+            "sets": [
+              "testv2",
+              "wild",
+              "wild2"
+            ]
+          }
+        },
+        "parakeet-clean": {
+          "testv2": {
+            "turns": 174,
+            "pass": 0.8391,
+            "written_pass": 0.8966,
+            "drop": 0.0575,
+            "lost": 11,
+            "regained": 1,
+            "term_changed": 0.0747,
+            "lost_term_changed": 0.2727,
+            "rest_term_changed": 0.0613,
+            "pass_when_term_changed": 0.7692,
+            "pass_when_term_kept": 0.8447,
+            "dirs": [
+              "outputs/eval/homeai-lfm25-1.2b-lora-v5-fix2-testv2-heard-parakeet-clean"
+            ]
+          },
+          "wild": {
+            "turns": 409,
+            "pass": 0.6822,
+            "written_pass": 0.7457,
+            "drop": 0.0636,
+            "lost": 38,
+            "regained": 12,
+            "term_changed": 0.0954,
+            "lost_term_changed": 0.4211,
+            "rest_term_changed": 0.062,
+            "pass_when_term_changed": 0.3846,
+            "pass_when_term_kept": 0.7135,
+            "dirs": [
+              "outputs/eval/homeai-lfm25-1.2b-lora-v5-fix2-wild-heard-parakeet-clean"
+            ]
+          },
+          "wild2": {
+            "turns": 344,
+            "pass": 0.6657,
+            "written_pass": 0.7602,
+            "drop": 0.0945,
+            "lost": 41,
+            "regained": 7,
+            "term_changed": 0.0901,
+            "lost_term_changed": 0.3659,
+            "rest_term_changed": 0.0528,
+            "pass_when_term_changed": 0.2258,
+            "pass_when_term_kept": 0.7093,
+            "dirs": [
+              "outputs/eval/homeai-lfm25-1.2b-lora-v5-fix2-wild2-heard-parakeet-clean"
+            ]
+          },
+          "all": {
+            "turns": 927,
+            "pass": 0.7055,
+            "written_pass": 0.7794,
+            "drop": 0.0739,
+            "term_changed": 0.0895,
+            "lost": 90,
+            "regained": 20,
+            "sets": [
+              "testv2",
+              "wild",
+              "wild2"
+            ]
+          }
+        },
+        "parakeet-farfield": {
+          "testv2": {
+            "turns": 174,
+            "pass": 0.7759,
+            "written_pass": 0.8966,
+            "drop": 0.1207,
+            "lost": 22,
+            "regained": 1,
+            "term_changed": 0.1782,
+            "lost_term_changed": 0.7273,
+            "rest_term_changed": 0.0987,
+            "pass_when_term_changed": 0.4839,
+            "pass_when_term_kept": 0.8392,
+            "dirs": [
+              "outputs/eval/homeai-lfm25-1.2b-lora-v5-fix2-testv2-heard-parakeet-farfield"
+            ]
+          },
+          "wild": {
+            "turns": 409,
+            "pass": 0.6247,
+            "written_pass": 0.7457,
+            "drop": 0.121,
+            "lost": 59,
+            "regained": 10,
+            "term_changed": 0.2005,
+            "lost_term_changed": 0.5254,
+            "rest_term_changed": 0.1457,
+            "pass_when_term_changed": 0.4024,
+            "pass_when_term_kept": 0.6804,
+            "dirs": [
+              "outputs/eval/homeai-lfm25-1.2b-lora-v5-fix2-wild-heard-parakeet-farfield"
+            ]
+          },
+          "wild2": {
+            "turns": 344,
+            "pass": 0.6381,
+            "written_pass": 0.7602,
+            "drop": 0.1221,
+            "lost": 56,
+            "regained": 13,
+            "term_changed": 0.1599,
+            "lost_term_changed": 0.4464,
+            "rest_term_changed": 0.1042,
+            "pass_when_term_changed": 0.3636,
+            "pass_when_term_kept": 0.6903,
+            "dirs": [
+              "outputs/eval/homeai-lfm25-1.2b-lora-v5-fix2-wild2-heard-parakeet-farfield"
+            ]
+          },
+          "all": {
+            "turns": 927,
+            "pass": 0.6581,
+            "written_pass": 0.7794,
+            "drop": 0.1214,
+            "term_changed": 0.1812,
+            "lost": 137,
+            "regained": 24,
+            "sets": [
+              "testv2",
+              "wild",
+              "wild2"
+            ]
+          }
+        },
+        "parakeet-noisy10": {
+          "testv2": {
+            "turns": 174,
+            "pass": 0.7126,
+            "written_pass": 0.8966,
+            "drop": 0.1839,
+            "lost": 33,
+            "regained": 0,
+            "term_changed": 0.2414,
+            "lost_term_changed": 0.697,
+            "rest_term_changed": 0.1348,
+            "pass_when_term_changed": 0.4048,
+            "pass_when_term_kept": 0.8106,
+            "dirs": [
+              "outputs/eval/homeai-lfm25-1.2b-lora-v5-fix2-testv2-heard-parakeet-noisy10"
+            ]
+          },
+          "wild": {
+            "turns": 409,
+            "pass": 0.6284,
+            "written_pass": 0.7457,
+            "drop": 0.1174,
+            "lost": 64,
+            "regained": 17,
+            "term_changed": 0.2616,
+            "lost_term_changed": 0.5469,
+            "rest_term_changed": 0.2087,
+            "pass_when_term_changed": 0.4299,
+            "pass_when_term_kept": 0.6987,
+            "dirs": [
+              "outputs/eval/homeai-lfm25-1.2b-lora-v5-fix2-wild-heard-parakeet-noisy10"
+            ]
+          },
+          "wild2": {
+            "turns": 344,
+            "pass": 0.5727,
+            "written_pass": 0.7602,
+            "drop": 0.1875,
+            "lost": 72,
+            "regained": 6,
+            "term_changed": 0.25,
+            "lost_term_changed": 0.6389,
+            "rest_term_changed": 0.1471,
+            "pass_when_term_changed": 0.2442,
+            "pass_when_term_kept": 0.6822,
+            "dirs": [
+              "outputs/eval/homeai-lfm25-1.2b-lora-v5-fix2-wild2-heard-parakeet-noisy10"
+            ]
+          },
+          "all": {
+            "turns": 927,
+            "pass": 0.6235,
+            "written_pass": 0.7794,
+            "drop": 0.1559,
+            "term_changed": 0.2535,
+            "lost": 169,
+            "regained": 23,
+            "sets": [
+              "testv2",
+              "wild",
+              "wild2"
+            ]
+          }
+        },
+        "small-biased": {
+          "testv2": {
+            "turns": 174,
+            "pass": 0.8161,
+            "written_pass": 0.8966,
+            "drop": 0.0805,
+            "lost": 14,
+            "regained": 0,
+            "term_changed": 0.0575,
+            "lost_term_changed": 0.3571,
+            "rest_term_changed": 0.0312,
+            "pass_when_term_changed": 0.5,
+            "pass_when_term_kept": 0.8354,
+            "dirs": [
+              "outputs/eval/homeai-lfm25-1.2b-lora-v5-fix2-testv2-heard-small-biased"
+            ]
+          },
+          "wild": {
+            "turns": 409,
+            "pass": 0.6919,
+            "written_pass": 0.7457,
+            "drop": 0.0538,
+            "lost": 35,
+            "regained": 13,
+            "term_changed": 0.0636,
+            "lost_term_changed": 0.3143,
+            "rest_term_changed": 0.0401,
+            "pass_when_term_changed": 0.4615,
+            "pass_when_term_kept": 0.7076,
+            "dirs": [
+              "outputs/eval/homeai-lfm25-1.2b-lora-v5-fix2-wild-heard-small-biased"
+            ]
+          },
+          "wild2": {
+            "turns": 344,
+            "pass": 0.6948,
+            "written_pass": 0.7602,
+            "drop": 0.0654,
+            "lost": 34,
+            "regained": 10,
+            "term_changed": 0.0756,
+            "lost_term_changed": 0.2941,
+            "rest_term_changed": 0.0516,
+            "pass_when_term_changed": 0.3846,
+            "pass_when_term_kept": 0.7201,
+            "dirs": [
+              "outputs/eval/homeai-lfm25-1.2b-lora-v5-fix2-wild2-heard-small-biased"
+            ]
+          },
+          "all": {
+            "turns": 927,
+            "pass": 0.7163,
+            "written_pass": 0.7794,
+            "drop": 0.0631,
+            "term_changed": 0.0669,
+            "lost": 83,
+            "regained": 23,
+            "sets": [
+              "testv2",
+              "wild",
+              "wild2"
+            ]
+          }
+        },
+        "small-clean": {
+          "testv2": {
+            "turns": 174,
+            "pass": 0.8477,
+            "written_pass": 0.8966,
+            "drop": 0.0489,
+            "lost": 9,
+            "regained": 0,
+            "term_changed": 0.0862,
+            "lost_term_changed": 0.3333,
+            "rest_term_changed": 0.0727,
+            "pass_when_term_changed": 0.8333,
+            "pass_when_term_kept": 0.8491,
+            "dirs": [
+              "outputs/eval/homeai-lfm25-1.2b-lora-v5-fix2-testv2-heard-small-clean"
+            ]
+          },
+          "wild": {
+            "turns": 409,
+            "pass": 0.7029,
+            "written_pass": 0.7457,
+            "drop": 0.0428,
+            "lost": 33,
+            "regained": 16,
+            "term_changed": 0.0856,
+            "lost_term_changed": 0.3939,
+            "rest_term_changed": 0.0585,
+            "pass_when_term_changed": 0.4286,
+            "pass_when_term_kept": 0.7286,
+            "dirs": [
+              "outputs/eval/homeai-lfm25-1.2b-lora-v5-fix2-wild-heard-small-clean"
+            ]
+          },
+          "wild2": {
+            "turns": 344,
+            "pass": 0.6831,
+            "written_pass": 0.7602,
+            "drop": 0.077,
+            "lost": 36,
+            "regained": 8,
+            "term_changed": 0.1076,
+            "lost_term_changed": 0.4444,
+            "rest_term_changed": 0.0682,
+            "pass_when_term_changed": 0.3514,
+            "pass_when_term_kept": 0.7231,
+            "dirs": [
+              "outputs/eval/homeai-lfm25-1.2b-lora-v5-fix2-wild2-heard-small-clean"
+            ]
+          },
+          "all": {
+            "turns": 927,
+            "pass": 0.7227,
+            "written_pass": 0.7794,
+            "drop": 0.0566,
+            "term_changed": 0.0939,
+            "lost": 78,
+            "regained": 24,
+            "sets": [
+              "testv2",
+              "wild",
+              "wild2"
+            ]
+          }
+        },
+        "tiny-clean": {
+          "testv2": {
+            "turns": 174,
+            "pass": 0.7816,
+            "written_pass": 0.8966,
+            "drop": 0.1149,
+            "lost": 20,
+            "regained": 0,
+            "term_changed": 0.1322,
+            "lost_term_changed": 0.4,
+            "rest_term_changed": 0.0974,
+            "pass_when_term_changed": 0.6087,
+            "pass_when_term_kept": 0.8079,
+            "dirs": [
+              "outputs/eval/homeai-lfm25-1.2b-lora-v5-fix2-testv2-heard-tiny-clean"
+            ]
+          },
+          "wild": {
+            "turns": 409,
+            "pass": 0.6797,
+            "written_pass": 0.7457,
+            "drop": 0.066,
+            "lost": 41,
+            "regained": 15,
+            "term_changed": 0.132,
+            "lost_term_changed": 0.3415,
+            "rest_term_changed": 0.1087,
+            "pass_when_term_changed": 0.4537,
+            "pass_when_term_kept": 0.7141,
+            "dirs": [
+              "outputs/eval/homeai-lfm25-1.2b-lora-v5-fix2-wild-heard-tiny-clean"
+            ]
+          },
+          "wild2": {
+            "turns": 344,
+            "pass": 0.6657,
+            "written_pass": 0.7602,
+            "drop": 0.0945,
+            "lost": 42,
+            "regained": 9,
+            "term_changed": 0.1599,
+            "lost_term_changed": 0.3333,
+            "rest_term_changed": 0.1358,
+            "pass_when_term_changed": 0.4545,
+            "pass_when_term_kept": 0.7059,
+            "dirs": [
+              "outputs/eval/homeai-lfm25-1.2b-lora-v5-fix2-wild2-heard-tiny-clean"
+            ]
+          },
+          "all": {
+            "turns": 927,
+            "pass": 0.6936,
+            "written_pass": 0.7794,
+            "drop": 0.0858,
+            "term_changed": 0.1424,
+            "lost": 103,
+            "regained": 24,
+            "sets": [
+              "testv2",
+              "wild",
+              "wild2"
+            ]
+          }
+        }
+      },
+      "confusions": {
+        "dirs": [
+          "outputs/eval/homeai-lfm25-1.2b-lora-v5-fix2-confusions-heard"
+        ],
+        "data": "data/generated/heard/confusions.jsonl",
+        "groups": {
+          "all": {
+            "n": 571,
+            "pass": 0.4089,
+            "paired_n": 517,
+            "paired_pass": 0.4091,
+            "source_written_pass": 0.7205
+          },
+          "kind:homophone": {
+            "n": 41,
+            "pass": 0.4634,
+            "paired_n": 41,
+            "paired_pass": 0.4634,
+            "source_written_pass": 0.7073
+          },
+          "kind:number": {
+            "n": 28,
+            "pass": 0.5357,
+            "paired_n": 24,
+            "paired_pass": 0.5417,
+            "source_written_pass": 0.875
+          },
+          "kind:observed": {
+            "n": 400,
+            "pass": 0.3875,
+            "paired_n": 375,
+            "paired_pass": 0.3813,
+            "source_written_pass": 0.7253
+          },
+          "kind:person": {
+            "n": 34,
+            "pass": 0.4265,
+            "paired_n": 31,
+            "paired_pass": 0.4355,
+            "source_written_pass": 0.7258
+          },
+          "kind:room": {
+            "n": 68,
+            "pass": 0.4412,
+            "paired_n": 46,
+            "paired_pass": 0.5,
+            "source_written_pass": 0.6087
+          },
+          "recoverable:False": {
+            "n": 10,
+            "pass": 0.2,
+            "paired_n": 10,
+            "paired_pass": 0.2,
+            "source_written_pass": 1.0
+          },
+          "recoverable:True": {
+            "n": 561,
+            "pass": 0.4127,
+            "paired_n": 507,
+            "paired_pass": 0.4132,
+            "source_written_pass": 0.715
+          }
+        }
+      },
+      "speed": [
+        {
+          "run": "homeai-lfm25-1.2b-lora-v5-fix2-testv2-heard-medium-biased",
+          "seconds_per_turn": 0.32,
+          "seconds_per_call": 0.16,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-lfm25-1.2b-lora-v5-fix2-testv2-heard-parakeet-clean",
+          "seconds_per_turn": 0.32,
+          "seconds_per_call": 0.16,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-lfm25-1.2b-lora-v5-fix2-testv2-heard-parakeet-farfield",
+          "seconds_per_turn": 0.32,
+          "seconds_per_call": 0.16,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-lfm25-1.2b-lora-v5-fix2-testv2-heard-parakeet-noisy10",
+          "seconds_per_turn": 0.31,
+          "seconds_per_call": 0.15,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-lfm25-1.2b-lora-v5-fix2-testv2-heard-small-biased",
+          "seconds_per_turn": 0.32,
+          "seconds_per_call": 0.16,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-lfm25-1.2b-lora-v5-fix2-testv2-heard-small-clean",
+          "seconds_per_turn": 0.32,
+          "seconds_per_call": 0.16,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-lfm25-1.2b-lora-v5-fix2-testv2-heard-tiny-clean",
+          "seconds_per_turn": 0.32,
+          "seconds_per_call": 0.16,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-lfm25-1.2b-lora-v5-fix2-wild-heard-medium-biased",
+          "seconds_per_turn": 0.32,
+          "seconds_per_call": 0.15,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-lfm25-1.2b-lora-v5-fix2-wild-heard-parakeet-clean",
+          "seconds_per_turn": 0.32,
+          "seconds_per_call": 0.15,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-lfm25-1.2b-lora-v5-fix2-wild-heard-parakeet-farfield",
+          "seconds_per_turn": 0.32,
+          "seconds_per_call": 0.15,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-lfm25-1.2b-lora-v5-fix2-wild-heard-parakeet-noisy10",
+          "seconds_per_turn": 0.32,
+          "seconds_per_call": 0.15,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-lfm25-1.2b-lora-v5-fix2-wild-heard-small-biased",
+          "seconds_per_turn": 0.32,
+          "seconds_per_call": 0.15,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-lfm25-1.2b-lora-v5-fix2-wild-heard-small-clean",
+          "seconds_per_turn": 0.32,
+          "seconds_per_call": 0.15,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-lfm25-1.2b-lora-v5-fix2-wild-heard-tiny-clean",
+          "seconds_per_turn": 0.32,
+          "seconds_per_call": 0.15,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-lfm25-1.2b-lora-v5-fix2-wild2-heard-medium-biased",
+          "seconds_per_turn": 0.32,
+          "seconds_per_call": 0.15,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-lfm25-1.2b-lora-v5-fix2-wild2-heard-parakeet-clean",
+          "seconds_per_turn": 0.31,
+          "seconds_per_call": 0.15,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-lfm25-1.2b-lora-v5-fix2-wild2-heard-parakeet-farfield",
+          "seconds_per_turn": 0.32,
+          "seconds_per_call": 0.15,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-lfm25-1.2b-lora-v5-fix2-wild2-heard-parakeet-noisy10",
+          "seconds_per_turn": 0.32,
+          "seconds_per_call": 0.15,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-lfm25-1.2b-lora-v5-fix2-wild2-heard-small-biased",
+          "seconds_per_turn": 0.31,
+          "seconds_per_call": 0.15,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-lfm25-1.2b-lora-v5-fix2-wild2-heard-small-clean",
+          "seconds_per_turn": 0.31,
+          "seconds_per_call": 0.15,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-lfm25-1.2b-lora-v5-fix2-wild2-heard-tiny-clean",
+          "seconds_per_turn": 0.31,
+          "seconds_per_call": 0.15,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-lfm25-1.2b-lora-v5-fix2-testv2-heard-written",
+          "seconds_per_turn": 0.34,
+          "seconds_per_call": 0.17,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-lfm25-1.2b-lora-v5-fix2-wild-heard-written",
+          "seconds_per_turn": 0.32,
+          "seconds_per_call": 0.15,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        },
+        {
+          "run": "homeai-lfm25-1.2b-lora-v5-fix2-wild2-heard-written",
+          "seconds_per_turn": 0.31,
+          "seconds_per_call": 0.15,
+          "host": "lapwing",
+          "hardware": "rtx-3080",
+          "ollama": "http://127.0.0.1:11500"
+        }
+      ]
+    }
+  }
+}

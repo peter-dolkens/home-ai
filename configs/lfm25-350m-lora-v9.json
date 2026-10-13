@@ -1,0 +1,37 @@
+{
+ "_comment": "LFM2.5 350M on v9 data (ASR-robust), 1 Oct; same recipe as lfm25-350m-lora-v5-fix",
+ "base_model": "LiquidAI/LFM2.5-350M",
+ "hf_tokenizer": "LiquidAI/LFM2.5-350M",
+ "ollama_template_from": "lfm2.5-350m",
+ "instruction_part": "<|im_start|>user\n",
+ "response_part": "<|im_start|>assistant\n",
+ "max_seq_len": 4608,
+ "lora_r": 16,
+ "lora_alpha": 16,
+ "epochs": 2,
+ "lr": 0.0002,
+ "batch_size": 2,
+ "grad_accum": 8,
+ "seed": 3407,
+ "train": "data/generated/train-v9.jsonl",
+ "val": "data/generated/val-v3.jsonl",
+ "out": "outputs/lfm25-350m-lora-v9",
+ "load_in_4bit": false,
+ "mask_spans": [
+  [
+   "<|im_start|>tool\n",
+   "<|im_end|>"
+  ]
+ ],
+ "target_modules": [
+  "q_proj",
+  "k_proj",
+  "v_proj",
+  "out_proj",
+  "in_proj",
+  "w1",
+  "w2",
+  "w3"
+ ],
+ "chat_template_from": "LiquidAI/LFM2.5-350M"
+}

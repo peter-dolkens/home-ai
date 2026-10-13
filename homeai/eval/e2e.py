@@ -16,14 +16,17 @@ from __future__ import annotations
 import argparse
 import collections
 import copy
+import hashlib
 import json
 import os
 import re
 import time
+from typing import Optional
 
 from ..bridge.agent import OllamaClient, make_client
 from ..host import host_info  # latency is per host: record which machine served the model
 from ..house.bighouse import house_for  # small houses via generator.make_house, big ones via ex["big"]
+from .. import prompt_layout  # requests in the layout the model was trained on (v10 stable_prefix, v11 user_context, v12 clock_in_user)
 from ..tools import TOOLS, execute_tool
 from ..tools_b import for_toolset  # an example's "toolset": "b" runs the design-B schemas and executor
 from .run_eval import to_ollama
@@ -169,31 +172,23 @@ def rescore(out_dir):
     print(f"{out_dir}: {len(fails) - len(keep)} turns flipped to pass, pass={rep['pass']:.1%}")
 
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--model", required=True)
-    ap.add_argument("--data", default="data/generated/wild.jsonl")
-    ap.add_argument("--ollama", default="http://localhost:11434")
-    ap.add_argument("--limit", type=int, default=0)
-    ap.add_argument("--out", required=True)
-    ap.add_argument("--num-ctx", type=int, default=8192, help="context window (the bridge runs 8192)")
-    ap.add_argument("--rescore", action="store_true", help="re-apply the current reply rule to an existing --out report")
-    a = ap.parse_args()
-    if a.rescore:
-        return rescore(a.out)
-    os.makedirs(a.out, exist_ok=True)
-    llm = make_client(a.ollama, a.model, a.num_ctx, temperature=0.0, think=False)
-    rows = [json.loads(l) for l in open(a.data) if l.strip()][: a.limit or None]
-    cats = collections.defaultdict(lambda: {"n": 0, "ok": 0})
-    kinds = collections.defaultdict(lambda: {"n": 0, "ok": 0})
-    conv_ok = 0
-    calls_total, errors = 0, 0
-    fails = open(os.path.join(a.out, "failures.jsonl"), "w")
-    # every turn's resulting changes and timing, so two runs (a fast and a slow model) can be reconciled offline
-    # (design E, homeai/eval/reconcile.py)
-    turns_log = open(os.path.join(a.out, "turns.jsonl"), "w")
-    t0 = time.time()
-    for i, ex in enumerate(rows):
+class Run:
+    """Accumulators and logs of one (data, out) pair: failures.jsonl, turns.jsonl, then report.json."""
+
+    def __init__(self, out: str, data: str, layout: Optional[str] = None):
+        os.makedirs(out, exist_ok=True)
+        self.out, self.data, self.layout = out, data, layout  # layout: of the requests only (homeai/prompt_layout.py)
+        self.cats = collections.defaultdict(lambda: {"n": 0, "ok": 0})
+        self.kinds = collections.defaultdict(lambda: {"n": 0, "ok": 0})
+        self.conv_ok = self.calls_total = self.errors = self.examples = 0
+        self.busy = 0.0  # seconds spent on this run's turns (lockstep runs share the wall clock)
+        self.fails = open(os.path.join(out, "failures.jsonl"), "w")
+        # every turn's resulting changes and timing, so two runs (a fast and a slow model) can be reconciled offline
+        # (design E, homeai/eval/reconcile.py)
+        self.turns_log = open(os.path.join(out, "turns.jsonl"), "w")
+
+    def example(self, llm, ex: dict):
+        cats, kinds = self.cats, self.kinds
         msgs = ex["messages"]
         tools, execute, _ = for_toolset(ex.get("toolset"))
         user_idx = [j for j, m in enumerate(msgs) if m["role"] == "user"]
@@ -208,11 +203,13 @@ def main():
             got_house = copy.deepcopy(before)
             t_turn = time.time()
             try:
-                text, calls, n = free_run(llm, to_ollama(msgs[:j + 1]), got_house, tools=tools, execute=execute)
+                # the request in the model's prompt layout; the scoring below reads the stored (bare) turns
+                ctx = prompt_layout.render(to_ollama(msgs[:j + 1]), self.layout)
+                text, calls, n = free_run(llm, ctx, got_house, tools=tools, execute=execute)
             except Exception as e:  # noqa: BLE001
                 text, calls, n = f"<error {e}>", [], 1
-                errors += 1
-            calls_total += n
+                self.errors += 1
+            self.calls_total += n
             ref_ans = next((m for m in reversed(seg) if m["role"] == "assistant" and m.get("content")), {})
             must = (ref_ans.get("_eval") or {}).get("must_mention", [])
             # heard sets (homeai/voice/roundtrip.py) keep the written request in "_written": tolerances and named titles
@@ -235,31 +232,86 @@ def main():
             kinds["reply"]["n"] += 1; kinds["reply"]["ok"] += a_ok
             all_ok = all_ok and ok == 1
             sb, sg = snap(before), snap(got_house)
-            turns_log.write(json.dumps({"id": ex["id"], "turn": k, "ok": ok, "state_ok": s_ok, "reply_ok": a_ok,
-                                        "changes": {e: v for e, v in sg.items() if sb.get(e) != v}, "calls": n,
-                                        "seconds": round(time.time() - t_turn, 3), "text": text}, default=str) + "\n")
+            secs = time.time() - t_turn
+            self.busy += secs
+            self.turns_log.write(json.dumps({"id": ex["id"], "turn": k, "ok": ok, "state_ok": s_ok, "reply_ok": a_ok,
+                                             "changes": {e: v for e, v in sg.items() if sb.get(e) != v}, "calls": n,
+                                             "seconds": round(secs, 3), "text": text}, default=str) + "\n")
             if ok != 1:  # half-credit turns stay in the failure log
-                fails.write(json.dumps({"id": ex["id"], "category": ex["category"], "turn": k, "user": msgs[j]["content"],
-                                        **({"written": said} if said != msgs[j]["content"] else {}),
-                                        "why": "; ".join(w for w in (s_why, a_why) if w), "got_text": text, "got_calls": calls,
-                                        "ref_text": ref_ans.get("content"),
-                                        "ref_calls": [tc["function"] for m in seg for tc in (m.get("tool_calls") or [])]}) + "\n")
-        conv_ok += all_ok
+                self.fails.write(json.dumps({"id": ex["id"], "category": ex["category"], "turn": k, "user": msgs[j]["content"],
+                                             **({"written": said} if said != msgs[j]["content"] else {}),
+                                             "why": "; ".join(w for w in (s_why, a_why) if w), "got_text": text, "got_calls": calls,
+                                             "ref_text": ref_ans.get("content"),
+                                             "ref_calls": [tc["function"] for m in seg for tc in (m.get("tool_calls") or [])]}) + "\n")
+        self.conv_ok += all_ok
+        self.examples += 1
+        self.turns_log.flush()  # slow hosts: progress is visible and a killed run keeps what it finished
+        self.fails.flush()
+
+    def pass_rate(self) -> float:
+        return (self.kinds["act"]["ok"] + self.kinds["answer"]["ok"]) / max(1, self.kinds["state"]["n"])
+
+    def finish(self, meta: dict, seconds: float):
+        self.fails.close()
+        self.turns_log.close()
+        kinds, total = self.kinds, self.kinds["state"]["n"]
+        if self.errors and self.errors / max(1, total) > 0.2:
+            print(f"{self.out}: {self.errors}/{total} transport errors; not writing a report")
+            return 2
+        rep = {**meta, "data": self.data, "examples": self.examples, "turns": total, "pass": self.pass_rate(),
+               "conversation_pass": self.conv_ok / max(1, self.examples), "seconds_per_turn": seconds / max(1, self.calls_total),
+               "calls_per_request": self.calls_total / max(1, total), "errors": self.errors, "by_kind": kinds,
+               "by_category": self.cats}
+        json.dump(rep, open(os.path.join(self.out, "report.json"), "w"), indent=2)
+        print(json.dumps({k: v for k, v in rep.items() if k not in ("by_category",)}, indent=2))
+
+
+def load_rows(path: str, limit: int = 0, sample: int = 0) -> list[dict]:
+    rows = [json.loads(l) for l in open(path) if l.strip()][: limit or None]
+    if sample:
+        keep = set(sorted((hashlib.sha1(r["id"].encode()).hexdigest() for r in rows))[:sample])
+        rows = [r for r in rows if hashlib.sha1(r["id"].encode()).hexdigest() in keep]
+    return rows
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--model", required=True)
+    ap.add_argument("--data", default="data/generated/wild.jsonl",
+                    help="a set, or a comma list of sets with the same rows (a written set and its heard/ variants) "
+                         "to run in lockstep, one --out each: every example runs under each variant back to back, so "
+                         "Ollama reuses the shared system prompt's cache (a large saving on slow hosts)")
+    ap.add_argument("--ollama", default="http://localhost:11434")
+    ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument("--sample", type=int, default=0, help="only the N rows whose ids hash lowest (file order kept): the "
+                    "same rows in a set and in every heard/ variant of it, so slow hosts can compare conditions paired")
+    ap.add_argument("--out", required=True, help="output dir (comma list with a comma list of --data)")
+    ap.add_argument("--num-ctx", type=int, default=8192, help="context window (the bridge runs 8192)")
+    ap.add_argument("--rescore", action="store_true", help="re-apply the current reply rule to an existing --out report")
+    prompt_layout.add_arg(ap)
+    a = ap.parse_args()
+    if a.rescore:
+        return rescore(a.out)
+    datas, outs = a.data.split(","), a.out.split(",")
+    if len(datas) != len(outs):
+        ap.error("--data and --out need the same number of entries")
+    llm = make_client(a.ollama, a.model, a.num_ctx, temperature=0.0, think=False)
+    layout = prompt_layout.for_model(a.model, a.prompt_layout)
+    sets = [load_rows(d, a.limit, a.sample) for d in datas]
+    for d, rows in zip(datas[1:], sets[1:]):
+        if [r["id"] for r in rows] != [r["id"] for r in sets[0]]:
+            ap.error(f"{d} does not have the rows of {datas[0]} in the same order")
+    runs = [Run(o, d, layout) for o, d in zip(outs, datas)]
+    t0 = time.time()
+    for i in range(len(sets[0])):
+        for run, rows in zip(runs, sets):
+            run.example(llm, rows[i])
         if (i + 1) % 25 == 0:
-            n_ = kinds["state"]["n"]
-            print(f"[{i + 1}/{len(rows)}] turns={n_} pass={sum(v['ok'] for k2, v in kinds.items() if k2 in ('act', 'answer')) / max(1, n_):.1%} {time.time() - t0:.0f}s", flush=True)
-    fails.close()
-    turns_log.close()
-    total = kinds["state"]["n"]
-    if errors and errors / max(1, total) > 0.2:
-        print(f"{errors}/{total} transport errors; not writing a report")
-        return 2
-    passed = kinds["act"]["ok"] + kinds["answer"]["ok"]
-    rep = {"model": a.model, "data": a.data, "mode": "e2e", **host_info(), "ollama": a.ollama, "examples": len(rows), "turns": total, "pass": passed / max(1, total),
-           "conversation_pass": conv_ok / max(1, len(rows)), "seconds_per_turn": (time.time() - t0) / max(1, calls_total),
-           "calls_per_request": calls_total / max(1, total), "by_kind": kinds, "by_category": cats}
-    json.dump(rep, open(os.path.join(a.out, "report.json"), "w"), indent=2)
-    print(json.dumps({k: v for k, v in rep.items() if k not in ("by_category",)}, indent=2))
+            print(f"[{i + 1}/{len(sets[0])}] " + " ".join(f"{r.pass_rate():.1%}" for r in runs) + f" {time.time() - t0:.0f}s", flush=True)
+    meta = {"model": a.model, "mode": "e2e", **({"sample": a.sample} if a.sample else {}), **host_info(), "ollama": a.ollama,
+            **({"lockstep": len(runs)} if len(runs) > 1 else {}), **({"prompt_layout": layout} if layout != "classic" else {})}
+    codes = [r.finish(meta, time.time() - t0 if len(runs) == 1 else r.busy) for r in runs]
+    return max((c or 0) for c in codes) or None
 
 
 if __name__ == "__main__":

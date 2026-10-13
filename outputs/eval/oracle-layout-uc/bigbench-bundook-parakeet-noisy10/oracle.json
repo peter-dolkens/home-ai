@@ -1,0 +1,11 @@
+{
+  "data": "data/generated/heard/bigbench-bundook-parakeet-noisy10.jsonl",
+  "layout": "user_context",
+  "examples": 50,
+  "turns": 57,
+  "pass": 1.0,
+  "conversation_pass": 1.0,
+  "errors": 0,
+  "wrong_layout_calls": 0,
+  "seconds": 42.6
+}

@@ -1,0 +1,162 @@
+{
+  "set": "piper__tiny__clean",
+  "stt": "tiny",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 9,
+  "words": 49,
+  "errors": 10,
+  "wer": 0.2041,
+  "exact": 0.4444,
+  "vocab_words": 17,
+  "vocab_errors": 3,
+  "vocab_wer": 0.1765,
+  "vocab": {
+    "room": {
+      "n": 2,
+      "err": 0,
+      "wer": 0.0
+    },
+    "device": {
+      "n": 6,
+      "err": 1,
+      "wer": 0.1667
+    },
+    "person": {
+      "n": 1,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 0,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 8,
+      "err": 2,
+      "wer": 0.25
+    }
+  },
+  "meaning_changed": 0.2222,
+  "meaning_changed_n": 2,
+  "meaning_by_kind": {
+    "room": 0.0,
+    "device": 0.1111,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.2222
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 0.2943,
+    "p50": 0.2886,
+    "p90": 0.3636,
+    "rtf": 0.1204,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-ie-p288": {
+      "turns": 1,
+      "wer": 0.3333,
+      "meaning_changed": 0.0
+    },
+    "t-ld-p243": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-sc-p237": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-sm-spike": {
+      "turns": 2,
+      "wer": 0.5455,
+      "meaning_changed": 1.0
+    },
+    "t-wa-p253": {
+      "turns": 2,
+      "wer": 0.1538,
+      "meaning_changed": 0.0
+    },
+    "t-yk-p267": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-za-p323": {
+      "turns": 1,
+      "wer": 0.25,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "1.0": {
+      "turns": 4,
+      "wer": 0.2273,
+      "meaning_changed": 0.25
+    },
+    "1.15": {
+      "turns": 3,
+      "wer": 0.2778,
+      "meaning_changed": 0.3333
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 9,
+      "wer": 0.2041,
+      "meaning_changed": 0.2222
+    }
+  },
+  "by_set": {
+    "piper__tiny__clean": {
+      "turns": 9,
+      "wer": 0.2041,
+      "meaning_changed": 0.2222
+    }
+  },
+  "samples": [
+    {
+      "id": "bbig-bundook_full-plan-602",
+      "turn": 0,
+      "voice": "t-sm-spike",
+      "written": "let the plumber in, unlock the mudroom door",
+      "heard": "Let the plumber in a lock-and-mudgeon door.",
+      "lost": [
+        [
+          "command",
+          "unlock"
+        ],
+        [
+          "device",
+          "mudroom door"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-602",
+      "turn": 1,
+      "voice": "t-sm-spike",
+      "written": "Yeah, unlock it.",
+      "heard": "Yeah, and lock it.",
+      "lost": [
+        [
+          "command",
+          "unlock"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

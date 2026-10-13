@@ -1,0 +1,169 @@
+{
+  "model": "homeai-4b-lora-b",
+  "mode": "e2e",
+  "host": "lapwing",
+  "hardware": "rtx-3080",
+  "host_note": "lapwing ollama 0.21.2, client on lapwing (accuracy only)",
+  "ollama": "http://127.0.0.1:11500",
+  "lockstep": 8,
+  "data": "data/generated/heard/test-v2-b-parakeet-farfield.jsonl",
+  "examples": 150,
+  "turns": 174,
+  "pass": 0.7816091954022989,
+  "conversation_pass": 0.7533333333333333,
+  "seconds_per_turn": 0.9489757402523143,
+  "calls_per_request": 2.1264367816091956,
+  "errors": 0,
+  "by_kind": {
+    "answer": {
+      "n": 94,
+      "ok": 71
+    },
+    "state": {
+      "n": 174,
+      "ok": 153
+    },
+    "reply": {
+      "n": 174,
+      "ok": 156
+    },
+    "act": {
+      "n": 80,
+      "ok": 65
+    }
+  },
+  "by_category": {
+    "status_entity": {
+      "n": 6,
+      "ok": 1
+    },
+    "control_area": {
+      "n": 15,
+      "ok": 13
+    },
+    "control_climate": {
+      "n": 4,
+      "ok": 4
+    },
+    "presence_where": {
+      "n": 9,
+      "ok": 7
+    },
+    "check_house": {
+      "n": 20,
+      "ok": 18
+    },
+    "control_named": {
+      "n": 5,
+      "ok": 4
+    },
+    "presence_in_room": {
+      "n": 2,
+      "ok": 2
+    },
+    "goodnight": {
+      "n": 4,
+      "ok": 1
+    },
+    "missing": {
+      "n": 4,
+      "ok": 3
+    },
+    "confirm_sensitive": {
+      "n": 12,
+      "ok": 11
+    },
+    "media_what": {
+      "n": 1,
+      "ok": 1
+    },
+    "media_play": {
+      "n": 11,
+      "ok": 8
+    },
+    "control_lock": {
+      "n": 4,
+      "ok": 4
+    },
+    "energy_appliance": {
+      "n": 4,
+      "ok": 3
+    },
+    "vehicle_status": {
+      "n": 4,
+      "ok": 3
+    },
+    "energy_night": {
+      "n": 8,
+      "ok": 8
+    },
+    "control_compound": {
+      "n": 3,
+      "ok": 3
+    },
+    "control_all_lights": {
+      "n": 3,
+      "ok": 2
+    },
+    "media_volume": {
+      "n": 5,
+      "ok": 4
+    },
+    "energy_status": {
+      "n": 4,
+      "ok": 4
+    },
+    "status_aggregate": {
+      "n": 10,
+      "ok": 9
+    },
+    "away_motion": {
+      "n": 3,
+      "ok": 1
+    },
+    "media_transport": {
+      "n": 1,
+      "ok": 0
+    },
+    "leaving": {
+      "n": 2,
+      "ok": 0
+    },
+    "weather": {
+      "n": 3,
+      "ok": 3
+    },
+    "who_home": {
+      "n": 3,
+      "ok": 3
+    },
+    "smalltalk": {
+      "n": 1,
+      "ok": 1
+    },
+    "control_here": {
+      "n": 2,
+      "ok": 2
+    },
+    "appliance_status": {
+      "n": 5,
+      "ok": 4
+    },
+    "appliance_control": {
+      "n": 1,
+      "ok": 1
+    },
+    "clarify": {
+      "n": 12,
+      "ok": 5
+    },
+    "water_status": {
+      "n": 1,
+      "ok": 1
+    },
+    "control_brightness": {
+      "n": 2,
+      "ok": 2
+    }
+  }
+}

@@ -26,7 +26,7 @@ chat:            ## talk to the model against a mock house
 	$(PYTHON) -m homeai.bridge.cli chat --mock --model $(MODEL)
 
 test:            ## offline checks (no GPU, no HA, no Ollama)
-	$(PYTHON) tests/test_eval_scoring.py && $(PYTHON) tests/test_bridge.py && $(PYTHON) tests/test_house_stability.py && $(PYTHON) tests/test_tools_b.py && $(PYTHON) tests/test_leaf.py && $(PYTHON) tests/test_tiered.py && $(PYTHON) tests/test_voice.py && $(PYTHON) tests/test_train_mlx.py
+	$(PYTHON) tests/test_eval_scoring.py && $(PYTHON) tests/test_bridge.py && $(PYTHON) tests/test_house_stability.py && $(PYTHON) tests/test_tools_b.py && $(PYTHON) tests/test_leaf.py && $(PYTHON) tests/test_tiered.py && $(PYTHON) tests/test_voice.py && $(PYTHON) tests/test_train_mlx.py && $(PYTHON) tests/test_host_champions.py
 
 voice:           ## TTS -> STT round trip in Docker, e.g. make voice ARGS="--sets probe --stt base,parakeet --conditions clean,noisy10"
 	scripts/voice-roundtrip.sh $(ARGS)

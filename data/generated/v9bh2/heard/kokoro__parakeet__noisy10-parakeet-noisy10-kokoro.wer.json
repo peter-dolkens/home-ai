@@ -1,0 +1,254 @@
+{
+  "set": "kokoro__parakeet__noisy10",
+  "stt": "parakeet",
+  "condition": "noisy10",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 38,
+  "words": 211,
+  "errors": 26,
+  "wer": 0.1232,
+  "exact": 0.6842,
+  "vocab_words": 78,
+  "vocab_errors": 8,
+  "vocab_wer": 0.1026,
+  "vocab": {
+    "room": {
+      "n": 24,
+      "err": 5,
+      "wer": 0.2083
+    },
+    "device": {
+      "n": 28,
+      "err": 2,
+      "wer": 0.0714
+    },
+    "person": {
+      "n": 3,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 5,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 18,
+      "err": 1,
+      "wer": 0.0556
+    }
+  },
+  "meaning_changed": 0.1579,
+  "meaning_changed_n": 6,
+  "meaning_by_kind": {
+    "room": 0.1053,
+    "device": 0.0526,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0263
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 0.2154,
+    "p50": 0.2098,
+    "p90": 0.3037,
+    "rtf": 0.0768,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nicole": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-nova": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sarah": {
+      "turns": 4,
+      "wer": 0.05,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sky": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-eric": {
+      "turns": 5,
+      "wer": 0.1852,
+      "meaning_changed": 0.2
+    },
+    "t-k-am-onyx": {
+      "turns": 3,
+      "wer": 0.4667,
+      "meaning_changed": 0.6667
+    },
+    "t-k-am-puck": {
+      "turns": 2,
+      "wer": 0.3,
+      "meaning_changed": 0.5
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 6,
+      "wer": 0.3333,
+      "meaning_changed": 0.1667
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 3,
+      "wer": 0.1053,
+      "meaning_changed": 0.3333
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 1,
+      "wer": 0.2,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 8,
+      "wer": 0.0889,
+      "meaning_changed": 0.125
+    },
+    "1.0": {
+      "turns": 15,
+      "wer": 0.1389,
+      "meaning_changed": 0.1333
+    },
+    "1.15": {
+      "turns": 15,
+      "wer": 0.1277,
+      "meaning_changed": 0.2
+    }
+  },
+  "by_noise": {
+    "kitchen": {
+      "turns": 20,
+      "wer": 0.1019,
+      "meaning_changed": 0.25
+    },
+    "tv": {
+      "turns": 18,
+      "wer": 0.1456,
+      "meaning_changed": 0.0556
+    }
+  },
+  "by_set": {
+    "kokoro__parakeet__noisy10": {
+      "turns": 38,
+      "wer": 0.1232,
+      "meaning_changed": 0.1579
+    }
+  },
+  "samples": [
+    {
+      "id": "bbig-bundook_full-plan-889-s2",
+      "turn": 0,
+      "voice": "t-k-am-onyx",
+      "written": "Exhaust fan on.",
+      "heard": "Exhaust panel.",
+      "lost": [
+        [
+          "device",
+          "exhaust fan"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-303-s2",
+      "turn": 0,
+      "voice": "t-k-bf-isabella-alice",
+      "written": "Is the master ensuite light on?",
+      "heard": "Is the master and suit light on?",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-515-s2",
+      "turn": 1,
+      "voice": "t-k-am-puck",
+      "written": "The master ensuite one.",
+      "heard": "Master in Suit 1.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-889-s2",
+      "turn": 1,
+      "voice": "t-k-am-onyx",
+      "written": "The one in the toilet.",
+      "heard": "The one in the tour.",
+      "lost": [
+        [
+          "room",
+          "toilet"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1385-s2",
+      "turn": 1,
+      "voice": "t-k-bf-alice-lily",
+      "written": "Master robe.",
+      "heard": "Master Rovy",
+      "lost": [
+        [
+          "room",
+          "master robe"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1430-s2",
+      "turn": 0,
+      "voice": "t-k-am-eric",
+      "written": "Sleep well house",
+      "heard": "Just leave well how.",
+      "lost": [
+        [
+          "device",
+          "house"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

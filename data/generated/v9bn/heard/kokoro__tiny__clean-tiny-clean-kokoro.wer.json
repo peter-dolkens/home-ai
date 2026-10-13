@@ -1,0 +1,350 @@
+{
+  "set": "kokoro__tiny__clean",
+  "stt": "tiny",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 122,
+  "words": 797,
+  "errors": 61,
+  "wer": 0.0765,
+  "exact": 0.6721,
+  "vocab_words": 281,
+  "vocab_errors": 20,
+  "vocab_wer": 0.0712,
+  "vocab": {
+    "room": {
+      "n": 85,
+      "err": 8,
+      "wer": 0.0941
+    },
+    "device": {
+      "n": 97,
+      "err": 8,
+      "wer": 0.0825
+    },
+    "person": {
+      "n": 7,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 11,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 81,
+      "err": 4,
+      "wer": 0.0494
+    }
+  },
+  "meaning_changed": 0.1066,
+  "meaning_changed_n": 13,
+  "meaning_by_kind": {
+    "room": 0.041,
+    "device": 0.041,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0328
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 0.8706,
+    "p50": 0.8571,
+    "p90": 1.0857,
+    "rtf": 0.2886,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nicole": {
+      "turns": 10,
+      "wer": 0.0847,
+      "meaning_changed": 0.1
+    },
+    "t-k-af-nova": {
+      "turns": 9,
+      "wer": 0.0806,
+      "meaning_changed": 0.3333
+    },
+    "t-k-af-sarah": {
+      "turns": 10,
+      "wer": 0.098,
+      "meaning_changed": 0.1
+    },
+    "t-k-af-sky": {
+      "turns": 9,
+      "wer": 0.0256,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-eric": {
+      "turns": 9,
+      "wer": 0.1692,
+      "meaning_changed": 0.2222
+    },
+    "t-k-am-liam": {
+      "turns": 9,
+      "wer": 0.0556,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-onyx": {
+      "turns": 6,
+      "wer": 0.0222,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-puck": {
+      "turns": 7,
+      "wer": 0.1346,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 6,
+      "wer": 0.125,
+      "meaning_changed": 0.3333
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 9,
+      "wer": 0.0909,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 4,
+      "wer": 0.0417,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 6,
+      "wer": 0.125,
+      "meaning_changed": 0.1667
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 5,
+      "wer": 0.1034,
+      "meaning_changed": 0.2
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 5,
+      "wer": 0.0513,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 8,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 10,
+      "wer": 0.04,
+      "meaning_changed": 0.2
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 38,
+      "wer": 0.0672,
+      "meaning_changed": 0.0526
+    },
+    "1.0": {
+      "turns": 56,
+      "wer": 0.0885,
+      "meaning_changed": 0.1607
+    },
+    "1.15": {
+      "turns": 28,
+      "wer": 0.0643,
+      "meaning_changed": 0.0714
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 122,
+      "wer": 0.0765,
+      "meaning_changed": 0.1066
+    }
+  },
+  "by_set": {
+    "kokoro__tiny__clean": {
+      "turns": 122,
+      "wer": 0.0765,
+      "meaning_changed": 0.1066
+    }
+  },
+  "samples": [
+    {
+      "id": "b300-563",
+      "turn": 0,
+      "voice": "t-k-am-eric",
+      "written": "hey house, pop the fan on",
+      "heard": "Hey, how's Bob the Fanon?",
+      "lost": [
+        [
+          "device",
+          "house"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "b300-1602",
+      "turn": 0,
+      "voice": "t-k-af-nova",
+      "written": "Switch the lights off in dining hall and master ensuite",
+      "heard": "Switch the lights off and dining hall and master and suit.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "b300-565",
+      "turn": 0,
+      "voice": "t-k-af-sarah",
+      "written": "quick question, can you switch off the fan",
+      "heard": "Quick question, can you switch off the fit?",
+      "lost": [
+        [
+          "device",
+          "fan"
+        ]
+      ]
+    },
+    {
+      "id": "b300-796",
+      "turn": 1,
+      "voice": "t-k-af-nova",
+      "written": "Priya's room one.",
+      "heard": "Prayers Room 1",
+      "lost": [
+        [
+          "room",
+          "priyas room"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-1792",
+      "turn": 0,
+      "voice": "t-k-bf-isabella-alice",
+      "written": "lock the house up",
+      "heard": "Look the house up here.",
+      "lost": [
+        [
+          "command",
+          "lock"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1926",
+      "turn": 0,
+      "voice": "t-k-af-nicole",
+      "written": "Pull the blinds shut in the guest ensuite",
+      "heard": "Pull the blinds shut in the guest ensued.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-2000",
+      "turn": 0,
+      "voice": "t-k-am-eric",
+      "written": "turn on the master ensuite lights and then turn off Pete's office lights",
+      "heard": "Turn on the master and suit lights and then turn off Pete's office lights.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-10000-783",
+      "turn": 0,
+      "voice": "t-k-bf-alice-lily",
+      "written": "hey, flick the light on",
+      "heard": "Hey, flick the light ons!",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-15000-1113",
+      "turn": 0,
+      "voice": "t-k-bm-daniel-fable",
+      "written": "hey house, flick on the wall light 1 thanks",
+      "heard": "Hey House, flick on the wall like one thanks.",
+      "lost": [
+        [
+          "device",
+          "wall light 1"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-15000-1291",
+      "turn": 0,
+      "voice": "t-k-af-nova",
+      "written": "right, turn the laundry lights off thanks",
+      "heard": "Write, turn the laundry lights off, thanks.",
+      "lost": [
+        [
+          "device",
+          "right"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-20000-1533",
+      "turn": 0,
+      "voice": "t-k-bm-lewis-fable",
+      "written": "bedtime, lock the house up",
+      "heard": "Bedtime, look the house up.",
+      "lost": [
+        [
+          "command",
+          "lock"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-3000-129",
+      "turn": 0,
+      "voice": "t-k-bf-alice-lily",
+      "written": "quick question, is the dryer done",
+      "heard": "Quick question is the drier done.",
+      "lost": [
+        [
+          "device",
+          "dryer"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-3000-202",
+      "turn": 0,
+      "voice": "t-k-bm-lewis-fable",
+      "written": "um, turn on the lights in the bedroom 2, the driveway and the guest room please",
+      "heard": "I'm turn on the lights in the bedroom too, the driveway and the guest room, please.",
+      "lost": [
+        [
+          "room",
+          "bedroom 2"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

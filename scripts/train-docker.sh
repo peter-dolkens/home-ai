@@ -33,6 +33,7 @@ run() {
     "${EXTRA_ENV[@]}" \
     -v "$ROOT":/work -w /work \
     -v "$HF_CACHE":/root/.cache/huggingface \
+    -v /ai/models/homeai/runs:/ai/models/homeai/runs \
     --network proxy \
     --shm-size 8g \
     "$IMAGE" "$@"

@@ -1,0 +1,27 @@
+2026-10-14 02:28:43 homeai-lfm25-2.6b-lora-b-v8r128e4: imported on lapwing
+2026-10-14 02:28:44 homeai-lfm25-2.6b-lora-b-v8r128e4: lapwing heard evals started
+2026-10-14 02:32:18 homeai-lfm25-2.6b-lora-b-v8r128e4: cassowary import + benchmark queued
+2026-10-14 02:32:18 mlx_lm.convert mlx6
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/peter.dolkens/Projects/home-ai/.mlx/venv/lib/python3.12/site-packages/mlx_lm/__main__.py", line 6, in <module>
+    cli.main()
+  File "/Users/peter.dolkens/Projects/home-ai/.mlx/venv/lib/python3.12/site-packages/mlx_lm/cli.py", line 40, in main
+    submodule.main()
+  File "/Users/peter.dolkens/Projects/home-ai/.mlx/venv/lib/python3.12/site-packages/mlx_lm/convert.py", line 259, in main
+    convert(**vars(args))
+  File "/Users/peter.dolkens/Projects/home-ai/.mlx/venv/lib/python3.12/site-packages/mlx_lm/convert.py", line 112, in convert
+    model, tokenizer, config = load(
+                               ^^^^^
+  File "/Users/peter.dolkens/Projects/home-ai/.mlx/venv/lib/python3.12/site-packages/mlx_lm/utils.py", line 491, in load
+    model, config = load_model(model_path, lazy, model_config=model_config)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/peter.dolkens/Projects/home-ai/.mlx/venv/lib/python3.12/site-packages/mlx_lm/utils.py", line 341, in load_model
+    model_args = model_args_class.from_dict(config)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/peter.dolkens/Projects/home-ai/.mlx/venv/lib/python3.12/site-packages/mlx_lm/models/base.py", line 15, in from_dict
+    return cls(
+           ^^^^
+TypeError: ModelArgs.__init__() missing 1 required positional argument: 'block_ff_dim'
+[INFO] Loading

@@ -1,0 +1,232 @@
+{
+  "set": "kokoro__tiny__clean",
+  "stt": "tiny",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 35,
+  "words": 217,
+  "errors": 10,
+  "wer": 0.0461,
+  "exact": 0.8,
+  "vocab_words": 75,
+  "vocab_errors": 6,
+  "vocab_wer": 0.08,
+  "vocab": {
+    "room": {
+      "n": 14,
+      "err": 1,
+      "wer": 0.0714
+    },
+    "device": {
+      "n": 34,
+      "err": 5,
+      "wer": 0.1471
+    },
+    "person": {
+      "n": 1,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 4,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 22,
+      "err": 0,
+      "wer": 0.0
+    }
+  },
+  "meaning_changed": 0.1429,
+  "meaning_changed_n": 5,
+  "meaning_by_kind": {
+    "room": 0.0286,
+    "device": 0.1143,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 0.8865,
+    "p50": 0.8542,
+    "p90": 1.2776,
+    "rtf": 0.293,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nicole": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-nova": {
+      "turns": 4,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sarah": {
+      "turns": 4,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sky": {
+      "turns": 2,
+      "wer": 0.3333,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-eric": {
+      "turns": 3,
+      "wer": 0.0435,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-liam": {
+      "turns": 3,
+      "wer": 0.0476,
+      "meaning_changed": 0.3333
+    },
+    "t-k-am-onyx": {
+      "turns": 3,
+      "wer": 0.1667,
+      "meaning_changed": 0.3333
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 1,
+      "wer": 0.0476,
+      "meaning_changed": 1.0
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 5,
+      "wer": 0.0345,
+      "meaning_changed": 0.2
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 3,
+      "wer": 0.0556,
+      "meaning_changed": 0.3333
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 8,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "1.0": {
+      "turns": 15,
+      "wer": 0.0625,
+      "meaning_changed": 0.2
+    },
+    "1.15": {
+      "turns": 12,
+      "wer": 0.0602,
+      "meaning_changed": 0.1667
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 35,
+      "wer": 0.0461,
+      "meaning_changed": 0.1429
+    }
+  },
+  "by_set": {
+    "kokoro__tiny__clean": {
+      "turns": 35,
+      "wer": 0.0461,
+      "meaning_changed": 0.1429
+    }
+  },
+  "samples": [
+    {
+      "id": "bbig-bundook_full-plan-240",
+      "turn": 0,
+      "voice": "t-k-bf-alice-lily",
+      "written": "ok flick off the lights in the guest ensuite, and then can you get the lights on in the pantry thanks",
+      "heard": "OK, flick off the lights in the guest-insuit, and then can you get the lights on in the pantry thanks.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-45",
+      "turn": 0,
+      "voice": "t-k-bm-george-lewis",
+      "written": "How long left on the rangehood?",
+      "heard": "How long left on the reinsured?",
+      "lost": [
+        [
+          "device",
+          "rangehood"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-497",
+      "turn": 0,
+      "voice": "t-k-am-onyx",
+      "written": "hey, hold the homepod in here thanks",
+      "heard": "Hey, hold the home pot in here, thanks.",
+      "lost": [
+        [
+          "device",
+          "homepod"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1169",
+      "turn": 0,
+      "voice": "t-k-am-liam",
+      "written": "hey house, what's our load like right now",
+      "heard": "Hey, how's what's our load like right now?",
+      "lost": [
+        [
+          "device",
+          "house"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1483",
+      "turn": 0,
+      "voice": "t-k-bf-isabella-alice",
+      "written": "right, shut the pendant 5 off in dining hall please",
+      "heard": "Write, shut the pendant five off in dining hall, please.",
+      "lost": [
+        [
+          "device",
+          "right"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

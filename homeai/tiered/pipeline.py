@@ -28,6 +28,7 @@ import urllib.error
 import urllib.request
 from typing import Any, Callable, Optional
 
+from .. import prompt_layout
 from ..bridge.agent import make_client
 from ..house.schema import GROUPS, House
 from ..leaf.eval import LEAF_RULE
@@ -249,15 +250,22 @@ def room_level_targets(house: House, args: dict) -> list[str]:
 # ---------------------------------------------------------------------- the loop
 class Pipeline:
     """orch: an object with chat(messages, tools) -> assistant message (make_client, or an oracle); picker: LeafPicker.
-    mode "routed" (ask_rooms) or "fanout" (every room leaf gets the utterance first)."""
+    mode "routed" (ask_rooms) or "fanout" (every room leaf gets the utterance first); layout: the orchestrator's system
+    prompt layout (homeai/prompt_layout.py)."""
 
-    def __init__(self, orch, picker: LeafPicker, mode: str = "routed", max_rounds: int = 4, workers: int = 8, verbose: bool = False):
+    def __init__(self, orch, picker: LeafPicker, mode: str = "routed", max_rounds: int = 4, workers: int = 8, verbose: bool = False,
+                 layout: Optional[str] = None):
         assert mode in ("routed", "fanout"), mode
         self.orch, self.picker, self.mode, self.max_rounds, self.verbose = orch, picker, mode, max_rounds, verbose
+        self.layout = layout
         self.pool = cf.ThreadPoolExecutor(max(1, workers))
 
     def prompt(self, house: House, speaker) -> str:
+        """The orchestrator's system prompt as stored (classic); request() puts a conversation in the model's layout."""
         return (system_prompt_fanout if self.mode == "fanout" else system_prompt_orch)(house, speaker)
+
+    def request(self, ctx: list[dict]) -> list[dict]:
+        return prompt_layout.render(ctx, self.layout)
 
     @property
     def tools(self) -> list[dict]:
@@ -348,6 +356,7 @@ def add_args(ap: argparse.ArgumentParser):
     ap.add_argument("--max-rounds", type=int, default=4, help="orchestrator rounds per turn (e2e.py uses 4)")
     ap.add_argument("--num-predict", type=int, default=2048,
                     help="orchestrator token cap per turn (bridge default 512; an ask_rooms to every room of a big house is ~1.2k tokens)")
+    prompt_layout.add_arg(ap)
 
 
 def orchestrator_from_args(a):
@@ -385,12 +394,13 @@ def main():
         n, _, ar = a.speaker.partition("@")
         sp = Speaker(n or None, ar or None, "satellite" if ar else "app")
     orch = orchestrator_from_args(a)
-    pipe = Pipeline(orch, picker_from_args(a), "fanout" if a.fanout else "routed", a.max_rounds, a.workers, verbose=a.verbose)
+    pipe = Pipeline(orch, picker_from_args(a), "fanout" if a.fanout else "routed", a.max_rounds, a.workers, verbose=a.verbose,
+                    layout=prompt_layout.for_model(a.model, a.prompt_layout))
     print(f"{len(house.entities)} entities, {len(leaf_rooms(house))} leaf rooms")
     history: list[dict] = []
     for u in a.say:
         history.append({"role": "user", "content": u})
-        ctx = [{"role": "system", "content": pipe.prompt(house, sp)}] + history
+        ctx = pipe.request([{"role": "system", "content": pipe.prompt(house, sp)}] + history)
         text, calls, st = pipe.run(ctx, house, u)
         history.append({"role": "assistant", "content": text})
         print(f"user: {u}\nassistant: {text}\n  ({st['orch_calls']} orchestrator calls {st['orch_s']:.1f}s, {st['leaf_calls']} leaf calls "

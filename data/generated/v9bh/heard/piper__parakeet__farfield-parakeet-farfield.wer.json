@@ -1,0 +1,201 @@
+{
+  "set": "piper__parakeet__farfield",
+  "stt": "parakeet",
+  "condition": "farfield",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 12,
+  "words": 63,
+  "errors": 17,
+  "wer": 0.2698,
+  "exact": 0.4167,
+  "vocab_words": 26,
+  "vocab_errors": 7,
+  "vocab_wer": 0.2692,
+  "vocab": {
+    "room": {
+      "n": 8,
+      "err": 2,
+      "wer": 0.25
+    },
+    "device": {
+      "n": 9,
+      "err": 4,
+      "wer": 0.4444
+    },
+    "person": {
+      "n": 1,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 2,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 6,
+      "err": 1,
+      "wer": 0.1667
+    }
+  },
+  "meaning_changed": 0.4167,
+  "meaning_changed_n": 5,
+  "meaning_by_kind": {
+    "room": 0.1667,
+    "device": 0.25,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0833
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 0.3272,
+    "p50": 0.3067,
+    "p90": 0.5312,
+    "rtf": 0.1337,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-ie-p288": {
+      "turns": 1,
+      "wer": 0.5,
+      "meaning_changed": 0.0
+    },
+    "t-ld-p243": {
+      "turns": 2,
+      "wer": 0.4286,
+      "meaning_changed": 0.5
+    },
+    "t-sm-prudence": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-sm-spike": {
+      "turns": 2,
+      "wer": 0.1429,
+      "meaning_changed": 0.5
+    },
+    "t-yk-p267": {
+      "turns": 3,
+      "wer": 0.3333,
+      "meaning_changed": 0.3333
+    },
+    "t-yk-p270": {
+      "turns": 2,
+      "wer": 0.25,
+      "meaning_changed": 0.5
+    },
+    "t-za-p323": {
+      "turns": 1,
+      "wer": 0.375,
+      "meaning_changed": 1.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 3,
+      "wer": 0.1429,
+      "meaning_changed": 0.3333
+    },
+    "1.0": {
+      "turns": 6,
+      "wer": 0.2973,
+      "meaning_changed": 0.5
+    },
+    "1.15": {
+      "turns": 3,
+      "wer": 0.3333,
+      "meaning_changed": 0.3333
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 12,
+      "wer": 0.2698,
+      "meaning_changed": 0.4167
+    }
+  },
+  "by_set": {
+    "piper__parakeet__farfield": {
+      "turns": 12,
+      "wer": 0.2698,
+      "meaning_changed": 0.4167
+    }
+  },
+  "samples": [
+    {
+      "id": "bbig-bundook_full-plan-868",
+      "turn": 0,
+      "voice": "t-yk-p267",
+      "written": "hey house, floodlight 1 off",
+      "heard": "Hay House for the late one of.",
+      "lost": [
+        [
+          "device",
+          "house floodlight 1"
+        ],
+        [
+          "command",
+          "off"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-686",
+      "turn": 0,
+      "voice": "t-yk-p270",
+      "written": "Switch the floodlight 3 off.",
+      "heard": "Switch the flood lighter off.",
+      "lost": [
+        [
+          "device",
+          "floodlight 3"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-898",
+      "turn": 0,
+      "voice": "t-sm-spike",
+      "written": "What song is this in the alfresco?",
+      "heard": "What song is this in the old fresco?",
+      "lost": [
+        [
+          "room",
+          "alfresco"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1371",
+      "turn": 0,
+      "voice": "t-za-p323",
+      "written": "hey, get blues going in Pete's office please",
+      "heard": "Hey, get Luz going to his office please.",
+      "lost": [
+        [
+          "room",
+          "petes office"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1504",
+      "turn": 0,
+      "voice": "t-ld-p243",
+      "written": "Flick the toothbrush charger off",
+      "heard": "Vick the teeth brush charger off.",
+      "lost": [
+        [
+          "device",
+          "toothbrush charger"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

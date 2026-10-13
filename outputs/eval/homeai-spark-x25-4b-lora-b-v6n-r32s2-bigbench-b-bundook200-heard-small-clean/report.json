@@ -1,0 +1,178 @@
+{
+  "model": "homeai-spark-x25-4b-lora-b-v6n-r32s2",
+  "mode": "e2e",
+  "host": "magpie",
+  "hardware": "apple-m2",
+  "host_note": "standalone ollama 0.21.2 (Metal) on magpie, e2e client elsewhere",
+  "ollama": "http://localhost:11435",
+  "lockstep": 10,
+  "prompt_layout": "stable_prefix",
+  "data": "data/generated/heard/bigbench-b-bundook200-small-clean.jsonl",
+  "examples": 200,
+  "turns": 228,
+  "pass": 0.8201754385964912,
+  "conversation_pass": 0.795,
+  "seconds_per_turn": 0.3856108816827481,
+  "calls_per_request": 2.1140350877192984,
+  "errors": 0,
+  "by_kind": {
+    "answer": {
+      "n": 124,
+      "ok": 100
+    },
+    "state": {
+      "n": 228,
+      "ok": 211
+    },
+    "reply": {
+      "n": 228,
+      "ok": 204
+    },
+    "act": {
+      "n": 104,
+      "ok": 87
+    }
+  },
+  "by_category": {
+    "energy_status": {
+      "n": 6,
+      "ok": 6
+    },
+    "energy_appliance": {
+      "n": 3,
+      "ok": 2
+    },
+    "top_power": {
+      "n": 6,
+      "ok": 0
+    },
+    "open_check": {
+      "n": 7,
+      "ok": 2
+    },
+    "weather": {
+      "n": 3,
+      "ok": 3
+    },
+    "appliance_status": {
+      "n": 3,
+      "ok": 3
+    },
+    "control_named": {
+      "n": 13,
+      "ok": 10
+    },
+    "presence_where": {
+      "n": 12,
+      "ok": 10
+    },
+    "media_transport": {
+      "n": 3,
+      "ok": 3
+    },
+    "confirm_sensitive": {
+      "n": 12,
+      "ok": 12
+    },
+    "control_here": {
+      "n": 6,
+      "ok": 5
+    },
+    "control_climate": {
+      "n": 6,
+      "ok": 4
+    },
+    "control_area": {
+      "n": 10,
+      "ok": 10
+    },
+    "presence_in_room": {
+      "n": 4,
+      "ok": 4
+    },
+    "water_status": {
+      "n": 4,
+      "ok": 4
+    },
+    "irrigation_control": {
+      "n": 3,
+      "ok": 3
+    },
+    "control_lock": {
+      "n": 3,
+      "ok": 3
+    },
+    "status_aggregate": {
+      "n": 15,
+      "ok": 15
+    },
+    "status_entity": {
+      "n": 9,
+      "ok": 6
+    },
+    "media_play": {
+      "n": 6,
+      "ok": 5
+    },
+    "goodnight": {
+      "n": 9,
+      "ok": 7
+    },
+    "control_compound": {
+      "n": 7,
+      "ok": 6
+    },
+    "leaving": {
+      "n": 3,
+      "ok": 0
+    },
+    "media_multiroom": {
+      "n": 3,
+      "ok": 3
+    },
+    "anything_on": {
+      "n": 9,
+      "ok": 4
+    },
+    "act_only_one": {
+      "n": 3,
+      "ok": 3
+    },
+    "clarify": {
+      "n": 18,
+      "ok": 15
+    },
+    "check_house": {
+      "n": 19,
+      "ok": 19
+    },
+    "away_motion": {
+      "n": 3,
+      "ok": 3
+    },
+    "media_volume": {
+      "n": 3,
+      "ok": 2
+    },
+    "who_home": {
+      "n": 3,
+      "ok": 3
+    },
+    "vehicle_status": {
+      "n": 3,
+      "ok": 2
+    },
+    "media_what": {
+      "n": 3,
+      "ok": 3
+    },
+    "control_brightness": {
+      "n": 3,
+      "ok": 3
+    },
+    "energy_night": {
+      "n": 5,
+      "ok": 4
+    }
+  }
+}

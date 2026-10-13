@@ -1,0 +1,246 @@
+[25/30] 78.6% 82.1% 64.3% 75.0% 85.7% 82.1% 78.6% 6991s
+{
+  "model": "homeai-4b-lora-v5",
+  "mode": "e2e",
+  "sample": 30,
+  "host": "magpie",
+  "hardware": "apple-m2",
+  "host_note": "standalone ollama 0.21.2 (Metal) on magpie, e2e client elsewhere",
+  "ollama": "http://10.24.10.150:11600",
+  "lockstep": 7,
+  "data": "data/generated/heard/test-v2-parakeet-clean.jsonl",
+  "examples": 30,
+  "turns": 35,
+  "pass": 0.8142857142857143,
+  "conversation_pass": 0.7666666666666667,
+  "seconds_per_turn": 17.335214520843937,
+  "calls_per_request": 2.0285714285714285,
+  "by_kind": {
+    "act": {
+      "n": 13,
+      "ok": 12
+    },
+    "state": {
+      "n": 35,
+      "ok": 32
+    },
+    "reply": {
+      "n": 35,
+      "ok": 30
+    },
+    "answer": {
+      "n": 22,
+      "ok": 16.5
+    }
+  }
+}
+{
+  "model": "homeai-4b-lora-v5",
+  "mode": "e2e",
+  "sample": 30,
+  "host": "magpie",
+  "hardware": "apple-m2",
+  "host_note": "standalone ollama 0.21.2 (Metal) on magpie, e2e client elsewhere",
+  "ollama": "http://10.24.10.150:11600",
+  "lockstep": 7,
+  "data": "data/generated/heard/test-v2-parakeet-farfield.jsonl",
+  "examples": 30,
+  "turns": 35,
+  "pass": 0.8428571428571429,
+  "conversation_pass": 0.8,
+  "seconds_per_turn": 17.26553501881344,
+  "calls_per_request": 2.0285714285714285,
+  "by_kind": {
+    "act": {
+      "n": 13,
+      "ok": 11
+    },
+    "state": {
+      "n": 35,
+      "ok": 31
+    },
+    "reply": {
+      "n": 35,
+      "ok": 32
+    },
+    "answer": {
+      "n": 22,
+      "ok": 18.5
+    }
+  }
+}
+{
+  "model": "homeai-4b-lora-v5",
+  "mode": "e2e",
+  "sample": 30,
+  "host": "magpie",
+  "hardware": "apple-m2",
+  "host_note": "standalone ollama 0.21.2 (Metal) on magpie, e2e client elsewhere",
+  "ollama": "http://10.24.10.150:11600",
+  "lockstep": 7,
+  "data": "data/generated/heard/test-v2-parakeet-noisy10.jsonl",
+  "examples": 30,
+  "turns": 35,
+  "pass": 0.7,
+  "conversation_pass": 0.6333333333333333,
+  "seconds_per_turn": 16.786148049938145,
+  "calls_per_request": 1.9142857142857144,
+  "by_kind": {
+    "act": {
+      "n": 13,
+      "ok": 7
+    },
+    "state": {
+      "n": 35,
+      "ok": 27
+    },
+    "reply": {
+      "n": 35,
+      "ok": 32
+    },
+    "answer": {
+      "n": 22,
+      "ok": 17.5
+    }
+  }
+}
+{
+  "model": "homeai-4b-lora-v5",
+  "mode": "e2e",
+  "sample": 30,
+  "host": "magpie",
+  "hardware": "apple-m2",
+  "host_note": "standalone ollama 0.21.2 (Metal) on magpie, e2e client elsewhere",
+  "ollama": "http://10.24.10.150:11600",
+  "lockstep": 7,
+  "data": "data/generated/heard/test-v2-small-clean.jsonl",
+  "examples": 30,
+  "turns": 35,
+  "pass": 0.7857142857142857,
+  "conversation_pass": 0.7666666666666667,
+  "seconds_per_turn": 16.72794363391933,
+  "calls_per_request": 1.9142857142857144,
+  "by_kind": {
+    "act": {
+      "n": 13,
+      "ok": 11
+    },
+    "state": {
+      "n": 35,
+      "ok": 31
+    },
+    "reply": {
+      "n": 35,
+      "ok": 31
+    },
+    "answer": {
+      "n": 22,
+      "ok": 16.5
+    }
+  }
+}
+{
+  "model": "homeai-4b-lora-v5",
+  "mode": "e2e",
+  "sample": 30,
+  "host": "magpie",
+  "hardware": "apple-m2",
+  "host_note": "standalone ollama 0.21.2 (Metal) on magpie, e2e client elsewhere",
+  "ollama": "http://10.24.10.150:11600",
+  "lockstep": 7,
+  "data": "data/generated/heard/test-v2-small-biased.jsonl",
+  "examples": 30,
+  "turns": 35,
+  "pass": 0.8714285714285714,
+  "conversation_pass": 0.8333333333333334,
+  "seconds_per_turn": 17.50247783871258,
+  "calls_per_request": 1.9428571428571428,
+  "by_kind": {
+    "act": {
+      "n": 13,
+      "ok": 12
+    },
+    "state": {
+      "n": 35,
+      "ok": 32
+    },
+    "reply": {
+      "n": 35,
+      "ok": 33
+    },
+    "answer": {
+      "n": 22,
+      "ok": 18.5
+    }
+  }
+}
+{
+  "model": "homeai-4b-lora-v5",
+  "mode": "e2e",
+  "sample": 30,
+  "host": "magpie",
+  "hardware": "apple-m2",
+  "host_note": "standalone ollama 0.21.2 (Metal) on magpie, e2e client elsewhere",
+  "ollama": "http://10.24.10.150:11600",
+  "lockstep": 7,
+  "data": "data/generated/heard/test-v2-medium-biased.jsonl",
+  "examples": 30,
+  "turns": 35,
+  "pass": 0.8428571428571429,
+  "conversation_pass": 0.8,
+  "seconds_per_turn": 17.169090127944948,
+  "calls_per_request": 1.8571428571428572,
+  "by_kind": {
+    "act": {
+      "n": 13,
+      "ok": 12
+    },
+    "state": {
+      "n": 35,
+      "ok": 32
+    },
+    "reply": {
+      "n": 35,
+      "ok": 31
+    },
+    "answer": {
+      "n": 22,
+      "ok": 17.5
+    }
+  }
+}
+{
+  "model": "homeai-4b-lora-v5",
+  "mode": "e2e",
+  "sample": 30,
+  "host": "magpie",
+  "hardware": "apple-m2",
+  "host_note": "standalone ollama 0.21.2 (Metal) on magpie, e2e client elsewhere",
+  "ollama": "http://10.24.10.150:11600",
+  "lockstep": 7,
+  "data": "data/generated/heard/test-v2-tiny-clean.jsonl",
+  "examples": 30,
+  "turns": 35,
+  "pass": 0.8142857142857143,
+  "conversation_pass": 0.8,
+  "seconds_per_turn": 17.07462257233219,
+  "calls_per_request": 1.9714285714285715,
+  "by_kind": {
+    "act": {
+      "n": 13,
+      "ok": 11
+    },
+    "state": {
+      "n": 35,
+      "ok": 30
+    },
+    "reply": {
+      "n": 35,
+      "ok": 33
+    },
+    "answer": {
+      "n": 22,
+      "ok": 17.5
+    }
+  }
+}

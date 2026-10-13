@@ -1,0 +1,454 @@
+{
+  "set": "kokoro__parakeet__noisy10",
+  "stt": "parakeet",
+  "condition": "noisy10",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 166,
+  "words": 1089,
+  "errors": 135,
+  "wer": 0.124,
+  "exact": 0.6265,
+  "vocab_words": 366,
+  "vocab_errors": 28,
+  "vocab_wer": 0.0765,
+  "vocab": {
+    "room": {
+      "n": 113,
+      "err": 10,
+      "wer": 0.0885
+    },
+    "device": {
+      "n": 118,
+      "err": 9,
+      "wer": 0.0763
+    },
+    "person": {
+      "n": 13,
+      "err": 5,
+      "wer": 0.3846
+    },
+    "number": {
+      "n": 12,
+      "err": 2,
+      "wer": 0.1667
+    },
+    "command": {
+      "n": 110,
+      "err": 2,
+      "wer": 0.0182
+    }
+  },
+  "meaning_changed": 0.1205,
+  "meaning_changed_n": 20,
+  "meaning_by_kind": {
+    "room": 0.0602,
+    "device": 0.0361,
+    "person": 0.0181,
+    "number": 0.012,
+    "command": 0.012
+  },
+  "empty": 1,
+  "seconds": {
+    "mean": 0.4094,
+    "p50": 0.3946,
+    "p90": 0.548,
+    "rtf": 0.1369,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nicole": {
+      "turns": 8,
+      "wer": 0.6275,
+      "meaning_changed": 0.375
+    },
+    "t-k-af-nova": {
+      "turns": 11,
+      "wer": 0.3662,
+      "meaning_changed": 0.2727
+    },
+    "t-k-af-sarah": {
+      "turns": 10,
+      "wer": 0.0159,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sky": {
+      "turns": 10,
+      "wer": 0.1071,
+      "meaning_changed": 0.1
+    },
+    "t-k-am-eric": {
+      "turns": 18,
+      "wer": 0.0698,
+      "meaning_changed": 0.1667
+    },
+    "t-k-am-liam": {
+      "turns": 14,
+      "wer": 0.0417,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-onyx": {
+      "turns": 6,
+      "wer": 0.0465,
+      "meaning_changed": 0.1667
+    },
+    "t-k-am-puck": {
+      "turns": 7,
+      "wer": 0.3611,
+      "meaning_changed": 0.1429
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 13,
+      "wer": 0.0333,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 13,
+      "wer": 0.038,
+      "meaning_changed": 0.0769
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 5,
+      "wer": 0.08,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 6,
+      "wer": 0.1429,
+      "meaning_changed": 0.3333
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 12,
+      "wer": 0.086,
+      "meaning_changed": 0.0833
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 8,
+      "wer": 0.0794,
+      "meaning_changed": 0.125
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 14,
+      "wer": 0.0814,
+      "meaning_changed": 0.0714
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 11,
+      "wer": 0.1233,
+      "meaning_changed": 0.1818
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 52,
+      "wer": 0.1235,
+      "meaning_changed": 0.1538
+    },
+    "1.0": {
+      "turns": 70,
+      "wer": 0.107,
+      "meaning_changed": 0.1286
+    },
+    "1.15": {
+      "turns": 44,
+      "wer": 0.1512,
+      "meaning_changed": 0.0682
+    }
+  },
+  "by_noise": {
+    "kitchen": {
+      "turns": 78,
+      "wer": 0.064,
+      "meaning_changed": 0.0641
+    },
+    "tv": {
+      "turns": 88,
+      "wer": 0.178,
+      "meaning_changed": 0.1705
+    }
+  },
+  "by_set": {
+    "kokoro__parakeet__noisy10": {
+      "turns": 166,
+      "wer": 0.124,
+      "meaning_changed": 0.1205
+    }
+  },
+  "samples": [
+    {
+      "id": "205-2537",
+      "turn": 0,
+      "voice": "t-k-af-nicole",
+      "written": "Turn on the lounge lights and turn off the fan in the study.",
+      "heard": "Turn on the lounge lights. Police are to come forward.",
+      "lost": [
+        [
+          "command",
+          "off"
+        ],
+        [
+          "device",
+          "fan"
+        ],
+        [
+          "room",
+          "study"
+        ]
+      ]
+    },
+    {
+      "id": "v5light-190",
+      "turn": 1,
+      "voice": "t-k-bf-isabella-alice",
+      "written": "The master robe one.",
+      "heard": "The master rogue want",
+      "lost": [
+        [
+          "room",
+          "master robe"
+        ],
+        [
+          "number",
+          "1"
+        ]
+      ]
+    },
+    {
+      "id": "203-1039",
+      "turn": 0,
+      "voice": "t-k-af-nova",
+      "written": "turn the towel rail in the guest ensuite off",
+      "heard": "Turn the towel rail and the guest can seat off.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "204-121",
+      "turn": 1,
+      "voice": "t-k-am-eric",
+      "written": "Office.",
+      "heard": "",
+      "lost": [
+        [
+          "room",
+          "office"
+        ]
+      ]
+    },
+    {
+      "id": "204-1625",
+      "turn": 0,
+      "voice": "t-k-bm-george-daniel",
+      "written": "pop the lights on in the ensuite, and then can you get the lights off in the kitchen",
+      "heard": "Pop the lights on in the in suit, and then can you get the lights off in the kitchen?",
+      "lost": [
+        [
+          "room",
+          "ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "204-268",
+      "turn": 0,
+      "voice": "t-k-am-eric",
+      "written": "lights to 60 percent",
+      "heard": "Life's to 60%.",
+      "lost": [
+        [
+          "device",
+          "lights"
+        ]
+      ]
+    },
+    {
+      "id": "205-1362",
+      "turn": 0,
+      "voice": "t-k-bf-isabella-alice",
+      "written": "Flick on the water pump",
+      "heard": "Flick on the water pampy.",
+      "lost": [
+        [
+          "device",
+          "water pump"
+        ]
+      ]
+    },
+    {
+      "id": "206-1354",
+      "turn": 0,
+      "voice": "t-k-bm-daniel-fable",
+      "written": "Turn the homepod to mute in Amber's office",
+      "heard": "Turn the hopod to mute in Amber's office.",
+      "lost": [
+        [
+          "device",
+          "homepod"
+        ]
+      ]
+    },
+    {
+      "id": "206-680",
+      "turn": 0,
+      "voice": "t-k-am-onyx",
+      "written": "Has the dryer finished?",
+      "heard": "Has the drier finish.",
+      "lost": [
+        [
+          "device",
+          "dryer"
+        ]
+      ]
+    },
+    {
+      "id": "207-1743",
+      "turn": 0,
+      "voice": "t-k-bm-george-lewis",
+      "written": "turn the guest ensuite lights on",
+      "heard": "So turn the guest and suit lights on.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "208-2388",
+      "turn": 0,
+      "voice": "t-k-af-nova",
+      "written": "Can you find Peter?",
+      "heard": "Can you find that night to the 14th?",
+      "lost": [
+        [
+          "person",
+          "peter"
+        ]
+      ]
+    },
+    {
+      "id": "209-1323",
+      "turn": 0,
+      "voice": "t-k-am-eric",
+      "written": "hey, is the fan switched on in the master ensuite",
+      "heard": "K is the fan switched on in the master ensued.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "209-598",
+      "turn": 0,
+      "voice": "t-k-bm-lewis-fable",
+      "written": "um, pull the blinds shut in the guest ensuite please",
+      "heard": "Um, pull the blinds shut in the guest in suit, please.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "abig-random-10000-641",
+      "turn": 1,
+      "voice": "t-k-bm-lewis-fable",
+      "written": "In the guest ensuite.",
+      "heard": "Then the guest ensued.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "abig-random-20000-1200",
+      "turn": 0,
+      "voice": "t-k-af-sky",
+      "written": "Can you lock the workshop door?",
+      "heard": "Police are locked the workshop door.",
+      "lost": [
+        [
+          "command",
+          "lock"
+        ]
+      ]
+    },
+    {
+      "id": "abig-random-6000-395",
+      "turn": 0,
+      "voice": "t-k-am-puck",
+      "written": "is Elena at home",
+      "heard": "Is a lean at home.",
+      "lost": [
+        [
+          "person",
+          "elena"
+        ]
+      ]
+    },
+    {
+      "id": "abig-random-6000-435",
+      "turn": 0,
+      "voice": "t-k-bf-emma-isabella",
+      "written": "volume 60",
+      "heard": "Volume sixteen",
+      "lost": [
+        [
+          "number",
+          "60"
+        ]
+      ]
+    },
+    {
+      "id": "v5a-800009-h9-presence-anyone-home",
+      "turn": 0,
+      "voice": "t-k-af-nicole",
+      "written": "Is anyone actually home right now?",
+      "heard": "sent across anyone actually right now.",
+      "lost": [
+        [
+          "device",
+          "home"
+        ]
+      ]
+    },
+    {
+      "id": "v5a-810032-presence-jack-workshop-freya",
+      "turn": 1,
+      "voice": "t-k-af-nicole",
+      "written": "what about freya, where's she",
+      "heard": "With Shah.",
+      "lost": [
+        [
+          "person",
+          "freya"
+        ]
+      ]
+    },
+    {
+      "id": "v5light-140",
+      "turn": 1,
+      "voice": "t-k-af-nova",
+      "written": "Lounge please.",
+      "heard": "to me.",
+      "lost": [
+        [
+          "room",
+          "lounge"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

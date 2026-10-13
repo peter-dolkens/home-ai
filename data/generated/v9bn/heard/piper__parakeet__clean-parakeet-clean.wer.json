@@ -1,0 +1,476 @@
+{
+  "set": "piper__parakeet__clean",
+  "stt": "parakeet",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 114,
+  "words": 741,
+  "errors": 82,
+  "wer": 0.1107,
+  "exact": 0.6228,
+  "vocab_words": 234,
+  "vocab_errors": 29,
+  "vocab_wer": 0.1239,
+  "vocab": {
+    "room": {
+      "n": 79,
+      "err": 11,
+      "wer": 0.1392
+    },
+    "device": {
+      "n": 76,
+      "err": 12,
+      "wer": 0.1579
+    },
+    "person": {
+      "n": 11,
+      "err": 2,
+      "wer": 0.1818
+    },
+    "number": {
+      "n": 10,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 58,
+      "err": 4,
+      "wer": 0.069
+    }
+  },
+  "meaning_changed": 0.2018,
+  "meaning_changed_n": 23,
+  "meaning_by_kind": {
+    "room": 0.0877,
+    "device": 0.0702,
+    "person": 0.0088,
+    "number": 0.0,
+    "command": 0.0351
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 0.2522,
+    "p50": 0.2405,
+    "p90": 0.3438,
+    "rtf": 0.0999,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-ca-p302": {
+      "turns": 3,
+      "wer": 0.1429,
+      "meaning_changed": 0.3333
+    },
+    "t-ie-p245": {
+      "turns": 10,
+      "wer": 0.0678,
+      "meaning_changed": 0.1
+    },
+    "t-ie-p288": {
+      "turns": 14,
+      "wer": 0.0842,
+      "meaning_changed": 0.2143
+    },
+    "t-ld-p243": {
+      "turns": 8,
+      "wer": 0.1489,
+      "meaning_changed": 0.25
+    },
+    "t-ni-p304": {
+      "turns": 11,
+      "wer": 0.0625,
+      "meaning_changed": 0.0909
+    },
+    "t-nz-p335": {
+      "turns": 5,
+      "wer": 0.1429,
+      "meaning_changed": 0.2
+    },
+    "t-sc-p234": {
+      "turns": 6,
+      "wer": 0.0714,
+      "meaning_changed": 0.1667
+    },
+    "t-sc-p237": {
+      "turns": 5,
+      "wer": 0.0571,
+      "meaning_changed": 0.2
+    },
+    "t-se-p225": {
+      "turns": 4,
+      "wer": 0.0909,
+      "meaning_changed": 0.0
+    },
+    "t-sm-prudence": {
+      "turns": 8,
+      "wer": 0.1333,
+      "meaning_changed": 0.375
+    },
+    "t-sm-spike": {
+      "turns": 7,
+      "wer": 0.1364,
+      "meaning_changed": 0.1429
+    },
+    "t-wa-p253": {
+      "turns": 8,
+      "wer": 0.1129,
+      "meaning_changed": 0.0
+    },
+    "t-yk-p267": {
+      "turns": 7,
+      "wer": 0.0889,
+      "meaning_changed": 0.1429
+    },
+    "t-yk-p270": {
+      "turns": 3,
+      "wer": 0.1905,
+      "meaning_changed": 0.0
+    },
+    "t-za-p323": {
+      "turns": 9,
+      "wer": 0.129,
+      "meaning_changed": 0.5556
+    },
+    "t-za-p347": {
+      "turns": 6,
+      "wer": 0.2115,
+      "meaning_changed": 0.3333
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 37,
+      "wer": 0.0909,
+      "meaning_changed": 0.1351
+    },
+    "1.0": {
+      "turns": 52,
+      "wer": 0.121,
+      "meaning_changed": 0.2692
+    },
+    "1.15": {
+      "turns": 25,
+      "wer": 0.1206,
+      "meaning_changed": 0.16
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 114,
+      "wer": 0.1107,
+      "meaning_changed": 0.2018
+    }
+  },
+  "by_set": {
+    "piper__parakeet__clean": {
+      "turns": 114,
+      "wer": 0.1107,
+      "meaning_changed": 0.2018
+    }
+  },
+  "samples": [
+    {
+      "id": "b300-133",
+      "turn": 0,
+      "voice": "t-ld-p243",
+      "written": "Kill the dishwasher.",
+      "heard": "Peel the dish will show.",
+      "lost": [
+        [
+          "device",
+          "dishwasher"
+        ]
+      ]
+    },
+    {
+      "id": "b300-1408",
+      "turn": 0,
+      "voice": "t-sc-p234",
+      "written": "Flick the fan on in master bedroom",
+      "heard": "Flick the fan on and muster bedroom.",
+      "lost": [
+        [
+          "room",
+          "master bedroom"
+        ]
+      ]
+    },
+    {
+      "id": "b300-1532",
+      "turn": 0,
+      "voice": "t-ie-p288",
+      "written": "lights off in the hallway and the master ensuite",
+      "heard": "Lights off in the hallway and the master in suit.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "b300-1561",
+      "turn": 0,
+      "voice": "t-za-p347",
+      "written": "ok switch on the lights in the family room",
+      "heard": "A case which hung the lights in the family room.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "b300-1876",
+      "turn": 0,
+      "voice": "t-yk-p267",
+      "written": "start the lights in front porch and switch the fan off in study",
+      "heard": "Start the lights in front porch and switch the fan off in studoo.",
+      "lost": [
+        [
+          "room",
+          "study"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2147",
+      "turn": 0,
+      "voice": "t-ie-p288",
+      "written": "please turn off the track wash in Pete's office thanks",
+      "heard": "Please turn off the track wash and pets office thanks.",
+      "lost": [
+        [
+          "room",
+          "petes office"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2257",
+      "turn": 0,
+      "voice": "t-za-p323",
+      "written": "get the floor strip in the dining hall turned off thanks",
+      "heard": "Get the four strip in the dining hall turned off thanks.",
+      "lost": [
+        [
+          "device",
+          "floor strip"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3267",
+      "turn": 0,
+      "voice": "t-sm-spike",
+      "written": "Play Dinner Party.",
+      "heard": "played dinner party.",
+      "lost": [
+        [
+          "command",
+          "play"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3566",
+      "turn": 0,
+      "voice": "t-sc-p237",
+      "written": "ok a bit louder",
+      "heard": "Okay bit ladder.",
+      "lost": [
+        [
+          "command",
+          "louder"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3635",
+      "turn": 0,
+      "voice": "t-ie-p245",
+      "written": "Switch on the tv in the master ensuite.",
+      "heard": "Switch on the T V in the master and suit.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3929",
+      "turn": 0,
+      "voice": "t-nz-p335",
+      "written": "Track down Max for me",
+      "heard": "Trek Dumax for me.",
+      "lost": [
+        [
+          "command",
+          "down"
+        ]
+      ]
+    },
+    {
+      "id": "b300-4350",
+      "turn": 0,
+      "voice": "t-sm-prudence",
+      "written": "Is the alarm armed?",
+      "heard": "Is that alm armed?",
+      "lost": [
+        [
+          "device",
+          "alarm"
+        ]
+      ]
+    },
+    {
+      "id": "b300-5058",
+      "turn": 0,
+      "voice": "t-za-p323",
+      "written": "hey house, we're heading to bed please",
+      "heard": "Hey Hus, we're heading to bed, please.",
+      "lost": [
+        [
+          "device",
+          "house"
+        ]
+      ]
+    },
+    {
+      "id": "b300-685",
+      "turn": 1,
+      "voice": "t-sm-prudence",
+      "written": "Ryan's room.",
+      "heard": "Rise room",
+      "lost": [
+        [
+          "room",
+          "ryans room"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-15000-1044",
+      "turn": 0,
+      "voice": "t-sm-prudence",
+      "written": "hey house, kill the dishwasher",
+      "heard": "Hey House, Kildadisha.",
+      "lost": [
+        [
+          "device",
+          "dishwasher"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-15000-1075",
+      "turn": 0,
+      "voice": "t-ld-p243",
+      "written": "hey house, turn the heating in the pantry off thanks",
+      "heard": "Hay House turned the heating in the panja off thanks.",
+      "lost": [
+        [
+          "room",
+          "pantry"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-15000-1096",
+      "turn": 0,
+      "voice": "t-za-p323",
+      "written": "um, can you turn the dishwasher off",
+      "heard": "Anne, can you turn the dishush off?",
+      "lost": [
+        [
+          "device",
+          "dishwasher"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-15000-1296",
+      "turn": 0,
+      "voice": "t-za-p347",
+      "written": "Turn on the garden zone 5 irrigation for 10 minutes.",
+      "heard": "Ten on the gardens and five irrigation for ten minutes.",
+      "lost": [
+        [
+          "device",
+          "garden zone 5 irrigation"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-20000-1337",
+      "turn": 1,
+      "voice": "t-ca-p302",
+      "written": "Fire pit please.",
+      "heard": "Viper please.",
+      "lost": [
+        [
+          "room",
+          "fire pit"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-20000-1556",
+      "turn": 0,
+      "voice": "t-ie-p288",
+      "written": "switch the plug 8 on",
+      "heard": "Switch the pluggate on.",
+      "lost": [
+        [
+          "device",
+          "plug 8"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-20000-1560",
+      "turn": 1,
+      "voice": "t-za-p323",
+      "written": "Sunroom please.",
+      "heard": "Sunrim Please.",
+      "lost": [
+        [
+          "room",
+          "sunroom"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-20000-1580",
+      "turn": 0,
+      "voice": "t-za-p323",
+      "written": "um, is there any some chill music we can have in the front deck",
+      "heard": "Um, is there any some chill music we can have in the front day?",
+      "lost": [
+        [
+          "room",
+          "front deck"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-20000-1584",
+      "turn": 0,
+      "voice": "t-ni-p304",
+      "written": "quick question, do you know where Tara is",
+      "heard": "Quick question, do you know where Tar is?",
+      "lost": [
+        [
+          "person",
+          "tara"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

@@ -1,0 +1,255 @@
+{
+  "set": "kokoro__base__clean",
+  "stt": "base",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 74,
+  "words": 487,
+  "errors": 21,
+  "wer": 0.0431,
+  "exact": 0.8243,
+  "vocab_words": 153,
+  "vocab_errors": 8,
+  "vocab_wer": 0.0523,
+  "vocab": {
+    "room": {
+      "n": 48,
+      "err": 3,
+      "wer": 0.0625
+    },
+    "device": {
+      "n": 49,
+      "err": 2,
+      "wer": 0.0408
+    },
+    "person": {
+      "n": 7,
+      "err": 2,
+      "wer": 0.2857
+    },
+    "number": {
+      "n": 2,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 47,
+      "err": 1,
+      "wer": 0.0213
+    }
+  },
+  "meaning_changed": 0.0811,
+  "meaning_changed_n": 6,
+  "meaning_by_kind": {
+    "room": 0.027,
+    "device": 0.0135,
+    "person": 0.027,
+    "number": 0.0,
+    "command": 0.0135
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 2.2107,
+    "p50": 2.2251,
+    "p90": 2.7344,
+    "rtf": 0.7238,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nicole": {
+      "turns": 10,
+      "wer": 0.0392,
+      "meaning_changed": 0.1
+    },
+    "t-k-af-nova": {
+      "turns": 3,
+      "wer": 0.087,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sarah": {
+      "turns": 5,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sky": {
+      "turns": 4,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-eric": {
+      "turns": 6,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-liam": {
+      "turns": 4,
+      "wer": 0.0769,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-onyx": {
+      "turns": 7,
+      "wer": 0.1212,
+      "meaning_changed": 0.2857
+    },
+    "t-k-am-puck": {
+      "turns": 4,
+      "wer": 0.0909,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 2,
+      "wer": 0.0476,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 5,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 4,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 7,
+      "wer": 0.0652,
+      "meaning_changed": 0.2857
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 3,
+      "wer": 0.1333,
+      "meaning_changed": 0.3333
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 4,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 4,
+      "wer": 0.1154,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 14,
+      "wer": 0.0472,
+      "meaning_changed": 0.0714
+    },
+    "1.0": {
+      "turns": 38,
+      "wer": 0.0633,
+      "meaning_changed": 0.1316
+    },
+    "1.15": {
+      "turns": 22,
+      "wer": 0.0069,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 74,
+      "wer": 0.0431,
+      "meaning_changed": 0.0811
+    }
+  },
+  "by_set": {
+    "kokoro__base__clean": {
+      "turns": 74,
+      "wer": 0.0431,
+      "meaning_changed": 0.0811
+    }
+  },
+  "samples": [
+    {
+      "id": "200-2250",
+      "turn": 0,
+      "voice": "t-k-am-onyx",
+      "written": "Is Grace in?",
+      "heard": "is gracing.",
+      "lost": [
+        [
+          "person",
+          "grace"
+        ]
+      ]
+    },
+    {
+      "id": "203-927",
+      "turn": 0,
+      "voice": "t-k-bf-isabella-alice",
+      "written": "hey house, see anybody in there thanks",
+      "heard": "Hey, how's see anybody in there? Thanks.",
+      "lost": [
+        [
+          "device",
+          "house"
+        ]
+      ]
+    },
+    {
+      "id": "206-623",
+      "turn": 0,
+      "voice": "t-k-am-onyx",
+      "written": "track down Sam for me",
+      "heard": "Trogdown Sam for me",
+      "lost": [
+        [
+          "command",
+          "down"
+        ]
+      ]
+    },
+    {
+      "id": "208-780",
+      "turn": 1,
+      "voice": "t-k-af-nicole",
+      "written": "Guest ensuite please.",
+      "heard": "Guest and suit please.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "209-1899",
+      "turn": 0,
+      "voice": "t-k-bf-isabella-alice",
+      "written": "Turn off the media room lights and then turn on the guest robe lights.",
+      "heard": "Turn off the media room lights and then turn on the guest road lights.",
+      "lost": [
+        [
+          "room",
+          "guest robe"
+        ]
+      ]
+    },
+    {
+      "id": "209-2226",
+      "turn": 0,
+      "voice": "t-k-bm-daniel-fable",
+      "written": "Can you find Mia?",
+      "heard": "Can you find me here?",
+      "lost": [
+        [
+          "person",
+          "mia"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

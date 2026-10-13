@@ -18,7 +18,7 @@ from typing import Any, Optional
 
 from ..datagen.common import join, short
 from ..house.schema import GROUPS, House, Speaker
-from ..house.snapshot import SYSTEM_RULES_B, describe_state, inventory_b, people_line, rel_time, speaker_line
+from ..house.snapshot import SYSTEM_RULES_B, describe_state, inventory_b, people_line, rel_time, relayout, speaker_line
 from ..leaf.schema import Family, Room, room_model, room_tools
 from ..tools_b import TOOLS_B, execute_tool_b
 
@@ -77,8 +77,8 @@ SYSTEM_RULES_FANOUT = "\n".join([
 ])
 
 
-def _prompt(house: House, speaker: Optional[Speaker], rules: str) -> str:
-    return "\n".join([
+def _prompt(house: House, speaker: Optional[Speaker], rules: str, layout: Optional[str] = None) -> str:
+    return relayout("\n".join([
         f"You are the voice assistant for {house.description} running Home Assistant.",
         "",
         f"Now: {house.now.strftime('%A %H:%M')}",
@@ -89,15 +89,15 @@ def _prompt(house: House, speaker: Optional[Speaker], rules: str) -> str:
         inventory_b(house),
         "",
         rules,
-    ])
+    ]), layout)
 
 
-def system_prompt_orch(house: House, speaker: Optional[Speaker]) -> str:
-    return _prompt(house, speaker, SYSTEM_RULES_ORCH)
+def system_prompt_orch(house: House, speaker: Optional[Speaker], layout: Optional[str] = None) -> str:
+    return _prompt(house, speaker, SYSTEM_RULES_ORCH, layout)
 
 
-def system_prompt_fanout(house: House, speaker: Optional[Speaker]) -> str:
-    return _prompt(house, speaker, SYSTEM_RULES_FANOUT)
+def system_prompt_fanout(house: House, speaker: Optional[Speaker], layout: Optional[str] = None) -> str:
+    return _prompt(house, speaker, SYSTEM_RULES_FANOUT, layout)
 
 
 def execute_tool_orch(house: House, name: str, args: dict[str, Any]) -> str:

@@ -1,0 +1,35 @@
+[25/30] turns=28 pass=89.3% 1020s
+{
+  "model": "homeai-4b-lora-v5",
+  "data": "data/generated/test-v2.jsonl",
+  "mode": "e2e",
+  "sample": 30,
+  "host": "magpie",
+  "hardware": "apple-m2",
+  "host_note": "standalone ollama 0.21.2 (Metal) on magpie, e2e client elsewhere",
+  "ollama": "http://10.24.10.150:11600",
+  "examples": 30,
+  "turns": 35,
+  "pass": 0.9,
+  "conversation_pass": 0.8666666666666667,
+  "seconds_per_turn": 22.09820631724685,
+  "calls_per_request": 1.9142857142857144,
+  "by_kind": {
+    "act": {
+      "n": 13,
+      "ok": 12
+    },
+    "state": {
+      "n": 35,
+      "ok": 32
+    },
+    "reply": {
+      "n": 35,
+      "ok": 33
+    },
+    "answer": {
+      "n": 22,
+      "ok": 19.5
+    }
+  }
+}

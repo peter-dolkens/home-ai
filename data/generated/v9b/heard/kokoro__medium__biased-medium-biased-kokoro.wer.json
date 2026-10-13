@@ -1,0 +1,242 @@
+{
+  "set": "kokoro__medium__biased",
+  "stt": "medium",
+  "condition": "biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 154,
+  "words": 912,
+  "errors": 15,
+  "wer": 0.0164,
+  "exact": 0.9156,
+  "vocab_words": 302,
+  "vocab_errors": 5,
+  "vocab_wer": 0.0166,
+  "vocab": {
+    "room": {
+      "n": 87,
+      "err": 2,
+      "wer": 0.023
+    },
+    "device": {
+      "n": 113,
+      "err": 2,
+      "wer": 0.0177
+    },
+    "person": {
+      "n": 15,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 14,
+      "err": 1,
+      "wer": 0.0714
+    },
+    "command": {
+      "n": 73,
+      "err": 0,
+      "wer": 0.0
+    }
+  },
+  "meaning_changed": 0.0325,
+  "meaning_changed_n": 5,
+  "meaning_by_kind": {
+    "room": 0.013,
+    "device": 0.013,
+    "person": 0.0,
+    "number": 0.0065,
+    "command": 0.0
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 14.9923,
+    "p50": 15.0096,
+    "p90": 17.8135,
+    "rtf": 5.1035,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nicole": {
+      "turns": 8,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-nova": {
+      "turns": 12,
+      "wer": 0.0339,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sarah": {
+      "turns": 9,
+      "wer": 0.0175,
+      "meaning_changed": 0.1111
+    },
+    "t-k-af-sky": {
+      "turns": 9,
+      "wer": 0.0339,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-eric": {
+      "turns": 11,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-liam": {
+      "turns": 9,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-onyx": {
+      "turns": 6,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-puck": {
+      "turns": 5,
+      "wer": 0.0385,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 6,
+      "wer": 0.0645,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 8,
+      "wer": 0.0222,
+      "meaning_changed": 0.125
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 18,
+      "wer": 0.02,
+      "meaning_changed": 0.1111
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 11,
+      "wer": 0.038,
+      "meaning_changed": 0.0909
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 4,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 8,
+      "wer": 0.0204,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 19,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 11,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 36,
+      "wer": 0.0094,
+      "meaning_changed": 0.0278
+    },
+    "1.0": {
+      "turns": 81,
+      "wer": 0.0266,
+      "meaning_changed": 0.0494
+    },
+    "1.15": {
+      "turns": 37,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 154,
+      "wer": 0.0164,
+      "meaning_changed": 0.0325
+    }
+  },
+  "by_set": {
+    "kokoro__medium__biased": {
+      "turns": 154,
+      "wer": 0.0164,
+      "meaning_changed": 0.0325
+    }
+  },
+  "samples": [
+    {
+      "id": "b300-2229",
+      "turn": 0,
+      "voice": "t-k-bf-emma-lily",
+      "written": "Can you turn the towel rail on in the master ensuite?",
+      "heard": "Can you turn the towel rail on in the master ensuit?",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-10000-681",
+      "turn": 0,
+      "voice": "t-k-af-sarah",
+      "written": "what track is this in the bedroom 4",
+      "heard": "What track is this in the bedroom for?",
+      "lost": [
+        [
+          "room",
+          "bedroom 4"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-10000-688",
+      "turn": 1,
+      "voice": "t-k-bf-emma-lily",
+      "written": "The powder room one.",
+      "heard": "The Powder Room 1s.",
+      "lost": [
+        [
+          "number",
+          "1"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-3000-193",
+      "turn": 0,
+      "voice": "t-k-bf-isabella-alice",
+      "written": "turn on the living room pendant 2",
+      "heard": "Turn on the living room pendant too.",
+      "lost": [
+        [
+          "device",
+          "pendant 2"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-6000-464",
+      "turn": 0,
+      "voice": "t-k-bf-emma-isabella",
+      "written": "what's the state of charge",
+      "heard": "What's the state of Chard?",
+      "lost": [
+        [
+          "device",
+          "charge"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

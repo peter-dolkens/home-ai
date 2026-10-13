@@ -1,0 +1,106 @@
+{
+  "source": "data/generated/train-b-split.jsonl",
+  "rows": 6536,
+  "eligible": 4706,
+  "prompt_layout": "stable_prefix",
+  "counts": {
+    "casing": 464,
+    "homophone": 327,
+    "homophone:ambiguous": 7,
+    "homophone:homophone": 157,
+    "homophone:number": 65,
+    "homophone:split": 98,
+    "roundtrip": 2210,
+    "roundtrip:base-clean": 66,
+    "roundtrip:kokoro": 1592,
+    "roundtrip:medium-biased": 203,
+    "roundtrip:parakeet-clean": 503,
+    "roundtrip:parakeet-farfield": 159,
+    "roundtrip:parakeet-noisy10": 117,
+    "roundtrip:piper": 618,
+    "roundtrip:small-biased": 465,
+    "roundtrip:small-clean": 324,
+    "roundtrip:small-farfield-biased": 96,
+    "roundtrip:small-noisy10-biased": 100,
+    "roundtrip:tiny-clean": 177,
+    "roundtrip_all_turns_kept_written": 78,
+    "roundtrip_turn_kept_written:empty": 1,
+    "roundtrip_turn_kept_written:garbled": 107,
+    "roundtrip_turn_kept_written:held-out": 1,
+    "roundtrip_turns": 2365,
+    "unchanged": 1476,
+    "unchanged_inherited_overlap": 1830
+  },
+  "leakage": {
+    "file": "data/generated/train-b-v2.jsonl",
+    "held_out_utterances": 18157,
+    "augmented_rows": 3001,
+    "augmented_overlap_turns": 0,
+    "augmented_overlap_distinct": 0,
+    "augmented_examples": [],
+    "inherited_overlap_turns": 2120,
+    "inherited_overlap_distinct": 358
+  },
+  "inherited_top": [
+    [
+      "yes please",
+      115
+    ],
+    [
+      "yes",
+      101
+    ],
+    [
+      "go ahead",
+      94
+    ],
+    [
+      "please",
+      70
+    ],
+    [
+      "yes do all that",
+      62
+    ],
+    [
+      "yep",
+      34
+    ],
+    [
+      "do it",
+      30
+    ],
+    [
+      "leave it",
+      23
+    ],
+    [
+      "lamp on",
+      21
+    ],
+    [
+      "no",
+      21
+    ],
+    [
+      "never mind",
+      20
+    ],
+    [
+      "no thats fine",
+      20
+    ],
+    [
+      "can you check on the house",
+      19
+    ],
+    [
+      "were out is the house all locked up and ok",
+      17
+    ],
+    [
+      "the 1 in the lounge",
+      16
+    ]
+  ]
+}

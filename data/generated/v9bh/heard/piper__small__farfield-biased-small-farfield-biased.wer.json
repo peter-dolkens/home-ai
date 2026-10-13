@@ -1,0 +1,176 @@
+{
+  "set": "piper__small__farfield-biased",
+  "stt": "small",
+  "condition": "farfield-biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 10,
+  "words": 67,
+  "errors": 15,
+  "wer": 0.2239,
+  "exact": 0.3,
+  "vocab_words": 20,
+  "vocab_errors": 3,
+  "vocab_wer": 0.15,
+  "vocab": {
+    "room": {
+      "n": 8,
+      "err": 0,
+      "wer": 0.0
+    },
+    "device": {
+      "n": 8,
+      "err": 2,
+      "wer": 0.25
+    },
+    "person": {
+      "n": 1,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 1,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 2,
+      "err": 1,
+      "wer": 0.5
+    }
+  },
+  "meaning_changed": 0.3,
+  "meaning_changed_n": 3,
+  "meaning_by_kind": {
+    "room": 0.0,
+    "device": 0.2,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.1
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 3.2427,
+    "p50": 2.9451,
+    "p90": 5.2608,
+    "rtf": 1.1793,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-ca-p302": {
+      "turns": 1,
+      "wer": 0.6,
+      "meaning_changed": 1.0
+    },
+    "t-ie-p245": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-ie-p288": {
+      "turns": 1,
+      "wer": 0.3,
+      "meaning_changed": 0.0
+    },
+    "t-ld-p243": {
+      "turns": 2,
+      "wer": 0.2667,
+      "meaning_changed": 0.0
+    },
+    "t-sc-p237": {
+      "turns": 1,
+      "wer": 0.6,
+      "meaning_changed": 1.0
+    },
+    "t-sm-spike": {
+      "turns": 1,
+      "wer": 0.1667,
+      "meaning_changed": 0.0
+    },
+    "t-wa-p253": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-yk-p267": {
+      "turns": 1,
+      "wer": 0.125,
+      "meaning_changed": 1.0
+    },
+    "t-za-p323": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 3,
+      "wer": 0.0952,
+      "meaning_changed": 0.0
+    },
+    "1.0": {
+      "turns": 7,
+      "wer": 0.2826,
+      "meaning_changed": 0.4286
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 10,
+      "wer": 0.2239,
+      "meaning_changed": 0.3
+    }
+  },
+  "by_set": {
+    "piper__small__farfield-biased": {
+      "turns": 10,
+      "wer": 0.2239,
+      "meaning_changed": 0.3
+    }
+  },
+  "samples": [
+    {
+      "id": "bbig-bundook_full-plan-300",
+      "turn": 0,
+      "voice": "t-sc-p237",
+      "written": "start the floodlights in entry",
+      "heard": "Stop with Floodlights and Entry.",
+      "lost": [
+        [
+          "command",
+          "start"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-338",
+      "turn": 0,
+      "voice": "t-ca-p302",
+      "written": "hey house, what's this song",
+      "heard": "Hey guys, what's this all about?",
+      "lost": [
+        [
+          "device",
+          "house"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-467",
+      "turn": 0,
+      "voice": "t-yk-p267",
+      "written": "how much solar are we producing right now",
+      "heard": "How much solo are we producing right now?",
+      "lost": [
+        [
+          "device",
+          "solar"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

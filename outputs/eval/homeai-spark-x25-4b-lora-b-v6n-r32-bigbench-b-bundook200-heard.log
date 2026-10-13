@@ -1,0 +1,80 @@
+[25/200] 74.1% 70.4% 50s
+[50/200] 73.1% 69.2% 113s
+[75/200] 73.2% 72.0% 171s
+[100/200] 75.0% 75.9% 231s
+[125/200] 73.8% 76.6% 292s
+[150/200] 73.2% 76.8% 342s
+[175/200] 73.4% 76.4% 400s
+[200/200] 73.9% 77.0% 519s
+{
+  "model": "homeai-spark-x25-4b-lora-b-v6n-r32",
+  "mode": "e2e",
+  "host": "magpie",
+  "hardware": "apple-m2",
+  "host_note": "standalone ollama 0.21.2 (Metal) on magpie, e2e client elsewhere",
+  "ollama": "http://localhost:11435",
+  "lockstep": 2,
+  "prompt_layout": "stable_prefix",
+  "data": "data/generated/heard/bigbench-b-bundook200-medium-farfield-biased.jsonl",
+  "examples": 200,
+  "turns": 228,
+  "pass": 0.7390350877192983,
+  "conversation_pass": 0.7,
+  "seconds_per_turn": 0.5016078252752288,
+  "calls_per_request": 2.087719298245614,
+  "errors": 0,
+  "by_kind": {
+    "answer": {
+      "n": 124,
+      "ok": 88.5
+    },
+    "state": {
+      "n": 228,
+      "ok": 199
+    },
+    "reply": {
+      "n": 228,
+      "ok": 193
+    },
+    "act": {
+      "n": 104,
+      "ok": 80
+    }
+  }
+}
+{
+  "model": "homeai-spark-x25-4b-lora-b-v6n-r32",
+  "mode": "e2e",
+  "host": "magpie",
+  "hardware": "apple-m2",
+  "host_note": "standalone ollama 0.21.2 (Metal) on magpie, e2e client elsewhere",
+  "ollama": "http://localhost:11435",
+  "lockstep": 2,
+  "prompt_layout": "stable_prefix",
+  "data": "data/generated/heard/bigbench-b-bundook200-medium-noisy10-biased.jsonl",
+  "examples": 200,
+  "turns": 228,
+  "pass": 0.7697368421052632,
+  "conversation_pass": 0.735,
+  "seconds_per_turn": 0.43607973329948657,
+  "calls_per_request": 2.1710526315789473,
+  "errors": 0,
+  "by_kind": {
+    "answer": {
+      "n": 124,
+      "ok": 92.5
+    },
+    "state": {
+      "n": 228,
+      "ok": 201
+    },
+    "reply": {
+      "n": 228,
+      "ok": 197
+    },
+    "act": {
+      "n": 104,
+      "ok": 83
+    }
+  }
+}

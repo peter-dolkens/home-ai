@@ -1,0 +1,264 @@
+{
+  "set": "kokoro__small__noisy10-biased",
+  "stt": "small",
+  "condition": "noisy10-biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 119,
+  "words": 756,
+  "errors": 38,
+  "wer": 0.0503,
+  "exact": 0.7815,
+  "vocab_words": 232,
+  "vocab_errors": 11,
+  "vocab_wer": 0.0474,
+  "vocab": {
+    "room": {
+      "n": 59,
+      "err": 5,
+      "wer": 0.0847
+    },
+    "device": {
+      "n": 81,
+      "err": 3,
+      "wer": 0.037
+    },
+    "person": {
+      "n": 15,
+      "err": 2,
+      "wer": 0.1333
+    },
+    "number": {
+      "n": 7,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 70,
+      "err": 1,
+      "wer": 0.0143
+    }
+  },
+  "meaning_changed": 0.0504,
+  "meaning_changed_n": 6,
+  "meaning_by_kind": {
+    "room": 0.0168,
+    "device": 0.0168,
+    "person": 0.0168,
+    "number": 0.0,
+    "command": 0.0084
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 9.3869,
+    "p50": 7.5858,
+    "p90": 15.9669,
+    "rtf": 3.1569,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nicole": {
+      "turns": 6,
+      "wer": 0.0882,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-nova": {
+      "turns": 8,
+      "wer": 0.15,
+      "meaning_changed": 0.125
+    },
+    "t-k-af-sarah": {
+      "turns": 11,
+      "wer": 0.0145,
+      "meaning_changed": 0.0909
+    },
+    "t-k-af-sky": {
+      "turns": 8,
+      "wer": 0.0208,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-eric": {
+      "turns": 6,
+      "wer": 0.0789,
+      "meaning_changed": 0.1667
+    },
+    "t-k-am-liam": {
+      "turns": 8,
+      "wer": 0.0435,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-onyx": {
+      "turns": 9,
+      "wer": 0.1111,
+      "meaning_changed": 0.1111
+    },
+    "t-k-am-puck": {
+      "turns": 4,
+      "wer": 0.087,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 6,
+      "wer": 0.0345,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 16,
+      "wer": 0.051,
+      "meaning_changed": 0.0625
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 9,
+      "wer": 0.0625,
+      "meaning_changed": 0.1111
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 6,
+      "wer": 0.0208,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 5,
+      "wer": 0.0435,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 6,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 8,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 25,
+      "wer": 0.0357,
+      "meaning_changed": 0.0
+    },
+    "1.0": {
+      "turns": 67,
+      "wer": 0.0537,
+      "meaning_changed": 0.0597
+    },
+    "1.15": {
+      "turns": 27,
+      "wer": 0.0563,
+      "meaning_changed": 0.0741
+    }
+  },
+  "by_noise": {
+    "kitchen": {
+      "turns": 56,
+      "wer": 0.044,
+      "meaning_changed": 0.0714
+    },
+    "tv": {
+      "turns": 63,
+      "wer": 0.0561,
+      "meaning_changed": 0.0317
+    }
+  },
+  "by_set": {
+    "kokoro__small__noisy10-biased": {
+      "turns": 119,
+      "wer": 0.0503,
+      "meaning_changed": 0.0504
+    }
+  },
+  "samples": [
+    {
+      "id": "203-1876",
+      "turn": 0,
+      "voice": "t-k-am-eric",
+      "written": "quick question, is the pump on",
+      "heard": "Quick question is the Pumbine.",
+      "lost": [
+        [
+          "device",
+          "pump"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "200-2219",
+      "turn": 0,
+      "voice": "t-k-af-nova",
+      "written": "Where's Alex",
+      "heard": "He is out.",
+      "lost": [
+        [
+          "person",
+          "alex"
+        ]
+      ]
+    },
+    {
+      "id": "205-501",
+      "turn": 0,
+      "voice": "t-k-am-onyx",
+      "written": "Can you open the blinds in guest ensuite?",
+      "heard": "Can you open the blinds and guests in the suit?",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "209-2475",
+      "turn": 0,
+      "voice": "t-k-bf-emma-lily",
+      "written": "is byd shark on charge",
+      "heard": "Is Bite Shark on Charge?",
+      "lost": [
+        [
+          "device",
+          "byd shark"
+        ]
+      ]
+    },
+    {
+      "id": "abig-random-15000-796",
+      "turn": 0,
+      "voice": "t-k-af-sarah",
+      "written": "Put the heating on in the bedroom 4.",
+      "heard": "Put the heating on in the bedroom floor.",
+      "lost": [
+        [
+          "room",
+          "bedroom 4"
+        ]
+      ]
+    },
+    {
+      "id": "v5a-810011-h11-presence-rollcall",
+      "turn": 1,
+      "voice": "t-k-bf-emma-isabella",
+      "written": "When's Leo back?",
+      "heard": "Wensley, you're back.",
+      "lost": [
+        [
+          "person",
+          "leo"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

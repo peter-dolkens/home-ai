@@ -1,0 +1,92 @@
+{
+  "model": "/Users/peter.dolkens/home-ai-falcon/stage/mlx/homeai-4b-lora-v9-mlx4",
+  "mode": "e2e",
+  "host": "falcon",
+  "hardware": "apple-m2pro",
+  "host_note": "falcon stream: mlx-lm==0.31.3 server, 4-bit g64, prompt cache on, classic prompts",
+  "ollama": "http://127.0.0.1:11611/v1",
+  "data": "data/generated/wild.jsonl",
+  "examples": 303,
+  "turns": 409,
+  "pass": 0.8361858190709046,
+  "conversation_pass": 0.7953795379537953,
+  "seconds_per_turn": 1.1994997956300157,
+  "calls_per_request": 2.02200488997555,
+  "errors": 0,
+  "by_kind": {
+    "act": {
+      "n": 185,
+      "ok": 156
+    },
+    "state": {
+      "n": 409,
+      "ok": 362
+    },
+    "reply": {
+      "n": 409,
+      "ok": 377
+    },
+    "answer": {
+      "n": 224,
+      "ok": 186.0
+    }
+  },
+  "by_category": {
+    "wild_control": {
+      "n": 60,
+      "ok": 52
+    },
+    "wild_missing": {
+      "n": 23,
+      "ok": 22
+    },
+    "wild_appliance": {
+      "n": 20,
+      "ok": 18
+    },
+    "wild_media": {
+      "n": 44,
+      "ok": 36
+    },
+    "wild_clarify": {
+      "n": 36,
+      "ok": 22
+    },
+    "wild_presence": {
+      "n": 29,
+      "ok": 23
+    },
+    "wild_routine": {
+      "n": 27,
+      "ok": 15
+    },
+    "wild_smalltalk": {
+      "n": 17,
+      "ok": 16
+    },
+    "wild_energy": {
+      "n": 40,
+      "ok": 34
+    },
+    "wild_vehicle": {
+      "n": 8,
+      "ok": 8
+    },
+    "wild_water": {
+      "n": 19,
+      "ok": 18
+    },
+    "wild_confirm": {
+      "n": 37,
+      "ok": 35.0
+    },
+    "wild_status": {
+      "n": 33,
+      "ok": 28
+    },
+    "wild_mixed": {
+      "n": 16,
+      "ok": 15
+    }
+  }
+}

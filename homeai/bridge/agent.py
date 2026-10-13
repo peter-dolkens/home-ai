@@ -10,7 +10,7 @@ import urllib.request
 from typing import Any, Callable, Optional
 
 from ..house.schema import House, Speaker
-from ..house.snapshot import system_prompt
+from ..house.snapshot import relayout_messages, split_context, system_prompt
 from ..tools import TOOLS, get_state_text
 from ..tools_b import find_devices_text, for_toolset, get_state_b_text
 
@@ -25,6 +25,7 @@ class OllamaClient:
                  timeout: float = 120, think: Optional[bool] = False):
         self.url, self.model, self.num_ctx, self.temperature, self.timeout = url.rstrip("/"), model, num_ctx, temperature, timeout
         self.think = think  # hybrid-thinking models (Qwen3/3.5): False = answer directly, None = model default
+        self.last: dict = {}  # the last call's server counters (prompt_eval_count / _duration ...: homeai.eval.prefix_bench)
 
     def chat(self, messages: list[dict], tools: Optional[list] = TOOLS) -> dict:
         body = {"model": self.model, "messages": messages, "stream": False,
@@ -35,15 +36,73 @@ class OllamaClient:
             body["tools"] = tools
         req = urllib.request.Request(self.url + "/api/chat", data=json.dumps(body).encode(),
                                      headers={"Content-Type": "application/json"}, method="POST")
-        # Ollama restarts (model swaps, OOM) surface as connection errors; retry rather than fail the turn.
+        # Ollama restarts (model swaps, OOM) surface as connection errors; retry rather than fail the turn. An HTTP 500
+        # is usually Ollama failing to parse the model's own tool call (3 Oct: the 2B's "<parameter> closed by
+        # </function>"): a model error, so only two quick retries (temperature may vary the output), not the 75 s of
+        # backoff that inflated those turns' timings.
+        http500 = 0
         for attempt in range(6):
             try:
                 with urllib.request.urlopen(req, timeout=self.timeout) as r:
-                    return json.loads(r.read().decode())["message"]
+                    resp = json.loads(r.read().decode())
+                self.last = {k: v for k, v in resp.items() if k.endswith(("_count", "_duration"))}
+                return resp["message"]
             except (urllib.error.URLError, ConnectionError, TimeoutError) as e:
-                if attempt == 5 or (isinstance(e, urllib.error.HTTPError) and e.code < 500):
+                if isinstance(e, urllib.error.HTTPError):
+                    if e.code < 500:
+                        raise
+                    http500 += 1
+                    if http500 > 2:
+                        raise
+                    time.sleep(0.5)
+                    continue
+                if attempt == 5:
                     raise
                 time.sleep(5 * (attempt + 1))
+
+
+PY_CALL_START, PY_CALL_END = "<|tool_call_start|>", "<|tool_call_end|>"
+_LITERALS = {"true": True, "false": False, "null": None, "True": True, "False": False, "None": None}
+
+
+def _literal(node):
+    """ast.literal_eval that also takes JSON's true / false / null (models mix the two styles in call arguments)."""
+    import ast
+    if isinstance(node, ast.Name) and node.id in _LITERALS:
+        return _LITERALS[node.id]
+    if isinstance(node, ast.List):
+        return [_literal(e) for e in node.elts]
+    if isinstance(node, ast.Tuple):
+        return [_literal(e) for e in node.elts]
+    if isinstance(node, ast.Dict):
+        return {_literal(k): _literal(v) for k, v in zip(node.keys, node.values)}
+    return ast.literal_eval(node)
+
+
+def parse_pythonic_calls(text: str) -> tuple[list[dict], str]:
+    """LFM2's tool calls, "<|tool_call_start|>[name(a=1, b=['x']), other()]<|tool_call_end|>", as Ollama-style tool calls
+    plus the remaining text. mlx_lm.server (0.31.3) only recognises this format when the chat template carries
+    <|tool_list_start|>, which LFM2.5's does not, and its regex parser splits list arguments at their commas, so the
+    client parses the Python call syntax itself (2 Oct: on falcon every LFM call came back as plain text)."""
+    import ast
+    calls, rest, i = [], [], 0
+    while True:
+        s = text.find(PY_CALL_START, i)
+        if s < 0:
+            rest.append(text[i:])
+            break
+        e = text.find(PY_CALL_END, s)
+        e = len(text) if e < 0 else e
+        rest.append(text[i:s])
+        try:
+            tree = ast.parse(text[s + len(PY_CALL_START):e].strip(), mode="eval").body
+            for c in (tree.elts if isinstance(tree, (ast.List, ast.Tuple)) else [tree]):
+                if isinstance(c, ast.Call) and isinstance(c.func, ast.Name):
+                    calls.append({"function": {"name": c.func.id, "arguments": {k.arg: _literal(k.value) for k in c.keywords if k.arg}}})
+        except (SyntaxError, ValueError):
+            rest.append(text[s:e + len(PY_CALL_END)])  # not parseable: leave it as text
+        i = e + len(PY_CALL_END)
+    return calls, "".join(rest).strip()
 
 
 class OpenAIClient:
@@ -54,6 +113,7 @@ class OpenAIClient:
     def __init__(self, url: str, model: str, temperature: float = 0.0, timeout: float = 300, max_tokens: int = 4096, extra: Optional[dict] = None):
         self.url, self.model, self.temperature, self.timeout, self.max_tokens, self.extra = url.rstrip("/"), model, temperature, timeout, max_tokens, extra or {}
         self.think = None
+        self.last: dict = {}  # the last call's "usage" (prompt_tokens, prompt_tokens_details.cached_tokens ...)
 
     def chat(self, messages: list[dict], tools: Optional[list] = TOOLS) -> dict:
         out, pending = [], []  # Ollama-style history -> OpenAI (tool calls need ids that tool results refer to)
@@ -80,7 +140,8 @@ class OpenAIClient:
         for attempt in range(4):
             try:
                 with urllib.request.urlopen(req, timeout=self.timeout) as r:
-                    msg = json.loads(r.read().decode())["choices"][0]["message"]
+                    resp = json.loads(r.read().decode())
+                msg, self.last = resp["choices"][0]["message"], resp.get("usage") or {}
                 break
             except (urllib.error.URLError, ConnectionError, TimeoutError) as e:
                 if attempt == 3 or (isinstance(e, urllib.error.HTTPError) and e.code < 500):
@@ -94,7 +155,10 @@ class OpenAIClient:
             except json.JSONDecodeError:
                 args = {}
             calls.append({"function": {"name": tc["function"]["name"], "arguments": args}})
-        res = {"role": "assistant", "content": msg.get("content") or ""}
+        content = msg.get("content") or ""
+        if not calls and PY_CALL_START in content:  # LFM2 calls the server returned as text
+            calls, content = parse_pythonic_calls(content)
+        res = {"role": "assistant", "content": content}
         if calls:
             res["tool_calls"] = calls
         if msg.get("reasoning_content"):
@@ -111,12 +175,18 @@ def make_client(url: str, model: str, num_ctx: int = 8192, temperature: float = 
 
 
 class Agent:
-    """house_provider() -> House (fresh each turn); executor(house, name, args) -> tool result string."""
+    """house_provider() -> House (fresh each turn); executor(house, name, args) -> tool result string.
+    layout: the prompt layout the model was trained on (homeai/prompt_layout.py; v10 "stable_prefix", v11 "user_context",
+    v12 "clock_in_user"). Each user turn in the history keeps the context lines (Now / Speaker / People) it was sent with
+    ("_context"), so a user_context or clock_in_user conversation re-sends earlier turns unchanged and only the latest
+    turn carries the new context (clock_in_user: the new clock; Speaker and People are the system prompt's)."""
 
     def __init__(self, llm: OllamaClient, house_provider: Callable[[], House],
-                 executor: Callable[[House, str, dict], str], max_rounds: int = 4, verbose: bool = False, toolset: str = "a"):
+                 executor: Callable[[House, str, dict], str], max_rounds: int = 4, verbose: bool = False, toolset: str = "a",
+                 layout: Optional[str] = None):
         self.llm, self.house_provider, self.executor, self.max_rounds, self.verbose = llm, house_provider, executor, max_rounds, verbose
         self.tools, _, self.prompt = for_toolset(toolset)  # "b": rooms-only prompt and the homeai/tools_b.py schemas
+        self.layout = layout or "classic"
         self.history: list[dict] = []  # user/assistant/tool turns of the current conversation
 
     def reset(self):
@@ -124,9 +194,16 @@ class Agent:
 
     def chat(self, text: str, speaker: Optional[Speaker]) -> str:
         house = self.house_provider()
-        self.history.append({"role": "user", "content": text})
+        user = {"role": "user", "content": text}
+        self.history.append(user)
+        system = None
         for _ in range(self.max_rounds):
-            messages = [{"role": "system", "content": self.prompt(house, speaker)}] + self.history
+            # classic: rebuilt every round, as v1-v9 ran. Otherwise once per request, so a clock tick between rounds
+            # cannot change the context in front of this request's history (the whole prompt stays cached)
+            if system is None or self.layout == "classic":
+                system = self.prompt(house, speaker)  # built classic, then rendered in the model's layout
+                user["_context"] = split_context(system)[1]
+            messages = relayout_messages([{"role": "system", "content": system}] + self.history, self.layout)
             msg = self.llm.chat(messages, self.tools)
             calls = msg.get("tool_calls") or []
             self.history.append({"role": "assistant", "content": msg.get("content", "") or "", **({"tool_calls": calls} if calls else {})})

@@ -1,0 +1,39 @@
+{
+ "_comment": "LFM B-v11w r256 (6 Oct): LFM B-v8 r256's recipe (r256; Bundook-plan supplement + the 4B's wild transcripts) with the speech-to-text augmentation drawn from medium Whisper with the house's names (asr_v9 --preset medium, scripts/build-b-v11.sh) instead of the hard Parakeet / small mix: train on the error style of the speech-to-text the house will run. Compare with LFM B-v8 r256 (two seeds: 82.7% B sets, 79.0% heard; medium names-biased 3 m 75.9, noise 76.3).",
+ "base_model": "LiquidAI/LFM2.5-1.2B-Instruct",
+ "hf_tokenizer": "LiquidAI/LFM2.5-1.2B-Instruct",
+ "ollama_template_from": "lfm2.5-1.2b",
+ "instruction_part": "<|im_start|>user\n",
+ "response_part": "<|im_start|>assistant\n",
+ "max_seq_len": 4608,
+ "lora_r": 256,
+ "lora_alpha": 256,
+ "epochs": 2,
+ "lr": 0.0002,
+ "batch_size": 2,
+ "grad_accum": 8,
+ "seed": 3407,
+ "train": "data/generated/train-b-v11w.jsonl",
+ "val": "data/generated/val-b.jsonl",
+ "out": "outputs/lfm25-1.2b-lora-b-v11wr256",
+ "load_in_4bit": false,
+ "mask_spans": [
+  [
+   "<|im_start|>tool\n",
+   "<|im_end|>"
+  ]
+ ],
+ "target_modules": [
+  "q_proj",
+  "k_proj",
+  "v_proj",
+  "out_proj",
+  "in_proj",
+  "w1",
+  "w2",
+  "w3"
+ ],
+ "chat_template_from": "LiquidAI/LFM2.5-350M",
+ "note": "fix2: 350M's LFM2.5 template (the unsloth 1.2B mirror's template drops tool calls)",
+ "prompt_layout": "user_context"
+}

@@ -1,0 +1,311 @@
+{
+  "set": "kokoro__parakeet__clean",
+  "stt": "parakeet",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 94,
+  "words": 554,
+  "errors": 24,
+  "wer": 0.0433,
+  "exact": 0.8404,
+  "vocab_words": 196,
+  "vocab_errors": 12,
+  "vocab_wer": 0.0612,
+  "vocab": {
+    "room": {
+      "n": 71,
+      "err": 7,
+      "wer": 0.0986
+    },
+    "device": {
+      "n": 61,
+      "err": 2,
+      "wer": 0.0328
+    },
+    "person": {
+      "n": 12,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 9,
+      "err": 1,
+      "wer": 0.1111
+    },
+    "command": {
+      "n": 43,
+      "err": 2,
+      "wer": 0.0465
+    }
+  },
+  "meaning_changed": 0.1064,
+  "meaning_changed_n": 10,
+  "meaning_by_kind": {
+    "room": 0.0745,
+    "device": 0.0106,
+    "person": 0.0,
+    "number": 0.0106,
+    "command": 0.0213
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 0.2437,
+    "p50": 0.239,
+    "p90": 0.3296,
+    "rtf": 0.0806,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nicole": {
+      "turns": 12,
+      "wer": 0.0725,
+      "meaning_changed": 0.1667
+    },
+    "t-k-af-nova": {
+      "turns": 11,
+      "wer": 0.0182,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sarah": {
+      "turns": 4,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sky": {
+      "turns": 6,
+      "wer": 0.069,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-eric": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-liam": {
+      "turns": 9,
+      "wer": 0.0426,
+      "meaning_changed": 0.2222
+    },
+    "t-k-am-onyx": {
+      "turns": 4,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-puck": {
+      "turns": 7,
+      "wer": 0.0811,
+      "meaning_changed": 0.1429
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 9,
+      "wer": 0.0143,
+      "meaning_changed": 0.1111
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 5,
+      "wer": 0.0526,
+      "meaning_changed": 0.2
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 4,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 2,
+      "wer": 0.2353,
+      "meaning_changed": 0.5
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 6,
+      "wer": 0.0488,
+      "meaning_changed": 0.1667
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 6,
+      "wer": 0.0541,
+      "meaning_changed": 0.1667
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 20,
+      "wer": 0.0374,
+      "meaning_changed": 0.1
+    },
+    "1.0": {
+      "turns": 42,
+      "wer": 0.0253,
+      "meaning_changed": 0.0238
+    },
+    "1.15": {
+      "turns": 32,
+      "wer": 0.0667,
+      "meaning_changed": 0.2188
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 94,
+      "wer": 0.0433,
+      "meaning_changed": 0.1064
+    }
+  },
+  "by_set": {
+    "kokoro__parakeet__clean": {
+      "turns": 94,
+      "wer": 0.0433,
+      "meaning_changed": 0.1064
+    }
+  },
+  "samples": [
+    {
+      "id": "bbig-bundook_full-plan-697-s2",
+      "turn": 1,
+      "voice": "t-k-af-nicole",
+      "written": "The master ensuite one.",
+      "heard": "The Master in Suit Won",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ],
+        [
+          "number",
+          "1"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-1102-s2",
+      "turn": 0,
+      "voice": "t-k-bm-george-lewis",
+      "written": "turn on the dining hall lights and turn off the master ensuite lights",
+      "heard": "Turn on the dining hall lights and turn off the master and suit lights.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-1107-s2",
+      "turn": 0,
+      "voice": "t-k-bm-george-daniel",
+      "written": "Can you turn the downlights off in the master ensuite?",
+      "heard": "Can you turn the down lights off in the master en suit?",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-315-s2",
+      "turn": 1,
+      "voice": "t-k-af-nicole",
+      "written": "Alfresco.",
+      "heard": "Alfrasca.",
+      "lost": [
+        [
+          "room",
+          "alfresco"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-407-s2",
+      "turn": 1,
+      "voice": "t-k-am-puck",
+      "written": "Master ensuite.",
+      "heard": "Master ensued.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-78-s2",
+      "turn": 0,
+      "voice": "t-k-bf-emma-isabella",
+      "written": "can you turn the lights off in Pete's office and the alfresco",
+      "heard": "Can you turn the lights off in Pete's office and the Ilfresk?",
+      "lost": [
+        [
+          "room",
+          "alfresco"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-851-s2",
+      "turn": 0,
+      "voice": "t-k-am-liam",
+      "written": "Flip the hydronic heating off",
+      "heard": "Flip the hydronic heating offs.",
+      "lost": [
+        [
+          "command",
+          "off"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-922-s2",
+      "turn": 0,
+      "voice": "t-k-bm-lewis-fable",
+      "written": "Flick off the batten lights in the carport",
+      "heard": "Flick off the baton lights in the carport.",
+      "lost": [
+        [
+          "device",
+          "batten lights"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1269-s2",
+      "turn": 0,
+      "voice": "t-k-am-liam",
+      "written": "Beer fridge off.",
+      "heard": "Beer fridge offs.",
+      "lost": [
+        [
+          "command",
+          "off"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1357-s2",
+      "turn": 0,
+      "voice": "t-k-bf-isabella-alice",
+      "written": "um, are the master ensuite blinds closed",
+      "heard": "Um are the master in suit blinds closed.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

@@ -1,0 +1,217 @@
+{
+  "set": "piper__small__noisy10-biased",
+  "stt": "small",
+  "condition": "noisy10-biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 12,
+  "words": 94,
+  "errors": 21,
+  "wer": 0.2234,
+  "exact": 0.5,
+  "vocab_words": 33,
+  "vocab_errors": 6,
+  "vocab_wer": 0.1818,
+  "vocab": {
+    "room": {
+      "n": 9,
+      "err": 1,
+      "wer": 0.1111
+    },
+    "device": {
+      "n": 14,
+      "err": 4,
+      "wer": 0.2857
+    },
+    "person": {
+      "n": 0,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 1,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 9,
+      "err": 1,
+      "wer": 0.1111
+    }
+  },
+  "meaning_changed": 0.4167,
+  "meaning_changed_n": 5,
+  "meaning_by_kind": {
+    "room": 0.0833,
+    "device": 0.25,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0833
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 2.0802,
+    "p50": 2.0355,
+    "p90": 2.4834,
+    "rtf": 0.7416,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-ca-p302": {
+      "turns": 1,
+      "wer": 0.1667,
+      "meaning_changed": 1.0
+    },
+    "t-ie-p288": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-ld-p243": {
+      "turns": 2,
+      "wer": 0.6111,
+      "meaning_changed": 1.0
+    },
+    "t-nz-p335": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-sc-p234": {
+      "turns": 1,
+      "wer": 0.25,
+      "meaning_changed": 1.0
+    },
+    "t-sc-p237": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-sm-spike": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-yk-p267": {
+      "turns": 2,
+      "wer": 0.3125,
+      "meaning_changed": 0.5
+    },
+    "t-za-p323": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-za-p347": {
+      "turns": 1,
+      "wer": 0.3333,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 2,
+      "wer": 0.1579,
+      "meaning_changed": 1.0
+    },
+    "1.0": {
+      "turns": 7,
+      "wer": 0.2766,
+      "meaning_changed": 0.2857
+    },
+    "1.15": {
+      "turns": 3,
+      "wer": 0.1786,
+      "meaning_changed": 0.3333
+    }
+  },
+  "by_noise": {
+    "kitchen": {
+      "turns": 5,
+      "wer": 0.1026,
+      "meaning_changed": 0.2
+    },
+    "tv": {
+      "turns": 7,
+      "wer": 0.3091,
+      "meaning_changed": 0.5714
+    }
+  },
+  "by_set": {
+    "piper__small__noisy10-biased": {
+      "turns": 12,
+      "wer": 0.2234,
+      "meaning_changed": 0.4167
+    }
+  },
+  "samples": [
+    {
+      "id": "bbig-bundook_full-plan-1054-s2",
+      "turn": 0,
+      "voice": "t-ld-p243",
+      "written": "Lights off in laundry toilet and turn off the homepod in the kitchen",
+      "heard": "Lights off in Laundry Toilet and turn off the home put in the kitchen.",
+      "lost": [
+        [
+          "device",
+          "homepod"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-571-s2",
+      "turn": 0,
+      "voice": "t-ca-p302",
+      "written": "what's the solar forecast for tomorrow",
+      "heard": "What's the solo forecast for tomorrow?",
+      "lost": [
+        [
+          "device",
+          "solar"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1512-s2",
+      "turn": 0,
+      "voice": "t-ld-p243",
+      "written": "What mode's the aircon on?",
+      "heard": "What most of you can ever want to talk about?",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1558-s2",
+      "turn": 0,
+      "voice": "t-sc-p234",
+      "written": "hey house, turn on the house lawn irrigation",
+      "heard": "Hey, House, turn on the houselaw irrigation.",
+      "lost": [
+        [
+          "device",
+          "house lawn irrigation"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1596-s2",
+      "turn": 0,
+      "voice": "t-yk-p267",
+      "written": "Can you set the heater in master ensuite to 22?",
+      "heard": "Can you set the heat to a master and seat to 22?",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

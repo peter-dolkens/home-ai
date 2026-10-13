@@ -1,0 +1,287 @@
+{
+  "set": "wild",
+  "stt": "parakeet",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 6 cpus, 5 GB",
+  "utterances": 409,
+  "words": 2913,
+  "errors": 80,
+  "wer": 0.0275,
+  "exact": 0.8631,
+  "vocab_words": 717,
+  "vocab_errors": 16,
+  "vocab_wer": 0.0223,
+  "vocab": {
+    "room": {
+      "n": 170,
+      "err": 7,
+      "wer": 0.0412
+    },
+    "device": {
+      "n": 273,
+      "err": 6,
+      "wer": 0.022
+    },
+    "person": {
+      "n": 16,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 27,
+      "err": 1,
+      "wer": 0.037
+    },
+    "command": {
+      "n": 231,
+      "err": 2,
+      "wer": 0.0087
+    }
+  },
+  "meaning_changed": 0.0244,
+  "meaning_changed_n": 10,
+  "meaning_by_kind": {
+    "room": 0.0122,
+    "device": 0.0049,
+    "person": 0.0,
+    "number": 0.0024,
+    "command": 0.0049
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 0.3506,
+    "p50": 0.3389,
+    "p90": 0.4815,
+    "rtf": 0.1143,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "k-af-bella": {
+      "turns": 32,
+      "wer": 0.0115,
+      "meaning_changed": 0.0
+    },
+    "k-af-heart": {
+      "turns": 45,
+      "wer": 0.0128,
+      "meaning_changed": 0.0
+    },
+    "k-am-adam": {
+      "turns": 35,
+      "wer": 0.0294,
+      "meaning_changed": 0.0571
+    },
+    "k-am-michael": {
+      "turns": 25,
+      "wer": 0.0338,
+      "meaning_changed": 0.04
+    },
+    "k-bf-alice": {
+      "turns": 37,
+      "wer": 0.0271,
+      "meaning_changed": 0.027
+    },
+    "k-bf-emma": {
+      "turns": 48,
+      "wer": 0.0358,
+      "meaning_changed": 0.0417
+    },
+    "k-bf-isabella": {
+      "turns": 29,
+      "wer": 0.0407,
+      "meaning_changed": 0.0
+    },
+    "k-bf-lily": {
+      "turns": 45,
+      "wer": 0.0175,
+      "meaning_changed": 0.0222
+    },
+    "k-bm-daniel": {
+      "turns": 23,
+      "wer": 0.0427,
+      "meaning_changed": 0.0
+    },
+    "k-bm-fable": {
+      "turns": 31,
+      "wer": 0.0455,
+      "meaning_changed": 0.0645
+    },
+    "k-bm-george": {
+      "turns": 29,
+      "wer": 0.0108,
+      "meaning_changed": 0.0345
+    },
+    "k-bm-lewis": {
+      "turns": 30,
+      "wer": 0.0379,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 104,
+      "wer": 0.021,
+      "meaning_changed": 0.0288
+    },
+    "1.0": {
+      "turns": 198,
+      "wer": 0.0283,
+      "meaning_changed": 0.0202
+    },
+    "1.15": {
+      "turns": 107,
+      "wer": 0.0327,
+      "meaning_changed": 0.028
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 409,
+      "wer": 0.0275,
+      "meaning_changed": 0.0244
+    }
+  },
+  "by_set": {
+    "wild": {
+      "turns": 409,
+      "wer": 0.0275,
+      "meaning_changed": 0.0244
+    }
+  },
+  "samples": [
+    {
+      "id": "wild-900000-water-tank-level",
+      "turn": 0,
+      "voice": "k-bf-emma",
+      "written": "we right for water or getting low",
+      "heard": "We write for water or getting loath.",
+      "lost": [
+        [
+          "device",
+          "low"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900001-exhaust-fan-clarify",
+      "turn": 1,
+      "voice": "k-bf-lily",
+      "written": "the guest ensuite one",
+      "heard": "The guest ends suit one.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900004-clarify-which-light",
+      "turn": 1,
+      "voice": "k-bm-george",
+      "written": "ensuite",
+      "heard": "ensued.",
+      "lost": [
+        [
+          "room",
+          "ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900004-confirm-open-garage",
+      "turn": 0,
+      "voice": "k-am-michael",
+      "written": "open the garage, forgot something in the car",
+      "heard": "Opened the garage, forgot something in the car.",
+      "lost": [
+        [
+          "command",
+          "open"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900004-ctrl-ensuite-multiturn",
+      "turn": 0,
+      "voice": "k-bm-fable",
+      "written": "dim the ensuite lights, don't want to wake Hannah",
+      "heard": "Dim the en suit lights, don't want to wake Hannah.",
+      "lost": [
+        [
+          "room",
+          "ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900004-mixed-ensuite-heater",
+      "turn": 0,
+      "voice": "k-am-adam",
+      "written": "warm up the ensuite before I hop in the shower",
+      "heard": "Warm up the end suit before I hop in the shower.",
+      "lost": [
+        [
+          "room",
+          "ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900005-lamp-clarify",
+      "turn": 1,
+      "voice": "k-bf-alice",
+      "written": "the guest room one",
+      "heard": "The guest room want.",
+      "lost": [
+        [
+          "number",
+          "1"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900006-arm-alarm",
+      "turn": 0,
+      "voice": "k-bf-emma",
+      "written": "Put the alarm on.",
+      "heard": "Put the alarm ons.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900008-lights-audit",
+      "turn": 1,
+      "voice": "k-bm-fable",
+      "written": "Kill the lot except the ensuite, Amber's in there.",
+      "heard": "Kill the lot except the end suit, Amber's in there.",
+      "lost": [
+        [
+          "room",
+          "ensuite ambers"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900008-tank-after-lawn",
+      "turn": 0,
+      "voice": "k-am-adam",
+      "written": "How's the tank sitting after that lawn run?",
+      "heard": "How's the tank sitting after that long run?",
+      "lost": [
+        [
+          "device",
+          "lawn"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

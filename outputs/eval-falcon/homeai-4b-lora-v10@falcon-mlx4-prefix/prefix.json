@@ -1,0 +1,61 @@
+{
+  "model": "/Users/peter.dolkens/home-ai-falcon/stage/mlx/homeai-4b-lora-v10-mlx4",
+  "data": "data/generated/wild.jsonl,data/generated/wild2.jsonl",
+  "num_ctx": 8192,
+  "prompt_layout": "stable_prefix",
+  "modes": {
+    "prompt": {
+      "groups": 6,
+      "requests": 36,
+      "cold_mean": 5.815,
+      "warm_mean": 2.424,
+      "cold_p50": 4.92,
+      "warm_p50": 1.796,
+      "warm_p90": 3.065,
+      "cold_eval_tokens": 1454.167,
+      "warm_eval_tokens": 18.533,
+      "cold_prompt_s": null,
+      "warm_prompt_s": null,
+      "prompt_tokens": 1453.778,
+      "later_eval_tokens": 105.324,
+      "calls_per_request": 2.167
+    },
+    "house": {
+      "groups": 6,
+      "requests": 36,
+      "cold_mean": 5.795,
+      "warm_mean": 6.035,
+      "cold_p50": 4.842,
+      "warm_p50": 5.874,
+      "warm_p90": 7.791,
+      "cold_eval_tokens": 1454.167,
+      "warm_eval_tokens": 1453.7,
+      "cold_prompt_s": null,
+      "warm_prompt_s": null,
+      "prompt_tokens": 1453.778,
+      "later_eval_tokens": 105.324,
+      "calls_per_request": 2.167
+    },
+    "header-last": {
+      "groups": 6,
+      "requests": 36,
+      "cold_mean": 5.797,
+      "warm_mean": 6.034,
+      "cold_p50": 4.84,
+      "warm_p50": 5.875,
+      "warm_p90": 7.791,
+      "cold_eval_tokens": 1454.167,
+      "warm_eval_tokens": 1453.7,
+      "cold_prompt_s": null,
+      "warm_prompt_s": null,
+      "prompt_tokens": 1453.778,
+      "later_eval_tokens": 105.324,
+      "calls_per_request": 2.167
+    }
+  },
+  "seconds": 539.3,
+  "host": "falcon",
+  "hardware": "apple-m2pro",
+  "host_note": "falcon stream: mlx-lm==0.31.3 server, 4-bit g64, prompt cache on, stable_prefix prompts",
+  "ollama": "http://127.0.0.1:11611/v1"
+}

@@ -1,0 +1,326 @@
+{
+  "set": "wild",
+  "stt": "small",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 6 cpus, 5 GB",
+  "utterances": 409,
+  "words": 2913,
+  "errors": 76,
+  "wer": 0.0261,
+  "exact": 0.8655,
+  "vocab_words": 717,
+  "vocab_errors": 17,
+  "vocab_wer": 0.0237,
+  "vocab": {
+    "room": {
+      "n": 170,
+      "err": 10,
+      "wer": 0.0588
+    },
+    "device": {
+      "n": 273,
+      "err": 3,
+      "wer": 0.011
+    },
+    "person": {
+      "n": 16,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 27,
+      "err": 1,
+      "wer": 0.037
+    },
+    "command": {
+      "n": 231,
+      "err": 3,
+      "wer": 0.013
+    }
+  },
+  "meaning_changed": 0.0318,
+  "meaning_changed_n": 13,
+  "meaning_by_kind": {
+    "room": 0.0196,
+    "device": 0.0024,
+    "person": 0.0,
+    "number": 0.0024,
+    "command": 0.0073
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 4.8365,
+    "p50": 4.7971,
+    "p90": 5.3244,
+    "rtf": 1.5767,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "k-af-bella": {
+      "turns": 32,
+      "wer": 0.0115,
+      "meaning_changed": 0.0312
+    },
+    "k-af-heart": {
+      "turns": 45,
+      "wer": 0.0128,
+      "meaning_changed": 0.0
+    },
+    "k-am-adam": {
+      "turns": 35,
+      "wer": 0.021,
+      "meaning_changed": 0.0571
+    },
+    "k-am-michael": {
+      "turns": 25,
+      "wer": 0.027,
+      "meaning_changed": 0.0
+    },
+    "k-bf-alice": {
+      "turns": 37,
+      "wer": 0.0373,
+      "meaning_changed": 0.0541
+    },
+    "k-bf-emma": {
+      "turns": 48,
+      "wer": 0.0179,
+      "meaning_changed": 0.0417
+    },
+    "k-bf-isabella": {
+      "turns": 29,
+      "wer": 0.0317,
+      "meaning_changed": 0.0
+    },
+    "k-bf-lily": {
+      "turns": 45,
+      "wer": 0.0175,
+      "meaning_changed": 0.0444
+    },
+    "k-bm-daniel": {
+      "turns": 23,
+      "wer": 0.0305,
+      "meaning_changed": 0.0
+    },
+    "k-bm-fable": {
+      "turns": 31,
+      "wer": 0.0505,
+      "meaning_changed": 0.0645
+    },
+    "k-bm-george": {
+      "turns": 29,
+      "wer": 0.0323,
+      "meaning_changed": 0.069
+    },
+    "k-bm-lewis": {
+      "turns": 30,
+      "wer": 0.0427,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 104,
+      "wer": 0.021,
+      "meaning_changed": 0.0481
+    },
+    "1.0": {
+      "turns": 198,
+      "wer": 0.0222,
+      "meaning_changed": 0.0253
+    },
+    "1.15": {
+      "turns": 107,
+      "wer": 0.0377,
+      "meaning_changed": 0.028
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 409,
+      "wer": 0.0261,
+      "meaning_changed": 0.0318
+    }
+  },
+  "by_set": {
+    "wild": {
+      "turns": 409,
+      "wer": 0.0261,
+      "meaning_changed": 0.0318
+    }
+  },
+  "samples": [
+    {
+      "id": "wild-900000-ctrl-compound-alfresco-office",
+      "turn": 0,
+      "voice": "k-af-bella",
+      "written": "turn on the alfresco lights and kill the fan in Pete's office",
+      "heard": "Turn on the old fresco lights and kill the fan in Pete's office",
+      "lost": [
+        [
+          "room",
+          "alfresco"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900000-missing-pool",
+      "turn": 0,
+      "voice": "k-bf-alice",
+      "written": "is the pool pump on",
+      "heard": "Is the pool pump-ons?",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900000-water-tank-level",
+      "turn": 0,
+      "voice": "k-bf-emma",
+      "written": "we right for water or getting low",
+      "heard": "We write for water or getting loathe.",
+      "lost": [
+        [
+          "device",
+          "low"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900001-exhaust-fan-clarify",
+      "turn": 1,
+      "voice": "k-bf-lily",
+      "written": "the guest ensuite one",
+      "heard": "The guest ends suit one.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900004-clarify-which-light",
+      "turn": 1,
+      "voice": "k-bm-george",
+      "written": "ensuite",
+      "heard": "and Zood.",
+      "lost": [
+        [
+          "room",
+          "ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900004-ctrl-ensuite-multiturn",
+      "turn": 0,
+      "voice": "k-bm-fable",
+      "written": "dim the ensuite lights, don't want to wake Hannah",
+      "heard": "Dim the end-suit lights. Don't want to wake Hannah",
+      "lost": [
+        [
+          "room",
+          "ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900004-mixed-ensuite-heater",
+      "turn": 0,
+      "voice": "k-am-adam",
+      "written": "warm up the ensuite before I hop in the shower",
+      "heard": "Warm up the en-suit before I hop in the shower.",
+      "lost": [
+        [
+          "room",
+          "ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900005-lamp-clarify",
+      "turn": 1,
+      "voice": "k-bf-alice",
+      "written": "the guest room one",
+      "heard": "The guest room won't.",
+      "lost": [
+        [
+          "number",
+          "1"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900006-bedtime",
+      "turn": 2,
+      "voice": "k-bf-emma",
+      "written": "Yeah, dim.",
+      "heard": "Yeah, dimf.",
+      "lost": [
+        [
+          "command",
+          "dim"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900007-morning-routine",
+      "turn": 0,
+      "voice": "k-bf-lily",
+      "written": "just up, get the place going for me",
+      "heard": "Just stop get the place going for me",
+      "lost": [
+        [
+          "command",
+          "up"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900008-cold-in-here",
+      "turn": 1,
+      "voice": "k-bm-george",
+      "written": "Dining hall, and make it 20.",
+      "heard": "Dining hole and make it 20.",
+      "lost": [
+        [
+          "room",
+          "dining hall"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900008-kitchen-radio",
+      "turn": 2,
+      "voice": "k-am-adam",
+      "written": "And run it out to the alfresco as well.",
+      "heard": "and run it out to the Olfresco as well.",
+      "lost": [
+        [
+          "room",
+          "alfresco"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900008-lights-audit",
+      "turn": 1,
+      "voice": "k-bm-fable",
+      "written": "Kill the lot except the ensuite, Amber's in there.",
+      "heard": "Kill the lot except the ensuit. Amba's in there.",
+      "lost": [
+        [
+          "room",
+          "ensuite ambers"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

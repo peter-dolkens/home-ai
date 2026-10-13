@@ -1,0 +1,105 @@
+{
+  "source": "data/generated/train-b-bundook-sup.jsonl",
+  "rows": 1650,
+  "eligible": 1173,
+  "prompt_layout": "stable_prefix",
+  "counts": {
+    "casing": 125,
+    "homophone": 82,
+    "homophone:ambiguous": 1,
+    "homophone:homophone": 40,
+    "homophone:number": 16,
+    "homophone:split": 25,
+    "roundtrip": 561,
+    "roundtrip:base-clean": 24,
+    "roundtrip:kokoro": 401,
+    "roundtrip:medium-biased": 42,
+    "roundtrip:parakeet-clean": 129,
+    "roundtrip:parakeet-farfield": 40,
+    "roundtrip:parakeet-noisy10": 35,
+    "roundtrip:piper": 160,
+    "roundtrip:small-biased": 109,
+    "roundtrip:small-clean": 92,
+    "roundtrip:small-farfield-biased": 28,
+    "roundtrip:small-noisy10-biased": 22,
+    "roundtrip:tiny-clean": 40,
+    "roundtrip_all_turns_kept_written": 17,
+    "roundtrip_turn_kept_written:empty": 1,
+    "roundtrip_turn_kept_written:garbled": 25,
+    "roundtrip_turns": 598,
+    "unchanged": 349,
+    "unchanged_inherited_overlap": 477
+  },
+  "leakage": {
+    "file": "data/generated/train-b-sup-v2.jsonl",
+    "held_out_utterances": 18157,
+    "augmented_rows": 768,
+    "augmented_overlap_turns": 0,
+    "augmented_overlap_distinct": 0,
+    "augmented_examples": [],
+    "inherited_overlap_turns": 545,
+    "inherited_overlap_distinct": 182
+  },
+  "inherited_top": [
+    [
+      "yes",
+      34
+    ],
+    [
+      "yes please",
+      33
+    ],
+    [
+      "go ahead",
+      25
+    ],
+    [
+      "please",
+      14
+    ],
+    [
+      "yep",
+      13
+    ],
+    [
+      "wheres amber",
+      10
+    ],
+    [
+      "do it",
+      10
+    ],
+    [
+      "the 1 in petes office",
+      10
+    ],
+    [
+      "petes office",
+      9
+    ],
+    [
+      "yes do all that",
+      9
+    ],
+    [
+      "actually no",
+      8
+    ],
+    [
+      "carport please",
+      8
+    ],
+    [
+      "leave it",
+      8
+    ],
+    [
+      "petes office 1",
+      7
+    ],
+    [
+      "do you know where peter is",
+      7
+    ]
+  ]
+}

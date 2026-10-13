@@ -1,0 +1,74 @@
+[
+  {
+    "file": "data/generated/train-v9.jsonl",
+    "held_out_utterances": 18157,
+    "augmented_rows": 4255,
+    "augmented_overlap_turns": 0,
+    "augmented_overlap_distinct": 0,
+    "augmented_examples": [],
+    "inherited_overlap_turns": 3155,
+    "inherited_overlap_distinct": 383,
+    "inherited_top": [
+      [
+        "yes please",
+        150
+      ],
+      [
+        "yes",
+        135
+      ],
+      [
+        "go ahead",
+        122
+      ],
+      [
+        "please",
+        72
+      ],
+      [
+        "yes do all that",
+        61
+      ],
+      [
+        "leave it",
+        43
+      ],
+      [
+        "do it",
+        43
+      ],
+      [
+        "yep",
+        42
+      ],
+      [
+        "switch the lamp on",
+        34
+      ],
+      [
+        "is everything ok at home",
+        33
+      ],
+      [
+        "hows the house looking were not home",
+        32
+      ],
+      [
+        "turn on the light",
+        32
+      ],
+      [
+        "turn on the lamp",
+        29
+      ],
+      [
+        "turn off the light",
+        28
+      ],
+      [
+        "never mind",
+        28
+      ]
+    ]
+  }
+]

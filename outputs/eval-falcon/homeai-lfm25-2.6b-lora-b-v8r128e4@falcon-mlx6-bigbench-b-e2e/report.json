@@ -1,0 +1,181 @@
+{
+  "model": "/Users/peter.dolkens/home-ai-falcon/stage/mlx/homeai-lfm25-2.6b-lora-b-v8r128e4-mlx6",
+  "mode": "e2e",
+  "host": "falcon",
+  "hardware": "apple-m2pro",
+  "host_note": "falcon stream: mlx-lm==0.31.3 server, 6-bit g64, prompt cache on, design B tools, user_context prompts",
+  "ollama": "http://127.0.0.1:11611/v1",
+  "prompt_layout": "user_context",
+  "data": "data/generated/bigbench-b.jsonl",
+  "examples": 200,
+  "turns": 232,
+  "pass": 0.2629310344827586,
+  "conversation_pass": 0.2,
+  "seconds_per_turn": 3.4365466615471107,
+  "calls_per_request": 2.0775862068965516,
+  "errors": 0,
+  "by_kind": {
+    "answer": {
+      "n": 133,
+      "ok": 52.0
+    },
+    "state": {
+      "n": 232,
+      "ok": 207
+    },
+    "reply": {
+      "n": 232,
+      "ok": 64
+    },
+    "act": {
+      "n": 99,
+      "ok": 9
+    }
+  },
+  "by_category": {
+    "energy_status": {
+      "n": 7,
+      "ok": 4
+    },
+    "presence_where": {
+      "n": 12,
+      "ok": 4
+    },
+    "anything_on": {
+      "n": 8,
+      "ok": 3
+    },
+    "control_named": {
+      "n": 11,
+      "ok": 0
+    },
+    "presence_in_room": {
+      "n": 4,
+      "ok": 1
+    },
+    "top_power": {
+      "n": 8,
+      "ok": 0
+    },
+    "status_aggregate": {
+      "n": 14,
+      "ok": 6
+    },
+    "clarify_in_room": {
+      "n": 6,
+      "ok": 2
+    },
+    "weather": {
+      "n": 4,
+      "ok": 2
+    },
+    "check_house": {
+      "n": 15,
+      "ok": 5
+    },
+    "media_play": {
+      "n": 7,
+      "ok": 0
+    },
+    "control_brightness": {
+      "n": 4,
+      "ok": 0
+    },
+    "clarify": {
+      "n": 16,
+      "ok": 7
+    },
+    "confirm_sensitive": {
+      "n": 14,
+      "ok": 6.0
+    },
+    "control_lock": {
+      "n": 3,
+      "ok": 1
+    },
+    "media_what": {
+      "n": 3,
+      "ok": 0
+    },
+    "who_home": {
+      "n": 4,
+      "ok": 4
+    },
+    "control_area": {
+      "n": 6,
+      "ok": 1
+    },
+    "leaving": {
+      "n": 4,
+      "ok": 0
+    },
+    "away_motion": {
+      "n": 4,
+      "ok": 2
+    },
+    "open_check": {
+      "n": 7,
+      "ok": 0
+    },
+    "control_compound": {
+      "n": 8,
+      "ok": 4
+    },
+    "act_only_one": {
+      "n": 2,
+      "ok": 0
+    },
+    "control_here": {
+      "n": 6,
+      "ok": 0
+    },
+    "appliance_status": {
+      "n": 5,
+      "ok": 0
+    },
+    "irrigation_control": {
+      "n": 3,
+      "ok": 1
+    },
+    "control_climate": {
+      "n": 6,
+      "ok": 0
+    },
+    "media_transport": {
+      "n": 3,
+      "ok": 0
+    },
+    "media_multiroom": {
+      "n": 4,
+      "ok": 0
+    },
+    "water_status": {
+      "n": 5,
+      "ok": 2
+    },
+    "energy_appliance": {
+      "n": 3,
+      "ok": 2
+    },
+    "vehicle_status": {
+      "n": 5,
+      "ok": 0
+    },
+    "status_entity": {
+      "n": 6,
+      "ok": 2
+    },
+    "goodnight": {
+      "n": 5,
+      "ok": 0
+    },
+    "media_volume": {
+      "n": 2,
+      "ok": 0
+    },
+    "energy_night": {
+      "n": 8,
+      "ok": 2
+    }
+  }
+}

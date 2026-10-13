@@ -1,0 +1,191 @@
+{
+  "set": "kokoro__base__clean",
+  "stt": "base",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 17,
+  "words": 132,
+  "errors": 12,
+  "wer": 0.0909,
+  "exact": 0.5882,
+  "vocab_words": 54,
+  "vocab_errors": 5,
+  "vocab_wer": 0.0926,
+  "vocab": {
+    "room": {
+      "n": 23,
+      "err": 2,
+      "wer": 0.087
+    },
+    "device": {
+      "n": 17,
+      "err": 2,
+      "wer": 0.1176
+    },
+    "person": {
+      "n": 0,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 1,
+      "err": 1,
+      "wer": 1.0
+    },
+    "command": {
+      "n": 13,
+      "err": 0,
+      "wer": 0.0
+    }
+  },
+  "meaning_changed": 0.1765,
+  "meaning_changed_n": 3,
+  "meaning_by_kind": {
+    "room": 0.1176,
+    "device": 0.0,
+    "person": 0.0,
+    "number": 0.0588,
+    "command": 0.0
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 0.6244,
+    "p50": 0.6116,
+    "p90": 0.719,
+    "rtf": 0.1866,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nova": {
+      "turns": 3,
+      "wer": 0.1111,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sarah": {
+      "turns": 2,
+      "wer": 0.0556,
+      "meaning_changed": 0.5
+    },
+    "t-k-af-sky": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-eric": {
+      "turns": 2,
+      "wer": 0.0556,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-liam": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-onyx": {
+      "turns": 1,
+      "wer": 0.3,
+      "meaning_changed": 1.0
+    },
+    "t-k-am-puck": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 1,
+      "wer": 0.1,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 3,
+      "wer": 0.1538,
+      "meaning_changed": 0.3333
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 4,
+      "wer": 0.1429,
+      "meaning_changed": 0.5
+    },
+    "1.0": {
+      "turns": 8,
+      "wer": 0.1096,
+      "meaning_changed": 0.125
+    },
+    "1.15": {
+      "turns": 5,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 17,
+      "wer": 0.0909,
+      "meaning_changed": 0.1765
+    }
+  },
+  "by_set": {
+    "kokoro__base__clean": {
+      "turns": 17,
+      "wer": 0.0909,
+      "meaning_changed": 0.1765
+    }
+  },
+  "samples": [
+    {
+      "id": "bbig-bundook_full-plan-858-s2",
+      "turn": 0,
+      "voice": "t-k-am-onyx",
+      "written": "Flick the lights on in master ensuite, alfresco and entry",
+      "heard": "Flick the lights on a master and suit, Alfresco and Entry.",
+      "lost": [
+        [
+          "room",
+          "master ensuite alfresco"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1326-s2",
+      "turn": 1,
+      "voice": "t-k-bf-isabella-alice",
+      "written": "The toilet one.",
+      "heard": "the toilet ones.",
+      "lost": [
+        [
+          "number",
+          "1"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1549-s2",
+      "turn": 0,
+      "voice": "t-k-af-sarah",
+      "written": "ok stick ABC Radio National on in the alfresco",
+      "heard": "Okay, stick ABC Radio National on in the Alfresque.",
+      "lost": [
+        [
+          "room",
+          "alfresco"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

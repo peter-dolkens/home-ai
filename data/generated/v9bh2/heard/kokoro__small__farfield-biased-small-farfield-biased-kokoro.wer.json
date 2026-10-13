@@ -1,0 +1,200 @@
+{
+  "set": "kokoro__small__farfield-biased",
+  "stt": "small",
+  "condition": "farfield-biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 31,
+  "words": 185,
+  "errors": 10,
+  "wer": 0.0541,
+  "exact": 0.8065,
+  "vocab_words": 53,
+  "vocab_errors": 5,
+  "vocab_wer": 0.0943,
+  "vocab": {
+    "room": {
+      "n": 14,
+      "err": 0,
+      "wer": 0.0
+    },
+    "device": {
+      "n": 19,
+      "err": 2,
+      "wer": 0.1053
+    },
+    "person": {
+      "n": 3,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 4,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 13,
+      "err": 3,
+      "wer": 0.2308
+    }
+  },
+  "meaning_changed": 0.0968,
+  "meaning_changed_n": 3,
+  "meaning_by_kind": {
+    "room": 0.0,
+    "device": 0.0323,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0968
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 3.4339,
+    "p50": 3.4278,
+    "p90": 3.791,
+    "rtf": 1.1357,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nova": {
+      "turns": 4,
+      "wer": 0.0769,
+      "meaning_changed": 0.25
+    },
+    "t-k-af-sky": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-eric": {
+      "turns": 3,
+      "wer": 0.1111,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-liam": {
+      "turns": 1,
+      "wer": 0.25,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-onyx": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 4,
+      "wer": 0.0909,
+      "meaning_changed": 0.25
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 6,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 1,
+      "wer": 0.2,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 4,
+      "wer": 0.1111,
+      "meaning_changed": 0.25
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 9,
+      "wer": 0.0492,
+      "meaning_changed": 0.0
+    },
+    "1.0": {
+      "turns": 11,
+      "wer": 0.0339,
+      "meaning_changed": 0.0909
+    },
+    "1.15": {
+      "turns": 11,
+      "wer": 0.0769,
+      "meaning_changed": 0.1818
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 31,
+      "wer": 0.0541,
+      "meaning_changed": 0.0968
+    }
+  },
+  "by_set": {
+    "kokoro__small__farfield-biased": {
+      "turns": 31,
+      "wer": 0.0541,
+      "meaning_changed": 0.0968
+    }
+  },
+  "samples": [
+    {
+      "id": "bbig-bundook_full-plan-364-s2",
+      "turn": 0,
+      "voice": "t-k-bf-alice-lily",
+      "written": "Floodlight 3 on.",
+      "heard": "Floodlights 3 Ons",
+      "lost": [
+        [
+          "device",
+          "floodlight 3"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-197-s2",
+      "turn": 0,
+      "voice": "t-k-bm-lewis-fable",
+      "written": "um, is the telly on in the dining hall",
+      "heard": "Um, is the Teleon in the Dining Hall.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1450-s2",
+      "turn": 0,
+      "voice": "t-k-af-nova",
+      "written": "Dim the entry lights to 80 percent.",
+      "heard": "Dimly Entry Lights to 80%.",
+      "lost": [
+        [
+          "command",
+          "dim"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

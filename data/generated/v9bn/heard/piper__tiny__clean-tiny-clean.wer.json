@@ -1,0 +1,518 @@
+{
+  "set": "piper__tiny__clean",
+  "stt": "tiny",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 55,
+  "words": 334,
+  "errors": 83,
+  "wer": 0.2485,
+  "exact": 0.3636,
+  "vocab_words": 120,
+  "vocab_errors": 36,
+  "vocab_wer": 0.3,
+  "vocab": {
+    "room": {
+      "n": 42,
+      "err": 19,
+      "wer": 0.4524
+    },
+    "device": {
+      "n": 36,
+      "err": 10,
+      "wer": 0.2778
+    },
+    "person": {
+      "n": 5,
+      "err": 3,
+      "wer": 0.6
+    },
+    "number": {
+      "n": 3,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 34,
+      "err": 4,
+      "wer": 0.1176
+    }
+  },
+  "meaning_changed": 0.4545,
+  "meaning_changed_n": 25,
+  "meaning_by_kind": {
+    "room": 0.2727,
+    "device": 0.1273,
+    "person": 0.0364,
+    "number": 0.0,
+    "command": 0.0727
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 0.7503,
+    "p50": 0.8116,
+    "p90": 1.0702,
+    "rtf": 0.2992,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-ca-p302": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-ie-p245": {
+      "turns": 7,
+      "wer": 0.2105,
+      "meaning_changed": 0.1429
+    },
+    "t-ie-p288": {
+      "turns": 4,
+      "wer": 0.2609,
+      "meaning_changed": 0.25
+    },
+    "t-ld-p243": {
+      "turns": 4,
+      "wer": 0.3478,
+      "meaning_changed": 1.0
+    },
+    "t-ni-p304": {
+      "turns": 3,
+      "wer": 0.0556,
+      "meaning_changed": 0.3333
+    },
+    "t-nz-p335": {
+      "turns": 6,
+      "wer": 0.1538,
+      "meaning_changed": 0.3333
+    },
+    "t-sc-p234": {
+      "turns": 5,
+      "wer": 0.2667,
+      "meaning_changed": 0.6
+    },
+    "t-sc-p237": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-se-p225": {
+      "turns": 5,
+      "wer": 0.3333,
+      "meaning_changed": 0.4
+    },
+    "t-sm-prudence": {
+      "turns": 4,
+      "wer": 0.3,
+      "meaning_changed": 0.75
+    },
+    "t-sm-spike": {
+      "turns": 3,
+      "wer": 0.087,
+      "meaning_changed": 0.0
+    },
+    "t-wa-p253": {
+      "turns": 2,
+      "wer": 0.1429,
+      "meaning_changed": 0.5
+    },
+    "t-yk-p267": {
+      "turns": 1,
+      "wer": 0.4,
+      "meaning_changed": 1.0
+    },
+    "t-yk-p270": {
+      "turns": 3,
+      "wer": 0.5217,
+      "meaning_changed": 1.0
+    },
+    "t-za-p323": {
+      "turns": 2,
+      "wer": 0.2222,
+      "meaning_changed": 0.5
+    },
+    "t-za-p347": {
+      "turns": 3,
+      "wer": 0.4737,
+      "meaning_changed": 0.6667
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 16,
+      "wer": 0.2059,
+      "meaning_changed": 0.5
+    },
+    "1.0": {
+      "turns": 29,
+      "wer": 0.2395,
+      "meaning_changed": 0.3448
+    },
+    "1.15": {
+      "turns": 10,
+      "wer": 0.3385,
+      "meaning_changed": 0.7
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 55,
+      "wer": 0.2485,
+      "meaning_changed": 0.4545
+    }
+  },
+  "by_set": {
+    "piper__tiny__clean": {
+      "turns": 55,
+      "wer": 0.2485,
+      "meaning_changed": 0.4545
+    }
+  },
+  "samples": [
+    {
+      "id": "b300-1423",
+      "turn": 0,
+      "voice": "t-sm-prudence",
+      "written": "hey house, switch on the lights in the master ensuite and the guest ensuite",
+      "heard": "Hey House, switch on the lights in the master's suit and the guest in suit.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ],
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3094",
+      "turn": 0,
+      "voice": "t-ld-p243",
+      "written": "play country in the alfresco",
+      "heard": "They country in near Fresco.",
+      "lost": [
+        [
+          "command",
+          "play"
+        ],
+        [
+          "room",
+          "alfresco"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1899",
+      "turn": 0,
+      "voice": "t-se-p225",
+      "written": "Flip the beer fridge off",
+      "heard": "Flip the beard for a job.",
+      "lost": [
+        [
+          "device",
+          "beer fridge"
+        ],
+        [
+          "command",
+          "off"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-3000-38",
+      "turn": 0,
+      "voice": "t-sc-p234",
+      "written": "hey house, fan on now",
+      "heard": "Pay House final note.",
+      "lost": [
+        [
+          "device",
+          "house fan"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "b300-1512",
+      "turn": 0,
+      "voice": "t-ld-p243",
+      "written": "light up bathroom",
+      "heard": "Like a bathroom.",
+      "lost": [
+        [
+          "command",
+          "up"
+        ]
+      ]
+    },
+    {
+      "id": "b300-1575",
+      "turn": 0,
+      "voice": "t-ie-p288",
+      "written": "um, can you close the blinds in Pete's office thanks",
+      "heard": "And can you close the blinds and pizza office banks?",
+      "lost": [
+        [
+          "room",
+          "petes office"
+        ]
+      ]
+    },
+    {
+      "id": "b300-1585",
+      "turn": 0,
+      "voice": "t-nz-p335",
+      "written": "um, pop the blinds open in master bedroom thanks",
+      "heard": "and pop the blinds open and mess a bedroom thanks.",
+      "lost": [
+        [
+          "room",
+          "master bedroom"
+        ]
+      ]
+    },
+    {
+      "id": "b300-1779",
+      "turn": 0,
+      "voice": "t-wa-p253",
+      "written": "turn on the heating in Pete's office",
+      "heard": "Turn on the heating and pizza office.",
+      "lost": [
+        [
+          "room",
+          "petes office"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2064",
+      "turn": 0,
+      "voice": "t-se-p225",
+      "written": "get the front door locked",
+      "heard": "Get the frontal locked.",
+      "lost": [
+        [
+          "device",
+          "front door"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2156",
+      "turn": 0,
+      "voice": "t-ie-p245",
+      "written": "hey, turn the pendants in the hallway off please",
+      "heard": "Hey, turn the pendants and the whole way off, please.",
+      "lost": [
+        [
+          "room",
+          "hallway"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2258",
+      "turn": 0,
+      "voice": "t-yk-p267",
+      "written": "Start the downlights in alfresco",
+      "heard": "Start the downlights in the fresco.",
+      "lost": [
+        [
+          "room",
+          "alfresco"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3157",
+      "turn": 0,
+      "voice": "t-za-p347",
+      "written": "Chuck on blues in the rumpus room",
+      "heard": "Check on please in the Rampus room.",
+      "lost": [
+        [
+          "room",
+          "rumpus room"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3763",
+      "turn": 0,
+      "voice": "t-ni-p304",
+      "written": "quick question, has Dan gone to the family room",
+      "heard": "Quick question, has down gone to the family room?",
+      "lost": [
+        [
+          "person",
+          "dan"
+        ]
+      ]
+    },
+    {
+      "id": "b300-4330",
+      "turn": 0,
+      "voice": "t-yk-p270",
+      "written": "um, did we leave the lounge tv on",
+      "heard": "I'm to deliver the launch TV on.",
+      "lost": [
+        [
+          "room",
+          "lounge"
+        ]
+      ]
+    },
+    {
+      "id": "b300-4442",
+      "turn": 0,
+      "voice": "t-sc-p234",
+      "written": "um, did we forget to shut the media room window",
+      "heard": "Um, did we forget to shut the media room under?",
+      "lost": [
+        [
+          "device",
+          "window"
+        ]
+      ]
+    },
+    {
+      "id": "b300-734",
+      "turn": 0,
+      "voice": "t-sm-prudence",
+      "written": "can you put the fan on",
+      "heard": "Can you put the phone on?",
+      "lost": [
+        [
+          "device",
+          "fan"
+        ]
+      ]
+    },
+    {
+      "id": "b300-734",
+      "turn": 1,
+      "voice": "t-sm-prudence",
+      "written": "Laundry toilet please.",
+      "heard": "Don't retoll it, please.",
+      "lost": [
+        [
+          "room",
+          "laundry toilet"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-1731",
+      "turn": 0,
+      "voice": "t-yk-p270",
+      "written": "what's the solar output like",
+      "heard": "What's the seller up at life?",
+      "lost": [
+        [
+          "device",
+          "solar"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-1750",
+      "turn": 0,
+      "voice": "t-ld-p243",
+      "written": "turn the floodlight 3 in the alfresco on",
+      "heard": "Turn the floodlight 3 in your fresco on.",
+      "lost": [
+        [
+          "room",
+          "alfresco"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1974",
+      "turn": 0,
+      "voice": "t-za-p323",
+      "written": "turn Pete's office lights on",
+      "heard": "10-piece office lights on.",
+      "lost": [
+        [
+          "room",
+          "petes office"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-10000-618",
+      "turn": 0,
+      "voice": "t-yk-p270",
+      "written": "could you put ABC Classic on in the master ensuite please",
+      "heard": "Could you put ABC classic on an amastance seat, please?",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-10000-640",
+      "turn": 0,
+      "voice": "t-sc-p234",
+      "written": "where's Ruby right now",
+      "heard": "Which would be right now?",
+      "lost": [
+        [
+          "person",
+          "ruby"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-3000-28",
+      "turn": 1,
+      "voice": "t-nz-p335",
+      "written": "In the bedroom 2.",
+      "heard": "in the bedroom too.",
+      "lost": [
+        [
+          "room",
+          "bedroom 2"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-6000-474",
+      "turn": 0,
+      "voice": "t-ld-p243",
+      "written": "can you turn on the scullery lights",
+      "heard": "Can you turn on the scolary lights?",
+      "lost": [
+        [
+          "room",
+          "scullery"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-6000-522",
+      "turn": 0,
+      "voice": "t-za-p347",
+      "written": "cut the dishwasher off",
+      "heard": "Have the dish for sure off.",
+      "lost": [
+        [
+          "device",
+          "dishwasher"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

@@ -1,0 +1,19 @@
+{
+  "model": "homeai-4b-lora-v5-q5_k_m",
+  "data": "data/generated/test-v2.jsonl",
+  "requests": 60,
+  "cold_mean": 12.052124047150008,
+  "cold_p50": 11.257314041999962,
+  "cold_p90": 16.335535584000013,
+  "warm_mean": 12.051251249283336,
+  "warm_p90": 16.335354583000026,
+  "calls_per_request": 1.9833333333333334,
+  "seconds_per_call": 5.872225847997223,
+  "training_running": false,
+  "num_ctx": 8192,
+  "prompt_layout": "classic",
+  "host": "falcon",
+  "hardware": "apple-m2pro",
+  "host_note": "falcon stream: Ollama 0.21.2 stock, Q5_K_M (llama.cpp b11243)",
+  "ollama": "http://127.0.0.1:11610"
+}

@@ -1,0 +1,39 @@
+{
+ "_comment": "LFM 1.2B B-v7 at LoRA rank 32 (5 Oct): LFM B-v7 (the Mac's speed pick: 82.9% typed on the 200-conversation house set, 68.6% at 3 m, 63.6% in noise) with twice the adapter rank (r 32, alpha 32), same data and recipe otherwise; whether the small model is short of adapter capacity.",
+ "base_model": "LiquidAI/LFM2.5-1.2B-Instruct",
+ "hf_tokenizer": "LiquidAI/LFM2.5-1.2B-Instruct",
+ "ollama_template_from": "lfm2.5-1.2b",
+ "instruction_part": "<|im_start|>user\n",
+ "response_part": "<|im_start|>assistant\n",
+ "max_seq_len": 4608,
+ "lora_r": 32,
+ "lora_alpha": 32,
+ "epochs": 2,
+ "lr": 0.0002,
+ "batch_size": 2,
+ "grad_accum": 8,
+ "seed": 3407,
+ "train": "data/generated/train-b-v7.jsonl",
+ "val": "data/generated/val-b.jsonl",
+ "out": "outputs/lfm25-1.2b-lora-b-v7r32",
+ "load_in_4bit": false,
+ "mask_spans": [
+  [
+   "<|im_start|>tool\n",
+   "<|im_end|>"
+  ]
+ ],
+ "target_modules": [
+  "q_proj",
+  "k_proj",
+  "v_proj",
+  "out_proj",
+  "in_proj",
+  "w1",
+  "w2",
+  "w3"
+ ],
+ "chat_template_from": "LiquidAI/LFM2.5-350M",
+ "note": "fix2: 350M's LFM2.5 template (the unsloth 1.2B mirror's template drops tool calls)",
+ "prompt_layout": "user_context"
+}

@@ -1,0 +1,178 @@
+{
+  "set": "bigbench-bundook",
+  "stt": "parakeet",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 6 cpus, 5 GB",
+  "utterances": 57,
+  "words": 313,
+  "errors": 13,
+  "wer": 0.0415,
+  "exact": 0.8596,
+  "vocab_words": 93,
+  "vocab_errors": 4,
+  "vocab_wer": 0.043,
+  "vocab": {
+    "room": {
+      "n": 16,
+      "err": 1,
+      "wer": 0.0625
+    },
+    "device": {
+      "n": 43,
+      "err": 2,
+      "wer": 0.0465
+    },
+    "person": {
+      "n": 5,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 3,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 26,
+      "err": 1,
+      "wer": 0.0385
+    }
+  },
+  "meaning_changed": 0.0351,
+  "meaning_changed_n": 2,
+  "meaning_by_kind": {
+    "room": 0.0,
+    "device": 0.0175,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0175
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 0.3275,
+    "p50": 0.3124,
+    "p90": 0.4324,
+    "rtf": 0.1186,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "k-af-bella": {
+      "turns": 5,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "k-af-heart": {
+      "turns": 3,
+      "wer": 0.0909,
+      "meaning_changed": 0.0
+    },
+    "k-am-adam": {
+      "turns": 7,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "k-am-michael": {
+      "turns": 4,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "k-bf-alice": {
+      "turns": 6,
+      "wer": 0.1316,
+      "meaning_changed": 0.1667
+    },
+    "k-bf-emma": {
+      "turns": 8,
+      "wer": 0.04,
+      "meaning_changed": 0.0
+    },
+    "k-bf-lily": {
+      "turns": 14,
+      "wer": 0.0128,
+      "meaning_changed": 0.0714
+    },
+    "k-bm-daniel": {
+      "turns": 2,
+      "wer": 0.25,
+      "meaning_changed": 0.0
+    },
+    "k-bm-fable": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "k-bm-george": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "k-bm-lewis": {
+      "turns": 5,
+      "wer": 0.0645,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 10,
+      "wer": 0.093,
+      "meaning_changed": 0.0
+    },
+    "1.0": {
+      "turns": 31,
+      "wer": 0.0219,
+      "meaning_changed": 0.0
+    },
+    "1.15": {
+      "turns": 16,
+      "wer": 0.0575,
+      "meaning_changed": 0.125
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 57,
+      "wer": 0.0415,
+      "meaning_changed": 0.0351
+    }
+  },
+  "by_set": {
+    "bigbench-bundook": {
+      "turns": 57,
+      "wer": 0.0415,
+      "meaning_changed": 0.0351
+    }
+  },
+  "samples": [
+    {
+      "id": "big-bundook_full-plan-1",
+      "turn": 0,
+      "voice": "k-bf-lily",
+      "written": "turn on the batten lights",
+      "heard": "Turn on the baton lights.",
+      "lost": [
+        [
+          "device",
+          "batten lights"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-10",
+      "turn": 0,
+      "voice": "k-bf-alice",
+      "written": "Are any doors open?",
+      "heard": "It's like any doors opens.",
+      "lost": [
+        [
+          "command",
+          "open"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

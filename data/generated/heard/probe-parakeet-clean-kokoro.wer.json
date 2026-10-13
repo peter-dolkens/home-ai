@@ -1,0 +1,211 @@
+{
+  "set": "probe",
+  "stt": "parakeet",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 6 cpus, 5 GB",
+  "utterances": 100,
+  "words": 639,
+  "errors": 24,
+  "wer": 0.0376,
+  "exact": 0.84,
+  "vocab_words": 184,
+  "vocab_errors": 7,
+  "vocab_wer": 0.038,
+  "vocab": {
+    "room": {
+      "n": 47,
+      "err": 4,
+      "wer": 0.0851
+    },
+    "device": {
+      "n": 71,
+      "err": 3,
+      "wer": 0.0423
+    },
+    "person": {
+      "n": 3,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 4,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 59,
+      "err": 0,
+      "wer": 0.0
+    }
+  },
+  "meaning_changed": 0.03,
+  "meaning_changed_n": 3,
+  "meaning_by_kind": {
+    "room": 0.02,
+    "device": 0.01,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 0.3465,
+    "p50": 0.3407,
+    "p90": 0.4972,
+    "rtf": 0.1164,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "k-af-bella": {
+      "turns": 9,
+      "wer": 0.0513,
+      "meaning_changed": 0.1111
+    },
+    "k-af-heart": {
+      "turns": 7,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "k-am-adam": {
+      "turns": 9,
+      "wer": 0.0758,
+      "meaning_changed": 0.0
+    },
+    "k-am-michael": {
+      "turns": 9,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "k-bf-alice": {
+      "turns": 18,
+      "wer": 0.075,
+      "meaning_changed": 0.0
+    },
+    "k-bf-emma": {
+      "turns": 5,
+      "wer": 0.0625,
+      "meaning_changed": 0.0
+    },
+    "k-bf-isabella": {
+      "turns": 8,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "k-bf-lily": {
+      "turns": 8,
+      "wer": 0.0196,
+      "meaning_changed": 0.125
+    },
+    "k-bm-daniel": {
+      "turns": 5,
+      "wer": 0.0204,
+      "meaning_changed": 0.0
+    },
+    "k-bm-fable": {
+      "turns": 7,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "k-bm-george": {
+      "turns": 11,
+      "wer": 0.0196,
+      "meaning_changed": 0.0909
+    },
+    "k-bm-lewis": {
+      "turns": 4,
+      "wer": 0.1053,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 26,
+      "wer": 0.0793,
+      "meaning_changed": 0.0385
+    },
+    "1.0": {
+      "turns": 51,
+      "wer": 0.0098,
+      "meaning_changed": 0.0196
+    },
+    "1.15": {
+      "turns": 23,
+      "wer": 0.0471,
+      "meaning_changed": 0.0435
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 100,
+      "wer": 0.0376,
+      "meaning_changed": 0.03
+    }
+  },
+  "by_set": {
+    "bigbench-bundook": {
+      "turns": 15,
+      "wer": 0.0513,
+      "meaning_changed": 0.0667
+    },
+    "test-v2": {
+      "turns": 25,
+      "wer": 0.0308,
+      "meaning_changed": 0.04
+    },
+    "wild": {
+      "turns": 30,
+      "wer": 0.0269,
+      "meaning_changed": 0.0333
+    },
+    "wild2": {
+      "turns": 30,
+      "wer": 0.0481,
+      "meaning_changed": 0.0
+    }
+  },
+  "samples": [
+    {
+      "id": "1-222",
+      "turn": 1,
+      "voice": "k-af-bella",
+      "written": "Lounge.",
+      "heard": "Loud.",
+      "lost": [
+        [
+          "room",
+          "lounge"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-1",
+      "turn": 0,
+      "voice": "k-bf-lily",
+      "written": "turn on the batten lights",
+      "heard": "Turn on the baton lights.",
+      "lost": [
+        [
+          "device",
+          "batten lights"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900004-clarify-which-light",
+      "turn": 1,
+      "voice": "k-bm-george",
+      "written": "ensuite",
+      "heard": "ensued.",
+      "lost": [
+        [
+          "room",
+          "ensuite"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

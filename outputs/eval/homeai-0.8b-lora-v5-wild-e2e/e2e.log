@@ -1,0 +1,46 @@
+[25/303] 69.4% 179s
+[50/303] 76.6% 307s
+[75/303] 74.2% 439s
+[100/303] 73.8% 608s
+[125/303] 76.0% 746s
+[150/303] 78.1% 1460s
+[175/303] 79.0% 1645s
+[200/303] 79.3% 1795s
+[225/303] 79.9% 1935s
+[250/303] 76.5% 2240s
+[275/303] 74.5% 2449s
+[300/303] 72.2% 2622s
+{
+  "model": "homeai-0.8b-lora-v5",
+  "mode": "e2e",
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "Apple GPU (Metal); a Docker speech-to-text job (10 CPUs, 7 GB) shares this machine: latency indicative only, not comparable with the CUDA boxes",
+  "ollama": "http://127.0.0.1:11437",
+  "data": "data/generated/wild.jsonl",
+  "examples": 303,
+  "turns": 409,
+  "pass": 0.71760391198044,
+  "conversation_pass": 0.6567656765676567,
+  "seconds_per_turn": 2.867079740472742,
+  "calls_per_request": 2.26161369193154,
+  "errors": 1,
+  "by_kind": {
+    "act": {
+      "n": 185,
+      "ok": 138
+    },
+    "state": {
+      "n": 409,
+      "ok": 332
+    },
+    "reply": {
+      "n": 409,
+      "ok": 345
+    },
+    "answer": {
+      "n": 224,
+      "ok": 155.5
+    }
+  }
+}

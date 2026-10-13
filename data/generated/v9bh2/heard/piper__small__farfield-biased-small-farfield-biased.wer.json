@@ -1,0 +1,151 @@
+{
+  "set": "piper__small__farfield-biased",
+  "stt": "small",
+  "condition": "farfield-biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 8,
+  "words": 43,
+  "errors": 10,
+  "wer": 0.2326,
+  "exact": 0.625,
+  "vocab_words": 18,
+  "vocab_errors": 3,
+  "vocab_wer": 0.1667,
+  "vocab": {
+    "room": {
+      "n": 4,
+      "err": 0,
+      "wer": 0.0
+    },
+    "device": {
+      "n": 7,
+      "err": 1,
+      "wer": 0.1429
+    },
+    "person": {
+      "n": 1,
+      "err": 1,
+      "wer": 1.0
+    },
+    "number": {
+      "n": 1,
+      "err": 1,
+      "wer": 1.0
+    },
+    "command": {
+      "n": 5,
+      "err": 0,
+      "wer": 0.0
+    }
+  },
+  "meaning_changed": 0.375,
+  "meaning_changed_n": 3,
+  "meaning_by_kind": {
+    "room": 0.0,
+    "device": 0.125,
+    "person": 0.125,
+    "number": 0.125,
+    "command": 0.0
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 1.5076,
+    "p50": 1.4564,
+    "p90": 1.7775,
+    "rtf": 0.579,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-ie-p245": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-ie-p288": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-sc-p234": {
+      "turns": 3,
+      "wer": 0.5385,
+      "meaning_changed": 0.6667
+    },
+    "t-sm-spike": {
+      "turns": 3,
+      "wer": 0.2143,
+      "meaning_changed": 0.3333
+    }
+  },
+  "by_rate": {
+    "1.0": {
+      "turns": 6,
+      "wer": 0.2778,
+      "meaning_changed": 0.5
+    },
+    "1.15": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 8,
+      "wer": 0.2326,
+      "meaning_changed": 0.375
+    }
+  },
+  "by_set": {
+    "piper__small__farfield-biased": {
+      "turns": 8,
+      "wer": 0.2326,
+      "meaning_changed": 0.375
+    }
+  },
+  "samples": [
+    {
+      "id": "bbig-bundook_full-plan-137-s2",
+      "turn": 1,
+      "voice": "t-sc-p234",
+      "written": "The alfresco one.",
+      "heard": "Alfresco Floodlight",
+      "lost": [
+        [
+          "number",
+          "1"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-663-s2",
+      "turn": 0,
+      "voice": "t-sm-spike",
+      "written": "hey house, is Amber in the vanity",
+      "heard": "Hey House is our button of vanity.",
+      "lost": [
+        [
+          "person",
+          "amber"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1274-s2",
+      "turn": 0,
+      "voice": "t-sc-p234",
+      "written": "fine to use the oven",
+      "heard": "5G7",
+      "lost": [
+        [
+          "device",
+          "oven"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

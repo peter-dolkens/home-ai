@@ -1,0 +1,263 @@
+{
+  "set": "kokoro__base__clean",
+  "stt": "base",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 52,
+  "words": 348,
+  "errors": 26,
+  "wer": 0.0747,
+  "exact": 0.6154,
+  "vocab_words": 117,
+  "vocab_errors": 10,
+  "vocab_wer": 0.0855,
+  "vocab": {
+    "room": {
+      "n": 43,
+      "err": 7,
+      "wer": 0.1628
+    },
+    "device": {
+      "n": 37,
+      "err": 2,
+      "wer": 0.0541
+    },
+    "person": {
+      "n": 6,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 2,
+      "err": 1,
+      "wer": 0.5
+    },
+    "command": {
+      "n": 29,
+      "err": 0,
+      "wer": 0.0
+    }
+  },
+  "meaning_changed": 0.1346,
+  "meaning_changed_n": 7,
+  "meaning_by_kind": {
+    "room": 0.1154,
+    "device": 0.0,
+    "person": 0.0,
+    "number": 0.0192,
+    "command": 0.0
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 2.3199,
+    "p50": 2.4106,
+    "p90": 3.0925,
+    "rtf": 0.754,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nicole": {
+      "turns": 1,
+      "wer": 0.125,
+      "meaning_changed": 1.0
+    },
+    "t-k-af-nova": {
+      "turns": 5,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sarah": {
+      "turns": 7,
+      "wer": 0.0889,
+      "meaning_changed": 0.1429
+    },
+    "t-k-af-sky": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-eric": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-onyx": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-puck": {
+      "turns": 5,
+      "wer": 0.2222,
+      "meaning_changed": 0.4
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 8,
+      "wer": 0.1163,
+      "meaning_changed": 0.125
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 2,
+      "wer": 0.1538,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 4,
+      "wer": 0.08,
+      "meaning_changed": 0.25
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 5,
+      "wer": 0.0455,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 2,
+      "wer": 0.1053,
+      "meaning_changed": 0.5
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 14,
+      "wer": 0.1078,
+      "meaning_changed": 0.1429
+    },
+    "1.0": {
+      "turns": 22,
+      "wer": 0.0395,
+      "meaning_changed": 0.1364
+    },
+    "1.15": {
+      "turns": 16,
+      "wer": 0.0957,
+      "meaning_changed": 0.125
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 52,
+      "wer": 0.0747,
+      "meaning_changed": 0.1346
+    }
+  },
+  "by_set": {
+    "kokoro__base__clean": {
+      "turns": 52,
+      "wer": 0.0747,
+      "meaning_changed": 0.1346
+    }
+  },
+  "samples": [
+    {
+      "id": "b300-1856",
+      "turn": 0,
+      "voice": "t-k-am-puck",
+      "written": "turn on the lights in the kitchen, and then kill the tv in the lounge",
+      "heard": "Turn on the lights in the kitchen and then kill the TV in the loud.",
+      "lost": [
+        [
+          "room",
+          "lounge"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2243",
+      "turn": 0,
+      "voice": "t-k-am-puck",
+      "written": "please turn off the alfresco downlights",
+      "heard": "Please turn off the old frescoed down lights.",
+      "lost": [
+        [
+          "room",
+          "alfresco"
+        ]
+      ]
+    },
+    {
+      "id": "b300-861",
+      "turn": 1,
+      "voice": "t-k-af-sarah",
+      "written": "In the rumpus room.",
+      "heard": "in the Rumpest Room.",
+      "lost": [
+        [
+          "room",
+          "rumpus room"
+        ]
+      ]
+    },
+    {
+      "id": "b300-975",
+      "turn": 1,
+      "voice": "t-k-bf-alice-lily",
+      "written": "The entry one.",
+      "heard": "the entry ones.",
+      "lost": [
+        [
+          "number",
+          "1"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-10000-894",
+      "turn": 0,
+      "voice": "t-k-af-nicole",
+      "written": "how cold is it in the comms room",
+      "heard": "How cold is it in the calm's room?",
+      "lost": [
+        [
+          "room",
+          "comms room"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-10000-935",
+      "turn": 0,
+      "voice": "t-k-bf-isabella-alice",
+      "written": "ok, no more music in the rumpus room",
+      "heard": "Okay, no more music in the Rumpers room.",
+      "lost": [
+        [
+          "room",
+          "rumpus room"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-6000-481",
+      "turn": 0,
+      "voice": "t-k-bm-george-lewis",
+      "written": "Turn the lights off in the guest ensuite and the front deck.",
+      "heard": "Turn the lights off in the guest end suit and the front deck.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

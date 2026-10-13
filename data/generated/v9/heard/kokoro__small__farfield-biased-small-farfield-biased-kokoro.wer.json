@@ -1,0 +1,276 @@
+{
+  "set": "kokoro__small__farfield-biased",
+  "stt": "small",
+  "condition": "farfield-biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 105,
+  "words": 710,
+  "errors": 32,
+  "wer": 0.0451,
+  "exact": 0.781,
+  "vocab_words": 236,
+  "vocab_errors": 12,
+  "vocab_wer": 0.0508,
+  "vocab": {
+    "room": {
+      "n": 67,
+      "err": 0,
+      "wer": 0.0
+    },
+    "device": {
+      "n": 79,
+      "err": 7,
+      "wer": 0.0886
+    },
+    "person": {
+      "n": 9,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 6,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 75,
+      "err": 5,
+      "wer": 0.0667
+    }
+  },
+  "meaning_changed": 0.0667,
+  "meaning_changed_n": 7,
+  "meaning_by_kind": {
+    "room": 0.0,
+    "device": 0.0381,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0381
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 6.5037,
+    "p50": 6.558,
+    "p90": 7.6958,
+    "rtf": 2.1209,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nicole": {
+      "turns": 4,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-nova": {
+      "turns": 5,
+      "wer": 0.0345,
+      "meaning_changed": 0.2
+    },
+    "t-k-af-sarah": {
+      "turns": 8,
+      "wer": 0.029,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sky": {
+      "turns": 7,
+      "wer": 0.0455,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-eric": {
+      "turns": 4,
+      "wer": 0.0588,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-liam": {
+      "turns": 4,
+      "wer": 0.0435,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-onyx": {
+      "turns": 9,
+      "wer": 0.0816,
+      "meaning_changed": 0.1111
+    },
+    "t-k-am-puck": {
+      "turns": 8,
+      "wer": 0.1591,
+      "meaning_changed": 0.125
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 5,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 10,
+      "wer": 0.05,
+      "meaning_changed": 0.2
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 7,
+      "wer": 0.05,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 8,
+      "wer": 0.0172,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 5,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 10,
+      "wer": 0.0278,
+      "meaning_changed": 0.1
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 4,
+      "wer": 0.16,
+      "meaning_changed": 0.25
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 7,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 19,
+      "wer": 0.0602,
+      "meaning_changed": 0.1579
+    },
+    "1.0": {
+      "turns": 62,
+      "wer": 0.0464,
+      "meaning_changed": 0.0645
+    },
+    "1.15": {
+      "turns": 24,
+      "wer": 0.0274,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 105,
+      "wer": 0.0451,
+      "meaning_changed": 0.0667
+    }
+  },
+  "by_set": {
+    "kokoro__small__farfield-biased": {
+      "turns": 105,
+      "wer": 0.0451,
+      "meaning_changed": 0.0667
+    }
+  },
+  "samples": [
+    {
+      "id": "202-1632",
+      "turn": 0,
+      "voice": "t-k-bm-george-lewis",
+      "written": "um, is byd shark locked up",
+      "heard": "Um, is Bideshark Lockdown.",
+      "lost": [
+        [
+          "device",
+          "byd shark"
+        ],
+        [
+          "command",
+          "up"
+        ]
+      ]
+    },
+    {
+      "id": "207-603",
+      "turn": 0,
+      "voice": "t-k-am-puck",
+      "written": "off to bed, lock up behind us",
+      "heard": "Off-to-bed locker behind us.",
+      "lost": [
+        [
+          "command",
+          "lock"
+        ],
+        [
+          "command",
+          "up"
+        ]
+      ]
+    },
+    {
+      "id": "200-1298",
+      "turn": 0,
+      "voice": "t-k-bf-emma-isabella",
+      "written": "hey, hydronic heating on please",
+      "heard": "Hey, Hydronic Heating, or Please?",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "200-1566",
+      "turn": 0,
+      "voice": "t-k-am-onyx",
+      "written": "hey house, get the front door locked",
+      "heard": "Hey, how's it get the front door locked?",
+      "lost": [
+        [
+          "device",
+          "house"
+        ]
+      ]
+    },
+    {
+      "id": "200-752",
+      "turn": 0,
+      "voice": "t-k-bf-emma-isabella",
+      "written": "hey, off to bed, lock up behind us",
+      "heard": "Hey, off to bed, look up behind us.",
+      "lost": [
+        [
+          "command",
+          "lock"
+        ]
+      ]
+    },
+    {
+      "id": "206-2964",
+      "turn": 0,
+      "voice": "t-k-bm-george-daniel",
+      "written": "How charged is BYD Shark?",
+      "heard": "How charged is BYD shock?",
+      "lost": [
+        [
+          "device",
+          "byd shark"
+        ]
+      ]
+    },
+    {
+      "id": "208-1307",
+      "turn": 0,
+      "voice": "t-k-af-nova",
+      "written": "what's the state of charge",
+      "heard": "What's the state of charm?",
+      "lost": [
+        [
+          "device",
+          "charge"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

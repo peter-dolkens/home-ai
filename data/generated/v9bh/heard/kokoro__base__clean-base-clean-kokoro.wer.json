@@ -1,0 +1,186 @@
+{
+  "set": "kokoro__base__clean",
+  "stt": "base",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 18,
+  "words": 130,
+  "errors": 7,
+  "wer": 0.0538,
+  "exact": 0.7222,
+  "vocab_words": 48,
+  "vocab_errors": 4,
+  "vocab_wer": 0.0833,
+  "vocab": {
+    "room": {
+      "n": 18,
+      "err": 1,
+      "wer": 0.0556
+    },
+    "device": {
+      "n": 14,
+      "err": 3,
+      "wer": 0.2143
+    },
+    "person": {
+      "n": 3,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 0,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 13,
+      "err": 0,
+      "wer": 0.0
+    }
+  },
+  "meaning_changed": 0.1667,
+  "meaning_changed_n": 3,
+  "meaning_by_kind": {
+    "room": 0.0556,
+    "device": 0.1111,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 0.6388,
+    "p50": 0.6206,
+    "p90": 0.7661,
+    "rtf": 0.201,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nova": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sky": {
+      "turns": 3,
+      "wer": 0.2857,
+      "meaning_changed": 0.6667
+    },
+    "t-k-am-eric": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-liam": {
+      "turns": 1,
+      "wer": 0.1,
+      "meaning_changed": 1.0
+    },
+    "t-k-am-puck": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 1,
+      "wer": 0.125,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 1,
+      "wer": 0.125,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 3,
+      "wer": 0.0455,
+      "meaning_changed": 0.3333
+    },
+    "1.0": {
+      "turns": 9,
+      "wer": 0.0484,
+      "meaning_changed": 0.1111
+    },
+    "1.15": {
+      "turns": 6,
+      "wer": 0.0652,
+      "meaning_changed": 0.1667
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 18,
+      "wer": 0.0538,
+      "meaning_changed": 0.1667
+    }
+  },
+  "by_set": {
+    "kokoro__base__clean": {
+      "turns": 18,
+      "wer": 0.0538,
+      "meaning_changed": 0.1667
+    }
+  },
+  "samples": [
+    {
+      "id": "bbig-bundook_full-plan-31",
+      "turn": 0,
+      "voice": "t-k-am-liam",
+      "written": "hey house, did I leave the dining hall light on",
+      "heard": "Hey, how's did I leave the dining hall light on?",
+      "lost": [
+        [
+          "device",
+          "house"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1152",
+      "turn": 0,
+      "voice": "t-k-af-sky",
+      "written": "get the floodlight 2 on in here please",
+      "heard": "Get the flood light too on in here, please.",
+      "lost": [
+        [
+          "device",
+          "floodlight 2"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1152",
+      "turn": 1,
+      "voice": "t-k-af-sky",
+      "written": "Alfresco.",
+      "heard": "Nolfresco",
+      "lost": [
+        [
+          "room",
+          "alfresco"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

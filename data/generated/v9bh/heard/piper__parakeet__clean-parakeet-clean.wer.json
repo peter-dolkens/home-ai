@@ -1,0 +1,298 @@
+{
+  "set": "piper__parakeet__clean",
+  "stt": "parakeet",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 49,
+  "words": 320,
+  "errors": 33,
+  "wer": 0.1031,
+  "exact": 0.6327,
+  "vocab_words": 98,
+  "vocab_errors": 12,
+  "vocab_wer": 0.1224,
+  "vocab": {
+    "room": {
+      "n": 25,
+      "err": 2,
+      "wer": 0.08
+    },
+    "device": {
+      "n": 45,
+      "err": 9,
+      "wer": 0.2
+    },
+    "person": {
+      "n": 2,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 3,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 23,
+      "err": 1,
+      "wer": 0.0435
+    }
+  },
+  "meaning_changed": 0.1837,
+  "meaning_changed_n": 9,
+  "meaning_by_kind": {
+    "room": 0.0204,
+    "device": 0.1633,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0204
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 0.3355,
+    "p50": 0.3273,
+    "p90": 0.4312,
+    "rtf": 0.1302,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-ca-p302": {
+      "turns": 5,
+      "wer": 0.2963,
+      "meaning_changed": 0.6
+    },
+    "t-ie-p245": {
+      "turns": 3,
+      "wer": 0.05,
+      "meaning_changed": 0.0
+    },
+    "t-ie-p288": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-ld-p243": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-ni-p304": {
+      "turns": 5,
+      "wer": 0.0357,
+      "meaning_changed": 0.0
+    },
+    "t-nz-p335": {
+      "turns": 4,
+      "wer": 0.0571,
+      "meaning_changed": 0.0
+    },
+    "t-sc-p234": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-sc-p237": {
+      "turns": 4,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-se-p225": {
+      "turns": 4,
+      "wer": 0.05,
+      "meaning_changed": 0.25
+    },
+    "t-sm-prudence": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-sm-spike": {
+      "turns": 3,
+      "wer": 0.12,
+      "meaning_changed": 0.3333
+    },
+    "t-wa-p253": {
+      "turns": 3,
+      "wer": 0.0769,
+      "meaning_changed": 0.0
+    },
+    "t-yk-p267": {
+      "turns": 2,
+      "wer": 0.2143,
+      "meaning_changed": 0.0
+    },
+    "t-yk-p270": {
+      "turns": 3,
+      "wer": 0.125,
+      "meaning_changed": 0.3333
+    },
+    "t-za-p323": {
+      "turns": 2,
+      "wer": 0.2727,
+      "meaning_changed": 0.5
+    },
+    "t-za-p347": {
+      "turns": 6,
+      "wer": 0.1875,
+      "meaning_changed": 0.3333
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 8,
+      "wer": 0.0656,
+      "meaning_changed": 0.25
+    },
+    "1.0": {
+      "turns": 28,
+      "wer": 0.1,
+      "meaning_changed": 0.1429
+    },
+    "1.15": {
+      "turns": 13,
+      "wer": 0.1449,
+      "meaning_changed": 0.2308
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 49,
+      "wer": 0.1031,
+      "meaning_changed": 0.1837
+    }
+  },
+  "by_set": {
+    "piper__parakeet__clean": {
+      "turns": 49,
+      "wer": 0.1031,
+      "meaning_changed": 0.1837
+    }
+  },
+  "samples": [
+    {
+      "id": "bbig-bundook_full-plan-706",
+      "turn": 0,
+      "voice": "t-yk-p270",
+      "written": "Turn off the lights in the master bedroom and the battery shed",
+      "heard": "Turn off the light in the master bedroom and the buttery shed.",
+      "lost": [
+        [
+          "device",
+          "lights"
+        ],
+        [
+          "room",
+          "battery shed"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-271",
+      "turn": 0,
+      "voice": "t-ca-p302",
+      "written": "Kill the homepod in the master bedroom",
+      "heard": "Kill the home part in the master bedroom.",
+      "lost": [
+        [
+          "device",
+          "homepod"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-291",
+      "turn": 0,
+      "voice": "t-se-p225",
+      "written": "what's the solar forecast for tomorrow",
+      "heard": "What's the cell forecast for tomorrow?",
+      "lost": [
+        [
+          "device",
+          "solar"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-381",
+      "turn": 1,
+      "voice": "t-za-p347",
+      "written": "Yeah, unlock it.",
+      "heard": "Yeah, I'm like it.",
+      "lost": [
+        [
+          "command",
+          "unlock"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-583",
+      "turn": 0,
+      "voice": "t-za-p323",
+      "written": "Pop the lights on",
+      "heard": "Pop the light on.",
+      "lost": [
+        [
+          "device",
+          "lights"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-74",
+      "turn": 0,
+      "voice": "t-ca-p302",
+      "written": "right, turn on the orchard irrigation",
+      "heard": "White turned on the altar derogation.",
+      "lost": [
+        [
+          "device",
+          "orchard irrigation"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-892",
+      "turn": 0,
+      "voice": "t-ca-p302",
+      "written": "hey house, keep playing",
+      "heard": "Hey Haskeep playing.",
+      "lost": [
+        [
+          "device",
+          "house"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-981",
+      "turn": 0,
+      "voice": "t-sm-spike",
+      "written": "quick question, can you turn the batten lights off in the carport",
+      "heard": "Quick question. Can you turn the baton lights off in the car port?",
+      "lost": [
+        [
+          "device",
+          "batten lights"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1457",
+      "turn": 0,
+      "voice": "t-za-p347",
+      "written": "where's Amber got to right now",
+      "heard": "Where's Amber got to write now?",
+      "lost": [
+        [
+          "device",
+          "right"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

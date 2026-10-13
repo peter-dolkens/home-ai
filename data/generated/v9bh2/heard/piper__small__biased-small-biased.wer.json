@@ -1,0 +1,237 @@
+{
+  "set": "piper__small__biased",
+  "stt": "small",
+  "condition": "biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 42,
+  "words": 279,
+  "errors": 24,
+  "wer": 0.086,
+  "exact": 0.619,
+  "vocab_words": 97,
+  "vocab_errors": 6,
+  "vocab_wer": 0.0619,
+  "vocab": {
+    "room": {
+      "n": 29,
+      "err": 2,
+      "wer": 0.069
+    },
+    "device": {
+      "n": 37,
+      "err": 2,
+      "wer": 0.0541
+    },
+    "person": {
+      "n": 2,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 5,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 24,
+      "err": 2,
+      "wer": 0.0833
+    }
+  },
+  "meaning_changed": 0.119,
+  "meaning_changed_n": 5,
+  "meaning_by_kind": {
+    "room": 0.0476,
+    "device": 0.0238,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0476
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 4.2226,
+    "p50": 4.304,
+    "p90": 4.9501,
+    "rtf": 1.644,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-ca-p302": {
+      "turns": 4,
+      "wer": 0.0294,
+      "meaning_changed": 0.0
+    },
+    "t-ie-p245": {
+      "turns": 2,
+      "wer": 0.1429,
+      "meaning_changed": 0.5
+    },
+    "t-ie-p288": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-ni-p304": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-nz-p335": {
+      "turns": 5,
+      "wer": 0.1071,
+      "meaning_changed": 0.2
+    },
+    "t-sc-p234": {
+      "turns": 4,
+      "wer": 0.1905,
+      "meaning_changed": 0.25
+    },
+    "t-sc-p237": {
+      "turns": 3,
+      "wer": 0.2222,
+      "meaning_changed": 0.3333
+    },
+    "t-se-p225": {
+      "turns": 4,
+      "wer": 0.0667,
+      "meaning_changed": 0.0
+    },
+    "t-sm-prudence": {
+      "turns": 5,
+      "wer": 0.0323,
+      "meaning_changed": 0.0
+    },
+    "t-sm-spike": {
+      "turns": 2,
+      "wer": 0.1364,
+      "meaning_changed": 0.5
+    },
+    "t-wa-p253": {
+      "turns": 4,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-yk-p267": {
+      "turns": 1,
+      "wer": 0.4286,
+      "meaning_changed": 0.0
+    },
+    "t-yk-p270": {
+      "turns": 2,
+      "wer": 0.0909,
+      "meaning_changed": 0.0
+    },
+    "t-za-p323": {
+      "turns": 2,
+      "wer": 0.125,
+      "meaning_changed": 0.0
+    },
+    "t-za-p347": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 14,
+      "wer": 0.0707,
+      "meaning_changed": 0.1429
+    },
+    "1.0": {
+      "turns": 24,
+      "wer": 0.0875,
+      "meaning_changed": 0.0833
+    },
+    "1.15": {
+      "turns": 4,
+      "wer": 0.15,
+      "meaning_changed": 0.25
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 42,
+      "wer": 0.086,
+      "meaning_changed": 0.119
+    }
+  },
+  "by_set": {
+    "piper__small__biased": {
+      "turns": 42,
+      "wer": 0.086,
+      "meaning_changed": 0.119
+    }
+  },
+  "samples": [
+    {
+      "id": "bbig-bundook_full-plan-166-s2",
+      "turn": 0,
+      "voice": "t-ie-p245",
+      "written": "hey house, flick the light on please",
+      "heard": "Hey, House, flick the light and please.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-353-s2",
+      "turn": 0,
+      "voice": "t-sc-p237",
+      "written": "should I put the dryer on",
+      "heard": "Should I put the dry on?",
+      "lost": [
+        [
+          "device",
+          "dryer"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-449-s2",
+      "turn": 0,
+      "voice": "t-sc-p234",
+      "written": "Stick some Tame Impala on in the alfresco",
+      "heard": "Stick some team and pile around in the Alfresco.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-771-s2",
+      "turn": 1,
+      "voice": "t-nz-p335",
+      "written": "The master ensuite one.",
+      "heard": "The Master-in-suit one.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-785-s2",
+      "turn": 0,
+      "voice": "t-sm-spike",
+      "written": "hey, lights off in the master ensuite and the bathroom",
+      "heard": "Hey, lights off in the master-in-suit and the bathroom.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

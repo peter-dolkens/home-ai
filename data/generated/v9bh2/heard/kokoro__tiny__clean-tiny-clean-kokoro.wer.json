@@ -1,0 +1,237 @@
+{
+  "set": "kokoro__tiny__clean",
+  "stt": "tiny",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 45,
+  "words": 294,
+  "errors": 10,
+  "wer": 0.034,
+  "exact": 0.8,
+  "vocab_words": 91,
+  "vocab_errors": 5,
+  "vocab_wer": 0.0549,
+  "vocab": {
+    "room": {
+      "n": 30,
+      "err": 4,
+      "wer": 0.1333
+    },
+    "device": {
+      "n": 30,
+      "err": 1,
+      "wer": 0.0333
+    },
+    "person": {
+      "n": 5,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 3,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 23,
+      "err": 0,
+      "wer": 0.0
+    }
+  },
+  "meaning_changed": 0.1111,
+  "meaning_changed_n": 5,
+  "meaning_by_kind": {
+    "room": 0.0889,
+    "device": 0.0222,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 0.6969,
+    "p50": 0.7154,
+    "p90": 0.9542,
+    "rtf": 0.2238,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nicole": {
+      "turns": 4,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-nova": {
+      "turns": 4,
+      "wer": 0.0323,
+      "meaning_changed": 0.25
+    },
+    "t-k-af-sarah": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sky": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-eric": {
+      "turns": 2,
+      "wer": 0.1,
+      "meaning_changed": 0.5
+    },
+    "t-k-am-liam": {
+      "turns": 5,
+      "wer": 0.0882,
+      "meaning_changed": 0.2
+    },
+    "t-k-am-onyx": {
+      "turns": 3,
+      "wer": 0.1053,
+      "meaning_changed": 0.3333
+    },
+    "t-k-am-puck": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 7,
+      "wer": 0.0465,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 4,
+      "wer": 0.0435,
+      "meaning_changed": 0.25
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 13,
+      "wer": 0.0395,
+      "meaning_changed": 0.0769
+    },
+    "1.0": {
+      "turns": 18,
+      "wer": 0.0357,
+      "meaning_changed": 0.1667
+    },
+    "1.15": {
+      "turns": 14,
+      "wer": 0.0283,
+      "meaning_changed": 0.0714
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 45,
+      "wer": 0.034,
+      "meaning_changed": 0.1111
+    }
+  },
+  "by_set": {
+    "kokoro__tiny__clean": {
+      "turns": 45,
+      "wer": 0.034,
+      "meaning_changed": 0.1111
+    }
+  },
+  "samples": [
+    {
+      "id": "b320-9-s2",
+      "turn": 0,
+      "voice": "t-k-af-nova",
+      "written": "Close the blinds in the ensuite.",
+      "heard": "Close the blinds in the ensuit.",
+      "lost": [
+        [
+          "room",
+          "ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-231-s2",
+      "turn": 0,
+      "voice": "t-k-am-liam",
+      "written": "hey house, do you know where Amber is",
+      "heard": "Hey, hows do you know where Amber is?",
+      "lost": [
+        [
+          "device",
+          "house"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-442-s2",
+      "turn": 0,
+      "voice": "t-k-bf-emma-isabella",
+      "written": "can you lock the door in mudroom",
+      "heard": "Can you lock the door in Madroom?",
+      "lost": [
+        [
+          "room",
+          "mudroom"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-726-s2",
+      "turn": 0,
+      "voice": "t-k-am-eric",
+      "written": "Play it in Pete's office too.",
+      "heard": "Play it in Pizza Office, too.",
+      "lost": [
+        [
+          "room",
+          "petes office"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1426-s2",
+      "turn": 1,
+      "voice": "t-k-am-onyx",
+      "written": "The one in the guest ensuite.",
+      "heard": "the one in the guest and suit.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

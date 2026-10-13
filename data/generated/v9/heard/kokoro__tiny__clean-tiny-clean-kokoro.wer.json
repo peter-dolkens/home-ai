@@ -1,0 +1,441 @@
+{
+  "set": "kokoro__tiny__clean",
+  "stt": "tiny",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 251,
+  "words": 1513,
+  "errors": 90,
+  "wer": 0.0595,
+  "exact": 0.7849,
+  "vocab_words": 477,
+  "vocab_errors": 28,
+  "vocab_wer": 0.0587,
+  "vocab": {
+    "room": {
+      "n": 138,
+      "err": 8,
+      "wer": 0.058
+    },
+    "device": {
+      "n": 161,
+      "err": 9,
+      "wer": 0.0559
+    },
+    "person": {
+      "n": 19,
+      "err": 2,
+      "wer": 0.1053
+    },
+    "number": {
+      "n": 17,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 142,
+      "err": 9,
+      "wer": 0.0634
+    }
+  },
+  "meaning_changed": 0.0797,
+  "meaning_changed_n": 20,
+  "meaning_by_kind": {
+    "room": 0.0199,
+    "device": 0.0199,
+    "person": 0.008,
+    "number": 0.0,
+    "command": 0.0319
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 1.5582,
+    "p50": 1.2916,
+    "p90": 2.6883,
+    "rtf": 0.529,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nicole": {
+      "turns": 19,
+      "wer": 0.0465,
+      "meaning_changed": 0.1053
+    },
+    "t-k-af-nova": {
+      "turns": 16,
+      "wer": 0.1495,
+      "meaning_changed": 0.1875
+    },
+    "t-k-af-sarah": {
+      "turns": 18,
+      "wer": 0.049,
+      "meaning_changed": 0.1111
+    },
+    "t-k-af-sky": {
+      "turns": 16,
+      "wer": 0.0521,
+      "meaning_changed": 0.0625
+    },
+    "t-k-am-eric": {
+      "turns": 19,
+      "wer": 0.0777,
+      "meaning_changed": 0.0526
+    },
+    "t-k-am-liam": {
+      "turns": 17,
+      "wer": 0.0294,
+      "meaning_changed": 0.0588
+    },
+    "t-k-am-onyx": {
+      "turns": 19,
+      "wer": 0.0642,
+      "meaning_changed": 0.0526
+    },
+    "t-k-am-puck": {
+      "turns": 9,
+      "wer": 0.1111,
+      "meaning_changed": 0.2222
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 11,
+      "wer": 0.046,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 18,
+      "wer": 0.0682,
+      "meaning_changed": 0.1667
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 10,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 15,
+      "wer": 0.1023,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 23,
+      "wer": 0.0168,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 15,
+      "wer": 0.037,
+      "meaning_changed": 0.1333
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 12,
+      "wer": 0.0548,
+      "meaning_changed": 0.0833
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 14,
+      "wer": 0.0337,
+      "meaning_changed": 0.0714
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 53,
+      "wer": 0.0319,
+      "meaning_changed": 0.0377
+    },
+    "1.0": {
+      "turns": 134,
+      "wer": 0.0587,
+      "meaning_changed": 0.0746
+    },
+    "1.15": {
+      "turns": 64,
+      "wer": 0.0827,
+      "meaning_changed": 0.125
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 251,
+      "wer": 0.0595,
+      "meaning_changed": 0.0797
+    }
+  },
+  "by_set": {
+    "kokoro__tiny__clean": {
+      "turns": 251,
+      "wer": 0.0595,
+      "meaning_changed": 0.0797
+    }
+  },
+  "samples": [
+    {
+      "id": "206-2080",
+      "turn": 0,
+      "voice": "t-k-af-nova",
+      "written": "lock up",
+      "heard": "Lockup",
+      "lost": [
+        [
+          "command",
+          "lock"
+        ],
+        [
+          "command",
+          "up"
+        ]
+      ]
+    },
+    {
+      "id": "132-531",
+      "turn": 0,
+      "voice": "t-k-bm-george-daniel",
+      "written": "hey, what's our state of charge",
+      "heard": "Hey, what's our state of chan?",
+      "lost": [
+        [
+          "device",
+          "charge"
+        ]
+      ]
+    },
+    {
+      "id": "132-629",
+      "turn": 0,
+      "voice": "t-k-bf-emma-isabella",
+      "written": "hey house, how much solar tomorrow",
+      "heard": "Hey, how's how much solar tomorrow?",
+      "lost": [
+        [
+          "device",
+          "house"
+        ]
+      ]
+    },
+    {
+      "id": "201-369",
+      "turn": 0,
+      "voice": "t-k-af-nova",
+      "written": "Turn on the master ensuite lights and then turn off Amber's office homepod.",
+      "heard": "Turn on the master and suit lights and then turn off Amber's office home pod.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "201-635",
+      "turn": 0,
+      "voice": "t-k-bf-emma-isabella",
+      "written": "um, is now an okay time to put the dryer on",
+      "heard": "Um, is now an okay time to put the dryer.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "202-1425",
+      "turn": 0,
+      "voice": "t-k-af-sky",
+      "written": "What tune is this in the alfresco?",
+      "heard": "What tune is this in the old fresco?",
+      "lost": [
+        [
+          "room",
+          "alfresco"
+        ]
+      ]
+    },
+    {
+      "id": "204-55",
+      "turn": 0,
+      "voice": "t-k-bm-george-lewis",
+      "written": "Off out, see you later.",
+      "heard": "or out, see you later.",
+      "lost": [
+        [
+          "command",
+          "off"
+        ]
+      ]
+    },
+    {
+      "id": "205-1281",
+      "turn": 0,
+      "voice": "t-k-af-nicole",
+      "written": "hey house, i'm off to bed",
+      "heard": "He house, I'm after bed.",
+      "lost": [
+        [
+          "command",
+          "off"
+        ]
+      ]
+    },
+    {
+      "id": "206-1211",
+      "turn": 0,
+      "voice": "t-k-af-sarah",
+      "written": "is Peter in the guest ensuite",
+      "heard": "is Peter in the guest and suit.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "207-1738",
+      "turn": 0,
+      "voice": "t-k-am-puck",
+      "written": "pull the blinds shut",
+      "heard": "Pull the blind shot.",
+      "lost": [
+        [
+          "command",
+          "shut"
+        ]
+      ]
+    },
+    {
+      "id": "208-2287",
+      "turn": 0,
+      "voice": "t-k-bf-emma-isabella",
+      "written": "hey, is Amelia at the house",
+      "heard": "Hay is a mealier at the house.",
+      "lost": [
+        [
+          "person",
+          "amelia"
+        ]
+      ]
+    },
+    {
+      "id": "209-2465",
+      "turn": 0,
+      "voice": "t-k-am-puck",
+      "written": "unmute in the lounge",
+      "heard": "I'm meeting the lounge.",
+      "lost": [
+        [
+          "command",
+          "unmute"
+        ]
+      ]
+    },
+    {
+      "id": "209-2696",
+      "turn": 0,
+      "voice": "t-k-af-nova",
+      "written": "um, where is Elena",
+      "heard": "Um, where is Alina?",
+      "lost": [
+        [
+          "person",
+          "elena"
+        ]
+      ]
+    },
+    {
+      "id": "209-511",
+      "turn": 0,
+      "voice": "t-k-am-liam",
+      "written": "right, turn the fan on",
+      "heard": "Right turn the fan ons.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "abig-bundook_full-plan-1306",
+      "turn": 0,
+      "voice": "t-k-am-onyx",
+      "written": "hey house, all lights on thanks",
+      "heard": "Hey, how's all lights on things?",
+      "lost": [
+        [
+          "device",
+          "house"
+        ]
+      ]
+    },
+    {
+      "id": "abig-random-15000-819",
+      "turn": 0,
+      "voice": "t-k-af-sarah",
+      "written": "right, switch the dishwasher off please",
+      "heard": "Write, switch the dishwasher off, please.",
+      "lost": [
+        [
+          "device",
+          "right"
+        ]
+      ]
+    },
+    {
+      "id": "abig-random-6000-354",
+      "turn": 0,
+      "voice": "t-k-af-nicole",
+      "written": "switch the floodlight 2 off",
+      "heard": "Switch the floodlight too off.",
+      "lost": [
+        [
+          "device",
+          "floodlight 2"
+        ]
+      ]
+    },
+    {
+      "id": "v5a-810031-mixed-office-lights-alarm-arm",
+      "turn": 1,
+      "voice": "t-k-bm-lewis-fable",
+      "written": "arm it for home then",
+      "heard": "I'm it for home then.",
+      "lost": [
+        [
+          "command",
+          "arm"
+        ]
+      ]
+    },
+    {
+      "id": "v5light-159",
+      "turn": 1,
+      "voice": "t-k-bm-george-daniel",
+      "written": "Guest ensuite please.",
+      "heard": "guest and suit, please.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "v5light-78",
+      "turn": 1,
+      "voice": "t-k-am-eric",
+      "written": "Alfresco.",
+      "heard": "We'll fresco.",
+      "lost": [
+        [
+          "room",
+          "alfresco"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

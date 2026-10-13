@@ -1,0 +1,300 @@
+{
+  "set": "piper__small__farfield-biased",
+  "stt": "small",
+  "condition": "farfield-biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 30,
+  "words": 211,
+  "errors": 51,
+  "wer": 0.2417,
+  "exact": 0.4,
+  "vocab_words": 60,
+  "vocab_errors": 14,
+  "vocab_wer": 0.2333,
+  "vocab": {
+    "room": {
+      "n": 28,
+      "err": 3,
+      "wer": 0.1071
+    },
+    "device": {
+      "n": 14,
+      "err": 6,
+      "wer": 0.4286
+    },
+    "person": {
+      "n": 4,
+      "err": 2,
+      "wer": 0.5
+    },
+    "number": {
+      "n": 4,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 10,
+      "err": 3,
+      "wer": 0.3
+    }
+  },
+  "meaning_changed": 0.3333,
+  "meaning_changed_n": 10,
+  "meaning_by_kind": {
+    "room": 0.1,
+    "device": 0.1333,
+    "person": 0.0667,
+    "number": 0.0,
+    "command": 0.1
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 4.7475,
+    "p50": 4.904,
+    "p90": 5.306,
+    "rtf": 1.8237,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-ca-p302": {
+      "turns": 5,
+      "wer": 0.3871,
+      "meaning_changed": 0.4
+    },
+    "t-ie-p288": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-nz-p335": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-sc-p234": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-sc-p237": {
+      "turns": 3,
+      "wer": 0.28,
+      "meaning_changed": 0.0
+    },
+    "t-se-p225": {
+      "turns": 2,
+      "wer": 0.2,
+      "meaning_changed": 0.5
+    },
+    "t-sm-prudence": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-sm-spike": {
+      "turns": 4,
+      "wer": 0.1667,
+      "meaning_changed": 0.25
+    },
+    "t-wa-p253": {
+      "turns": 1,
+      "wer": 0.5,
+      "meaning_changed": 1.0
+    },
+    "t-yk-p267": {
+      "turns": 3,
+      "wer": 0.5455,
+      "meaning_changed": 0.6667
+    },
+    "t-yk-p270": {
+      "turns": 3,
+      "wer": 0.0278,
+      "meaning_changed": 0.0
+    },
+    "t-za-p323": {
+      "turns": 3,
+      "wer": 0.2609,
+      "meaning_changed": 0.6667
+    },
+    "t-za-p347": {
+      "turns": 1,
+      "wer": 0.5,
+      "meaning_changed": 1.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 5,
+      "wer": 0.3889,
+      "meaning_changed": 0.4
+    },
+    "1.0": {
+      "turns": 21,
+      "wer": 0.2282,
+      "meaning_changed": 0.3333
+    },
+    "1.15": {
+      "turns": 4,
+      "wer": 0.1154,
+      "meaning_changed": 0.25
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 30,
+      "wer": 0.2417,
+      "meaning_changed": 0.3333
+    }
+  },
+  "by_set": {
+    "piper__small__farfield-biased": {
+      "turns": 30,
+      "wer": 0.2417,
+      "meaning_changed": 0.3333
+    }
+  },
+  "samples": [
+    {
+      "id": "b300-3729",
+      "turn": 0,
+      "voice": "t-yk-p267",
+      "written": "is Nina in the living room",
+      "heard": "Disney Analysts Room",
+      "lost": [
+        [
+          "person",
+          "nina"
+        ],
+        [
+          "room",
+          "living room"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-3000-163",
+      "turn": 0,
+      "voice": "t-za-p323",
+      "written": "Did we leave the fan on in the office?",
+      "heard": "Did we need the panel in the office?",
+      "lost": [
+        [
+          "device",
+          "fan"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2180",
+      "turn": 0,
+      "voice": "t-wa-p253",
+      "written": "switch off the shark backup feed",
+      "heard": "Switch off the shirt pocket, Pete.",
+      "lost": [
+        [
+          "device",
+          "shark backup feed"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3529",
+      "turn": 0,
+      "voice": "t-za-p347",
+      "written": "volume to 25 in the office",
+      "heard": "Volume to 25 and now for...",
+      "lost": [
+        [
+          "room",
+          "office"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3768",
+      "turn": 0,
+      "voice": "t-yk-p267",
+      "written": "quick question, did Zoe head to the ensuite",
+      "heard": "Quick question, did Zoe hit an ensuit?",
+      "lost": [
+        [
+          "room",
+          "ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-10000-643",
+      "turn": 0,
+      "voice": "t-za-p323",
+      "written": "is the ute locked",
+      "heard": "Is that you blocked?",
+      "lost": [
+        [
+          "device",
+          "ute"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-10000-928",
+      "turn": 0,
+      "voice": "t-ca-p302",
+      "written": "um, where's Lucy right now",
+      "heard": "We'll see you right now.",
+      "lost": [
+        [
+          "person",
+          "lucy"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-10000-970",
+      "turn": 0,
+      "voice": "t-se-p225",
+      "written": "Run the herb garden sprinklers for 30 minutes.",
+      "heard": "Run the whole garden sprinklers for 30 minutes.",
+      "lost": [
+        [
+          "device",
+          "herb"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-15000-1295",
+      "turn": 0,
+      "voice": "t-ca-p302",
+      "written": "play some Taylor Swift in the scullery",
+      "heard": "Place into a certain Scullery.",
+      "lost": [
+        [
+          "command",
+          "play"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-6000-408",
+      "turn": 0,
+      "voice": "t-sm-spike",
+      "written": "close them blinds",
+      "heard": "Closed on the blinds.",
+      "lost": [
+        [
+          "command",
+          "close"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

@@ -81,4 +81,125 @@ agent = Agent(FakeLLM(), lambda: mock, execute_tool)
 reply = agent.chat("turn off the ceiling light", Speaker("Peter", LIGHT_AREA, "satellite"))
 assert reply == "Office ceiling is off." and light.state == "off", (reply, light.state)
 assert [m["role"] for m in agent.history] == ["user", "assistant", "tool", "assistant", "tool", "assistant"]
+
+# --- prompt layouts (homeai/house/snapshot.py relayout; v10 on trains "stable_prefix")
+import collections, os, tempfile
+from homeai import prompt_layout
+from homeai.house.snapshot import CONTEXT_HEAD, relayout, system_prompt_b
+sp_prompt = system_prompt(h, sp, "stable_prefix")
+assert sp_prompt.split("\n")[:2] == prompt.split("\n")[:2] and sp_prompt.split("\n")[-4] == CONTEXT_HEAD
+assert sp_prompt.split("\n")[-3].startswith("Now: ") and sp_prompt.split("\n")[-1].startswith("People: ")
+assert collections.Counter(sp_prompt.split("\n")) - collections.Counter(prompt.split("\n")) == collections.Counter([CONTEXT_HEAD])
+assert relayout(sp_prompt, "classic") == prompt and relayout(prompt, "stable_prefix") == sp_prompt == relayout(sp_prompt, "stable_prefix")
+assert relayout(system_prompt_b(h, sp), "stable_prefix") == system_prompt_b(h, sp, "stable_prefix")
+later = system_prompt(h, Speaker("Amber", None, "app"), "stable_prefix")
+assert len(os.path.commonprefix([sp_prompt, later])) > sp_prompt.index(CONTEXT_HEAD)  # a new speaker: only the block differs
+assert len(os.path.commonprefix([prompt, system_prompt(h, Speaker("Amber", None, "app"))])) < prompt.index("Areas")  # classic
+ex = {"id": "x", "messages": [{"role": "system", "content": prompt}, {"role": "user", "content": "hi"}]}
+assert prompt_layout.apply(ex, "stable_prefix")["messages"][0]["content"] == sp_prompt and prompt_layout.apply(ex, "classic") is ex
+from homeai.house.snapshot import relayout_messages
+conv = ex["messages"] + [{"role": "assistant", "content": "hello"}, {"role": "user", "content": "lights off"}]
+for x in prompt_layout.LAYOUTS:
+    for y in prompt_layout.LAYOUTS:  # every layout converts to every other and back
+        assert relayout_messages(relayout_messages(conv, x), y) == relayout_messages(conv, y), (x, y)
+uc_conv = relayout_messages(conv, "user_context")
+assert uc_conv[0]["content"] == sp_prompt[:sp_prompt.index("\n\n" + CONTEXT_HEAD)] and relayout_messages(uc_conv, "classic") == conv
+assert [m["content"].split("\n")[1] for m in uc_conv if m["role"] == "user"] == ["hi", "lights off"]
+# clock_in_user (v12): classic without the clock line, every user turn starts with "[now] <clock>"
+from homeai.house.snapshot import CLOCK_TAG, split_context, split_user
+now_line = next(l for l in prompt.split("\n") if l.startswith("Now: "))
+cu_conv = relayout_messages(conv, "clock_in_user")
+assert cu_conv[0]["content"] == prompt.replace(now_line + "\n", "") == relayout(prompt, "clock_in_user")
+assert cu_conv[0]["content"].split("\n")[2].startswith("Speaker: ") and "Now: " not in cu_conv[0]["content"]
+assert [m["content"] for m in cu_conv if m["role"] == "user"] == [CLOCK_TAG + now_line[5:] + "\n" + u for u in ("hi", "lights off")]
+assert relayout_messages(cu_conv, "clock_in_user") == cu_conv and relayout_messages(cu_conv, "classic") == conv
+assert relayout_messages(cu_conv, "user_context") == uc_conv and relayout_messages(uc_conv, "clock_in_user") == cu_conv
+assert relayout(cu_conv[0]["content"], "clock_in_user") == cu_conv[0]["content"]
+assert split_user("[now] is it 9 yet") == (None, "[now] is it 9 yet") and split_user("[now] \nhi")[0] is None  # no clock
+# per-turn contexts (as the bridge records them): each turn keeps its own clock, Speaker / People are the latest turn's
+ctx1 = split_context(prompt)[1]
+ctx2 = ["Now: Friday 23:59", "Speaker: Amber, via the app (home)", ctx1[2]]
+turns = [{**conv[1], "_context": ctx1}, conv[2], {**conv[3], "_context": ctx2}]
+cu2 = relayout_messages([conv[0]] + turns, "clock_in_user")
+assert [m["content"] for m in cu2 if m["role"] == "user"] == [CLOCK_TAG + now_line[5:] + "\nhi", CLOCK_TAG + "Friday 23:59\nlights off"]
+assert "\nSpeaker: Amber, via the app (home)\n" in cu2[0]["content"] and all("_context" not in m for m in cu2)
+assert relayout_messages(cu2, "classic")[0]["content"] == relayout_messages([conv[0]] + turns, "classic")[0]["content"]
+assert relayout_messages(relayout_messages([conv[0]] + turns, "user_context"), "clock_in_user") == cu2
+with tempfile.TemporaryDirectory() as t:
+    json.dump({"prompt_layout": "stable_prefix"}, open(t + "/cfg.json", "w"))
+    json.dump({"m-new": {"config": t + "/cfg.json"}, "m-old": {"config": None}}, open(t + "/models.json", "w"))
+    assert prompt_layout.for_model("m-new:latest", registry=t + "/models.json") == "stable_prefix"
+    assert prompt_layout.for_model("m-old", registry=t + "/models.json") == "classic"
+    assert prompt_layout.for_model("m-new", "classic", registry=t + "/models.json") == "classic"
+
+
+class Recorder(FakeLLM):
+    def __init__(self): super().__init__(); self.systems = []
+    def chat(self, messages, tools=None):
+        self.systems.append(messages[0]["content"])
+        return super().chat(messages, tools)
+
+
+light.state = "on"
+rec = Recorder()
+Agent(rec, lambda: mock, execute_tool, layout="stable_prefix").chat("turn off the ceiling light", Speaker("Peter", LIGHT_AREA, "satellite"))
+assert len(rec.systems) == 3 and len(set(rec.systems)) == 1 and CONTEXT_HEAD in rec.systems[0]  # built once per request
+
+# user_context (v11): a static system message; the latest user turn gets the current context line, earlier turns keep
+# the one they were sent with, and the history itself keeps bare utterances
+import datetime
+from homeai.house.snapshot import CONTEXT_TAG, split_context
+
+
+class Seen(FakeLLM):
+    def __init__(self): super().__init__(); self.calls = []
+    def chat(self, messages, tools=None):
+        self.calls.append(messages)
+        if self.n >= 3:
+            return {"role": "assistant", "content": "It's warm enough."}
+        return super().chat(messages, tools)
+
+
+light.state = "on"
+seen = Seen()
+uc = Agent(seen, lambda: mock, execute_tool, layout="user_context")
+uc.chat("turn off the ceiling light", Speaker("Peter", LIGHT_AREA, "satellite"))
+first = [m["content"] for m in seen.calls[0] if m["role"] == "user"]
+mock.now += datetime.timedelta(minutes=7)
+uc.chat("is it warm in here", Speaker("Amber", None, "app"))
+last = seen.calls[-1]
+users = [m["content"] for m in last if m["role"] == "user"]
+assert "Now: " not in last[0]["content"] and split_context(last[0]["content"])[1] == []
+assert users[0] == first[0] and users[0].startswith(CONTEXT_TAG) and "Speaker: Peter" in users[0]  # sent as before
+assert users[1].startswith(CONTEXT_TAG) and "Speaker: Amber" in users[1] and users[1].endswith("\nis it warm in here")
+assert users[0].split(" | ")[0] != users[1].split(" | ")[0]  # the clock moved on for the new turn only
+assert [m["content"] for m in uc.history if m["role"] == "user"] == ["turn off the ceiling light", "is it warm in here"]
+assert all("_context" not in m for c in seen.calls for m in c)  # nothing internal goes to the server
+
+# clock_in_user (v12): only the clock moves into the user turn. From the same satellite with nobody coming or going the
+# system message is byte-identical across requests (the cache resumes after it); earlier turns are re-sent byte for byte
+light.state = "on"
+seen = Seen()
+cu = Agent(seen, lambda: mock, execute_tool, layout="clock_in_user")
+here = Speaker("Peter", LIGHT_AREA, "satellite")
+cu.chat("turn off the ceiling light", here)
+first = seen.calls[0]
+mock.now += datetime.timedelta(minutes=7)
+n = len(seen.calls)
+cu.chat("is it warm in here", here)
+second, prev = seen.calls[n], seen.calls[n - 1]
+assert second[:len(prev)] == prev  # the whole last call of the first request, byte for byte, then its answer and the new turn
+assert second[0] == first[0] and "Now: " not in first[0]["content"] and "\nSpeaker: Peter, from " in first[0]["content"]
+assert len({c[0]["content"] for c in seen.calls}) == 1  # every round of both requests
+users = [m["content"] for m in second if m["role"] == "user"]
+assert users[0] == first[1]["content"] and users[0].startswith(CLOCK_TAG) and users[0].endswith("\nturn off the ceiling light")
+assert users[1].startswith(CLOCK_TAG) and users[1].endswith("\nis it warm in here") and users[0].split("\n")[0] != users[1].split("\n")[0]
+mock.now += datetime.timedelta(minutes=3)
+n = len(seen.calls)
+cu.chat("and in the kitchen", Speaker("Amber", None, "app"))  # another speaker: the system message follows them
+third, prev = seen.calls[n], seen.calls[n - 1]
+assert "\nSpeaker: Amber, via the app" in third[0]["content"] and third[0] != first[0] and third[1:len(prev)] == prev[1:]
+assert [m["content"] for m in third if m["role"] == "user"][:2] == users  # earlier turns still byte-identical
+assert [m["content"] for m in cu.history if m["role"] == "user"] == ["turn off the ceiling light", "is it warm in here", "and in the kitchen"]
+assert all("_context" not in m for c in seen.calls for m in c)
 print("\nbridge OK")

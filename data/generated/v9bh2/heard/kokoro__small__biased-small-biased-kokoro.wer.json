@@ -1,0 +1,185 @@
+{
+  "set": "kokoro__small__biased",
+  "stt": "small",
+  "condition": "biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 69,
+  "words": 452,
+  "errors": 6,
+  "wer": 0.0133,
+  "exact": 0.9275,
+  "vocab_words": 160,
+  "vocab_errors": 1,
+  "vocab_wer": 0.0063,
+  "vocab": {
+    "room": {
+      "n": 54,
+      "err": 1,
+      "wer": 0.0185
+    },
+    "device": {
+      "n": 56,
+      "err": 0,
+      "wer": 0.0
+    },
+    "person": {
+      "n": 7,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 6,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 37,
+      "err": 0,
+      "wer": 0.0
+    }
+  },
+  "meaning_changed": 0.0145,
+  "meaning_changed_n": 1,
+  "meaning_by_kind": {
+    "room": 0.0145,
+    "device": 0.0,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 3.6052,
+    "p50": 3.5969,
+    "p90": 4.2817,
+    "rtf": 1.1595,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nicole": {
+      "turns": 4,
+      "wer": 0.0385,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sarah": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sky": {
+      "turns": 1,
+      "wer": 0.5,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-eric": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-liam": {
+      "turns": 5,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-onyx": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-puck": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 5,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 6,
+      "wer": 0.0408,
+      "meaning_changed": 0.1667
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 7,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 4,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 12,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 8,
+      "wer": 0.02,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 1,
+      "wer": 0.3333,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 5,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 12,
+      "wer": 0.0133,
+      "meaning_changed": 0.0
+    },
+    "1.0": {
+      "turns": 43,
+      "wer": 0.0134,
+      "meaning_changed": 0.0233
+    },
+    "1.15": {
+      "turns": 14,
+      "wer": 0.0128,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 69,
+      "wer": 0.0133,
+      "meaning_changed": 0.0145
+    }
+  },
+  "by_set": {
+    "kokoro__small__biased": {
+      "turns": 69,
+      "wer": 0.0133,
+      "meaning_changed": 0.0145
+    }
+  },
+  "samples": [
+    {
+      "id": "bbig-bundook_full-plan-177-s2",
+      "turn": 0,
+      "voice": "t-k-bf-emma-isabella",
+      "written": "turn off the lights in the workshop and turn on the lights in the master ensuite",
+      "heard": "Turn off the lights in the workshop and turn on the lights in the master in suit.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

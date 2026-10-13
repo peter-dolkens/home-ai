@@ -1,0 +1,30 @@
+{
+  "model": "/Users/peter.dolkens/home-ai-falcon/stage/mlx/homeai-2b-lora-b-v2-mlx6",
+  "data": "data/generated/bigbench-b-bundook.jsonl",
+  "num_ctx": 8192,
+  "prompt_layout": "stable_prefix",
+  "group_by": "house",
+  "modes": {
+    "house": {
+      "groups": 3,
+      "requests": 23,
+      "cold_mean": 3.491,
+      "warm_mean": 4.358,
+      "cold_p50": 3.79,
+      "warm_p50": 4.223,
+      "warm_p90": 5.482,
+      "cold_eval_tokens": 2548,
+      "warm_eval_tokens": 2553.95,
+      "cold_prompt_s": null,
+      "warm_prompt_s": null,
+      "prompt_tokens": 2553.174,
+      "later_eval_tokens": 217.548,
+      "calls_per_request": 2.174
+    }
+  },
+  "seconds": 103.5,
+  "host": "falcon",
+  "hardware": "apple-m2pro",
+  "host_note": "falcon stream: mlx-lm==0.31.3 server, 6-bit g64, prompt cache on, design B tools, stable_prefix prompts",
+  "ollama": "http://127.0.0.1:11611/v1"
+}

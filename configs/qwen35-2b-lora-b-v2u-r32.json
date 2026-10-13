@@ -1,0 +1,21 @@
+{
+ "_comment": "2B B-v2u at LoRA rank 32 (5 Oct): the Mac's 2 s pick with twice the adapter rank (r 32, alpha 32), same data and recipe otherwise. LFM B-v7 at r32 beat r16 everywhere at the same speed (B sets 79.2 vs 76.9%, house typed 84.2 vs 82.9%, heard mean 75.4 vs 74.8%).",
+ "base_model": "Qwen/Qwen3.5-2B",
+ "hf_tokenizer": "Qwen/Qwen3.5-2B",
+ "ollama_template_from": "qwen3.5:2b",
+ "instruction_part": "<|im_start|>user\n",
+ "response_part": "<|im_start|>assistant\n",
+ "max_seq_len": 4608,
+ "lora_r": 32,
+ "lora_alpha": 32,
+ "epochs": 2,
+ "lr": 0.0002,
+ "batch_size": 1,
+ "grad_accum": 16,
+ "seed": 3407,
+ "train": "data/generated/train-b-v2.jsonl",
+ "val": "data/generated/val-b.jsonl",
+ "out": "outputs/qwen35-2b-lora-b-v2u-r32",
+ "load_in_4bit": false,
+ "prompt_layout": "user_context"
+}

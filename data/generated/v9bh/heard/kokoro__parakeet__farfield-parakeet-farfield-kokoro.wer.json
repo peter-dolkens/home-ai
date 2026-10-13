@@ -1,0 +1,253 @@
+{
+  "set": "kokoro__parakeet__farfield",
+  "stt": "parakeet",
+  "condition": "farfield",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 36,
+  "words": 226,
+  "errors": 21,
+  "wer": 0.0929,
+  "exact": 0.6389,
+  "vocab_words": 79,
+  "vocab_errors": 10,
+  "vocab_wer": 0.1266,
+  "vocab": {
+    "room": {
+      "n": 28,
+      "err": 7,
+      "wer": 0.25
+    },
+    "device": {
+      "n": 26,
+      "err": 2,
+      "wer": 0.0769
+    },
+    "person": {
+      "n": 2,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 8,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 15,
+      "err": 1,
+      "wer": 0.0667
+    }
+  },
+  "meaning_changed": 0.1944,
+  "meaning_changed_n": 7,
+  "meaning_by_kind": {
+    "room": 0.1389,
+    "device": 0.0278,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0278
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 0.2155,
+    "p50": 0.2184,
+    "p90": 0.2747,
+    "rtf": 0.0712,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nova": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sarah": {
+      "turns": 4,
+      "wer": 0.1,
+      "meaning_changed": 0.25
+    },
+    "t-k-af-sky": {
+      "turns": 5,
+      "wer": 0.0714,
+      "meaning_changed": 0.2
+    },
+    "t-k-am-eric": {
+      "turns": 2,
+      "wer": 0.2727,
+      "meaning_changed": 0.5
+    },
+    "t-k-am-liam": {
+      "turns": 4,
+      "wer": 0.0541,
+      "meaning_changed": 0.25
+    },
+    "t-k-am-onyx": {
+      "turns": 4,
+      "wer": 0.08,
+      "meaning_changed": 0.25
+    },
+    "t-k-am-puck": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 3,
+      "wer": 0.08,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 2,
+      "wer": 0.2308,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 2,
+      "wer": 0.1818,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 1,
+      "wer": 0.2857,
+      "meaning_changed": 1.0
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 4,
+      "wer": 0.1,
+      "meaning_changed": 0.25
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 10,
+      "wer": 0.1562,
+      "meaning_changed": 0.4
+    },
+    "1.0": {
+      "turns": 21,
+      "wer": 0.0462,
+      "meaning_changed": 0.0952
+    },
+    "1.15": {
+      "turns": 5,
+      "wer": 0.1562,
+      "meaning_changed": 0.2
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 36,
+      "wer": 0.0929,
+      "meaning_changed": 0.1944
+    }
+  },
+  "by_set": {
+    "kokoro__parakeet__farfield": {
+      "turns": 36,
+      "wer": 0.0929,
+      "meaning_changed": 0.1944
+    }
+  },
+  "samples": [
+    {
+      "id": "bbig-bundook_full-plan-639",
+      "turn": 0,
+      "voice": "t-k-am-onyx",
+      "written": "Are the guest ensuite blinds closed?",
+      "heard": "Are the guest end suit blinds closed?",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-943",
+      "turn": 0,
+      "voice": "t-k-bm-daniel-fable",
+      "written": "shut the blinds in the master ensuite",
+      "heard": "Shut the blinds in the mastering suit.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1173",
+      "turn": 0,
+      "voice": "t-k-am-liam",
+      "written": "Flick the pendant 6 on in dining hall",
+      "heard": "Flick the pendant sticks on in Dining Hall.",
+      "lost": [
+        [
+          "device",
+          "pendant 6"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1195",
+      "turn": 0,
+      "voice": "t-k-af-sarah",
+      "written": "Resume",
+      "heard": "Brazil",
+      "lost": [
+        [
+          "command",
+          "resume"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1331",
+      "turn": 1,
+      "voice": "t-k-af-sky",
+      "written": "The master ensuite one.",
+      "heard": "The Master ends Suit One.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1431",
+      "turn": 1,
+      "voice": "t-k-bm-george-lewis",
+      "written": "The one in the guest ensuite.",
+      "heard": "the one in the guest and suit.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1445",
+      "turn": 0,
+      "voice": "t-k-am-eric",
+      "written": "um, turn the master ensuite lights off",
+      "heard": "Um turned the master and sue lights off.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

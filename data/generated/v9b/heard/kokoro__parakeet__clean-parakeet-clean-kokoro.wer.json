@@ -1,0 +1,505 @@
+{
+  "set": "kokoro__parakeet__clean",
+  "stt": "parakeet",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 411,
+  "words": 2580,
+  "errors": 103,
+  "wer": 0.0399,
+  "exact": 0.82,
+  "vocab_words": 875,
+  "vocab_errors": 35,
+  "vocab_wer": 0.04,
+  "vocab": {
+    "room": {
+      "n": 261,
+      "err": 9,
+      "wer": 0.0345
+    },
+    "device": {
+      "n": 309,
+      "err": 9,
+      "wer": 0.0291
+    },
+    "person": {
+      "n": 35,
+      "err": 3,
+      "wer": 0.0857
+    },
+    "number": {
+      "n": 39,
+      "err": 5,
+      "wer": 0.1282
+    },
+    "command": {
+      "n": 231,
+      "err": 9,
+      "wer": 0.039
+    }
+  },
+  "meaning_changed": 0.0584,
+  "meaning_changed_n": 24,
+  "meaning_by_kind": {
+    "room": 0.0219,
+    "device": 0.0073,
+    "person": 0.0049,
+    "number": 0.0122,
+    "command": 0.0195
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 0.4423,
+    "p50": 0.4288,
+    "p90": 0.5756,
+    "rtf": 0.1469,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nicole": {
+      "turns": 40,
+      "wer": 0.0779,
+      "meaning_changed": 0.1
+    },
+    "t-k-af-nova": {
+      "turns": 20,
+      "wer": 0.0207,
+      "meaning_changed": 0.05
+    },
+    "t-k-af-sarah": {
+      "turns": 24,
+      "wer": 0.0461,
+      "meaning_changed": 0.125
+    },
+    "t-k-af-sky": {
+      "turns": 33,
+      "wer": 0.0424,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-eric": {
+      "turns": 22,
+      "wer": 0.0123,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-liam": {
+      "turns": 21,
+      "wer": 0.0707,
+      "meaning_changed": 0.0952
+    },
+    "t-k-am-onyx": {
+      "turns": 21,
+      "wer": 0.0873,
+      "meaning_changed": 0.0476
+    },
+    "t-k-am-puck": {
+      "turns": 22,
+      "wer": 0.0071,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 23,
+      "wer": 0.0282,
+      "meaning_changed": 0.087
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 31,
+      "wer": 0.0372,
+      "meaning_changed": 0.0323
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 23,
+      "wer": 0.0391,
+      "meaning_changed": 0.0435
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 23,
+      "wer": 0.0357,
+      "meaning_changed": 0.1304
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 30,
+      "wer": 0.0284,
+      "meaning_changed": 0.0667
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 24,
+      "wer": 0.0407,
+      "meaning_changed": 0.0833
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 35,
+      "wer": 0.0278,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 19,
+      "wer": 0.0394,
+      "meaning_changed": 0.1053
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 93,
+      "wer": 0.0288,
+      "meaning_changed": 0.0215
+    },
+    "1.0": {
+      "turns": 217,
+      "wer": 0.0373,
+      "meaning_changed": 0.0645
+    },
+    "1.15": {
+      "turns": 101,
+      "wer": 0.0577,
+      "meaning_changed": 0.0792
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 411,
+      "wer": 0.0399,
+      "meaning_changed": 0.0584
+    }
+  },
+  "by_set": {
+    "kokoro__parakeet__clean": {
+      "turns": 411,
+      "wer": 0.0399,
+      "meaning_changed": 0.0584
+    }
+  },
+  "samples": [
+    {
+      "id": "b300-3240",
+      "turn": 0,
+      "voice": "t-k-bm-george-daniel",
+      "written": "Start up ABC Classic in the master bedroom",
+      "heard": "Startup ABC Classic in the Master Bedroom.",
+      "lost": [
+        [
+          "command",
+          "start"
+        ],
+        [
+          "command",
+          "up"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-1785",
+      "turn": 1,
+      "voice": "t-k-af-nicole",
+      "written": "The master ensuite one.",
+      "heard": "The Master in Suit Won",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ],
+        [
+          "number",
+          "1"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-15000-1017",
+      "turn": 1,
+      "voice": "t-k-af-nicole",
+      "written": "The master ensuite one.",
+      "heard": "The Master in Suit Won",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ],
+        [
+          "number",
+          "1"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-6000-101986",
+      "turn": 0,
+      "voice": "t-k-am-onyx",
+      "written": "Heater on now",
+      "heard": "He duron now.",
+      "lost": [
+        [
+          "device",
+          "heater"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "b300-181",
+      "turn": 0,
+      "voice": "t-k-af-nicole",
+      "written": "Is the air fryer done?",
+      "heard": "is the heir friar dun.",
+      "lost": [
+        [
+          "device",
+          "air fryer"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2237",
+      "turn": 0,
+      "voice": "t-k-bm-daniel-fable",
+      "written": "Start the mirror lights in master ensuite",
+      "heard": "Start the mirror lights in master and suit.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2262",
+      "turn": 0,
+      "voice": "t-k-af-nova",
+      "written": "um, flick off the towel rail in the master ensuite",
+      "heard": "Um flick off the towel rail in the master and suit.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3909",
+      "turn": 0,
+      "voice": "t-k-bm-lewis-fable",
+      "written": "has anyone seen Elena",
+      "heard": "Has anyone seen Alina?",
+      "lost": [
+        [
+          "person",
+          "elena"
+        ]
+      ]
+    },
+    {
+      "id": "b300-726",
+      "turn": 1,
+      "voice": "t-k-bm-daniel-fable",
+      "written": "The one in the guest ensuite.",
+      "heard": "The one in the guest and suit.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "b300-749",
+      "turn": 1,
+      "voice": "t-k-bf-emma-isabella",
+      "written": "Amber's office one.",
+      "heard": "Amber's office won.",
+      "lost": [
+        [
+          "number",
+          "1"
+        ]
+      ]
+    },
+    {
+      "id": "b300-788",
+      "turn": 0,
+      "voice": "t-k-am-liam",
+      "written": "Towel rail off.",
+      "heard": "Towel railoffs",
+      "lost": [
+        [
+          "command",
+          "off"
+        ]
+      ]
+    },
+    {
+      "id": "b300-788",
+      "turn": 1,
+      "voice": "t-k-am-liam",
+      "written": "Guest ensuite please.",
+      "heard": "Guest and suit please.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "b300-964",
+      "turn": 1,
+      "voice": "t-k-af-sarah",
+      "written": "In the guest ensuite.",
+      "heard": "In the guest en suit.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1886",
+      "turn": 1,
+      "voice": "t-k-bm-george-daniel",
+      "written": "Master ensuite.",
+      "heard": "Master ensued.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-10000-675",
+      "turn": 0,
+      "voice": "t-k-bf-emma-lily",
+      "written": "um, did i lock byd shark",
+      "heard": "Um did I lockbide shark?",
+      "lost": [
+        [
+          "command",
+          "lock"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-10000-734",
+      "turn": 0,
+      "voice": "t-k-bm-lewis-fable",
+      "written": "quick question, has Elena got to the bedroom 6",
+      "heard": "Quick question, has Alina got to the bedroom six?",
+      "lost": [
+        [
+          "person",
+          "elena"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-15000-1193",
+      "turn": 1,
+      "voice": "t-k-bf-isabella-alice",
+      "written": "The master robe one.",
+      "heard": "The Master Robe Wand.",
+      "lost": [
+        [
+          "number",
+          "1"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-20000-1499",
+      "turn": 1,
+      "voice": "t-k-af-nicole",
+      "written": "The ensuite 2 one.",
+      "heard": "The End Suit Two One",
+      "lost": [
+        [
+          "room",
+          "ensuite 2"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-20000-1604",
+      "turn": 0,
+      "voice": "t-k-bf-isabella-alice",
+      "written": "Can you put the fan on?",
+      "heard": "Can you put the fan ons?",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-3000-125",
+      "turn": 0,
+      "voice": "t-k-bf-alice-lily",
+      "written": "hey house, stop the music everywhere",
+      "heard": "Hay House stopped the music everywhere.",
+      "lost": [
+        [
+          "command",
+          "stop"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-3000-212",
+      "turn": 0,
+      "voice": "t-k-af-sarah",
+      "written": "flick the lamp off",
+      "heard": "Flick the lamp offs.",
+      "lost": [
+        [
+          "command",
+          "off"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-6000-477",
+      "turn": 0,
+      "voice": "t-k-bf-alice-lily",
+      "written": "where's Kate got to right now",
+      "heard": "Where's Kate got to write now?",
+      "lost": [
+        [
+          "device",
+          "right"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-6000-535",
+      "turn": 1,
+      "voice": "t-k-bf-isabella-alice",
+      "written": "The driveway one.",
+      "heard": "The driveway once.",
+      "lost": [
+        [
+          "number",
+          "1"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-6000-552",
+      "turn": 0,
+      "voice": "t-k-af-sarah",
+      "written": "heater off",
+      "heard": "Heater offs",
+      "lost": [
+        [
+          "command",
+          "off"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

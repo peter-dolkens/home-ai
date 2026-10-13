@@ -1,0 +1,2370 @@
+{
+  "sets": {
+    "test-v2-e2e": "data/generated/test-v2.jsonl",
+    "wild-e2e": "data/generated/wild.jsonl",
+    "wild2-e2e": "data/generated/wild2.jsonl"
+  },
+  "root": "outputs/eval-cassowary",
+  "registry": "outputs/eval-cassowary/configs/models.json",
+  "champions": [
+    "homeai-4b-lora-v5",
+    "homeai-4b-lora-v7",
+    "homeai-4b-lora-v8",
+    "homeai-9b-v2",
+    "homeai-gemma4-e4b-v5",
+    "homeai-2b-lora-v5",
+    "homeai-lfm25-1.2b-lora-v5-fix2"
+  ],
+  "rows": [
+    {
+      "model": "qwen3.5:4b",
+      "method": "untuned",
+      "data": "-",
+      "train": [],
+      "host": "cassowary",
+      "sets": {
+        "wild-e2e": {
+          "all": {
+            "n": 409,
+            "pass": 0.5488997555012225
+          },
+          "clean": {
+            "n": 409,
+            "pass": 0.5488997555012225
+          },
+          "contaminated": {
+            "n": 0,
+            "pass": null
+          },
+          "strict_clean": {
+            "n": 409,
+            "pass": 0.5488997555012225
+          },
+          "dir": "eval/qwen3.5:4b-wild-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        }
+      },
+      "mean": {
+        "all": null,
+        "clean": null,
+        "contaminated": null,
+        "strict_clean": null
+      },
+      "rank": {
+        "all": null,
+        "clean": null,
+        "strict_clean": null
+      }
+    },
+    {
+      "model": "gemma4:e4b",
+      "method": "untuned",
+      "data": "-",
+      "train": [],
+      "host": "cassowary",
+      "sets": {
+        "wild-e2e": {
+          "all": {
+            "n": 409,
+            "pass": 0.6063569682151589
+          },
+          "clean": {
+            "n": 409,
+            "pass": 0.6063569682151589
+          },
+          "contaminated": {
+            "n": 0,
+            "pass": null
+          },
+          "strict_clean": {
+            "n": 409,
+            "pass": 0.6063569682151589
+          },
+          "dir": "eval/gemma4:e4b-wild-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        }
+      },
+      "mean": {
+        "all": null,
+        "clean": null,
+        "contaminated": null,
+        "strict_clean": null
+      },
+      "rank": {
+        "all": null,
+        "clean": null,
+        "strict_clean": null
+      }
+    },
+    {
+      "model": "lfm2.5-1.2b",
+      "method": "untuned",
+      "data": "-",
+      "train": [],
+      "host": "cassowary",
+      "sets": {
+        "wild-e2e": {
+          "all": {
+            "n": 409,
+            "pass": 0.3545232273838631
+          },
+          "clean": {
+            "n": 409,
+            "pass": 0.3545232273838631
+          },
+          "contaminated": {
+            "n": 0,
+            "pass": null
+          },
+          "strict_clean": {
+            "n": 409,
+            "pass": 0.3545232273838631
+          },
+          "dir": "eval/lfm2.5-1.2b-wild-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        }
+      },
+      "mean": {
+        "all": null,
+        "clean": null,
+        "contaminated": null,
+        "strict_clean": null
+      },
+      "rank": {
+        "all": null,
+        "clean": null,
+        "strict_clean": null
+      }
+    },
+    {
+      "model": "lfm2.5-350m",
+      "method": "untuned",
+      "data": "-",
+      "train": [],
+      "host": "cassowary",
+      "sets": {
+        "wild-e2e": {
+          "all": {
+            "n": 409,
+            "pass": 0.3154034229828851
+          },
+          "clean": {
+            "n": 409,
+            "pass": 0.3154034229828851
+          },
+          "contaminated": {
+            "n": 0,
+            "pass": null
+          },
+          "strict_clean": {
+            "n": 409,
+            "pass": 0.3154034229828851
+          },
+          "dir": "eval/lfm2.5-350m-wild-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        }
+      },
+      "mean": {
+        "all": null,
+        "clean": null,
+        "contaminated": null,
+        "strict_clean": null
+      },
+      "rank": {
+        "all": null,
+        "clean": null,
+        "strict_clean": null
+      }
+    },
+    {
+      "model": "lfm2.5-230m",
+      "method": "untuned",
+      "data": "-",
+      "train": [],
+      "host": "cassowary",
+      "sets": {
+        "wild-e2e": {
+          "all": {
+            "n": 409,
+            "pass": 0.3545232273838631
+          },
+          "clean": {
+            "n": 409,
+            "pass": 0.3545232273838631
+          },
+          "contaminated": {
+            "n": 0,
+            "pass": null
+          },
+          "strict_clean": {
+            "n": 409,
+            "pass": 0.3545232273838631
+          },
+          "dir": "eval/lfm2.5-230m-wild-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        }
+      },
+      "mean": {
+        "all": null,
+        "clean": null,
+        "contaminated": null,
+        "strict_clean": null
+      },
+      "rank": {
+        "all": null,
+        "clean": null,
+        "strict_clean": null
+      }
+    },
+    {
+      "model": "spark-x2.5-4b",
+      "method": "untuned",
+      "data": "-",
+      "train": [],
+      "host": "cassowary",
+      "sets": {
+        "wild-e2e": {
+          "all": {
+            "n": 409,
+            "pass": 0.5660146699266504
+          },
+          "clean": {
+            "n": 409,
+            "pass": 0.5660146699266504
+          },
+          "contaminated": {
+            "n": 0,
+            "pass": null
+          },
+          "strict_clean": {
+            "n": 409,
+            "pass": 0.5660146699266504
+          },
+          "dir": "eval/spark-x2.5-4b-wild-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        }
+      },
+      "mean": {
+        "all": null,
+        "clean": null,
+        "contaminated": null,
+        "strict_clean": null
+      },
+      "rank": {
+        "all": null,
+        "clean": null,
+        "strict_clean": null
+      }
+    },
+    {
+      "model": "homeai-4b-v2",
+      "method": "QLoRA",
+      "data": "v2",
+      "train": [
+        "data/generated/train.jsonl"
+      ],
+      "host": "cassowary",
+      "sets": {
+        "test-v2-e2e": {
+          "all": {
+            "n": 174,
+            "pass": 0.8879310344827587
+          },
+          "clean": {
+            "n": 83,
+            "pass": 0.9156626506024096
+          },
+          "contaminated": {
+            "n": 91,
+            "pass": 0.8626373626373627
+          },
+          "strict_clean": {
+            "n": 83,
+            "pass": 0.9156626506024096
+          },
+          "dir": "eval/homeai-4b-v2-testv2-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        },
+        "wild-e2e": {
+          "all": {
+            "n": 409,
+            "pass": 0.784841075794621
+          },
+          "clean": {
+            "n": 362,
+            "pass": 0.7679558011049724
+          },
+          "contaminated": {
+            "n": 47,
+            "pass": 0.9148936170212766
+          },
+          "strict_clean": {
+            "n": 353,
+            "pass": 0.7648725212464589
+          },
+          "dir": "eval/homeai-4b-v2-wild-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        },
+        "wild2-e2e": {
+          "all": {
+            "n": 344,
+            "pass": 0.815406976744186
+          },
+          "clean": {
+            "n": 300,
+            "pass": 0.8016666666666666
+          },
+          "contaminated": {
+            "n": 44,
+            "pass": 0.9090909090909091
+          },
+          "strict_clean": {
+            "n": 289,
+            "pass": 0.7975778546712803
+          },
+          "dir": "eval/homeai-4b-v2-wild2-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        }
+      },
+      "mean": {
+        "all": 0.8293930290071886,
+        "clean": 0.8284283727913495,
+        "contaminated": 0.8955406295831828,
+        "strict_clean": 0.8260376755067163
+      },
+      "rank": {
+        "all": 12,
+        "clean": 14,
+        "strict_clean": 14
+      }
+    },
+    {
+      "model": "homeai-9b-v2",
+      "method": "QLoRA",
+      "data": "v2",
+      "train": [
+        "data/generated/train.jsonl"
+      ],
+      "host": "cassowary",
+      "sets": {
+        "test-v2-e2e": {
+          "all": {
+            "n": 174,
+            "pass": 0.8879310344827587
+          },
+          "clean": {
+            "n": 83,
+            "pass": 0.9096385542168675
+          },
+          "contaminated": {
+            "n": 91,
+            "pass": 0.8681318681318682
+          },
+          "strict_clean": {
+            "n": 83,
+            "pass": 0.9096385542168675
+          },
+          "dir": "eval/homeai-9b-v2-testv2-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        },
+        "wild-e2e": {
+          "all": {
+            "n": 409,
+            "pass": 0.7885085574572127
+          },
+          "clean": {
+            "n": 362,
+            "pass": 0.7776243093922652
+          },
+          "contaminated": {
+            "n": 47,
+            "pass": 0.8723404255319149
+          },
+          "strict_clean": {
+            "n": 353,
+            "pass": 0.7747875354107648
+          },
+          "dir": "eval/homeai-9b-v2-wild-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        },
+        "wild2-e2e": {
+          "all": {
+            "n": 344,
+            "pass": 0.8343023255813954
+          },
+          "clean": {
+            "n": 300,
+            "pass": 0.8233333333333334
+          },
+          "contaminated": {
+            "n": 44,
+            "pass": 0.9090909090909091
+          },
+          "strict_clean": {
+            "n": 289,
+            "pass": 0.8200692041522492
+          },
+          "dir": "eval/homeai-9b-v2-wild2-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        }
+      },
+      "mean": {
+        "all": 0.8369139725071223,
+        "clean": 0.836865398980822,
+        "contaminated": 0.883187734251564,
+        "strict_clean": 0.8348317645932939
+      },
+      "rank": {
+        "all": 8,
+        "clean": 11,
+        "strict_clean": 11
+      }
+    },
+    {
+      "model": "homeai-4b-v4",
+      "method": "QLoRA",
+      "data": "v4",
+      "train": [
+        "data/generated/train-v4.jsonl"
+      ],
+      "host": "cassowary",
+      "sets": {
+        "test-v2-e2e": {
+          "all": {
+            "n": 174,
+            "pass": 0.8735632183908046
+          },
+          "clean": {
+            "n": 81,
+            "pass": 0.9320987654320988
+          },
+          "contaminated": {
+            "n": 93,
+            "pass": 0.8225806451612904
+          },
+          "strict_clean": {
+            "n": 81,
+            "pass": 0.9320987654320988
+          },
+          "dir": "eval/homeai-4b-v4-testv2-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        },
+        "wild-e2e": {
+          "all": {
+            "n": 409,
+            "pass": 0.7872860635696821
+          },
+          "clean": {
+            "n": 345,
+            "pass": 0.7855072463768116
+          },
+          "contaminated": {
+            "n": 64,
+            "pass": 0.796875
+          },
+          "strict_clean": {
+            "n": 335,
+            "pass": 0.7850746268656716
+          },
+          "dir": "eval/homeai-4b-v4-wild-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        },
+        "wild2-e2e": {
+          "all": {
+            "n": 344,
+            "pass": 0.8386627906976745
+          },
+          "clean": {
+            "n": 284,
+            "pass": 0.829225352112676
+          },
+          "contaminated": {
+            "n": 60,
+            "pass": 0.8833333333333333
+          },
+          "strict_clean": {
+            "n": 272,
+            "pass": 0.8290441176470589
+          },
+          "dir": "eval/homeai-4b-v4-wild2-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        }
+      },
+      "mean": {
+        "all": 0.8331706908860538,
+        "clean": 0.848943787973862,
+        "contaminated": 0.8342629928315413,
+        "strict_clean": 0.8487391699816098
+      },
+      "rank": {
+        "all": 11,
+        "clean": 7,
+        "strict_clean": 7
+      }
+    },
+    {
+      "model": "homeai-4b-lora-v2",
+      "method": "bf16 LoRA",
+      "data": "v2",
+      "train": [
+        "data/generated/train.jsonl"
+      ],
+      "host": "cassowary",
+      "sets": {
+        "test-v2-e2e": {
+          "all": {
+            "n": 174,
+            "pass": 0.8908045977011494
+          },
+          "clean": {
+            "n": 83,
+            "pass": 0.9216867469879518
+          },
+          "contaminated": {
+            "n": 91,
+            "pass": 0.8626373626373627
+          },
+          "strict_clean": {
+            "n": 83,
+            "pass": 0.9216867469879518
+          },
+          "dir": "eval/homeai-4b-lora-v2-testv2-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        },
+        "wild-e2e": {
+          "all": {
+            "n": 409,
+            "pass": 0.80440097799511
+          },
+          "clean": {
+            "n": 362,
+            "pass": 0.7983425414364641
+          },
+          "contaminated": {
+            "n": 47,
+            "pass": 0.851063829787234
+          },
+          "strict_clean": {
+            "n": 353,
+            "pass": 0.7960339943342776
+          },
+          "dir": "eval/homeai-4b-lora-v2-wild-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        },
+        "wild2-e2e": {
+          "all": {
+            "n": 344,
+            "pass": 0.813953488372093
+          },
+          "clean": {
+            "n": 300,
+            "pass": 0.8033333333333333
+          },
+          "contaminated": {
+            "n": 44,
+            "pass": 0.8863636363636364
+          },
+          "strict_clean": {
+            "n": 289,
+            "pass": 0.7993079584775087
+          },
+          "dir": "eval/homeai-4b-lora-v2-wild2-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        }
+      },
+      "mean": {
+        "all": 0.8363863546894508,
+        "clean": 0.8411208739192498,
+        "contaminated": 0.8666882762627445,
+        "strict_clean": 0.8390095665999127
+      },
+      "rank": {
+        "all": 9,
+        "clean": 9,
+        "strict_clean": 9
+      }
+    },
+    {
+      "model": "homeai-4b-rft1",
+      "method": "RFT on homeai-4b-lora-v2",
+      "data": "rft(v2)",
+      "train": [
+        "data/generated/train-rft1.jsonl",
+        "data/generated/train.jsonl"
+      ],
+      "host": "cassowary",
+      "sets": {
+        "test-v2-e2e": {
+          "all": {
+            "n": 174,
+            "pass": 0.8764367816091954
+          },
+          "clean": {
+            "n": 83,
+            "pass": 0.9216867469879518
+          },
+          "contaminated": {
+            "n": 91,
+            "pass": 0.8351648351648352
+          },
+          "strict_clean": {
+            "n": 83,
+            "pass": 0.9216867469879518
+          },
+          "dir": "eval/homeai-4b-rft1-testv2-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        },
+        "wild-e2e": {
+          "all": {
+            "n": 409,
+            "pass": 0.7775061124694377
+          },
+          "clean": {
+            "n": 358,
+            "pass": 0.7737430167597765
+          },
+          "contaminated": {
+            "n": 51,
+            "pass": 0.803921568627451
+          },
+          "strict_clean": {
+            "n": 351,
+            "pass": 0.7720797720797721
+          },
+          "dir": "eval/homeai-4b-rft1-wild-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        },
+        "wild2-e2e": {
+          "all": {
+            "n": 344,
+            "pass": 0.8066860465116279
+          },
+          "clean": {
+            "n": 296,
+            "pass": 0.793918918918919
+          },
+          "contaminated": {
+            "n": 48,
+            "pass": 0.8854166666666666
+          },
+          "strict_clean": {
+            "n": 286,
+            "pass": 0.7902097902097902
+          },
+          "dir": "eval/homeai-4b-rft1-wild2-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        }
+      },
+      "mean": {
+        "all": 0.8202096468634203,
+        "clean": 0.8297828942222157,
+        "contaminated": 0.8415010234863175,
+        "strict_clean": 0.8279921030925047
+      },
+      "rank": {
+        "all": 14,
+        "clean": 13,
+        "strict_clean": 13
+      }
+    },
+    {
+      "model": "homeai-4b-rft2",
+      "method": "RFT on homeai-4b-lora-v2 (strict facts, confirm sensitive)",
+      "data": "rft(v2)",
+      "train": [
+        "data/generated/train-rft2.jsonl",
+        "data/generated/train.jsonl"
+      ],
+      "host": "cassowary",
+      "sets": {
+        "test-v2-e2e": {
+          "all": {
+            "n": 174,
+            "pass": 0.896551724137931
+          },
+          "clean": {
+            "n": 83,
+            "pass": 0.9216867469879518
+          },
+          "contaminated": {
+            "n": 91,
+            "pass": 0.8736263736263736
+          },
+          "strict_clean": {
+            "n": 83,
+            "pass": 0.9216867469879518
+          },
+          "dir": "eval/homeai-4b-rft2-testv2-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        },
+        "wild-e2e": {
+          "all": {
+            "n": 409,
+            "pass": 0.7836185819070904
+          },
+          "clean": {
+            "n": 358,
+            "pass": 0.7779329608938548
+          },
+          "contaminated": {
+            "n": 51,
+            "pass": 0.8235294117647058
+          },
+          "strict_clean": {
+            "n": 351,
+            "pass": 0.7763532763532763
+          },
+          "dir": "eval/homeai-4b-rft2-wild-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        },
+        "wild2-e2e": {
+          "all": {
+            "n": 344,
+            "pass": 0.8270348837209303
+          },
+          "clean": {
+            "n": 296,
+            "pass": 0.8125
+          },
+          "contaminated": {
+            "n": 48,
+            "pass": 0.9166666666666666
+          },
+          "strict_clean": {
+            "n": 286,
+            "pass": 0.8094405594405595
+          },
+          "dir": "eval/homeai-4b-rft2-wild2-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        }
+      },
+      "mean": {
+        "all": 0.8357350632553172,
+        "clean": 0.8373732359606022,
+        "contaminated": 0.8712741506859154,
+        "strict_clean": 0.8358268609272624
+      },
+      "rank": {
+        "all": 10,
+        "clean": 10,
+        "strict_clean": 10
+      }
+    },
+    {
+      "model": "homeai-4b-v5",
+      "method": "QLoRA",
+      "data": "v5",
+      "train": [
+        "data/generated/train-v5.jsonl"
+      ],
+      "host": "cassowary",
+      "sets": {
+        "test-v2-e2e": {
+          "all": {
+            "n": 174,
+            "pass": 0.896551724137931
+          },
+          "clean": {
+            "n": 80,
+            "pass": 0.95625
+          },
+          "contaminated": {
+            "n": 94,
+            "pass": 0.8457446808510638
+          },
+          "strict_clean": {
+            "n": 80,
+            "pass": 0.95625
+          },
+          "dir": "eval/homeai-4b-v5-testv2-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        },
+        "wild-e2e": {
+          "all": {
+            "n": 409,
+            "pass": 0.8264058679706602
+          },
+          "clean": {
+            "n": 352,
+            "pass": 0.8238636363636364
+          },
+          "contaminated": {
+            "n": 57,
+            "pass": 0.8421052631578947
+          },
+          "strict_clean": {
+            "n": 343,
+            "pass": 0.8221574344023324
+          },
+          "dir": "eval/homeai-4b-v5-wild-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        },
+        "wild2-e2e": {
+          "all": {
+            "n": 344,
+            "pass": 0.877906976744186
+          },
+          "clean": {
+            "n": 299,
+            "pass": 0.8762541806020067
+          },
+          "contaminated": {
+            "n": 45,
+            "pass": 0.8888888888888888
+          },
+          "strict_clean": {
+            "n": 290,
+            "pass": 0.8724137931034482
+          },
+          "dir": "eval/homeai-4b-v5-wild2-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        }
+      },
+      "mean": {
+        "all": 0.8669548562842592,
+        "clean": 0.8854559389885477,
+        "contaminated": 0.8589129442992824,
+        "strict_clean": 0.8836070758352602
+      },
+      "rank": {
+        "all": 3,
+        "clean": 1,
+        "strict_clean": 2
+      }
+    },
+    {
+      "model": "homeai-gemma4-e4b-v2",
+      "method": "QLoRA (Gemma 4 E4B)",
+      "data": "v2",
+      "train": [
+        "data/generated/train.jsonl"
+      ],
+      "host": "cassowary",
+      "sets": {
+        "test-v2-e2e": {
+          "all": {
+            "n": 174,
+            "pass": 0.47126436781609193
+          },
+          "clean": {
+            "n": 83,
+            "pass": 0.39759036144578314
+          },
+          "contaminated": {
+            "n": 91,
+            "pass": 0.5384615384615384
+          },
+          "strict_clean": {
+            "n": 83,
+            "pass": 0.39759036144578314
+          },
+          "dir": "eval/homeai-gemma4-e4b-v2-testv2-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        },
+        "wild-e2e": {
+          "all": {
+            "n": 409,
+            "pass": 0.49877750611246946
+          },
+          "clean": {
+            "n": 362,
+            "pass": 0.47790055248618785
+          },
+          "contaminated": {
+            "n": 47,
+            "pass": 0.6595744680851063
+          },
+          "strict_clean": {
+            "n": 353,
+            "pass": 0.48441926345609065
+          },
+          "dir": "eval/homeai-gemma4-e4b-v2-wild-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        },
+        "wild2-e2e": {
+          "all": {
+            "n": 344,
+            "pass": 0.5174418604651163
+          },
+          "clean": {
+            "n": 300,
+            "pass": 0.4766666666666667
+          },
+          "contaminated": {
+            "n": 44,
+            "pass": 0.7954545454545454
+          },
+          "strict_clean": {
+            "n": 289,
+            "pass": 0.4740484429065744
+          },
+          "dir": "eval/homeai-gemma4-e4b-v2-wild2-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        }
+      },
+      "mean": {
+        "all": 0.49582791146455923,
+        "clean": 0.4507191935328792,
+        "contaminated": 0.6644968506670633,
+        "strict_clean": 0.4520193559361494
+      },
+      "rank": {
+        "all": 17,
+        "clean": 17,
+        "strict_clean": 17
+      }
+    },
+    {
+      "model": "homeai-4b-lora-v5",
+      "method": "bf16 LoRA",
+      "data": "v5",
+      "train": [
+        "data/generated/train-v5.jsonl"
+      ],
+      "host": "cassowary",
+      "sets": {
+        "test-v2-e2e": {
+          "all": {
+            "n": 174,
+            "pass": 0.9310344827586207
+          },
+          "clean": {
+            "n": 80,
+            "pass": 0.9625
+          },
+          "contaminated": {
+            "n": 94,
+            "pass": 0.9042553191489362
+          },
+          "strict_clean": {
+            "n": 80,
+            "pass": 0.9625
+          },
+          "dir": "eval/homeai-4b-lora-v5-testv2-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        },
+        "wild-e2e": {
+          "all": {
+            "n": 409,
+            "pass": 0.8190709046454768
+          },
+          "clean": {
+            "n": 352,
+            "pass": 0.8082386363636364
+          },
+          "contaminated": {
+            "n": 57,
+            "pass": 0.8859649122807017
+          },
+          "strict_clean": {
+            "n": 343,
+            "pass": 0.8061224489795918
+          },
+          "dir": "eval/homeai-4b-lora-v5-wild-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        },
+        "wild2-e2e": {
+          "all": {
+            "n": 344,
+            "pass": 0.8648255813953488
+          },
+          "clean": {
+            "n": 299,
+            "pass": 0.8612040133779264
+          },
+          "contaminated": {
+            "n": 45,
+            "pass": 0.8888888888888888
+          },
+          "strict_clean": {
+            "n": 290,
+            "pass": 0.8568965517241379
+          },
+          "dir": "eval/homeai-4b-lora-v5-wild2-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        }
+      },
+      "mean": {
+        "all": 0.8716436562664821,
+        "clean": 0.8773142165805209,
+        "contaminated": 0.8930363734395089,
+        "strict_clean": 0.8751730002345766
+      },
+      "rank": {
+        "all": 1,
+        "clean": 3,
+        "strict_clean": 3
+      }
+    },
+    {
+      "model": "homeai-4b-lora-v6",
+      "method": "bf16 LoRA",
+      "data": "v6",
+      "train": [
+        "data/generated/train-v6.jsonl"
+      ],
+      "host": "cassowary",
+      "sets": {
+        "test-v2-e2e": {
+          "all": {
+            "n": 174,
+            "pass": 0.8936781609195402
+          },
+          "clean": {
+            "n": 80,
+            "pass": 0.94375
+          },
+          "contaminated": {
+            "n": 94,
+            "pass": 0.851063829787234
+          },
+          "strict_clean": {
+            "n": 80,
+            "pass": 0.94375
+          },
+          "dir": "eval/homeai-4b-lora-v6-testv2-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        },
+        "wild-e2e": {
+          "all": {
+            "n": 409,
+            "pass": 0.8105134474327629
+          },
+          "clean": {
+            "n": 350,
+            "pass": 0.8128571428571428
+          },
+          "contaminated": {
+            "n": 59,
+            "pass": 0.7966101694915254
+          },
+          "strict_clean": {
+            "n": 339,
+            "pass": 0.8097345132743363
+          },
+          "dir": "eval/homeai-4b-lora-v6-wild-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        },
+        "wild2-e2e": {
+          "all": {
+            "n": 344,
+            "pass": 0.8386627906976745
+          },
+          "clean": {
+            "n": 298,
+            "pass": 0.8355704697986577
+          },
+          "contaminated": {
+            "n": 46,
+            "pass": 0.8586956521739131
+          },
+          "strict_clean": {
+            "n": 288,
+            "pass": 0.8298611111111112
+          },
+          "dir": "eval/homeai-4b-lora-v6-wild2-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        }
+      },
+      "mean": {
+        "all": 0.8476181330166592,
+        "clean": 0.8640592042186,
+        "contaminated": 0.8354565504842242,
+        "strict_clean": 0.8611152081284824
+      },
+      "rank": {
+        "all": 6,
+        "clean": 6,
+        "strict_clean": 6
+      }
+    },
+    {
+      "model": "homeai-lfm25-1.2b-lora-v5",
+      "method": "bf16 LoRA (LFM2.5 1.2b)",
+      "data": "v5",
+      "train": [
+        "data/generated/train-v5.jsonl"
+      ],
+      "host": "cassowary",
+      "sets": {
+        "test-v2-e2e": {
+          "all": {
+            "n": 174,
+            "pass": 0.1206896551724138
+          },
+          "clean": {
+            "n": 80,
+            "pass": 0.0875
+          },
+          "contaminated": {
+            "n": 94,
+            "pass": 0.14893617021276595
+          },
+          "strict_clean": {
+            "n": 80,
+            "pass": 0.0875
+          },
+          "dir": "eval/homeai-lfm25-1.2b-lora-v5-testv2-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        },
+        "wild-e2e": {
+          "all": {
+            "n": 409,
+            "pass": 0.1100244498777506
+          },
+          "clean": {
+            "n": 352,
+            "pass": 0.08806818181818182
+          },
+          "contaminated": {
+            "n": 57,
+            "pass": 0.24561403508771928
+          },
+          "strict_clean": {
+            "n": 343,
+            "pass": 0.09037900874635568
+          },
+          "dir": "eval/homeai-lfm25-1.2b-lora-v5-wild-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        },
+        "wild2-e2e": {
+          "all": {
+            "n": 344,
+            "pass": 0.10174418604651163
+          },
+          "clean": {
+            "n": 299,
+            "pass": 0.07023411371237458
+          },
+          "contaminated": {
+            "n": 45,
+            "pass": 0.3111111111111111
+          },
+          "strict_clean": {
+            "n": 290,
+            "pass": 0.07241379310344828
+          },
+          "dir": "eval/homeai-lfm25-1.2b-lora-v5-wild2-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        }
+      },
+      "mean": {
+        "all": 0.11081943036555868,
+        "clean": 0.08193409851018546,
+        "contaminated": 0.23522043880386545,
+        "strict_clean": 0.08343093394993466
+      },
+      "rank": {
+        "all": 20,
+        "clean": 20,
+        "strict_clean": 20
+      }
+    },
+    {
+      "model": "homeai-lfm25-350m-lora-v5",
+      "method": "bf16 LoRA (LFM2.5 350m)",
+      "data": "v5",
+      "train": [
+        "data/generated/train-v5.jsonl"
+      ],
+      "host": "cassowary",
+      "sets": {
+        "test-v2-e2e": {
+          "all": {
+            "n": 174,
+            "pass": 0.35919540229885055
+          },
+          "clean": {
+            "n": 80,
+            "pass": 0.33125
+          },
+          "contaminated": {
+            "n": 94,
+            "pass": 0.3829787234042553
+          },
+          "strict_clean": {
+            "n": 80,
+            "pass": 0.33125
+          },
+          "dir": "eval/homeai-lfm25-350m-lora-v5-testv2-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        },
+        "wild-e2e": {
+          "all": {
+            "n": 409,
+            "pass": 0.3973105134474328
+          },
+          "clean": {
+            "n": 352,
+            "pass": 0.3693181818181818
+          },
+          "contaminated": {
+            "n": 57,
+            "pass": 0.5701754385964912
+          },
+          "strict_clean": {
+            "n": 343,
+            "pass": 0.3673469387755102
+          },
+          "dir": "eval/homeai-lfm25-350m-lora-v5-wild-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        },
+        "wild2-e2e": {
+          "all": {
+            "n": 344,
+            "pass": 0.3546511627906977
+          },
+          "clean": {
+            "n": 299,
+            "pass": 0.3277591973244147
+          },
+          "contaminated": {
+            "n": 45,
+            "pass": 0.5333333333333333
+          },
+          "strict_clean": {
+            "n": 290,
+            "pass": 0.32413793103448274
+          },
+          "dir": "eval/homeai-lfm25-350m-lora-v5-wild2-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        }
+      },
+      "mean": {
+        "all": 0.37038569284566036,
+        "clean": 0.34277579304753214,
+        "contaminated": 0.49549583177802664,
+        "strict_clean": 0.34091162326999763
+      },
+      "rank": {
+        "all": 19,
+        "clean": 19,
+        "strict_clean": 19
+      }
+    },
+    {
+      "model": "homeai-lfm25-230m-lora-v5",
+      "method": "bf16 LoRA (LFM2.5 230m)",
+      "data": "v5",
+      "train": [
+        "data/generated/train-v5.jsonl"
+      ],
+      "host": "cassowary",
+      "sets": {
+        "test-v2-e2e": {
+          "all": {
+            "n": 174,
+            "pass": 0.40229885057471265
+          },
+          "clean": {
+            "n": 80,
+            "pass": 0.425
+          },
+          "contaminated": {
+            "n": 94,
+            "pass": 0.3829787234042553
+          },
+          "strict_clean": {
+            "n": 80,
+            "pass": 0.425
+          },
+          "dir": "eval/homeai-lfm25-230m-lora-v5-testv2-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        },
+        "wild-e2e": {
+          "all": {
+            "n": 409,
+            "pass": 0.3960880195599022
+          },
+          "clean": {
+            "n": 352,
+            "pass": 0.35511363636363635
+          },
+          "contaminated": {
+            "n": 57,
+            "pass": 0.6491228070175439
+          },
+          "strict_clean": {
+            "n": 343,
+            "pass": 0.358600583090379
+          },
+          "dir": "eval/homeai-lfm25-230m-lora-v5-wild-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        },
+        "wild2-e2e": {
+          "all": {
+            "n": 344,
+            "pass": 0.3953488372093023
+          },
+          "clean": {
+            "n": 299,
+            "pass": 0.3712374581939799
+          },
+          "contaminated": {
+            "n": 45,
+            "pass": 0.5555555555555556
+          },
+          "strict_clean": {
+            "n": 290,
+            "pass": 0.36551724137931035
+          },
+          "dir": "eval/homeai-lfm25-230m-lora-v5-wild2-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        }
+      },
+      "mean": {
+        "all": 0.3979119024479724,
+        "clean": 0.38378369818587205,
+        "contaminated": 0.5292190286591182,
+        "strict_clean": 0.3830392748232298
+      },
+      "rank": {
+        "all": 18,
+        "clean": 18,
+        "strict_clean": 18
+      }
+    },
+    {
+      "model": "homeai-spark-x25-4b-lora-v5",
+      "method": "bf16 LoRA (Spark X2.5 4B, transformers+PEFT)",
+      "data": "v5",
+      "train": [
+        "data/generated/train-v5.jsonl"
+      ],
+      "host": "cassowary",
+      "sets": {
+        "test-v2-e2e": {
+          "all": {
+            "n": 174,
+            "pass": 0.9252873563218391
+          },
+          "clean": {
+            "n": 80,
+            "pass": 0.9625
+          },
+          "contaminated": {
+            "n": 94,
+            "pass": 0.8936170212765957
+          },
+          "strict_clean": {
+            "n": 80,
+            "pass": 0.9625
+          },
+          "dir": "eval/homeai-spark-x25-4b-lora-v5-testv2-e2e",
+          "from": "turns.jsonl",
+          "matches_report": true
+        },
+        "wild-e2e": {
+          "all": {
+            "n": 409,
+            "pass": 0.8276283618581907
+          },
+          "clean": {
+            "n": 352,
+            "pass": 0.8110795454545454
+          },
+          "contaminated": {
+            "n": 57,
+            "pass": 0.9298245614035088
+          },
+          "strict_clean": {
+            "n": 343,
+            "pass": 0.8090379008746356
+          },
+          "dir": "eval/homeai-spark-x25-4b-lora-v5-wild-e2e",
+          "from": "turns.jsonl",
+          "matches_report": true
+        },
+        "wild2-e2e": {
+          "all": {
+            "n": 344,
+            "pass": 0.8284883720930233
+          },
+          "clean": {
+            "n": 299,
+            "pass": 0.8260869565217391
+          },
+          "contaminated": {
+            "n": 45,
+            "pass": 0.8444444444444444
+          },
+          "strict_clean": {
+            "n": 290,
+            "pass": 0.8241379310344827
+          },
+          "dir": "eval/homeai-spark-x25-4b-lora-v5-wild2-e2e",
+          "from": "turns.jsonl",
+          "matches_report": true
+        }
+      },
+      "mean": {
+        "all": 0.8604680300910177,
+        "clean": 0.8665555006587615,
+        "contaminated": 0.8892953423748496,
+        "strict_clean": 0.8652252773030394
+      },
+      "rank": {
+        "all": 4,
+        "clean": 5,
+        "strict_clean": 5
+      }
+    },
+    {
+      "model": "homeai-gemma4-e4b-v5",
+      "method": "QLoRA (Gemma 4 E4B, tool-response mask fixed)",
+      "data": "v5",
+      "train": [
+        "data/generated/train-v5.jsonl"
+      ],
+      "host": "cassowary",
+      "sets": {
+        "test-v2-e2e": {
+          "all": {
+            "n": 174,
+            "pass": 0.8735632183908046
+          },
+          "clean": {
+            "n": 80,
+            "pass": 0.9375
+          },
+          "contaminated": {
+            "n": 94,
+            "pass": 0.8191489361702128
+          },
+          "strict_clean": {
+            "n": 80,
+            "pass": 0.9375
+          },
+          "dir": "eval/homeai-gemma4-e4b-v5-testv2-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        },
+        "wild-e2e": {
+          "all": {
+            "n": 409,
+            "pass": 0.8019559902200489
+          },
+          "clean": {
+            "n": 352,
+            "pass": 0.7784090909090909
+          },
+          "contaminated": {
+            "n": 57,
+            "pass": 0.9473684210526315
+          },
+          "strict_clean": {
+            "n": 343,
+            "pass": 0.7755102040816326
+          },
+          "dir": "eval/homeai-gemma4-e4b-v5-wild-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        },
+        "wild2-e2e": {
+          "all": {
+            "n": 344,
+            "pass": 0.8372093023255814
+          },
+          "clean": {
+            "n": 299,
+            "pass": 0.822742474916388
+          },
+          "contaminated": {
+            "n": 45,
+            "pass": 0.9333333333333333
+          },
+          "strict_clean": {
+            "n": 290,
+            "pass": 0.8206896551724138
+          },
+          "dir": "eval/homeai-gemma4-e4b-v5-wild2-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        }
+      },
+      "mean": {
+        "all": 0.837576170312145,
+        "clean": 0.8462171886084929,
+        "contaminated": 0.8999502301853926,
+        "strict_clean": 0.8445666197513488
+      },
+      "rank": {
+        "all": 7,
+        "clean": 8,
+        "strict_clean": 8
+      }
+    },
+    {
+      "model": "homeai-4b-lora-v7",
+      "method": "bf16 LoRA",
+      "data": "v7",
+      "train": [
+        "data/generated/train-v7.jsonl"
+      ],
+      "host": "cassowary",
+      "sets": {
+        "test-v2-e2e": {
+          "all": {
+            "n": 174,
+            "pass": 0.8908045977011494
+          },
+          "clean": {
+            "n": 80,
+            "pass": 0.95625
+          },
+          "contaminated": {
+            "n": 94,
+            "pass": 0.8351063829787234
+          },
+          "strict_clean": {
+            "n": 80,
+            "pass": 0.95625
+          },
+          "dir": "eval/homeai-4b-lora-v7-testv2-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        },
+        "wild-e2e": {
+          "all": {
+            "n": 409,
+            "pass": 0.8202933985330073
+          },
+          "clean": {
+            "n": 352,
+            "pass": 0.8139204545454546
+          },
+          "contaminated": {
+            "n": 57,
+            "pass": 0.8596491228070176
+          },
+          "strict_clean": {
+            "n": 343,
+            "pass": 0.8119533527696793
+          },
+          "dir": "eval/homeai-4b-lora-v7-wild-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        },
+        "wild2-e2e": {
+          "all": {
+            "n": 344,
+            "pass": 0.8604651162790697
+          },
+          "clean": {
+            "n": 299,
+            "pass": 0.8612040133779264
+          },
+          "contaminated": {
+            "n": 45,
+            "pass": 0.8555555555555555
+          },
+          "strict_clean": {
+            "n": 290,
+            "pass": 0.8568965517241379
+          },
+          "dir": "eval/homeai-4b-lora-v7-wild2-e2e",
+          "from": "failures.jsonl",
+          "matches_report": true
+        }
+      },
+      "mean": {
+        "all": 0.8571877041710755,
+        "clean": 0.877124822641127,
+        "contaminated": 0.8501036871137654,
+        "strict_clean": 0.8750333014979391
+      },
+      "rank": {
+        "all": 5,
+        "clean": 4,
+        "strict_clean": 4
+      }
+    },
+    {
+      "model": "homeai-2b-lora-v5",
+      "method": "bf16 LoRA (Qwen3.5-2B, design E fast model)",
+      "data": "v5",
+      "train": [
+        "data/generated/train-v5.jsonl"
+      ],
+      "host": "lapwing",
+      "sets": {
+        "test-v2-e2e": {
+          "all": {
+            "n": 174,
+            "pass": 0.896551724137931
+          },
+          "clean": {
+            "n": 80,
+            "pass": 0.91875
+          },
+          "contaminated": {
+            "n": 94,
+            "pass": 0.8776595744680851
+          },
+          "strict_clean": {
+            "n": 80,
+            "pass": 0.91875
+          },
+          "dir": "eval-lapwing/homeai-2b-lora-v5-testv2-e2e",
+          "from": "turns.jsonl",
+          "matches_report": true
+        },
+        "wild-e2e": {
+          "all": {
+            "n": 409,
+            "pass": 0.7775061124694377
+          },
+          "clean": {
+            "n": 352,
+            "pass": 0.7670454545454546
+          },
+          "contaminated": {
+            "n": 57,
+            "pass": 0.8421052631578947
+          },
+          "strict_clean": {
+            "n": 343,
+            "pass": 0.7638483965014577
+          },
+          "dir": "eval-lapwing/homeai-2b-lora-v5-wild-e2e",
+          "from": "turns.jsonl",
+          "matches_report": true
+        },
+        "wild2-e2e": {
+          "all": {
+            "n": 344,
+            "pass": 0.8125
+          },
+          "clean": {
+            "n": 299,
+            "pass": 0.8076923076923077
+          },
+          "contaminated": {
+            "n": 45,
+            "pass": 0.8444444444444444
+          },
+          "strict_clean": {
+            "n": 290,
+            "pass": 0.8051724137931034
+          },
+          "dir": "eval-lapwing/homeai-2b-lora-v5-wild2-e2e",
+          "from": "turns.jsonl",
+          "matches_report": true
+        }
+      },
+      "mean": {
+        "all": 0.8288526122024562,
+        "clean": 0.8311625874125874,
+        "contaminated": 0.8547364273568081,
+        "strict_clean": 0.8292569367648537
+      },
+      "rank": {
+        "all": 13,
+        "clean": 12,
+        "strict_clean": 12
+      }
+    },
+    {
+      "model": "homeai-4b-lora-v8",
+      "method": "bf16 LoRA, 8k sequences",
+      "data": "v8",
+      "train": [
+        "data/generated/train-v8.jsonl"
+      ],
+      "host": "cassowary",
+      "sets": {
+        "test-v2-e2e": {
+          "all": {
+            "n": 174,
+            "pass": 0.9195402298850575
+          },
+          "clean": {
+            "n": 77,
+            "pass": 0.9675324675324676
+          },
+          "contaminated": {
+            "n": 97,
+            "pass": 0.8814432989690721
+          },
+          "strict_clean": {
+            "n": 77,
+            "pass": 0.9675324675324676
+          },
+          "dir": "eval/homeai-4b-lora-v8-testv2-e2e",
+          "from": "turns.jsonl",
+          "matches_report": true
+        },
+        "wild-e2e": {
+          "all": {
+            "n": 409,
+            "pass": 0.8276283618581907
+          },
+          "clean": {
+            "n": 351,
+            "pass": 0.8319088319088319
+          },
+          "contaminated": {
+            "n": 58,
+            "pass": 0.8017241379310345
+          },
+          "strict_clean": {
+            "n": 341,
+            "pass": 0.8299120234604106
+          },
+          "dir": "eval/homeai-4b-lora-v8-wild-e2e",
+          "from": "turns.jsonl",
+          "matches_report": true
+        },
+        "wild2-e2e": {
+          "all": {
+            "n": 344,
+            "pass": 0.8561046511627907
+          },
+          "clean": {
+            "n": 297,
+            "pass": 0.8569023569023569
+          },
+          "contaminated": {
+            "n": 47,
+            "pass": 0.851063829787234
+          },
+          "strict_clean": {
+            "n": 286,
+            "pass": 0.8548951048951049
+          },
+          "dir": "eval/homeai-4b-lora-v8-wild2-e2e",
+          "from": "turns.jsonl",
+          "matches_report": true
+        }
+      },
+      "mean": {
+        "all": 0.8677577476353463,
+        "clean": 0.8854478854478854,
+        "contaminated": 0.844743755562447,
+        "strict_clean": 0.8841131986293277
+      },
+      "rank": {
+        "all": 2,
+        "clean": 2,
+        "strict_clean": 1
+      }
+    },
+    {
+      "model": "homeai-lfm25-1.2b-lora-v5-fix",
+      "method": "bf16 LoRA (LFM2.5 1.2b, LFM2 module names)",
+      "data": "v5",
+      "train": [
+        "data/generated/train-v5.jsonl"
+      ],
+      "host": "lapwing",
+      "sets": {
+        "test-v2-e2e": {
+          "all": {
+            "n": 174,
+            "pass": 0.13793103448275862
+          },
+          "clean": {
+            "n": 80,
+            "pass": 0.0875
+          },
+          "contaminated": {
+            "n": 94,
+            "pass": 0.18085106382978725
+          },
+          "strict_clean": {
+            "n": 80,
+            "pass": 0.0875
+          },
+          "dir": "eval-lapwing/homeai-lfm25-1.2b-lora-v5-fix-testv2-e2e",
+          "from": "turns.jsonl",
+          "matches_report": true
+        },
+        "wild-e2e": {
+          "all": {
+            "n": 409,
+            "pass": 0.10757946210268948
+          },
+          "clean": {
+            "n": 352,
+            "pass": 0.07670454545454546
+          },
+          "contaminated": {
+            "n": 57,
+            "pass": 0.2982456140350877
+          },
+          "strict_clean": {
+            "n": 343,
+            "pass": 0.07871720116618076
+          },
+          "dir": "eval-lapwing/homeai-lfm25-1.2b-lora-v5-fix-wild-e2e",
+          "from": "turns.jsonl",
+          "matches_report": true
+        },
+        "wild2-e2e": {
+          "all": {
+            "n": 344,
+            "pass": 0.07848837209302326
+          },
+          "clean": {
+            "n": 299,
+            "pass": 0.043478260869565216
+          },
+          "contaminated": {
+            "n": 45,
+            "pass": 0.3111111111111111
+          },
+          "strict_clean": {
+            "n": 290,
+            "pass": 0.04482758620689655
+          },
+          "dir": "eval-lapwing/homeai-lfm25-1.2b-lora-v5-fix-wild2-e2e",
+          "from": "turns.jsonl",
+          "matches_report": true
+        }
+      },
+      "mean": {
+        "all": 0.10799962289282379,
+        "clean": 0.0692276021080369,
+        "contaminated": 0.2634025963253287,
+        "strict_clean": 0.07034826245769243
+      },
+      "rank": {
+        "all": 21,
+        "clean": 21,
+        "strict_clean": 21
+      }
+    },
+    {
+      "model": "homeai-lfm25-350m-lora-v5-fix",
+      "method": "bf16 LoRA (LFM2.5 350m, LFM2 module names)",
+      "data": "v5",
+      "train": [
+        "data/generated/train-v5.jsonl"
+      ],
+      "host": "lapwing",
+      "sets": {
+        "test-v2-e2e": {
+          "all": {
+            "n": 174,
+            "pass": 0.7844827586206896
+          },
+          "clean": {
+            "n": 80,
+            "pass": 0.75625
+          },
+          "contaminated": {
+            "n": 94,
+            "pass": 0.8085106382978723
+          },
+          "strict_clean": {
+            "n": 80,
+            "pass": 0.75625
+          },
+          "dir": "eval-lapwing/homeai-lfm25-350m-lora-v5-fix-testv2-e2e",
+          "from": "turns.jsonl",
+          "matches_report": true
+        },
+        "wild-e2e": {
+          "all": {
+            "n": 409,
+            "pass": 0.6809290953545232
+          },
+          "clean": {
+            "n": 352,
+            "pass": 0.6477272727272727
+          },
+          "contaminated": {
+            "n": 57,
+            "pass": 0.8859649122807017
+          },
+          "strict_clean": {
+            "n": 343,
+            "pass": 0.641399416909621
+          },
+          "dir": "eval-lapwing/homeai-lfm25-350m-lora-v5-fix-wild-e2e",
+          "from": "turns.jsonl",
+          "matches_report": true
+        },
+        "wild2-e2e": {
+          "all": {
+            "n": 344,
+            "pass": 0.6511627906976745
+          },
+          "clean": {
+            "n": 299,
+            "pass": 0.6270903010033445
+          },
+          "contaminated": {
+            "n": 45,
+            "pass": 0.8111111111111111
+          },
+          "strict_clean": {
+            "n": 290,
+            "pass": 0.6258620689655172
+          },
+          "dir": "eval-lapwing/homeai-lfm25-350m-lora-v5-fix-wild2-e2e",
+          "from": "turns.jsonl",
+          "matches_report": true
+        }
+      },
+      "mean": {
+        "all": 0.7055248815576292,
+        "clean": 0.6770225245768723,
+        "contaminated": 0.8351955538965617,
+        "strict_clean": 0.6745038286250461
+      },
+      "rank": {
+        "all": 16,
+        "clean": 16,
+        "strict_clean": 16
+      }
+    },
+    {
+      "model": "homeai-lfm25-1.2b-lora-v5-fix2",
+      "method": "bf16 LoRA (LFM2.5 1.2b), all projections, 350M chat template",
+      "data": "v5",
+      "train": [
+        "data/generated/train-v5.jsonl"
+      ],
+      "host": "lapwing",
+      "sets": {
+        "test-v2-e2e": {
+          "all": {
+            "n": 174,
+            "pass": 0.896551724137931
+          },
+          "clean": {
+            "n": 80,
+            "pass": 0.95
+          },
+          "contaminated": {
+            "n": 94,
+            "pass": 0.851063829787234
+          },
+          "strict_clean": {
+            "n": 80,
+            "pass": 0.95
+          },
+          "dir": "eval-lapwing/homeai-lfm25-1.2b-lora-v5-fix2-testv2-e2e",
+          "from": "turns.jsonl",
+          "matches_report": true
+        },
+        "wild-e2e": {
+          "all": {
+            "n": 409,
+            "pass": 0.7457212713936431
+          },
+          "clean": {
+            "n": 352,
+            "pass": 0.71875
+          },
+          "contaminated": {
+            "n": 57,
+            "pass": 0.9122807017543859
+          },
+          "strict_clean": {
+            "n": 343,
+            "pass": 0.7142857142857143
+          },
+          "dir": "eval-lapwing/homeai-lfm25-1.2b-lora-v5-fix2-wild-e2e",
+          "from": "turns.jsonl",
+          "matches_report": true
+        },
+        "wild2-e2e": {
+          "all": {
+            "n": 344,
+            "pass": 0.7601744186046512
+          },
+          "clean": {
+            "n": 299,
+            "pass": 0.7424749163879598
+          },
+          "contaminated": {
+            "n": 45,
+            "pass": 0.8777777777777778
+          },
+          "strict_clean": {
+            "n": 290,
+            "pass": 0.7413793103448276
+          },
+          "dir": "eval-lapwing/homeai-lfm25-1.2b-lora-v5-fix2-wild2-e2e",
+          "from": "turns.jsonl",
+          "matches_report": true
+        }
+      },
+      "mean": {
+        "all": 0.8008158047120751,
+        "clean": 0.8037416387959867,
+        "contaminated": 0.8803741031064659,
+        "strict_clean": 0.801888341543514
+      },
+      "rank": {
+        "all": 15,
+        "clean": 15,
+        "strict_clean": 15
+      }
+    }
+  ],
+  "paired": [
+    {
+      "model": "homeai-4b-lora-v8",
+      "vs": "homeai-4b-lora-v5",
+      "all": {
+        "turns": 927,
+        "better": 41,
+        "worse": 45,
+        "z": -0.43
+      },
+      "clean": {
+        "turns": 725,
+        "better": 35,
+        "worse": 27,
+        "z": 1.02
+      }
+    },
+    {
+      "model": "homeai-4b-v5",
+      "vs": "homeai-4b-lora-v5",
+      "all": {
+        "turns": 927,
+        "better": 37,
+        "worse": 40,
+        "z": -0.34
+      },
+      "clean": {
+        "turns": 731,
+        "better": 33,
+        "worse": 24,
+        "z": 1.19
+      }
+    },
+    {
+      "model": "homeai-spark-x25-4b-lora-v5",
+      "vs": "homeai-4b-lora-v5",
+      "all": {
+        "turns": 927,
+        "better": 43,
+        "worse": 50,
+        "z": -0.73
+      },
+      "clean": {
+        "turns": 731,
+        "better": 28,
+        "worse": 36,
+        "z": -1.0
+      }
+    },
+    {
+      "model": "homeai-4b-lora-v7",
+      "vs": "homeai-4b-lora-v5",
+      "all": {
+        "turns": 927,
+        "better": 27,
+        "worse": 38,
+        "z": -1.36
+      },
+      "clean": {
+        "turns": 731,
+        "better": 26,
+        "worse": 25,
+        "z": 0.14
+      }
+    },
+    {
+      "model": "homeai-gemma4-e4b-v5",
+      "vs": "homeai-4b-lora-v5",
+      "all": {
+        "turns": 927,
+        "better": 60,
+        "worse": 80,
+        "z": -1.69
+      },
+      "clean": {
+        "turns": 731,
+        "better": 46,
+        "worse": 65,
+        "z": -1.8
+      }
+    },
+    {
+      "model": "homeai-9b-v2",
+      "vs": "homeai-4b-lora-v5",
+      "all": {
+        "turns": 927,
+        "better": 30,
+        "worse": 64,
+        "z": -3.51
+      },
+      "clean": {
+        "turns": 716,
+        "better": 28,
+        "worse": 51,
+        "z": -2.59
+      }
+    },
+    {
+      "model": "homeai-2b-lora-v5",
+      "vs": "homeai-4b-lora-v5",
+      "all": {
+        "turns": 927,
+        "better": 27,
+        "worse": 74,
+        "z": -4.68
+      },
+      "clean": {
+        "turns": 731,
+        "better": 23,
+        "worse": 58,
+        "z": -3.89
+      }
+    },
+    {
+      "model": "homeai-lfm25-1.2b-lora-v5-fix2",
+      "vs": "homeai-4b-lora-v5",
+      "all": {
+        "turns": 927,
+        "better": 45,
+        "worse": 115,
+        "z": -5.53
+      },
+      "clean": {
+        "turns": 731,
+        "better": 32,
+        "worse": 98,
+        "z": -5.79
+      }
+    }
+  ],
+  "contamination_by_train": {
+    "train-rft1.jsonl + train.jsonl": {
+      "test-v2-e2e": {
+        "turns": 174,
+        "contaminated": 91,
+        "strict": 91,
+        "conversations_touched": 71,
+        "conversations": 150
+      },
+      "wild-e2e": {
+        "turns": 409,
+        "contaminated": 51,
+        "strict": 58,
+        "conversations_touched": 43,
+        "conversations": 303
+      },
+      "wild2-e2e": {
+        "turns": 344,
+        "contaminated": 48,
+        "strict": 58,
+        "conversations_touched": 42,
+        "conversations": 240
+      }
+    },
+    "train-rft2.jsonl + train.jsonl": {
+      "test-v2-e2e": {
+        "turns": 174,
+        "contaminated": 91,
+        "strict": 91,
+        "conversations_touched": 71,
+        "conversations": 150
+      },
+      "wild-e2e": {
+        "turns": 409,
+        "contaminated": 51,
+        "strict": 58,
+        "conversations_touched": 43,
+        "conversations": 303
+      },
+      "wild2-e2e": {
+        "turns": 344,
+        "contaminated": 48,
+        "strict": 58,
+        "conversations_touched": 42,
+        "conversations": 240
+      }
+    },
+    "train-v4.jsonl": {
+      "test-v2-e2e": {
+        "turns": 174,
+        "contaminated": 93,
+        "strict": 93,
+        "conversations_touched": 73,
+        "conversations": 150
+      },
+      "wild-e2e": {
+        "turns": 409,
+        "contaminated": 64,
+        "strict": 74,
+        "conversations_touched": 51,
+        "conversations": 303
+      },
+      "wild2-e2e": {
+        "turns": 344,
+        "contaminated": 60,
+        "strict": 72,
+        "conversations_touched": 51,
+        "conversations": 240
+      }
+    },
+    "train-v5.jsonl": {
+      "test-v2-e2e": {
+        "turns": 174,
+        "contaminated": 94,
+        "strict": 94,
+        "conversations_touched": 74,
+        "conversations": 150
+      },
+      "wild-e2e": {
+        "turns": 409,
+        "contaminated": 57,
+        "strict": 66,
+        "conversations_touched": 46,
+        "conversations": 303
+      },
+      "wild2-e2e": {
+        "turns": 344,
+        "contaminated": 45,
+        "strict": 54,
+        "conversations_touched": 39,
+        "conversations": 240
+      }
+    },
+    "train-v6.jsonl": {
+      "test-v2-e2e": {
+        "turns": 174,
+        "contaminated": 94,
+        "strict": 94,
+        "conversations_touched": 74,
+        "conversations": 150
+      },
+      "wild-e2e": {
+        "turns": 409,
+        "contaminated": 59,
+        "strict": 70,
+        "conversations_touched": 48,
+        "conversations": 303
+      },
+      "wild2-e2e": {
+        "turns": 344,
+        "contaminated": 46,
+        "strict": 56,
+        "conversations_touched": 40,
+        "conversations": 240
+      }
+    },
+    "train-v7.jsonl": {
+      "test-v2-e2e": {
+        "turns": 174,
+        "contaminated": 94,
+        "strict": 94,
+        "conversations_touched": 74,
+        "conversations": 150
+      },
+      "wild-e2e": {
+        "turns": 409,
+        "contaminated": 57,
+        "strict": 66,
+        "conversations_touched": 46,
+        "conversations": 303
+      },
+      "wild2-e2e": {
+        "turns": 344,
+        "contaminated": 45,
+        "strict": 54,
+        "conversations_touched": 39,
+        "conversations": 240
+      }
+    },
+    "train-v8.jsonl": {
+      "test-v2-e2e": {
+        "turns": 174,
+        "contaminated": 97,
+        "strict": 97,
+        "conversations_touched": 77,
+        "conversations": 150
+      },
+      "wild-e2e": {
+        "turns": 409,
+        "contaminated": 58,
+        "strict": 68,
+        "conversations_touched": 47,
+        "conversations": 303
+      },
+      "wild2-e2e": {
+        "turns": 344,
+        "contaminated": 47,
+        "strict": 58,
+        "conversations_touched": 41,
+        "conversations": 240
+      }
+    },
+    "train.jsonl": {
+      "test-v2-e2e": {
+        "turns": 174,
+        "contaminated": 91,
+        "strict": 91,
+        "conversations_touched": 71,
+        "conversations": 150
+      },
+      "wild-e2e": {
+        "turns": 409,
+        "contaminated": 47,
+        "strict": 56,
+        "conversations_touched": 41,
+        "conversations": 303
+      },
+      "wild2-e2e": {
+        "turns": 344,
+        "contaminated": 44,
+        "strict": 55,
+        "conversations_touched": 40,
+        "conversations": 240
+      }
+    }
+  },
+  "warnings": []
+}

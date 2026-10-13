@@ -1,0 +1,21 @@
+{
+  "_comment": "Only the clock moves (Peter, 1 Oct): v10 (stable_prefix) and v11 (user_context) both lost clarification against v9 (wild_clarify 72 -> 56 / 61, rule3_clarify 77 -> 70 / 70, outcome mean 86.7 -> 85.3 / 85.6), so moving Speaker / People out of their trained place costs the 'which one?' decision. mlx_lm's prompt cache for Qwen3.5 resumes only from the end of the system message, so that message must be byte-identical across requests (warm 2.4 s against 6 s on a Mac mini). Only 'Now:' changes on every request; Speaker is fixed per satellite and People changes rarely. v12 = v9's data and v11's recipe in the clock_in_user layout: the system prompt is v9's classic one minus its 'Now: ...' line (Speaker and People stay at the top where v9 learned to use them) and every user turn starts with '[now] <day> <HH:MM>' (the clock it was sent with). Applied when the rows are loaded (homeai/train/data.py load_jsonl, homeai/house/snapshot.py relayout_messages), so train-v9.jsonl keeps bare utterances and no new data file is needed; evals and the bridge follow prompt_layout (homeai/prompt_layout.py).",
+  "base_model": "Qwen/Qwen3.5-4B",
+  "hf_tokenizer": "Qwen/Qwen3.5-4B",
+  "ollama_template_from": "qwen3.5:4b",
+  "instruction_part": "<|im_start|>user\n",
+  "response_part": "<|im_start|>assistant\n",
+  "max_seq_len": 8192,
+  "lora_r": 16,
+  "lora_alpha": 16,
+  "epochs": 2,
+  "lr": 0.0002,
+  "batch_size": 1,
+  "grad_accum": 16,
+  "seed": 3407,
+  "train": "data/generated/train-v9.jsonl",
+  "val": "data/generated/val-v3.jsonl",
+  "out": "outputs/qwen35-4b-lora-v12",
+  "load_in_4bit": false,
+  "prompt_layout": "clock_in_user"
+}

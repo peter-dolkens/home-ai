@@ -1,0 +1,406 @@
+{
+  "set": "piper__tiny__clean",
+  "stt": "tiny",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 63,
+  "words": 382,
+  "errors": 59,
+  "wer": 0.1545,
+  "exact": 0.5079,
+  "vocab_words": 121,
+  "vocab_errors": 23,
+  "vocab_wer": 0.1901,
+  "vocab": {
+    "room": {
+      "n": 34,
+      "err": 6,
+      "wer": 0.1765
+    },
+    "device": {
+      "n": 43,
+      "err": 9,
+      "wer": 0.2093
+    },
+    "person": {
+      "n": 6,
+      "err": 4,
+      "wer": 0.6667
+    },
+    "number": {
+      "n": 4,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 34,
+      "err": 4,
+      "wer": 0.1176
+    }
+  },
+  "meaning_changed": 0.2698,
+  "meaning_changed_n": 17,
+  "meaning_by_kind": {
+    "room": 0.0794,
+    "device": 0.0952,
+    "person": 0.0635,
+    "number": 0.0,
+    "command": 0.0635
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 0.8603,
+    "p50": 0.8345,
+    "p90": 1.2136,
+    "rtf": 0.3454,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-ca-p302": {
+      "turns": 2,
+      "wer": 0.0833,
+      "meaning_changed": 0.5
+    },
+    "t-ie-p245": {
+      "turns": 5,
+      "wer": 0.1613,
+      "meaning_changed": 0.2
+    },
+    "t-ie-p288": {
+      "turns": 7,
+      "wer": 0.0682,
+      "meaning_changed": 0.0
+    },
+    "t-ld-p243": {
+      "turns": 2,
+      "wer": 1.6667,
+      "meaning_changed": 0.0
+    },
+    "t-ni-p304": {
+      "turns": 1,
+      "wer": 0.1429,
+      "meaning_changed": 0.0
+    },
+    "t-nz-p335": {
+      "turns": 5,
+      "wer": 0.2414,
+      "meaning_changed": 0.6
+    },
+    "t-sc-p234": {
+      "turns": 5,
+      "wer": 0.1667,
+      "meaning_changed": 0.4
+    },
+    "t-sc-p237": {
+      "turns": 3,
+      "wer": 0.2353,
+      "meaning_changed": 0.3333
+    },
+    "t-se-p225": {
+      "turns": 4,
+      "wer": 0.0357,
+      "meaning_changed": 0.0
+    },
+    "t-sm-prudence": {
+      "turns": 6,
+      "wer": 0.1395,
+      "meaning_changed": 0.5
+    },
+    "t-sm-spike": {
+      "turns": 2,
+      "wer": 0.3333,
+      "meaning_changed": 0.5
+    },
+    "t-wa-p253": {
+      "turns": 9,
+      "wer": 0.1887,
+      "meaning_changed": 0.3333
+    },
+    "t-yk-p267": {
+      "turns": 3,
+      "wer": 0.087,
+      "meaning_changed": 0.3333
+    },
+    "t-yk-p270": {
+      "turns": 1,
+      "wer": 0.1,
+      "meaning_changed": 0.0
+    },
+    "t-za-p323": {
+      "turns": 5,
+      "wer": 0.05,
+      "meaning_changed": 0.2
+    },
+    "t-za-p347": {
+      "turns": 3,
+      "wer": 0.15,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 15,
+      "wer": 0.1429,
+      "meaning_changed": 0.2
+    },
+    "1.0": {
+      "turns": 35,
+      "wer": 0.16,
+      "meaning_changed": 0.2857
+    },
+    "1.15": {
+      "turns": 13,
+      "wer": 0.1538,
+      "meaning_changed": 0.3077
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 63,
+      "wer": 0.1545,
+      "meaning_changed": 0.2698
+    }
+  },
+  "by_set": {
+    "piper__tiny__clean": {
+      "turns": 63,
+      "wer": 0.1545,
+      "meaning_changed": 0.2698
+    }
+  },
+  "samples": [
+    {
+      "id": "b300-4393",
+      "turn": 0,
+      "voice": "t-sc-p237",
+      "written": "are the patio lights on",
+      "heard": "are the pattern of the legs on.",
+      "lost": [
+        [
+          "room",
+          "patio"
+        ],
+        [
+          "device",
+          "lights"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-6000-317",
+      "turn": 0,
+      "voice": "t-sm-spike",
+      "written": "Hasn't Amelia left the master ensuite yet?",
+      "heard": "Hasn't a media left the master and suit yet.",
+      "lost": [
+        [
+          "person",
+          "amelia"
+        ],
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "b300-1628",
+      "turn": 0,
+      "voice": "t-ca-p302",
+      "written": "Turn off the mudroom lights.",
+      "heard": "Turn off the module lights.",
+      "lost": [
+        [
+          "room",
+          "mudroom"
+        ]
+      ]
+    },
+    {
+      "id": "b300-168",
+      "turn": 0,
+      "voice": "t-sc-p234",
+      "written": "has the fridge door been left open",
+      "heard": "Has a fridge job been left open?",
+      "lost": [
+        [
+          "device",
+          "fridge door"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2977",
+      "turn": 0,
+      "voice": "t-ie-p245",
+      "written": "Off out for the day, secure the house",
+      "heard": "I'll fight for the day to cure the house.",
+      "lost": [
+        [
+          "command",
+          "off"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3025",
+      "turn": 0,
+      "voice": "t-nz-p335",
+      "written": "heading off for the whole day, lock up",
+      "heard": "heading off for the whole day, look up.",
+      "lost": [
+        [
+          "command",
+          "lock"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3119",
+      "turn": 0,
+      "voice": "t-yk-p267",
+      "written": "Can you play Childish Gambino in Amber's office?",
+      "heard": "Can you play childish Gambino in ambus office?",
+      "lost": [
+        [
+          "room",
+          "ambers office"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3740",
+      "turn": 0,
+      "voice": "t-sm-prudence",
+      "written": "has Noah got to the kitchen",
+      "heard": "As now I've got to the kitchen.",
+      "lost": [
+        [
+          "person",
+          "noah"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3743",
+      "turn": 0,
+      "voice": "t-wa-p253",
+      "written": "is Owen currently in the backyard",
+      "heard": "is own currently in the backyard.",
+      "lost": [
+        [
+          "person",
+          "owen"
+        ]
+      ]
+    },
+    {
+      "id": "b300-4194",
+      "turn": 0,
+      "voice": "t-wa-p253",
+      "written": "um, is there a door open anywhere",
+      "heard": "and visit or open anywhere.",
+      "lost": [
+        [
+          "device",
+          "door"
+        ]
+      ]
+    },
+    {
+      "id": "b300-73",
+      "turn": 0,
+      "voice": "t-za-p323",
+      "written": "um, start the heater",
+      "heard": "Unstart the heater",
+      "lost": [
+        [
+          "command",
+          "start"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1946",
+      "turn": 1,
+      "voice": "t-sc-p234",
+      "written": "Bedside lamps.",
+      "heard": "That side lumps.",
+      "lost": [
+        [
+          "device",
+          "bedside lamps"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-10000-872",
+      "turn": 0,
+      "voice": "t-sm-prudence",
+      "written": "can you turn the lamp 4 off in the study",
+      "heard": "Can you turn the lamp off in the study?",
+      "lost": [
+        [
+          "device",
+          "lamp 4"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-20000-1377",
+      "turn": 0,
+      "voice": "t-sm-prudence",
+      "written": "shuffle in the guest ensuite thanks",
+      "heard": "Shuffle in the guest's suit thanks.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-20000-1518",
+      "turn": 0,
+      "voice": "t-wa-p253",
+      "written": "blinds up",
+      "heard": "Blender.",
+      "lost": [
+        [
+          "command",
+          "up"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-3000-168",
+      "turn": 0,
+      "voice": "t-nz-p335",
+      "written": "Air purifier off.",
+      "heard": "A pure fly off.",
+      "lost": [
+        [
+          "device",
+          "air purifier"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-6000-579",
+      "turn": 0,
+      "voice": "t-nz-p335",
+      "written": "Is Emma at home?",
+      "heard": "Is there a moment at home?",
+      "lost": [
+        [
+          "person",
+          "emma"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

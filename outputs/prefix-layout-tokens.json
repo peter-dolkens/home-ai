@@ -1,0 +1,85 @@
+{
+  "tokenizer": "Qwen/Qwen3.5-4B",
+  "requests": [
+    {
+      "case": "A, small house (test-v2, bundook profile)",
+      "entities": 191,
+      "classic": {
+        "tokens": 1893,
+        "shared": 643,
+        "share": 0.3397
+      },
+      "stable_prefix": {
+        "tokens": 1897,
+        "shared": 1856,
+        "share": 0.9784,
+        "covers_static": true
+      },
+      "static_tokens": 1847
+    },
+    {
+      "case": "A, small house (test-v2, random profile)",
+      "entities": 74,
+      "classic": {
+        "tokens": 1298,
+        "shared": 642,
+        "share": 0.4946
+      },
+      "stable_prefix": {
+        "tokens": 1302,
+        "shared": 1265,
+        "share": 0.9716,
+        "covers_static": true
+      },
+      "static_tokens": 1257
+    },
+    {
+      "case": "B, Bundook full plan (bigbench-b)",
+      "entities": 5252,
+      "classic": {
+        "tokens": 2440,
+        "shared": 1007,
+        "share": 0.4127
+      },
+      "stable_prefix": {
+        "tokens": 2444,
+        "shared": 2395,
+        "share": 0.98,
+        "covers_static": true
+      },
+      "static_tokens": 2386
+    }
+  ],
+  "within_conversation": {
+    "conversations": 40,
+    "rounds": {
+      "round1_tokens": 37486,
+      "reused_by_round2": 37461,
+      "share": 0.9993
+    },
+    "classic": {
+      "reused_tokens": 25827,
+      "prompt_tokens": 64803,
+      "share": 0.3985,
+      "recomputed_per_turn": 974.4
+    },
+    "stable_prefix": {
+      "reused_tokens": 57341,
+      "prompt_tokens": 64963,
+      "share": 0.8827,
+      "recomputed_per_turn": 190.6
+    },
+    "user_latest": {
+      "reused_tokens": 57034,
+      "prompt_tokens": 64963,
+      "share": 0.8779,
+      "recomputed_per_turn": 198.2
+    },
+    "user_every": {
+      "reused_tokens": 59107,
+      "prompt_tokens": 66482,
+      "share": 0.8891,
+      "recomputed_per_turn": 184.4
+    }
+  }
+}

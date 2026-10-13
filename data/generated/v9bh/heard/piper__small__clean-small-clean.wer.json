@@ -1,0 +1,227 @@
+{
+  "set": "piper__small__clean",
+  "stt": "small",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 32,
+  "words": 185,
+  "errors": 13,
+  "wer": 0.0703,
+  "exact": 0.6875,
+  "vocab_words": 66,
+  "vocab_errors": 5,
+  "vocab_wer": 0.0758,
+  "vocab": {
+    "room": {
+      "n": 21,
+      "err": 1,
+      "wer": 0.0476
+    },
+    "device": {
+      "n": 25,
+      "err": 3,
+      "wer": 0.12
+    },
+    "person": {
+      "n": 3,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 3,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 14,
+      "err": 1,
+      "wer": 0.0714
+    }
+  },
+  "meaning_changed": 0.1562,
+  "meaning_changed_n": 5,
+  "meaning_by_kind": {
+    "room": 0.0312,
+    "device": 0.0938,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0312
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 4.293,
+    "p50": 4.2843,
+    "p90": 4.6716,
+    "rtf": 1.8017,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-ca-p302": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-ie-p245": {
+      "turns": 4,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-ie-p288": {
+      "turns": 2,
+      "wer": 0.1111,
+      "meaning_changed": 0.5
+    },
+    "t-ld-p243": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-ni-p304": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-nz-p335": {
+      "turns": 4,
+      "wer": 0.0833,
+      "meaning_changed": 0.0
+    },
+    "t-sc-p234": {
+      "turns": 4,
+      "wer": 0.0968,
+      "meaning_changed": 0.25
+    },
+    "t-sm-prudence": {
+      "turns": 2,
+      "wer": 0.2222,
+      "meaning_changed": 0.5
+    },
+    "t-sm-spike": {
+      "turns": 1,
+      "wer": 0.25,
+      "meaning_changed": 1.0
+    },
+    "t-yk-p267": {
+      "turns": 3,
+      "wer": 0.0588,
+      "meaning_changed": 0.0
+    },
+    "t-yk-p270": {
+      "turns": 3,
+      "wer": 0.0526,
+      "meaning_changed": 0.0
+    },
+    "t-za-p323": {
+      "turns": 2,
+      "wer": 0.1,
+      "meaning_changed": 0.5
+    },
+    "t-za-p347": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 8,
+      "wer": 0.0571,
+      "meaning_changed": 0.125
+    },
+    "1.0": {
+      "turns": 20,
+      "wer": 0.0769,
+      "meaning_changed": 0.2
+    },
+    "1.15": {
+      "turns": 4,
+      "wer": 0.0606,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 32,
+      "wer": 0.0703,
+      "meaning_changed": 0.1562
+    }
+  },
+  "by_set": {
+    "piper__small__clean": {
+      "turns": 32,
+      "wer": 0.0703,
+      "meaning_changed": 0.1562
+    }
+  },
+  "samples": [
+    {
+      "id": "bbig-bundook_full-plan-1108",
+      "turn": 0,
+      "voice": "t-sm-spike",
+      "written": "Lights off in pantry",
+      "heard": "Lights off in Pantrick.",
+      "lost": [
+        [
+          "room",
+          "pantry"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-359",
+      "turn": 0,
+      "voice": "t-ie-p288",
+      "written": "Turn off the laundry toilet lights and then turn off Amber's office homepod.",
+      "heard": "Turn off the laundry toilet lights and then turn off Amber's office home putt.",
+      "lost": [
+        [
+          "device",
+          "homepod"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-430",
+      "turn": 0,
+      "voice": "t-sm-prudence",
+      "written": "Play some Taylor Swift.",
+      "heard": "Place on Taylor Swift.",
+      "lost": [
+        [
+          "command",
+          "play"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-637",
+      "turn": 0,
+      "voice": "t-za-p323",
+      "written": "hey house, how's the solar looking",
+      "heard": "Hey House, how's the solo looking?",
+      "lost": [
+        [
+          "device",
+          "solar"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1325",
+      "turn": 0,
+      "voice": "t-sc-p234",
+      "written": "hey, check the workshop door for me",
+      "heard": "Hey, check the workshop doll for me.",
+      "lost": [
+        [
+          "device",
+          "workshop door"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

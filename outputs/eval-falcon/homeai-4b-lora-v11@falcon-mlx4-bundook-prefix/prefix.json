@@ -1,0 +1,30 @@
+{
+  "model": "/Users/peter.dolkens/home-ai-falcon/stage/mlx/homeai-4b-lora-v11-mlx4",
+  "data": "data/generated/bigbench-bundook.jsonl",
+  "num_ctx": 32768,
+  "prompt_layout": "user_context",
+  "group_by": "house",
+  "modes": {
+    "house": {
+      "groups": 3,
+      "requests": 23,
+      "cold_mean": 5.753,
+      "warm_mean": 7.88,
+      "cold_p50": 6.752,
+      "warm_p50": 3.089,
+      "warm_p90": 14.09,
+      "cold_eval_tokens": 1680.667,
+      "warm_eval_tokens": 54.7,
+      "cold_prompt_s": null,
+      "warm_prompt_s": null,
+      "prompt_tokens": 2665.783,
+      "later_eval_tokens": 1565.214,
+      "calls_per_request": 2.087
+    }
+  },
+  "seconds": 180.6,
+  "host": "falcon",
+  "hardware": "apple-m2pro",
+  "host_note": "falcon stream: mlx-lm==0.31.3 server, 4-bit g64, prompt cache on, user_context prompts, Bundook plan by house, num_ctx 32768",
+  "ollama": "http://127.0.0.1:11611/v1"
+}

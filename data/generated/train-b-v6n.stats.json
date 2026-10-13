@@ -1,0 +1,106 @@
+{
+  "source": "data/generated/train-b-split.jsonl",
+  "rows": 6536,
+  "eligible": 4605,
+  "prompt_layout": "stable_prefix",
+  "counts": {
+    "casing": 303,
+    "homophone": 327,
+    "homophone:ambiguous": 9,
+    "homophone:homophone": 155,
+    "homophone:number": 65,
+    "homophone:split": 98,
+    "roundtrip": 2758,
+    "roundtrip:kokoro": 2004,
+    "roundtrip:medium-biased": 142,
+    "roundtrip:parakeet-clean": 372,
+    "roundtrip:parakeet-farfield": 407,
+    "roundtrip:parakeet-noisy10": 394,
+    "roundtrip:parakeet-noisy5": 123,
+    "roundtrip:piper": 754,
+    "roundtrip:small-biased": 295,
+    "roundtrip:small-clean": 244,
+    "roundtrip:small-farfield-biased": 319,
+    "roundtrip:small-noisy10-biased": 304,
+    "roundtrip:tiny-clean": 158,
+    "roundtrip_all_turns_kept_written": 183,
+    "roundtrip_turn_kept_written:empty": 6,
+    "roundtrip_turn_kept_written:garbled": 220,
+    "roundtrip_turn_kept_written:held-out": 2,
+    "roundtrip_turns": 2931,
+    "unchanged": 935,
+    "unchanged_inherited_overlap": 1931
+  },
+  "leakage": {
+    "file": "data/generated/train-b-v6n.jsonl",
+    "held_out_utterances": 18670,
+    "augmented_rows": 3388,
+    "augmented_overlap_turns": 0,
+    "augmented_overlap_distinct": 0,
+    "augmented_examples": [],
+    "inherited_overlap_turns": 2249,
+    "inherited_overlap_distinct": 394
+  },
+  "inherited_top": [
+    [
+      "yes please",
+      115
+    ],
+    [
+      "yes",
+      101
+    ],
+    [
+      "go ahead",
+      94
+    ],
+    [
+      "please",
+      70
+    ],
+    [
+      "yes do all that",
+      62
+    ],
+    [
+      "yep",
+      34
+    ],
+    [
+      "do it",
+      30
+    ],
+    [
+      "leave it",
+      23
+    ],
+    [
+      "lamp on",
+      21
+    ],
+    [
+      "no",
+      21
+    ],
+    [
+      "never mind",
+      20
+    ],
+    [
+      "no thats fine",
+      20
+    ],
+    [
+      "yeah unlock it",
+      20
+    ],
+    [
+      "can you check on the house",
+      19
+    ],
+    [
+      "were out is the house all locked up and ok",
+      17
+    ]
+  ]
+}

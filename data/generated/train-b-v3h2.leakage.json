@@ -1,0 +1,74 @@
+[
+  {
+    "file": "data/generated/train-b-v3h2.jsonl",
+    "held_out_utterances": 18157,
+    "augmented_rows": 4510,
+    "augmented_overlap_turns": 0,
+    "augmented_overlap_distinct": 0,
+    "augmented_examples": [],
+    "inherited_overlap_turns": 3175,
+    "inherited_overlap_distinct": 389,
+    "inherited_top": [
+      [
+        "yes please",
+        174
+      ],
+      [
+        "yes",
+        173
+      ],
+      [
+        "go ahead",
+        141
+      ],
+      [
+        "please",
+        105
+      ],
+      [
+        "yes do all that",
+        87
+      ],
+      [
+        "yep",
+        55
+      ],
+      [
+        "do it",
+        52
+      ],
+      [
+        "leave it",
+        37
+      ],
+      [
+        "no thats fine",
+        33
+      ],
+      [
+        "no",
+        30
+      ],
+      [
+        "never mind",
+        29
+      ],
+      [
+        "can you check on the house",
+        26
+      ],
+      [
+        "wheres amber",
+        25
+      ],
+      [
+        "do you know where peter is",
+        24
+      ],
+      [
+        "petes office 1",
+        22
+      ]
+    ]
+  }
+]

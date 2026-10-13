@@ -1,0 +1,20 @@
+{
+ "_comment": "Qwen3.5 2B v5 recipe on v9 data (ASR-robust fast model for design E) (Peter, 30 Sep). Same hyperparameters as qwen35-2b-lora-v5; max_seq_len kept at 4608, so v9's longest large-house conversations are dropped.",
+ "base_model": "Qwen/Qwen3.5-2B",
+ "hf_tokenizer": "Qwen/Qwen3.5-2B",
+ "ollama_template_from": "qwen3.5:2b",
+ "instruction_part": "<|im_start|>user\n",
+ "response_part": "<|im_start|>assistant\n",
+ "max_seq_len": 4608,
+ "lora_r": 16,
+ "lora_alpha": 16,
+ "epochs": 2,
+ "lr": 0.0002,
+ "batch_size": 1,
+ "grad_accum": 16,
+ "seed": 3407,
+ "train": "data/generated/train-v9.jsonl",
+ "val": "data/generated/val-v3.jsonl",
+ "out": "outputs/qwen35-2b-lora-v9",
+ "load_in_4bit": false
+}

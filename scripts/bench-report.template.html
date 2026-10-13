@@ -1,0 +1,424 @@
+<title>TODO App Model Bench</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a lab bench sheet. Header with the prompt, a scorecard table, one shared-time lane chart,
+   then one fold-out record per run (calls, files, transcript). Single column, max 1080px. */
+:root {
+  --bg: #f4f6f8;
+  --panel: #ffffff;
+  --ink: #141a22;
+  --ink-2: #4a5462;
+  --ink-3: #6f7987;
+  --rule: #dde2e8;
+  --rule-strong: #c4ccd6;
+  --accent: #1f5f8b;
+  --good: #1d7a3e;
+  --good-bg: #e3f3e8;
+  --bad: #b3261e;
+  --bad-bg: #fbe7e5;
+  --code-bg: #eef1f5;
+  --s-qwen: #2a78d6;
+  --s-sonnet: #eb6834;
+  --s-opusm: #1baf7a;
+  --s-opusx: #eda100;
+  --s-haikul: #e87ba4;
+  --s-haikum: #008300;
+  --s-qtq1: #4a3aa7;
+  --font-display: "Familjen Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12161c; --panel: #1a2029; --ink: #eef1f5; --ink-2: #b5bfcc; --ink-3: #8a95a3;
+    --rule: #2a323d; --rule-strong: #3a4552; --accent: #7cb8e6;
+    --good: #6fd391; --good-bg: #173524; --bad: #ff8a80; --bad-bg: #3d1c1a; --code-bg: #10141a;
+    --s-qwen: #3987e5; --s-sonnet: #d95926; --s-opusm: #199e70; --s-opusx: #c98500; --s-haikul: #d55181; --s-haikum: #008300; --s-qtq1: #9085e9;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12161c; --panel: #1a2029; --ink: #eef1f5; --ink-2: #b5bfcc; --ink-3: #8a95a3;
+  --rule: #2a323d; --rule-strong: #3a4552; --accent: #7cb8e6;
+  --good: #6fd391; --good-bg: #173524; --bad: #ff8a80; --bad-bg: #3d1c1a; --code-bg: #10141a;
+  --s-qwen: #3987e5; --s-sonnet: #d95926; --s-opusm: #199e70; --s-opusx: #c98500; --s-haikul: #d55181; --s-haikum: #008300; --s-qtq1: #9085e9;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 15px/1.55 var(--font-body); }
+.wrap { max-width: 1080px; margin: 0 auto; padding-inline: 20px; padding-block: 36px 64px; display: grid; gap: 40px; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; letter-spacing: -0.01em; }
+h1 { font-size: clamp(1.9rem, 4vw, 2.6rem); font-weight: 700; line-height: 1.1; }
+h2 { font-size: 1.35rem; font-weight: 600; }
+h3 { font-size: 1.05rem; font-weight: 600; }
+p { margin: 0; max-width: 68ch; }
+.eyebrow { font: 500 0.72rem/1 var(--font-mono); text-transform: uppercase; letter-spacing: 0.09em; color: var(--ink-3); }
+.mono { font-family: var(--font-mono); }
+.num { font-variant-numeric: tabular-nums; }
+header { display: grid; gap: 14px; }
+.prompt { font: 500 1rem/1.5 var(--font-mono); background: var(--panel); border: 1px solid var(--rule); border-left: 3px solid var(--accent); padding: 12px 16px; border-radius: 4px; max-width: 72ch; }
+.meta { color: var(--ink-2); font-size: 0.9rem; }
+section { display: grid; gap: 14px; min-width: 0; }
+.lede { color: var(--ink-2); }
+
+/* scorecard */
+.tablebox { overflow-x: auto; background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; }
+table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+th, td { padding: 9px 12px; text-align: right; border-bottom: 1px solid var(--rule); white-space: nowrap; }
+th { font: 500 0.7rem/1.2 var(--font-mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-3); background: var(--panel); }
+td { font-variant-numeric: tabular-nums; }
+th:first-child, td:first-child { text-align: left; }
+tr:last-child td { border-bottom: 0; }
+.runname { display: flex; align-items: center; gap: 10px; }
+.swatch { width: 10px; height: 10px; border-radius: 2px; flex: none; }
+.runname b { font-weight: 600; }
+.runname small { display: block; color: var(--ink-3); font-size: 0.75rem; }
+.pill { display: inline-flex; align-items: center; gap: 5px; font: 500 0.75rem/1 var(--font-body); padding: 4px 8px; border-radius: 999px; }
+.pill.ok { color: var(--good); background: var(--good-bg); }
+.pill.no { color: var(--bad); background: var(--bad-bg); }
+.best { font-weight: 600; color: var(--accent); }
+
+/* timeline */
+.chart { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; padding: 16px 16px 10px; position: relative; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.chart .scroll { overflow-x: auto; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 0.8rem; color: var(--ink-2); margin-top: 6px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.lg-wait { width: 18px; height: 8px; border-radius: 2px; border: 1.5px solid var(--ink-3); background: transparent; }
+.lg-gen { width: 18px; height: 8px; border-radius: 2px; background: var(--ink-3); }
+.lg-gap { width: 18px; height: 0; border-top: 1.5px dashed var(--ink-3); }
+.tip { position: absolute; pointer-events: none; background: var(--ink); color: var(--bg); font: 0.78rem/1.45 var(--font-mono); padding: 8px 10px; border-radius: 4px; max-width: 280px; z-index: 5; }
+.bar { cursor: default; }
+.bar:hover rect.gen, .bar:focus rect.gen { filter: brightness(1.12); }
+.bar:focus { outline: none; }
+.bar:focus rect.hit { stroke: var(--ink); stroke-width: 1.5; }
+
+/* findings */
+.findings { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.finding { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 6px; align-content: start; }
+.finding p { font-size: 0.9rem; color: var(--ink-2); }
+
+/* run records */
+details.run { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; }
+details.run > summary { list-style: none; cursor: pointer; padding: 14px 16px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; }
+details.run > summary::-webkit-details-marker { display: none; }
+details.run > summary::before { content: "▸"; color: var(--ink-3); width: 1em; transition: transform .15s; }
+details.run[open] > summary::before { transform: rotate(90deg); }
+details.run > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; border-radius: 6px; }
+.sumstats { margin-left: auto; display: flex; flex-wrap: wrap; gap: 6px 14px; font: 0.8rem var(--font-mono); color: var(--ink-2); }
+.runbody { padding: 0 16px 18px; display: grid; gap: 18px; border-top: 1px solid var(--rule); padding-top: 16px; min-width: 0; }
+.verdict { display: grid; gap: 6px; }
+.verdict p { font-size: 0.92rem; }
+.note { font-size: 0.85rem; color: var(--ink-3); }
+.files { font: 0.8rem/1.6 var(--font-mono); color: var(--ink-2); columns: 2 220px; margin: 0; padding-left: 18px; }
+.calltable td, .calltable th { padding: 6px 10px; font-size: 0.8rem; }
+.blocks { font: 0.72rem var(--font-mono); color: var(--ink-3); text-align: left; }
+
+/* transcript */
+details.tx > summary { cursor: pointer; font: 600 0.95rem var(--font-display); padding: 4px 0; }
+details.tx > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.steps { display: grid; gap: 8px; margin-top: 10px; min-width: 0; }
+.step { border: 1px solid var(--rule); border-radius: 5px; padding: 8px 12px; display: grid; gap: 4px; min-width: 0; }
+.step .tag { font: 500 0.68rem/1 var(--font-mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-3); display: flex; gap: 8px; }
+.step.user { background: var(--code-bg); border-color: var(--rule-strong); }
+.step.text .body { white-space: pre-wrap; font-size: 0.88rem; }
+.step.thinking { border-style: dashed; color: var(--ink-3); font-size: 0.82rem; }
+.step.tool_use { border-left: 3px solid var(--accent); }
+.step.tool_result.err { border-left: 3px solid var(--bad); }
+.step.tool_result { background: transparent; }
+.step pre, .step details pre { margin: 0; background: var(--code-bg); padding: 8px 10px; border-radius: 4px; font: 0.76rem/1.5 var(--font-mono); white-space: pre-wrap; word-break: break-word; max-height: 360px; overflow: auto; }
+.step details > summary { cursor: pointer; font: 0.8rem var(--font-mono); color: var(--ink-2); }
+.toolname { font: 600 0.85rem var(--font-mono); }
+.toolarg { font: 0.8rem var(--font-mono); color: var(--ink-2); overflow-wrap: anywhere; }
+.method { font-size: 0.88rem; color: var(--ink-2); display: grid; gap: 8px; }
+.method ul { margin: 0; padding-left: 18px; display: grid; gap: 4px; max-width: 80ch; }
+@media (max-width: 560px) { .wrap { padding-inline: 16px; } .sumstats { margin-left: 0; } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">home-ai · Claude Code model bench</div>
+    <h1>TODO App Model Bench</h1>
+    <div class="prompt" id="prompt"></div>
+    <p class="meta" id="meta"></p>
+  </header>
+
+  <section aria-labelledby="h-score">
+    <h2 id="h-score">Scorecard</h2>
+    <p class="lede">The first prompt only, one fresh folder per model, same Claude Code version and tool permissions. Times are wall clock from the first API call to the final reply.</p>
+    <div class="tablebox"><table id="score"></table></div>
+  </section>
+
+  <section aria-labelledby="h-time">
+    <h2 id="h-time">Where the time went</h2>
+    <p class="lede">Each bar is one API call on a shared time axis. The outlined part is waiting for the first token, the filled part is generation, and the dashed gaps are Claude Code running tools between calls. Hover or focus a bar for its numbers.</p>
+    <div class="chart" id="chart"><div class="scroll"><svg id="timeline" role="img" aria-label="Timeline of API calls per model"></svg></div>
+      <div class="legend"><span><i class="lg-wait"></i>waiting for first token</span><span><i class="lg-gen"></i>generating</span><span><i class="lg-gap"></i>tools running</span></div>
+      <div class="tip" id="tip" hidden></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-speed">
+    <h2 id="h-speed">Generation speed</h2>
+    <p class="lede">Output tokens per second for each API call, measured from the first streamed token to the end of the response. Each dot is one call; the tick marks the run's median. Calls whose output arrived in one burst are left out.</p>
+    <div class="chart" id="speedchart"><div class="scroll"><svg id="speed" role="img" aria-label="Output tokens per second per API call, by model"></svg></div>
+      <div class="tip" id="tip2" hidden></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-find">
+    <h2 id="h-find">What stands out</h2>
+    <div class="findings" id="findings"></div>
+  </section>
+
+  <section aria-labelledby="h-runs">
+    <h2 id="h-runs">Run records</h2>
+    <p class="lede">Open a run for its per-call timings, the files it produced and the full transcript. Long tool inputs (file contents) fold away inside each step.</p>
+    <div id="runs" style="display:grid;gap:12px"></div>
+  </section>
+
+  <section class="method" aria-labelledby="h-method">
+    <h2 id="h-method">How this was measured</h2>
+    <ul id="method"></ul>
+  </section>
+</div>
+
+<script id="data" type="application/json">/*__DATA__*/</script>
+<script>
+(function () {
+  const D = JSON.parse(document.getElementById('data').textContent);
+  const COLORS = { qwen: '--s-qwen', 'sonnet55-high': '--s-sonnet', 'opus55-medium': '--s-opusm', 'opus55-xhigh': '--s-opusx', 'haiku55-low': '--s-haikul', 'haiku55-max': '--s-haikum', 'qwen-tq1': '--s-qtq1' };
+  const col = k => `var(${COLORS[k] || '--accent'})`;
+  const el = (tag, attrs = {}, ...kids) => {
+    const n = document.createElement(tag);
+    for (const [k, v] of Object.entries(attrs)) {
+      if (k === 'class') n.className = v; else if (k === 'text') n.textContent = v; else if (k === 'style') n.style.cssText = v; else n.setAttribute(k, v);
+    }
+    for (const c of kids.flat()) if (c != null) n.append(c.nodeType ? c : document.createTextNode(c));
+    return n;
+  };
+  const fmtS = s => s == null ? '–' : (s >= 100 ? s.toFixed(0) : s.toFixed(1)) + ' s';
+  const fmtN = n => n == null ? '–' : n.toLocaleString('en-AU');
+  // tokens/s for one call: output tokens over the time after the first streamed token.
+  // Calls whose output arrives in one burst (Ollama tool calls) have no measurable rate.
+  const rate = c => (c.out > 20 && c.ttft != null && c.total - c.ttft > 0.5) ? c.out / (c.total - c.ttft) : null;
+  const median = a => { const s = [...a].sort((x, y) => x - y); return s.length ? s[Math.floor(s.length / 2)] : null; };
+  const runs = D.runs;
+
+  document.getElementById('prompt').textContent = '“' + D.prompt + '”';
+  document.getElementById('meta').textContent = `Run on ${D.generated.replace('T', ' ')} (AEDT) from frogmouth (M5 Mac) with Claude Code 2.1.287. Qwen served from cassowary over the LAN; Claude models from the Anthropic API.`;
+
+  // derived numbers
+  for (const r of runs) {
+    r.firstTtft = r.calls[0].visible ?? r.calls[0].ttft;
+    r.warmTtft = median(r.calls.slice(1).map(c => c.visible ?? c.ttft).filter(x => x != null));
+    r.rates = r.calls.map(rate);
+    r.genRate = median(r.rates.filter(v => v != null));
+    const gen = r.calls.filter((c, j) => r.rates[j] != null);
+    r.genOverall = gen.length ? gen.reduce((a, c) => a + c.out, 0) / gen.reduce((a, c) => a + (c.total - c.ttft), 0) : null;
+    r.persistsVal = r.persists;
+  }
+
+  // scorecard
+  const cols = [
+    ['Run', r => { const s = el('span', { class: 'swatch', style: `background:${col(r.key)}` }); return el('div', { class: 'runname' }, s, el('div', {}, el('b', { text: r.label }), el('small', { text: r.sub }))); }],
+    ['Done in', r => fmtS(r.wall), 'wall', 'min'],
+    ['Model time', r => fmtS(r.api), 'api', 'min'],
+    ['API calls', r => String(r.turns), 'turns', 'min'],
+    ['First token', r => fmtS(r.firstTtft), 'firstTtft', 'min'],
+    ['Typical TTFT', r => fmtS(r.warmTtft), 'warmTtft', 'min'],
+    ['Output tok', r => fmtN(r.out), 'out', null],
+    ['of which thinking', r => r.thinking ? fmtN(r.thinking) : '0', null, null],
+    ['Gen speed (median)', r => r.genRate ? r.genRate.toFixed(0) + ' tok/s' : '–', 'genRate', 'max'],
+    ['Cost', r => r.cost ? '$' + r.cost.toFixed(2) : '$0 (local)', 'cost', null],
+    ['Persists?', r => r.persistsVal == null ? '–' : el('span', { class: 'pill ' + (r.persistsVal ? 'ok' : 'no') }, r.persistsVal ? '✓ yes' : r.files.length ? '✗ no' : '✗ no app'), null, null],
+  ];
+  const score = document.getElementById('score');
+  score.append(el('thead', {}, el('tr', {}, cols.map(c => el('th', { scope: 'col', text: c[0] })))));
+  const best = {};
+  for (const [, , key, dir] of cols) if (key && dir) {
+    const vals = runs.map(r => r[key]).filter(v => v != null);
+    best[key] = dir === 'min' ? Math.min(...vals) : Math.max(...vals);
+  }
+  score.append(el('tbody', {}, runs.map(r => el('tr', {}, cols.map(([, f, key], i) => {
+    const td = el(i === 0 ? 'th' : 'td', i === 0 ? { scope: 'row' } : {}, f(r));
+    if (key && best[key] != null && r[key] === best[key]) td.classList.add('best');
+    return td;
+  })))));
+
+  // timeline
+  const svg = document.getElementById('timeline');
+  const NS = 'http://www.w3.org/2000/svg';
+  const s = (tag, attrs) => { const n = document.createElementNS(NS, tag); for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, v); return n; };
+  const W = 1000, LBL = 150, PADR = 20, LANE = 46, TOP = 8, AX = 30;
+  const tmax = Math.max(...runs.map(r => r.wall));
+  const step = tmax > 200 ? 30 : tmax > 100 ? 20 : 10;
+  const xmax = Math.ceil(tmax / step) * step;
+  const x = t => LBL + (t / xmax) * (W - LBL - PADR);
+  const H = TOP + runs.length * LANE + AX;
+  svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+  svg.style.minWidth = '640px';
+  for (let t = 0; t <= xmax; t += step) {
+    svg.append(s('line', { x1: x(t), x2: x(t), y1: TOP, y2: TOP + runs.length * LANE, stroke: 'var(--rule)', 'stroke-width': 1 }));
+    const tx = s('text', { x: x(t), y: TOP + runs.length * LANE + 18, 'text-anchor': 'middle', fill: 'var(--ink-3)', 'font-size': 12, 'font-family': 'var(--font-mono)' });
+    tx.textContent = t + 's'; svg.append(tx);
+  }
+  const tip = document.getElementById('tip');
+  const chart = document.getElementById('chart');
+  runs.forEach((r, i) => {
+    const y = TOP + i * LANE, mid = y + LANE / 2, bh = 16;
+    const name = s('text', { x: 0, y: mid - 3, fill: 'var(--ink)', 'font-size': 13, 'font-weight': 600, 'font-family': 'var(--font-body)' });
+    name.textContent = r.label; svg.append(name);
+    const sub = s('text', { x: 0, y: mid + 13, fill: 'var(--ink-3)', 'font-size': 11, 'font-family': 'var(--font-mono)' });
+    sub.textContent = fmtS(r.wall) + ' · ' + r.turns + ' calls'; svg.append(sub);
+    svg.append(s('line', { x1: x(0), x2: x(r.wall), y1: mid, y2: mid, stroke: 'var(--ink-3)', 'stroke-width': 1.2, 'stroke-dasharray': '3 4' }));
+    r.calls.forEach((c, j) => {
+      const g = s('g', { class: 'bar', tabindex: 0, role: 'img' });
+      const x0 = x(c.start), xw = Math.max(x(c.start + c.ttft) - x0, 1), x1 = x(c.start + c.total);
+      const label = `${r.label}, call ${j + 1}: starts ${c.start.toFixed(1)} s, first token ${fmtS(c.ttft)}, total ${fmtS(c.total)}, ${fmtN(c.out)} output tokens`;
+      g.setAttribute('aria-label', label);
+      g.append(s('rect', { class: 'hit', x: x0 - 2, y: mid - bh / 2 - 4, width: Math.max(x1 - x0 + 4, 8), height: bh + 8, fill: 'transparent', rx: 3 }));
+      g.append(s('rect', { x: x0 + 0.75, y: mid - bh / 2 + 0.75, width: Math.max(xw - 1.5, 0.5), height: bh - 1.5, fill: 'var(--panel)', stroke: col(r.key), 'stroke-width': 1.5, rx: 3 }));
+      if (x1 - (x0 + xw) > 0.5) g.append(s('rect', { class: 'gen', x: x0 + xw + 1, y: mid - bh / 2, width: Math.max(x1 - x0 - xw - 1, 1), height: bh, fill: col(r.key), rx: 3 }));
+      const show = ev => {
+        tip.hidden = false;
+        tip.innerHTML = '';
+        tip.append(el('div', { style: 'font-weight:600' }, `${r.label} · call ${j + 1}`),
+          el('div', {}, `start ${c.start.toFixed(1)} s · total ${fmtS(c.total)}`),
+          el('div', {}, `first token ${fmtS(c.ttft)}${c.visible && c.visible !== c.ttft ? ' (visible ' + fmtS(c.visible) + ')' : ''}`),
+          el('div', {}, `in ${fmtN(c.in + c.cache_read + c.cache_write)} tok${c.cache_read ? ' (' + fmtN(c.cache_read) + ' cached)' : ''} · out ${fmtN(c.out)}`),
+          el('div', {}, (c.blocks || []).join(', ')));
+        const cr = chart.getBoundingClientRect(), br = g.getBoundingClientRect();
+        let left = br.left - cr.left + br.width / 2 - 140; left = Math.max(8, Math.min(left, cr.width - 290));
+        tip.style.left = left + 'px'; tip.style.top = (br.top - cr.top - tip.offsetHeight - 8) + 'px';
+      };
+      g.addEventListener('mouseenter', show); g.addEventListener('focus', show);
+      g.addEventListener('mouseleave', () => tip.hidden = true); g.addEventListener('blur', () => tip.hidden = true);
+      svg.append(g);
+    });
+  });
+
+  // speed strip chart
+  {
+    const svg2 = document.getElementById('speed'), tip2 = document.getElementById('tip2'), box = document.getElementById('speedchart');
+    const all = runs.flatMap(r => r.rates.filter(v => v != null));
+    const vmax = Math.ceil(Math.max(...all) / 20) * 20;
+    const L = 150, R = 20, LN = 40, T = 8, A = 30;
+    const sx = v => L + (v / vmax) * (1000 - L - R);
+    const H2 = T + runs.length * LN + A;
+    svg2.setAttribute('viewBox', `0 0 1000 ${H2}`); svg2.style.minWidth = '640px';
+    for (let v = 0; v <= vmax; v += 20) {
+      svg2.append(s('line', { x1: sx(v), x2: sx(v), y1: T, y2: T + runs.length * LN, stroke: 'var(--rule)', 'stroke-width': 1 }));
+      const t = s('text', { x: sx(v), y: T + runs.length * LN + 18, 'text-anchor': 'middle', fill: 'var(--ink-3)', 'font-size': 12, 'font-family': 'var(--font-mono)' });
+      t.textContent = v; svg2.append(t);
+    }
+    const unit = s('text', { x: 1000 - R, y: T + runs.length * LN + 18, 'text-anchor': 'end', fill: 'var(--ink-3)', 'font-size': 12, 'font-family': 'var(--font-mono)' });
+    unit.textContent = 'tok/s'; svg2.append(unit);
+    runs.forEach((r, i) => {
+      const mid = T + i * LN + LN / 2;
+      const nm = s('text', { x: 0, y: mid - 2, fill: 'var(--ink)', 'font-size': 13, 'font-weight': 600, 'font-family': 'var(--font-body)' });
+      nm.textContent = r.label; svg2.append(nm);
+      const sb = s('text', { x: 0, y: mid + 13, fill: 'var(--ink-3)', 'font-size': 11, 'font-family': 'var(--font-mono)' });
+      sb.textContent = r.genRate ? 'median ' + r.genRate.toFixed(0) + ' tok/s' : 'no measurable calls'; svg2.append(sb);
+      if (r.genRate) svg2.append(s('line', { x1: sx(r.genRate), x2: sx(r.genRate), y1: mid - 12, y2: mid + 12, stroke: 'var(--ink)', 'stroke-width': 2 }));
+      r.rates.forEach((v, j) => {
+        if (v == null) return;
+        const c = r.calls[j];
+        const g = s('g', { class: 'bar', tabindex: 0, role: 'img', 'aria-label': `${r.label}, call ${j + 1}: ${v.toFixed(0)} tokens per second over ${fmtN(c.out)} tokens` });
+        g.append(s('circle', { class: 'hit', cx: sx(v), cy: mid, r: 9, fill: 'transparent' }));
+        g.append(s('circle', { cx: sx(v), cy: mid, r: 5, fill: col(r.key), stroke: 'var(--panel)', 'stroke-width': 2 }));
+        const show = () => {
+          tip2.hidden = false; tip2.innerHTML = '';
+          tip2.append(el('div', { style: 'font-weight:600' }, `${r.label} · call ${j + 1}`), el('div', {}, `${v.toFixed(1)} tok/s`),
+            el('div', {}, `${fmtN(c.out)} tokens in ${(c.total - c.ttft).toFixed(1)} s`));
+          const cr = box.getBoundingClientRect(), br = g.getBoundingClientRect();
+          let left = br.left - cr.left - 120; left = Math.max(8, Math.min(left, cr.width - 290));
+          tip2.style.left = left + 'px'; tip2.style.top = (br.top - cr.top - tip2.offsetHeight - 8) + 'px';
+        };
+        g.addEventListener('mouseenter', show); g.addEventListener('focus', show);
+        g.addEventListener('mouseleave', () => tip2.hidden = true); g.addEventListener('blur', () => tip2.hidden = true);
+        svg2.append(g);
+      });
+    });
+  }
+
+  // findings
+  const byKey = Object.fromEntries(runs.map(r => [r.key, r]));
+  const fastest = [...runs].filter(r => r.persistsVal).sort((a, b) => a.wall - b.wall)[0];
+  const F = [
+    ['Fastest working app', fastest ? `${fastest.label} finished in ${fmtS(fastest.wall)} over ${fastest.turns} API calls, for $${(fastest.cost || 0).toFixed(2)}.` : ''],
+    ['Qwen shipped the bug', `Qwen took ${fmtS(byKey.qwen.wall)} and the app wipes its todos on reload. All three Claude runs read localStorage in a lazy useState initializer, which avoids it.`],
+    ['First-token latency', `Claude models answer the first call in ${runs.filter(r => r.sub.includes('Anthropic')).map(r => fmtS(r.firstTtft)).join(' / ')}. Qwen's first call needed ${fmtS(byKey.qwen.firstTtft)}, including a model reload and reading a ${fmtN(byKey.qwen.ctx_first)}-token prompt.`],
+    ['Generation speed', `Median output speed: ${runs.map(r => r.label.split(' ·')[0].replace('Qwen3-Coder', 'Qwen') + (r.label.includes('·') ? ' ' + r.label.split('· ')[1] : '') + ' ' + (r.genRate ? r.genRate.toFixed(0) : '–')).join(', ')} tok/s. Long file writes run fastest; short replies are dominated by the wait for the first token.`],
+    ['1-bit Qwen fails at the job', byKey['qwen-tq1'] ? `The TQ1_0 quant runs fast (${byKey['qwen-tq1'].genRate ? byKey['qwen-tq1'].genRate.toFixed(0) + ' tok/s' : '–'}) but wrote no files: it kept sending writes to a made-up path outside its working folder, then pasted the code into chat. The Q3 quant of the same model did write its app.` : ''],
+    ['Effort costs time', byKey['opus55-xhigh'] ? `Opus at xhigh wrote ${fmtN(byKey['opus55-xhigh'].out)} output tokens against ${fmtN(byKey['opus55-medium'].out)} at medium, taking ${fmtS(byKey['opus55-xhigh'].wall)} instead of ${fmtS(byKey['opus55-medium'].wall)}.` : ''],
+  ];
+  const fin = document.getElementById('findings');
+  F.filter(f => f[1]).forEach(([h, t]) => fin.append(el('div', { class: 'finding' }, el('h3', { text: h }), el('p', { text: t }))));
+
+  // run records
+  const host = document.getElementById('runs');
+  for (const r of runs) {
+    const d = el('details', { class: 'run' });
+    d.append(el('summary', {}, el('span', { class: 'swatch', style: `background:${col(r.key)}` }), el('h3', { text: r.label }),
+      el('span', { class: 'sumstats' }, el('span', {}, fmtS(r.wall)), el('span', {}, r.turns + ' calls'), el('span', {}, fmtN(r.out) + ' out tok'),
+        el('span', {}, r.cost ? '$' + r.cost.toFixed(2) : '$0'))));
+    const body = el('div', { class: 'runbody' });
+    body.append(el('div', { class: 'verdict' },
+      el('div', {}, el('span', { class: 'pill ' + (r.persistsVal ? 'ok' : 'no') }, r.persistsVal ? '✓ todos survive a reload' : r.files.length ? '✗ todos lost on reload' : '✗ no app written')),
+      el('p', { text: r.verdict || '' }), r.note ? el('p', { class: 'note', text: r.note }) : null));
+
+    const ct = el('table', { class: 'calltable' });
+    ct.append(el('thead', {}, el('tr', {}, ['#', 'start', 'first tok', 'total', 'in (new)', 'cache read', 'cache write', 'out', 'tok/s', 'stop', 'blocks'].map(h => el('th', { scope: 'col', text: h })))));
+    ct.append(el('tbody', {}, r.calls.map((c, j) => el('tr', {},
+      el('td', { text: String(j + 1) }), el('td', { text: c.start.toFixed(1) }), el('td', { text: c.ttft == null ? '–' : c.ttft.toFixed(2) }),
+      el('td', { text: c.total.toFixed(1) }), el('td', { text: fmtN(c.in) }), el('td', { text: fmtN(c.cache_read) }), el('td', { text: fmtN(c.cache_write) }),
+      el('td', { text: fmtN(c.out) }), el('td', { text: r.rates[j] == null ? '–' : r.rates[j].toFixed(0) }), el('td', { text: c.stop || '' }), el('td', { class: 'blocks', text: (c.blocks || []).join(', ') })))));
+    body.append(el('div', { style: 'display:grid;gap:8px;min-width:0' }, el('div', { class: 'eyebrow', text: 'API calls' }), el('div', { class: 'tablebox' }, ct)));
+
+    body.append(el('div', { style: 'display:grid;gap:8px' }, el('div', { class: 'eyebrow', text: `Files produced · ${r.workspace}` }),
+      el('ul', { class: 'files' }, r.files.filter(f => !f.startsWith('dist/') && !f.startsWith('build/')).map(f => el('li', { text: f })),
+        r.files.some(f => f.startsWith('dist/') || f.startsWith('build/')) ? el('li', { text: '+ production build output' }) : null)));
+
+    const tx = el('details', { class: 'tx' });
+    const nTools = r.transcript.filter(t => t.kind === 'tool_use').length;
+    tx.append(el('summary', {}, `Transcript · ${r.transcript.length} steps, ${nTools} tool calls${r.key === 'qwen' ? ' · all three turns' : ''}`));
+    const steps = el('div', { class: 'steps' });
+    for (const t of r.transcript) {
+      const tag = el('div', { class: 'tag' }, el('span', { text: { user: 'user', text: 'assistant', thinking: 'thinking', tool_use: 'tool call', tool_result: t.error ? 'tool result · error' : 'tool result' }[t.kind] }),
+        t.t != null ? el('span', { text: '+' + t.t.toFixed(1) + ' s' }) : null);
+      let node;
+      if (t.kind === 'tool_use') {
+        let args = t.input; let short = '';
+        try { const o = JSON.parse(args); short = o.file_path || o.command || o.pattern || o.description || ''; } catch (e) { }
+        node = el('div', { class: 'step tool_use' }, tag, el('div', {}, el('span', { class: 'toolname', text: t.name }), short ? el('span', { class: 'toolarg', text: '  ' + short }) : null),
+          el('details', {}, el('summary', { text: 'input' }), el('pre', { text: args })));
+      } else if (t.kind === 'tool_result') {
+        node = el('div', { class: 'step tool_result' + (t.error ? ' err' : '') }, tag, el('details', {}, el('summary', { text: (t.text.split('\n')[0] || '(empty)').slice(0, 110) }), el('pre', { text: t.text })));
+      } else if (t.kind === 'thinking') {
+        node = el('div', { class: 'step thinking' }, tag, el('div', { text: t.text ? t.text : 'Reasoning not returned (Claude Code hides it by default).' }));
+      } else {
+        node = el('div', { class: 'step ' + t.kind }, tag, el('div', { class: 'body', text: t.text }));
+      }
+      steps.append(node);
+    }
+    tx.append(steps);
+    body.append(tx);
+    d.append(body);
+    host.append(d);
+  }
+
+  const M = [
+    'Each Claude Code request went through a small local proxy that logs when the request was sent, when the first streamed token arrived, when the response ended, and the token usage the server reported. "First token" counts any streamed token, thinking included.',
+    'Claude runs: claude -p in a fresh folder, --model and --effort set per run, acceptEdits plus Bash allowed, claude.ai connectors off. Costs are Claude Code\'s list-price figures; the runs were billed to the Claude subscription.',
+    'Qwen run: the same Claude Code in Vineyard, pointed at Ollama on cassowary (RTX 3090, 64k context). Only its first turn is compared; its transcript includes your two follow-up messages.',
+    'Prompt sizes differ: Claude Code sends Claude models a 26.5k-token system prompt and Qwen about 15k. Anthropic caching made later Claude calls read most of it from cache; Ollama reports only the tokens it newly processed.',
+    'Qwen\'s numbers include about 40 s lost to model reloads caused by our own home-ai driver unloading models during the run. With a steady model its first turn would be about 76 s.',
+    'Persistence was judged by reading each app\'s state code: a lazy useState initializer that reads localStorage survives a reload; an effect that writes the initial empty list on mount does not.',
+  ];
+  const ml = document.getElementById('method'); M.forEach(m => ml.append(el('li', { text: m })));
+})();
+</script>

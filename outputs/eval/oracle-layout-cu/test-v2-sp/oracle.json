@@ -1,0 +1,11 @@
+{
+  "data": "data/generated/test-v2-sp.jsonl",
+  "layout": "clock_in_user",
+  "examples": 150,
+  "turns": 174,
+  "pass": 1.0,
+  "conversation_pass": 1.0,
+  "errors": 0,
+  "wrong_layout_calls": 0,
+  "seconds": 1.1
+}

@@ -1,0 +1,368 @@
+[25/200] 92.6% 85.2% 77.8% 70.4% 81.5% 85.2% 88.9% 81.5% 77.8% 70.4% 127s
+[50/200] 86.5% 82.7% 71.2% 67.3% 82.7% 84.6% 84.6% 80.8% 76.9% 73.1% 275s
+[75/200] 86.6% 81.7% 71.3% 67.1% 80.5% 82.9% 82.9% 76.8% 75.6% 74.4% 430s
+[100/200] 86.6% 83.0% 72.8% 66.1% 80.4% 83.0% 83.9% 79.5% 76.8% 75.0% 579s
+[125/200] 86.5% 83.0% 72.7% 66.7% 81.6% 83.0% 84.4% 79.4% 75.2% 76.6% 732s
+[150/200] 86.9% 83.3% 72.9% 67.3% 81.0% 83.3% 84.5% 78.6% 75.0% 76.8% 863s
+[175/200] 86.3% 81.2% 71.3% 66.0% 79.2% 81.7% 83.2% 77.2% 75.1% 75.6% 1010s
+[200/200] 86.4% 81.6% 73.0% 67.1% 79.8% 82.0% 83.3% 77.2% 75.9% 76.3% 1186s
+{
+  "model": "homeai-lfm25-1.2b-lora-b-v8r256s2",
+  "mode": "e2e",
+  "host": "lapwing",
+  "hardware": "rtx-3080",
+  "host_note": "lapwing (accuracy only), user_context",
+  "ollama": "http://127.0.0.1:11500",
+  "lockstep": 10,
+  "prompt_layout": "user_context",
+  "data": "data/generated/bigbench-b-bundook200.jsonl",
+  "examples": 200,
+  "turns": 228,
+  "pass": 0.8640350877192983,
+  "conversation_pass": 0.845,
+  "seconds_per_turn": 0.19305457773896836,
+  "calls_per_request": 2.1271929824561404,
+  "errors": 0,
+  "by_kind": {
+    "answer": {
+      "n": 124,
+      "ok": 102
+    },
+    "state": {
+      "n": 228,
+      "ok": 219
+    },
+    "reply": {
+      "n": 228,
+      "ok": 206
+    },
+    "act": {
+      "n": 104,
+      "ok": 95
+    }
+  }
+}
+{
+  "model": "homeai-lfm25-1.2b-lora-b-v8r256s2",
+  "mode": "e2e",
+  "host": "lapwing",
+  "hardware": "rtx-3080",
+  "host_note": "lapwing (accuracy only), user_context",
+  "ollama": "http://127.0.0.1:11500",
+  "lockstep": 10,
+  "prompt_layout": "user_context",
+  "data": "data/generated/heard/bigbench-b-bundook200-parakeet-clean.jsonl",
+  "examples": 200,
+  "turns": 228,
+  "pass": 0.8157894736842105,
+  "conversation_pass": 0.79,
+  "seconds_per_turn": 0.19551716125551075,
+  "calls_per_request": 2.1315789473684212,
+  "errors": 0,
+  "by_kind": {
+    "answer": {
+      "n": 124,
+      "ok": 97
+    },
+    "state": {
+      "n": 228,
+      "ok": 212
+    },
+    "reply": {
+      "n": 228,
+      "ok": 201
+    },
+    "act": {
+      "n": 104,
+      "ok": 89
+    }
+  }
+}
+{
+  "model": "homeai-lfm25-1.2b-lora-b-v8r256s2",
+  "mode": "e2e",
+  "host": "lapwing",
+  "hardware": "rtx-3080",
+  "host_note": "lapwing (accuracy only), user_context",
+  "ollama": "http://127.0.0.1:11500",
+  "lockstep": 10,
+  "prompt_layout": "user_context",
+  "data": "data/generated/heard/bigbench-b-bundook200-parakeet-farfield.jsonl",
+  "examples": 200,
+  "turns": 228,
+  "pass": 0.7302631578947368,
+  "conversation_pass": 0.7,
+  "seconds_per_turn": 0.19311392702996977,
+  "calls_per_request": 2.1140350877192984,
+  "errors": 0,
+  "by_kind": {
+    "answer": {
+      "n": 124,
+      "ok": 86.5
+    },
+    "state": {
+      "n": 228,
+      "ok": 199
+    },
+    "reply": {
+      "n": 228,
+      "ok": 192
+    },
+    "act": {
+      "n": 104,
+      "ok": 80
+    }
+  }
+}
+{
+  "model": "homeai-lfm25-1.2b-lora-b-v8r256s2",
+  "mode": "e2e",
+  "host": "lapwing",
+  "hardware": "rtx-3080",
+  "host_note": "lapwing (accuracy only), user_context",
+  "ollama": "http://127.0.0.1:11500",
+  "lockstep": 10,
+  "prompt_layout": "user_context",
+  "data": "data/generated/heard/bigbench-b-bundook200-parakeet-noisy10.jsonl",
+  "examples": 200,
+  "turns": 228,
+  "pass": 0.6710526315789473,
+  "conversation_pass": 0.64,
+  "seconds_per_turn": 0.19379502681435132,
+  "calls_per_request": 2.1403508771929824,
+  "errors": 0,
+  "by_kind": {
+    "answer": {
+      "n": 124,
+      "ok": 78
+    },
+    "state": {
+      "n": 228,
+      "ok": 190
+    },
+    "reply": {
+      "n": 228,
+      "ok": 183
+    },
+    "act": {
+      "n": 104,
+      "ok": 75
+    }
+  }
+}
+{
+  "model": "homeai-lfm25-1.2b-lora-b-v8r256s2",
+  "mode": "e2e",
+  "host": "lapwing",
+  "hardware": "rtx-3080",
+  "host_note": "lapwing (accuracy only), user_context",
+  "ollama": "http://127.0.0.1:11500",
+  "lockstep": 10,
+  "prompt_layout": "user_context",
+  "data": "data/generated/heard/bigbench-b-bundook200-small-clean.jsonl",
+  "examples": 200,
+  "turns": 228,
+  "pass": 0.7982456140350878,
+  "conversation_pass": 0.77,
+  "seconds_per_turn": 0.196327273018104,
+  "calls_per_request": 2.1228070175438596,
+  "errors": 0,
+  "by_kind": {
+    "answer": {
+      "n": 124,
+      "ok": 92
+    },
+    "state": {
+      "n": 228,
+      "ok": 214
+    },
+    "reply": {
+      "n": 228,
+      "ok": 196
+    },
+    "act": {
+      "n": 104,
+      "ok": 90
+    }
+  }
+}
+{
+  "model": "homeai-lfm25-1.2b-lora-b-v8r256s2",
+  "mode": "e2e",
+  "host": "lapwing",
+  "hardware": "rtx-3080",
+  "host_note": "lapwing (accuracy only), user_context",
+  "ollama": "http://127.0.0.1:11500",
+  "lockstep": 10,
+  "prompt_layout": "user_context",
+  "data": "data/generated/heard/bigbench-b-bundook200-small-biased.jsonl",
+  "examples": 200,
+  "turns": 228,
+  "pass": 0.8201754385964912,
+  "conversation_pass": 0.795,
+  "seconds_per_turn": 0.19739397955529484,
+  "calls_per_request": 2.1315789473684212,
+  "errors": 0,
+  "by_kind": {
+    "answer": {
+      "n": 124,
+      "ok": 95
+    },
+    "state": {
+      "n": 228,
+      "ok": 215
+    },
+    "reply": {
+      "n": 228,
+      "ok": 199
+    },
+    "act": {
+      "n": 104,
+      "ok": 92
+    }
+  }
+}
+{
+  "model": "homeai-lfm25-1.2b-lora-b-v8r256s2",
+  "mode": "e2e",
+  "host": "lapwing",
+  "hardware": "rtx-3080",
+  "host_note": "lapwing (accuracy only), user_context",
+  "ollama": "http://127.0.0.1:11500",
+  "lockstep": 10,
+  "prompt_layout": "user_context",
+  "data": "data/generated/heard/bigbench-b-bundook200-medium-biased.jsonl",
+  "examples": 200,
+  "turns": 228,
+  "pass": 0.8333333333333334,
+  "conversation_pass": 0.81,
+  "seconds_per_turn": 0.1958793756653396,
+  "calls_per_request": 2.1359649122807016,
+  "errors": 0,
+  "by_kind": {
+    "answer": {
+      "n": 124,
+      "ok": 99
+    },
+    "state": {
+      "n": 228,
+      "ok": 215
+    },
+    "reply": {
+      "n": 228,
+      "ok": 203
+    },
+    "act": {
+      "n": 104,
+      "ok": 91
+    }
+  }
+}
+{
+  "model": "homeai-lfm25-1.2b-lora-b-v8r256s2",
+  "mode": "e2e",
+  "host": "lapwing",
+  "hardware": "rtx-3080",
+  "host_note": "lapwing (accuracy only), user_context",
+  "ollama": "http://127.0.0.1:11500",
+  "lockstep": 10,
+  "prompt_layout": "user_context",
+  "data": "data/generated/heard/bigbench-b-bundook200-tiny-clean.jsonl",
+  "examples": 200,
+  "turns": 228,
+  "pass": 0.7719298245614035,
+  "conversation_pass": 0.74,
+  "seconds_per_turn": 0.1983018353152177,
+  "calls_per_request": 2.1315789473684212,
+  "errors": 0,
+  "by_kind": {
+    "answer": {
+      "n": 124,
+      "ok": 90
+    },
+    "state": {
+      "n": 228,
+      "ok": 210
+    },
+    "reply": {
+      "n": 228,
+      "ok": 194
+    },
+    "act": {
+      "n": 104,
+      "ok": 86
+    }
+  }
+}
+{
+  "model": "homeai-lfm25-1.2b-lora-b-v8r256s2",
+  "mode": "e2e",
+  "host": "lapwing",
+  "hardware": "rtx-3080",
+  "host_note": "lapwing (accuracy only), user_context",
+  "ollama": "http://127.0.0.1:11500",
+  "lockstep": 10,
+  "prompt_layout": "user_context",
+  "data": "data/generated/heard/bigbench-b-bundook200-medium-farfield-biased.jsonl",
+  "examples": 200,
+  "turns": 228,
+  "pass": 0.7587719298245614,
+  "conversation_pass": 0.725,
+  "seconds_per_turn": 0.19485309024651845,
+  "calls_per_request": 2.1052631578947367,
+  "errors": 0,
+  "by_kind": {
+    "answer": {
+      "n": 124,
+      "ok": 89
+    },
+    "state": {
+      "n": 228,
+      "ok": 203
+    },
+    "reply": {
+      "n": 228,
+      "ok": 193
+    },
+    "act": {
+      "n": 104,
+      "ok": 84
+    }
+  }
+}
+{
+  "model": "homeai-lfm25-1.2b-lora-b-v8r256s2",
+  "mode": "e2e",
+  "host": "lapwing",
+  "hardware": "rtx-3080",
+  "host_note": "lapwing (accuracy only), user_context",
+  "ollama": "http://127.0.0.1:11500",
+  "lockstep": 10,
+  "prompt_layout": "user_context",
+  "data": "data/generated/heard/bigbench-b-bundook200-medium-noisy10-biased.jsonl",
+  "examples": 200,
+  "turns": 228,
+  "pass": 0.7631578947368421,
+  "conversation_pass": 0.73,
+  "seconds_per_turn": 0.19546594844030213,
+  "calls_per_request": 2.1447368421052633,
+  "errors": 0,
+  "by_kind": {
+    "answer": {
+      "n": 124,
+      "ok": 89
+    },
+    "state": {
+      "n": 228,
+      "ok": 204
+    },
+    "reply": {
+      "n": 228,
+      "ok": 194
+    },
+    "act": {
+      "n": 104,
+      "ok": 85
+    }
+  }
+}

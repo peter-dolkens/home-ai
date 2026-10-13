@@ -1,0 +1,229 @@
+{
+  "set": "kokoro__medium__biased",
+  "stt": "medium",
+  "condition": "biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 225,
+  "words": 1466,
+  "errors": 22,
+  "wer": 0.015,
+  "exact": 0.9333,
+  "vocab_words": 472,
+  "vocab_errors": 6,
+  "vocab_wer": 0.0127,
+  "vocab": {
+    "room": {
+      "n": 161,
+      "err": 4,
+      "wer": 0.0248
+    },
+    "device": {
+      "n": 147,
+      "err": 1,
+      "wer": 0.0068
+    },
+    "person": {
+      "n": 19,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 13,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 132,
+      "err": 1,
+      "wer": 0.0076
+    }
+  },
+  "meaning_changed": 0.0178,
+  "meaning_changed_n": 4,
+  "meaning_by_kind": {
+    "room": 0.0089,
+    "device": 0.0044,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0044
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 15.963,
+    "p50": 15.7346,
+    "p90": 18.4894,
+    "rtf": 5.2535,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nicole": {
+      "turns": 9,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-nova": {
+      "turns": 15,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sarah": {
+      "turns": 26,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sky": {
+      "turns": 12,
+      "wer": 0.04,
+      "meaning_changed": 0.0833
+    },
+    "t-k-am-eric": {
+      "turns": 12,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-liam": {
+      "turns": 13,
+      "wer": 0.0417,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-onyx": {
+      "turns": 15,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-puck": {
+      "turns": 22,
+      "wer": 0.042,
+      "meaning_changed": 0.0455
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 18,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 12,
+      "wer": 0.0238,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 5,
+      "wer": 0.0625,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 16,
+      "wer": 0.02,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 13,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 10,
+      "wer": 0.0423,
+      "meaning_changed": 0.1
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 14,
+      "wer": 0.0118,
+      "meaning_changed": 0.0714
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 13,
+      "wer": 0.013,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 50,
+      "wer": 0.0122,
+      "meaning_changed": 0.0
+    },
+    "1.0": {
+      "turns": 114,
+      "wer": 0.0136,
+      "meaning_changed": 0.0175
+    },
+    "1.15": {
+      "turns": 61,
+      "wer": 0.0201,
+      "meaning_changed": 0.0328
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 225,
+      "wer": 0.015,
+      "meaning_changed": 0.0178
+    }
+  },
+  "by_set": {
+    "kokoro__medium__biased": {
+      "turns": 225,
+      "wer": 0.015,
+      "meaning_changed": 0.0178
+    }
+  },
+  "samples": [
+    {
+      "id": "201-1667",
+      "turn": 0,
+      "voice": "t-k-bm-george-lewis",
+      "written": "ok can you play Seal in the bedroom thanks",
+      "heard": "OK, can you place seal in the bedroom? Thanks.",
+      "lost": [
+        [
+          "command",
+          "play"
+        ]
+      ]
+    },
+    {
+      "id": "202-1992",
+      "turn": 0,
+      "voice": "t-k-am-puck",
+      "written": "Turn off the lights in the laundry and then turn on the lights in the hallway",
+      "heard": "Turn off the lights in the laundry and then turn on the lights in the hall.",
+      "lost": [
+        [
+          "room",
+          "hallway"
+        ]
+      ]
+    },
+    {
+      "id": "209-1222",
+      "turn": 0,
+      "voice": "t-k-af-sky",
+      "written": "hey house, goodnight thanks",
+      "heard": "Hey, how's good night, thanks.",
+      "lost": [
+        [
+          "device",
+          "house"
+        ]
+      ]
+    },
+    {
+      "id": "abig-random-20000-1063",
+      "turn": 0,
+      "voice": "t-k-bm-george-daniel",
+      "written": "hey house, lights on in the carport, the driveway and the master ensuite",
+      "heard": "Hay House lights on in the carport, the driveway and the master in suit.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

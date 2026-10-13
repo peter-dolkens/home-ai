@@ -1,0 +1,402 @@
+{
+  "set": "piper__medium__biased",
+  "stt": "medium",
+  "condition": "biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 242,
+  "words": 1585,
+  "errors": 123,
+  "wer": 0.0776,
+  "exact": 0.7025,
+  "vocab_words": 538,
+  "vocab_errors": 20,
+  "vocab_wer": 0.0372,
+  "vocab": {
+    "room": {
+      "n": 182,
+      "err": 1,
+      "wer": 0.0055
+    },
+    "device": {
+      "n": 176,
+      "err": 10,
+      "wer": 0.0568
+    },
+    "person": {
+      "n": 29,
+      "err": 2,
+      "wer": 0.069
+    },
+    "number": {
+      "n": 17,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 134,
+      "err": 7,
+      "wer": 0.0522
+    }
+  },
+  "meaning_changed": 0.0702,
+  "meaning_changed_n": 17,
+  "meaning_by_kind": {
+    "room": 0.0041,
+    "device": 0.0372,
+    "person": 0.0041,
+    "number": 0.0,
+    "command": 0.0289
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 14.8665,
+    "p50": 14.7326,
+    "p90": 16.9963,
+    "rtf": 5.8162,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-ca-p302": {
+      "turns": 11,
+      "wer": 0.1014,
+      "meaning_changed": 0.1818
+    },
+    "t-ie-p245": {
+      "turns": 11,
+      "wer": 0.0137,
+      "meaning_changed": 0.0
+    },
+    "t-ie-p288": {
+      "turns": 13,
+      "wer": 0.0864,
+      "meaning_changed": 0.0769
+    },
+    "t-ld-p243": {
+      "turns": 18,
+      "wer": 0.0781,
+      "meaning_changed": 0.0556
+    },
+    "t-ni-p304": {
+      "turns": 17,
+      "wer": 0.0855,
+      "meaning_changed": 0.0588
+    },
+    "t-nz-p335": {
+      "turns": 18,
+      "wer": 0.0492,
+      "meaning_changed": 0.0
+    },
+    "t-sc-p234": {
+      "turns": 16,
+      "wer": 0.1856,
+      "meaning_changed": 0.1875
+    },
+    "t-sc-p237": {
+      "turns": 15,
+      "wer": 0.1515,
+      "meaning_changed": 0.1333
+    },
+    "t-se-p225": {
+      "turns": 14,
+      "wer": 0.0494,
+      "meaning_changed": 0.0
+    },
+    "t-sm-prudence": {
+      "turns": 22,
+      "wer": 0.0492,
+      "meaning_changed": 0.0455
+    },
+    "t-sm-spike": {
+      "turns": 16,
+      "wer": 0.0392,
+      "meaning_changed": 0.0625
+    },
+    "t-wa-p253": {
+      "turns": 7,
+      "wer": 0.0962,
+      "meaning_changed": 0.1429
+    },
+    "t-yk-p267": {
+      "turns": 18,
+      "wer": 0.0956,
+      "meaning_changed": 0.0556
+    },
+    "t-yk-p270": {
+      "turns": 12,
+      "wer": 0.0563,
+      "meaning_changed": 0.0
+    },
+    "t-za-p323": {
+      "turns": 19,
+      "wer": 0.0385,
+      "meaning_changed": 0.1053
+    },
+    "t-za-p347": {
+      "turns": 15,
+      "wer": 0.0762,
+      "meaning_changed": 0.0667
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 55,
+      "wer": 0.0831,
+      "meaning_changed": 0.1091
+    },
+    "1.0": {
+      "turns": 120,
+      "wer": 0.0683,
+      "meaning_changed": 0.0417
+    },
+    "1.15": {
+      "turns": 67,
+      "wer": 0.0907,
+      "meaning_changed": 0.0896
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 242,
+      "wer": 0.0776,
+      "meaning_changed": 0.0702
+    }
+  },
+  "by_set": {
+    "piper__medium__biased": {
+      "turns": 242,
+      "wer": 0.0776,
+      "meaning_changed": 0.0702
+    }
+  },
+  "samples": [
+    {
+      "id": "b300-706",
+      "turn": 0,
+      "voice": "t-sm-prudence",
+      "written": "fan off now",
+      "heard": "Fun of Now.",
+      "lost": [
+        [
+          "device",
+          "fan"
+        ],
+        [
+          "command",
+          "off"
+        ]
+      ]
+    },
+    {
+      "id": "b300-116",
+      "turn": 0,
+      "voice": "t-sm-spike",
+      "written": "Cut the dryer off",
+      "heard": "Cut the dry off.",
+      "lost": [
+        [
+          "device",
+          "dryer"
+        ]
+      ]
+    },
+    {
+      "id": "b300-1432",
+      "turn": 0,
+      "voice": "t-za-p323",
+      "written": "please turn on the lights in the kitchen and the living room please",
+      "heard": "Please turn on the light in the kitchen and the living room please.",
+      "lost": [
+        [
+          "device",
+          "lights"
+        ]
+      ]
+    },
+    {
+      "id": "b300-1587",
+      "turn": 0,
+      "voice": "t-za-p323",
+      "written": "Can you get the lights on in the living room?",
+      "heard": "Can you get the light on in the living room?",
+      "lost": [
+        [
+          "device",
+          "lights"
+        ]
+      ]
+    },
+    {
+      "id": "b300-1645",
+      "turn": 0,
+      "voice": "t-za-p347",
+      "written": "right, dim the lights to 100 percent",
+      "heard": "Brighten the lights to 100%.",
+      "lost": [
+        [
+          "command",
+          "dim"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2667",
+      "turn": 0,
+      "voice": "t-ca-p302",
+      "written": "hey, how's the solar looking for tomorrow",
+      "heard": "Hey, how's the cellar looking for tomorrow?",
+      "lost": [
+        [
+          "device",
+          "solar"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3851",
+      "turn": 0,
+      "voice": "t-sc-p237",
+      "written": "track down Ryan for me",
+      "heard": "Track done, Ryan, for me.",
+      "lost": [
+        [
+          "command",
+          "down"
+        ]
+      ]
+    },
+    {
+      "id": "b300-4303",
+      "turn": 0,
+      "voice": "t-sc-p234",
+      "written": "Is the alarm switched on?",
+      "heard": "Here's the tell-on switched on.",
+      "lost": [
+        [
+          "device",
+          "alarm"
+        ]
+      ]
+    },
+    {
+      "id": "b300-876",
+      "turn": 0,
+      "voice": "t-sc-p234",
+      "written": "hey house, heater off please",
+      "heard": "Pay House, Heater of Please.",
+      "lost": [
+        [
+          "command",
+          "off"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1900",
+      "turn": 0,
+      "voice": "t-ca-p302",
+      "written": "hey, switch off the homepod in kitchen",
+      "heard": "Hey, switch off the home button, Kitchen.",
+      "lost": [
+        [
+          "device",
+          "homepod"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-10000-690",
+      "turn": 0,
+      "voice": "t-ni-p304",
+      "written": "switch on the pendant 2 in the family room",
+      "heard": "Switch from the Pendant 2 in the Family Room.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-10000-723",
+      "turn": 0,
+      "voice": "t-sc-p234",
+      "written": "hey, any idea where Owen is",
+      "heard": "Pay. Any ID Awareness.",
+      "lost": [
+        [
+          "person",
+          "owen"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-15000-1079",
+      "turn": 0,
+      "voice": "t-ld-p243",
+      "written": "hey house, play this on repeat in Nathan's room please",
+      "heard": "Hay House, Play, December, Peter, Nathan's Room, Please.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-20000-1305",
+      "turn": 0,
+      "voice": "t-yk-p267",
+      "written": "how's the solar looking",
+      "heard": "How's this all looking?",
+      "lost": [
+        [
+          "device",
+          "solar"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-3000-253",
+      "turn": 0,
+      "voice": "t-wa-p253",
+      "written": "quick question, can you turn it up in the bedroom 2",
+      "heard": "Quick question, can you turn it up in the bedroom too?",
+      "lost": [
+        [
+          "room",
+          "bedroom 2"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-6000-319",
+      "turn": 0,
+      "voice": "t-sc-p237",
+      "written": "Shut the blinds?",
+      "heard": "Shed the blinds.",
+      "lost": [
+        [
+          "command",
+          "shut"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-6000-513",
+      "turn": 0,
+      "voice": "t-ie-p288",
+      "written": "Switch Tara's room wall light 1 off.",
+      "heard": "Switch Tara's Room or Light One Off.",
+      "lost": [
+        [
+          "device",
+          "wall light 1"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

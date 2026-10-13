@@ -1,0 +1,71 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.18kB 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 2.6s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/3] FROM docker.io/library/python:3.12-slim@sha256:02108f5d322dd89f1c9e552442c25acb0543dfdbc455693a5599624f20d9155d
+#4 resolve docker.io/library/python:3.12-slim@sha256:02108f5d322dd89f1c9e552442c25acb0543dfdbc455693a5599624f20d9155d done
+#4 DONE 0.0s
+
+#5 [2/3] RUN pip install --no-cache-dir       piper-tts==1.8.0 faster-whisper==1.2.1 ctranslate2==4.8.2 sherpa-onnx==1.13.8 onnxruntime==1.30.0       numpy==2.5.3 soundfile==0.14.0  && pip install --no-cache-dir kokoro-onnx==0.4.9 misaki==0.9.4 spacy==3.8.16 num2words  && python -m spacy download en_core_web_sm
+#5 CACHED
+
+#6 [3/3] WORKDIR /work
+#6 CACHED
+
+#7 exporting to image
+#7 exporting layers done
+#7 exporting manifest sha256:ba108b8ea6350fc14b35bdf81d80a3191c898dceaa5d50e5145598120c604bc9 done
+#7 exporting config sha256:c12bdcb4537215aad204316459d7a3978923929f8193d6a758719f1a83611bf8 done
+#7 exporting attestation manifest sha256:0057b851695412bdcdce1ea845e68a0bec2b403fbfac92f3cced9dfa047ffeb8 done
+#7 exporting manifest list sha256:0cee9655da133655b82104c717a5ed9ce0fb78e6672c5a56f25bcb4d6b4966ce done
+#7 naming to docker.io/library/homeai-voice:latest done
+#7 unpacking to docker.io/library/homeai-voice:latest done
+#7 DONE 0.0s
+tts: 228 turns, 228 distinct utterances, 0 synthesised in 0s
+medium: 456 transcriptions to run (0 cached), 3 workers x 3 threads
+  medium 200/456 531s (2.65s each, 679s left)
+  medium 400/456 1098s (2.74s each, 154s left)
+  medium 456/456 1258s (2.76s each, 0s left)
+  bigbench-b-bundook200-medium-farfield-biased: WER 11.2%  vocab 9.7%  meaning changed 16.2%  (228 turns)
+  bigbench-b-bundook200-medium-noisy10-biased: WER 11.8%  vocab 10.4%  meaning changed 15.8%  (228 turns)
+tts: 228 turns, 228 distinct utterances, 0 synthesised in 0s
+large-v3-turbo: 684 transcriptions to run (0 cached), 3 workers x 3 threads
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+  large-v3-turbo 200/684 1338s (6.69s each, 3238s left)
+  large-v3-turbo 400/684 2854s (7.13s each, 2026s left)
+  large-v3-turbo 600/684 4158s (6.93s each, 582s left)
+  large-v3-turbo 684/684 4586s (6.71s each, 0s left)
+  bigbench-b-bundook200-large-v3-turbo-biased: WER 29.8%  vocab 8.9%  meaning changed 13.2%  (228 turns)
+  bigbench-b-bundook200-large-v3-turbo-farfield-biased: WER 61.2%  vocab 18.1%  meaning changed 24.1%  (228 turns)
+  bigbench-b-bundook200-large-v3-turbo-noisy10-biased: WER 36.8%  vocab 17.7%  meaning changed 22.8%  (228 turns)
+tts: 228 turns, 228 distinct utterances, 0 synthesised in 0s
+small: 228 transcriptions to run (0 cached), 5 workers x 2 threads
+  small 200/228 207s (1.03s each, 29s left)
+  small 204/228 221s (1.08s each, 26s left)
+  small 228/228 233s (1.02s each, 0s left)
+  bigbench-b-bundook200-small-farfield-biased: WER 14.7%  vocab 13.2%  meaning changed 19.7%  (228 turns)
+bigbench-b-bundook200-large-v3-turbo-biased.jsonl
+bigbench-b-bundook200-large-v3-turbo-farfield-biased.jsonl
+bigbench-b-bundook200-large-v3-turbo-noisy10-biased.jsonl
+bigbench-b-bundook200-medium-biased.jsonl
+bigbench-b-bundook200-medium-farfield-biased.jsonl
+bigbench-b-bundook200-medium-noisy10-biased.jsonl
+bigbench-b-bundook200-parakeet-clean.jsonl
+bigbench-b-bundook200-parakeet-farfield.jsonl
+bigbench-b-bundook200-parakeet-noisy10.jsonl
+bigbench-b-bundook200-small-biased.jsonl
+bigbench-b-bundook200-small-clean.jsonl
+bigbench-b-bundook200-small-farfield-biased.jsonl
+bigbench-b-bundook200-tiny-clean.jsonl
+2026-10-06 17:12:52 heard-bundook200-stt done

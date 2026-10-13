@@ -1,0 +1,104 @@
+{
+  "source": "data/generated/train-b-bundook-sup2.jsonl",
+  "rows": 1650,
+  "eligible": 1195,
+  "prompt_layout": "stable_prefix",
+  "counts": {
+    "casing": 101,
+    "homophone": 82,
+    "homophone:ambiguous": 3,
+    "homophone:homophone": 38,
+    "homophone:number": 16,
+    "homophone:split": 25,
+    "roundtrip": 558,
+    "roundtrip:base-clean": 21,
+    "roundtrip:kokoro": 406,
+    "roundtrip:medium-biased": 48,
+    "roundtrip:parakeet-clean": 113,
+    "roundtrip:parakeet-farfield": 35,
+    "roundtrip:parakeet-noisy10": 41,
+    "roundtrip:piper": 152,
+    "roundtrip:small-biased": 103,
+    "roundtrip:small-clean": 74,
+    "roundtrip:small-farfield-biased": 33,
+    "roundtrip:small-noisy10-biased": 36,
+    "roundtrip:tiny-clean": 54,
+    "roundtrip_all_turns_kept_written": 20,
+    "roundtrip_turn_kept_written:garbled": 30,
+    "roundtrip_turns": 602,
+    "unchanged": 395,
+    "unchanged_inherited_overlap": 455
+  },
+  "leakage": {
+    "file": "data/generated/train-b-sup2-v2.jsonl",
+    "held_out_utterances": 18157,
+    "augmented_rows": 741,
+    "augmented_overlap_turns": 0,
+    "augmented_overlap_distinct": 0,
+    "augmented_examples": [],
+    "inherited_overlap_turns": 510,
+    "inherited_overlap_distinct": 171
+  },
+  "inherited_top": [
+    [
+      "yes",
+      38
+    ],
+    [
+      "yes please",
+      26
+    ],
+    [
+      "go ahead",
+      22
+    ],
+    [
+      "please",
+      21
+    ],
+    [
+      "yes do all that",
+      16
+    ],
+    [
+      "do it",
+      12
+    ],
+    [
+      "no thats fine",
+      9
+    ],
+    [
+      "yep",
+      8
+    ],
+    [
+      "do you know where amber is",
+      8
+    ],
+    [
+      "wheres peter",
+      7
+    ],
+    [
+      "do you know where peter is",
+      7
+    ],
+    [
+      "is the battery going to be ok overnight",
+      7
+    ],
+    [
+      "never mind",
+      6
+    ],
+    [
+      "just lock the doors",
+      6
+    ],
+    [
+      "leave it",
+      6
+    ]
+  ]
+}

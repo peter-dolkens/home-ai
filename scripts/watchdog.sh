@@ -8,6 +8,24 @@ LOG=outputs/watchdog.log
 STATUS=outputs/overnight.status
 ts() { date '+%F %T'; }
 mkdir -p outputs
+# disk guard (28 Sep: our merges filled the disk Frigate's database lives on and stopped the camera recorder).
+# Below 25G free: drop rebuildable merged16 dirs of models already in Ollama. Below 10G: stop our merge/training job.
+# Runs even when STOP is set; never touches Frigate.
+free_gb() { df -BG --output=avail /ai | tail -1 | tr -dc 0-9; }
+if [ "$(free_gb)" -lt 25 ]; then
+  have=$(docker exec ollama ollama list 2>/dev/null | awk 'NR>1{sub(":latest","",$1); print $1}')
+  for d in outputs/*/merged16; do
+    [ "$(free_gb)" -ge 25 ] && break
+    m=$(python3 -c "import json,os;print(next((k for k,v in json.load(open('configs/models.json')).items() if not k.startswith('_') and v.get('config') and os.path.exists(v['config']) and json.load(open(v['config'])).get('out')=='${d%/merged16}'),''))" 2>/dev/null)
+    if [ -n "$m" ] && echo "$have" | grep -qx "$m"; then
+      rm -rf "$d"; echo "$(ts) DISK: removed $d ($m is in Ollama), $(free_gb)G free" | tee -a "$LOG" >> "$STATUS"
+    fi
+  done
+fi
+if [ "$(free_gb)" -lt 10 ]; then
+  echo "$(ts) DISK: only $(free_gb)G free, stopping homeai-merge/homeai-train" | tee -a "$LOG" >> "$STATUS"
+  docker stop homeai-merge homeai-train >/dev/null 2>&1
+fi
 # Stop only on an explicit marker: the plan grows (phase 2, phase 3 ...) and the driver is idempotent,
 # so a relaunch after a "finished" line simply runs whatever steps are new and exits again.
 if [ -f outputs/STOP ]; then

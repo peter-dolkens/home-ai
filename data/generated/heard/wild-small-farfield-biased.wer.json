@@ -1,0 +1,727 @@
+{
+  "set": "wild",
+  "stt": "small",
+  "condition": "farfield-biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 409,
+  "words": 2913,
+  "errors": 419,
+  "wer": 0.1438,
+  "exact": 0.5575,
+  "vocab_words": 717,
+  "vocab_errors": 92,
+  "vocab_wer": 0.1283,
+  "vocab": {
+    "room": {
+      "n": 170,
+      "err": 12,
+      "wer": 0.0706
+    },
+    "device": {
+      "n": 273,
+      "err": 34,
+      "wer": 0.1245
+    },
+    "person": {
+      "n": 16,
+      "err": 4,
+      "wer": 0.25
+    },
+    "number": {
+      "n": 27,
+      "err": 2,
+      "wer": 0.0741
+    },
+    "command": {
+      "n": 231,
+      "err": 40,
+      "wer": 0.1732
+    }
+  },
+  "meaning_changed": 0.1638,
+  "meaning_changed_n": 67,
+  "meaning_by_kind": {
+    "room": 0.0196,
+    "device": 0.066,
+    "person": 0.0098,
+    "number": 0.0049,
+    "command": 0.0978
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 5.5745,
+    "p50": 5.4619,
+    "p90": 6.2154,
+    "rtf": 1.8661,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "au-p326": {
+      "turns": 32,
+      "wer": 0.3375,
+      "meaning_changed": 0.375
+    },
+    "au-p374": {
+      "turns": 32,
+      "wer": 0.2234,
+      "meaning_changed": 0.25
+    },
+    "gb-alan": {
+      "turns": 37,
+      "wer": 0.0726,
+      "meaning_changed": 0.1081
+    },
+    "gb-alba": {
+      "turns": 53,
+      "wer": 0.1237,
+      "meaning_changed": 0.1321
+    },
+    "gb-cori": {
+      "turns": 49,
+      "wer": 0.1786,
+      "meaning_changed": 0.2245
+    },
+    "gb-jenny": {
+      "turns": 37,
+      "wer": 0.0698,
+      "meaning_changed": 0.0541
+    },
+    "gb-northern-m": {
+      "turns": 23,
+      "wer": 0.1615,
+      "meaning_changed": 0.2174
+    },
+    "gb-southern-f": {
+      "turns": 38,
+      "wer": 0.2379,
+      "meaning_changed": 0.2632
+    },
+    "us-amy": {
+      "turns": 43,
+      "wer": 0.0102,
+      "meaning_changed": 0.0
+    },
+    "us-lessac": {
+      "turns": 34,
+      "wer": 0.1093,
+      "meaning_changed": 0.1765
+    },
+    "us-ryan": {
+      "turns": 31,
+      "wer": 0.109,
+      "meaning_changed": 0.0645
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 104,
+      "wer": 0.1582,
+      "meaning_changed": 0.1923
+    },
+    "1.0": {
+      "turns": 198,
+      "wer": 0.1353,
+      "meaning_changed": 0.1667
+    },
+    "1.15": {
+      "turns": 107,
+      "wer": 0.1432,
+      "meaning_changed": 0.1308
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 409,
+      "wer": 0.1438,
+      "meaning_changed": 0.1638
+    }
+  },
+  "by_set": {
+    "wild": {
+      "turns": 409,
+      "wer": 0.1438,
+      "meaning_changed": 0.1638
+    }
+  },
+  "samples": [
+    {
+      "id": "wild-900006-aircon-correction",
+      "turn": 1,
+      "voice": "gb-cori",
+      "written": "Yeah go on. Dining hall, 21.",
+      "heard": "\u5225\u7d66\u6211\u5e36\u60a8\u597d\u5206\u5e7e\u7897\u3002",
+      "lost": [
+        [
+          "command",
+          "on"
+        ],
+        [
+          "room",
+          "dining hall"
+        ],
+        [
+          "number",
+          "21"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900000-energy-battery",
+      "turn": 0,
+      "voice": "gb-southern-f",
+      "written": "how we sitting on power",
+      "heard": "I wish this even power.",
+      "lost": [
+        [
+          "device",
+          "sitting"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900002-disarm-alarm",
+      "turn": 0,
+      "voice": "au-p374",
+      "written": "Disarm the alarm.",
+      "heard": "Just something along.",
+      "lost": [
+        [
+          "command",
+          "disarm"
+        ],
+        [
+          "device",
+          "alarm"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900002-house-rundown",
+      "turn": 1,
+      "voice": "au-p326",
+      "written": "Lock that mudroom door then.",
+      "heard": "Love that much of your toilet.",
+      "lost": [
+        [
+          "command",
+          "lock"
+        ],
+        [
+          "device",
+          "mudroom door"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900002-no-pool",
+      "turn": 0,
+      "voice": "au-p374",
+      "written": "Turn on the pool pump would ya.",
+      "heard": "Take a look at my computer.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ],
+        [
+          "device",
+          "pump"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900003-ctrl-fan-bedroom",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "it's stuffy, put the fan on in the bedroom",
+      "heard": "It's Stephanie with The Founder of the Bedroom.",
+      "lost": [
+        [
+          "device",
+          "fan"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900003-ctrl-here-office",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "turn my lights on in here",
+      "heard": "Thank you for watching.",
+      "lost": [
+        [
+          "device",
+          "lights"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900003-ctrl-kitchen-lights",
+      "turn": 0,
+      "voice": "us-ryan",
+      "written": "chuck the kitchen lights on",
+      "heard": "Shut vacation lights off.",
+      "lost": [
+        [
+          "room",
+          "kitchen"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900004-ctrl-ensuite-multiturn",
+      "turn": 0,
+      "voice": "gb-alan",
+      "written": "dim the ensuite lights, don't want to wake Hannah",
+      "heard": "Dimmy and Super Lights don't want to wake Hannah.",
+      "lost": [
+        [
+          "command",
+          "dim"
+        ],
+        [
+          "room",
+          "ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900006-heater-ref",
+      "turn": 0,
+      "voice": "gb-southern-f",
+      "written": "Is the hydronic on?",
+      "heard": "Here's a Hydrogenic Calm.",
+      "lost": [
+        [
+          "device",
+          "hydronic"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900006-towel-ambig",
+      "turn": 0,
+      "voice": "us-lessac",
+      "written": "Flick the towel rail on.",
+      "heard": "Flick the towel real long.",
+      "lost": [
+        [
+          "device",
+          "towel rail"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900008-window-and-weather",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "Shut Amber's office window and tell me how cold it is out there.",
+      "heard": "Shed, Amber's Office would know and tell me how COVID is out there.",
+      "lost": [
+        [
+          "command",
+          "shut"
+        ],
+        [
+          "device",
+          "window"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900011-disarm-alarm",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "Can you disarm the alarm.",
+      "heard": "Can you just song me along?",
+      "lost": [
+        [
+          "command",
+          "disarm"
+        ],
+        [
+          "device",
+          "alarm"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900000-ctrl-cover-multiturn",
+      "turn": 1,
+      "voice": "gb-jenny",
+      "written": "the blinds too thanks",
+      "heard": "BitLines too, thanks.",
+      "lost": [
+        [
+          "device",
+          "blinds"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900000-ctrl-lock-mudroom",
+      "turn": 0,
+      "voice": "gb-alba",
+      "written": "we left the mudroom door open again, lock it up",
+      "heard": "We left the Mudroom, do it open again, lock it up.",
+      "lost": [
+        [
+          "device",
+          "mudroom door"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900000-missing-pool",
+      "turn": 0,
+      "voice": "gb-jenny",
+      "written": "is the pool pump on",
+      "heard": "It's a cool pump pump.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900001-battery-check",
+      "turn": 1,
+      "voice": "gb-alba",
+      "written": "and what's the solar doing right now",
+      "heard": "And what's the solo doing right now?",
+      "lost": [
+        [
+          "device",
+          "solar"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900001-dishwasher-status",
+      "turn": 0,
+      "voice": "gb-alba",
+      "written": "is the dishwasher going",
+      "heard": "It's the tissue she's going.",
+      "lost": [
+        [
+          "device",
+          "dishwasher"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900001-exhaust-fan-clarify",
+      "turn": 1,
+      "voice": "gb-cori",
+      "written": "the guest ensuite one",
+      "heard": "The guest in suit one.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900001-no-pool",
+      "turn": 0,
+      "voice": "gb-alba",
+      "written": "can you fire up the pool pump",
+      "heard": "Can you fire up the blue cone?",
+      "lost": [
+        [
+          "device",
+          "pump"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900001-office-music",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "chuck my focus playlist on in here",
+      "heard": "Check my focus playlist line in here.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900001-tv-too-loud",
+      "turn": 1,
+      "voice": "gb-cori",
+      "written": "still can't hear myself think, just mute it",
+      "heard": "Still can't hear myself think. Just muted.",
+      "lost": [
+        [
+          "command",
+          "mute"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900002-battery-then-solar",
+      "turn": 1,
+      "voice": "au-p326",
+      "written": "and are we getting any solar still?",
+      "heard": "And are we getting any sort of stuff?",
+      "lost": [
+        [
+          "device",
+          "solar"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900002-house-rundown",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "Give me a quick rundown on the house.",
+      "heard": "Give me a quick run down the house.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900003-ctrl-lock-back-door",
+      "turn": 0,
+      "voice": "us-ryan",
+      "written": "lock the back door thanks",
+      "heard": "Love the back door things.",
+      "lost": [
+        [
+          "command",
+          "lock"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900003-media-tv-news",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "stick the news on in the family room",
+      "heard": "Stupid knees under the Family Room.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900003-missing-aircon",
+      "turn": 0,
+      "voice": "gb-northern-m",
+      "written": "can you turn the aircon on in here",
+      "heard": "Can you turn the economic here?",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900003-missing-irrigation",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "give the garden a water thanks",
+      "heard": "Here you go, I know all the things.",
+      "lost": [
+        [
+          "device",
+          "water"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900003-presence-freya-uncertain",
+      "turn": 0,
+      "voice": "gb-alan",
+      "written": "where's Freya reckon",
+      "heard": "Wear Spray and Reckon.",
+      "lost": [
+        [
+          "person",
+          "freya"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900004-clarify-which-light",
+      "turn": 1,
+      "voice": "gb-northern-m",
+      "written": "ensuite",
+      "heard": "Insert.",
+      "lost": [
+        [
+          "room",
+          "ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900004-confirm-open-garage",
+      "turn": 0,
+      "voice": "au-p374",
+      "written": "open the garage, forgot something in the car",
+      "heard": "Love the McGarage. I've got something in the car.",
+      "lost": [
+        [
+          "command",
+          "open"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900004-confirm-unlock-front",
+      "turn": 0,
+      "voice": "au-p374",
+      "written": "unlock the front door for me",
+      "heard": "I love the front door for me.",
+      "lost": [
+        [
+          "command",
+          "unlock"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900004-ctrl-here-kitchen",
+      "turn": 0,
+      "voice": "au-p374",
+      "written": "turn these off too",
+      "heard": "Turn these up too.",
+      "lost": [
+        [
+          "command",
+          "off"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900004-media-pause-resume-multiturn",
+      "turn": 1,
+      "voice": "au-p374",
+      "written": "false alarm, play it again",
+      "heard": "Pause the line, play it again.",
+      "lost": [
+        [
+          "device",
+          "alarm"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900004-mixed-ensuite-heater",
+      "turn": 0,
+      "voice": "gb-northern-m",
+      "written": "warm up the ensuite before I hop in the shower",
+      "heard": "Warm up the ensuit before I hug and shout.",
+      "lost": [
+        [
+          "room",
+          "ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900004-routine-nightcheck-multiturn",
+      "turn": 1,
+      "voice": "au-p374",
+      "written": "yeah close it",
+      "heard": "Get Closer.",
+      "lost": [
+        [
+          "command",
+          "close"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900005-anyone-home",
+      "turn": 1,
+      "voice": "gb-southern-f",
+      "written": "how long has mia been out for",
+      "heard": "How long has it been out for?",
+      "lost": [
+        [
+          "person",
+          "mia"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900005-bedroom-music",
+      "turn": 1,
+      "voice": "gb-southern-f",
+      "written": "bump the volume up a touch",
+      "heard": "Pump the volume at the top.",
+      "lost": [
+        [
+          "command",
+          "up"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900005-disarm-alarm",
+      "turn": 0,
+      "voice": "gb-alba",
+      "written": "disarm the alarm, the electrician's coming by",
+      "heard": "Dishwasher alarm, the electrician's coming by.",
+      "lost": [
+        [
+          "command",
+          "disarm"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900005-family-lamp-on",
+      "turn": 0,
+      "voice": "us-lessac",
+      "written": "flick the lamp on in the family room for me",
+      "heard": "Flick the lamp hold in the family room for me.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    }
+  ]
+}

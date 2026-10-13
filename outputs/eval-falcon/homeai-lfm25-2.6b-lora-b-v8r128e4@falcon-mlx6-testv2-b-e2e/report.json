@@ -1,0 +1,169 @@
+{
+  "model": "/Users/peter.dolkens/home-ai-falcon/stage/mlx/homeai-lfm25-2.6b-lora-b-v8r128e4-mlx6",
+  "mode": "e2e",
+  "host": "falcon",
+  "hardware": "apple-m2pro",
+  "host_note": "falcon stream: mlx-lm==0.31.3 server, 6-bit g64, prompt cache on, design B tools, user_context prompts",
+  "ollama": "http://127.0.0.1:11611/v1",
+  "prompt_layout": "user_context",
+  "data": "data/generated/test-v2-b.jsonl",
+  "examples": 150,
+  "turns": 174,
+  "pass": 0.28735632183908044,
+  "conversation_pass": 0.24666666666666667,
+  "seconds_per_turn": 2.115979342529739,
+  "calls_per_request": 1.9827586206896552,
+  "errors": 0,
+  "by_kind": {
+    "answer": {
+      "n": 94,
+      "ok": 40
+    },
+    "state": {
+      "n": 174,
+      "ok": 163
+    },
+    "reply": {
+      "n": 174,
+      "ok": 50
+    },
+    "act": {
+      "n": 80,
+      "ok": 10
+    }
+  },
+  "by_category": {
+    "status_entity": {
+      "n": 6,
+      "ok": 2
+    },
+    "control_area": {
+      "n": 15,
+      "ok": 4
+    },
+    "control_climate": {
+      "n": 4,
+      "ok": 1
+    },
+    "presence_where": {
+      "n": 9,
+      "ok": 1
+    },
+    "check_house": {
+      "n": 20,
+      "ok": 5
+    },
+    "control_named": {
+      "n": 5,
+      "ok": 0
+    },
+    "presence_in_room": {
+      "n": 2,
+      "ok": 0
+    },
+    "goodnight": {
+      "n": 4,
+      "ok": 0
+    },
+    "missing": {
+      "n": 4,
+      "ok": 1
+    },
+    "confirm_sensitive": {
+      "n": 12,
+      "ok": 7
+    },
+    "media_what": {
+      "n": 1,
+      "ok": 0
+    },
+    "media_play": {
+      "n": 11,
+      "ok": 1
+    },
+    "control_lock": {
+      "n": 4,
+      "ok": 0
+    },
+    "energy_appliance": {
+      "n": 4,
+      "ok": 3
+    },
+    "vehicle_status": {
+      "n": 4,
+      "ok": 1
+    },
+    "energy_night": {
+      "n": 8,
+      "ok": 2
+    },
+    "control_compound": {
+      "n": 3,
+      "ok": 1
+    },
+    "control_all_lights": {
+      "n": 3,
+      "ok": 0
+    },
+    "media_volume": {
+      "n": 5,
+      "ok": 2
+    },
+    "energy_status": {
+      "n": 4,
+      "ok": 4
+    },
+    "status_aggregate": {
+      "n": 10,
+      "ok": 3
+    },
+    "away_motion": {
+      "n": 3,
+      "ok": 2
+    },
+    "media_transport": {
+      "n": 1,
+      "ok": 0
+    },
+    "leaving": {
+      "n": 2,
+      "ok": 0
+    },
+    "weather": {
+      "n": 3,
+      "ok": 3
+    },
+    "who_home": {
+      "n": 3,
+      "ok": 3
+    },
+    "smalltalk": {
+      "n": 1,
+      "ok": 1
+    },
+    "control_here": {
+      "n": 2,
+      "ok": 1
+    },
+    "appliance_status": {
+      "n": 5,
+      "ok": 0
+    },
+    "appliance_control": {
+      "n": 1,
+      "ok": 0
+    },
+    "clarify": {
+      "n": 12,
+      "ok": 2
+    },
+    "water_status": {
+      "n": 1,
+      "ok": 0
+    },
+    "control_brightness": {
+      "n": 2,
+      "ok": 0
+    }
+  }
+}

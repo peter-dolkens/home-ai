@@ -1,0 +1,268 @@
+{
+  "set": "kokoro__small__biased",
+  "stt": "small",
+  "condition": "biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 240,
+  "words": 1506,
+  "errors": 45,
+  "wer": 0.0299,
+  "exact": 0.8917,
+  "vocab_words": 502,
+  "vocab_errors": 8,
+  "vocab_wer": 0.0159,
+  "vocab": {
+    "room": {
+      "n": 149,
+      "err": 5,
+      "wer": 0.0336
+    },
+    "device": {
+      "n": 183,
+      "err": 3,
+      "wer": 0.0164
+    },
+    "person": {
+      "n": 16,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 25,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 129,
+      "err": 0,
+      "wer": 0.0
+    }
+  },
+  "meaning_changed": 0.0292,
+  "meaning_changed_n": 7,
+  "meaning_by_kind": {
+    "room": 0.0208,
+    "device": 0.0083,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 5.0342,
+    "p50": 5.0319,
+    "p90": 5.6579,
+    "rtf": 1.6695,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nicole": {
+      "turns": 21,
+      "wer": 0.0254,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-nova": {
+      "turns": 17,
+      "wer": 0.019,
+      "meaning_changed": 0.0588
+    },
+    "t-k-af-sarah": {
+      "turns": 14,
+      "wer": 0.027,
+      "meaning_changed": 0.0714
+    },
+    "t-k-af-sky": {
+      "turns": 14,
+      "wer": 0.0187,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-eric": {
+      "turns": 15,
+      "wer": 0.0721,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-liam": {
+      "turns": 10,
+      "wer": 0.0364,
+      "meaning_changed": 0.1
+    },
+    "t-k-am-onyx": {
+      "turns": 13,
+      "wer": 0.1235,
+      "meaning_changed": 0.1538
+    },
+    "t-k-am-puck": {
+      "turns": 15,
+      "wer": 0.0192,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 12,
+      "wer": 0.0455,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 23,
+      "wer": 0.0076,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 14,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 11,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 22,
+      "wer": 0.0143,
+      "meaning_changed": 0.0455
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 12,
+      "wer": 0.023,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 20,
+      "wer": 0.042,
+      "meaning_changed": 0.05
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 7,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 62,
+      "wer": 0.0304,
+      "meaning_changed": 0.0161
+    },
+    "1.0": {
+      "turns": 121,
+      "wer": 0.0279,
+      "meaning_changed": 0.0331
+    },
+    "1.15": {
+      "turns": 57,
+      "wer": 0.034,
+      "meaning_changed": 0.0351
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 240,
+      "wer": 0.0299,
+      "meaning_changed": 0.0292
+    }
+  },
+  "by_set": {
+    "kokoro__small__biased": {
+      "turns": 240,
+      "wer": 0.0299,
+      "meaning_changed": 0.0292
+    }
+  },
+  "samples": [
+    {
+      "id": "b300-2262",
+      "turn": 0,
+      "voice": "t-k-af-nova",
+      "written": "um, flick off the towel rail in the master ensuite",
+      "heard": "Um, flick off the towel rail in the master-in-suit.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2479",
+      "turn": 0,
+      "voice": "t-k-am-onyx",
+      "written": "hey house, what's the solar forecast for tomorrow",
+      "heard": "Hey, how's what's the solar forecast for tomorrow?",
+      "lost": [
+        [
+          "device",
+          "house"
+        ]
+      ]
+    },
+    {
+      "id": "b300-726",
+      "turn": 1,
+      "voice": "t-k-bm-daniel-fable",
+      "written": "The one in the guest ensuite.",
+      "heard": "The one in the Guest and Suit.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "b300-788",
+      "turn": 1,
+      "voice": "t-k-am-liam",
+      "written": "Guest ensuite please.",
+      "heard": "Guest and Suit, please.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "b300-964",
+      "turn": 1,
+      "voice": "t-k-af-sarah",
+      "written": "In the guest ensuite.",
+      "heard": "In the guest and suit.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-6000-101986",
+      "turn": 0,
+      "voice": "t-k-am-onyx",
+      "written": "Heater on now",
+      "heard": "Heed their on now.",
+      "lost": [
+        [
+          "device",
+          "heater"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-6000-389",
+      "turn": 0,
+      "voice": "t-k-bm-george-lewis",
+      "written": "um, put the music on in the scullery too",
+      "heard": "Um, put the music on in the Scallery 2.",
+      "lost": [
+        [
+          "room",
+          "scullery"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

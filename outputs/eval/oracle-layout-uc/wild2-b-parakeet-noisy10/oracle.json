@@ -1,0 +1,11 @@
+{
+  "data": "data/generated/heard/wild2-b-parakeet-noisy10.jsonl",
+  "layout": "user_context",
+  "examples": 240,
+  "turns": 344,
+  "pass": 1.0,
+  "conversation_pass": 1.0,
+  "errors": 0,
+  "wrong_layout_calls": 0,
+  "seconds": 1.6
+}

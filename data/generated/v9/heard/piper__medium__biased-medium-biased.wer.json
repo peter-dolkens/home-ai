@@ -1,0 +1,311 @@
+{
+  "set": "piper__medium__biased",
+  "stt": "medium",
+  "condition": "biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 95,
+  "words": 651,
+  "errors": 52,
+  "wer": 0.0799,
+  "exact": 0.6842,
+  "vocab_words": 212,
+  "vocab_errors": 13,
+  "vocab_wer": 0.0613,
+  "vocab": {
+    "room": {
+      "n": 73,
+      "err": 3,
+      "wer": 0.0411
+    },
+    "device": {
+      "n": 64,
+      "err": 4,
+      "wer": 0.0625
+    },
+    "person": {
+      "n": 12,
+      "err": 2,
+      "wer": 0.1667
+    },
+    "number": {
+      "n": 4,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 59,
+      "err": 4,
+      "wer": 0.0678
+    }
+  },
+  "meaning_changed": 0.1053,
+  "meaning_changed_n": 10,
+  "meaning_by_kind": {
+    "room": 0.0211,
+    "device": 0.0316,
+    "person": 0.0211,
+    "number": 0.0,
+    "command": 0.0316
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 10.7879,
+    "p50": 10.7598,
+    "p90": 11.8293,
+    "rtf": 4.1877,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-ca-p302": {
+      "turns": 5,
+      "wer": 0.1515,
+      "meaning_changed": 0.0
+    },
+    "t-ie-p245": {
+      "turns": 9,
+      "wer": 0.0816,
+      "meaning_changed": 0.0
+    },
+    "t-ie-p288": {
+      "turns": 9,
+      "wer": 0.0877,
+      "meaning_changed": 0.1111
+    },
+    "t-ld-p243": {
+      "turns": 5,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-ni-p304": {
+      "turns": 6,
+      "wer": 0.0556,
+      "meaning_changed": 0.1667
+    },
+    "t-nz-p335": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-sc-p234": {
+      "turns": 8,
+      "wer": 0.2449,
+      "meaning_changed": 0.375
+    },
+    "t-sc-p237": {
+      "turns": 5,
+      "wer": 0.0541,
+      "meaning_changed": 0.2
+    },
+    "t-se-p225": {
+      "turns": 4,
+      "wer": 0.0345,
+      "meaning_changed": 0.25
+    },
+    "t-sm-prudence": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-sm-spike": {
+      "turns": 5,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-wa-p253": {
+      "turns": 8,
+      "wer": 0.0312,
+      "meaning_changed": 0.0
+    },
+    "t-yk-p267": {
+      "turns": 8,
+      "wer": 0.1957,
+      "meaning_changed": 0.125
+    },
+    "t-yk-p270": {
+      "turns": 7,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-za-p323": {
+      "turns": 6,
+      "wer": 0.075,
+      "meaning_changed": 0.1667
+    },
+    "t-za-p347": {
+      "turns": 6,
+      "wer": 0.1463,
+      "meaning_changed": 0.1667
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 26,
+      "wer": 0.0745,
+      "meaning_changed": 0.0385
+    },
+    "1.0": {
+      "turns": 46,
+      "wer": 0.0843,
+      "meaning_changed": 0.1522
+    },
+    "1.15": {
+      "turns": 23,
+      "wer": 0.0759,
+      "meaning_changed": 0.087
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 95,
+      "wer": 0.0799,
+      "meaning_changed": 0.1053
+    }
+  },
+  "by_set": {
+    "piper__medium__biased": {
+      "turns": 95,
+      "wer": 0.0799,
+      "meaning_changed": 0.1053
+    }
+  },
+  "samples": [
+    {
+      "id": "209-2921",
+      "turn": 0,
+      "voice": "t-ie-p288",
+      "written": "Start up Smooth FM in the office",
+      "heard": "StartupSmooth FM in the office.",
+      "lost": [
+        [
+          "command",
+          "start"
+        ],
+        [
+          "command",
+          "up"
+        ]
+      ]
+    },
+    {
+      "id": "132-378",
+      "turn": 0,
+      "voice": "t-sc-p237",
+      "written": "is tomorrow a good solar day",
+      "heard": "Is tomorrow a good, solid day?",
+      "lost": [
+        [
+          "device",
+          "solar"
+        ]
+      ]
+    },
+    {
+      "id": "201-2522",
+      "turn": 0,
+      "voice": "t-se-p225",
+      "written": "what solar output are we getting",
+      "heard": "What solo output are we getting?",
+      "lost": [
+        [
+          "device",
+          "solar"
+        ]
+      ]
+    },
+    {
+      "id": "abig-bundook_full-plan-1349",
+      "turn": 0,
+      "voice": "t-sc-p234",
+      "written": "Is Peter still in Amber's office?",
+      "heard": "It's Pete Estella, Amber's office.",
+      "lost": [
+        [
+          "person",
+          "peter"
+        ]
+      ]
+    },
+    {
+      "id": "abig-bundook_projected-plan-1496",
+      "turn": 0,
+      "voice": "t-za-p347",
+      "written": "play the No Such Thing as a Fish podcast in the kitchen",
+      "heard": "They do no such thing as a fish podcast in the kitchen.",
+      "lost": [
+        [
+          "command",
+          "play"
+        ]
+      ]
+    },
+    {
+      "id": "abig-random-20000-1039",
+      "turn": 0,
+      "voice": "t-za-p323",
+      "written": "um, where is Mia",
+      "heard": "I'm Wozmier.",
+      "lost": [
+        [
+          "person",
+          "mia"
+        ]
+      ]
+    },
+    {
+      "id": "v5a-800007-control-compound-masterbed",
+      "turn": 0,
+      "voice": "t-ni-p304",
+      "written": "Close the blinds in the master bedroom and turn off the air con in there.",
+      "heard": "Post the blinds in the master bedroom and turn off the air con in there.",
+      "lost": [
+        [
+          "command",
+          "close"
+        ]
+      ]
+    },
+    {
+      "id": "v5a-800013-h13-s04",
+      "turn": 0,
+      "voice": "t-sc-p234",
+      "written": "How humid is the master ensuite?",
+      "heard": "How humid is the muster and seep?",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "v5a-810034-goodnight",
+      "turn": 1,
+      "voice": "t-sc-p234",
+      "written": "yes lock it, and turn off the lights",
+      "heard": "Yes, lock it and turn off the light.",
+      "lost": [
+        [
+          "device",
+          "lights"
+        ]
+      ]
+    },
+    {
+      "id": "v5light-51",
+      "turn": 1,
+      "voice": "t-yk-p267",
+      "written": "Backyard.",
+      "heard": "Packard",
+      "lost": [
+        [
+          "room",
+          "backyard"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

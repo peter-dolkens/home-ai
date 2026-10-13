@@ -1,0 +1,18 @@
+{
+  "model": "/Users/peter.dolkens/home-ai-falcon/stage/mlx/homeai-4b-lora-v5-mlx4",
+  "data": "data/generated/test-v2.jsonl",
+  "requests": 60,
+  "cold_mean": 6.515750789549997,
+  "cold_p50": 5.94464079200003,
+  "cold_p90": 8.451076291999982,
+  "warm_mean": 2.6456663951500037,
+  "warm_p90": 5.10553812500001,
+  "calls_per_request": 1.9666666666666666,
+  "seconds_per_call": 3.3753137952416634,
+  "training_running": false,
+  "num_ctx": 8192,
+  "host": "falcon",
+  "hardware": "apple-m2pro",
+  "host_note": "falcon stream: mlx-lm==0.31.3 server, 4-bit g64, prompt cache on",
+  "ollama": "http://127.0.0.1:11611/v1"
+}

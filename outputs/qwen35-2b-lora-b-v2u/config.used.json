@@ -1,0 +1,21 @@
+{
+  "_comment": "2B B-v2 with the user_context layout (2 Oct): on falcon the MLX hybrid-model prompt cache cannot reuse B-v2's stable_prefix prompt (Now / Speaker / People inside the system message; the Bundook warm test re-read all ~2,550 tokens per request); user_context moves them to the start of the user turn, so the system message is identical per house. The Mac's design-B candidate; watch clarification (v11, the A model with this layout, lost some).",
+  "base_model": "Qwen/Qwen3.5-2B",
+  "hf_tokenizer": "Qwen/Qwen3.5-2B",
+  "ollama_template_from": "qwen3.5:2b",
+  "instruction_part": "<|im_start|>user\n",
+  "response_part": "<|im_start|>assistant\n",
+  "max_seq_len": 4608,
+  "lora_r": 16,
+  "lora_alpha": 16,
+  "epochs": 2,
+  "lr": 0.0002,
+  "batch_size": 1,
+  "grad_accum": 16,
+  "seed": 3407,
+  "train": "data/generated/train-b-v2.jsonl",
+  "val": "data/generated/val-b.jsonl",
+  "out": "outputs/qwen35-2b-lora-b-v2u",
+  "load_in_4bit": false,
+  "prompt_layout": "user_context"
+}

@@ -1,0 +1,43 @@
+[25/240] 84.2% 13s
+[50/240] 75.3% 25s
+[75/240] 77.3% 39s
+[100/240] 76.4% 49s
+[125/240] 74.9% 64s
+[150/240] 75.8% 78s
+[175/240] 76.7% 92s
+[200/240] 77.8% 105s
+[225/240] 78.6% 118s
+{
+  "model": "homeai-lfm25-1.2b-lora-b-v11wr256",
+  "mode": "e2e",
+  "host": "lapwing",
+  "hardware": "rtx-3080",
+  "ollama": "http://127.0.0.1:11500",
+  "prompt_layout": "user_context",
+  "data": "data/generated/wild2-b.jsonl",
+  "examples": 240,
+  "turns": 344,
+  "pass": 0.7877906976744186,
+  "conversation_pass": 0.725,
+  "seconds_per_turn": 0.17929812994870273,
+  "calls_per_request": 2.046511627906977,
+  "errors": 0,
+  "by_kind": {
+    "act": {
+      "n": 165,
+      "ok": 124
+    },
+    "state": {
+      "n": 344,
+      "ok": 297
+    },
+    "reply": {
+      "n": 344,
+      "ok": 318
+    },
+    "answer": {
+      "n": 179,
+      "ok": 147
+    }
+  }
+}

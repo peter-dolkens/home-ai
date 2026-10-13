@@ -1,0 +1,11 @@
+{
+  "data": "data/generated/heard/test-v2-b-small-biased.jsonl",
+  "layout": "user_context",
+  "examples": 150,
+  "turns": 174,
+  "pass": 1.0,
+  "conversation_pass": 1.0,
+  "errors": 0,
+  "wrong_layout_calls": 0,
+  "seconds": 0.9
+}

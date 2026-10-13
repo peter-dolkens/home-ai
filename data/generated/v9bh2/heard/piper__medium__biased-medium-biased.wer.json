@@ -1,0 +1,204 @@
+{
+  "set": "piper__medium__biased",
+  "stt": "medium",
+  "condition": "biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 15,
+  "words": 94,
+  "errors": 9,
+  "wer": 0.0957,
+  "exact": 0.6,
+  "vocab_words": 28,
+  "vocab_errors": 4,
+  "vocab_wer": 0.1429,
+  "vocab": {
+    "room": {
+      "n": 6,
+      "err": 0,
+      "wer": 0.0
+    },
+    "device": {
+      "n": 12,
+      "err": 3,
+      "wer": 0.25
+    },
+    "person": {
+      "n": 0,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 1,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 9,
+      "err": 1,
+      "wer": 0.1111
+    }
+  },
+  "meaning_changed": 0.2667,
+  "meaning_changed_n": 4,
+  "meaning_by_kind": {
+    "room": 0.0,
+    "device": 0.2,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0667
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 5.643,
+    "p50": 5.6625,
+    "p90": 6.0402,
+    "rtf": 2.1245,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-ca-p302": {
+      "turns": 2,
+      "wer": 0.0909,
+      "meaning_changed": 0.5
+    },
+    "t-ie-p245": {
+      "turns": 1,
+      "wer": 0.2,
+      "meaning_changed": 1.0
+    },
+    "t-ld-p243": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-nz-p335": {
+      "turns": 2,
+      "wer": 0.0769,
+      "meaning_changed": 0.0
+    },
+    "t-sc-p234": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-sm-prudence": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-sm-spike": {
+      "turns": 1,
+      "wer": 0.2222,
+      "meaning_changed": 0.0
+    },
+    "t-wa-p253": {
+      "turns": 2,
+      "wer": 0.0909,
+      "meaning_changed": 0.5
+    },
+    "t-yk-p267": {
+      "turns": 1,
+      "wer": 0.375,
+      "meaning_changed": 1.0
+    },
+    "t-za-p323": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-za-p347": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 4,
+      "wer": 0.125,
+      "meaning_changed": 0.0
+    },
+    "1.0": {
+      "turns": 8,
+      "wer": 0.102,
+      "meaning_changed": 0.375
+    },
+    "1.15": {
+      "turns": 3,
+      "wer": 0.0476,
+      "meaning_changed": 0.3333
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 15,
+      "wer": 0.0957,
+      "meaning_changed": 0.2667
+    }
+  },
+  "by_set": {
+    "piper__medium__biased": {
+      "turns": 15,
+      "wer": 0.0957,
+      "meaning_changed": 0.2667
+    }
+  },
+  "samples": [
+    {
+      "id": "bbig-bundook_full-plan-366-s2",
+      "turn": 0,
+      "voice": "t-ca-p302",
+      "written": "Let the plumber in, unlock the workshop door.",
+      "heard": "Let the plumber in. Unlock the worship door.",
+      "lost": [
+        [
+          "device",
+          "workshop door"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-738-s2",
+      "turn": 0,
+      "voice": "t-ie-p245",
+      "written": "ok stop the cooktop please",
+      "heard": "Okay, stop the crypto please.",
+      "lost": [
+        [
+          "device",
+          "cooktop"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-84-s2",
+      "turn": 0,
+      "voice": "t-yk-p267",
+      "written": "um, play it in the alfresco as well thanks",
+      "heard": "I'm playing the Alfresco as well, thanks.",
+      "lost": [
+        [
+          "command",
+          "play"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1452-s2",
+      "turn": 0,
+      "voice": "t-wa-p253",
+      "written": "How far can the shark go?",
+      "heard": "How far can the shot go?",
+      "lost": [
+        [
+          "device",
+          "shark"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

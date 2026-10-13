@@ -80,7 +80,12 @@ def main():
     ap.add_argument("--para-share", type=float, default=0.6)
     ap.add_argument("--workers", type=int, default=os.cpu_count() or 4)
     ap.add_argument("--scale", type=float, default=1.0, help="multiply every count (quick runs)")
+    ap.add_argument("--big-kinds", default="", help="override BIG_KINDS: kind:n:share,... (e.g. the house-specific "
+                    "supplement 'bundook_full:0:0.7,bundook_projected:0:0.3')")
     a = ap.parse_args()
+    global BIG_KINDS
+    if a.big_kinds:
+        BIG_KINDS = [(k, int(n), float(f)) for k, n, f in (x.split(":") for x in a.big_kinds.split(","))]
 
     counts = mix_counts(a.mix)
     for kv in a.add:

@@ -1,0 +1,202 @@
+{
+  "set": "kokoro__medium__biased",
+  "stt": "medium",
+  "condition": "biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 36,
+  "words": 233,
+  "errors": 4,
+  "wer": 0.0172,
+  "exact": 0.9167,
+  "vocab_words": 86,
+  "vocab_errors": 4,
+  "vocab_wer": 0.0465,
+  "vocab": {
+    "room": {
+      "n": 28,
+      "err": 0,
+      "wer": 0.0
+    },
+    "device": {
+      "n": 35,
+      "err": 2,
+      "wer": 0.0571
+    },
+    "person": {
+      "n": 2,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 3,
+      "err": 1,
+      "wer": 0.3333
+    },
+    "command": {
+      "n": 18,
+      "err": 1,
+      "wer": 0.0556
+    }
+  },
+  "meaning_changed": 0.0556,
+  "meaning_changed_n": 2,
+  "meaning_by_kind": {
+    "room": 0.0,
+    "device": 0.0278,
+    "person": 0.0,
+    "number": 0.0278,
+    "command": 0.0278
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 7.2023,
+    "p50": 7.901,
+    "p90": 8.8202,
+    "rtf": 2.3758,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nicole": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-nova": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sarah": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sky": {
+      "turns": 3,
+      "wer": 0.05,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-eric": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-liam": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-onyx": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-puck": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 2,
+      "wer": 0.3,
+      "meaning_changed": 1.0
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 5,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 4,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 4,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 9,
+      "wer": 0.0172,
+      "meaning_changed": 0.0
+    },
+    "1.0": {
+      "turns": 21,
+      "wer": 0.0208,
+      "meaning_changed": 0.0952
+    },
+    "1.15": {
+      "turns": 6,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 36,
+      "wer": 0.0172,
+      "meaning_changed": 0.0556
+    }
+  },
+  "by_set": {
+    "kokoro__medium__biased": {
+      "turns": 36,
+      "wer": 0.0172,
+      "meaning_changed": 0.0556
+    }
+  },
+  "samples": [
+    {
+      "id": "bbig-bundook_full-plan-558-s2",
+      "turn": 0,
+      "voice": "t-k-bf-alice-lily",
+      "written": "Can you get the floodlight 3 on?",
+      "heard": "Can you get the Floodlights 3 ons?",
+      "lost": [
+        [
+          "device",
+          "floodlight 3"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-558-s2",
+      "turn": 1,
+      "voice": "t-k-bf-alice-lily",
+      "written": "The entry one.",
+      "heard": "The Entry 1s.",
+      "lost": [
+        [
+          "number",
+          "1"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

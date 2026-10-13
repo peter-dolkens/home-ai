@@ -1,0 +1,226 @@
+{
+  "set": "piper__parakeet__noisy10",
+  "stt": "parakeet",
+  "condition": "noisy10",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 15,
+  "words": 97,
+  "errors": 26,
+  "wer": 0.268,
+  "exact": 0.4,
+  "vocab_words": 24,
+  "vocab_errors": 6,
+  "vocab_wer": 0.25,
+  "vocab": {
+    "room": {
+      "n": 6,
+      "err": 2,
+      "wer": 0.3333
+    },
+    "device": {
+      "n": 12,
+      "err": 3,
+      "wer": 0.25
+    },
+    "person": {
+      "n": 0,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 0,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 6,
+      "err": 1,
+      "wer": 0.1667
+    }
+  },
+  "meaning_changed": 0.3333,
+  "meaning_changed_n": 5,
+  "meaning_by_kind": {
+    "room": 0.1333,
+    "device": 0.2,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0667
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 0.158,
+    "p50": 0.1459,
+    "p90": 0.2086,
+    "rtf": 0.0635,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-ca-p302": {
+      "turns": 1,
+      "wer": 0.25,
+      "meaning_changed": 0.0
+    },
+    "t-ie-p288": {
+      "turns": 1,
+      "wer": 0.1429,
+      "meaning_changed": 1.0
+    },
+    "t-ld-p243": {
+      "turns": 1,
+      "wer": 1.3333,
+      "meaning_changed": 0.0
+    },
+    "t-ni-p304": {
+      "turns": 2,
+      "wer": 0.3846,
+      "meaning_changed": 0.5
+    },
+    "t-nz-p335": {
+      "turns": 2,
+      "wer": 0.5,
+      "meaning_changed": 0.5
+    },
+    "t-sc-p234": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-se-p225": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-sm-spike": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-wa-p253": {
+      "turns": 2,
+      "wer": 0.3333,
+      "meaning_changed": 0.0
+    },
+    "t-yk-p267": {
+      "turns": 2,
+      "wer": 0.3571,
+      "meaning_changed": 1.0
+    },
+    "t-yk-p270": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 5,
+      "wer": 0.1714,
+      "meaning_changed": 0.4
+    },
+    "1.0": {
+      "turns": 9,
+      "wer": 0.4,
+      "meaning_changed": 0.3333
+    },
+    "1.15": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_noise": {
+    "kitchen": {
+      "turns": 8,
+      "wer": 0.4118,
+      "meaning_changed": 0.5
+    },
+    "tv": {
+      "turns": 7,
+      "wer": 0.1087,
+      "meaning_changed": 0.1429
+    }
+  },
+  "by_set": {
+    "piper__parakeet__noisy10": {
+      "turns": 15,
+      "wer": 0.268,
+      "meaning_changed": 0.3333
+    }
+  },
+  "samples": [
+    {
+      "id": "bbig-bundook_full-plan-633-s2",
+      "turn": 0,
+      "voice": "t-yk-p267",
+      "written": "hey, turn off the alfresco floodlight 3 thanks",
+      "heard": "Hey channel failed Fresco Floodlight, three thanks.",
+      "lost": [
+        [
+          "command",
+          "off"
+        ],
+        [
+          "room",
+          "alfresco"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-201-s2",
+      "turn": 0,
+      "voice": "t-nz-p335",
+      "written": "Get the Favourites playlist going in Amber's office",
+      "heard": "Yet the favourite to play was Joe Yananda's office.",
+      "lost": [
+        [
+          "room",
+          "ambers office"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-779-s2",
+      "turn": 0,
+      "voice": "t-yk-p267",
+      "written": "Give me the latest on energy",
+      "heard": "Give me the latest on Iluchi.",
+      "lost": [
+        [
+          "device",
+          "energy"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1206-s2",
+      "turn": 0,
+      "voice": "t-ie-p288",
+      "written": "hey house, how much are we pulling",
+      "heard": "Hey Haz, how much are we pulling?",
+      "lost": [
+        [
+          "device",
+          "house"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1534-s2",
+      "turn": 0,
+      "voice": "t-ni-p304",
+      "written": "Is the solar generating power at the moment?",
+      "heard": "but they're generating power at the moment.",
+      "lost": [
+        [
+          "device",
+          "solar"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

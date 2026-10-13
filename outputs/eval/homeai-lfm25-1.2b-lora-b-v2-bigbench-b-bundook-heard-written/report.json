@@ -1,0 +1,170 @@
+{
+  "model": "homeai-lfm25-1.2b-lora-b-v2",
+  "mode": "e2e",
+  "host": "lapwing",
+  "hardware": "rtx-3080",
+  "host_note": "lapwing (accuracy only), stable_prefix",
+  "ollama": "http://127.0.0.1:11500",
+  "lockstep": 8,
+  "prompt_layout": "stable_prefix",
+  "data": "data/generated/bigbench-b-bundook.jsonl",
+  "examples": 50,
+  "turns": 57,
+  "pass": 0.7368421052631579,
+  "conversation_pass": 0.7,
+  "seconds_per_turn": 0.21087668874989385,
+  "calls_per_request": 2.017543859649123,
+  "errors": 0,
+  "by_kind": {
+    "answer": {
+      "n": 34,
+      "ok": 23
+    },
+    "state": {
+      "n": 57,
+      "ok": 52
+    },
+    "reply": {
+      "n": 57,
+      "ok": 46
+    },
+    "act": {
+      "n": 23,
+      "ok": 19
+    }
+  },
+  "by_category": {
+    "presence_in_room": {
+      "n": 1,
+      "ok": 1
+    },
+    "clarify": {
+      "n": 4,
+      "ok": 4
+    },
+    "control_compound": {
+      "n": 2,
+      "ok": 2
+    },
+    "presence_where": {
+      "n": 4,
+      "ok": 4
+    },
+    "energy_status": {
+      "n": 1,
+      "ok": 1
+    },
+    "anything_on": {
+      "n": 2,
+      "ok": 0
+    },
+    "away_motion": {
+      "n": 1,
+      "ok": 1
+    },
+    "confirm_sensitive": {
+      "n": 2,
+      "ok": 2
+    },
+    "control_named": {
+      "n": 3,
+      "ok": 3
+    },
+    "status_aggregate": {
+      "n": 1,
+      "ok": 1
+    },
+    "energy_night": {
+      "n": 4,
+      "ok": 3
+    },
+    "open_check": {
+      "n": 1,
+      "ok": 0
+    },
+    "media_multiroom": {
+      "n": 2,
+      "ok": 2
+    },
+    "act_only_one": {
+      "n": 1,
+      "ok": 1
+    },
+    "appliance_status": {
+      "n": 2,
+      "ok": 1
+    },
+    "who_home": {
+      "n": 1,
+      "ok": 1
+    },
+    "control_climate": {
+      "n": 1,
+      "ok": 1
+    },
+    "goodnight": {
+      "n": 2,
+      "ok": 0
+    },
+    "vehicle_status": {
+      "n": 2,
+      "ok": 1
+    },
+    "top_power": {
+      "n": 2,
+      "ok": 0
+    },
+    "control_brightness": {
+      "n": 2,
+      "ok": 2
+    },
+    "check_house": {
+      "n": 4,
+      "ok": 3
+    },
+    "water_status": {
+      "n": 2,
+      "ok": 2
+    },
+    "leaving": {
+      "n": 1,
+      "ok": 0
+    },
+    "media_transport": {
+      "n": 1,
+      "ok": 1
+    },
+    "status_entity": {
+      "n": 1,
+      "ok": 0
+    },
+    "media_volume": {
+      "n": 1,
+      "ok": 1
+    },
+    "control_area": {
+      "n": 1,
+      "ok": 1
+    },
+    "control_here": {
+      "n": 1,
+      "ok": 1
+    },
+    "energy_appliance": {
+      "n": 1,
+      "ok": 0
+    },
+    "media_play": {
+      "n": 1,
+      "ok": 1
+    },
+    "media_what": {
+      "n": 1,
+      "ok": 1
+    },
+    "weather": {
+      "n": 1,
+      "ok": 0
+    }
+  }
+}

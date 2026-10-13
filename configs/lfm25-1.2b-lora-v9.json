@@ -1,0 +1,38 @@
+{
+ "_comment": "LFM2.5 1.2B fix2 recipe on v9 data (ASR-robust fast model for design E) (Peter, 30 Sep). Same hyperparameters as lfm25-1.2b-lora-v5-fix2; max_seq_len kept at 4608, so v9's longest large-house conversations are dropped.",
+ "base_model": "LiquidAI/LFM2.5-1.2B-Instruct",
+ "hf_tokenizer": "LiquidAI/LFM2.5-1.2B-Instruct",
+ "ollama_template_from": "lfm2.5-1.2b",
+ "instruction_part": "<|im_start|>user\n",
+ "response_part": "<|im_start|>assistant\n",
+ "max_seq_len": 4608,
+ "lora_r": 16,
+ "lora_alpha": 16,
+ "epochs": 2,
+ "lr": 0.0002,
+ "batch_size": 2,
+ "grad_accum": 8,
+ "seed": 3407,
+ "train": "data/generated/train-v9.jsonl",
+ "val": "data/generated/val-v3.jsonl",
+ "out": "outputs/lfm25-1.2b-lora-v9",
+ "load_in_4bit": false,
+ "mask_spans": [
+  [
+   "<|im_start|>tool\n",
+   "<|im_end|>"
+  ]
+ ],
+ "target_modules": [
+  "q_proj",
+  "k_proj",
+  "v_proj",
+  "out_proj",
+  "in_proj",
+  "w1",
+  "w2",
+  "w3"
+ ],
+ "chat_template_from": "LiquidAI/LFM2.5-350M",
+ "note": "fix2: 350M's LFM2.5 template (the unsloth 1.2B mirror's template drops tool calls)"
+}

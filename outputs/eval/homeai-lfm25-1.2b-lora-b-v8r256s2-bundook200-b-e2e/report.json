@@ -1,0 +1,176 @@
+{
+  "model": "homeai-lfm25-1.2b-lora-b-v8r256s2",
+  "mode": "e2e",
+  "host": "lapwing",
+  "hardware": "rtx-3080",
+  "ollama": "http://127.0.0.1:11500",
+  "prompt_layout": "user_context",
+  "data": "data/generated/bigbench-b-bundook200.jsonl",
+  "examples": 200,
+  "turns": 228,
+  "pass": 0.8640350877192983,
+  "conversation_pass": 0.845,
+  "seconds_per_turn": 0.2771340321019753,
+  "calls_per_request": 2.1271929824561404,
+  "errors": 0,
+  "by_kind": {
+    "answer": {
+      "n": 124,
+      "ok": 102
+    },
+    "state": {
+      "n": 228,
+      "ok": 219
+    },
+    "reply": {
+      "n": 228,
+      "ok": 206
+    },
+    "act": {
+      "n": 104,
+      "ok": 95
+    }
+  },
+  "by_category": {
+    "energy_status": {
+      "n": 6,
+      "ok": 6
+    },
+    "energy_appliance": {
+      "n": 3,
+      "ok": 2
+    },
+    "top_power": {
+      "n": 6,
+      "ok": 0
+    },
+    "open_check": {
+      "n": 7,
+      "ok": 3
+    },
+    "weather": {
+      "n": 3,
+      "ok": 3
+    },
+    "appliance_status": {
+      "n": 3,
+      "ok": 3
+    },
+    "control_named": {
+      "n": 13,
+      "ok": 13
+    },
+    "presence_where": {
+      "n": 12,
+      "ok": 12
+    },
+    "media_transport": {
+      "n": 3,
+      "ok": 3
+    },
+    "confirm_sensitive": {
+      "n": 12,
+      "ok": 12
+    },
+    "control_here": {
+      "n": 6,
+      "ok": 5
+    },
+    "control_climate": {
+      "n": 6,
+      "ok": 6
+    },
+    "control_area": {
+      "n": 10,
+      "ok": 10
+    },
+    "presence_in_room": {
+      "n": 4,
+      "ok": 4
+    },
+    "water_status": {
+      "n": 4,
+      "ok": 4
+    },
+    "irrigation_control": {
+      "n": 3,
+      "ok": 3
+    },
+    "control_lock": {
+      "n": 3,
+      "ok": 3
+    },
+    "status_aggregate": {
+      "n": 15,
+      "ok": 15
+    },
+    "status_entity": {
+      "n": 9,
+      "ok": 7
+    },
+    "media_play": {
+      "n": 6,
+      "ok": 5
+    },
+    "goodnight": {
+      "n": 9,
+      "ok": 5
+    },
+    "control_compound": {
+      "n": 7,
+      "ok": 7
+    },
+    "leaving": {
+      "n": 3,
+      "ok": 0
+    },
+    "media_multiroom": {
+      "n": 3,
+      "ok": 3
+    },
+    "anything_on": {
+      "n": 9,
+      "ok": 0
+    },
+    "act_only_one": {
+      "n": 3,
+      "ok": 3
+    },
+    "clarify": {
+      "n": 18,
+      "ok": 18
+    },
+    "check_house": {
+      "n": 19,
+      "ok": 19
+    },
+    "away_motion": {
+      "n": 3,
+      "ok": 3
+    },
+    "media_volume": {
+      "n": 3,
+      "ok": 3
+    },
+    "who_home": {
+      "n": 3,
+      "ok": 3
+    },
+    "vehicle_status": {
+      "n": 3,
+      "ok": 3
+    },
+    "media_what": {
+      "n": 3,
+      "ok": 3
+    },
+    "control_brightness": {
+      "n": 3,
+      "ok": 3
+    },
+    "energy_night": {
+      "n": 5,
+      "ok": 5
+    }
+  }
+}

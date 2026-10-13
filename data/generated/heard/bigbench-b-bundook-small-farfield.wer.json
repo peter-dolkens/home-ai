@@ -1,0 +1,280 @@
+{
+  "set": "bigbench-b-bundook",
+  "stt": "small",
+  "condition": "farfield",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 57,
+  "words": 313,
+  "errors": 39,
+  "wer": 0.1246,
+  "exact": 0.6667,
+  "vocab_words": 93,
+  "vocab_errors": 17,
+  "vocab_wer": 0.1828,
+  "vocab": {
+    "room": {
+      "n": 16,
+      "err": 1,
+      "wer": 0.0625
+    },
+    "device": {
+      "n": 43,
+      "err": 12,
+      "wer": 0.2791
+    },
+    "person": {
+      "n": 5,
+      "err": 3,
+      "wer": 0.6
+    },
+    "number": {
+      "n": 3,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 26,
+      "err": 1,
+      "wer": 0.0385
+    }
+  },
+  "meaning_changed": 0.1754,
+  "meaning_changed_n": 10,
+  "meaning_by_kind": {
+    "room": 0.0175,
+    "device": 0.1228,
+    "person": 0.0351,
+    "number": 0.0,
+    "command": 0.0175
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 5.447,
+    "p50": 5.2238,
+    "p90": 6.0271,
+    "rtf": 2.0895,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "au-p326": {
+      "turns": 3,
+      "wer": 0.4118,
+      "meaning_changed": 0.6667
+    },
+    "au-p374": {
+      "turns": 6,
+      "wer": 0.1739,
+      "meaning_changed": 0.3333
+    },
+    "gb-alan": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "gb-alba": {
+      "turns": 8,
+      "wer": 0.08,
+      "meaning_changed": 0.125
+    },
+    "gb-cori": {
+      "turns": 15,
+      "wer": 0.2025,
+      "meaning_changed": 0.2
+    },
+    "gb-jenny": {
+      "turns": 6,
+      "wer": 0.0789,
+      "meaning_changed": 0.1667
+    },
+    "gb-northern-m": {
+      "turns": 6,
+      "wer": 0.0857,
+      "meaning_changed": 0.1667
+    },
+    "us-amy": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "us-lessac": {
+      "turns": 5,
+      "wer": 0.0833,
+      "meaning_changed": 0.0
+    },
+    "us-ryan": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 10,
+      "wer": 0.2791,
+      "meaning_changed": 0.1
+    },
+    "1.0": {
+      "turns": 31,
+      "wer": 0.1311,
+      "meaning_changed": 0.2258
+    },
+    "1.15": {
+      "turns": 16,
+      "wer": 0.0345,
+      "meaning_changed": 0.125
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 57,
+      "wer": 0.1246,
+      "meaning_changed": 0.1754
+    }
+  },
+  "by_set": {
+    "bigbench-b-bundook": {
+      "turns": 57,
+      "wer": 0.1246,
+      "meaning_changed": 0.1754
+    }
+  },
+  "samples": [
+    {
+      "id": "big-bundook_projected-plan-2",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "ok switch the pendant 3 on",
+      "heard": "Okay, switch the pendants to your arm.",
+      "lost": [
+        [
+          "device",
+          "pendant 3"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-0",
+      "turn": 0,
+      "voice": "gb-jenny",
+      "written": "Has Amber gone to the laundry toilet?",
+      "heard": "as Amra gone to the laundry toilet.",
+      "lost": [
+        [
+          "person",
+          "amber"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-1",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "turn on the batten lights",
+      "heard": "Turn on the button lights.",
+      "lost": [
+        [
+          "device",
+          "batten lights"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-12",
+      "turn": 0,
+      "voice": "gb-alba",
+      "written": "is the house shut up",
+      "heard": "is to have shut up.",
+      "lost": [
+        [
+          "device",
+          "house"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-22",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "Lights to 25 percent.",
+      "heard": "Last 25%",
+      "lost": [
+        [
+          "device",
+          "lights"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-6",
+      "turn": 0,
+      "voice": "gb-northern-m",
+      "written": "Where's Amber right now?",
+      "heard": "Where's umber right now?",
+      "lost": [
+        [
+          "person",
+          "amber"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-9",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "Shark backup feed on please.",
+      "heard": "Shark, I help feed on please.",
+      "lost": [
+        [
+          "device",
+          "shark backup feed"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_projected-plan-0",
+      "turn": 0,
+      "voice": "au-p374",
+      "written": "Is the fridge door open?",
+      "heard": "Is the fridge still open?",
+      "lost": [
+        [
+          "device",
+          "fridge door open"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_projected-plan-10",
+      "turn": 1,
+      "voice": "au-p374",
+      "written": "Pete's office.",
+      "heard": "Peace, office.",
+      "lost": [
+        [
+          "room",
+          "petes office"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_projected-plan-6",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "hey, how charged is BYD Shark",
+      "heard": "Hey, how charged should be with each other?",
+      "lost": [
+        [
+          "device",
+          "byd shark"
+        ]
+      ]
+    }
+  ]
+}

@@ -265,6 +265,7 @@ def main():
     ap.add_argument("--per-pair", type=int, default=2, help="source conversations per (term, misheard form)")
     ap.add_argument("--rooms-min", type=int, default=6, help="write requests into rooms fewer sources mention")
     ap.add_argument("--observed", type=int, default=400, help="cap on observed rows")
+    ap.add_argument("--sample", action="store_true", help="also write <out>-sample.jsonl, a per-kind subset (SAMPLE)")
     ap.add_argument("--max-wer", type=float, default=0.5, help="observed rows: highest turn WER kept")
     a = ap.parse_args()
     root = os.getcwd()
@@ -285,6 +286,26 @@ def main():
             n += 1
     json.dump({"rows": n, **stats}, open(a.out.replace(".jsonl", ".stats.json"), "w"), indent=2)
     print(f"{a.out}: {n} rows", dict(stats))
+    if a.sample:
+        write_sample(a.out, a.sample)
+
+
+# per kind, for hosts too slow for all of it; every number row stays (the only unrecoverable ones)
+SAMPLE = {"room": 20, "person": 14, "homophone": 16, "number": 28, "observed": 40}
+
+
+def write_sample(path: str, sizes: dict = SAMPLE):
+    rows = [json.loads(l) for l in open(path)]
+    by = collections.defaultdict(list)
+    for r in rows:
+        by[r["_confusion"]["kind"]].append(r)
+    keep = {r["id"] for k, rs in by.items() for r in sorted(rs, key=lambda r: stable(r["id"]))[: sizes.get(k, 0)]}
+    out = path.replace(".jsonl", "-sample.jsonl")
+    with open(out, "w") as fh:
+        for r in rows:
+            if r["id"] in keep:
+                fh.write(json.dumps(r) + "\n")
+    print(f"{out}: {len(keep)} rows", {k: min(len(v), sizes.get(k, 0)) for k, v in by.items()})
 
 
 if __name__ == "__main__":

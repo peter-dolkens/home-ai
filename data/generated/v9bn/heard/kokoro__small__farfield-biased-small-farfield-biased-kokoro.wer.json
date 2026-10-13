@@ -1,0 +1,346 @@
+{
+  "set": "kokoro__small__farfield-biased",
+  "stt": "small",
+  "condition": "farfield-biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 238,
+  "words": 1474,
+  "errors": 62,
+  "wer": 0.0421,
+  "exact": 0.8109,
+  "vocab_words": 487,
+  "vocab_errors": 17,
+  "vocab_wer": 0.0349,
+  "vocab": {
+    "room": {
+      "n": 151,
+      "err": 4,
+      "wer": 0.0265
+    },
+    "device": {
+      "n": 173,
+      "err": 8,
+      "wer": 0.0462
+    },
+    "person": {
+      "n": 17,
+      "err": 1,
+      "wer": 0.0588
+    },
+    "number": {
+      "n": 20,
+      "err": 2,
+      "wer": 0.1
+    },
+    "command": {
+      "n": 126,
+      "err": 2,
+      "wer": 0.0159
+    }
+  },
+  "meaning_changed": 0.0546,
+  "meaning_changed_n": 13,
+  "meaning_by_kind": {
+    "room": 0.0084,
+    "device": 0.0252,
+    "person": 0.0042,
+    "number": 0.0084,
+    "command": 0.0084
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 5.1166,
+    "p50": 5.0925,
+    "p90": 5.6718,
+    "rtf": 1.759,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nicole": {
+      "turns": 8,
+      "wer": 0.04,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-nova": {
+      "turns": 10,
+      "wer": 0.0233,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sarah": {
+      "turns": 21,
+      "wer": 0.0517,
+      "meaning_changed": 0.1905
+    },
+    "t-k-af-sky": {
+      "turns": 18,
+      "wer": 0.0092,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-eric": {
+      "turns": 18,
+      "wer": 0.0841,
+      "meaning_changed": 0.0556
+    },
+    "t-k-am-liam": {
+      "turns": 19,
+      "wer": 0.0462,
+      "meaning_changed": 0.1053
+    },
+    "t-k-am-onyx": {
+      "turns": 13,
+      "wer": 0.0714,
+      "meaning_changed": 0.0769
+    },
+    "t-k-am-puck": {
+      "turns": 19,
+      "wer": 0.0632,
+      "meaning_changed": 0.1053
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 11,
+      "wer": 0.027,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 17,
+      "wer": 0.0278,
+      "meaning_changed": 0.0588
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 15,
+      "wer": 0.0267,
+      "meaning_changed": 0.1333
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 13,
+      "wer": 0.04,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 8,
+      "wer": 0.0526,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 18,
+      "wer": 0.0556,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 13,
+      "wer": 0.0206,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 17,
+      "wer": 0.0291,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 60,
+      "wer": 0.0347,
+      "meaning_changed": 0.0833
+    },
+    "1.0": {
+      "turns": 115,
+      "wer": 0.0608,
+      "meaning_changed": 0.0609
+    },
+    "1.15": {
+      "turns": 63,
+      "wer": 0.0194,
+      "meaning_changed": 0.0159
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 238,
+      "wer": 0.0421,
+      "meaning_changed": 0.0546
+    }
+  },
+  "by_set": {
+    "kokoro__small__farfield-biased": {
+      "turns": 238,
+      "wer": 0.0421,
+      "meaning_changed": 0.0546
+    }
+  },
+  "samples": [
+    {
+      "id": "b300-1185",
+      "turn": 0,
+      "voice": "t-k-bf-emma-isabella",
+      "written": "Pop the back door open",
+      "heard": "Pop the back door opens.",
+      "lost": [
+        [
+          "command",
+          "open"
+        ]
+      ]
+    },
+    {
+      "id": "b300-4122",
+      "turn": 0,
+      "voice": "t-k-af-sarah",
+      "written": "hey house, any idea what today is",
+      "heard": "Hey, how's any idea what today is?",
+      "lost": [
+        [
+          "device",
+          "house"
+        ]
+      ]
+    },
+    {
+      "id": "b300-4627",
+      "turn": 0,
+      "voice": "t-k-am-eric",
+      "written": "hey, is Freya in",
+      "heard": "Hayes Frayland.",
+      "lost": [
+        [
+          "person",
+          "freya"
+        ]
+      ]
+    },
+    {
+      "id": "b300-569",
+      "turn": 1,
+      "voice": "t-k-af-sarah",
+      "written": "The kitchen one.",
+      "heard": "The kitchen won!",
+      "lost": [
+        [
+          "number",
+          "1"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-1738",
+      "turn": 0,
+      "voice": "t-k-bf-emma-lily",
+      "written": "can you switch the carport batten lights on",
+      "heard": "Can you switch the Carport Baton lights on?",
+      "lost": [
+        [
+          "device",
+          "batten lights"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-10000-681",
+      "turn": 0,
+      "voice": "t-k-af-sarah",
+      "written": "what track is this in the bedroom 4",
+      "heard": "What track is this in the bedroom for?",
+      "lost": [
+        [
+          "room",
+          "bedroom 4"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-10000-688",
+      "turn": 1,
+      "voice": "t-k-bf-emma-lily",
+      "written": "The powder room one.",
+      "heard": "The Powder Room 1s.",
+      "lost": [
+        [
+          "number",
+          "1"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-10000-952",
+      "turn": 0,
+      "voice": "t-k-am-onyx",
+      "written": "Play it in the bedroom 2 as well",
+      "heard": "Play it in the bedroom too as well.",
+      "lost": [
+        [
+          "room",
+          "bedroom 2"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-15000-1269",
+      "turn": 0,
+      "voice": "t-k-am-puck",
+      "written": "get the lamp going",
+      "heard": "Get the lab going.",
+      "lost": [
+        [
+          "device",
+          "lamp"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-15000-1269",
+      "turn": 1,
+      "voice": "t-k-am-puck",
+      "written": "Lamp 9.",
+      "heard": "Left Night.",
+      "lost": [
+        [
+          "device",
+          "lamp 9"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-3000-242",
+      "turn": 0,
+      "voice": "t-k-am-liam",
+      "written": "light the lamp up",
+      "heard": "Light the lamp bulbs.",
+      "lost": [
+        [
+          "command",
+          "up"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-3000-242",
+      "turn": 1,
+      "voice": "t-k-am-liam",
+      "written": "The lamp 5 please.",
+      "heard": "The lamp fight, please.",
+      "lost": [
+        [
+          "device",
+          "lamp 5"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-6000-391",
+      "turn": 0,
+      "voice": "t-k-af-sarah",
+      "written": "kill the plug 1 in the master bedroom",
+      "heard": "Kill the Club 1 in the Master Bedroom.",
+      "lost": [
+        [
+          "device",
+          "plug 1"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

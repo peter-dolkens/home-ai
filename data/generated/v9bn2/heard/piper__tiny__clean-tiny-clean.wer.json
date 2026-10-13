@@ -1,0 +1,371 @@
+{
+  "set": "piper__tiny__clean",
+  "stt": "tiny",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 46,
+  "words": 285,
+  "errors": 50,
+  "wer": 0.1754,
+  "exact": 0.4783,
+  "vocab_words": 85,
+  "vocab_errors": 20,
+  "vocab_wer": 0.2353,
+  "vocab": {
+    "room": {
+      "n": 19,
+      "err": 6,
+      "wer": 0.3158
+    },
+    "device": {
+      "n": 37,
+      "err": 9,
+      "wer": 0.2432
+    },
+    "person": {
+      "n": 2,
+      "err": 2,
+      "wer": 1.0
+    },
+    "number": {
+      "n": 3,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 24,
+      "err": 3,
+      "wer": 0.125
+    }
+  },
+  "meaning_changed": 0.3043,
+  "meaning_changed_n": 14,
+  "meaning_by_kind": {
+    "room": 0.1087,
+    "device": 0.1522,
+    "person": 0.0435,
+    "number": 0.0,
+    "command": 0.0652
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 0.74,
+    "p50": 0.7791,
+    "p90": 0.9492,
+    "rtf": 0.2983,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-ca-p302": {
+      "turns": 1,
+      "wer": 0.125,
+      "meaning_changed": 1.0
+    },
+    "t-ie-p245": {
+      "turns": 2,
+      "wer": 0.3125,
+      "meaning_changed": 0.5
+    },
+    "t-ie-p288": {
+      "turns": 5,
+      "wer": 0.2069,
+      "meaning_changed": 0.2
+    },
+    "t-ld-p243": {
+      "turns": 3,
+      "wer": 0.4167,
+      "meaning_changed": 0.3333
+    },
+    "t-ni-p304": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-nz-p335": {
+      "turns": 3,
+      "wer": 0.0556,
+      "meaning_changed": 0.3333
+    },
+    "t-sc-p234": {
+      "turns": 2,
+      "wer": 0.2857,
+      "meaning_changed": 0.5
+    },
+    "t-sc-p237": {
+      "turns": 1,
+      "wer": 0.1111,
+      "meaning_changed": 0.0
+    },
+    "t-se-p225": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-sm-prudence": {
+      "turns": 2,
+      "wer": 0.4,
+      "meaning_changed": 1.0
+    },
+    "t-sm-spike": {
+      "turns": 2,
+      "wer": 0.4545,
+      "meaning_changed": 0.5
+    },
+    "t-wa-p253": {
+      "turns": 2,
+      "wer": 0.2353,
+      "meaning_changed": 0.0
+    },
+    "t-yk-p267": {
+      "turns": 8,
+      "wer": 0.0952,
+      "meaning_changed": 0.25
+    },
+    "t-yk-p270": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-za-p323": {
+      "turns": 2,
+      "wer": 0.0909,
+      "meaning_changed": 0.0
+    },
+    "t-za-p347": {
+      "turns": 6,
+      "wer": 0.175,
+      "meaning_changed": 0.5
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 6,
+      "wer": 0.2368,
+      "meaning_changed": 0.6667
+    },
+    "1.0": {
+      "turns": 32,
+      "wer": 0.165,
+      "meaning_changed": 0.2812
+    },
+    "1.15": {
+      "turns": 8,
+      "wer": 0.1707,
+      "meaning_changed": 0.125
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 46,
+      "wer": 0.1754,
+      "meaning_changed": 0.3043
+    }
+  },
+  "by_set": {
+    "piper__tiny__clean": {
+      "turns": 46,
+      "wer": 0.1754,
+      "meaning_changed": 0.3043
+    }
+  },
+  "samples": [
+    {
+      "id": "b300-2311",
+      "turn": 0,
+      "voice": "t-sm-prudence",
+      "written": "is now an okay time to put the dishwasher on",
+      "heard": "is now an okay time to put the dish will shone.",
+      "lost": [
+        [
+          "device",
+          "dishwasher"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "b300-624",
+      "turn": 0,
+      "voice": "t-za-p347",
+      "written": "Power up the exhaust fan",
+      "heard": "Power of the exhaust fam.",
+      "lost": [
+        [
+          "command",
+          "up"
+        ],
+        [
+          "device",
+          "exhaust fan"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1891",
+      "turn": 0,
+      "voice": "t-sm-spike",
+      "written": "Lights off in carport",
+      "heard": "Lights are often cardboard.",
+      "lost": [
+        [
+          "command",
+          "off"
+        ],
+        [
+          "room",
+          "carport"
+        ]
+      ]
+    },
+    {
+      "id": "b300-1485",
+      "turn": 0,
+      "voice": "t-ca-p302",
+      "written": "Start the lights in the kitchen and bedroom",
+      "heard": "Start the light in the kitchen and bedroom.",
+      "lost": [
+        [
+          "device",
+          "lights"
+        ]
+      ]
+    },
+    {
+      "id": "b300-1507",
+      "turn": 0,
+      "voice": "t-yk-p267",
+      "written": "lights off in guest robe please",
+      "heard": "Lights off in this row, please.",
+      "lost": [
+        [
+          "room",
+          "guest robe"
+        ]
+      ]
+    },
+    {
+      "id": "b300-1975",
+      "turn": 0,
+      "voice": "t-sm-prudence",
+      "written": "kill the Lights in here",
+      "heard": "Calberates in here.",
+      "lost": [
+        [
+          "device",
+          "lights"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2707",
+      "turn": 0,
+      "voice": "t-za-p347",
+      "written": "What charge is remaining?",
+      "heard": "What type is remaining?",
+      "lost": [
+        [
+          "device",
+          "charge"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3110",
+      "turn": 0,
+      "voice": "t-ie-p288",
+      "written": "hey house, start Amber's Mix playlist thanks",
+      "heard": "Hey House, start Ember's Mix playlist thanks.",
+      "lost": [
+        [
+          "room",
+          "ambers"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3313",
+      "turn": 0,
+      "voice": "t-za-p347",
+      "written": "hey, can you play hip hop in the alfresco",
+      "heard": "Pay, can you play hip hop in the refresco?",
+      "lost": [
+        [
+          "room",
+          "alfresco"
+        ]
+      ]
+    },
+    {
+      "id": "b300-4254",
+      "turn": 0,
+      "voice": "t-ld-p243",
+      "written": "Are any windows open?",
+      "heard": "Anyone does open?",
+      "lost": [
+        [
+          "device",
+          "windows"
+        ]
+      ]
+    },
+    {
+      "id": "b300-4664",
+      "turn": 0,
+      "voice": "t-nz-p335",
+      "written": "is Isla around",
+      "heard": "is all around.",
+      "lost": [
+        [
+          "person",
+          "isla"
+        ]
+      ]
+    },
+    {
+      "id": "b300-569",
+      "turn": 0,
+      "voice": "t-yk-p267",
+      "written": "Flick the floor strip on",
+      "heard": "Click the 4-Strip on.",
+      "lost": [
+        [
+          "device",
+          "floor strip"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-10000-1000",
+      "turn": 0,
+      "voice": "t-sc-p234",
+      "written": "quick question, is Freya at the house",
+      "heard": "Put a question this free at the house.",
+      "lost": [
+        [
+          "person",
+          "freya"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-10000-746",
+      "turn": 0,
+      "voice": "t-ie-p245",
+      "written": "put on the latest Coffee Break Spanish in the alfresco",
+      "heard": "Put on the latest coffee breaks banish in Neil Fresco.",
+      "lost": [
+        [
+          "room",
+          "alfresco"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

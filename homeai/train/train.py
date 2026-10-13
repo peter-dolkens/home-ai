@@ -17,7 +17,7 @@ import os
 import statistics
 import sys
 
-from .data import load_jsonl, render_all, text_tokenizer
+from .data import check_tool_calls_rendered, load_jsonl, render_all, text_tokenizer
 
 
 def load_config(path: str, overrides: list[str]) -> dict:
@@ -224,8 +224,8 @@ def main():
     a = ap.parse_args()
     cfg = load_config(a.config, a.set)
 
-    train = load_jsonl(cfg["train"])
-    val = load_jsonl(cfg["val"]) if cfg.get("val") and os.path.exists(cfg["val"]) else []
+    train = load_jsonl(cfg["train"], cfg.get("prompt_layout"))
+    val = load_jsonl(cfg["val"], cfg.get("prompt_layout")) if cfg.get("val") and os.path.exists(cfg["val"]) else []
 
     if a.dry_run:
         from transformers import AutoTokenizer
@@ -248,6 +248,11 @@ def main():
         model_name=cfg["base_model"], max_seq_length=cfg["max_seq_len"], load_in_4bit=cfg.get("load_in_4bit", True), dtype=None,
     )
     processor, tokenizer = tokenizer, text_tokenizer(tokenizer)  # text-only training on a possibly-VL checkpoint
+    if cfg.get("chat_template_from"):
+        # Unsloth swaps LiquidAI/LFM2.5-1.2B-Instruct for its unsloth/ mirror, whose older template drops assistant
+        # tool_calls: every tool-call turn trained as an empty reply (29 Sep). Take the template from a repo that renders them.
+        from transformers import AutoTokenizer
+        tokenizer.chat_template = AutoTokenizer.from_pretrained(cfg["chat_template_from"]).chat_template
     model = FastLanguageModel.get_peft_model(
         model, r=cfg["lora_r"], lora_alpha=cfg["lora_alpha"], lora_dropout=0, bias="none",
         # per-architecture override: LFM2 names its projections out_proj / in_proj (conv blocks) / w1 w2 w3 (feed-forward), so the
@@ -267,6 +272,7 @@ def main():
         if unexpected or len(missing) > 0.1 * len(sd):
             raise SystemExit("init_adapter does not match this LoRA layout")
 
+    check_tool_calls_rendered(tokenizer, train)
     train_texts, dropped, lengths = render_all(tokenizer, train, cfg["max_seq_len"])
     print(f"train: {len(train_texts)} examples (dropped {dropped} over {cfg['max_seq_len']} tokens); "
           f"mean {statistics.mean(lengths):.0f} tokens, max {max(lengths)}")

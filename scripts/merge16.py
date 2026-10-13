@@ -27,9 +27,20 @@ def restore_config_keys(out, base_model):
         print("restored config keys from base:", added)
 
 
+def check_merged_shards(out):
+    """The weight files in `out` must be exactly the ones its index names: stray shards mean something else (the base
+    snapshot) was copied in, and the converter would follow whichever index won."""
+    idx = os.path.join(out, "model.safetensors.index.json")
+    have = {f for f in os.listdir(out) if f.endswith(".safetensors")}
+    named = set(json.load(open(idx))["weight_map"].values()) if os.path.exists(idx) else have
+    if have != named:
+        sys.exit(f"merged16 shards {sorted(have)} != index {sorted(named)} in {out}: refusing to export base weights")
+
+
 cfg = json.load(open(sys.argv[1]))
 out = os.path.join(cfg["out"], "merged16")
 if os.path.exists(os.path.join(out, "config.json")):
+    check_merged_shards(out)  # a merged16 left by the old copy-everything merge fails here: delete it and re-run
     print("exists", out); sys.exit(0)
 if cfg.get("backend") == "hf":
     # models Unsloth doesn't support (Spark X2.5): plain transformers + PEFT merge, keep the remote code files
@@ -45,10 +56,16 @@ if cfg.get("backend") == "hf":
     tok = AutoTokenizer.from_pretrained(cfg.get("hf_tokenizer", cfg["base_model"]), trust_remote_code=True)
     tok.save_pretrained(out)
     from huggingface_hub import snapshot_download
-    src = snapshot_download(cfg["base_model"], allow_patterns=["*.py", "chat_template.jinja", "generation_config.json"])
+    keep = ("chat_template.jinja", "generation_config.json")
+    src = snapshot_download(cfg["base_model"], allow_patterns=["*.py", *keep])
+    # allow_patterns limits the download, not the folder: the cached snapshot also holds the base weights from training
+    # (model-*-of-00005.safetensors + model.safetensors.index.json). Copying all of it replaced the merged index, so
+    # the GGUF converter read the BASE shards (Spark v5 re-export 29 Sep, v9 1 Oct: both base weights, ~46%).
     for f in glob.glob(os.path.join(src, "*")):
-        if os.path.isfile(f):  # the snapshot can hold folders too (Spark's model card images)
+        name = os.path.basename(f)
+        if os.path.isfile(f) and (name.endswith(".py") or name in keep):
             shutil.copy(f, out)
+    check_merged_shards(out)
     restore_config_keys(out, cfg["base_model"])
     print("merged (hf) ->", out, os.listdir(out)); sys.exit(0)
 from unsloth import FastLanguageModel

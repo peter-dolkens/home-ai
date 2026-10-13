@@ -1,0 +1,172 @@
+{
+  "set": "bigbench-b-bundook",
+  "stt": "small",
+  "condition": "biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 57,
+  "words": 313,
+  "errors": 15,
+  "wer": 0.0479,
+  "exact": 0.8421,
+  "vocab_words": 93,
+  "vocab_errors": 6,
+  "vocab_wer": 0.0645,
+  "vocab": {
+    "room": {
+      "n": 16,
+      "err": 0,
+      "wer": 0.0
+    },
+    "device": {
+      "n": 43,
+      "err": 6,
+      "wer": 0.1395
+    },
+    "person": {
+      "n": 5,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 3,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 26,
+      "err": 0,
+      "wer": 0.0
+    }
+  },
+  "meaning_changed": 0.0351,
+  "meaning_changed_n": 2,
+  "meaning_by_kind": {
+    "room": 0.0,
+    "device": 0.0351,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 5.7192,
+    "p50": 5.8054,
+    "p90": 6.6185,
+    "rtf": 2.1939,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "au-p326": {
+      "turns": 3,
+      "wer": 0.0588,
+      "meaning_changed": 0.3333
+    },
+    "au-p374": {
+      "turns": 6,
+      "wer": 0.087,
+      "meaning_changed": 0.0
+    },
+    "gb-alan": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "gb-alba": {
+      "turns": 8,
+      "wer": 0.04,
+      "meaning_changed": 0.0
+    },
+    "gb-cori": {
+      "turns": 15,
+      "wer": 0.0886,
+      "meaning_changed": 0.0667
+    },
+    "gb-jenny": {
+      "turns": 6,
+      "wer": 0.0263,
+      "meaning_changed": 0.0
+    },
+    "gb-northern-m": {
+      "turns": 6,
+      "wer": 0.0571,
+      "meaning_changed": 0.0
+    },
+    "us-amy": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "us-lessac": {
+      "turns": 5,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "us-ryan": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 10,
+      "wer": 0.186,
+      "meaning_changed": 0.0
+    },
+    "1.0": {
+      "turns": 31,
+      "wer": 0.0328,
+      "meaning_changed": 0.0323
+    },
+    "1.15": {
+      "turns": 16,
+      "wer": 0.0115,
+      "meaning_changed": 0.0625
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 57,
+      "wer": 0.0479,
+      "meaning_changed": 0.0351
+    }
+  },
+  "by_set": {
+    "bigbench-b-bundook": {
+      "turns": 57,
+      "wer": 0.0479,
+      "meaning_changed": 0.0351
+    }
+  },
+  "samples": [
+    {
+      "id": "big-bundook_full-plan-22",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "Lights to 25 percent.",
+      "heard": "Lies to 25%.",
+      "lost": [
+        [
+          "device",
+          "lights"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-9",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "Shark backup feed on please.",
+      "heard": "Shock, Backup, Feed On, Please",
+      "lost": [
+        [
+          "device",
+          "shark backup feed"
+        ]
+      ]
+    }
+  ]
+}

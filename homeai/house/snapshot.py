@@ -292,8 +292,139 @@ SYSTEM_RULES = """How to work:
 - Be concise and natural; replies are spoken aloud. No lists, no markdown."""
 
 
-def system_prompt(house: House, speaker: Optional[Speaker]) -> str:
-    return "\n".join([
+# ---------------------------------------------------------------------- prompt layout
+# "classic" (v1-v9 and every model trained before v10): the clock, speaker and presence lines sit near the top, above
+# the inventory and rules, so no two requests share more than the first line and no server can reuse a prefix cache.
+# "stable_prefix" (v10, config / registry key "prompt_layout"): the same lines, moved into a final "Current context:"
+# block, so everything before it (tool schemas, which Qwen3.5's template puts first, intro, inventory, rules) is fixed
+# per house and cacheable across requests.
+# "user_context" (v11): the system message is only that static part; the lines go on the first line of every user turn,
+# "[context] Now: ... | Speaker: ... | People: ...", each turn keeping the context it was sent with (v10 used the lines
+# less when deciding whether to ask; next to the utterance they are hard to miss).
+# "clock_in_user" (v12): v10 and v11 both lost clarification against v9 (wild_clarify 72 -> 56 / 61), so only the clock
+# moves: the system message is classic without its "Now: ..." line (Speaker and People stay where v1-v9 learned to use
+# them) and every user turn starts with "[now] Tuesday 14:07". Speaker is fixed per satellite and People changes
+# rarely, so for one room and presence state the system message is byte-identical across requests (mlx_lm's prompt
+# cache for Qwen3.5 resumes only from the end of the system message).
+# relayout() converts a system prompt between the system-prompt layouts; relayout_messages() converts a whole
+# conversation between all four (idempotent), so stored data of any layout serves a model of any layout. Stored rows
+# keep the bare utterance: the user_context / clock_in_user prefix is added only when a request or a training example
+# is rendered.
+LAYOUTS = ("classic", "stable_prefix", "user_context", "clock_in_user")
+VOLATILE = ("Now: ", "Speaker: ", "People: ")
+CLOCK = VOLATILE[0]
+CONTEXT_HEAD = "Current context:"
+CONTEXT_TAG = "[context] "
+CLOCK_TAG = "[now] "
+
+
+def split_context(system: str) -> tuple[str, list[str]]:
+    """(static part, volatile lines) of a classic or stable_prefix system prompt; ([prompt], []) when it has none."""
+    lines = system.split("\n")
+    vol = [i for i, l in enumerate(lines) if l.startswith(VOLATILE)]
+    if not vol:
+        return system, []
+    ctx = len(lines) - len(vol) - 1  # index of CONTEXT_HEAD when the prompt is stable_prefix
+    if lines[ctx] == CONTEXT_HEAD and vol == list(range(ctx + 1, len(lines))) and lines[ctx - 1] == "":
+        return "\n".join(lines[:ctx - 1]), lines[ctx + 1:]
+    if vol == list(range(2, 2 + len(vol))) and lines[1] == "" and lines[vol[-1] + 1] == "":
+        return "\n".join(lines[:2] + lines[vol[-1] + 2:]), lines[vol[0]:vol[-1] + 1]
+    raise ValueError("system prompt has the volatile lines in neither layout")
+
+
+def compose(static: str, context: list[str], layout: Optional[str]) -> str:
+    """The system prompt of `layout` from its static part and the volatile lines (user_context: the static part;
+    clock_in_user: classic without the clock line)."""
+    layout = layout or "classic"
+    if layout == "clock_in_user":
+        context = [l for l in context if not l.startswith(CLOCK)]
+    if not context or layout == "user_context":
+        return static
+    if layout == "stable_prefix":  # intro, blank, body, blank, head, [volatile]
+        return "\n".join([static, "", CONTEXT_HEAD] + context)
+    lines = static.split("\n")  # classic: intro, blank, [volatile], blank, body
+    return "\n".join(lines[:2] + context + [""] + lines[2:])
+
+
+def relayout(system: str, layout: Optional[str]) -> str:
+    """A rendered system prompt in `layout` (None: classic). Prompts without the volatile lines pass unchanged, so a
+    user_context system prompt cannot go back on its own, nor can a clock_in_user one get its clock back: use
+    relayout_messages, which takes the lines from the turns."""
+    layout = layout or "classic"
+    if layout not in LAYOUTS:
+        raise ValueError(f"unknown prompt layout {layout!r}; have {', '.join(LAYOUTS)}")
+    static, context = split_context(system)
+    return compose(static, context, layout) if context else system
+
+
+def context_line(context: list[str]) -> str:
+    return CONTEXT_TAG + " | ".join(context)
+
+
+def clock_line(context: list[str]) -> Optional[str]:
+    """'[now] Tuesday 14:07' from the volatile lines (None when they have no clock)."""
+    now = next((l for l in context if l.startswith(CLOCK)), None)
+    return None if now is None else CLOCK_TAG + now[len(CLOCK):]
+
+
+def split_user(content: str) -> tuple[Optional[list[str]], str]:
+    """(volatile lines, utterance) of a user_context turn, ([the "Now: " line], utterance) of a clock_in_user one;
+    (None, content) for a bare one."""
+    content = content or ""
+    head, nl, utt = content.partition("\n")
+    if head.startswith(CLOCK_TAG) and nl and len(head) > len(CLOCK_TAG) and " | " not in head:
+        return [CLOCK + head[len(CLOCK_TAG):]], utt
+    if not head.startswith(CONTEXT_TAG):
+        return None, content
+    parts = head[len(CONTEXT_TAG):].split(" | ")
+    if not all(p.startswith(VOLATILE) for p in parts):
+        return None, content
+    return parts, utt
+
+
+def _with(lines: list[str], base: list[str]) -> list[str]:
+    """A turn's volatile lines completed from `base` (a clock_in_user turn carries only its clock; Speaker and People
+    are the system prompt's), in base's order with any kind base lacks in front."""
+    have = {p: l for l in lines for p in VOLATILE if l.startswith(p)}
+    kinds = [p for l in base for p in VOLATILE if l.startswith(p)]
+    out = [have[p] for p in VOLATILE if p in have and p not in kinds]
+    return out + [have.get(p, l) for p, l in zip(kinds, base)]
+
+
+def relayout_messages(messages: list[dict], layout: Optional[str]) -> list[dict]:
+    """A conversation (system message first) in `layout`, from any layout; new message dicts, the input is not changed.
+    A user message may carry "_context" (its volatile lines, as the bridge records them): user_context renders each turn
+    with its own, clock_in_user each turn with its own clock; the system prompt takes the latest turn's (what it said
+    when that request was sent). Turns without either get the system prompt's, and a clock_in_user turn the system
+    prompt's Speaker and People. "_context" is consumed; other keys pass through."""
+    layout = layout or "classic"
+    if layout not in LAYOUTS:
+        raise ValueError(f"unknown prompt layout {layout!r}; have {', '.join(LAYOUTS)}")
+    if not messages or messages[0].get("role") != "system":
+        return [dict(m) for m in messages]
+    static, base = split_context(messages[0]["content"])
+    turns, latest = [], base
+    for m in messages[1:]:
+        m = {k: v for k, v in m.items() if k != "_context"} | ({} if "_context" not in m else {"_ctx": m["_context"]})
+        if m["role"] == "user":
+            lines, utt = split_user(m["content"])
+            m["_ctx"] = _with(lines, base) if lines else m.get("_ctx") or latest or base
+            m["content"] = utt
+            latest = m["_ctx"]
+        turns.append(m)
+    out = [{**messages[0], "content": compose(static, latest, layout)}]
+    for m in turns:
+        ctx = m.pop("_ctx", None)
+        if m["role"] == "user" and layout == "user_context" and ctx:
+            m["content"] = context_line(ctx) + "\n" + m["content"]
+        elif m["role"] == "user" and layout == "clock_in_user" and ctx and clock_line(ctx):
+            m["content"] = clock_line(ctx) + "\n" + m["content"]
+        out.append(m)
+    return out
+
+
+def system_prompt(house: House, speaker: Optional[Speaker], layout: Optional[str] = None) -> str:
+    return relayout("\n".join([
         f"You are the voice assistant for {house.description} running Home Assistant.",
         "",
         f"Now: {house.now.strftime('%A %H:%M')}",
@@ -304,7 +435,7 @@ def system_prompt(house: House, speaker: Optional[Speaker]) -> str:
         inventory(house),
         "",
         SYSTEM_RULES,
-    ])
+    ]), layout)
 
 
 # ---------------------------------------------------------------------- design B (homeai/tools_b.py)
@@ -353,8 +484,8 @@ SYSTEM_RULES_B = """How to work:
 - Be concise and natural; replies are spoken aloud. No lists, no markdown."""
 
 
-def system_prompt_b(house: House, speaker: Optional[Speaker]) -> str:
-    return "\n".join([
+def system_prompt_b(house: House, speaker: Optional[Speaker], layout: Optional[str] = None) -> str:
+    return relayout("\n".join([
         f"You are the voice assistant for {house.description} running Home Assistant.",
         "",
         f"Now: {house.now.strftime('%A %H:%M')}",
@@ -365,4 +496,4 @@ def system_prompt_b(house: House, speaker: Optional[Speaker]) -> str:
         inventory_b(house),
         "",
         SYSTEM_RULES_B,
-    ])
+    ]), layout)

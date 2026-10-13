@@ -1,0 +1,211 @@
+{
+  "set": "piper__medium__biased",
+  "stt": "medium",
+  "condition": "biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 48,
+  "words": 313,
+  "errors": 29,
+  "wer": 0.0927,
+  "exact": 0.6667,
+  "vocab_words": 120,
+  "vocab_errors": 6,
+  "vocab_wer": 0.05,
+  "vocab": {
+    "room": {
+      "n": 49,
+      "err": 1,
+      "wer": 0.0204
+    },
+    "device": {
+      "n": 33,
+      "err": 5,
+      "wer": 0.1515
+    },
+    "person": {
+      "n": 6,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 6,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 26,
+      "err": 0,
+      "wer": 0.0
+    }
+  },
+  "meaning_changed": 0.0625,
+  "meaning_changed_n": 3,
+  "meaning_by_kind": {
+    "room": 0.0208,
+    "device": 0.0417,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 9.292,
+    "p50": 9.4212,
+    "p90": 10.5882,
+    "rtf": 3.3825,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-ca-p302": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-ie-p245": {
+      "turns": 6,
+      "wer": 0.0577,
+      "meaning_changed": 0.0
+    },
+    "t-ie-p288": {
+      "turns": 7,
+      "wer": 0.15,
+      "meaning_changed": 0.0
+    },
+    "t-ld-p243": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-ni-p304": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-nz-p335": {
+      "turns": 5,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-sc-p234": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-sc-p237": {
+      "turns": 1,
+      "wer": 0.1429,
+      "meaning_changed": 0.0
+    },
+    "t-se-p225": {
+      "turns": 3,
+      "wer": 0.2727,
+      "meaning_changed": 0.3333
+    },
+    "t-sm-prudence": {
+      "turns": 5,
+      "wer": 0.16,
+      "meaning_changed": 0.0
+    },
+    "t-sm-spike": {
+      "turns": 1,
+      "wer": 0.25,
+      "meaning_changed": 0.0
+    },
+    "t-wa-p253": {
+      "turns": 4,
+      "wer": 0.1379,
+      "meaning_changed": 0.25
+    },
+    "t-yk-p270": {
+      "turns": 4,
+      "wer": 0.1818,
+      "meaning_changed": 0.25
+    },
+    "t-za-p323": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-za-p347": {
+      "turns": 4,
+      "wer": 0.0741,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 18,
+      "wer": 0.0783,
+      "meaning_changed": 0.0556
+    },
+    "1.0": {
+      "turns": 22,
+      "wer": 0.0909,
+      "meaning_changed": 0.0909
+    },
+    "1.15": {
+      "turns": 8,
+      "wer": 0.1273,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 48,
+      "wer": 0.0927,
+      "meaning_changed": 0.0625
+    }
+  },
+  "by_set": {
+    "piper__medium__biased": {
+      "turns": 48,
+      "wer": 0.0927,
+      "meaning_changed": 0.0625
+    }
+  },
+  "samples": [
+    {
+      "id": "b300-4308",
+      "turn": 0,
+      "voice": "t-wa-p253",
+      "written": "what temperature is the guest ensuite",
+      "heard": "What temperature is the guest in suit?",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-1761",
+      "turn": 0,
+      "voice": "t-yk-p270",
+      "written": "hey house, track down Amber for me thanks",
+      "heard": "Hey, how's track down Amber for me, thanks.",
+      "lost": [
+        [
+          "device",
+          "house track"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-3000-168",
+      "turn": 0,
+      "voice": "t-se-p225",
+      "written": "Air purifier off.",
+      "heard": "App your file off.",
+      "lost": [
+        [
+          "device",
+          "air purifier"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

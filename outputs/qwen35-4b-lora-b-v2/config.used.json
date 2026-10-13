@@ -1,0 +1,21 @@
+{
+  "_comment": "Design B + voice robustness (Peter, 29 Sep): B's data and recipe (configs/qwen35-4b-lora-b.json) with v9's speech-to-text augmentation (homeai/datagen/asr_v9.py, scripts/build-b-v2.sh): 2210 of 6536 conversations' user turns replaced by round trips (Kokoro/Piper -> parakeet/whisper, training-only voices), STT-style casing on 464 more, 327 homophone/split-name/number near-misses (7 ambiguous lock/look -> clarifying question); leakage vs every held-out set incl. the -b and heard sets: 0. v10 prompt layout (stable_prefix: Now / Speaker / People in a final 'Current context:' block, homeai/house/snapshot.py relayout).",
+  "base_model": "Qwen/Qwen3.5-4B",
+  "hf_tokenizer": "Qwen/Qwen3.5-4B",
+  "ollama_template_from": "qwen3.5:4b",
+  "instruction_part": "<|im_start|>user\n",
+  "response_part": "<|im_start|>assistant\n",
+  "max_seq_len": 6144,
+  "lora_r": 16,
+  "lora_alpha": 16,
+  "epochs": 2,
+  "lr": 0.0002,
+  "batch_size": 1,
+  "grad_accum": 16,
+  "seed": 3407,
+  "train": "data/generated/train-b-v2.jsonl",
+  "val": "data/generated/val-b.jsonl",
+  "out": "outputs/qwen35-4b-lora-b-v2",
+  "load_in_4bit": false,
+  "prompt_layout": "stable_prefix"
+}

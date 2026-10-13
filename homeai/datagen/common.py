@@ -229,8 +229,45 @@ def is_are(n: int) -> str:
     return "is" if n == 1 else "are"
 
 
-def voiceify(text: str, rng: random.Random, kind: str = "cmd") -> str:
-    """Make a clean utterance look like something a speech-to-text layer emits."""
+QUESTION_START = ("is", "are", "was", "were", "do", "does", "did", "can", "could", "would", "will", "should", "have", "has",
+                  "what", "whats", "what's", "where", "wheres", "where's", "who", "whos", "who's", "when", "why", "how",
+                  "hows", "how's", "which", "any", "anyone", "anybody", "anything", "much", "am")
+INTERJECTIONS = ("um", "uh", "er", "erm", "hey", "ok", "okay", "right", "so", "yeah", "yep", "oh", "hmm", "well", "sorry")
+
+
+def stt_case(text: str) -> str:
+    """Format an utterance the way Whisper / Parakeet hand it over: sentence case, a comma after a leading interjection
+    or wake phrase, "I" and "OK"/"Okay" capitalised, and a closing full stop or question mark (the heard-set evals
+    found the models, trained on voiceify's lower-case unpunctuated text, lose a turn or two in a hundred to casing
+    and punctuation alone)."""
+    t = " ".join(text.strip().split()).rstrip(",;")
+    if not t:
+        return text
+    t = _re.sub(r"\bi\b", "I", t)
+    t = _re.sub(r"\b(ok)\b", "Okay", t, flags=_re.I)
+    words = t.split(" ")
+    first = words[0].lower().strip(",")
+    if first in INTERJECTIONS and len(words) > 1 and not words[0].endswith(","):
+        if first == "hey" and words[1].lower().strip(",") == "house":
+            words[1] = words[1].rstrip(",") + ","
+        else:
+            words[0] += ","
+    t = " ".join(words)
+    t = t[:1].upper() + t[1:]
+    if t[-1] not in ".?!":
+        body = [w.lower().strip(",") for w in t.split(" ") if w.lower().strip(",") not in INTERJECTIONS + ("house",)]
+        t += "?" if body and body[0] in QUESTION_START else "."
+    return t
+
+
+def voiceify(text: str, rng: random.Random, kind: str = "cmd", stt: float = 0.0) -> str:
+    """Make a clean utterance look like something a speech-to-text layer emits. stt: probability of handing it over
+    in STT style (stt_case) after the perturbation; 0 draws nothing extra from rng, so existing builds are unchanged."""
+    out = _voiceify(text, rng, kind)
+    return stt_case(out) if stt and rng.random() < stt else out
+
+
+def _voiceify(text: str, rng: random.Random, kind: str) -> str:
     r = rng.random()
     if r < 0.4:
         return text
@@ -279,4 +316,4 @@ VERBS = ("turn", "switch", "set", "dim", "brighten", "close", "open", "lock", "u
 
 
 __all__ = ["Conv", "pick", "join", "room_ref", "room_plain", "rooms_ref", "cap", "short", "is_are", "isv",
-           "voiceify", "num", "rel_time", "pct", "spoken_ago", "spoken_dur"]
+           "voiceify", "stt_case", "num", "rel_time", "pct", "spoken_ago", "spoken_dur"]

@@ -1,0 +1,8 @@
+2026-10-04 23:42:14 fuse lfm25-1.2b-lora-b-v7 on /Users/peter.dolkens/Projects/home-ai/.mlx/bases/LFM2.5-1.2B-Instruct
+fused 72 weights -> outputs/lfm25-1.2b-lora-b-v7/merged16
+2026-10-04 23:42:19 mlx_lm.convert mlx8
+[INFO] Loading
+[INFO] Quantizing
+[INFO] Quantized model with 8.501 bits per weight.
+2026-10-04 23:42:33 push mlx/homeai-lfm25-1.2b-lora-b-v7-mlx8 (1206 MB)
+2026-10-04 23:43:17 homeai-lfm25-1.2b-lora-b-v7 MLX artifacts pushed: mlx8

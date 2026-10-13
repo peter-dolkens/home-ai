@@ -1,0 +1,170 @@
+{
+  "model": "homeai-2b-lora-b-v2u",
+  "mode": "e2e",
+  "host": "lapwing",
+  "hardware": "rtx-3080",
+  "host_note": "lapwing (accuracy only), user_context",
+  "ollama": "http://127.0.0.1:11500",
+  "lockstep": 8,
+  "prompt_layout": "user_context",
+  "data": "data/generated/heard/bigbench-b-bundook-parakeet-farfield.jsonl",
+  "examples": 50,
+  "turns": 57,
+  "pass": 0.7543859649122807,
+  "conversation_pass": 0.72,
+  "seconds_per_turn": 1.2156570606064379,
+  "calls_per_request": 2.0,
+  "errors": 1,
+  "by_kind": {
+    "answer": {
+      "n": 34,
+      "ok": 25
+    },
+    "state": {
+      "n": 57,
+      "ok": 52
+    },
+    "reply": {
+      "n": 57,
+      "ok": 48
+    },
+    "act": {
+      "n": 23,
+      "ok": 18
+    }
+  },
+  "by_category": {
+    "presence_in_room": {
+      "n": 1,
+      "ok": 1
+    },
+    "clarify": {
+      "n": 4,
+      "ok": 4
+    },
+    "control_compound": {
+      "n": 2,
+      "ok": 2
+    },
+    "presence_where": {
+      "n": 4,
+      "ok": 4
+    },
+    "energy_status": {
+      "n": 1,
+      "ok": 1
+    },
+    "anything_on": {
+      "n": 2,
+      "ok": 0
+    },
+    "away_motion": {
+      "n": 1,
+      "ok": 1
+    },
+    "confirm_sensitive": {
+      "n": 2,
+      "ok": 2
+    },
+    "control_named": {
+      "n": 3,
+      "ok": 1
+    },
+    "status_aggregate": {
+      "n": 1,
+      "ok": 0
+    },
+    "energy_night": {
+      "n": 4,
+      "ok": 4
+    },
+    "open_check": {
+      "n": 1,
+      "ok": 0
+    },
+    "media_multiroom": {
+      "n": 2,
+      "ok": 2
+    },
+    "act_only_one": {
+      "n": 1,
+      "ok": 1
+    },
+    "appliance_status": {
+      "n": 2,
+      "ok": 2
+    },
+    "who_home": {
+      "n": 1,
+      "ok": 1
+    },
+    "control_climate": {
+      "n": 1,
+      "ok": 1
+    },
+    "goodnight": {
+      "n": 2,
+      "ok": 1
+    },
+    "vehicle_status": {
+      "n": 2,
+      "ok": 1
+    },
+    "top_power": {
+      "n": 2,
+      "ok": 0
+    },
+    "control_brightness": {
+      "n": 2,
+      "ok": 2
+    },
+    "check_house": {
+      "n": 4,
+      "ok": 3
+    },
+    "water_status": {
+      "n": 2,
+      "ok": 2
+    },
+    "leaving": {
+      "n": 1,
+      "ok": 0
+    },
+    "media_transport": {
+      "n": 1,
+      "ok": 1
+    },
+    "status_entity": {
+      "n": 1,
+      "ok": 1
+    },
+    "media_volume": {
+      "n": 1,
+      "ok": 1
+    },
+    "control_area": {
+      "n": 1,
+      "ok": 1
+    },
+    "control_here": {
+      "n": 1,
+      "ok": 1
+    },
+    "energy_appliance": {
+      "n": 1,
+      "ok": 0
+    },
+    "media_play": {
+      "n": 1,
+      "ok": 1
+    },
+    "media_what": {
+      "n": 1,
+      "ok": 1
+    },
+    "weather": {
+      "n": 1,
+      "ok": 0
+    }
+  }
+}

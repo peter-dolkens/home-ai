@@ -1,0 +1,153 @@
+{
+  "set": "piper__base__clean",
+  "stt": "base",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 7,
+  "words": 37,
+  "errors": 9,
+  "wer": 0.2432,
+  "exact": 0.5714,
+  "vocab_words": 14,
+  "vocab_errors": 2,
+  "vocab_wer": 0.1429,
+  "vocab": {
+    "room": {
+      "n": 5,
+      "err": 1,
+      "wer": 0.2
+    },
+    "device": {
+      "n": 5,
+      "err": 0,
+      "wer": 0.0
+    },
+    "person": {
+      "n": 0,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 0,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 4,
+      "err": 1,
+      "wer": 0.25
+    }
+  },
+  "meaning_changed": 0.2857,
+  "meaning_changed_n": 2,
+  "meaning_by_kind": {
+    "room": 0.1429,
+    "device": 0.0,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.1429
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 0.4233,
+    "p50": 0.4231,
+    "p90": 0.4598,
+    "rtf": 0.1934,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-ca-p302": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-sc-p234": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-sc-p237": {
+      "turns": 1,
+      "wer": 0.2,
+      "meaning_changed": 0.0
+    },
+    "t-se-p225": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-yk-p270": {
+      "turns": 1,
+      "wer": 0.3,
+      "meaning_changed": 1.0
+    },
+    "t-za-p347": {
+      "turns": 1,
+      "wer": 1.0,
+      "meaning_changed": 1.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 2,
+      "wer": 0.125,
+      "meaning_changed": 0.0
+    },
+    "1.0": {
+      "turns": 4,
+      "wer": 0.2632,
+      "meaning_changed": 0.25
+    },
+    "1.15": {
+      "turns": 1,
+      "wer": 0.3,
+      "meaning_changed": 1.0
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 7,
+      "wer": 0.2432,
+      "meaning_changed": 0.2857
+    }
+  },
+  "by_set": {
+    "piper__base__clean": {
+      "turns": 7,
+      "wer": 0.2432,
+      "meaning_changed": 0.2857
+    }
+  },
+  "samples": [
+    {
+      "id": "bbig-bundook_full-plan-916-s2",
+      "turn": 0,
+      "voice": "t-za-p347",
+      "written": "Nudge it down a touch",
+      "heard": "That's a damn attach",
+      "lost": [
+        [
+          "command",
+          "down"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-943-s2",
+      "turn": 0,
+      "voice": "t-yk-p270",
+      "written": "turn off the lights in Pete's office and the mudroom",
+      "heard": "Turn off the lights in Pete's office and then my dream.",
+      "lost": [
+        [
+          "room",
+          "mudroom"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

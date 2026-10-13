@@ -1,0 +1,294 @@
+{
+  "set": "kokoro__small__clean",
+  "stt": "small",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 66,
+  "words": 428,
+  "errors": 19,
+  "wer": 0.0444,
+  "exact": 0.803,
+  "vocab_words": 142,
+  "vocab_errors": 9,
+  "vocab_wer": 0.0634,
+  "vocab": {
+    "room": {
+      "n": 51,
+      "err": 4,
+      "wer": 0.0784
+    },
+    "device": {
+      "n": 40,
+      "err": 2,
+      "wer": 0.05
+    },
+    "person": {
+      "n": 9,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 4,
+      "err": 1,
+      "wer": 0.25
+    },
+    "command": {
+      "n": 38,
+      "err": 2,
+      "wer": 0.0526
+    }
+  },
+  "meaning_changed": 0.1364,
+  "meaning_changed_n": 9,
+  "meaning_by_kind": {
+    "room": 0.0606,
+    "device": 0.0303,
+    "person": 0.0,
+    "number": 0.0152,
+    "command": 0.0303
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 4.3981,
+    "p50": 4.515,
+    "p90": 5.2495,
+    "rtf": 1.4602,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nicole": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-nova": {
+      "turns": 3,
+      "wer": 0.1176,
+      "meaning_changed": 0.3333
+    },
+    "t-k-af-sarah": {
+      "turns": 6,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sky": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-eric": {
+      "turns": 6,
+      "wer": 0.1395,
+      "meaning_changed": 0.5
+    },
+    "t-k-am-liam": {
+      "turns": 4,
+      "wer": 0.0909,
+      "meaning_changed": 0.5
+    },
+    "t-k-am-onyx": {
+      "turns": 6,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-puck": {
+      "turns": 4,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 4,
+      "wer": 0.1111,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 4,
+      "wer": 0.087,
+      "meaning_changed": 0.25
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 4,
+      "wer": 0.069,
+      "meaning_changed": 0.25
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 4,
+      "wer": 0.0606,
+      "meaning_changed": 0.25
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 3,
+      "wer": 0.0625,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 9,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 14,
+      "wer": 0.0594,
+      "meaning_changed": 0.1429
+    },
+    "1.0": {
+      "turns": 38,
+      "wer": 0.0512,
+      "meaning_changed": 0.1842
+    },
+    "1.15": {
+      "turns": 14,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 66,
+      "wer": 0.0444,
+      "meaning_changed": 0.1364
+    }
+  },
+  "by_set": {
+    "kokoro__small__clean": {
+      "turns": 66,
+      "wer": 0.0444,
+      "meaning_changed": 0.1364
+    }
+  },
+  "samples": [
+    {
+      "id": "bbig-bundook_full-plan-490",
+      "turn": 0,
+      "voice": "t-k-am-eric",
+      "written": "can you turn the floodlight 3 off in the carport",
+      "heard": "Can you turn the floodlights three off in the carport?",
+      "lost": [
+        [
+          "device",
+          "floodlight 3"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-561",
+      "turn": 0,
+      "voice": "t-k-am-eric",
+      "written": "hey house, is Amber still stuck in the hallway",
+      "heard": "Hay house is amber still stuck in the hole",
+      "lost": [
+        [
+          "room",
+          "hallway"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-810",
+      "turn": 0,
+      "voice": "t-k-bf-emma-isabella",
+      "written": "um, lock up",
+      "heard": "Um, look up.",
+      "lost": [
+        [
+          "command",
+          "lock"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-914",
+      "turn": 0,
+      "voice": "t-k-af-nova",
+      "written": "Get the downlights on in the alfresco",
+      "heard": "Get the downlights on in the old fresco",
+      "lost": [
+        [
+          "room",
+          "alfresco"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1337",
+      "turn": 0,
+      "voice": "t-k-am-eric",
+      "written": "Switch Amber's office printer off.",
+      "heard": "Switch Ambers off as printer off.",
+      "lost": [
+        [
+          "room",
+          "ambers office"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1394",
+      "turn": 0,
+      "voice": "t-k-bf-isabella-alice",
+      "written": "is the rangehood still going",
+      "heard": "Is the rain should still going?",
+      "lost": [
+        [
+          "device",
+          "rangehood"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1444",
+      "turn": 0,
+      "voice": "t-k-am-liam",
+      "written": "hey, flip the floodlight 3 on",
+      "heard": "Hey flip the floodlight three-ons",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1444",
+      "turn": 1,
+      "voice": "t-k-am-liam",
+      "written": "The entry one.",
+      "heard": "The entry ones.",
+      "lost": [
+        [
+          "number",
+          "1"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1460",
+      "turn": 0,
+      "voice": "t-k-bm-daniel-fable",
+      "written": "Shut the fan off in guest ensuite",
+      "heard": "Shut the fan off in guest in suit",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

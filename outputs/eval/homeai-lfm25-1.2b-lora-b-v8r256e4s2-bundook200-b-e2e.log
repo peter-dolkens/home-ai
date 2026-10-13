@@ -1,0 +1,42 @@
+[25/200] 92.6% 14s
+[50/200] 88.5% 31s
+[75/200] 91.5% 48s
+[100/200] 91.1% 66s
+[125/200] 90.1% 83s
+[150/200] 90.5% 98s
+[175/200] 90.4% 115s
+[200/200] 89.9% 135s
+{
+  "model": "homeai-lfm25-1.2b-lora-b-v8r256e4s2",
+  "mode": "e2e",
+  "host": "lapwing",
+  "hardware": "rtx-3080",
+  "ollama": "http://127.0.0.1:11500",
+  "prompt_layout": "user_context",
+  "data": "data/generated/bigbench-b-bundook200.jsonl",
+  "examples": 200,
+  "turns": 228,
+  "pass": 0.8991228070175439,
+  "conversation_pass": 0.885,
+  "seconds_per_turn": 0.2774327153787476,
+  "calls_per_request": 2.1359649122807016,
+  "errors": 0,
+  "by_kind": {
+    "answer": {
+      "n": 124,
+      "ok": 108
+    },
+    "state": {
+      "n": 228,
+      "ok": 221
+    },
+    "reply": {
+      "n": 228,
+      "ok": 212
+    },
+    "act": {
+      "n": 104,
+      "ok": 97
+    }
+  }
+}

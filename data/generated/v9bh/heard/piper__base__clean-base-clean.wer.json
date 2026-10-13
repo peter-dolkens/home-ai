@@ -1,0 +1,161 @@
+{
+  "set": "piper__base__clean",
+  "stt": "base",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 9,
+  "words": 48,
+  "errors": 14,
+  "wer": 0.2917,
+  "exact": 0.4444,
+  "vocab_words": 15,
+  "vocab_errors": 5,
+  "vocab_wer": 0.3333,
+  "vocab": {
+    "room": {
+      "n": 4,
+      "err": 1,
+      "wer": 0.25
+    },
+    "device": {
+      "n": 5,
+      "err": 3,
+      "wer": 0.6
+    },
+    "person": {
+      "n": 2,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 1,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 3,
+      "err": 1,
+      "wer": 0.3333
+    }
+  },
+  "meaning_changed": 0.2222,
+  "meaning_changed_n": 2,
+  "meaning_by_kind": {
+    "room": 0.1111,
+    "device": 0.2222,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.1111
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 0.8372,
+    "p50": 0.7142,
+    "p90": 1.2705,
+    "rtf": 0.3528,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-ie-p288": {
+      "turns": 1,
+      "wer": 1.1667,
+      "meaning_changed": 1.0
+    },
+    "t-nz-p335": {
+      "turns": 1,
+      "wer": 0.2857,
+      "meaning_changed": 0.0
+    },
+    "t-sm-prudence": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-yk-p270": {
+      "turns": 4,
+      "wer": 0.1905,
+      "meaning_changed": 0.25
+    },
+    "t-za-p323": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-za-p347": {
+      "turns": 1,
+      "wer": 0.2,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 1,
+      "wer": 0.5,
+      "meaning_changed": 1.0
+    },
+    "1.0": {
+      "turns": 5,
+      "wer": 0.3478,
+      "meaning_changed": 0.2
+    },
+    "1.15": {
+      "turns": 3,
+      "wer": 0.1579,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 9,
+      "wer": 0.2917,
+      "meaning_changed": 0.2222
+    }
+  },
+  "by_set": {
+    "piper__base__clean": {
+      "turns": 9,
+      "wer": 0.2917,
+      "meaning_changed": 0.2222
+    }
+  },
+  "samples": [
+    {
+      "id": "bbig-bundook_projected-plan-1321",
+      "turn": 0,
+      "voice": "t-ie-p288",
+      "written": "resume the homepod in the alfresco",
+      "heard": "We're seeing the home put a nail fresco.",
+      "lost": [
+        [
+          "command",
+          "resume"
+        ],
+        [
+          "device",
+          "homepod"
+        ],
+        [
+          "room",
+          "alfresco"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-849",
+      "turn": 0,
+      "voice": "t-yk-p270",
+      "written": "how's the solar looking for tomorrow",
+      "heard": "has a soul looking for tomorrow.",
+      "lost": [
+        [
+          "device",
+          "solar"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

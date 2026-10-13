@@ -1,0 +1,467 @@
+{
+  "set": "test-v2-b",
+  "stt": "small",
+  "condition": "noisy10-biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 174,
+  "words": 1027,
+  "errors": 160,
+  "wer": 0.1558,
+  "exact": 0.6034,
+  "vocab_words": 332,
+  "vocab_errors": 26,
+  "vocab_wer": 0.0783,
+  "vocab": {
+    "room": {
+      "n": 89,
+      "err": 6,
+      "wer": 0.0674
+    },
+    "device": {
+      "n": 123,
+      "err": 9,
+      "wer": 0.0732
+    },
+    "person": {
+      "n": 14,
+      "err": 1,
+      "wer": 0.0714
+    },
+    "number": {
+      "n": 9,
+      "err": 1,
+      "wer": 0.1111
+    },
+    "command": {
+      "n": 97,
+      "err": 9,
+      "wer": 0.0928
+    }
+  },
+  "meaning_changed": 0.1322,
+  "meaning_changed_n": 23,
+  "meaning_by_kind": {
+    "room": 0.0345,
+    "device": 0.0517,
+    "person": 0.0057,
+    "number": 0.0057,
+    "command": 0.0517
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 5.0116,
+    "p50": 4.8305,
+    "p90": 5.9845,
+    "rtf": 1.8752,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "au-p326": {
+      "turns": 15,
+      "wer": 0.1829,
+      "meaning_changed": 0.2667
+    },
+    "au-p374": {
+      "turns": 14,
+      "wer": 0.1573,
+      "meaning_changed": 0.1429
+    },
+    "gb-alan": {
+      "turns": 13,
+      "wer": 0.0361,
+      "meaning_changed": 0.0769
+    },
+    "gb-alba": {
+      "turns": 15,
+      "wer": 0.1348,
+      "meaning_changed": 0.2
+    },
+    "gb-cori": {
+      "turns": 19,
+      "wer": 0.3394,
+      "meaning_changed": 0.1579
+    },
+    "gb-jenny": {
+      "turns": 13,
+      "wer": 0.125,
+      "meaning_changed": 0.0769
+    },
+    "gb-northern-m": {
+      "turns": 15,
+      "wer": 0.0833,
+      "meaning_changed": 0.0667
+    },
+    "gb-southern-f": {
+      "turns": 20,
+      "wer": 0.2231,
+      "meaning_changed": 0.15
+    },
+    "us-amy": {
+      "turns": 13,
+      "wer": 0.0282,
+      "meaning_changed": 0.0
+    },
+    "us-lessac": {
+      "turns": 18,
+      "wer": 0.29,
+      "meaning_changed": 0.2778
+    },
+    "us-ryan": {
+      "turns": 19,
+      "wer": 0.0373,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 41,
+      "wer": 0.1779,
+      "meaning_changed": 0.1951
+    },
+    "1.0": {
+      "turns": 84,
+      "wer": 0.144,
+      "meaning_changed": 0.0952
+    },
+    "1.15": {
+      "turns": 49,
+      "wer": 0.1566,
+      "meaning_changed": 0.1429
+    }
+  },
+  "by_noise": {
+    "kitchen": {
+      "turns": 71,
+      "wer": 0.1412,
+      "meaning_changed": 0.169
+    },
+    "tv": {
+      "turns": 103,
+      "wer": 0.1664,
+      "meaning_changed": 0.1068
+    }
+  },
+  "by_set": {
+    "test-v2-b": {
+      "turns": 174,
+      "wer": 0.1558,
+      "meaning_changed": 0.1322
+    }
+  },
+  "samples": [
+    {
+      "id": "1-2484",
+      "turn": 0,
+      "voice": "gb-southern-f",
+      "written": "is Isla in the lounge",
+      "heard": "Thanks for watching.",
+      "lost": [
+        [
+          "person",
+          "isla"
+        ],
+        [
+          "room",
+          "lounge"
+        ]
+      ]
+    },
+    {
+      "id": "1-2758",
+      "turn": 0,
+      "voice": "gb-southern-f",
+      "written": "Turn on the towel rail in the guest ensuite.",
+      "heard": "Turn on the tower rail in the guest room seat.",
+      "lost": [
+        [
+          "device",
+          "towel rail"
+        ],
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "1-78",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "can you disarm the alarm",
+      "heard": "Can you decide to be alone?",
+      "lost": [
+        [
+          "command",
+          "disarm"
+        ],
+        [
+          "device",
+          "alarm"
+        ]
+      ]
+    },
+    {
+      "id": "1-1087",
+      "turn": 0,
+      "voice": "us-lessac",
+      "written": "Is the fan on in the guest ensuite?",
+      "heard": "Is the fan on and the guest in soon?",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "1-1172",
+      "turn": 0,
+      "voice": "us-lessac",
+      "written": "Start the fan in Amber's office.",
+      "heard": "Dr. Fan and Amber's Office",
+      "lost": [
+        [
+          "command",
+          "start"
+        ]
+      ]
+    },
+    {
+      "id": "1-128",
+      "turn": 0,
+      "voice": "gb-southern-f",
+      "written": "Play the The Rest Is History podcast.",
+      "heard": "Labour the Rest is History podcast.",
+      "lost": [
+        [
+          "command",
+          "play"
+        ]
+      ]
+    },
+    {
+      "id": "1-1327",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "how's the house looking? We're not home",
+      "heard": "That's the house looking. We love them.",
+      "lost": [
+        [
+          "device",
+          "home"
+        ]
+      ]
+    },
+    {
+      "id": "1-1458",
+      "turn": 0,
+      "voice": "gb-alan",
+      "written": "Turn the workshop lights on.",
+      "heard": "Turn the workshop lights off.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "1-1532",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "quick question, we're away for the day, can you check on the house for me",
+      "heard": "Quick question time for the day, going to check on these numbers.",
+      "lost": [
+        [
+          "device",
+          "house"
+        ]
+      ]
+    },
+    {
+      "id": "1-1539",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "Put on jazz in the master bedroom.",
+      "heard": "Photo Jazz in the Master Bedroom.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "1-1845",
+      "turn": 0,
+      "voice": "au-p374",
+      "written": "hey, what's our power situation",
+      "heard": "Hey, what's up? How's the situation?",
+      "lost": [
+        [
+          "device",
+          "power"
+        ]
+      ]
+    },
+    {
+      "id": "1-1914",
+      "turn": 0,
+      "voice": "au-p374",
+      "written": "Are the doors shut?",
+      "heard": "Other dust shots.",
+      "lost": [
+        [
+          "command",
+          "shut"
+        ]
+      ]
+    },
+    {
+      "id": "1-1975",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "what's today",
+      "heard": "What's up?",
+      "lost": [
+        [
+          "device",
+          "today"
+        ]
+      ]
+    },
+    {
+      "id": "1-222",
+      "turn": 0,
+      "voice": "us-lessac",
+      "written": "fan on",
+      "heard": "Stand on! Where were you?",
+      "lost": [
+        [
+          "device",
+          "fan"
+        ]
+      ]
+    },
+    {
+      "id": "1-222",
+      "turn": 1,
+      "voice": "us-lessac",
+      "written": "Lounge.",
+      "heard": "That's the way to look ahead.",
+      "lost": [
+        [
+          "room",
+          "lounge"
+        ]
+      ]
+    },
+    {
+      "id": "1-231",
+      "turn": 0,
+      "voice": "gb-northern-m",
+      "written": "hey house, how charged is BYD Shark",
+      "heard": "Hey House, how charged it's BYD Charged?",
+      "lost": [
+        [
+          "device",
+          "byd shark"
+        ]
+      ]
+    },
+    {
+      "id": "1-2638",
+      "turn": 0,
+      "voice": "gb-jenny",
+      "written": "Is BYD Shark plugged in?",
+      "heard": "It's BYD Shock Plotin.",
+      "lost": [
+        [
+          "device",
+          "byd shark"
+        ]
+      ]
+    },
+    {
+      "id": "1-298",
+      "turn": 0,
+      "voice": "us-lessac",
+      "written": "Play Miles Davis.",
+      "heard": "Lay my old status.",
+      "lost": [
+        [
+          "command",
+          "play"
+        ]
+      ]
+    },
+    {
+      "id": "1-457",
+      "turn": 0,
+      "voice": "gb-alba",
+      "written": "Tv on.",
+      "heard": "TV Vaughn.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "1-457",
+      "turn": 1,
+      "voice": "gb-alba",
+      "written": "The lounge one.",
+      "heard": "The lunch one.",
+      "lost": [
+        [
+          "room",
+          "lounge"
+        ]
+      ]
+    },
+    {
+      "id": "1-493",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "Aircon in the dining hall to 18 please.",
+      "heard": "Egging in the dining hall to eating, please.",
+      "lost": [
+        [
+          "number",
+          "18"
+        ]
+      ]
+    },
+    {
+      "id": "1-52",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "Open the garage door.",
+      "heard": "That's from the garage door.",
+      "lost": [
+        [
+          "command",
+          "open"
+        ]
+      ]
+    },
+    {
+      "id": "1-828",
+      "turn": 0,
+      "voice": "gb-alba",
+      "written": "um, will the battery last till morning",
+      "heard": "I'm going to the bathroom last morning.",
+      "lost": [
+        [
+          "room",
+          "battery"
+        ]
+      ]
+    }
+  ]
+}

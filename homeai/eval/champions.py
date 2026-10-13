@@ -131,7 +131,7 @@ def write_csv(models, rows, path="outputs/results.csv"):
                     continue
                 kinds = rep.get("by_kind", {})
                 kp = {k: round(v["ok"] / v["n"], 4) for k, v in kinds.items() if v.get("n")}
-                w.writerow({"model": r["model"], "method": meta["method"], "data": meta["data"], "train_examples": meta["train_examples"],
+                w.writerow({"model": r["model"], "method": meta.get("method"), "data": meta.get("data"), "train_examples": meta.get("train_examples"),  # untuned baselines have no count
                             **st, "test_set": s, "eval_dir": name, "examples": rep["examples"], "turns": rep["turns"],
                             "pass": round(rep["pass"], 4), **kp, "eval_s_per_turn": rep.get("seconds_per_turn") and round(rep["seconds_per_turn"], 3),
                             "bench_s_per_turn": r["s_per_turn"] and round(r["s_per_turn"], 3),
@@ -140,6 +140,23 @@ def write_csv(models, rows, path="outputs/results.csv"):
                             "outcome_score": r["outcome"] and round(r["outcome"], 4),
                             "champion": ",".join(k for k in ("best", "best_fast", "best_outcome") if champs.get(k) == r["model"]),
                             "updated": time.strftime("%Y-%m-%d %H:%M", time.localtime(os.path.getmtime(f"{EVAL}/{name}/report.json")))})
+
+
+def design_keep():
+    """Models the per-design and per-tier champions (homeai.eval.design_champions) and the fast/slow pairs rely on:
+    never prunable (a prune on 28 Sep removed the 8-9B tier champion homeai-9b-v2)."""
+    d = load("outputs/DESIGN_CHAMPIONS.json") or {}
+    keep = set()
+    for t in (d.get("tiers") or {}).values():
+        keep |= {t[k]["model"] for k in ("accuracy_champion", "speed_champion") if t.get(k)}
+    for k in ("large_house",):
+        if (d.get("A") or {}).get(k):
+            keep.add(d["A"][k]["model"])
+    if (d.get("B") or {}).get("best"):
+        keep.add(d["B"]["best"]["model"])
+    for pair in (d.get("E") or {}).get("all") or {}:
+        keep |= set(pair.split("__"))
+    return keep
 
 
 def main():
@@ -167,7 +184,7 @@ def main():
     outc = max([r for r in rows if r["config"] and not r.get("retired") and r["outcome"] is not None], key=lambda r: r["outcome"], default=None)
     if a.prunable:
         newest = [m for m, v in models.items() if not m.startswith("_") and v.get("config")][-1]
-        keep = {x["model"] for x in (best, fast, outc) if x} | {newest}
+        keep = {x["model"] for x in (best, fast, outc) if x} | {newest} | design_keep()
         for r in rows:  # registry order = oldest first
             if r["config"] and r["model"] not in keep and r["quality"] is not None:
                 print(r["model"], r["config"])

@@ -1,0 +1,93 @@
+{
+  "model": "homeai-4b-lora-v9",
+  "mode": "e2e",
+  "host": "lapwing",
+  "hardware": "rtx-3080",
+  "host_note": "lapwing ollama 0.21.2, client on lapwing (accuracy only)",
+  "ollama": "http://127.0.0.1:11500",
+  "lockstep": 8,
+  "data": "data/generated/heard/wild2-tiny-clean.jsonl",
+  "examples": 240,
+  "turns": 344,
+  "pass": 0.7674418604651163,
+  "conversation_pass": 0.6791666666666667,
+  "seconds_per_turn": 0.7686873200548244,
+  "calls_per_request": 2.0843023255813953,
+  "errors": 0,
+  "by_kind": {
+    "act": {
+      "n": 165,
+      "ok": 131
+    },
+    "state": {
+      "n": 344,
+      "ok": 288
+    },
+    "reply": {
+      "n": 344,
+      "ok": 314
+    },
+    "answer": {
+      "n": 179,
+      "ok": 133.0
+    }
+  },
+  "by_category": {
+    "wild_media": {
+      "n": 46,
+      "ok": 33
+    },
+    "wild_control": {
+      "n": 48,
+      "ok": 38
+    },
+    "wild_status": {
+      "n": 38,
+      "ok": 28
+    },
+    "wild_energy": {
+      "n": 25,
+      "ok": 22
+    },
+    "wild_water": {
+      "n": 15,
+      "ok": 14
+    },
+    "wild_confirm": {
+      "n": 26,
+      "ok": 22.0
+    },
+    "wild_clarify": {
+      "n": 28,
+      "ok": 20
+    },
+    "wild_missing": {
+      "n": 11,
+      "ok": 8
+    },
+    "wild_presence": {
+      "n": 25,
+      "ok": 16
+    },
+    "wild_appliance": {
+      "n": 18,
+      "ok": 14
+    },
+    "wild_routine": {
+      "n": 26,
+      "ok": 20
+    },
+    "wild_smalltalk": {
+      "n": 11,
+      "ok": 9
+    },
+    "wild_mixed": {
+      "n": 19,
+      "ok": 13
+    },
+    "wild_vehicle": {
+      "n": 8,
+      "ok": 7
+    }
+  }
+}

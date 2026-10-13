@@ -1,0 +1,209 @@
+{
+  "set": "kokoro__small__farfield-biased",
+  "stt": "small",
+  "condition": "farfield-biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 22,
+  "words": 132,
+  "errors": 11,
+  "wer": 0.0833,
+  "exact": 0.7273,
+  "vocab_words": 56,
+  "vocab_errors": 4,
+  "vocab_wer": 0.0714,
+  "vocab": {
+    "room": {
+      "n": 20,
+      "err": 2,
+      "wer": 0.1
+    },
+    "device": {
+      "n": 13,
+      "err": 0,
+      "wer": 0.0
+    },
+    "person": {
+      "n": 2,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 2,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 19,
+      "err": 2,
+      "wer": 0.1053
+    }
+  },
+  "meaning_changed": 0.1818,
+  "meaning_changed_n": 4,
+  "meaning_by_kind": {
+    "room": 0.0909,
+    "device": 0.0,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0909
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 4.089,
+    "p50": 4.1649,
+    "p90": 4.5987,
+    "rtf": 1.3519,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nova": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sarah": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sky": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-eric": {
+      "turns": 2,
+      "wer": 0.0833,
+      "meaning_changed": 0.5
+    },
+    "t-k-am-onyx": {
+      "turns": 1,
+      "wer": 0.125,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-puck": {
+      "turns": 2,
+      "wer": 0.1111,
+      "meaning_changed": 0.5
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 3,
+      "wer": 0.2143,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 2,
+      "wer": 0.1176,
+      "meaning_changed": 0.5
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 4,
+      "wer": 0.1111,
+      "meaning_changed": 0.25
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 5,
+      "wer": 0.125,
+      "meaning_changed": 0.0
+    },
+    "1.0": {
+      "turns": 11,
+      "wer": 0.0435,
+      "meaning_changed": 0.1818
+    },
+    "1.15": {
+      "turns": 6,
+      "wer": 0.1282,
+      "meaning_changed": 0.3333
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 22,
+      "wer": 0.0833,
+      "meaning_changed": 0.1818
+    }
+  },
+  "by_set": {
+    "kokoro__small__farfield-biased": {
+      "turns": 22,
+      "wer": 0.0833,
+      "meaning_changed": 0.1818
+    }
+  },
+  "samples": [
+    {
+      "id": "bbig-bundook_full-plan-1120",
+      "turn": 0,
+      "voice": "t-k-am-eric",
+      "written": "Shut the floodlight 3 off in alfresco",
+      "heard": "Shed the Floodlight 3 off in Alfresco.",
+      "lost": [
+        [
+          "command",
+          "shut"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-48",
+      "turn": 0,
+      "voice": "t-k-bm-george-lewis",
+      "written": "ok shut the lights off in master ensuite",
+      "heard": "OK, shut the lights off in master and suit.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-922",
+      "turn": 0,
+      "voice": "t-k-bm-lewis-fable",
+      "written": "um, lock the whole house up please",
+      "heard": "I'm about the whole house up, please.",
+      "lost": [
+        [
+          "command",
+          "lock"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1301",
+      "turn": 0,
+      "voice": "t-k-am-puck",
+      "written": "Did Amber go through to the master ensuite?",
+      "heard": "Did Amber go through to the master and sued?",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

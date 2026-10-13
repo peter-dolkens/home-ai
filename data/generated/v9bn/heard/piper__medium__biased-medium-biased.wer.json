@@ -1,0 +1,203 @@
+{
+  "set": "piper__medium__biased",
+  "stt": "medium",
+  "condition": "biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 55,
+  "words": 378,
+  "errors": 14,
+  "wer": 0.037,
+  "exact": 0.8182,
+  "vocab_words": 114,
+  "vocab_errors": 4,
+  "vocab_wer": 0.0351,
+  "vocab": {
+    "room": {
+      "n": 37,
+      "err": 0,
+      "wer": 0.0
+    },
+    "device": {
+      "n": 47,
+      "err": 4,
+      "wer": 0.0851
+    },
+    "person": {
+      "n": 2,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 3,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 25,
+      "err": 0,
+      "wer": 0.0
+    }
+  },
+  "meaning_changed": 0.0364,
+  "meaning_changed_n": 2,
+  "meaning_by_kind": {
+    "room": 0.0,
+    "device": 0.0364,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 9.4603,
+    "p50": 9.9712,
+    "p90": 10.9234,
+    "rtf": 3.6437,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-ca-p302": {
+      "turns": 3,
+      "wer": 0.0385,
+      "meaning_changed": 0.0
+    },
+    "t-ie-p245": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-ie-p288": {
+      "turns": 5,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-ld-p243": {
+      "turns": 6,
+      "wer": 0.0811,
+      "meaning_changed": 0.0
+    },
+    "t-ni-p304": {
+      "turns": 2,
+      "wer": 0.0556,
+      "meaning_changed": 0.0
+    },
+    "t-nz-p335": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-sc-p234": {
+      "turns": 2,
+      "wer": 0.1111,
+      "meaning_changed": 0.0
+    },
+    "t-sc-p237": {
+      "turns": 5,
+      "wer": 0.0513,
+      "meaning_changed": 0.2
+    },
+    "t-se-p225": {
+      "turns": 3,
+      "wer": 0.0556,
+      "meaning_changed": 0.0
+    },
+    "t-sm-prudence": {
+      "turns": 5,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-sm-spike": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-wa-p253": {
+      "turns": 5,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-yk-p267": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-yk-p270": {
+      "turns": 5,
+      "wer": 0.0345,
+      "meaning_changed": 0.2
+    },
+    "t-za-p323": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-za-p347": {
+      "turns": 4,
+      "wer": 0.1905,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 11,
+      "wer": 0.0128,
+      "meaning_changed": 0.0
+    },
+    "1.0": {
+      "turns": 28,
+      "wer": 0.0552,
+      "meaning_changed": 0.0357
+    },
+    "1.15": {
+      "turns": 16,
+      "wer": 0.0252,
+      "meaning_changed": 0.0625
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 55,
+      "wer": 0.037,
+      "meaning_changed": 0.0364
+    }
+  },
+  "by_set": {
+    "piper__medium__biased": {
+      "turns": 55,
+      "wer": 0.037,
+      "meaning_changed": 0.0364
+    }
+  },
+  "samples": [
+    {
+      "id": "b300-1003",
+      "turn": 0,
+      "voice": "t-yk-p270",
+      "written": "ok blinds up",
+      "heard": "Okay, blends up.",
+      "lost": [
+        [
+          "device",
+          "blinds"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2944",
+      "turn": 0,
+      "voice": "t-sc-p237",
+      "written": "Turn on the vegie beds irrigation for 20 minutes.",
+      "heard": "Turn on the VeggieBeds irrigation for 20 minutes.",
+      "lost": [
+        [
+          "device",
+          "vegie beds irrigation"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

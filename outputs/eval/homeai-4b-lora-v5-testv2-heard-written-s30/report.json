@@ -1,0 +1,112 @@
+{
+  "model": "homeai-4b-lora-v5",
+  "data": "data/generated/test-v2.jsonl",
+  "mode": "e2e",
+  "sample": 30,
+  "host": "magpie",
+  "hardware": "apple-m2",
+  "host_note": "standalone ollama 0.21.2 (Metal) on magpie, e2e client elsewhere",
+  "ollama": "http://10.24.10.150:11600",
+  "examples": 30,
+  "turns": 35,
+  "pass": 0.9,
+  "conversation_pass": 0.8666666666666667,
+  "seconds_per_turn": 22.09820631724685,
+  "calls_per_request": 1.9142857142857144,
+  "by_kind": {
+    "act": {
+      "n": 13,
+      "ok": 12
+    },
+    "state": {
+      "n": 35,
+      "ok": 32
+    },
+    "reply": {
+      "n": 35,
+      "ok": 33
+    },
+    "answer": {
+      "n": 22,
+      "ok": 19.5
+    }
+  },
+  "by_category": {
+    "control_climate": {
+      "n": 1,
+      "ok": 1
+    },
+    "control_named": {
+      "n": 1,
+      "ok": 1
+    },
+    "control_area": {
+      "n": 2,
+      "ok": 2
+    },
+    "energy_appliance": {
+      "n": 1,
+      "ok": 1
+    },
+    "energy_night": {
+      "n": 2,
+      "ok": 2
+    },
+    "check_house": {
+      "n": 4,
+      "ok": 4
+    },
+    "energy_status": {
+      "n": 2,
+      "ok": 2
+    },
+    "missing": {
+      "n": 2,
+      "ok": 2
+    },
+    "status_aggregate": {
+      "n": 1,
+      "ok": 1
+    },
+    "leaving": {
+      "n": 1,
+      "ok": 0
+    },
+    "control_all_lights": {
+      "n": 2,
+      "ok": 2
+    },
+    "media_volume": {
+      "n": 1,
+      "ok": 1
+    },
+    "who_home": {
+      "n": 3,
+      "ok": 3
+    },
+    "control_compound": {
+      "n": 1,
+      "ok": 1
+    },
+    "presence_where": {
+      "n": 3,
+      "ok": 3
+    },
+    "away_motion": {
+      "n": 1,
+      "ok": 0
+    },
+    "clarify": {
+      "n": 4,
+      "ok": 3
+    },
+    "weather": {
+      "n": 1,
+      "ok": 1
+    },
+    "confirm_sensitive": {
+      "n": 2,
+      "ok": 1.5
+    }
+  }
+}

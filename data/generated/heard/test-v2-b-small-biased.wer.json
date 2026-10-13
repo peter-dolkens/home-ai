@@ -1,0 +1,281 @@
+{
+  "set": "test-v2-b",
+  "stt": "small",
+  "condition": "biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 174,
+  "words": 1027,
+  "errors": 53,
+  "wer": 0.0516,
+  "exact": 0.8276,
+  "vocab_words": 332,
+  "vocab_errors": 12,
+  "vocab_wer": 0.0361,
+  "vocab": {
+    "room": {
+      "n": 89,
+      "err": 4,
+      "wer": 0.0449
+    },
+    "device": {
+      "n": 123,
+      "err": 5,
+      "wer": 0.0407
+    },
+    "person": {
+      "n": 14,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 9,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 97,
+      "err": 3,
+      "wer": 0.0309
+    }
+  },
+  "meaning_changed": 0.0575,
+  "meaning_changed_n": 10,
+  "meaning_by_kind": {
+    "room": 0.0172,
+    "device": 0.023,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0172
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 7.1931,
+    "p50": 7.1086,
+    "p90": 8.6473,
+    "rtf": 2.6915,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "au-p326": {
+      "turns": 15,
+      "wer": 0.0976,
+      "meaning_changed": 0.0
+    },
+    "au-p374": {
+      "turns": 14,
+      "wer": 0.0337,
+      "meaning_changed": 0.0714
+    },
+    "gb-alan": {
+      "turns": 13,
+      "wer": 0.012,
+      "meaning_changed": 0.0
+    },
+    "gb-alba": {
+      "turns": 15,
+      "wer": 0.0562,
+      "meaning_changed": 0.0667
+    },
+    "gb-cori": {
+      "turns": 19,
+      "wer": 0.0734,
+      "meaning_changed": 0.0526
+    },
+    "gb-jenny": {
+      "turns": 13,
+      "wer": 0.0536,
+      "meaning_changed": 0.0769
+    },
+    "gb-northern-m": {
+      "turns": 15,
+      "wer": 0.0238,
+      "meaning_changed": 0.0
+    },
+    "gb-southern-f": {
+      "turns": 20,
+      "wer": 0.1077,
+      "meaning_changed": 0.15
+    },
+    "us-amy": {
+      "turns": 13,
+      "wer": 0.0141,
+      "meaning_changed": 0.0
+    },
+    "us-lessac": {
+      "turns": 18,
+      "wer": 0.07,
+      "meaning_changed": 0.1667
+    },
+    "us-ryan": {
+      "turns": 19,
+      "wer": 0.0075,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 41,
+      "wer": 0.0988,
+      "meaning_changed": 0.1707
+    },
+    "1.0": {
+      "turns": 84,
+      "wer": 0.0385,
+      "meaning_changed": 0.0357
+    },
+    "1.15": {
+      "turns": 49,
+      "wer": 0.032,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 174,
+      "wer": 0.0516,
+      "meaning_changed": 0.0575
+    }
+  },
+  "by_set": {
+    "test-v2-b": {
+      "turns": 174,
+      "wer": 0.0516,
+      "meaning_changed": 0.0575
+    }
+  },
+  "samples": [
+    {
+      "id": "1-1087",
+      "turn": 0,
+      "voice": "us-lessac",
+      "written": "Is the fan on in the guest ensuite?",
+      "heard": "Is the fan on and the guest in suit?",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "1-1172",
+      "turn": 0,
+      "voice": "us-lessac",
+      "written": "Start the fan in Amber's office.",
+      "heard": "Dart the Fan and Amber's Office.",
+      "lost": [
+        [
+          "command",
+          "start"
+        ]
+      ]
+    },
+    {
+      "id": "1-1528",
+      "turn": 1,
+      "voice": "gb-southern-f",
+      "written": "Yeah open it.",
+      "heard": "Yes, Openith.",
+      "lost": [
+        [
+          "command",
+          "open"
+        ]
+      ]
+    },
+    {
+      "id": "1-1532",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "quick question, we're away for the day, can you check on the house for me",
+      "heard": "Quick question time for the day. Can you check on them?",
+      "lost": [
+        [
+          "device",
+          "house"
+        ]
+      ]
+    },
+    {
+      "id": "1-1845",
+      "turn": 0,
+      "voice": "au-p374",
+      "written": "hey, what's our power situation",
+      "heard": "Hey, what's up, how's the situation?",
+      "lost": [
+        [
+          "device",
+          "power"
+        ]
+      ]
+    },
+    {
+      "id": "1-222",
+      "turn": 0,
+      "voice": "us-lessac",
+      "written": "fan on",
+      "heard": "Turn On.",
+      "lost": [
+        [
+          "device",
+          "fan"
+        ]
+      ]
+    },
+    {
+      "id": "1-2638",
+      "turn": 0,
+      "voice": "gb-jenny",
+      "written": "Is BYD Shark plugged in?",
+      "heard": "Isbyydshark plugged in.",
+      "lost": [
+        [
+          "device",
+          "byd shark"
+        ]
+      ]
+    },
+    {
+      "id": "1-2758",
+      "turn": 0,
+      "voice": "gb-southern-f",
+      "written": "Turn on the towel rail in the guest ensuite.",
+      "heard": "Turn on the Towel Rail in the guest-insuit.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "1-457",
+      "turn": 0,
+      "voice": "gb-alba",
+      "written": "Tv on.",
+      "heard": "TV Bone.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "1-989",
+      "turn": 0,
+      "voice": "gb-southern-f",
+      "written": "Turn off the lights in the master bedroom and the guest ensuite.",
+      "heard": "Turn off the lights in the Master Bedroom and the guest in suit.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    }
+  ]
+}

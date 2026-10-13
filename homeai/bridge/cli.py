@@ -20,6 +20,7 @@ import random
 import sys
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
+from .. import prompt_layout
 from ..house.generator import make_house
 from ..house.schema import Speaker
 from ..house.snapshot import system_prompt
@@ -86,17 +87,31 @@ def speaker_from(a, house):
     return Speaker(name=a.speaker, area=None, channel="app")
 
 
+def layout_of(a) -> str:
+    """--prompt-layout, else the bridge config's "prompt_layout", else the model's (homeai/prompt_layout.py)."""
+    cfg = json.load(open(a.config)) if a.config and os.path.exists(a.config) else {}
+    return prompt_layout.for_model(a.model, a.prompt_layout or cfg.get("prompt_layout"))
+
+
+def shown(system: str, layout: str) -> str:
+    """A classic system prompt as the model gets it; user_context and clock_in_user also show the next user turn's
+    context / clock line."""
+    m = prompt_layout.render([{"role": "system", "content": system}, {"role": "user", "content": "<utterance>"}], layout)
+    return m[0]["content"] + (f"\n\n--- user turn ---\n{m[1]['content']}" if layout in ("user_context", "clock_in_user") else "")
+
+
 def cmd_prompt(a):
     provider, _, house = make_provider_and_executor(a)
     h = provider()
-    print(for_toolset(a.toolset)[2](h, speaker_from(a, house)))
+    print(shown(for_toolset(a.toolset)[2](h, speaker_from(a, house)), layout_of(a)))
     print(f"\n[{len(h.entities)} entities, {len(h.areas)} areas, {len(h.people)} people]")
 
 
 def cmd_chat(a):
     provider, executor, house = make_provider_and_executor(a)
     sp = speaker_from(a, house)
-    agent = Agent(OllamaClient(a.ollama, a.model, a.num_ctx, a.temperature, think={"on": True, "off": False, "default": None}[a.think]), provider, executor, verbose=not a.quiet, toolset=a.toolset)
+    agent = Agent(OllamaClient(a.ollama, a.model, a.num_ctx, a.temperature, think={"on": True, "off": False, "default": None}[a.think]), provider, executor, verbose=not a.quiet, toolset=a.toolset,
+                  layout=layout_of(a))
     print(f"model={a.model}  speaker={sp.name} area={sp.area} channel={sp.channel}   (type /reset, /prompt, /state, or /quit)")
     while True:
         try:
@@ -111,7 +126,7 @@ def cmd_chat(a):
             agent.reset()
             continue
         if text == "/prompt":
-            print(for_toolset(a.toolset)[2](provider(), sp))
+            print(shown(for_toolset(a.toolset)[2](provider(), sp), agent.layout))
             continue
         if text == "/state":
             from ..tools import get_state_text
@@ -126,6 +141,7 @@ def cmd_chat(a):
 def cmd_serve(a):
     provider, executor, house = make_provider_and_executor(a)
     llm = OllamaClient(a.ollama, a.model, a.num_ctx, a.temperature, think={"on": True, "off": False, "default": None}[a.think])
+    layout = layout_of(a)
     sessions: dict[str, Agent] = {}
 
     class H(BaseHTTPRequestHandler):
@@ -141,7 +157,7 @@ def cmd_serve(a):
             n = int(self.headers.get("Content-Length", 0))
             body = json.loads(self.rfile.read(n) or b"{}")
             sid = body.get("session", "default")
-            agent = sessions.setdefault(sid, Agent(llm, provider, executor, toolset=a.toolset))
+            agent = sessions.setdefault(sid, Agent(llm, provider, executor, toolset=a.toolset, layout=layout))
             if body.get("reset"):
                 agent.reset()
             sp = Speaker(name=body.get("speaker"), area=body.get("area"), channel="satellite" if body.get("area") else "app")
@@ -186,6 +202,7 @@ def main():
         p.add_argument("--quiet", action="store_true")
         p.add_argument("--toolset", choices=["a", "b"], default=os.environ.get("HOMEAI_TOOLSET", "a"), help="b: rooms-only prompt + find_devices (homeai/tools_b.py)")
         p.add_argument("--port", type=int, default=8090)
+        prompt_layout.add_arg(p)
     a = ap.parse_args()
     a.fn(a)
 

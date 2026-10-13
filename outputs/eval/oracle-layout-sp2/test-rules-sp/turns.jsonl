@@ -1,0 +1,300 @@
+{"id": "81-15", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"fan.dining_hall_fan": ["off", {"percentage": 100}]}, "calls": 2, "seconds": 0.0, "text": "Dining hall fan off."}
+{"id": "81-27", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"fan.study_fan": ["on", {}]}, "calls": 2, "seconds": 0.0, "text": "Study fan on."}
+{"id": "81-29", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.office_speaker": ["off", {"ma": true, "media_artist": "Angus & Julia Stone", "media_content_type": "playlist", "shuffle": false, "volume_pct": 15}]}, "calls": 2, "seconds": 0.0, "text": "Done."}
+{"id": "81-38", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"fan.study_fan": ["on", {}]}, "calls": 2, "seconds": 0.0, "text": "Fan's on."}
+{"id": "81-46", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.living_room_tv": ["paused", {"media_title": "Planet Earth", "media_content_type": "tvshow", "volume_pct": 40}]}, "calls": 2, "seconds": 0.0, "text": "Paused."}
+{"id": "81-55", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"fan.dining_hall_fan": ["off", {"percentage": 100}]}, "calls": 2, "seconds": 0.001, "text": "Done."}
+{"id": "81-61", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.kitchen_speaker": ["off", {"media_artist": "Seal", "media_content_type": "music", "shuffle": true, "volume_pct": 30}]}, "calls": 2, "seconds": 0.0, "text": "Speaker is off."}
+{"id": "81-62", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Paused."}
+{"id": "81-64", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Paused."}
+{"id": "81-73", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Done."}
+{"id": "81-108", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Done."}
+{"id": "81-113", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"fan.office_pete_fan": ["on", {}]}, "calls": 2, "seconds": 0.0, "text": "Fan's on."}
+{"id": "81-149", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Done."}
+{"id": "81-150", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Done."}
+{"id": "81-161", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"fan.dining_hall_fan": ["on", {}]}, "calls": 2, "seconds": 0.001, "text": "Fan's on."}
+{"id": "81-168", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"fan.bathroom_exhaust_fan": ["on", {}]}, "calls": 2, "seconds": 0.0, "text": "Done."}
+{"id": "81-184", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.001, "text": "Done."}
+{"id": "81-197", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Paused."}
+{"id": "81-205", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.office_pete_homepod": ["off", {"ma": true, "volume_pct": 30}]}, "calls": 2, "seconds": 0.001, "text": "Homepod is off."}
+{"id": "81-211", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Paused."}
+{"id": "81-219", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"fan.guest_room_fan": ["on", {}]}, "calls": 2, "seconds": 0.0, "text": "Fan's on."}
+{"id": "81-234", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Paused."}
+{"id": "81-245", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Done."}
+{"id": "81-251", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Fan's off."}
+{"id": "81-254", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Done."}
+{"id": "81-280", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.family_room_tv": ["off", {"media_content_type": "tvshow", "volume_pct": 25}]}, "calls": 2, "seconds": 0.0, "text": "Tv is off."}
+{"id": "81-296", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.family_room_tv": ["off", {"volume_pct": 40}]}, "calls": 2, "seconds": 0.0, "text": "Done."}
+{"id": "81-310", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.family_room_tv": ["off", {"media_content_type": "tvshow", "volume_pct": 40}]}, "calls": 2, "seconds": 0.0, "text": "Done."}
+{"id": "81-312", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"fan.master_bedroom_fan": ["off", {"percentage": 66}]}, "calls": 2, "seconds": 0.0, "text": "Master bedroom fan off."}
+{"id": "81-319", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.001, "text": "Done."}
+{"id": "81-320", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.001, "text": "Done."}
+{"id": "81-323", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Done."}
+{"id": "81-324", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.liam_room_speaker": ["paused", {"ma": true, "media_title": "Cruel Summer", "media_artist": "Taylor Swift", "media_content_type": "playlist", "shuffle": false, "volume_pct": 25}]}, "calls": 2, "seconds": 0.0, "text": "Paused."}
+{"id": "81-326", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.001, "text": "Done."}
+{"id": "81-330", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Paused."}
+{"id": "81-334", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Done."}
+{"id": "81-335", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.master_bed_homepod": ["off", {"ma": true, "media_artist": "Dua Lipa", "media_content_type": "playlist", "shuffle": false, "volume_pct": 15}]}, "calls": 2, "seconds": 0.0, "text": "Homepod is off."}
+{"id": "81-337", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Pete's office fan off."}
+{"id": "81-346", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Done."}
+{"id": "81-377", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Paused."}
+{"id": "81-413", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.kitchen_speaker": ["paused", {"media_title": "So What", "media_artist": "Miles Davis", "media_content_type": "playlist", "shuffle": true, "volume_pct": 50}]}, "calls": 2, "seconds": 0.0, "text": "Paused."}
+{"id": "81-420", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"fan.office_pete_fan": ["on", {}]}, "calls": 2, "seconds": 0.001, "text": "Pete's office fan on."}
+{"id": "81-422", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"fan.laundry_toilet_exhaust": ["on", {}]}, "calls": 2, "seconds": 0.0, "text": "Done."}
+{"id": "81-444", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"fan.office_fan": ["on", {}]}, "calls": 2, "seconds": 0.0, "text": "Done."}
+{"id": "81-467", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"fan.family_room_fan": ["on", {}]}, "calls": 2, "seconds": 0.0, "text": "Fan's on."}
+{"id": "81-468", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.living_room_tv": ["paused", {"media_title": "The Great British Bake Off", "media_content_type": "tvshow", "volume_pct": 50}]}, "calls": 2, "seconds": 0.0, "text": "Done."}
+{"id": "81-482", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.elena_room_speaker": ["paused", {"ma": true, "media_title": "The Less I Know the Better", "media_artist": "Tame Impala", "media_content_type": "music", "shuffle": false, "volume_pct": 30}]}, "calls": 2, "seconds": 0.0, "text": "Done."}
+{"id": "81-498", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.dining_hall_tv": ["off", {"volume_pct": 40}]}, "calls": 2, "seconds": 0.0, "text": "Tv is off."}
+{"id": "81-499", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.master_bedroom_speaker": ["off", {"media_artist": "Miles Davis", "media_content_type": "music", "shuffle": false, "volume_pct": 20}]}, "calls": 2, "seconds": 0.0, "text": "Done."}
+{"id": "81-523", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Done."}
+{"id": "82-4", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "Which one, the bedside lamp or the other one?"}
+{"id": "82-4", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.grace_room_bedside_lamp": ["on", {"brightness_pct": 100}]}, "calls": 3, "seconds": 0.001, "text": "Bedside lamp is on."}
+{"id": "82-7", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "Which one, the bedside lamp or the other one?"}
+{"id": "82-7", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 3, "seconds": 0.0, "text": "Done, lamp off."}
+{"id": "82-27", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "There are two in here, the bedside lamp and the other one. Which one?"}
+{"id": "82-27", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.guest_room_bedside_lamp": ["off", {"brightness_pct": 50}]}, "calls": 3, "seconds": 0.0, "text": "Bedside lamp is off."}
+{"id": "82-28", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "The bedside lamp or the other one?"}
+{"id": "82-28", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.spare_room_lamp": ["off", {"brightness_pct": 100}]}, "calls": 3, "seconds": 0.0, "text": "Done, lamp off."}
+{"id": "82-29", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "There are two in here, the bedside lamp and the other one. Which one?"}
+{"id": "82-29", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 3, "seconds": 0.0, "text": "Lamp is off."}
+{"id": "82-42", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "Which one, the bedside lamp or the other one?"}
+{"id": "82-42", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.master_bedroom_bedside_lamp": ["off", {"brightness_pct": 80}]}, "calls": 3, "seconds": 0.0, "text": "Bedside lamp is off."}
+{"id": "82-43", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "The bedside lamp or the other one?"}
+{"id": "82-43", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.bedroom_bedside_lamp": ["off", {"brightness_pct": 60}]}, "calls": 3, "seconds": 0.001, "text": "Okay, bedside lamp off."}
+{"id": "82-51", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "There are two in here, the bedside lamp and the other one. Which one?"}
+{"id": "82-51", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.guest_room_lamp": ["on", {"brightness_pct": 100}]}, "calls": 3, "seconds": 0.0, "text": "Done, lamp on."}
+{"id": "82-52", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "Which one, the bedside lamp or the other one?"}
+{"id": "82-52", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.master_bedroom_bedside_lamp": ["off", {"brightness_pct": 100}]}, "calls": 3, "seconds": 0.0, "text": "Done, bedside lamp off."}
+{"id": "82-72", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "There are two in here, the bedside lamp and the other one. Which one?"}
+{"id": "82-72", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.guest_room_lamp": ["off", {"brightness_pct": 60}]}, "calls": 3, "seconds": 0.0, "text": "Done, lamp off."}
+{"id": "82-90", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "There are two in here, the bedside lamp and the other one. Which one?"}
+{"id": "82-90", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.master_bedroom_bedside_lamp": ["off", {"brightness_pct": 50}]}, "calls": 3, "seconds": 0.0, "text": "Okay, bedside lamp off."}
+{"id": "82-95", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "Which one, the bedside lamp or the other one?"}
+{"id": "82-95", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 3, "seconds": 0.0, "text": "Bedside lamp is on."}
+{"id": "82-101", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "The bedside lamp or the other one?"}
+{"id": "82-101", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.bedroom_lamp": ["on", {"brightness_pct": 100}]}, "calls": 3, "seconds": 0.0, "text": "Lamp is on."}
+{"id": "82-111", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "There are two in here, the bedside lamp and the other one. Which one?"}
+{"id": "82-111", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.guest_room_lamp": ["on", {"brightness_pct": 100}]}, "calls": 3, "seconds": 0.0, "text": "Done, lamp on."}
+{"id": "82-121", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "The bedside lamp or the other one?"}
+{"id": "82-121", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 3, "seconds": 0.0, "text": "Okay, bedside lamp off."}
+{"id": "82-127", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "There are two in here, the bedside lamp and the other one. Which one?"}
+{"id": "82-127", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 3, "seconds": 0.0, "text": "Lamp is off."}
+{"id": "82-136", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "There are two in here, the bedside lamp and the other one. Which one?"}
+{"id": "82-136", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.bedroom_lamp": ["on", {"brightness_pct": 100}]}, "calls": 3, "seconds": 0.0, "text": "Okay, lamp on."}
+{"id": "82-140", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "The bedside lamp or the other one?"}
+{"id": "82-140", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 3, "seconds": 0.0, "text": "Okay, lamp on."}
+{"id": "82-154", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "The bedside lamp or the other one?"}
+{"id": "82-154", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 3, "seconds": 0.0, "text": "Done, bedside lamp on."}
+{"id": "82-177", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "There are two in here, the bedside lamp and the other one. Which one?"}
+{"id": "82-177", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 3, "seconds": 0.002, "text": "Okay, lamp off."}
+{"id": "82-185", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "Which one, the bedside lamp or the other one?"}
+{"id": "82-185", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 3, "seconds": 0.001, "text": "Bedside lamp is off."}
+{"id": "82-186", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "There are two in here, the bedside lamp and the other one. Which one?"}
+{"id": "82-186", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 3, "seconds": 0.001, "text": "Done, lamp off."}
+{"id": "82-194", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "There are two in here, the bedside lamp and the other one. Which one?"}
+{"id": "82-194", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 3, "seconds": 0.0, "text": "Okay, bedside lamp off."}
+{"id": "82-203", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "The bedside lamp or the other one?"}
+{"id": "82-203", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.bedroom_bedside_lamp": ["off", {"brightness_pct": 60}]}, "calls": 3, "seconds": 0.0, "text": "Bedside lamp is off."}
+{"id": "82-205", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "There are two in here, the bedside lamp and the other one. Which one?"}
+{"id": "82-205", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 3, "seconds": 0.001, "text": "Okay, lamp on."}
+{"id": "82-209", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "Which one, the bedside lamp or the other one?"}
+{"id": "82-209", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 3, "seconds": 0.0, "text": "Okay, bedside lamp off."}
+{"id": "82-246", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "The bedside lamp or the other one?"}
+{"id": "82-246", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.master_bedroom_bedside_lamp": ["on", {"brightness_pct": 100}]}, "calls": 3, "seconds": 0.0, "text": "Bedside lamp is on."}
+{"id": "82-255", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "There are two in here, the bedside lamp and the other one. Which one?"}
+{"id": "82-255", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 3, "seconds": 0.001, "text": "Lamp is on."}
+{"id": "82-272", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "There are two in here, the bedside lamp and the other one. Which one?"}
+{"id": "82-272", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.bedroom_lamp": ["on", {"brightness_pct": 100}]}, "calls": 3, "seconds": 0.001, "text": "Okay, lamp on."}
+{"id": "82-295", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "Which one, the bedside lamp or the other one?"}
+{"id": "82-295", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.bedroom_bedside_lamp": ["on", {"brightness_pct": 100}]}, "calls": 3, "seconds": 0.0, "text": "Bedside lamp is on."}
+{"id": "82-296", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "Which one, the bedside lamp or the other one?"}
+{"id": "82-296", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.ruby_room_lamp": ["on", {"brightness_pct": 100}]}, "calls": 3, "seconds": 0.0, "text": "Done, lamp on."}
+{"id": "82-297", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "There are two in here, the bedside lamp and the other one. Which one?"}
+{"id": "82-297", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.bedroom_lamp": ["off", {"brightness_pct": 100}]}, "calls": 3, "seconds": 0.001, "text": "Okay, lamp off."}
+{"id": "82-302", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "Which one, the bedside lamp or the other one?"}
+{"id": "82-302", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.bedroom_lamp": ["on", {"brightness_pct": 100}]}, "calls": 3, "seconds": 0.0, "text": "Okay, lamp on."}
+{"id": "82-319", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "The bedside lamp or the other one?"}
+{"id": "82-319", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.bedroom_bedside_lamp": ["off", {"brightness_pct": 100}]}, "calls": 3, "seconds": 0.0, "text": "Okay, bedside lamp off."}
+{"id": "82-332", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "There are two in here, the bedside lamp and the other one. Which one?"}
+{"id": "82-332", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.bedroom_bedside_lamp": ["off", {"brightness_pct": 30}]}, "calls": 3, "seconds": 0.0, "text": "Done, bedside lamp off."}
+{"id": "82-386", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "The bedside lamp or the other one?"}
+{"id": "82-386", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.bedroom_bedside_lamp": ["on", {"brightness_pct": 100}]}, "calls": 3, "seconds": 0.001, "text": "Bedside lamp is on."}
+{"id": "82-393", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "Which one, the bedside lamp or the other one?"}
+{"id": "82-393", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.master_bedroom_lamp": ["off", {"brightness_pct": 30}]}, "calls": 3, "seconds": 0.0, "text": "Lamp is off."}
+{"id": "82-400", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.001, "text": "The bedside lamp or the other one?"}
+{"id": "82-400", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 3, "seconds": 0.001, "text": "Okay, lamp on."}
+{"id": "82-407", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.001, "text": "There are two in here, the bedside lamp and the other one. Which one?"}
+{"id": "82-407", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 3, "seconds": 0.001, "text": "Lamp is off."}
+{"id": "82-408", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "There are two in here, the bedside lamp and the other one. Which one?"}
+{"id": "82-408", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 3, "seconds": 0.0, "text": "Done, bedside lamp on."}
+{"id": "82-415", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "Which one, the bedside lamp or the other one?"}
+{"id": "82-415", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.guest_room_lamp": ["off", {"brightness_pct": 80}]}, "calls": 3, "seconds": 0.0, "text": "Okay, lamp off."}
+{"id": "82-427", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "Which one, the bedside lamp or the other one?"}
+{"id": "82-427", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 3, "seconds": 0.001, "text": "Okay, bedside lamp on."}
+{"id": "82-442", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "The bedside lamp or the other one?"}
+{"id": "82-442", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 3, "seconds": 0.001, "text": "Okay, bedside lamp on."}
+{"id": "82-448", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "There are two in here, the bedside lamp and the other one. Which one?"}
+{"id": "82-448", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 3, "seconds": 0.0, "text": "Done, bedside lamp on."}
+{"id": "82-449", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "There are two in here, the bedside lamp and the other one. Which one?"}
+{"id": "82-449", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 3, "seconds": 0.0, "text": "Done, bedside lamp on."}
+{"id": "82-451", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "The bedside lamp or the other one?"}
+{"id": "82-451", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.guest_room_bedside_lamp": ["on", {"brightness_pct": 100}]}, "calls": 3, "seconds": 0.001, "text": "Bedside lamp is on."}
+{"id": "82-464", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "Which one, the bedside lamp or the other one?"}
+{"id": "82-464", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 3, "seconds": 0.0, "text": "Okay, lamp on."}
+{"id": "82-469", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "There are two in here, the bedside lamp and the other one. Which one?"}
+{"id": "82-469", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 3, "seconds": 0.0, "text": "Okay, bedside lamp off."}
+{"id": "82-477", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "The bedside lamp or the other one?"}
+{"id": "82-477", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.bedroom_bedside_lamp": ["off", {"brightness_pct": 100}]}, "calls": 3, "seconds": 0.001, "text": "Okay, bedside lamp off."}
+{"id": "82-484", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "The bedside lamp or the other one?"}
+{"id": "82-484", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 3, "seconds": 0.0, "text": "Okay, bedside lamp off."}
+{"id": "83-0", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "Which blinds, the kitchen or the office?"}
+{"id": "83-0", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Kitchen blinds opening."}
+{"id": "83-1", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "There are blindss in the kitchen, the family room and the master bedroom. Which one?"}
+{"id": "83-1", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"cover.master_bedroom_blinds": ["open", {"position": 100}]}, "calls": 2, "seconds": 0.0, "text": "Okay, blinds opening in the master bedroom."}
+{"id": "83-2", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "There are lamps in the dining room, the family room, the master bedroom, the office and the study. Which one?"}
+{"id": "83-2", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 3, "seconds": 0.001, "text": "Okay, study lamp off."}
+{"id": "83-3", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "Which exhaust fan? There's one in the bathroom, the guest ensuite, the laundry, the laundry toilet and the master ensuite."}
+{"id": "83-3", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 3, "seconds": 0.001, "text": "Okay, master ensuite exhaust fan off."}
+{"id": "83-4", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "Which track accent, Amber's office one or Pete's office one?"}
+{"id": "83-4", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 3, "seconds": 0.001, "text": "Pete's office track accent is off."}
+{"id": "83-5", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "Which room's fan?"}
+{"id": "83-5", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.001, "text": "Done, laundry fan on."}
+{"id": "83-6", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "There are floor strips in the dining hall, the hallway and the kitchen. Which one?"}
+{"id": "83-6", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.dining_hall_floor_strip": ["on", {"brightness_pct": 100}]}, "calls": 3, "seconds": 0.001, "text": "Done, dining hall floor strip on."}
+{"id": "83-7", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "The family room tv or the rumpus room tv?"}
+{"id": "83-7", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.rumpus_room_tv": ["idle", {"volume_pct": 40}]}, "calls": 2, "seconds": 0.0, "text": "Done, rumpus room TV on."}
+{"id": "83-8", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "There are blindss in the kitchen, the living room and the office. Which one?"}
+{"id": "83-8", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Okay, blinds closing in the living room."}
+{"id": "83-9", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "There are lamps in the guest room, Isla's room, the living room, the master bedroom and the office. Which one?"}
+{"id": "83-9", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.guest_room_bedside_lamp": ["on", {"brightness_pct": 100}]}, "calls": 3, "seconds": 0.0, "text": "Done, guest room lamp on."}
+{"id": "83-10", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "Which tv, the living room one or the lounge one?"}
+{"id": "83-10", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Lounge TV is on."}
+{"id": "83-11", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "The living room lamp or the master bedroom lamp?"}
+{"id": "83-11", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 3, "seconds": 0.0, "text": "Done, master bedroom lamp off."}
+{"id": "83-12", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "Which fan do you mean?"}
+{"id": "83-12", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"fan.laundry_exhaust": ["on", {}]}, "calls": 2, "seconds": 0.0, "text": "Done, laundry fan on."}
+{"id": "83-13", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "Which fan, the ensuite or the bathroom?"}
+{"id": "83-13", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Ensuite fan off."}
+{"id": "83-14", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.001, "text": "Which room?"}
+{"id": "83-14", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"fan.laundry_toilet_exhaust": ["on", {}]}, "calls": 2, "seconds": 0.0, "text": "Laundry toilet fan on."}
+{"id": "83-15", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "Which room?"}
+{"id": "83-15", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Okay, light off in the front porch."}
+{"id": "83-16", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "Which lamp? There's one in the living room, the master bedroom and the office."}
+{"id": "83-16", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 3, "seconds": 0.001, "text": "Done, living room lamp on."}
+{"id": "83-17", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "Amber's office track wash or Pete's office track wash?"}
+{"id": "83-17", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.office_pete_track_wash": ["on", {"brightness_pct": 100}]}, "calls": 3, "seconds": 0.001, "text": "Pete's office track wash is on."}
+{"id": "83-18", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.001, "text": "The guest ensuite towel rail or the master ensuite towel rail?"}
+{"id": "83-18", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"switch.master_ensuite_towel_rail": ["on", {"power_w": 200}]}, "calls": 3, "seconds": 0.001, "text": "Done, master ensuite towel rail on."}
+{"id": "83-19", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "There are lamps in the dining room, the living room, the lounge and the master bedroom. Which one?"}
+{"id": "83-19", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.lounge_lamp": ["on", {"brightness_pct": 100}], "light.lounge_downlights": ["on", {"brightness_pct": 100}]}, "calls": 3, "seconds": 0.001, "text": "Lounge lamp is on."}
+{"id": "83-20", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.001, "text": "Which light do you mean?"}
+{"id": "83-20", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Mudroom light off."}
+{"id": "83-21", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.001, "text": "Which floor strip? There's one in the dining hall, the hallway and the kitchen."}
+{"id": "83-21", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.dining_hall_floor_strip": ["on", {"brightness_pct": 100}]}, "calls": 3, "seconds": 0.001, "text": "Okay, dining hall floor strip on."}
+{"id": "83-22", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "The dining room tv or the media room tv?"}
+{"id": "83-22", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.media_room_tv": ["off", {"volume_pct": 20}]}, "calls": 2, "seconds": 0.0, "text": "Done, media room TV off."}
+{"id": "83-23", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.001, "text": "Which fan do you mean?"}
+{"id": "83-23", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"fan.dining_hall_fan": ["on", {}]}, "calls": 2, "seconds": 0.0, "text": "Okay, fan on in the dining hall."}
+{"id": "83-24", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "Which heater, the guest room or the dining room?"}
+{"id": "83-24", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"switch.dining_room_heater": ["on", {"heater": true, "power_w": 2000}]}, "calls": 2, "seconds": 0.0, "text": "Okay, heater on in the dining room."}
+{"id": "83-25", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "There are heaters in the family room, the office and the bedroom. Which one?"}
+{"id": "83-25", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"switch.office_heater": ["on", {"heater": true, "power_w": 2000}]}, "calls": 2, "seconds": 0.0, "text": "Okay, heater on in the office."}
+{"id": "83-26", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "Do you mean the track accent in Amber's office or Pete's office?"}
+{"id": "83-26", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.office_pete_track_accent": ["on", {"brightness_pct": 100}]}, "calls": 3, "seconds": 0.0, "text": "Okay, Pete's office track accent on."}
+{"id": "83-27", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.001, "text": "Which batten lights, the battery shed one or the carport one?"}
+{"id": "83-27", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 3, "seconds": 0.001, "text": "Okay, battery shed batten lights off."}
+{"id": "83-28", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "The kitchen or the bedroom?"}
+{"id": "83-28", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Okay, blinds opening in the bedroom."}
+{"id": "83-29", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "There are lamps in the lounge, the office and Priya's room. Which one?"}
+{"id": "83-29", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.office_desk_lamp": ["on", {"brightness_pct": 100}]}, "calls": 3, "seconds": 0.0, "text": "Okay, office lamp on."}
+{"id": "83-30", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.001, "text": "Which room's fan?"}
+{"id": "83-30", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Laundry fan off."}
+{"id": "83-31", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "Do you mean the track accent in Amber's office or Pete's office?"}
+{"id": "83-31", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 3, "seconds": 0.001, "text": "Okay, Pete's office track accent off."}
+{"id": "83-32", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "The dining room tv or the family room tv?"}
+{"id": "83-32", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.dining_room_tv": ["off", {"volume_pct": 30}]}, "calls": 2, "seconds": 0.0, "text": "Dining room TV is off."}
+{"id": "83-33", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "In which room? The lounge, the bedroom and the study all have one."}
+{"id": "83-33", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"cover.bedroom_windows": ["open", {"position": 100}]}, "calls": 2, "seconds": 0.0, "text": "Done, bedroom blinds opening."}
+{"id": "83-34", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "Which batten lights, the battery shed one or the carport one?"}
+{"id": "83-34", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.carport_batten_lights": ["on", {"brightness_pct": 100}]}, "calls": 3, "seconds": 0.001, "text": "Done, carport batten lights on."}
+{"id": "83-35", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "Which room?"}
+{"id": "83-35", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.001, "text": "Okay, blinds closing in the kitchen."}
+{"id": "83-36", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "There are floor strips in the dining hall, the hallway and the kitchen. Which one?"}
+{"id": "83-36", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.hallway_floor_strip": ["on", {"brightness_pct": 100}]}, "calls": 3, "seconds": 0.004, "text": "Hallway floor strip is on."}
+{"id": "83-37", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "The living room lamp or the office lamp?"}
+{"id": "83-37", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.office_desk_lamp": ["off", {"brightness_pct": 40}]}, "calls": 3, "seconds": 0.0, "text": "Office lamp is off."}
+{"id": "83-38", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.001, "text": "Amber's office track accent or Pete's office track accent?"}
+{"id": "83-38", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 3, "seconds": 0.001, "text": "Amber's office track accent is off."}
+{"id": "83-39", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "Which room's blinds?"}
+{"id": "83-39", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.001, "text": "Mudroom blinds opening."}
+{"id": "83-40", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "Which fan do you mean?"}
+{"id": "83-40", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"fan.bathroom_exhaust": ["on", {}]}, "calls": 2, "seconds": 0.0, "text": "Done, bathroom fan on."}
+{"id": "83-41", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "There are lamps in the dining room, the rumpus room and the study. Which one?"}
+{"id": "83-41", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.dining_room_downlights": ["on", {"brightness_pct": 100}]}, "calls": 3, "seconds": 0.0, "text": "Done, dining room lamp on."}
+{"id": "83-42", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "There are downlights in the guest robe, the laundry toilet and the toilet. Which one?"}
+{"id": "83-42", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.laundry_toilet_downlight": ["on", {"brightness_pct": 100}]}, "calls": 3, "seconds": 0.0, "text": "Okay, laundry toilet downlight on."}
+{"id": "83-43", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "There are lamps in Amelia's room, the living room and the master bedroom. Which one?"}
+{"id": "83-43", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 3, "seconds": 0.0, "text": "Okay, Amelia's room lamp off."}
+{"id": "83-44", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "There are tvs in the dining room, the living room and the lounge. Which one?"}
+{"id": "83-44", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Living room TV is on."}
+{"id": "83-45", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.001, "text": "Which towel rail, the guest ensuite one or the master ensuite one?"}
+{"id": "83-45", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 3, "seconds": 0.001, "text": "Okay, guest ensuite towel rail on."}
+{"id": "83-46", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "Which tv, the living room one or the media room one?"}
+{"id": "83-46", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Done, media room TV off."}
+{"id": "83-47", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "Do you mean the lamp in the lounge or the study?"}
+{"id": "83-47", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.study_desk_lamp": ["on", {"brightness_pct": 100}]}, "calls": 3, "seconds": 0.0, "text": "Done, study lamp on."}
+{"id": "83-48", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "There are lamps in the alfresco, the bathroom, the entry, the guest bedroom, the guest ensuite, the hallway, the kitchen, the laundry, the lounge, the master bedroom, the master ensuite, the master robe, the media room, the mudroom, Amber's office, Pete's office, the pantry, the storage, the vanity and the workshop. Which one?"}
+{"id": "83-48", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 3, "seconds": 0.001, "text": "Okay, Pete's office lamp off."}
+{"id": "83-49", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 1, "seconds": 0.0, "text": "In which room? The kitchen, the bedroom and the living room all have one."}
+{"id": "83-49", "turn": 1, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"cover.bedroom_blinds": ["open", {"position": 100}]}, "calls": 2, "seconds": 0.0, "text": "Bedroom blinds opening."}
+{"id": "84-0", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Done, the family room TV is on."}
+{"id": "84-1", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.dining_hall_tv": ["off", {"volume_pct": 20}]}, "calls": 2, "seconds": 0.001, "text": "Done, the dining hall TV is off."}
+{"id": "84-2", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.family_room_tv": ["off", {"volume_pct": 20}]}, "calls": 2, "seconds": 0.0, "text": "Done, the family room TV is off."}
+{"id": "84-3", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"switch.study_heater": ["on", {"heater": true, "power_w": 1800}]}, "calls": 2, "seconds": 0.0, "text": "Done, the study heater is on."}
+{"id": "84-4", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.living_room_tv": ["off", {"volume_pct": 20}]}, "calls": 2, "seconds": 0.0, "text": "Done, the living room TV is off."}
+{"id": "84-5", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.001, "text": "Done, the dining hall TV is on."}
+{"id": "84-6", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"switch.kitchen_fridge": ["off", {"appliance": "fridge", "status": "off", "power_w": 120}], "switch.kitchen_heater": ["off", {"heater": true, "power_w": 1800}]}, "calls": 2, "seconds": 0.0, "text": "Okay, kitchen heater off."}
+{"id": "84-7", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Done, the living room TV is on."}
+{"id": "84-8", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.dining_hall_tv": ["idle", {"volume_pct": 20}]}, "calls": 2, "seconds": 0.0, "text": "Dining hall TV is on."}
+{"id": "84-9", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Okay, dining hall TV on."}
+{"id": "84-10", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Okay, lounge TV on."}
+{"id": "84-11", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"switch.family_room_heater": ["on", {"heater": true, "power_w": 2400}]}, "calls": 2, "seconds": 0.0, "text": "Family room heater is on."}
+{"id": "84-12", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.lounge_tv": ["off", {"volume_pct": 30}]}, "calls": 2, "seconds": 0.0, "text": "Lounge TV is off."}
+{"id": "84-13", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"switch.master_bedroom_heater": ["on", {"heater": true, "power_w": 2400}]}, "calls": 2, "seconds": 0.0, "text": "Okay, master bedroom heater on."}
+{"id": "84-14", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.rumpus_room_lamp": ["on", {"brightness_pct": 100}]}, "calls": 3, "seconds": 0.0, "text": "Okay, rumpus room lamp on."}
+{"id": "84-15", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.dining_hall_tv": ["idle", {"volume_pct": 40}]}, "calls": 2, "seconds": 0.001, "text": "Okay, dining hall TV on."}
+{"id": "84-16", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.dining_hall_tv": ["idle", {"volume_pct": 20}]}, "calls": 2, "seconds": 0.001, "text": "Dining hall TV is on."}
+{"id": "84-17", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Done, the dining room TV is on."}
+{"id": "84-18", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.dining_hall_tv": ["idle", {"volume_pct": 20}]}, "calls": 2, "seconds": 0.0, "text": "Done, the dining hall TV is on."}
+{"id": "84-19", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Done, the lounge TV is on."}
+{"id": "84-20", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.dining_hall_tv": ["idle", {"volume_pct": 30}]}, "calls": 2, "seconds": 0.0, "text": "Okay, dining hall TV on."}
+{"id": "84-21", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.001, "text": "Dining hall TV is on."}
+{"id": "84-22", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Okay, living room TV on."}
+{"id": "84-23", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"switch.lounge_heater": ["on", {"heater": true, "power_w": 1800}]}, "calls": 2, "seconds": 0.0, "text": "Lounge heater is on."}
+{"id": "84-24", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.lounge_tv": ["off", {"volume_pct": 30}]}, "calls": 2, "seconds": 0.0, "text": "Lounge TV is off."}
+{"id": "84-25", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.lounge_tv": ["off", {"media_content_type": "tvshow", "volume_pct": 20}]}, "calls": 2, "seconds": 0.0, "text": "Lounge TV is off."}
+{"id": "84-26", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.dining_hall_tv": ["idle", {"volume_pct": 30}]}, "calls": 2, "seconds": 0.0, "text": "Dining hall TV is on."}
+{"id": "84-27", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Okay, office fan off."}
+{"id": "84-28", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.dining_hall_tv": ["off", {"volume_pct": 30}]}, "calls": 2, "seconds": 0.0, "text": "Dining hall TV is off."}
+{"id": "84-29", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"light.bedroom_bedside_lamp": ["off", {"brightness_pct": 100}]}, "calls": 3, "seconds": 0.0, "text": "Okay, bedroom lamp off."}
+{"id": "84-30", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"switch.office_heater": ["on", {"heater": true, "power_w": 2000}]}, "calls": 2, "seconds": 0.0, "text": "Okay, office heater on."}
+{"id": "84-31", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.dining_room_tv": ["off", {"volume_pct": 30}]}, "calls": 2, "seconds": 0.0, "text": "Done, the dining room TV is off."}
+{"id": "84-32", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.dining_hall_tv": ["off", {"volume_pct": 20}]}, "calls": 2, "seconds": 0.0, "text": "Okay, dining hall TV off."}
+{"id": "84-33", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"switch.living_room_heater": ["on", {"heater": true, "power_w": 2000}]}, "calls": 2, "seconds": 0.0, "text": "Okay, living room heater on."}
+{"id": "84-34", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Done, the office fan is off."}
+{"id": "84-35", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.dining_hall_tv": ["off", {"volume_pct": 40}]}, "calls": 2, "seconds": 0.001, "text": "Okay, dining hall TV off."}
+{"id": "84-36", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"switch.office_heater": ["on", {"heater": true, "power_w": 1500}]}, "calls": 2, "seconds": 0.0, "text": "Done, the office heater is on."}
+{"id": "84-37", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.family_room_tv": ["off", {"media_content_type": "tvshow", "volume_pct": 50}]}, "calls": 2, "seconds": 0.0, "text": "Okay, family room TV off."}
+{"id": "84-38", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.dining_hall_tv": ["off", {"volume_pct": 20}]}, "calls": 2, "seconds": 0.001, "text": "Done, the dining hall TV is off."}
+{"id": "84-39", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Dining hall TV is on."}
+{"id": "84-40", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Dining hall TV is on."}
+{"id": "84-41", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.001, "text": "Okay, dining hall TV off."}
+{"id": "84-42", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.dining_hall_tv": ["off", {"volume_pct": 20}]}, "calls": 2, "seconds": 0.0, "text": "Dining hall TV is off."}
+{"id": "84-43", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"switch.office_heater": ["on", {"heater": true, "power_w": 2000}]}, "calls": 2, "seconds": 0.0, "text": "Done, the office heater is on."}
+{"id": "84-44", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Done, the master bedroom heater is off."}
+{"id": "84-45", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.dining_hall_tv": ["off", {"volume_pct": 40}]}, "calls": 2, "seconds": 0.0, "text": "Done, the dining hall TV is off."}
+{"id": "84-46", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Done, the family room TV is off."}
+{"id": "84-47", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {}, "calls": 2, "seconds": 0.0, "text": "Done, the dining hall TV is on."}
+{"id": "84-48", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"media_player.family_room_tv": ["idle", {"volume_pct": 40}]}, "calls": 2, "seconds": 0.0, "text": "Done, the family room TV is on."}
+{"id": "84-49", "turn": 0, "ok": true, "state_ok": true, "reply_ok": true, "changes": {"fan.bathroom_exhaust_fan": ["on", {}]}, "calls": 2, "seconds": 0.0, "text": "Okay, bathroom fan on."}

@@ -1,0 +1,244 @@
+{
+  "set": "kokoro__parakeet__noisy10",
+  "stt": "parakeet",
+  "condition": "noisy10",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 30,
+  "words": 224,
+  "errors": 41,
+  "wer": 0.183,
+  "exact": 0.5667,
+  "vocab_words": 97,
+  "vocab_errors": 10,
+  "vocab_wer": 0.1031,
+  "vocab": {
+    "room": {
+      "n": 37,
+      "err": 5,
+      "wer": 0.1351
+    },
+    "device": {
+      "n": 29,
+      "err": 3,
+      "wer": 0.1034
+    },
+    "person": {
+      "n": 2,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 4,
+      "err": 2,
+      "wer": 0.5
+    },
+    "command": {
+      "n": 25,
+      "err": 0,
+      "wer": 0.0
+    }
+  },
+  "meaning_changed": 0.1667,
+  "meaning_changed_n": 5,
+  "meaning_by_kind": {
+    "room": 0.1333,
+    "device": 0.0667,
+    "person": 0.0,
+    "number": 0.0667,
+    "command": 0.0
+  },
+  "empty": 1,
+  "seconds": {
+    "mean": 0.2266,
+    "p50": 0.2288,
+    "p90": 0.2972,
+    "rtf": 0.065,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nova": {
+      "turns": 5,
+      "wer": 0.1622,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sky": {
+      "turns": 1,
+      "wer": 0.8889,
+      "meaning_changed": 1.0
+    },
+    "t-k-am-eric": {
+      "turns": 6,
+      "wer": 0.1071,
+      "meaning_changed": 0.3333
+    },
+    "t-k-am-liam": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-onyx": {
+      "turns": 5,
+      "wer": 0.2812,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-puck": {
+      "turns": 2,
+      "wer": 0.2222,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 2,
+      "wer": 0.4286,
+      "meaning_changed": 0.5
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 1,
+      "wer": 0.25,
+      "meaning_changed": 1.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 2,
+      "wer": 0.1333,
+      "meaning_changed": 0.0
+    },
+    "1.0": {
+      "turns": 15,
+      "wer": 0.2198,
+      "meaning_changed": 0.2
+    },
+    "1.15": {
+      "turns": 13,
+      "wer": 0.161,
+      "meaning_changed": 0.1538
+    }
+  },
+  "by_noise": {
+    "kitchen": {
+      "turns": 11,
+      "wer": 0.0843,
+      "meaning_changed": 0.0
+    },
+    "tv": {
+      "turns": 19,
+      "wer": 0.2411,
+      "meaning_changed": 0.2632
+    }
+  },
+  "by_set": {
+    "kokoro__parakeet__noisy10": {
+      "turns": 30,
+      "wer": 0.183,
+      "meaning_changed": 0.1667
+    }
+  },
+  "samples": [
+    {
+      "id": "bbig-bundook_full-plan-747",
+      "turn": 0,
+      "voice": "t-k-af-sky",
+      "written": "Set the lights in the toilet to 75 percent.",
+      "heard": "Police are the same.",
+      "lost": [
+        [
+          "device",
+          "lights"
+        ],
+        [
+          "room",
+          "toilet"
+        ],
+        [
+          "number",
+          "75"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1278",
+      "turn": 0,
+      "voice": "t-k-bm-lewis-fable",
+      "written": "Pop the floodlight 3 on in the carport",
+      "heard": "Pop the floodlights 3 on in the carpool.",
+      "lost": [
+        [
+          "device",
+          "floodlight 3"
+        ],
+        [
+          "room",
+          "carport"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-331",
+      "turn": 0,
+      "voice": "t-k-am-eric",
+      "written": "can you turn the lights off in the master robe and the entry",
+      "heard": "Where were you? Can you turn the lights off in the master robe and the entrance?",
+      "lost": [
+        [
+          "room",
+          "entry"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-337",
+      "turn": 0,
+      "voice": "t-k-bm-george-lewis",
+      "written": "set volume to 40 percent",
+      "heard": "",
+      "lost": [
+        [
+          "number",
+          "40"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-976",
+      "turn": 0,
+      "voice": "t-k-am-eric",
+      "written": "Close Pete's office blinds.",
+      "heard": "Close Peace Office blinds.",
+      "lost": [
+        [
+          "room",
+          "petes office"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

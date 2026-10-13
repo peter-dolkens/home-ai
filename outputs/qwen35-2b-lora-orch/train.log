@@ -1,0 +1,32 @@
+train: 6480 examples (dropped 56 over 6144 tokens); mean 2833 tokens, max 8573
+label check: 6683 trained tokens in the first 50 examples
+val: 19 examples (dropped 131 over 2048 tokens)
+LoRA r=16 alpha=16 on 7 module kinds ['mlp.down_proj', 'mlp.gate_proj', 'mlp.up_proj', 'self_attn.k_proj', 'self_attn.o_proj', 'self_attn.q_proj', 'self_attn.v_proj']: 10.91M trainable
+steps: 810 (2 epochs x 405), warmup 41, effective batch 16
+step 1/810 loss 0.6373 lr 0.00e+00 gnorm 0.999 513 tok/s peak 7.3 GB eta 18.39 h
+step 10/810 loss 0.5757 lr 4.39e-05 gnorm 0.697 479 tok/s peak 9.0 GB eta 21.23 h
+step 20/810 loss 0.4843 lr 9.27e-05 gnorm 0.386 440 tok/s peak 9.0 GB eta 22.48 h
+step 30/810 loss 0.3776 lr 1.41e-04 gnorm 0.629 444 tok/s peak 9.0 GB eta 21.88 h
+step 40/810 loss 0.2802 lr 1.90e-04 gnorm 0.627 391 tok/s peak 9.0 GB eta 24.61 h
+step 50/810 loss 0.2584 lr 2.00e-04 gnorm 0.582 355 tok/s peak 9.1 GB eta 26.69 h
+step 60/810 loss 0.2060 lr 2.00e-04 gnorm 0.424 345 tok/s peak 9.1 GB eta 27.17 h
+step 70/810 loss 0.1601 lr 1.99e-04 gnorm 0.585 353 tok/s peak 9.1 GB eta 25.98 h
+step 80/810 loss 0.1540 lr 1.99e-04 gnorm 0.608 358 tok/s peak 9.1 GB eta 25.30 h
+step 90/810 loss 0.1250 lr 1.98e-04 gnorm 0.387 364 tok/s peak 9.1 GB eta 24.69 h
+step 100/810 loss 0.1236 lr 1.97e-04 gnorm 0.370 368 tok/s peak 9.1 GB eta 23.97 h
+step 110/810 loss 0.0977 lr 1.96e-04 gnorm 0.426 373 tok/s peak 9.1 GB eta 23.47 h
+step 120/810 loss 0.0934 lr 1.95e-04 gnorm 0.467 376 tok/s peak 9.1 GB eta 22.89 h
+step 130/810 loss 0.0968 lr 1.94e-04 gnorm 0.419 379 tok/s peak 9.1 GB eta 22.44 h
+step 140/810 loss 0.0989 lr 1.92e-04 gnorm 0.554 380 tok/s peak 9.1 GB eta 21.96 h
+step 150/810 loss 0.0863 lr 1.90e-04 gnorm 0.606 371 tok/s peak 9.1 GB eta 22.20 h
+step 160/810 loss 0.0840 lr 1.89e-04 gnorm 0.371 374 tok/s peak 9.1 GB eta 21.70 h
+step 170/810 loss 0.0995 lr 1.87e-04 gnorm 0.469 376 tok/s peak 9.1 GB eta 21.20 h
+step 180/810 loss 0.0775 lr 1.85e-04 gnorm 0.584 378 tok/s peak 9.1 GB eta 20.79 h
+step 190/810 loss 0.0737 lr 1.82e-04 gnorm 0.405 378 tok/s peak 9.1 GB eta 20.45 h
+step 200/810 loss 0.0723 lr 1.80e-04 gnorm 0.531 377 tok/s peak 9.1 GB eta 20.14 h
+step 210/810 loss 0.0606 lr 1.77e-04 gnorm 0.314 377 tok/s peak 9.1 GB eta 19.80 h
+step 220/810 loss 0.0637 lr 1.75e-04 gnorm 0.452 377 tok/s peak 9.1 GB eta 19.48 h
+step 230/810 loss 0.0637 lr 1.72e-04 gnorm 0.339 375 tok/s peak 9.1 GB eta 19.25 h
+step 240/810 loss 0.0588 lr 1.69e-04 gnorm 0.505 373 tok/s peak 9.1 GB eta 19.00 h
+step 250/810 loss 0.0756 lr 1.66e-04 gnorm 0.317 371 tok/s peak 9.1 GB eta 18.78 h
+step 260/810 loss 0.0630 lr 1.63e-04 gnorm 0.219 344 tok/s peak 9.1 GB eta 19.88 h

@@ -1,0 +1,94 @@
+{
+  "model": "homeai-4b-lora-v12",
+  "mode": "e2e",
+  "host": "lapwing",
+  "hardware": "rtx-3080",
+  "host_note": "lapwing (accuracy only), clock_in_user",
+  "ollama": "http://127.0.0.1:11500",
+  "lockstep": 8,
+  "prompt_layout": "clock_in_user",
+  "data": "data/generated/heard/wild2-parakeet-farfield.jsonl",
+  "examples": 240,
+  "turns": 344,
+  "pass": 0.7456395348837209,
+  "conversation_pass": 0.6458333333333334,
+  "seconds_per_turn": 0.7829238387872625,
+  "calls_per_request": 2.113372093023256,
+  "errors": 0,
+  "by_kind": {
+    "act": {
+      "n": 165,
+      "ok": 131
+    },
+    "state": {
+      "n": 344,
+      "ok": 287
+    },
+    "reply": {
+      "n": 344,
+      "ok": 306
+    },
+    "answer": {
+      "n": 179,
+      "ok": 125.5
+    }
+  },
+  "by_category": {
+    "wild_media": {
+      "n": 46,
+      "ok": 34
+    },
+    "wild_control": {
+      "n": 48,
+      "ok": 40
+    },
+    "wild_status": {
+      "n": 38,
+      "ok": 26
+    },
+    "wild_energy": {
+      "n": 25,
+      "ok": 16
+    },
+    "wild_water": {
+      "n": 15,
+      "ok": 13
+    },
+    "wild_confirm": {
+      "n": 26,
+      "ok": 20.5
+    },
+    "wild_clarify": {
+      "n": 28,
+      "ok": 18
+    },
+    "wild_missing": {
+      "n": 11,
+      "ok": 9
+    },
+    "wild_presence": {
+      "n": 25,
+      "ok": 15
+    },
+    "wild_appliance": {
+      "n": 18,
+      "ok": 15
+    },
+    "wild_routine": {
+      "n": 26,
+      "ok": 20
+    },
+    "wild_smalltalk": {
+      "n": 11,
+      "ok": 10
+    },
+    "wild_mixed": {
+      "n": 19,
+      "ok": 14
+    },
+    "wild_vehicle": {
+      "n": 8,
+      "ok": 6
+    }
+  }
+}

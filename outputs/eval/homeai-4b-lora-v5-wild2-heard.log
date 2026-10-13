@@ -1,0 +1,289 @@
+[25/240] 88.2% 75.0% 77.6% 67.1% 80.3% 77.6% 80.3% 75.0% 502s
+[50/240] 85.6% 70.5% 70.5% 61.0% 74.7% 73.3% 73.3% 73.3% 978s
+[75/240] 86.4% 72.7% 70.9% 62.7% 76.4% 74.5% 74.5% 71.8% 1403s
+[100/240] 86.5% 74.0% 70.8% 66.3% 76.7% 75.3% 74.7% 72.2% 1769s
+[125/240] 86.0% 73.2% 71.8% 65.9% 75.4% 74.9% 73.7% 71.8% 2294s
+[150/240] 86.5% 74.2% 72.6% 67.7% 75.6% 75.6% 74.7% 71.2% 2786s
+[175/240] 86.4% 73.9% 71.7% 65.8% 74.7% 75.1% 74.7% 72.1% 3315s
+[200/240] 87.3% 74.8% 72.2% 67.4% 76.6% 76.2% 75.9% 74.3% 3811s
+[225/240] 87.7% 76.2% 72.7% 66.8% 77.2% 76.7% 77.2% 74.4% 4264s
+{
+  "model": "homeai-4b-lora-v5",
+  "mode": "e2e",
+  "host": "lapwing",
+  "hardware": "rtx-3080",
+  "host_note": "standalone ollama 0.21.2 on lapwing (RTX 3080 10 GB), e2e client on lapwing",
+  "ollama": "http://127.0.0.1:11500",
+  "lockstep": 8,
+  "data": "data/generated/wild2.jsonl",
+  "examples": 240,
+  "turns": 344,
+  "pass": 0.8677325581395349,
+  "conversation_pass": 0.8,
+  "seconds_per_turn": 0.760002868468535,
+  "calls_per_request": 2.0813953488372094,
+  "errors": 0,
+  "by_kind": {
+    "act": {
+      "n": 165,
+      "ok": 151
+    },
+    "state": {
+      "n": 344,
+      "ok": 315
+    },
+    "reply": {
+      "n": 344,
+      "ok": 324
+    },
+    "answer": {
+      "n": 179,
+      "ok": 147.5
+    }
+  }
+}
+{
+  "model": "homeai-4b-lora-v5",
+  "mode": "e2e",
+  "host": "lapwing",
+  "hardware": "rtx-3080",
+  "host_note": "standalone ollama 0.21.2 on lapwing (RTX 3080 10 GB), e2e client on lapwing",
+  "ollama": "http://127.0.0.1:11500",
+  "lockstep": 8,
+  "data": "data/generated/heard/wild2-parakeet-clean.jsonl",
+  "examples": 240,
+  "turns": 344,
+  "pass": 0.7630813953488372,
+  "conversation_pass": 0.6708333333333333,
+  "seconds_per_turn": 0.771699874255122,
+  "calls_per_request": 2.136627906976744,
+  "errors": 0,
+  "by_kind": {
+    "act": {
+      "n": 165,
+      "ok": 126
+    },
+    "state": {
+      "n": 344,
+      "ok": 284
+    },
+    "reply": {
+      "n": 344,
+      "ok": 316
+    },
+    "answer": {
+      "n": 179,
+      "ok": 136.5
+    }
+  }
+}
+{
+  "model": "homeai-4b-lora-v5",
+  "mode": "e2e",
+  "host": "lapwing",
+  "hardware": "rtx-3080",
+  "host_note": "standalone ollama 0.21.2 on lapwing (RTX 3080 10 GB), e2e client on lapwing",
+  "ollama": "http://127.0.0.1:11500",
+  "lockstep": 8,
+  "data": "data/generated/heard/wild2-parakeet-farfield.jsonl",
+  "examples": 240,
+  "turns": 344,
+  "pass": 0.7267441860465116,
+  "conversation_pass": 0.625,
+  "seconds_per_turn": 0.7740708029140597,
+  "calls_per_request": 2.13953488372093,
+  "errors": 0,
+  "by_kind": {
+    "act": {
+      "n": 165,
+      "ok": 121
+    },
+    "state": {
+      "n": 344,
+      "ok": 277
+    },
+    "reply": {
+      "n": 344,
+      "ok": 309
+    },
+    "answer": {
+      "n": 179,
+      "ok": 129.0
+    }
+  }
+}
+{
+  "model": "homeai-4b-lora-v5",
+  "mode": "e2e",
+  "host": "lapwing",
+  "hardware": "rtx-3080",
+  "host_note": "standalone ollama 0.21.2 on lapwing (RTX 3080 10 GB), e2e client on lapwing",
+  "ollama": "http://127.0.0.1:11500",
+  "lockstep": 8,
+  "data": "data/generated/heard/wild2-parakeet-noisy10.jsonl",
+  "examples": 240,
+  "turns": 344,
+  "pass": 0.6569767441860465,
+  "conversation_pass": 0.5375,
+  "seconds_per_turn": 0.7735559107348876,
+  "calls_per_request": 2.113372093023256,
+  "errors": 0,
+  "by_kind": {
+    "act": {
+      "n": 165,
+      "ok": 109
+    },
+    "state": {
+      "n": 344,
+      "ok": 265
+    },
+    "reply": {
+      "n": 344,
+      "ok": 298
+    },
+    "answer": {
+      "n": 179,
+      "ok": 117.0
+    }
+  }
+}
+{
+  "model": "homeai-4b-lora-v5",
+  "mode": "e2e",
+  "host": "lapwing",
+  "hardware": "rtx-3080",
+  "host_note": "standalone ollama 0.21.2 on lapwing (RTX 3080 10 GB), e2e client on lapwing",
+  "ollama": "http://127.0.0.1:11500",
+  "lockstep": 8,
+  "data": "data/generated/heard/wild2-small-clean.jsonl",
+  "examples": 240,
+  "turns": 344,
+  "pass": 0.7718023255813954,
+  "conversation_pass": 0.6791666666666667,
+  "seconds_per_turn": 0.7702253612753464,
+  "calls_per_request": 2.122093023255814,
+  "errors": 0,
+  "by_kind": {
+    "act": {
+      "n": 165,
+      "ok": 130
+    },
+    "state": {
+      "n": 344,
+      "ok": 285
+    },
+    "reply": {
+      "n": 344,
+      "ok": 317
+    },
+    "answer": {
+      "n": 179,
+      "ok": 135.5
+    }
+  }
+}
+{
+  "model": "homeai-4b-lora-v5",
+  "mode": "e2e",
+  "host": "lapwing",
+  "hardware": "rtx-3080",
+  "host_note": "standalone ollama 0.21.2 on lapwing (RTX 3080 10 GB), e2e client on lapwing",
+  "ollama": "http://127.0.0.1:11500",
+  "lockstep": 8,
+  "data": "data/generated/heard/wild2-small-biased.jsonl",
+  "examples": 240,
+  "turns": 344,
+  "pass": 0.7645348837209303,
+  "conversation_pass": 0.6666666666666666,
+  "seconds_per_turn": 0.7749022909130509,
+  "calls_per_request": 2.125,
+  "errors": 0,
+  "by_kind": {
+    "act": {
+      "n": 165,
+      "ok": 133
+    },
+    "state": {
+      "n": 344,
+      "ok": 285
+    },
+    "reply": {
+      "n": 344,
+      "ok": 313
+    },
+    "answer": {
+      "n": 179,
+      "ok": 130.0
+    }
+  }
+}
+{
+  "model": "homeai-4b-lora-v5",
+  "mode": "e2e",
+  "host": "lapwing",
+  "hardware": "rtx-3080",
+  "host_note": "standalone ollama 0.21.2 on lapwing (RTX 3080 10 GB), e2e client on lapwing",
+  "ollama": "http://127.0.0.1:11500",
+  "lockstep": 8,
+  "data": "data/generated/heard/wild2-medium-biased.jsonl",
+  "examples": 240,
+  "turns": 344,
+  "pass": 0.7688953488372093,
+  "conversation_pass": 0.675,
+  "seconds_per_turn": 0.7700902324833282,
+  "calls_per_request": 2.122093023255814,
+  "errors": 0,
+  "by_kind": {
+    "act": {
+      "n": 165,
+      "ok": 132
+    },
+    "state": {
+      "n": 344,
+      "ok": 287
+    },
+    "reply": {
+      "n": 344,
+      "ok": 310
+    },
+    "answer": {
+      "n": 179,
+      "ok": 132.5
+    }
+  }
+}
+{
+  "model": "homeai-4b-lora-v5",
+  "mode": "e2e",
+  "host": "lapwing",
+  "hardware": "rtx-3080",
+  "host_note": "standalone ollama 0.21.2 on lapwing (RTX 3080 10 GB), e2e client on lapwing",
+  "ollama": "http://127.0.0.1:11500",
+  "lockstep": 8,
+  "data": "data/generated/heard/wild2-tiny-clean.jsonl",
+  "examples": 240,
+  "turns": 344,
+  "pass": 0.7398255813953488,
+  "conversation_pass": 0.6333333333333333,
+  "seconds_per_turn": 0.778156443104911,
+  "calls_per_request": 2.1569767441860463,
+  "errors": 0,
+  "by_kind": {
+    "act": {
+      "n": 165,
+      "ok": 128
+    },
+    "state": {
+      "n": 344,
+      "ok": 278
+    },
+    "reply": {
+      "n": 344,
+      "ok": 309
+    },
+    "answer": {
+      "n": 179,
+      "ok": 126.5
+    }
+  }
+}

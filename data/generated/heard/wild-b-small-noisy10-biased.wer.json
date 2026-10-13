@@ -1,0 +1,732 @@
+{
+  "set": "wild-b",
+  "stt": "small",
+  "condition": "noisy10-biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 409,
+  "words": 2913,
+  "errors": 536,
+  "wer": 0.184,
+  "exact": 0.489,
+  "vocab_words": 717,
+  "vocab_errors": 97,
+  "vocab_wer": 0.1353,
+  "vocab": {
+    "room": {
+      "n": 170,
+      "err": 12,
+      "wer": 0.0706
+    },
+    "device": {
+      "n": 273,
+      "err": 38,
+      "wer": 0.1392
+    },
+    "person": {
+      "n": 16,
+      "err": 3,
+      "wer": 0.1875
+    },
+    "number": {
+      "n": 27,
+      "err": 3,
+      "wer": 0.1111
+    },
+    "command": {
+      "n": 231,
+      "err": 41,
+      "wer": 0.1775
+    }
+  },
+  "meaning_changed": 0.1809,
+  "meaning_changed_n": 74,
+  "meaning_by_kind": {
+    "room": 0.0244,
+    "device": 0.0782,
+    "person": 0.0073,
+    "number": 0.0073,
+    "command": 0.0929
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 5.6753,
+    "p50": 5.3729,
+    "p90": 6.446,
+    "rtf": 1.8998,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "au-p326": {
+      "turns": 32,
+      "wer": 0.3417,
+      "meaning_changed": 0.375
+    },
+    "au-p374": {
+      "turns": 32,
+      "wer": 0.2538,
+      "meaning_changed": 0.2188
+    },
+    "gb-alan": {
+      "turns": 37,
+      "wer": 0.1089,
+      "meaning_changed": 0.1622
+    },
+    "gb-alba": {
+      "turns": 53,
+      "wer": 0.1684,
+      "meaning_changed": 0.1321
+    },
+    "gb-cori": {
+      "turns": 49,
+      "wer": 0.25,
+      "meaning_changed": 0.2245
+    },
+    "gb-jenny": {
+      "turns": 37,
+      "wer": 0.103,
+      "meaning_changed": 0.0811
+    },
+    "gb-northern-m": {
+      "turns": 23,
+      "wer": 0.2671,
+      "meaning_changed": 0.4348
+    },
+    "gb-southern-f": {
+      "turns": 38,
+      "wer": 0.2937,
+      "meaning_changed": 0.2895
+    },
+    "us-amy": {
+      "turns": 43,
+      "wer": 0.0237,
+      "meaning_changed": 0.0233
+    },
+    "us-lessac": {
+      "turns": 34,
+      "wer": 0.1093,
+      "meaning_changed": 0.1471
+    },
+    "us-ryan": {
+      "turns": 31,
+      "wer": 0.1659,
+      "meaning_changed": 0.0323
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 104,
+      "wer": 0.1854,
+      "meaning_changed": 0.2212
+    },
+    "1.0": {
+      "turns": 198,
+      "wer": 0.1728,
+      "meaning_changed": 0.1818
+    },
+    "1.15": {
+      "turns": 107,
+      "wer": 0.201,
+      "meaning_changed": 0.1402
+    }
+  },
+  "by_noise": {
+    "kitchen": {
+      "turns": 225,
+      "wer": 0.1784,
+      "meaning_changed": 0.2089
+    },
+    "tv": {
+      "turns": 184,
+      "wer": 0.1911,
+      "meaning_changed": 0.1467
+    }
+  },
+  "by_set": {
+    "wild-b": {
+      "turns": 409,
+      "wer": 0.184,
+      "meaning_changed": 0.1809
+    }
+  },
+  "samples": [
+    {
+      "id": "wild-900006-heater-ref",
+      "turn": 2,
+      "voice": "gb-southern-f",
+      "written": "Turn that off, we'll heat it on solar tomorrow.",
+      "heard": "Turn on your phone and say hello to everyone.",
+      "lost": [
+        [
+          "command",
+          "off"
+        ],
+        [
+          "device",
+          "heat"
+        ],
+        [
+          "device",
+          "solar"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900000-missing-pool",
+      "turn": 0,
+      "voice": "gb-jenny",
+      "written": "is the pool pump on",
+      "heard": "Is the pool at HomePod?",
+      "lost": [
+        [
+          "device",
+          "pump"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900002-house-rundown",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "Give me a quick rundown on the house.",
+      "heard": "Give me a quick rundown of that.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ],
+        [
+          "device",
+          "house"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900002-house-rundown",
+      "turn": 1,
+      "voice": "au-p326",
+      "written": "Lock that mudroom door then.",
+      "heard": "Not that much of a doner.",
+      "lost": [
+        [
+          "command",
+          "lock"
+        ],
+        [
+          "device",
+          "mudroom door"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900004-ctrl-ensuite-multiturn",
+      "turn": 0,
+      "voice": "gb-alan",
+      "written": "dim the ensuite lights, don't want to wake Hannah",
+      "heard": "Dimmy and suit lights don't want to wake Hannah.",
+      "lost": [
+        [
+          "command",
+          "dim"
+        ],
+        [
+          "room",
+          "ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900004-media-pause-resume-multiturn",
+      "turn": 1,
+      "voice": "au-p374",
+      "written": "false alarm, play it again",
+      "heard": "Also now, thank you again.",
+      "lost": [
+        [
+          "device",
+          "alarm"
+        ],
+        [
+          "command",
+          "play"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900004-mixed-ensuite-heater",
+      "turn": 0,
+      "voice": "gb-northern-m",
+      "written": "warm up the ensuite before I hop in the shower",
+      "heard": "We'll not be in suit before I hop on the shower.",
+      "lost": [
+        [
+          "command",
+          "up"
+        ],
+        [
+          "room",
+          "ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900007-no-pool",
+      "turn": 0,
+      "voice": "gb-southern-f",
+      "written": "can you turn the pool pump on",
+      "heard": "Thank you, channel, for all the fun.",
+      "lost": [
+        [
+          "device",
+          "pump"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900007-tv-news",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "stick the news on in the living room",
+      "heard": "Stick them in your stomach and let it go.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ],
+        [
+          "room",
+          "living room"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900008-disarm-confirm",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "Turn the alarm off.",
+      "heard": "Thank you all so much.",
+      "lost": [
+        [
+          "device",
+          "alarm"
+        ],
+        [
+          "command",
+          "off"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900008-dryer-now",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "Can I put a load through the dryer or will I flatten us?",
+      "heard": "Can I put the luxury to try it or will I flask it?",
+      "lost": [
+        [
+          "device",
+          "load"
+        ],
+        [
+          "device",
+          "dryer"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900008-hydronic-correction",
+      "turn": 0,
+      "voice": "gb-northern-m",
+      "written": "Warm the dining hall up, it's an icebox\u2014 actually no, do the hydronic, the whole house is cold.",
+      "heard": "Warming the Dining Hall, it's an ice box actually known to the Hydonic, the whole house is cold.",
+      "lost": [
+        [
+          "command",
+          "up"
+        ],
+        [
+          "device",
+          "hydronic"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900011-disarm-alarm",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "Can you disarm the alarm.",
+      "heard": "Can you be somewhere long?",
+      "lost": [
+        [
+          "command",
+          "disarm"
+        ],
+        [
+          "device",
+          "alarm"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900000-ctrl-compound-alfresco-office",
+      "turn": 0,
+      "voice": "us-lessac",
+      "written": "turn on the alfresco lights and kill the fan in Pete's office",
+      "heard": "Turn on the old fresco lights and kill the fan, Pete's Office.",
+      "lost": [
+        [
+          "room",
+          "alfresco"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900000-ctrl-lock-mudroom",
+      "turn": 0,
+      "voice": "gb-alba",
+      "written": "we left the mudroom door open again, lock it up",
+      "heard": "We left the Mudroom, do it open again, lock it up.",
+      "lost": [
+        [
+          "device",
+          "mudroom door"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900000-media-ma-kitchen",
+      "turn": 0,
+      "voice": "gb-southern-f",
+      "written": "stick on some Kasey Chambers in the kitchen",
+      "heard": "They're called some case of chambers in the kitchen.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900000-status-doors-closed",
+      "turn": 0,
+      "voice": "gb-southern-f",
+      "written": "are all the doors shut",
+      "heard": "Are all our doors shopped?",
+      "lost": [
+        [
+          "command",
+          "shut"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900001-battery-check",
+      "turn": 1,
+      "voice": "gb-alba",
+      "written": "and what's the solar doing right now",
+      "heard": "And what's the solo doing right now?",
+      "lost": [
+        [
+          "device",
+          "solar"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900001-car-charge",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "how's the shark looking, is it charged up",
+      "heard": "How's the sharp looking? Is it charged up?",
+      "lost": [
+        [
+          "device",
+          "shark"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900001-dishwasher-status",
+      "turn": 0,
+      "voice": "gb-alba",
+      "written": "is the dishwasher going",
+      "heard": "It's the dish we should go in. I told you already.",
+      "lost": [
+        [
+          "device",
+          "dishwasher"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900001-exhaust-fan-clarify",
+      "turn": 1,
+      "voice": "gb-cori",
+      "written": "the guest ensuite one",
+      "heard": "The Guest and Suit One.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900001-tv-too-loud",
+      "turn": 1,
+      "voice": "gb-cori",
+      "written": "still can't hear myself think, just mute it",
+      "heard": "Still can't hear myself think, just muted.",
+      "lost": [
+        [
+          "command",
+          "mute"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900001-unlock-workshop",
+      "turn": 0,
+      "voice": "gb-southern-f",
+      "written": "pop the workshop door for me",
+      "heard": "Lots of work to do for me.",
+      "lost": [
+        [
+          "device",
+          "workshop door"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900002-battery-then-solar",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "How's the battery holding up?",
+      "heard": "How's the bathroom going up?",
+      "lost": [
+        [
+          "room",
+          "battery"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900002-battery-then-solar",
+      "turn": 1,
+      "voice": "au-p326",
+      "written": "and are we getting any solar still?",
+      "heard": "Are we getting any soda still?",
+      "lost": [
+        [
+          "device",
+          "solar"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900002-clarify-blinds",
+      "turn": 0,
+      "voice": "gb-northern-m",
+      "written": "Can you put the blinds down.",
+      "heard": "Can you put the lights down?",
+      "lost": [
+        [
+          "device",
+          "blinds"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900002-clarify-fan",
+      "turn": 1,
+      "voice": "au-p374",
+      "written": "Dining hall",
+      "heard": "Danging Hall. I want to talk about it.",
+      "lost": [
+        [
+          "room",
+          "dining hall"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900002-disarm-alarm",
+      "turn": 0,
+      "voice": "au-p374",
+      "written": "Disarm the alarm.",
+      "heard": "To Sound Alarm.",
+      "lost": [
+        [
+          "command",
+          "disarm"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900002-dishwasher-start",
+      "turn": 0,
+      "voice": "au-p374",
+      "written": "Go ahead and start the dishwasher.",
+      "heard": "Go ahead and start the disheship.",
+      "lost": [
+        [
+          "device",
+          "dishwasher"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900002-goodnight-shutdown",
+      "turn": 1,
+      "voice": "gb-northern-m",
+      "written": "oh leave the window, but can you get the fan off in my office too",
+      "heard": "Oh, leave the window, but can you get the sign off to my office, Pete?",
+      "lost": [
+        [
+          "device",
+          "fan"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900002-irrigation-switch",
+      "turn": 0,
+      "voice": "gb-alan",
+      "written": "Can you whack the irrigation on for the vegie beds.",
+      "heard": "Can you whack the irrigation onto the veggie beds?",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900002-no-pool",
+      "turn": 0,
+      "voice": "au-p374",
+      "written": "Turn on the pool pump would ya.",
+      "heard": "Turn on your computer and put it on.",
+      "lost": [
+        [
+          "device",
+          "pump"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900003-clarify-which-light",
+      "turn": 0,
+      "voice": "gb-northern-m",
+      "written": "turn the light off",
+      "heard": "Turn the lights on.",
+      "lost": [
+        [
+          "command",
+          "off"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900003-confirm-disarm-alarm",
+      "turn": 0,
+      "voice": "gb-alan",
+      "written": "can you disarm the alarm",
+      "heard": "Can you disarm it alone?",
+      "lost": [
+        [
+          "device",
+          "alarm"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900003-ctrl-fan-bedroom",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "it's stuffy, put the fan on in the bedroom",
+      "heard": "It's stuffy, but the fan aren't in the bedroom.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900003-media-volume-multiturn",
+      "turn": 0,
+      "voice": "gb-alan",
+      "written": "turn the tv up a bit",
+      "heard": "Turn the TV off a bit.",
+      "lost": [
+        [
+          "command",
+          "up"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900003-missing-aircon",
+      "turn": 0,
+      "voice": "gb-northern-m",
+      "written": "can you turn the aircon on in here",
+      "heard": "Can you turn the economic here?",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900004-clarify-which-light",
+      "turn": 1,
+      "voice": "gb-northern-m",
+      "written": "ensuite",
+      "heard": "Inserting of a listen to me.",
+      "lost": [
+        [
+          "room",
+          "ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900004-confirm-unlock-front",
+      "turn": 0,
+      "voice": "au-p374",
+      "written": "unlock the front door for me",
+      "heard": "I love the front door for me.",
+      "lost": [
+        [
+          "command",
+          "unlock"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900004-missing-irrigation",
+      "turn": 0,
+      "voice": "gb-northern-m",
+      "written": "water the garden thanks",
+      "heard": "All to the garden thanks.",
+      "lost": [
+        [
+          "device",
+          "water"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,307 @@
+{
+  "set": "kokoro__tiny__clean",
+  "stt": "tiny",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 136,
+  "words": 834,
+  "errors": 37,
+  "wer": 0.0444,
+  "exact": 0.8456,
+  "vocab_words": 285,
+  "vocab_errors": 11,
+  "vocab_wer": 0.0386,
+  "vocab": {
+    "room": {
+      "n": 76,
+      "err": 4,
+      "wer": 0.0526
+    },
+    "device": {
+      "n": 105,
+      "err": 2,
+      "wer": 0.019
+    },
+    "person": {
+      "n": 9,
+      "err": 1,
+      "wer": 0.1111
+    },
+    "number": {
+      "n": 11,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 84,
+      "err": 4,
+      "wer": 0.0476
+    }
+  },
+  "meaning_changed": 0.0735,
+  "meaning_changed_n": 10,
+  "meaning_by_kind": {
+    "room": 0.0294,
+    "device": 0.0074,
+    "person": 0.0074,
+    "number": 0.0,
+    "command": 0.0294
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 1.1552,
+    "p50": 1.1639,
+    "p90": 1.5151,
+    "rtf": 0.3965,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nicole": {
+      "turns": 5,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-nova": {
+      "turns": 4,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sarah": {
+      "turns": 12,
+      "wer": 0.0645,
+      "meaning_changed": 0.1667
+    },
+    "t-k-af-sky": {
+      "turns": 12,
+      "wer": 0.0256,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-eric": {
+      "turns": 13,
+      "wer": 0.0864,
+      "meaning_changed": 0.1538
+    },
+    "t-k-am-liam": {
+      "turns": 11,
+      "wer": 0.0519,
+      "meaning_changed": 0.0909
+    },
+    "t-k-am-onyx": {
+      "turns": 5,
+      "wer": 0.0909,
+      "meaning_changed": 0.2
+    },
+    "t-k-am-puck": {
+      "turns": 9,
+      "wer": 0.0714,
+      "meaning_changed": 0.2222
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 9,
+      "wer": 0.0508,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 8,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 7,
+      "wer": 0.025,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 9,
+      "wer": 0.1,
+      "meaning_changed": 0.2222
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 3,
+      "wer": 0.125,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 11,
+      "wer": 0.0448,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 8,
+      "wer": 0.0154,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 10,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 28,
+      "wer": 0.0118,
+      "meaning_changed": 0.0357
+    },
+    "1.0": {
+      "turns": 69,
+      "wer": 0.0485,
+      "meaning_changed": 0.0725
+    },
+    "1.15": {
+      "turns": 39,
+      "wer": 0.0595,
+      "meaning_changed": 0.1026
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 136,
+      "wer": 0.0444,
+      "meaning_changed": 0.0735
+    }
+  },
+  "by_set": {
+    "kokoro__tiny__clean": {
+      "turns": 136,
+      "wer": 0.0444,
+      "meaning_changed": 0.0735
+    }
+  },
+  "samples": [
+    {
+      "id": "b300-2039",
+      "turn": 0,
+      "voice": "t-k-bf-isabella-alice",
+      "written": "could you lock the door in the Mudroom",
+      "heard": "Could you lock the door in the mad rooms?",
+      "lost": [
+        [
+          "room",
+          "mudroom"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3016",
+      "turn": 0,
+      "voice": "t-k-af-sarah",
+      "written": "Off out, see you later.",
+      "heard": "Offout, see you later.",
+      "lost": [
+        [
+          "command",
+          "off"
+        ]
+      ]
+    },
+    {
+      "id": "b300-4627",
+      "turn": 0,
+      "voice": "t-k-am-eric",
+      "written": "hey, is Freya in",
+      "heard": "He is frail and",
+      "lost": [
+        [
+          "person",
+          "freya"
+        ]
+      ]
+    },
+    {
+      "id": "b300-664",
+      "turn": 1,
+      "voice": "t-k-am-puck",
+      "written": "Alfresco please.",
+      "heard": "Well, fresco, please.",
+      "lost": [
+        [
+          "room",
+          "alfresco"
+        ]
+      ]
+    },
+    {
+      "id": "b300-712",
+      "turn": 1,
+      "voice": "t-k-am-onyx",
+      "written": "In the kitchen.",
+      "heard": "in the catch-in.",
+      "lost": [
+        [
+          "room",
+          "kitchen"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-1632",
+      "turn": 0,
+      "voice": "t-k-am-liam",
+      "written": "can you put the fan on",
+      "heard": "I can you put the fan ons.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-10000-655",
+      "turn": 1,
+      "voice": "t-k-am-eric",
+      "written": "Yeah, unlock it.",
+      "heard": "You're unlocked.",
+      "lost": [
+        [
+          "command",
+          "unlock"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-15000-1036",
+      "turn": 0,
+      "voice": "t-k-af-sarah",
+      "written": "Off to bed, lock up behind us",
+      "heard": "After bed, lock up behind us.",
+      "lost": [
+        [
+          "command",
+          "off"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-15000-1269",
+      "turn": 1,
+      "voice": "t-k-am-puck",
+      "written": "Lamp 9.",
+      "heard": "Lab 9.",
+      "lost": [
+        [
+          "device",
+          "lamp 9"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-20000-1569",
+      "turn": 1,
+      "voice": "t-k-bf-isabella-alice",
+      "written": "Games room.",
+      "heard": "Game is room.",
+      "lost": [
+        [
+          "room",
+          "games room"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

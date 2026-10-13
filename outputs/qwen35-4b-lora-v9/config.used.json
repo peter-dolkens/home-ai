@@ -1,0 +1,20 @@
+{
+  "_comment": "Voice robustness (Peter, 29 Sep): v8's data and recipe, with 34% of conversations' user turns replaced by speech-to-text round trips (Kokoro/Piper -> parakeet/whisper, training-only voices), STT-style casing on 634 more, and 468 homophone/split-name/number near-misses (8 ambiguous lock/look -> clarifying question). homeai/datagen/asr_v9.py; leakage vs every test set: 0.",
+  "base_model": "Qwen/Qwen3.5-4B",
+  "hf_tokenizer": "Qwen/Qwen3.5-4B",
+  "ollama_template_from": "qwen3.5:4b",
+  "instruction_part": "<|im_start|>user\n",
+  "response_part": "<|im_start|>assistant\n",
+  "max_seq_len": 8192,
+  "lora_r": 16,
+  "lora_alpha": 16,
+  "epochs": 2,
+  "lr": 0.0002,
+  "batch_size": 1,
+  "grad_accum": 16,
+  "seed": 3407,
+  "train": "data/generated/train-v9.jsonl",
+  "val": "data/generated/val-v3.jsonl",
+  "out": "outputs/qwen35-4b-lora-v9",
+  "load_in_4bit": false
+}

@@ -1,6 +1,6 @@
 """Which machine a training log or eval report came from. Several hosts of different specs run jobs (cassowary RTX 3090,
 lapwing RTX 3080, frogmouth M5, falcon M2 Pro): throughput and latency are only comparable within one host.
-scripts/mlx-env.sh sets HOMEAI_HOST / HOMEAI_HARDWARE / HOMEAI_HOST_NOTE; elsewhere the hostname and GPU are detected."""
+scripts/mlx-env.sh sets HOMEAI_HOST / HOMEAI_HARDWARE / HOMEAI_HOST_NOTE (falcon_stream also HOMEAI_OLLAMA_VERSION); elsewhere the hostname and GPU are detected."""
 from __future__ import annotations
 
 import os
@@ -28,4 +28,6 @@ def host_info() -> dict:
             "hardware": os.environ.get("HOMEAI_HARDWARE") or _hardware()}
     if os.environ.get("HOMEAI_HOST_NOTE"):
         info["host_note"] = os.environ["HOMEAI_HOST_NOTE"]
+    if os.environ.get("HOMEAI_OLLAMA_VERSION"):  # the Ollama build serving the model (falcon runs several side by side)
+        info["ollama_version"] = os.environ["HOMEAI_OLLAMA_VERSION"]
     return info

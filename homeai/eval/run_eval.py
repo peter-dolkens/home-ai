@@ -24,6 +24,7 @@ import time
 from ..bridge.agent import OllamaClient, make_client
 from .match import item_hit
 from .sensitive import HALF, calls_all_sensitive
+from .. import prompt_layout  # requests in the layout the model was trained on (v10 stable_prefix, v11 user_context, v12 clock_in_user)
 from ..house.bighouse import house_for  # small houses via generator.make_house, big ones via ex["big"]
 from ..house.sim import resolve_target
 from ..tools import TOOLS
@@ -200,10 +201,12 @@ def main():
     ap.add_argument("--out", default=None, help="report dir (default outputs/eval/<model>)")
     ap.add_argument("--num-ctx", type=int, default=8192)
     ap.add_argument("--think", choices=["on", "off", "default"], default="off", help="thinking mode for hybrid models (Ollama 'think' flag)")
+    prompt_layout.add_arg(ap)
     a = ap.parse_args()
     out_dir = a.out or os.path.join("outputs", "eval", a.model.replace(":", "_").replace("/", "_"))
     os.makedirs(out_dir, exist_ok=True)
     llm = make_client(a.ollama, a.model, a.num_ctx, temperature=0.0, think={"on": True, "off": False, "default": None}[a.think])
+    layout = prompt_layout.for_model(a.model, a.prompt_layout)
     rows = [json.loads(l) for l in open(a.data) if l.strip()]
     if a.limit:
         rows = rows[:a.limit]
@@ -221,7 +224,7 @@ def main():
         for j, m in enumerate(msgs):
             if m["role"] != "assistant":
                 continue
-            ctx = to_ollama(msgs[:j])
+            ctx = prompt_layout.render(to_ollama(msgs[:j]), layout)  # scoring below reads the stored (bare) turns
             try:
                 got = llm.chat(ctx, tools)
             except Exception as e:  # noqa: BLE001
@@ -270,7 +273,7 @@ def main():
     for k, v in sorted(stats.items(), key=lambda kv: kv[1]["ok"] / max(1, kv[1]["n"])):
         print(f"{k:22s} {v['ok'] / max(1, v['n']):7.1%} {v['n']:5d}")
     report = {"model": a.model, "data": a.data, "examples": len(rows), "turns": total_n, "pass": total_ok / max(1, total_n),
-              "seconds_per_turn": (time.time() - t0) / max(1, total_n), "think": a.think,
+              "seconds_per_turn": (time.time() - t0) / max(1, total_n), "think": a.think, "prompt_layout": layout,
               "by_kind": kinds, "by_category": stats, "overfetch_mean": (sum(overs) / len(overs)) if overs else None}
     with open(os.path.join(out_dir, "report.json"), "w") as f:
         json.dump(report, f, indent=2)

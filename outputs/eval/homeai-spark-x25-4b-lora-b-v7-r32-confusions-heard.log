@@ -1,0 +1,57 @@
+[25/571] 72.0% 23s
+[50/571] 70.0% 41s
+[75/571] 70.7% 61s
+[100/571] 69.0% 81s
+[125/571] 68.8% 108s
+[150/571] 68.0% 133s
+[175/571] 65.4% 160s
+[200/571] 62.7% 185s
+[225/571] 60.4% 212s
+[250/571] 58.0% 237s
+[275/571] 56.7% 262s
+[300/571] 56.0% 288s
+[325/571] 55.7% 318s
+[350/571] 54.9% 342s
+[375/571] 54.5% 369s
+[400/571] 53.6% 395s
+[425/571] 53.5% 419s
+[450/571] 53.7% 448s
+[475/571] 53.8% 467s
+[500/571] 53.7% 494s
+[525/571] 52.7% 525s
+[550/571] 52.1% 553s
+{
+  "model": "homeai-spark-x25-4b-lora-b-v7-r32",
+  "mode": "e2e",
+  "host": "magpie",
+  "hardware": "apple-m2",
+  "host_note": "standalone ollama 0.21.2 (Metal) on magpie, e2e client elsewhere",
+  "ollama": "http://localhost:11435",
+  "prompt_layout": "stable_prefix",
+  "data": "data/generated/heard/confusions.jsonl",
+  "examples": 571,
+  "turns": 571,
+  "pass": 0.5122591943957968,
+  "conversation_pass": 0.5096322241681261,
+  "seconds_per_turn": 0.4756397846901771,
+  "calls_per_request": 2.1225919439579686,
+  "errors": 1,
+  "by_kind": {
+    "act": {
+      "n": 312,
+      "ok": 156
+    },
+    "state": {
+      "n": 571,
+      "ok": 380
+    },
+    "reply": {
+      "n": 571,
+      "ok": 468
+    },
+    "answer": {
+      "n": 259,
+      "ok": 136.5
+    }
+  }
+}

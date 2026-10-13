@@ -1,0 +1,11 @@
+{
+  "data": "data/generated/heard/wild-small-biased.jsonl",
+  "layout": "clock_in_user",
+  "examples": 303,
+  "turns": 409,
+  "pass": 1.0,
+  "conversation_pass": 1.0,
+  "errors": 0,
+  "wrong_layout_calls": 0,
+  "seconds": 3.0
+}

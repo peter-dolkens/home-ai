@@ -3,15 +3,21 @@ be dry-run on any machine with `transformers` installed."""
 from __future__ import annotations
 
 import json
-from typing import Any
+from typing import Any, Optional
 
+from ..prompt_layout import apply as apply_layout
 from ..tools import TOOLS
 from ..tools_b import for_toolset
 
 
-def load_jsonl(path: str) -> list[dict[str, Any]]:
+def load_jsonl(path: str, layout: Optional[str] = None) -> list[dict[str, Any]]:
+    """layout: the config's "prompt_layout" (v10 "stable_prefix", v11 "user_context", v12 "clock_in_user"): every row's
+    conversation rendered in it (homeai/house/snapshot.py relayout_messages; user_context adds each user turn's context
+    line here, clock_in_user its clock line, so the files keep bare utterances), and the train and the val file train alike whichever layout they were stored in.
+    None (every config before v10) leaves the rows as stored."""
     with open(path) as f:
-        return [json.loads(l) for l in f if l.strip()]
+        rows = [json.loads(l) for l in f if l.strip()]
+    return [apply_layout(r, layout) for r in rows] if layout else rows
 
 
 def clean_messages(messages: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -43,6 +49,22 @@ def render(tokenizer, example: dict[str, Any]) -> str:
         # design B examples carry "toolset": "b" and train on B's schemas; orchestrator examples "orch" (B's + ask_rooms)
         tools = for_toolset(example.get("toolset"))[0]
     return text_tokenizer(tokenizer).apply_chat_template(clean_messages(example["messages"]), tools=tools, tokenize=False, add_generation_prompt=False)
+
+
+def check_tool_calls_rendered(tokenizer, examples, sample: int = 20) -> None:
+    """Fail fast when the chat template silently drops assistant tool calls (an old LFM2.5 1.2B template did, and
+    the model learned to answer with nothing)."""
+    with_calls = [e for e in examples if any(m.get("tool_calls") for m in e["messages"])][:sample]
+    for ex in with_calls:
+        text = render(tokenizer, ex)
+        names = {tc["function"]["name"] for m in ex["messages"] for tc in m.get("tool_calls") or []}
+        # the tool list in the system prompt names every tool, so look after the first user turn
+        user = next(m["content"] for m in ex["messages"] if m["role"] == "user")
+        tail = text[text.find(user) + len(user):] if user and user in text else text
+        missing = [n for n in names if n not in tail]
+        if missing:
+            raise SystemExit(f"chat template drops tool calls ({missing} not rendered in {ex.get('id')}); "
+                             "set chat_template_from in the config")
 
 
 def render_all(tokenizer, examples, max_len: int):

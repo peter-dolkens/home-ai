@@ -1,0 +1,61 @@
+{
+  "model": "homeai-4b-lora-v10",
+  "data": "data/generated/wild.jsonl,data/generated/wild2.jsonl",
+  "num_ctx": 8192,
+  "prompt_layout": "stable_prefix",
+  "modes": {
+    "prompt": {
+      "groups": 6,
+      "requests": 36,
+      "cold_mean": 11.138,
+      "warm_mean": 10.97,
+      "cold_p50": 7.845,
+      "warm_p50": 10.532,
+      "warm_p90": 17.215,
+      "cold_eval_tokens": 1454.167,
+      "warm_eval_tokens": 1453.7,
+      "cold_prompt_s": 2.856,
+      "warm_prompt_s": 2.844,
+      "prompt_tokens": 1454.167,
+      "later_eval_tokens": 1661.926,
+      "calls_per_request": 2.167
+    },
+    "house": {
+      "groups": 6,
+      "requests": 36,
+      "cold_mean": 11.139,
+      "warm_mean": 10.97,
+      "cold_p50": 7.842,
+      "warm_p50": 10.575,
+      "warm_p90": 17.234,
+      "cold_eval_tokens": 1454.167,
+      "warm_eval_tokens": 1453.7,
+      "cold_prompt_s": 2.857,
+      "warm_prompt_s": 2.843,
+      "prompt_tokens": 1454.167,
+      "later_eval_tokens": 1661.926,
+      "calls_per_request": 2.167
+    },
+    "header-last": {
+      "groups": 6,
+      "requests": 36,
+      "cold_mean": 11.147,
+      "warm_mean": 10.972,
+      "cold_p50": 7.865,
+      "warm_p50": 10.566,
+      "warm_p90": 17.248,
+      "cold_eval_tokens": 1454.167,
+      "warm_eval_tokens": 1453.7,
+      "cold_prompt_s": 2.856,
+      "warm_prompt_s": 2.845,
+      "prompt_tokens": 1454.167,
+      "later_eval_tokens": 1661.926,
+      "calls_per_request": 2.167
+    }
+  },
+  "seconds": 1188.0,
+  "host": "falcon",
+  "hardware": "apple-m2pro",
+  "host_note": "falcon stream: Ollama 0.21.2, cassowary settings (KEEP_ALIVE=-1, NUM_PARALLEL=2), Q4_K_M, num_ctx 8192, stable_prefix prompts",
+  "ollama": "http://127.0.0.1:11610"
+}

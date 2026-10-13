@@ -30,6 +30,7 @@ import time
 import urllib.request
 from typing import Any, Optional
 
+from ..host import host_info
 from .data import build_house
 from .schema import outcome
 
@@ -350,6 +351,7 @@ def main():
         results = score(rows, responses)
         summ = summarise(results)
         summ["wall_s"] = round(time.time() - t, 1)
+        summ.update(host_info())  # latency is per host
         label = os.path.basename(path)
         print_summary(summ, label)
         if a.out:

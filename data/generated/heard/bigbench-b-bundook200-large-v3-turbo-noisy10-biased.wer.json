@@ -1,0 +1,741 @@
+{
+  "set": "bigbench-b-bundook200",
+  "stt": "large-v3-turbo",
+  "condition": "noisy10-biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 228,
+  "words": 1321,
+  "errors": 486,
+  "wer": 0.3679,
+  "exact": 0.5439,
+  "vocab_words": 463,
+  "vocab_errors": 82,
+  "vocab_wer": 0.1771,
+  "vocab": {
+    "room": {
+      "n": 124,
+      "err": 21,
+      "wer": 0.1694
+    },
+    "device": {
+      "n": 174,
+      "err": 28,
+      "wer": 0.1609
+    },
+    "person": {
+      "n": 16,
+      "err": 5,
+      "wer": 0.3125
+    },
+    "number": {
+      "n": 11,
+      "err": 1,
+      "wer": 0.0909
+    },
+    "command": {
+      "n": 138,
+      "err": 27,
+      "wer": 0.1957
+    }
+  },
+  "meaning_changed": 0.2281,
+  "meaning_changed_n": 52,
+  "meaning_by_kind": {
+    "room": 0.0746,
+    "device": 0.0877,
+    "person": 0.0175,
+    "number": 0.0044,
+    "command": 0.1096
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 17.6641,
+    "p50": 11.3847,
+    "p90": 37.3905,
+    "rtf": 6.6359,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "au-p326": {
+      "turns": 16,
+      "wer": 0.5275,
+      "meaning_changed": 0.25
+    },
+    "au-p374": {
+      "turns": 23,
+      "wer": 0.6718,
+      "meaning_changed": 0.4348
+    },
+    "gb-alan": {
+      "turns": 23,
+      "wer": 0.5952,
+      "meaning_changed": 0.087
+    },
+    "gb-alba": {
+      "turns": 16,
+      "wer": 0.175,
+      "meaning_changed": 0.0
+    },
+    "gb-cori": {
+      "turns": 24,
+      "wer": 0.3885,
+      "meaning_changed": 0.4583
+    },
+    "gb-jenny": {
+      "turns": 23,
+      "wer": 0.124,
+      "meaning_changed": 0.087
+    },
+    "gb-northern-m": {
+      "turns": 30,
+      "wer": 0.2051,
+      "meaning_changed": 0.3333
+    },
+    "gb-southern-f": {
+      "turns": 22,
+      "wer": 0.2746,
+      "meaning_changed": 0.1818
+    },
+    "us-amy": {
+      "turns": 11,
+      "wer": 0.3061,
+      "meaning_changed": 0.0909
+    },
+    "us-lessac": {
+      "turns": 19,
+      "wer": 0.2476,
+      "meaning_changed": 0.1579
+    },
+    "us-ryan": {
+      "turns": 21,
+      "wer": 0.5299,
+      "meaning_changed": 0.2381
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 63,
+      "wer": 0.2629,
+      "meaning_changed": 0.2222
+    },
+    "1.0": {
+      "turns": 109,
+      "wer": 0.3613,
+      "meaning_changed": 0.2294
+    },
+    "1.15": {
+      "turns": 56,
+      "wer": 0.5016,
+      "meaning_changed": 0.2321
+    }
+  },
+  "by_noise": {
+    "kitchen": {
+      "turns": 119,
+      "wer": 0.2695,
+      "meaning_changed": 0.2437
+    },
+    "tv": {
+      "turns": 109,
+      "wer": 0.4769,
+      "meaning_changed": 0.211
+    }
+  },
+  "by_set": {
+    "bigbench-b-bundook200": {
+      "turns": 228,
+      "wer": 0.3679,
+      "meaning_changed": 0.2281
+    }
+  },
+  "samples": [
+    {
+      "id": "big-bundook_full-plan-163",
+      "turn": 0,
+      "voice": "au-p374",
+      "written": "Turn the downlights in Pete's office on.",
+      "heard": "Kind of dad likes to repeat off the song.",
+      "lost": [
+        [
+          "device",
+          "downlights"
+        ],
+        [
+          "room",
+          "petes office"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-123",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "ok heading off for the day, lock up",
+      "heard": "Okay, heading off for the day. Log car.",
+      "lost": [
+        [
+          "command",
+          "lock"
+        ],
+        [
+          "command",
+          "up"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-125",
+      "turn": 0,
+      "voice": "us-ryan",
+      "written": "Guest robe lights to 25 percent.",
+      "heard": "Guest Robe, Set, Desi Floor, Desi Floorlight 5, Desi Floorlaz, Desi Floorz 2, Desi Floorz 4, Desi Floorz 1, Desi Floorz , Desi Floorz 2, Ploz, Desi, Desi. Desi, Desi.",
+      "lost": [
+        [
+          "device",
+          "lights"
+        ],
+        [
+          "number",
+          "25"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-147",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "is the fan on in the toilet",
+      "heard": "It's the fan, or within a twit.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ],
+        [
+          "room",
+          "toilet"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-158",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "Mudroom door unlock.",
+      "heard": "Mudroom, Mudroom, Dorian Later 2, Mudroom, Mudroom, Mudroom, Mudroom, Mudroom, Mudroom.",
+      "lost": [
+        [
+          "device",
+          "mudroom door"
+        ],
+        [
+          "command",
+          "unlock"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-174",
+      "turn": 0,
+      "voice": "us-ryan",
+      "written": "Floodlight 3 off.",
+      "heard": "Floodlights,\uae30\ub294 Football Flood Xe Flood Xerex Flood Xen'",
+      "lost": [
+        [
+          "device",
+          "floodlight 3"
+        ],
+        [
+          "command",
+          "off"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-192",
+      "turn": 0,
+      "voice": "us-lessac",
+      "written": "switch the laundry dehumidifier on",
+      "heard": "Switch the laundry. Dehumidify or All. I don't want to talk about",
+      "lost": [
+        [
+          "device",
+          "dehumidifier"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-194",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "Is Amber still in the media room?",
+      "heard": "His arm is still in the media, so we don't know what to talk about.",
+      "lost": [
+        [
+          "person",
+          "amber"
+        ],
+        [
+          "room",
+          "media room"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-21",
+      "turn": 0,
+      "voice": "gb-northern-m",
+      "written": "can you turn the pendant 2 in the dining hall on please",
+      "heard": "Can you turn the pendant to the dining hall please?",
+      "lost": [
+        [
+          "device",
+          "pendant 2"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-22",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "Can you lock the workshop door?",
+      "heard": "I need a lot of work to do it all.",
+      "lost": [
+        [
+          "command",
+          "lock"
+        ],
+        [
+          "device",
+          "workshop door"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-68",
+      "turn": 0,
+      "voice": "us-ryan",
+      "written": "Front door unlock.",
+      "heard": "Front\u5883 2, E, Entry Floorlight 2, Entry Floor\ufffd, Entry Floorlight 2, Entry Floorlight 3, Floorch, Der, Floorch, Floorch, Flo, Floorch, Floorch, Flo\u043e\u043a\u043e\u0439 2, Floorch, Float, Floorch, Floorch.",
+      "lost": [
+        [
+          "device",
+          "front door"
+        ],
+        [
+          "command",
+          "unlock"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-7",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "Turn off the guest ensuite towel rail.",
+      "heard": "Turn off the guest and suit to tower, Robella.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ],
+        [
+          "device",
+          "towel rail"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-72",
+      "turn": 0,
+      "voice": "us-amy",
+      "written": "switch the carport batten lights on",
+      "heard": "Switch the Carport Batten, Ap\u043d\u043e\u0441\u0442\u044c\u044e, Interquest, Interest Radio, Interest, Interest, Desc",
+      "lost": [
+        [
+          "device",
+          "batten lights"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-79",
+      "turn": 0,
+      "voice": "au-p374",
+      "written": "Floodlights off.",
+      "heard": "Floodlight 2,ife Floorlight 3, Floorz2, Flood 5, Floorce Floorz, Floorz Floorz Floorz, Floorz Flo G, Float, Flo, Floorz, Flo- Coz. Floorz. Flo, Floorz Flo 2021. Floodz Floz, Flo, Floot.",
+      "lost": [
+        [
+          "device",
+          "floodlights"
+        ],
+        [
+          "command",
+          "off"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-94",
+      "turn": 0,
+      "voice": "gb-alan",
+      "written": "um, switch the alfresco downlights on",
+      "heard": "And d\u4efd Flood thought it was on the 45 lemar they points and they were about dor \u0636arios roads 2, Naries 2, hoops Forlessed 40 residents a lot\u0648 listings a lot of zoo, bae giowo Practi, the02 ca, De Whose? EVone ignor. Hey, Hode12 2 For seconds. So b I\u304d\u307e\u3059\ufffd!3 as Sans 121 phthTW,OULDa7 Com 07 acronym.3",
+      "lost": [
+        [
+          "room",
+          "alfresco"
+        ],
+        [
+          "device",
+          "downlights"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-106",
+      "turn": 0,
+      "voice": "gb-alan",
+      "written": "turn off the guest ensuite towel rail",
+      "heard": "Turn off the guest and suit towel rail.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-109",
+      "turn": 0,
+      "voice": "gb-northern-m",
+      "written": "Is Amber in the master ensuite?",
+      "heard": "It's Amber in the Master Instinct.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-110",
+      "turn": 0,
+      "voice": "gb-northern-m",
+      "written": "hey house, okay to use the kettle",
+      "heard": "Hey, how's it okay to use the kettle?",
+      "lost": [
+        [
+          "device",
+          "house"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-120",
+      "turn": 0,
+      "voice": "gb-southern-f",
+      "written": "Batten lights on.",
+      "heard": "Baton lights on. Baton lights on.",
+      "lost": [
+        [
+          "device",
+          "batten lights"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-121",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "Is the house locked up?",
+      "heard": "Is the house locked on? Is the house locked on?",
+      "lost": [
+        [
+          "command",
+          "up"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-126",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "Volume to 50 in the guest bedroom.",
+      "heard": "Volumes of 50 and the guests by arrow!",
+      "lost": [
+        [
+          "room",
+          "guest bedroom"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-128",
+      "turn": 0,
+      "voice": "au-p374",
+      "written": "Track accent on.",
+      "heard": "Trek Accent On.",
+      "lost": [
+        [
+          "device",
+          "track accent"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-128",
+      "turn": 1,
+      "voice": "au-p374",
+      "written": "Pete's office one.",
+      "heard": "Pizza Fest 1, I told you.",
+      "lost": [
+        [
+          "room",
+          "petes office"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-130",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "um, where's Amber",
+      "heard": "Onward's Edge. Let's talk about it.",
+      "lost": [
+        [
+          "person",
+          "amber"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-133",
+      "turn": 0,
+      "voice": "gb-jenny",
+      "written": "play something in Pete's office thanks",
+      "heard": "Place something in Pete's office, thanks.",
+      "lost": [
+        [
+          "command",
+          "play"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-136",
+      "turn": 0,
+      "voice": "gb-northern-m",
+      "written": "Is BYD Shark charging?",
+      "heard": "It's B-1, E-Shark Charging.",
+      "lost": [
+        [
+          "device",
+          "byd shark"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-149",
+      "turn": 0,
+      "voice": "au-p374",
+      "written": "Is BYD Shark locked?",
+      "heard": "It's B.Y.D.D.Sharp.Law.D.Sharp.Law",
+      "lost": [
+        [
+          "device",
+          "byd shark"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-155",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "stop watering the vegie beds",
+      "heard": "Stopped watering the veggie beds.",
+      "lost": [
+        [
+          "command",
+          "stop"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-158",
+      "turn": 1,
+      "voice": "gb-cori",
+      "written": "Yeah, unlock it.",
+      "heard": "Yeah, a locket.",
+      "lost": [
+        [
+          "command",
+          "unlock"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-16",
+      "turn": 0,
+      "voice": "us-lessac",
+      "written": "Is Peter in the guest ensuite?",
+      "heard": "Is Peter and the guest in suit?",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-161",
+      "turn": 0,
+      "voice": "au-p374",
+      "written": "um, louder",
+      "heard": "I'm Laarra.",
+      "lost": [
+        [
+          "command",
+          "louder"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-166",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "is the house locked up",
+      "heard": "Is the house swapped already?",
+      "lost": [
+        [
+          "command",
+          "up"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-17",
+      "turn": 0,
+      "voice": "gb-jenny",
+      "written": "Has the pump been running?",
+      "heard": "Has the lab been running 23 and...",
+      "lost": [
+        [
+          "device",
+          "pump"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-188",
+      "turn": 0,
+      "voice": "gb-southern-f",
+      "written": "quick question, we're out, is the house all locked up and okay",
+      "heard": "Quick question, we're out, this is the household, doctor, and okay.",
+      "lost": [
+        [
+          "command",
+          "up"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-19",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "stop all the sprinklers",
+      "heard": "Stopped all the sprinklers.",
+      "lost": [
+        [
+          "command",
+          "stop"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-195",
+      "turn": 0,
+      "voice": "gb-southern-f",
+      "written": "turn off the media room lights and then turn on the guest robe lights",
+      "heard": "Turn off the media room lights and then turn on the guest road lights.",
+      "lost": [
+        [
+          "room",
+          "guest robe"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-31",
+      "turn": 0,
+      "voice": "au-p374",
+      "written": "Play the whole of Abbey Road in the alfresco.",
+      "heard": "Play the whole of Abbey Road in the Neofresco.",
+      "lost": [
+        [
+          "room",
+          "alfresco"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-34",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "Are any lights on?",
+      "heard": "This is our Andy Light song.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-36",
+      "turn": 0,
+      "voice": "us-ryan",
+      "written": "turn off the battery shed lights and turn on the master ensuite lights",
+      "heard": "Turn off the battery shed lights and turn on the master and suit lights.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "big-bundook_full-plan-47",
+      "turn": 0,
+      "voice": "us-ryan",
+      "written": "Lights on in the dining hall and the master ensuite.",
+      "heard": "Lights on in the Dining Hall and the Master in Suit.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

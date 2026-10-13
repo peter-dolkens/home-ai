@@ -1,0 +1,6 @@
+2026-10-05 10:16:23 mlx_lm.convert mlx6
+[INFO] Loading
+[INFO] Quantizing
+[INFO] Quantized model with 6.501 bits per weight.
+2026-10-05 10:16:37 push mlx/homeai-lfm25-1.2b-lora-b-v7r32-mlx6 (927 MB)
+2026-10-05 10:17:14 homeai-lfm25-1.2b-lora-b-v7r32 MLX artifacts pushed: mlx6

@@ -1,0 +1,12 @@
+2026-10-13 23:44:54 homeai-lfm25-230m-lora-b-v8r256e6: imported on lapwing
+2026-10-13 23:44:54 homeai-lfm25-230m-lora-b-v8r256e6: lapwing heard evals started
+2026-10-13 23:45:07 homeai-lfm25-230m-lora-b-v8r256e6: cassowary import + benchmark queued
+2026-10-13 23:45:47 mlx_lm.convert mlx6
+[INFO] Loading
+[INFO] Using dtype: bfloat16
+[INFO] Quantizing
+[INFO] Quantized model with 6.502 bits per weight.
+2026-10-13 23:46:02 push mlx/homeai-lfm25-230m-lora-b-v8r256e6-mlx6 (182 MB)
+2026-10-13 23:46:10 homeai-lfm25-230m-lora-b-v8r256e6 MLX artifacts pushed: mlx6
+a (re)start is already queued
+2026-10-13 23:46:10 homeai-lfm25-230m-lora-b-v8r256e6: falcon MLX (mlx6) staged, stream started

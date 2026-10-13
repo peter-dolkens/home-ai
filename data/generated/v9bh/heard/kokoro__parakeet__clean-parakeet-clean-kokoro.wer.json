@@ -1,0 +1,294 @@
+{
+  "set": "kokoro__parakeet__clean",
+  "stt": "parakeet",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 92,
+  "words": 615,
+  "errors": 32,
+  "wer": 0.052,
+  "exact": 0.7935,
+  "vocab_words": 240,
+  "vocab_errors": 10,
+  "vocab_wer": 0.0417,
+  "vocab": {
+    "room": {
+      "n": 84,
+      "err": 8,
+      "wer": 0.0952
+    },
+    "device": {
+      "n": 86,
+      "err": 1,
+      "wer": 0.0116
+    },
+    "person": {
+      "n": 9,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 9,
+      "err": 1,
+      "wer": 0.1111
+    },
+    "command": {
+      "n": 52,
+      "err": 0,
+      "wer": 0.0
+    }
+  },
+  "meaning_changed": 0.0978,
+  "meaning_changed_n": 9,
+  "meaning_by_kind": {
+    "room": 0.087,
+    "device": 0.0,
+    "person": 0.0,
+    "number": 0.0109,
+    "command": 0.0
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 0.2291,
+    "p50": 0.2148,
+    "p90": 0.3145,
+    "rtf": 0.0706,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nicole": {
+      "turns": 5,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-nova": {
+      "turns": 9,
+      "wer": 0.0196,
+      "meaning_changed": 0.1111
+    },
+    "t-k-af-sarah": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sky": {
+      "turns": 6,
+      "wer": 0.0278,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-eric": {
+      "turns": 3,
+      "wer": 0.0435,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-liam": {
+      "turns": 5,
+      "wer": 0.0323,
+      "meaning_changed": 0.2
+    },
+    "t-k-am-onyx": {
+      "turns": 6,
+      "wer": 0.08,
+      "meaning_changed": 0.1667
+    },
+    "t-k-am-puck": {
+      "turns": 5,
+      "wer": 0.08,
+      "meaning_changed": 0.2
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 3,
+      "wer": 0.0526,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 7,
+      "wer": 0.0732,
+      "meaning_changed": 0.1429
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 7,
+      "wer": 0.1429,
+      "meaning_changed": 0.2857
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 6,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 8,
+      "wer": 0.0492,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 8,
+      "wer": 0.0513,
+      "meaning_changed": 0.125
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 6,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 5,
+      "wer": 0.1282,
+      "meaning_changed": 0.2
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 19,
+      "wer": 0.0367,
+      "meaning_changed": 0.0526
+    },
+    "1.0": {
+      "turns": 45,
+      "wer": 0.0395,
+      "meaning_changed": 0.0889
+    },
+    "1.15": {
+      "turns": 28,
+      "wer": 0.0792,
+      "meaning_changed": 0.1429
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 92,
+      "wer": 0.052,
+      "meaning_changed": 0.0978
+    }
+  },
+  "by_set": {
+    "kokoro__parakeet__clean": {
+      "turns": 92,
+      "wer": 0.052,
+      "meaning_changed": 0.0978
+    }
+  },
+  "samples": [
+    {
+      "id": "bbig-bundook_full-plan-312",
+      "turn": 1,
+      "voice": "t-k-af-nova",
+      "written": "In the guest ensuite.",
+      "heard": "In the guest ensued.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-438",
+      "turn": 1,
+      "voice": "t-k-bf-emma-lily",
+      "written": "Alfresco.",
+      "heard": "Ol fresco.",
+      "lost": [
+        [
+          "room",
+          "alfresco"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-696",
+      "turn": 0,
+      "voice": "t-k-bf-emma-lily",
+      "written": "hey house, stick some music on in the alfresco",
+      "heard": "Hay House sticks some music on in the alfresca.",
+      "lost": [
+        [
+          "room",
+          "alfresco"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-769",
+      "turn": 0,
+      "voice": "t-k-bm-lewis-fable",
+      "written": "quick question, is the master ensuite fan running",
+      "heard": "Quick question, is the master and suit fan running?",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-838",
+      "turn": 0,
+      "voice": "t-k-am-onyx",
+      "written": "hey house, flick the fan on in master ensuite",
+      "heard": "Hay House flicked the fan on in Master and Suit.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-89",
+      "turn": 0,
+      "voice": "t-k-bm-george-daniel",
+      "written": "Put the lights on in the guest ensuite, and then shut the homepod off in alfresco",
+      "heard": "Put the lights on in the guest in suit, and then shut the home pod off in alfresco.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1392",
+      "turn": 1,
+      "voice": "t-k-am-liam",
+      "written": "In the guest ensuite.",
+      "heard": "In the guest ensued.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1432",
+      "turn": 1,
+      "voice": "t-k-bf-emma-isabella",
+      "written": "Guest ensuite please.",
+      "heard": "Guest and suit please.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1542",
+      "turn": 1,
+      "voice": "t-k-am-puck",
+      "written": "The carport one.",
+      "heard": "The carport won't.",
+      "lost": [
+        [
+          "number",
+          "1"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

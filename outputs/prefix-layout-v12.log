@@ -1,0 +1,430 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+{
+ "tokenizer": "Qwen/Qwen3.5-4B",
+ "requests": [
+  {
+   "case": "A, small house (test-v2, bundook profile)",
+   "change": "time",
+   "entities": 191,
+   "classic": {
+    "tokens": 1893,
+    "shared": 643,
+    "share": 0.3397
+   },
+   "stable_prefix": {
+    "tokens": 1897,
+    "shared": 1856,
+    "share": 0.9784,
+    "static_tokens": 1847,
+    "covers_static": true
+   },
+   "user_context": {
+    "tokens": 1896,
+    "shared": 1859,
+    "share": 0.9805,
+    "static_tokens": 1851,
+    "covers_static": true
+   },
+   "clock_in_user": {
+    "tokens": 1893,
+    "shared": 1877,
+    "share": 0.9915,
+    "static_tokens": 1872,
+    "covers_static": true
+   }
+  },
+  {
+   "case": "A, small house (test-v2, bundook profile)",
+   "change": "time+room",
+   "entities": 191,
+   "classic": {
+    "tokens": 1893,
+    "shared": 643,
+    "share": 0.3397
+   },
+   "stable_prefix": {
+    "tokens": 1897,
+    "shared": 1856,
+    "share": 0.9784,
+    "static_tokens": 1847,
+    "covers_static": true
+   },
+   "user_context": {
+    "tokens": 1896,
+    "shared": 1859,
+    "share": 0.9805,
+    "static_tokens": 1851,
+    "covers_static": true
+   },
+   "clock_in_user": {
+    "tokens": 1893,
+    "shared": 643,
+    "share": 0.3397,
+    "static_tokens": 1872,
+    "covers_static": false
+   }
+  },
+  {
+   "case": "A, small house (test-v2, bundook profile)",
+   "change": "time+presence",
+   "entities": 191,
+   "classic": {
+    "tokens": 1893,
+    "shared": 643,
+    "share": 0.3397
+   },
+   "stable_prefix": {
+    "tokens": 1897,
+    "shared": 1856,
+    "share": 0.9784,
+    "static_tokens": 1847,
+    "covers_static": true
+   },
+   "user_context": {
+    "tokens": 1896,
+    "shared": 1859,
+    "share": 0.9805,
+    "static_tokens": 1851,
+    "covers_static": true
+   },
+   "clock_in_user": {
+    "tokens": 1893,
+    "shared": 656,
+    "share": 0.3465,
+    "static_tokens": 1872,
+    "covers_static": false
+   }
+  },
+  {
+   "case": "A, small house (test-v2, bundook profile)",
+   "change": "time+speaker+presence",
+   "entities": 191,
+   "classic": {
+    "tokens": 1893,
+    "shared": 643,
+    "share": 0.3397
+   },
+   "stable_prefix": {
+    "tokens": 1897,
+    "shared": 1856,
+    "share": 0.9784,
+    "static_tokens": 1847,
+    "covers_static": true
+   },
+   "user_context": {
+    "tokens": 1896,
+    "shared": 1859,
+    "share": 0.9805,
+    "static_tokens": 1851,
+    "covers_static": true
+   },
+   "clock_in_user": {
+    "tokens": 1893,
+    "shared": 640,
+    "share": 0.3381,
+    "static_tokens": 1872,
+    "covers_static": false
+   }
+  },
+  {
+   "case": "A, small house (test-v2, random profile)",
+   "change": "time",
+   "entities": 74,
+   "classic": {
+    "tokens": 1298,
+    "shared": 642,
+    "share": 0.4946
+   },
+   "stable_prefix": {
+    "tokens": 1302,
+    "shared": 1265,
+    "share": 0.9716,
+    "static_tokens": 1257,
+    "covers_static": true
+   },
+   "user_context": {
+    "tokens": 1301,
+    "shared": 1268,
+    "share": 0.9746,
+    "static_tokens": 1261,
+    "covers_static": true
+   },
+   "clock_in_user": {
+    "tokens": 1298,
+    "shared": 1281,
+    "share": 0.9869,
+    "static_tokens": 1277,
+    "covers_static": true
+   }
+  },
+  {
+   "case": "A, small house (test-v2, random profile)",
+   "change": "time+room",
+   "entities": 74,
+   "classic": {
+    "tokens": 1298,
+    "shared": 642,
+    "share": 0.4946
+   },
+   "stable_prefix": {
+    "tokens": 1302,
+    "shared": 1265,
+    "share": 0.9716,
+    "static_tokens": 1257,
+    "covers_static": true
+   },
+   "user_context": {
+    "tokens": 1301,
+    "shared": 1268,
+    "share": 0.9746,
+    "static_tokens": 1261,
+    "covers_static": true
+   },
+   "clock_in_user": {
+    "tokens": 1298,
+    "shared": 644,
+    "share": 0.4961,
+    "static_tokens": 1277,
+    "covers_static": false
+   }
+  },
+  {
+   "case": "A, small house (test-v2, random profile)",
+   "change": "time+presence",
+   "entities": 74,
+   "classic": {
+    "tokens": 1298,
+    "shared": 642,
+    "share": 0.4946
+   },
+   "stable_prefix": {
+    "tokens": 1302,
+    "shared": 1265,
+    "share": 0.9716,
+    "static_tokens": 1257,
+    "covers_static": true
+   },
+   "user_context": {
+    "tokens": 1301,
+    "shared": 1268,
+    "share": 0.9746,
+    "static_tokens": 1261,
+    "covers_static": true
+   },
+   "clock_in_user": {
+    "tokens": 1298,
+    "shared": 651,
+    "share": 0.5015,
+    "static_tokens": 1277,
+    "covers_static": false
+   }
+  },
+  {
+   "case": "A, small house (test-v2, random profile)",
+   "change": "time+speaker+presence",
+   "entities": 74,
+   "classic": {
+    "tokens": 1298,
+    "shared": 642,
+    "share": 0.4946
+   },
+   "stable_prefix": {
+    "tokens": 1302,
+    "shared": 1265,
+    "share": 0.9716,
+    "static_tokens": 1257,
+    "covers_static": true
+   },
+   "user_context": {
+    "tokens": 1301,
+    "shared": 1268,
+    "share": 0.9746,
+    "static_tokens": 1261,
+    "covers_static": true
+   },
+   "clock_in_user": {
+    "tokens": 1298,
+    "shared": 642,
+    "share": 0.4946,
+    "static_tokens": 1277,
+    "covers_static": false
+   }
+  },
+  {
+   "case": "B, Bundook full plan (bigbench-b)",
+   "change": "time",
+   "entities": 5252,
+   "classic": {
+    "tokens": 2440,
+    "shared": 1007,
+    "share": 0.4127
+   },
+   "stable_prefix": {
+    "tokens": 2444,
+    "shared": 2395,
+    "share": 0.98,
+    "static_tokens": 2386,
+    "covers_static": true
+   },
+   "user_context": {
+    "tokens": 2443,
+    "shared": 2398,
+    "share": 0.9816,
+    "static_tokens": 2390,
+    "covers_static": true
+   },
+   "clock_in_user": {
+    "tokens": 2440,
+    "shared": 2424,
+    "share": 0.9934,
+    "static_tokens": 2419,
+    "covers_static": true
+   }
+  },
+  {
+   "case": "B, Bundook full plan (bigbench-b)",
+   "change": "time+room",
+   "entities": 5252,
+   "classic": {
+    "tokens": 2440,
+    "shared": 1007,
+    "share": 0.4127
+   },
+   "stable_prefix": {
+    "tokens": 2444,
+    "shared": 2395,
+    "share": 0.98,
+    "static_tokens": 2386,
+    "covers_static": true
+   },
+   "user_context": {
+    "tokens": 2443,
+    "shared": 2398,
+    "share": 0.9816,
+    "static_tokens": 2390,
+    "covers_static": true
+   },
+   "clock_in_user": {
+    "tokens": 2440,
+    "shared": 1007,
+    "share": 0.4127,
+    "static_tokens": 2419,
+    "covers_static": false
+   }
+  },
+  {
+   "case": "B, Bundook full plan (bigbench-b)",
+   "change": "time+presence",
+   "entities": 5252,
+   "classic": {
+    "tokens": 2440,
+    "shared": 1007,
+    "share": 0.4127
+   },
+   "stable_prefix": {
+    "tokens": 2444,
+    "shared": 2395,
+    "share": 0.98,
+    "static_tokens": 2386,
+    "covers_static": true
+   },
+   "user_context": {
+    "tokens": 2443,
+    "shared": 2398,
+    "share": 0.9816,
+    "static_tokens": 2390,
+    "covers_static": true
+   },
+   "clock_in_user": {
+    "tokens": 2440,
+    "shared": 1028,
+    "share": 0.4213,
+    "static_tokens": 2419,
+    "covers_static": false
+   }
+  },
+  {
+   "case": "B, Bundook full plan (bigbench-b)",
+   "change": "time+speaker+presence",
+   "entities": 5252,
+   "classic": {
+    "tokens": 2440,
+    "shared": 1007,
+    "share": 0.4127
+   },
+   "stable_prefix": {
+    "tokens": 2444,
+    "shared": 2395,
+    "share": 0.98,
+    "static_tokens": 2386,
+    "covers_static": true
+   },
+   "user_context": {
+    "tokens": 2443,
+    "shared": 2398,
+    "share": 0.9816,
+    "static_tokens": 2390,
+    "covers_static": true
+   },
+   "clock_in_user": {
+    "tokens": 2440,
+    "shared": 1004,
+    "share": 0.4115,
+    "static_tokens": 2419,
+    "covers_static": false
+   }
+  }
+ ],
+ "within_conversation": {
+  "conversations": 40,
+  "turn_changes": 40,
+  "rounds": {
+   "classic": {
+    "round1_tokens": 37386,
+    "reused_by_round2": 37361,
+    "share": 0.9993
+   },
+   "stable_prefix": {
+    "round1_tokens": 37486,
+    "reused_by_round2": 37461,
+    "share": 0.9993
+   },
+   "user_context": {
+    "round1_tokens": 37461,
+    "reused_by_round2": 37436,
+    "share": 0.9993
+   },
+   "clock_in_user": {
+    "round1_tokens": 37386,
+    "reused_by_round2": 37361,
+    "share": 0.9993
+   }
+  },
+  "turns": {
+   "classic": {
+    "reused_tokens": 25827,
+    "prompt_tokens": 64803,
+    "share": 0.3985,
+    "recomputed_per_turn": 974.4
+   },
+   "stable_prefix": {
+    "reused_tokens": 57341,
+    "prompt_tokens": 64963,
+    "share": 0.8827,
+    "recomputed_per_turn": 190.6
+   },
+   "user_context": {
+    "reused_tokens": 59067,
+    "prompt_tokens": 66402,
+    "share": 0.8895,
+    "recomputed_per_turn": 183.4
+   },
+   "clock_in_user": {
+    "reused_tokens": 58947,
+    "prompt_tokens": 65203,
+    "share": 0.9041,
+    "recomputed_per_turn": 156.4
+   }
+  }
+ }
+}

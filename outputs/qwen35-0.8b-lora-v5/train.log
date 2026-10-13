@@ -1,0 +1,170 @@
+[transformers] PyTorch was not found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+train: 7487 examples (dropped 83 over 4608 tokens); mean 1833 tokens, max 5380
+label check: 4964 trained tokens in the first 50 examples
+val: 109 examples (dropped 41 over 2048 tokens)
+LoRA r=16 alpha=16 on 7 module kinds ['mlp.down_proj', 'mlp.gate_proj', 'mlp.up_proj', 'self_attn.k_proj', 'self_attn.o_proj', 'self_attn.q_proj', 'self_attn.v_proj']: 6.39M trainable
+steps: 936 (2 epochs x 468), warmup 47, effective batch 16
+step 1/936 loss 0.5637 lr 0.00e+00 gnorm 1.821 656 tok/s peak 3.6 GB eta 9.54 h
+step 10/936 loss 0.6845 lr 3.83e-05 gnorm 0.883 647 tok/s peak 5.2 GB eta 11.68 h
+step 20/936 loss 0.5593 lr 8.09e-05 gnorm 0.879 648 tok/s peak 5.2 GB eta 11.44 h
+step 30/936 loss 0.4748 lr 1.23e-04 gnorm 0.628 648 tok/s peak 5.2 GB eta 11.30 h
+step 40/936 loss 0.3764 lr 1.66e-04 gnorm 0.979 649 tok/s peak 5.2 GB eta 11.08 h
+step 50/936 loss 0.2925 lr 2.00e-04 gnorm 0.699 649 tok/s peak 5.2 GB eta 10.88 h
+step 60/936 loss 0.2665 lr 2.00e-04 gnorm 0.723 649 tok/s peak 5.2 GB eta 10.77 h
+step 70/936 loss 0.2801 lr 2.00e-04 gnorm 0.974 649 tok/s peak 5.2 GB eta 10.63 h
+step 80/936 loss 0.2463 lr 1.99e-04 gnorm 0.766 650 tok/s peak 5.2 GB eta 10.44 h
+step 90/936 loss 0.2389 lr 1.99e-04 gnorm 0.777 649 tok/s peak 5.2 GB eta 10.31 h
+step 100/936 loss 0.2067 lr 1.98e-04 gnorm 0.734 649 tok/s peak 5.2 GB eta 10.22 h
+step 110/936 loss 0.1906 lr 1.98e-04 gnorm 0.721 649 tok/s peak 5.2 GB eta 10.13 h
+step 120/936 loss 0.1981 lr 1.97e-04 gnorm 0.810 649 tok/s peak 5.2 GB eta 10.01 h
+step 130/936 loss 0.2188 lr 1.96e-04 gnorm 1.154 649 tok/s peak 5.2 GB eta 9.87 h
+step 140/936 loss 0.1796 lr 1.95e-04 gnorm 0.674 649 tok/s peak 5.2 GB eta 9.76 h
+step 150/936 loss 0.1575 lr 1.94e-04 gnorm 0.623 649 tok/s peak 5.2 GB eta 9.64 h
+step 160/936 loss 0.1643 lr 1.92e-04 gnorm 0.562 649 tok/s peak 5.2 GB eta 9.54 h
+step 170/936 loss 0.1371 lr 1.91e-04 gnorm 0.702 649 tok/s peak 5.2 GB eta 9.39 h
+step 180/936 loss 0.1264 lr 1.89e-04 gnorm 0.483 649 tok/s peak 5.2 GB eta 9.28 h
+step 190/936 loss 0.1471 lr 1.88e-04 gnorm 0.682 649 tok/s peak 5.2 GB eta 9.17 h
+step 200/936 loss 0.1306 lr 1.86e-04 gnorm 0.491 649 tok/s peak 5.2 GB eta 9.06 h
+step 210/936 loss 0.1335 lr 1.84e-04 gnorm 0.730 649 tok/s peak 5.2 GB eta 8.92 h
+step 220/936 loss 0.1192 lr 1.82e-04 gnorm 0.745 649 tok/s peak 5.2 GB eta 8.80 h
+step 230/936 loss 0.1257 lr 1.80e-04 gnorm 0.475 649 tok/s peak 5.2 GB eta 8.68 h
+step 240/936 loss 0.1227 lr 1.78e-04 gnorm 0.677 649 tok/s peak 5.2 GB eta 8.56 h
+step 250/936 loss 0.1258 lr 1.76e-04 gnorm 0.631 649 tok/s peak 5.2 GB eta 8.44 h
+step 260/936 loss 0.1277 lr 1.73e-04 gnorm 0.569 649 tok/s peak 5.2 GB eta 8.32 h
+step 270/936 loss 0.1215 lr 1.71e-04 gnorm 0.438 649 tok/s peak 5.2 GB eta 8.20 h
+step 280/936 loss 0.1183 lr 1.68e-04 gnorm 1.002 649 tok/s peak 5.2 GB eta 8.08 h
+step 290/936 loss 0.1017 lr 1.66e-04 gnorm 0.556 649 tok/s peak 5.2 GB eta 7.96 h
+step 300/936 loss 0.1273 lr 1.63e-04 gnorm 0.561 649 tok/s peak 5.2 GB eta 7.84 h
+step 310/936 loss 0.1076 lr 1.60e-04 gnorm 0.335 649 tok/s peak 5.2 GB eta 7.71 h
+step 320/936 loss 0.1162 lr 1.57e-04 gnorm 0.474 649 tok/s peak 5.2 GB eta 7.59 h
+step 330/936 loss 0.1087 lr 1.54e-04 gnorm 0.345 649 tok/s peak 5.2 GB eta 7.47 h
+step 340/936 loss 0.0997 lr 1.51e-04 gnorm 0.574 649 tok/s peak 5.2 GB eta 7.36 h
+step 350/936 loss 0.1210 lr 1.48e-04 gnorm 0.376 649 tok/s peak 5.2 GB eta 7.24 h
+step 360/936 loss 0.1046 lr 1.45e-04 gnorm 0.529 649 tok/s peak 5.2 GB eta 7.12 h
+step 370/936 loss 0.0898 lr 1.42e-04 gnorm 0.389 649 tok/s peak 5.2 GB eta 6.99 h
+step 380/936 loss 0.1085 lr 1.39e-04 gnorm 0.702 649 tok/s peak 5.2 GB eta 6.87 h
+step 390/936 loss 0.0858 lr 1.35e-04 gnorm 0.488 649 tok/s peak 5.2 GB eta 6.74 h
+step 400/936 loss 0.0781 lr 1.32e-04 gnorm 0.401 649 tok/s peak 5.2 GB eta 6.62 h
+step 410/936 loss 0.0803 lr 1.29e-04 gnorm 0.530 649 tok/s peak 5.2 GB eta 6.49 h
+step 420/936 loss 0.1042 lr 1.25e-04 gnorm 0.454 649 tok/s peak 5.2 GB eta 6.36 h
+step 430/936 loss 0.0929 lr 1.22e-04 gnorm 0.407 649 tok/s peak 5.2 GB eta 6.24 h
+step 440/936 loss 0.0912 lr 1.18e-04 gnorm 0.474 649 tok/s peak 5.2 GB eta 6.12 h
+step 450/936 loss 0.1020 lr 1.15e-04 gnorm 0.506 649 tok/s peak 5.2 GB eta 5.99 h
+step 460/936 loss 0.0776 lr 1.11e-04 gnorm 0.295 649 tok/s peak 5.2 GB eta 5.86 h
+epoch 1: eval_loss 0.0754
+step 470/936 loss 0.0876 lr 1.08e-04 gnorm 0.373 647 tok/s peak 5.2 GB eta 5.76 h
+step 480/936 loss 0.0793 lr 1.04e-04 gnorm 0.542 647 tok/s peak 5.2 GB eta 5.64 h
+step 490/936 loss 0.0747 lr 1.01e-04 gnorm 0.426 647 tok/s peak 5.2 GB eta 5.51 h
+step 500/936 loss 0.0710 lr 9.73e-05 gnorm 0.484 647 tok/s peak 5.2 GB eta 5.39 h
+step 510/936 loss 0.0784 lr 9.38e-05 gnorm 0.429 647 tok/s peak 5.2 GB eta 5.26 h
+step 520/936 loss 0.0607 lr 9.03e-05 gnorm 0.437 647 tok/s peak 5.2 GB eta 5.13 h
+step 530/936 loss 0.0656 lr 8.68e-05 gnorm 0.603 647 tok/s peak 5.2 GB eta 5.01 h
+step 540/936 loss 0.0671 lr 8.33e-05 gnorm 0.417 647 tok/s peak 5.2 GB eta 4.90 h
+step 550/936 loss 0.0717 lr 7.98e-05 gnorm 0.480 647 tok/s peak 5.2 GB eta 4.77 h
+step 560/936 loss 0.0571 lr 7.64e-05 gnorm 0.409 647 tok/s peak 5.2 GB eta 4.65 h
+step 570/936 loss 0.0632 lr 7.30e-05 gnorm 0.390 647 tok/s peak 5.2 GB eta 4.53 h
+step 580/936 loss 0.0511 lr 6.96e-05 gnorm 0.620 647 tok/s peak 5.2 GB eta 4.40 h
+step 590/936 loss 0.0545 lr 6.62e-05 gnorm 0.312 647 tok/s peak 5.2 GB eta 4.28 h
+step 600/936 loss 0.0604 lr 6.29e-05 gnorm 0.559 647 tok/s peak 5.2 GB eta 4.15 h
+step 610/936 loss 0.0659 lr 5.97e-05 gnorm 0.458 647 tok/s peak 5.2 GB eta 4.03 h
+step 620/936 loss 0.0741 lr 5.65e-05 gnorm 0.466 647 tok/s peak 5.2 GB eta 3.90 h
+step 630/936 loss 0.0579 lr 5.33e-05 gnorm 0.326 647 tok/s peak 5.2 GB eta 3.78 h
+step 640/936 loss 0.0758 lr 5.02e-05 gnorm 0.572 647 tok/s peak 5.2 GB eta 3.65 h
+step 650/936 loss 0.0625 lr 4.72e-05 gnorm 0.646 647 tok/s peak 5.2 GB eta 3.53 h
+step 660/936 loss 0.0591 lr 4.42e-05 gnorm 0.512 647 tok/s peak 5.2 GB eta 3.40 h
+step 670/936 loss 0.0567 lr 4.13e-05 gnorm 0.531 647 tok/s peak 5.2 GB eta 3.28 h
+step 680/936 loss 0.0658 lr 3.85e-05 gnorm 0.891 647 tok/s peak 5.2 GB eta 3.16 h
+step 690/936 loss 0.0582 lr 3.57e-05 gnorm 0.327 647 tok/s peak 5.2 GB eta 3.03 h
+step 700/936 loss 0.0658 lr 3.31e-05 gnorm 0.429 647 tok/s peak 5.2 GB eta 2.91 h
+step 710/936 loss 0.0502 lr 3.05e-05 gnorm 0.348 647 tok/s peak 5.2 GB eta 2.79 h
+step 720/936 loss 0.0583 lr 2.80e-05 gnorm 0.391 647 tok/s peak 5.2 GB eta 2.66 h
+step 730/936 loss 0.0585 lr 2.56e-05 gnorm 0.487 647 tok/s peak 5.2 GB eta 2.54 h
+step 740/936 loss 0.0484 lr 2.33e-05 gnorm 0.411 647 tok/s peak 5.2 GB eta 2.42 h
+step 750/936 loss 0.0537 lr 2.11e-05 gnorm 0.509 647 tok/s peak 5.2 GB eta 2.30 h
+step 760/936 loss 0.0679 lr 1.89e-05 gnorm 0.488 647 tok/s peak 5.2 GB eta 2.17 h
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/peter.dolkens/home-ai-mlx/homeai/train/train_mlx.py", line 635, in <module>
+    return 0
+         ^^^^
+  File "/Users/peter.dolkens/home-ai-mlx/homeai/train/train_mlx.py", line 631, in main
+    total, warmup, _ = schedule(cfg, len(rows))
+       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/peter.dolkens/home-ai-mlx/homeai/train/train_mlx.py", line 552, in train
+    ids, pos, tgt = batch_arrays([rows[i]])
+    ^^^^^^^^^^^^^^^^^^
+RuntimeError: [METAL] Command buffer execution failed: Impacting Interactivity (0000000e:kIOGPUCommandBufferCallbackErrorImpactingInteractivity).
+[transformers] PyTorch was not found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+train: 7487 examples (dropped 83 over 4608 tokens); mean 1833 tokens, max 5380
+label check: 4964 trained tokens in the first 50 examples
+val: 109 examples (dropped 41 over 2048 tokens)
+LoRA r=16 alpha=16 on 7 module kinds ['mlp.down_proj', 'mlp.gate_proj', 'mlp.up_proj', 'self_attn.k_proj', 'self_attn.o_proj', 'self_attn.q_proj', 'self_attn.v_proj']: 6.39M trainable
+steps: 936 (2 epochs x 468), warmup 47, effective batch 16
+resuming from outputs/qwen35-0.8b-lora-v5/checkpoints/step-700 (step 700)
+step 710/936 loss 0.0502 lr 3.05e-05 gnorm 0.348 634 tok/s peak 5.0 GB eta 2.88 h
+step 720/936 loss 0.0583 lr 2.80e-05 gnorm 0.391 633 tok/s peak 5.0 GB eta 2.76 h
+step 730/936 loss 0.0585 lr 2.56e-05 gnorm 0.487 632 tok/s peak 5.0 GB eta 2.64 h
+step 740/936 loss 0.0484 lr 2.33e-05 gnorm 0.411 632 tok/s peak 5.0 GB eta 2.52 h
+step 750/936 loss 0.0537 lr 2.11e-05 gnorm 0.509 632 tok/s peak 5.0 GB eta 2.39 h
+step 760/936 loss 0.0679 lr 1.89e-05 gnorm 0.488 633 tok/s peak 5.0 GB eta 2.26 h
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/peter.dolkens/home-ai-mlx/homeai/train/train_mlx.py", line 640, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/Users/peter.dolkens/home-ai-mlx/homeai/train/train_mlx.py", line 636, in main
+    return train(cfg, a.max_steps)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/peter.dolkens/home-ai-mlx/homeai/train/train_mlx.py", line 555, in train
+    mx.eval(loss, acc)
+RuntimeError: [METAL] Command buffer execution failed: Impacting Interactivity (0000000e:kIOGPUCommandBufferCallbackErrorImpactingInteractivity).
+[transformers] PyTorch was not found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+train: 7487 examples (dropped 83 over 4608 tokens); mean 1833 tokens, max 5380
+label check: 4964 trained tokens in the first 50 examples
+val: 109 examples (dropped 41 over 2048 tokens)
+LoRA r=16 alpha=16 on 7 module kinds ['mlp.down_proj', 'mlp.gate_proj', 'mlp.up_proj', 'self_attn.k_proj', 'self_attn.o_proj', 'self_attn.q_proj', 'self_attn.v_proj']: 6.39M trainable
+steps: 936 (2 epochs x 468), warmup 47, effective batch 16
+resuming from outputs/qwen35-0.8b-lora-v5/checkpoints/step-750 (step 750)
+step 760/936 loss 0.0679 lr 1.89e-05 gnorm 0.488 634 tok/s peak 5.0 GB eta 2.23 h
+step 770/936 loss 0.0633 lr 1.69e-05 gnorm 0.350 636 tok/s peak 5.0 GB eta 2.08 h
+step 780/936 loss 0.0712 lr 1.50e-05 gnorm 0.331 636 tok/s peak 5.0 GB eta 1.96 h
+step 790/936 loss 0.0718 lr 1.32e-05 gnorm 0.428 637 tok/s peak 5.0 GB eta 1.83 h
+step 800/936 loss 0.0643 lr 1.15e-05 gnorm 0.411 637 tok/s peak 5.0 GB eta 1.69 h
+step 810/936 loss 0.0602 lr 9.90e-06 gnorm 0.499 636 tok/s peak 5.0 GB eta 1.58 h
+step 820/936 loss 0.0553 lr 8.43e-06 gnorm 0.446 636 tok/s peak 5.0 GB eta 1.46 h
+step 830/936 loss 0.0564 lr 7.06e-06 gnorm 0.540 636 tok/s peak 5.0 GB eta 1.33 h
+step 840/936 loss 0.0555 lr 5.82e-06 gnorm 0.523 636 tok/s peak 5.0 GB eta 1.21 h
+step 850/936 loss 0.0486 lr 4.69e-06 gnorm 0.367 636 tok/s peak 5.0 GB eta 1.08 h
+step 860/936 loss 0.0548 lr 3.68e-06 gnorm 0.405 636 tok/s peak 5.0 GB eta 0.95 h
+step 870/936 loss 0.0614 lr 2.79e-06 gnorm 0.488 636 tok/s peak 5.0 GB eta 0.83 h
+step 880/936 loss 0.0576 lr 2.02e-06 gnorm 0.568 636 tok/s peak 5.0 GB eta 0.70 h
+step 890/936 loss 0.0482 lr 1.38e-06 gnorm 0.370 636 tok/s peak 5.0 GB eta 0.58 h
+step 900/936 loss 0.0563 lr 8.54e-07 gnorm 0.315 636 tok/s peak 5.0 GB eta 0.45 h
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/peter.dolkens/home-ai-mlx/homeai/train/train_mlx.py", line 640, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/Users/peter.dolkens/home-ai-mlx/homeai/train/train_mlx.py", line 636, in main
+    return train(cfg, a.max_steps)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/peter.dolkens/home-ai-mlx/homeai/train/train_mlx.py", line 555, in train
+    mx.eval(loss, acc)
+RuntimeError: [METAL] Command buffer execution failed: Impacting Interactivity (0000000e:kIOGPUCommandBufferCallbackErrorImpactingInteractivity).
+[transformers] PyTorch was not found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+train: 7487 examples (dropped 83 over 4608 tokens); mean 1833 tokens, max 5380
+label check: 4964 trained tokens in the first 50 examples
+val: 109 examples (dropped 41 over 2048 tokens)
+LoRA r=16 alpha=16 on 7 module kinds ['mlp.down_proj', 'mlp.gate_proj', 'mlp.up_proj', 'self_attn.k_proj', 'self_attn.o_proj', 'self_attn.q_proj', 'self_attn.v_proj']: 6.39M trainable
+steps: 936 (2 epochs x 468), warmup 47, effective batch 16
+resuming from outputs/qwen35-0.8b-lora-v5/checkpoints/step-900 (step 900)
+step 910/936 loss 0.0621 lr 4.55e-07 gnorm 0.535 633 tok/s peak 5.1 GB eta 0.33 h
+step 920/936 loss 0.0610 lr 1.80e-07 gnorm 0.451 635 tok/s peak 5.1 GB eta 0.20 h
+step 930/936 loss 0.0557 lr 3.06e-08 gnorm 0.366 635 tok/s peak 5.1 GB eta 0.08 h
+step 936/936 loss 0.0538 lr 6.24e-10 gnorm 0.302 635 tok/s peak 5.1 GB eta 0.00 h
+epoch 2: eval_loss 0.0540
+{"event": "done", "host": "falcon", "hardware": "apple-m2pro", "steps": 936, "train_loss": 0.1176557905982906, "train_seconds_all_sessions": 41754.4, "train_seconds": 1705.6, "tokens": 1039466, "trained_tokens": 58527, "tokens_per_s": 609.4, "peak_gb": 5.09, "time": "2026-09-29 05:10:41"}
+saved LoRA adapter to outputs/qwen35-0.8b-lora-v5/lora

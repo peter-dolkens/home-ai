@@ -1,0 +1,158 @@
+{
+  "set": "piper__small__noisy10-biased",
+  "stt": "small",
+  "condition": "noisy10-biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 7,
+  "words": 42,
+  "errors": 10,
+  "wer": 0.2381,
+  "exact": 0.1429,
+  "vocab_words": 14,
+  "vocab_errors": 2,
+  "vocab_wer": 0.1429,
+  "vocab": {
+    "room": {
+      "n": 0,
+      "err": 0,
+      "wer": 0.0
+    },
+    "device": {
+      "n": 12,
+      "err": 2,
+      "wer": 0.1667
+    },
+    "person": {
+      "n": 0,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 0,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 2,
+      "err": 0,
+      "wer": 0.0
+    }
+  },
+  "meaning_changed": 0.2857,
+  "meaning_changed_n": 2,
+  "meaning_by_kind": {
+    "room": 0.0,
+    "device": 0.2857,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 2.2797,
+    "p50": 2.1202,
+    "p90": 3.6936,
+    "rtf": 0.9309,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-ni-p304": {
+      "turns": 2,
+      "wer": 0.5556,
+      "meaning_changed": 0.0
+    },
+    "t-nz-p335": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-sm-spike": {
+      "turns": 1,
+      "wer": 0.1429,
+      "meaning_changed": 0.0
+    },
+    "t-yk-p267": {
+      "turns": 1,
+      "wer": 0.1111,
+      "meaning_changed": 1.0
+    },
+    "t-yk-p270": {
+      "turns": 1,
+      "wer": 0.1667,
+      "meaning_changed": 1.0
+    },
+    "t-za-p347": {
+      "turns": 1,
+      "wer": 0.4,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 2,
+      "wer": 0.2727,
+      "meaning_changed": 0.5
+    },
+    "1.0": {
+      "turns": 2,
+      "wer": 0.3077,
+      "meaning_changed": 0.5
+    },
+    "1.15": {
+      "turns": 3,
+      "wer": 0.1667,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_noise": {
+    "kitchen": {
+      "turns": 4,
+      "wer": 0.25,
+      "meaning_changed": 0.25
+    },
+    "tv": {
+      "turns": 3,
+      "wer": 0.2222,
+      "meaning_changed": 0.3333
+    }
+  },
+  "by_set": {
+    "piper__small__noisy10-biased": {
+      "turns": 7,
+      "wer": 0.2381,
+      "meaning_changed": 0.2857
+    }
+  },
+  "samples": [
+    {
+      "id": "bbig-bundook_full-plan-113",
+      "turn": 0,
+      "voice": "t-yk-p267",
+      "written": "hey house, cut the water to the house lawn",
+      "heard": "Hey house, cut the water to the house floor.",
+      "lost": [
+        [
+          "device",
+          "house lawn"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1438",
+      "turn": 0,
+      "voice": "t-yk-p270",
+      "written": "How long left on the rangehood?",
+      "heard": "How long left on the Ranger?",
+      "lost": [
+        [
+          "device",
+          "rangehood"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

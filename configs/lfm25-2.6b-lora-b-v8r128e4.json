@@ -1,0 +1,38 @@
+{
+ "_comment": "LFM2.5 2.6B (Liquid, Jul 2026; same LFM2 architecture, 128k vocab) on the pick's recipe, LoRA r128 (30 layers vs 16): the Mac-tier candidate (13 Oct, Peter: models optimised for the Mac mini). Liquid reports BFCLv4 56.9 vs Qwen3.5-4B 50.6. Trained on cassowary's 3090 (lapwing's 3080 needed batch 1 and ~10.5 h); batch 2 x 8 as the pick.",
+ "base_model": "LiquidAI/LFM2.5-2.6B",
+ "hf_tokenizer": "LiquidAI/LFM2.5-2.6B",
+ "ollama_template_from": "lfm2.5-1.2b",
+ "instruction_part": "<|im_start|>user\n",
+ "response_part": "<|im_start|>assistant\n",
+ "max_seq_len": 4608,
+ "lora_r": 128,
+ "lora_alpha": 128,
+ "epochs": 4,
+ "lr": 0.0002,
+ "batch_size": 2,
+ "grad_accum": 8,
+ "seed": 3407,
+ "train": "data/generated/train-b-v8.jsonl",
+ "val": "data/generated/val-b.jsonl",
+ "out": "outputs/lfm25-2.6b-lora-b-v8r128e4",
+ "load_in_4bit": false,
+ "mask_spans": [
+  [
+   "<|im_start|>tool\n",
+   "<|im_end|>"
+  ]
+ ],
+ "target_modules": [
+  "q_proj",
+  "k_proj",
+  "v_proj",
+  "out_proj",
+  "in_proj",
+  "w1",
+  "w2",
+  "w3"
+ ],
+ "note": "its own LFM2.5 chat template (Liquid's repo, tool calls included)",
+ "prompt_layout": "user_context"
+}

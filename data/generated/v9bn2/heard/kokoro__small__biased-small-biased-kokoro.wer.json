@@ -1,0 +1,272 @@
+{
+  "set": "kokoro__small__biased",
+  "stt": "small",
+  "condition": "biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 234,
+  "words": 1518,
+  "errors": 36,
+  "wer": 0.0237,
+  "exact": 0.8932,
+  "vocab_words": 510,
+  "vocab_errors": 9,
+  "vocab_wer": 0.0176,
+  "vocab": {
+    "room": {
+      "n": 147,
+      "err": 4,
+      "wer": 0.0272
+    },
+    "device": {
+      "n": 182,
+      "err": 2,
+      "wer": 0.011
+    },
+    "person": {
+      "n": 20,
+      "err": 1,
+      "wer": 0.05
+    },
+    "number": {
+      "n": 27,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 134,
+      "err": 2,
+      "wer": 0.0149
+    }
+  },
+  "meaning_changed": 0.0299,
+  "meaning_changed_n": 7,
+  "meaning_by_kind": {
+    "room": 0.0128,
+    "device": 0.0085,
+    "person": 0.0043,
+    "number": 0.0,
+    "command": 0.0085
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 4.4218,
+    "p50": 4.4354,
+    "p90": 5.0991,
+    "rtf": 1.4866,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nicole": {
+      "turns": 12,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-nova": {
+      "turns": 8,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sarah": {
+      "turns": 10,
+      "wer": 0.0303,
+      "meaning_changed": 0.1
+    },
+    "t-k-af-sky": {
+      "turns": 27,
+      "wer": 0.0234,
+      "meaning_changed": 0.037
+    },
+    "t-k-am-eric": {
+      "turns": 12,
+      "wer": 0.0678,
+      "meaning_changed": 0.1667
+    },
+    "t-k-am-liam": {
+      "turns": 10,
+      "wer": 0.0159,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-onyx": {
+      "turns": 16,
+      "wer": 0.0566,
+      "meaning_changed": 0.0625
+    },
+    "t-k-am-puck": {
+      "turns": 16,
+      "wer": 0.0396,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 23,
+      "wer": 0.0286,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 21,
+      "wer": 0.0069,
+      "meaning_changed": 0.0476
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 12,
+      "wer": 0.0123,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 15,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 12,
+      "wer": 0.0147,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 11,
+      "wer": 0.0674,
+      "meaning_changed": 0.0909
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 11,
+      "wer": 0.026,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 18,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 79,
+      "wer": 0.0173,
+      "meaning_changed": 0.0253
+    },
+    "1.0": {
+      "turns": 105,
+      "wer": 0.0305,
+      "meaning_changed": 0.0286
+    },
+    "1.15": {
+      "turns": 50,
+      "wer": 0.0194,
+      "meaning_changed": 0.04
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 234,
+      "wer": 0.0237,
+      "meaning_changed": 0.0299
+    }
+  },
+  "by_set": {
+    "kokoro__small__biased": {
+      "turns": 234,
+      "wer": 0.0237,
+      "meaning_changed": 0.0299
+    }
+  },
+  "samples": [
+    {
+      "id": "bbig-random-15000-1010",
+      "turn": 0,
+      "voice": "t-k-am-eric",
+      "written": "power up the pond pump",
+      "heard": "Tower of the Pond Pump",
+      "lost": [
+        [
+          "device",
+          "power"
+        ],
+        [
+          "command",
+          "up"
+        ]
+      ]
+    },
+    {
+      "id": "b300-1559",
+      "turn": 0,
+      "voice": "t-k-af-sky",
+      "written": "Turn off the lights in the guest ensuite",
+      "heard": "Turn off the lights in the guest-in suit.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2700",
+      "turn": 0,
+      "voice": "t-k-af-sarah",
+      "written": "what's the state of charge",
+      "heard": "What's the state of chart?",
+      "lost": [
+        [
+          "device",
+          "charge"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3214",
+      "turn": 0,
+      "voice": "t-k-am-onyx",
+      "written": "Play Nick Cave.",
+      "heard": "Plain Neck Cave",
+      "lost": [
+        [
+          "command",
+          "play"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3836",
+      "turn": 0,
+      "voice": "t-k-bf-emma-isabella",
+      "written": "hey, has anyone seen Isla",
+      "heard": "Hey, has anyone seen Ileth?",
+      "lost": [
+        [
+          "person",
+          "isla"
+        ]
+      ]
+    },
+    {
+      "id": "b300-766",
+      "turn": 1,
+      "voice": "t-k-am-eric",
+      "written": "The master ensuite one.",
+      "heard": "The Master in Suit 1.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-3000-66",
+      "turn": 0,
+      "voice": "t-k-bm-george-daniel",
+      "written": "Can you play the Conversations podcast in the master ensuite?",
+      "heard": "Can you play the Conversations podcast in the master-in-suit?",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

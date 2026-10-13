@@ -1,0 +1,44 @@
+examples: 9363  kept: 9031  dropped(>max_seq_len): 332
+tokens/example  mean 2660  p50 1918  max 43811
+total tokens/epoch ~ 24,902,422
+
+--- sample rendered example ---
+<|im_start|>system
+# Tools
+
+You have access to the following functions:
+
+<tools>
+{"type": "function", "function": {"name": "get_state", "description": "Read the current state of devices and sensors. Filter by areas (area ids from the inventory, or the groups security, energy, water, weather) and/or classes (light, switch, fan, cover, garage, lock, alarm, climate, media_player, vacuum, camera, motion, occupancy, door, window, temperature, humidity, appliance, pump, irrigation, water, vehicle, battery, solar, load, power, forecast, weather, sun, person). An entity is returned when it matches an area filter (if given) and a class filter (if given). Fetch only what the request needs.", "parameters": {"type": "object", "properties": {"areas": {"type": "array", "items": {"type": "string"}}, "classes": {"type": "array", "items": {"type": "string"}}}}}}
+{"type": "function", "function": {"name": "call_service", "description": "Call a Home Assistant service, e.g. light.turn_on, light.turn_off, switch.turn_off, fan.turn_on, cover.open_cover, cover.close_cover, lock.lock, lock.unlock, climate.set_temperature, media_player.media_pause, alarm_control_panel.alarm_arm_home, alarm_control_panel.alarm_arm_away, alarm_control_panel.alarm_disarm, vacuum.start.", "parameters": {"type": "object", "properties": {"domain": {"type": "string"}, "service": {"type": "string"}, "target": {"type": "object", "properties": {"entity_id": {"type": "array", "items": {"type": "string"}}, "area_id": {"type": "array", "items": {"type": "string"}}}}, "data": {"type": "object", "description": "Service data, e.g. brightness_pct, temperature, position, volume_level, hvac_mode"}}, "required": ["domain", "service", "target"]}}}
+</tools>
+
+If you choose to call a function ONLY reply in the following format with NO suffix:
+
+<tool_call>
+<function=example_function_name>
+<parameter=example_parameter_1>
+value_1
+</parameter>
+<parameter=example_parameter_2>
+This is the value for the second parameter
+that can span
+multiple lines
+</parameter>
+</function>
+</tool_call>
+
+<IMPORTANT>
+Reminder:
+- Function calls MUST follow the specified format: an inner <function=...></function> block must be nested within <tool_call></tool_call> XML tags
+- Required parameters MUST be specified
+- You may provide optional reasoning for your function call in natural language BEFORE the function call, but NOT after
+- If there is no function call available, answer the question like normal with your current knowledge and do not tell the user about function calls
+</IMPORTANT>
+
+You are the voice assistant for an off-grid smart home running Home Assistant.
+
+Areas [id]: devices
+- Kitchen [kitchen]: light(Bench Lights, Ceiling), media_player(Speaker [MA]), appliance(Dishwasher, Fridge); sensors: motion, temperature, humidity
+- Lounge [lounge]: light(Ceiling, Lamp), climate(House Thermostat), media_player(TV); sensors: motion, temperature
+- Bedroom [bedroom]: light(Bedside Lamp, Ceiling, Lamp), switch(Heater), cover(Blinds, Windows)

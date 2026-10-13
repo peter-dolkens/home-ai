@@ -1,0 +1,346 @@
+{
+  "set": "piper__small__biased",
+  "stt": "small",
+  "condition": "biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 82,
+  "words": 518,
+  "errors": 35,
+  "wer": 0.0676,
+  "exact": 0.7317,
+  "vocab_words": 163,
+  "vocab_errors": 14,
+  "vocab_wer": 0.0859,
+  "vocab": {
+    "room": {
+      "n": 39,
+      "err": 4,
+      "wer": 0.1026
+    },
+    "device": {
+      "n": 69,
+      "err": 4,
+      "wer": 0.058
+    },
+    "person": {
+      "n": 4,
+      "err": 3,
+      "wer": 0.75
+    },
+    "number": {
+      "n": 5,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 46,
+      "err": 3,
+      "wer": 0.0652
+    }
+  },
+  "meaning_changed": 0.1585,
+  "meaning_changed_n": 13,
+  "meaning_by_kind": {
+    "room": 0.0366,
+    "device": 0.0488,
+    "person": 0.0366,
+    "number": 0.0,
+    "command": 0.0366
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 5.2428,
+    "p50": 5.2195,
+    "p90": 5.8942,
+    "rtf": 2.0971,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-ca-p302": {
+      "turns": 8,
+      "wer": 0.1842,
+      "meaning_changed": 0.375
+    },
+    "t-ie-p245": {
+      "turns": 5,
+      "wer": 0.0606,
+      "meaning_changed": 0.2
+    },
+    "t-ie-p288": {
+      "turns": 2,
+      "wer": 0.1333,
+      "meaning_changed": 0.5
+    },
+    "t-ld-p243": {
+      "turns": 6,
+      "wer": 0.1379,
+      "meaning_changed": 0.1667
+    },
+    "t-ni-p304": {
+      "turns": 4,
+      "wer": 0.075,
+      "meaning_changed": 0.25
+    },
+    "t-nz-p335": {
+      "turns": 5,
+      "wer": 0.0455,
+      "meaning_changed": 0.2
+    },
+    "t-sc-p234": {
+      "turns": 5,
+      "wer": 0.0909,
+      "meaning_changed": 0.2
+    },
+    "t-sc-p237": {
+      "turns": 3,
+      "wer": 0.0556,
+      "meaning_changed": 0.3333
+    },
+    "t-se-p225": {
+      "turns": 4,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-sm-prudence": {
+      "turns": 6,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-sm-spike": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-wa-p253": {
+      "turns": 4,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-yk-p267": {
+      "turns": 2,
+      "wer": 0.0769,
+      "meaning_changed": 0.0
+    },
+    "t-yk-p270": {
+      "turns": 7,
+      "wer": 0.098,
+      "meaning_changed": 0.2857
+    },
+    "t-za-p323": {
+      "turns": 9,
+      "wer": 0.0392,
+      "meaning_changed": 0.0
+    },
+    "t-za-p347": {
+      "turns": 9,
+      "wer": 0.0755,
+      "meaning_changed": 0.1111
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 14,
+      "wer": 0.125,
+      "meaning_changed": 0.2857
+    },
+    "1.0": {
+      "turns": 51,
+      "wer": 0.0571,
+      "meaning_changed": 0.1176
+    },
+    "1.15": {
+      "turns": 17,
+      "wer": 0.0569,
+      "meaning_changed": 0.1765
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 82,
+      "wer": 0.0676,
+      "meaning_changed": 0.1585
+    }
+  },
+  "by_set": {
+    "piper__small__biased": {
+      "turns": 82,
+      "wer": 0.0676,
+      "meaning_changed": 0.1585
+    }
+  },
+  "samples": [
+    {
+      "id": "b300-108",
+      "turn": 0,
+      "voice": "t-ca-p302",
+      "written": "um, stop the dishwasher",
+      "heard": "Unstop the dishwasher.",
+      "lost": [
+        [
+          "command",
+          "stop"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2069",
+      "turn": 0,
+      "voice": "t-za-p347",
+      "written": "ok front door, lock please thanks",
+      "heard": "Okay, front door, walk please, thanks.",
+      "lost": [
+        [
+          "command",
+          "lock"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2359",
+      "turn": 0,
+      "voice": "t-ni-p304",
+      "written": "hey, is the battery going to be alright overnight",
+      "heard": "Hey, is the buffery going to be all right overnight?",
+      "lost": [
+        [
+          "device",
+          "battery"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3989",
+      "turn": 0,
+      "voice": "t-ie-p288",
+      "written": "Do you know where Isla is?",
+      "heard": "Do you know where I live?",
+      "lost": [
+        [
+          "person",
+          "isla"
+        ]
+      ]
+    },
+    {
+      "id": "b300-4308",
+      "turn": 0,
+      "voice": "t-sc-p234",
+      "written": "what temperature is the guest ensuite",
+      "heard": "What temperature is a guest in suit?",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "b300-4648",
+      "turn": 0,
+      "voice": "t-ld-p243",
+      "written": "um, has Isla gotten home",
+      "heard": "I'm Haseyle Gossenhum.",
+      "lost": [
+        [
+          "person",
+          "isla"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-1710",
+      "turn": 1,
+      "voice": "t-ca-p302",
+      "written": "Guest ensuite please.",
+      "heard": "Destincy, please.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-10000-871",
+      "turn": 0,
+      "voice": "t-ie-p245",
+      "written": "power status report",
+      "heard": "Hire Status Report",
+      "lost": [
+        [
+          "device",
+          "power"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-10000-909",
+      "turn": 0,
+      "voice": "t-yk-p270",
+      "written": "right, turn off the lights in the boot room and the hallway",
+      "heard": "Right, turn off the lights in the booth room, and the hallway.",
+      "lost": [
+        [
+          "room",
+          "boot room"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-15000-1043",
+      "turn": 0,
+      "voice": "t-nz-p335",
+      "written": "Skip",
+      "heard": "Skit.",
+      "lost": [
+        [
+          "command",
+          "skip"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-20000-1439",
+      "turn": 0,
+      "voice": "t-ca-p302",
+      "written": "um, how much solar tomorrow",
+      "heard": "Um, I'll much slower tomorrow.",
+      "lost": [
+        [
+          "device",
+          "solar"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-3000-295",
+      "turn": 0,
+      "voice": "t-sc-p237",
+      "written": "ok night",
+      "heard": "OK, now.",
+      "lost": [
+        [
+          "device",
+          "night"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-6000-573",
+      "turn": 0,
+      "voice": "t-yk-p270",
+      "written": "hey, do you know where Emma is",
+      "heard": "Hey, do you know Ermerers?",
+      "lost": [
+        [
+          "person",
+          "emma"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

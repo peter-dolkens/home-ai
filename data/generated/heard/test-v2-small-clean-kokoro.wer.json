@@ -1,0 +1,274 @@
+{
+  "set": "test-v2",
+  "stt": "small",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 6 cpus, 5 GB",
+  "utterances": 174,
+  "words": 1027,
+  "errors": 28,
+  "wer": 0.0273,
+  "exact": 0.8736,
+  "vocab_words": 332,
+  "vocab_errors": 11,
+  "vocab_wer": 0.0331,
+  "vocab": {
+    "room": {
+      "n": 89,
+      "err": 5,
+      "wer": 0.0562
+    },
+    "device": {
+      "n": 123,
+      "err": 3,
+      "wer": 0.0244
+    },
+    "person": {
+      "n": 14,
+      "err": 1,
+      "wer": 0.0714
+    },
+    "number": {
+      "n": 9,
+      "err": 2,
+      "wer": 0.2222
+    },
+    "command": {
+      "n": 97,
+      "err": 0,
+      "wer": 0.0
+    }
+  },
+  "meaning_changed": 0.0517,
+  "meaning_changed_n": 9,
+  "meaning_by_kind": {
+    "room": 0.023,
+    "device": 0.0115,
+    "person": 0.0057,
+    "number": 0.0115,
+    "command": 0.0
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 4.6938,
+    "p50": 4.6523,
+    "p90": 5.1232,
+    "rtf": 1.6645,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "k-af-bella": {
+      "turns": 24,
+      "wer": 0.0382,
+      "meaning_changed": 0.0833
+    },
+    "k-af-heart": {
+      "turns": 13,
+      "wer": 0.0135,
+      "meaning_changed": 0.0
+    },
+    "k-am-adam": {
+      "turns": 14,
+      "wer": 0.0385,
+      "meaning_changed": 0.0
+    },
+    "k-am-michael": {
+      "turns": 15,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "k-bf-alice": {
+      "turns": 11,
+      "wer": 0.0833,
+      "meaning_changed": 0.0
+    },
+    "k-bf-emma": {
+      "turns": 10,
+      "wer": 0.0545,
+      "meaning_changed": 0.1
+    },
+    "k-bf-isabella": {
+      "turns": 18,
+      "wer": 0.0328,
+      "meaning_changed": 0.1111
+    },
+    "k-bf-lily": {
+      "turns": 20,
+      "wer": 0.0246,
+      "meaning_changed": 0.1
+    },
+    "k-bm-daniel": {
+      "turns": 15,
+      "wer": 0.0417,
+      "meaning_changed": 0.0667
+    },
+    "k-bm-fable": {
+      "turns": 14,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "k-bm-george": {
+      "turns": 10,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "k-bm-lewis": {
+      "turns": 10,
+      "wer": 0.0164,
+      "meaning_changed": 0.1
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 41,
+      "wer": 0.0395,
+      "meaning_changed": 0.0488
+    },
+    "1.0": {
+      "turns": 84,
+      "wer": 0.0304,
+      "meaning_changed": 0.0714
+    },
+    "1.15": {
+      "turns": 49,
+      "wer": 0.0107,
+      "meaning_changed": 0.0204
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 174,
+      "wer": 0.0273,
+      "meaning_changed": 0.0517
+    }
+  },
+  "by_set": {
+    "test-v2": {
+      "turns": 174,
+      "wer": 0.0273,
+      "meaning_changed": 0.0517
+    }
+  },
+  "samples": [
+    {
+      "id": "1-1087",
+      "turn": 0,
+      "voice": "k-af-bella",
+      "written": "Is the fan on in the guest ensuite?",
+      "heard": "is the fan-on in the guest-in suit.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "1-222",
+      "turn": 1,
+      "voice": "k-af-bella",
+      "written": "Lounge.",
+      "heard": "Lound",
+      "lost": [
+        [
+          "room",
+          "lounge"
+        ]
+      ]
+    },
+    {
+      "id": "1-231",
+      "turn": 0,
+      "voice": "k-bm-daniel",
+      "written": "hey house, how charged is BYD Shark",
+      "heard": "Hey house, how charged is BYD shock?",
+      "lost": [
+        [
+          "device",
+          "byd shark"
+        ]
+      ]
+    },
+    {
+      "id": "1-2758",
+      "turn": 0,
+      "voice": "k-bf-isabella",
+      "written": "Turn on the towel rail in the guest ensuite.",
+      "heard": "Turn on the towel rail in the guest-in-suit.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "1-2900",
+      "turn": 0,
+      "voice": "k-bm-lewis",
+      "written": "Do you know where Sofia is?",
+      "heard": "Do you know where Sophia is?",
+      "lost": [
+        [
+          "person",
+          "sofia"
+        ]
+      ]
+    },
+    {
+      "id": "1-328",
+      "turn": 0,
+      "voice": "k-bf-lily",
+      "written": "um, is BYD Shark charged",
+      "heard": "Um is BYD shock charged.",
+      "lost": [
+        [
+          "device",
+          "byd shark"
+        ]
+      ]
+    },
+    {
+      "id": "1-457",
+      "turn": 1,
+      "voice": "k-bf-emma",
+      "written": "The lounge one.",
+      "heard": "The lounge once",
+      "lost": [
+        [
+          "number",
+          "1"
+        ]
+      ]
+    },
+    {
+      "id": "1-66",
+      "turn": 1,
+      "voice": "k-bf-lily",
+      "written": "The lounge one.",
+      "heard": "The Lounge Ones",
+      "lost": [
+        [
+          "number",
+          "1"
+        ]
+      ]
+    },
+    {
+      "id": "1-989",
+      "turn": 0,
+      "voice": "k-bf-isabella",
+      "written": "Turn off the lights in the master bedroom and the guest ensuite.",
+      "heard": "Turn off the lights in the master bedroom and the guest-end suit.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

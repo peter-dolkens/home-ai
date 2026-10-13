@@ -10,10 +10,18 @@ cd "$(dirname "$0")/.."
 . scripts/mlx-env.sh
 CFG=$1; NAME=$2; MODE=${3:-}
 OUT=$(python -c "import json;print(json.load(open('$CFG'))['out'])"); mkdir -p "$OUT"
-if [ ! -f "$OUT/lora/adapters.safetensors" ]; then
-  echo "$(date '+%F %T') train $CFG on $HOMEAI_HOST"
-  python -m homeai.train.train_mlx --config "$CFG" ${SET:+--set $SET} >> "$OUT/train.log" 2>&1
-fi
+# Short Metal command buffers: macOS aborts GPU work that holds up the display for too long ("Impacting Interactivity",
+# killed falcon's 0.8B run at step 760); 2 ops / 50 MB per buffer measured no slower. A run that still dies resumes
+# from its last checkpoint (save_steps), up to 5 times.
+export MLX_MAX_OPS_PER_BUFFER=${MLX_MAX_OPS_PER_BUFFER:-2} MLX_MAX_MB_PER_BUFFER=${MLX_MAX_MB_PER_BUFFER:-50}
+for attempt in 1 2 3 4 5; do
+  [ -f "$OUT/lora/adapters.safetensors" ] && break
+  echo "$(date '+%F %T') train $CFG on $HOMEAI_HOST (attempt $attempt)"
+  python -m homeai.train.train_mlx --config "$CFG" ${SET:+--set $SET} >> "$OUT/train.log" 2>&1 && break
+  grep -q "Command buffer execution failed" <(tail -5 "$OUT/train.log") || { echo "train failed: $OUT/train.log"; exit 1; }
+  sleep 30
+done
+[ -f "$OUT/lora/adapters.safetensors" ] || { echo "train failed: $OUT/train.log"; exit 1; }
 [ "$MODE" = "--train-only" ] && exit 0
 if [ ! -f "$OUT/merged16/homeai-merge.json" ]; then
   echo "$(date '+%F %T') fuse"

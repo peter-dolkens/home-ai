@@ -1,0 +1,21 @@
+{
+    "_comment": "Cache-friendly prompt (Peter, 29 Sep): v9's data and recipe with the system prompt in the stable_prefix layout: the Now / Speaker / People lines moved from lines 3-5 into a final 'Current context:' block, so tool schemas, intro, inventory and rules are an identical prefix for every request in a house (prefix-cache reuse on mlx_lm.server / llama.cpp). Same 9,363 rows as train-v9, only the system message re-laid-out (line multiset checked; homeai/house/snapshot.py relayout, homeai/datagen/relayout.py). prompt_layout makes train/val loading, the evals and the bridge use the same layout (homeai/prompt_layout.py).",
+    "base_model": "Qwen/Qwen3.5-4B",
+    "hf_tokenizer": "Qwen/Qwen3.5-4B",
+    "ollama_template_from": "qwen3.5:4b",
+    "instruction_part": "<|im_start|>user\n",
+    "response_part": "<|im_start|>assistant\n",
+    "max_seq_len": 8192,
+    "lora_r": 16,
+    "lora_alpha": 16,
+    "epochs": 2,
+    "lr": 0.0002,
+    "batch_size": 1,
+    "grad_accum": 16,
+    "seed": 3407,
+    "train": "data/generated/train-v10.jsonl",
+    "val": "data/generated/val-v3.jsonl",
+    "out": "outputs/qwen35-4b-lora-v10",
+    "load_in_4bit": false,
+    "prompt_layout": "stable_prefix"
+}

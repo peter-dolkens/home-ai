@@ -1,8 +1,43 @@
 # home-ai
 
-A small, local LLM that runs under Ollama on an RTX 3080 and acts as the voice brain of an
+Small, local, fine-tuned LLMs (Ollama on a GPU box, MLX on a Mac mini) that act as the voice brain of an
 off-grid Home Assistant house: room control, "check on the house", "where is Amber",
 battery/solar/load questions, and bedtime/leaving routines.
+
+## Where it stands (14 Oct 2026)
+
+Full results (every design, the house heard table, Mac vs 3090 champions, the Ollama 0.40.3 re-benchmark): the
+[Bundook Voice Lab results page](https://claude.ai/artifact/UVsAKngjM86oxCj9b7ZaB4), rebuilt with `scripts/report-refresh.sh`.
+
+The target is the new Bundook build: about 11,600 Home Assistant entities, voice only, off-grid. Two serving tiers are kept
+apart, each with its own champions: a **low-power Mac mini** (M2 Pro, MLX, ~5-10 W idle) as the always-on voice box, and a
+**3090-equipped** GPU box (cassowary) for training, evaluation and anything heavy.
+
+| | Mac mini (6-bit MLX) | RTX 3090 (Ollama 0.40.3) |
+|---|---|---|
+| **Pick: LFM2.5 1.2B, design B** (house heard 81.9%, typed 89.3%) | 0.73 s warm, ~1.2 s from end of speech to action | 0.21 s warm |
+| Fast option: LFM2.5 350M (heard 77.0%) | 0.32 s warm | 0.16 s |
+| LFM2.5 230M (heard 76.4%) | 0.24 s | 0.13 s |
+| LFM2.5 2.6B (heard 82.2%, matches the pick) | 2.6 s: too slow for the Mac | 0.41 s |
+| Spark X2.5 4B, design B (typed 90.4%, best on unfamiliar houses) | - | 0.72 s |
+
+- **Design B** (rooms-only prompt plus lookup tools, below) won or tied every comparison; designs A (whole inventory in the
+  prompt), C/D (orchestrator plus per-room models) and E (fast model acts, slow model checks) are kept as baselines.
+- **Training recipe of the pick**: LoRA r256, 4 epochs, `data/generated/train-b-v8.jsonl` (random houses, hard far-field /
+  TV-noise speech augmentation, 1,650 conversations on the Bundook plan, verified wild transcripts); config
+  `configs/lfm25-1.2b-lora-b-v8r256e4.json`. More epochs, 8-bit, a lower learning rate or a second augmentation draw did not help.
+- **Speech-to-text**: Whisper medium with the house's device and room names as its initial prompt (11-12% word error at 3 m
+  and in TV noise vs Parakeet's 18-29%) is the biggest single lever. `homeai/voice/` builds the heard test sets (synthetic
+  voices transcribed by each engine).
+- **How sure**: seed alone moves the heard mean by 0.2-1.7 points, so picks rest on two seeds; 46% of the house test turns
+  appear word for word in training (`homeai.eval.unseen_split` scores the rest). Everything is synthetic so far: real
+  recordings in the house are the next real test.
+
+Machines: cassowary (RTX 3090, the driver `scripts/overnight.sh` with `scripts/watchdog.sh`, Frigate shares its GPU and disk),
+lapwing (RTX 3080, `scripts/train-leaf-qwen.sh` queues), falcon (Mac mini M2 Pro, `homeai/eval/falcon_stream.py` times MLX and
+Ollama builds) and a dev Mac (`scripts/train-mlx.sh`, `scripts/falcon-mlx-build.sh`). `scripts/small-lfm-followup.sh` fans a
+newly trained run out to the house heard evals, the cassowary benchmark (`outputs/bench-o040.sh` pattern) and falcon;
+`scripts/report-refresh.sh` rebuilds the results page (`homeai/eval/report_v2.py`) from every host's reports.
 
 ## How it works
 
@@ -26,6 +61,17 @@ So a request flows in two stages, which is what the fine-tune teaches:
 The same prompt builder and tool schema are used for training data, evaluation and the live
 bridge, so the model sees exactly the same format at runtime as in training.
 
+Prompt layout: up to v9 the clock, speaker and presence lines sit near the top of the system
+prompt (`classic`), so no prompt-prefix cache survives from one request to the next. From v10
+the same lines sit in a final `Current context:` block (`stable_prefix`), and everything in
+front of them stays the same for every request in a house; v11 puts them on a `[context]` line at
+the start of each user turn (`user_context`). Both cost clarification, so v12 moves only the clock
+(`clock_in_user`): the system prompt is classic without its `Now:` line and each user turn starts
+with `[now] <day> <HH:MM>`, so the system message is identical for every request from one room
+while nobody comes or goes. A model's training config sets it
+with `"prompt_layout"`, and the train/val loader, the evals, the tiered eval and the bridge all
+follow it (`homeai/prompt_layout.py`; override with `--prompt-layout`).
+
 ### Why synthetic data on random houses (plus one real profile)
 
 Every training example is built on a freshly generated house (random rooms, devices, people,
@@ -45,13 +91,19 @@ retrain. Tune the mix with `--profile-share`.
 ## Layout
 
 ```
-homeai/house/       schema, random house generator, state text rendering, HA service simulator
-homeai/tools.py     tool schemas (OpenAI/Ollama format) + execution against a House
-homeai/datagen/     scenario builders (control, status, presence, routines, energy) + build CLI
-homeai/train/       Unsloth QLoRA training, GGUF export + Ollama Modelfile
+homeai/house/       schema, random house generator, Bundook profile/snapshot, state text rendering, HA service simulator
+homeai/tools.py     design A tool schemas + execution against a House (tools_b.py: design B lookup tools)
+homeai/datagen/     scenario builders, corpus/paraphrase/ASR augmentation, design-B and big-house builders
+homeai/train/       Unsloth (CUDA) and MLX (Apple silicon) LoRA training, merges, Ollama import
 homeai/bridge/      Home Assistant client, entity->class mapping, agent loop, CLI/HTTP server
-homeai/eval/        teacher-forced eval against the held-out set
-configs/            training configs, bridge.example.json
+homeai/eval/        teacher-forced and end-to-end (outcome) evals, latency / prefix-cache benches, champions, results page
+homeai/tiered/      designs C/D: orchestrator plus per-room leaf models (homeai/leaf/: the room leaves)
+homeai/voice/       speech round trips (TTS -> STT) for the heard test sets, confusion suite
+homeai/prompt_layout.py   where the clock / speaker / presence lines sit (classic, stable_prefix, user_context, clock_in_user)
+configs/            training configs, models.json (the model registry), bridge.example.json
+scripts/            per-host drivers and queues (overnight.sh, watchdog.sh, train-*.sh, falcon-*.sh, archive.sh, ...)
+data/generated/     training, validation and test sets (text, synthetic); data/generated/heard/: the heard (transcribed) sets
+outputs/eval*/      eval reports per model and set (outputs/eval-falcon: the Mac mini stream)
 tests/              offline checks (no GPU/HA/Ollama needed)
 ```
 
@@ -267,12 +319,18 @@ step so this plugs straight into Assist pipelines.
 
 ## Roadmap
 
-- [ ] first training run + baseline vs fine-tune eval
-- [ ] `augment.py`: LLM paraphrasing of user utterances
+- [x] first training run + baseline vs fine-tune eval
+- [x] `augment.py`: LLM paraphrasing of user utterances
+- [x] design B for very large houses; tiered (C/D) and fast+slow (E) designs evaluated
+- [x] base-model bake-off (Qwen3.5 0.8B-27B, Gemma 4 E4B, Spark X2.5 4B, LFM2.5 230M-2.6B; 8B-A1B training): LFM2.5 1.2B picked
+- [x] speech-to-text bake-off on the heard sets: Whisper medium with the house's names
+- [x] separate champions for the Mac mini and the 3090
+- [ ] real recordings in the house as a test set
+- [ ] phonetic matching of device / room names in the lookup tools; Whisper fine-tuned on the house's names
+- [ ] Apple SpeechAnalyzer (custom vocabulary) vs Whisper medium on the Mac
 - [ ] pin the existing house's SolarEdge/battery entities in `configs/bridge.json` overrides
 - [ ] smoke alarms as a class (8 in the plan) for the away-check
 - [ ] Shark logistics: "how charged is the Shark", "is the Shark plugged in", charge-at-old-house planning
 - [ ] history tool (`get_history(entity, hours)`) for "when did Amber get home", energy trends
 - [ ] HA custom conversation agent wrapping `/chat`
 - [ ] proactive mode: scheduled "battery won't last the night" notifications using the same tools
-- [ ] base-model bake-off: `configs/qwen25-7b.json` (known-good tooling), `configs/qwen35-9b.json` and `configs/qwen35-4b.json` (Qwen3.5, March 2026, needs Ollama >= 0.17.4). Same data, same eval; pick on eval pass rate and per-request latency on the 3080

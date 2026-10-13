@@ -1,0 +1,10 @@
+2026-10-02 07:06:29 fetch qwen35-4b-lora-v12 lora
+2026-10-02 07:06:34 fuse qwen35-4b-lora-v12 on /Users/peter.dolkens/Projects/home-ai/.mlx/bases/Qwen3.5-4B
+fused 128 weights -> outputs/qwen35-4b-lora-v12/merged16
+2026-10-02 07:06:57 mlx_lm.convert mlx4
+[INFO] Loading
+[INFO] Using dtype: bfloat16
+[INFO] Quantizing
+[INFO] Quantized model with 4.503 bits per weight.
+2026-10-02 07:19:17 push mlx/homeai-4b-lora-v12-mlx4 (2290 MB)
+2026-10-02 07:20:37 homeai-4b-lora-v12 MLX artifacts pushed: mlx4

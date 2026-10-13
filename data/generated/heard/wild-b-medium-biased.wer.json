@@ -1,0 +1,463 @@
+{
+  "set": "wild-b",
+  "stt": "medium",
+  "condition": "biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 409,
+  "words": 2913,
+  "errors": 133,
+  "wer": 0.0457,
+  "exact": 0.7873,
+  "vocab_words": 717,
+  "vocab_errors": 24,
+  "vocab_wer": 0.0335,
+  "vocab": {
+    "room": {
+      "n": 170,
+      "err": 4,
+      "wer": 0.0235
+    },
+    "device": {
+      "n": 273,
+      "err": 8,
+      "wer": 0.0293
+    },
+    "person": {
+      "n": 16,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 27,
+      "err": 2,
+      "wer": 0.0741
+    },
+    "command": {
+      "n": 231,
+      "err": 10,
+      "wer": 0.0433
+    }
+  },
+  "meaning_changed": 0.0587,
+  "meaning_changed_n": 24,
+  "meaning_by_kind": {
+    "room": 0.0098,
+    "device": 0.0196,
+    "person": 0.0,
+    "number": 0.0049,
+    "command": 0.0244
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 11.201,
+    "p50": 10.6274,
+    "p90": 13.2349,
+    "rtf": 3.7495,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "au-p326": {
+      "turns": 32,
+      "wer": 0.1042,
+      "meaning_changed": 0.1562
+    },
+    "au-p374": {
+      "turns": 32,
+      "wer": 0.0609,
+      "meaning_changed": 0.0625
+    },
+    "gb-alan": {
+      "turns": 37,
+      "wer": 0.0444,
+      "meaning_changed": 0.0811
+    },
+    "gb-alba": {
+      "turns": 53,
+      "wer": 0.0395,
+      "meaning_changed": 0.0755
+    },
+    "gb-cori": {
+      "turns": 49,
+      "wer": 0.0577,
+      "meaning_changed": 0.102
+    },
+    "gb-jenny": {
+      "turns": 37,
+      "wer": 0.0365,
+      "meaning_changed": 0.027
+    },
+    "gb-northern-m": {
+      "turns": 23,
+      "wer": 0.0311,
+      "meaning_changed": 0.087
+    },
+    "gb-southern-f": {
+      "turns": 38,
+      "wer": 0.0669,
+      "meaning_changed": 0.0263
+    },
+    "us-amy": {
+      "turns": 43,
+      "wer": 0.0102,
+      "meaning_changed": 0.0
+    },
+    "us-lessac": {
+      "turns": 34,
+      "wer": 0.0202,
+      "meaning_changed": 0.0294
+    },
+    "us-ryan": {
+      "turns": 31,
+      "wer": 0.0332,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 104,
+      "wer": 0.0358,
+      "meaning_changed": 0.0577
+    },
+    "1.0": {
+      "turns": 198,
+      "wer": 0.0413,
+      "meaning_changed": 0.0606
+    },
+    "1.15": {
+      "turns": 107,
+      "wer": 0.0628,
+      "meaning_changed": 0.0561
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 409,
+      "wer": 0.0457,
+      "meaning_changed": 0.0587
+    }
+  },
+  "by_set": {
+    "wild-b": {
+      "turns": 409,
+      "wer": 0.0457,
+      "meaning_changed": 0.0587
+    }
+  },
+  "samples": [
+    {
+      "id": "wild-900001-battery-check",
+      "turn": 1,
+      "voice": "gb-alba",
+      "written": "and what's the solar doing right now",
+      "heard": "And what's the solo doing right now?",
+      "lost": [
+        [
+          "device",
+          "solar"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900001-exhaust-fan-clarify",
+      "turn": 1,
+      "voice": "gb-cori",
+      "written": "the guest ensuite one",
+      "heard": "The Guest Ensuite won.",
+      "lost": [
+        [
+          "number",
+          "1"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900001-tank-level",
+      "turn": 0,
+      "voice": "gb-alba",
+      "written": "where's the tank at these days",
+      "heard": "Where's the time cut these days?",
+      "lost": [
+        [
+          "device",
+          "tank"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900001-tv-too-loud",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "the tv's blaring in the dining hall, turn it down a bit",
+      "heard": "The TV's blaring the dining-oil down.",
+      "lost": [
+        [
+          "room",
+          "dining hall"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900001-tv-too-loud",
+      "turn": 1,
+      "voice": "gb-cori",
+      "written": "still can't hear myself think, just mute it",
+      "heard": "Still can't hear myself think, just muted.",
+      "lost": [
+        [
+          "command",
+          "mute"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900002-battery-then-solar",
+      "turn": 1,
+      "voice": "au-p326",
+      "written": "and are we getting any solar still?",
+      "heard": "And are we getting any sober still?",
+      "lost": [
+        [
+          "device",
+          "solar"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900002-disarm-alarm",
+      "turn": 0,
+      "voice": "au-p374",
+      "written": "Disarm the alarm.",
+      "heard": "The Sun Alarm",
+      "lost": [
+        [
+          "command",
+          "disarm"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900002-house-rundown",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "Give me a quick rundown on the house.",
+      "heard": "Give me a quick rundown of the house.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900003-missing-aircon",
+      "turn": 0,
+      "voice": "gb-northern-m",
+      "written": "can you turn the aircon on in here",
+      "heard": "Can you turn the Equinom in here?",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900003-missing-irrigation",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "give the garden a water thanks",
+      "heard": "Give the gardener words of thanks.",
+      "lost": [
+        [
+          "device",
+          "water"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900004-ctrl-ensuite-multiturn",
+      "turn": 0,
+      "voice": "gb-alan",
+      "written": "dim the ensuite lights, don't want to wake Hannah",
+      "heard": "Dim Me in Suit Lights. Don't want to wake Hannah.",
+      "lost": [
+        [
+          "room",
+          "ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900004-media-pause-resume-multiturn",
+      "turn": 1,
+      "voice": "au-p374",
+      "written": "false alarm, play it again",
+      "heard": "Fossil Amp, Play It Again.",
+      "lost": [
+        [
+          "device",
+          "alarm"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900004-mixed-ensuite-heater",
+      "turn": 0,
+      "voice": "gb-northern-m",
+      "written": "warm up the ensuite before I hop in the shower",
+      "heard": "Warm up the ensuit before I hop in the shower.",
+      "lost": [
+        [
+          "room",
+          "ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900005-lamp-clarify",
+      "turn": 1,
+      "voice": "gb-jenny",
+      "written": "the guest room one",
+      "heard": "The Guest Room won.",
+      "lost": [
+        [
+          "number",
+          "1"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900006-arm-alarm",
+      "turn": 0,
+      "voice": "gb-alba",
+      "written": "Put the alarm on.",
+      "heard": "Put the lume on.",
+      "lost": [
+        [
+          "device",
+          "alarm"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900006-bedtime",
+      "turn": 2,
+      "voice": "gb-alba",
+      "written": "Yeah, dim.",
+      "heard": "Jedem.",
+      "lost": [
+        [
+          "command",
+          "dim"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900006-music-laundry",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "Chuck some Paul Kelly on in here would you.",
+      "heard": "Chuck some Paul Caleon in here would you?",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900006-pete-office",
+      "turn": 1,
+      "voice": "gb-southern-f",
+      "written": "Typical. Turn them off.",
+      "heard": "Supercal, send them up.",
+      "lost": [
+        [
+          "command",
+          "off"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900007-morning-routine",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "just up, get the place going for me",
+      "heard": "Just stop, get the place going for me.",
+      "lost": [
+        [
+          "command",
+          "up"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900008-lights-audit",
+      "turn": 1,
+      "voice": "gb-alan",
+      "written": "Kill the lot except the ensuite, Amber's in there.",
+      "heard": "Kill the lot except the ensuit, Amber's in there.",
+      "lost": [
+        [
+          "room",
+          "ensuite ambers"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900008-tank-after-lawn",
+      "turn": 0,
+      "voice": "gb-alan",
+      "written": "How's the tank sitting after that lawn run?",
+      "heard": "How's the tank sitting after that long run?",
+      "lost": [
+        [
+          "device",
+          "lawn"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900008-unlock-preconfirmed",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "Unlock the front door for the sparkie, yes I'm sure, he's here now.",
+      "heard": "I locked the front door for the Spiky, yes I'm sure, he's here now.",
+      "lost": [
+        [
+          "command",
+          "unlock"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900008-window-and-weather",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "Shut Amber's office window and tell me how cold it is out there.",
+      "heard": "Shed Amber's office window and tell me how cold it is out there.",
+      "lost": [
+        [
+          "command",
+          "shut"
+        ]
+      ]
+    },
+    {
+      "id": "wild-900010-bedtime",
+      "turn": 2,
+      "voice": "us-lessac",
+      "written": "Oh, and the alarm. Home, not away.",
+      "heard": "Oh, and the alarm, hum, not away.",
+      "lost": [
+        [
+          "device",
+          "alarm home"
+        ]
+      ]
+    }
+  ]
+}

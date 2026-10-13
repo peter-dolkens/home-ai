@@ -1,0 +1,350 @@
+{
+  "set": "kokoro__parakeet__noisy10",
+  "stt": "parakeet",
+  "condition": "noisy10",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 105,
+  "words": 684,
+  "errors": 76,
+  "wer": 0.1111,
+  "exact": 0.7143,
+  "vocab_words": 235,
+  "vocab_errors": 20,
+  "vocab_wer": 0.0851,
+  "vocab": {
+    "room": {
+      "n": 78,
+      "err": 10,
+      "wer": 0.1282
+    },
+    "device": {
+      "n": 75,
+      "err": 6,
+      "wer": 0.08
+    },
+    "person": {
+      "n": 8,
+      "err": 1,
+      "wer": 0.125
+    },
+    "number": {
+      "n": 13,
+      "err": 1,
+      "wer": 0.0769
+    },
+    "command": {
+      "n": 61,
+      "err": 2,
+      "wer": 0.0328
+    }
+  },
+  "meaning_changed": 0.1143,
+  "meaning_changed_n": 12,
+  "meaning_by_kind": {
+    "room": 0.0571,
+    "device": 0.0381,
+    "person": 0.0095,
+    "number": 0.0095,
+    "command": 0.019
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 0.4483,
+    "p50": 0.418,
+    "p90": 0.5955,
+    "rtf": 0.1496,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nicole": {
+      "turns": 5,
+      "wer": 0.3226,
+      "meaning_changed": 0.2
+    },
+    "t-k-af-nova": {
+      "turns": 5,
+      "wer": 0.1562,
+      "meaning_changed": 0.4
+    },
+    "t-k-af-sarah": {
+      "turns": 7,
+      "wer": 0.2979,
+      "meaning_changed": 0.1429
+    },
+    "t-k-af-sky": {
+      "turns": 3,
+      "wer": 0.2381,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-eric": {
+      "turns": 6,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-liam": {
+      "turns": 10,
+      "wer": 0.0588,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-onyx": {
+      "turns": 6,
+      "wer": 0.1379,
+      "meaning_changed": 0.3333
+    },
+    "t-k-am-puck": {
+      "turns": 9,
+      "wer": 0.2,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 9,
+      "wer": 0.0702,
+      "meaning_changed": 0.2222
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 8,
+      "wer": 0.0952,
+      "meaning_changed": 0.25
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 8,
+      "wer": 0.1452,
+      "meaning_changed": 0.125
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 4,
+      "wer": 0.1667,
+      "meaning_changed": 0.25
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 6,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 7,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 8,
+      "wer": 0.0312,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 4,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 29,
+      "wer": 0.1799,
+      "meaning_changed": 0.1724
+    },
+    "1.0": {
+      "turns": 48,
+      "wer": 0.101,
+      "meaning_changed": 0.1042
+    },
+    "1.15": {
+      "turns": 28,
+      "wer": 0.0585,
+      "meaning_changed": 0.0714
+    }
+  },
+  "by_noise": {
+    "kitchen": {
+      "turns": 59,
+      "wer": 0.0559,
+      "meaning_changed": 0.1186
+    },
+    "tv": {
+      "turns": 46,
+      "wer": 0.1786,
+      "meaning_changed": 0.1087
+    }
+  },
+  "by_set": {
+    "kokoro__parakeet__noisy10": {
+      "turns": 105,
+      "wer": 0.1111,
+      "meaning_changed": 0.1143
+    }
+  },
+  "samples": [
+    {
+      "id": "b300-1028",
+      "turn": 1,
+      "voice": "t-k-af-nova",
+      "written": "The master ensuite one.",
+      "heard": "The Master ends suit once.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ],
+        [
+          "number",
+          "1"
+        ]
+      ]
+    },
+    {
+      "id": "b300-1499",
+      "turn": 0,
+      "voice": "t-k-bf-emma-lily",
+      "written": "Turn off the lights in the dining hall, the master ensuite and the guest ensuite.",
+      "heard": "Turn off the lights in the dining hall, the master in suit and the guest in suit.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ],
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "b300-1515",
+      "turn": 0,
+      "voice": "t-k-bf-emma-isabella",
+      "written": "please switch Amber's office homepod off",
+      "heard": "Please switch Amber's office home for.",
+      "lost": [
+        [
+          "device",
+          "homepod"
+        ],
+        [
+          "command",
+          "off"
+        ]
+      ]
+    },
+    {
+      "id": "b300-1035",
+      "turn": 1,
+      "voice": "t-k-bf-alice-lily",
+      "written": "The one in the guest ensuite.",
+      "heard": "The one in the guest and suit.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "b300-143",
+      "turn": 0,
+      "voice": "t-k-af-nicole",
+      "written": "hey house, is the oven through yet",
+      "heard": "Where the back of the floor is the oven through yesterday already.",
+      "lost": [
+        [
+          "device",
+          "house"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3820",
+      "turn": 0,
+      "voice": "t-k-bf-isabella-alice",
+      "written": "hey, whereabouts is Ethan",
+      "heard": "I told you already.",
+      "lost": [
+        [
+          "person",
+          "ethan"
+        ]
+      ]
+    },
+    {
+      "id": "b300-4304",
+      "turn": 0,
+      "voice": "t-k-af-nova",
+      "written": "Did I leave the guest room heater on?",
+      "heard": "Did I leave the guest room feeter on?",
+      "lost": [
+        [
+          "device",
+          "heater"
+        ]
+      ]
+    },
+    {
+      "id": "b300-4336",
+      "turn": 0,
+      "voice": "t-k-bf-alice-lily",
+      "written": "hey, is the fan switched on in the master ensuite",
+      "heard": "Hey is the fan switched on in the Masterin suit.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-15000-1164",
+      "turn": 0,
+      "voice": "t-k-am-onyx",
+      "written": "ok turn on the fan",
+      "heard": "Okay, turn on the thing.",
+      "lost": [
+        [
+          "device",
+          "fan"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-15000-1164",
+      "turn": 1,
+      "voice": "t-k-am-onyx",
+      "written": "Sunroom.",
+      "heard": "Sunwill.",
+      "lost": [
+        [
+          "room",
+          "sunroom"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-3000-102",
+      "turn": 1,
+      "voice": "t-k-af-sarah",
+      "written": "In the family room.",
+      "heard": "That's what we're talking about to talk about it.",
+      "lost": [
+        [
+          "room",
+          "family room"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-3000-177",
+      "turn": 0,
+      "voice": "t-k-bf-emma-isabella",
+      "written": "Flick the lamp off",
+      "heard": "Flick the lamp post",
+      "lost": [
+        [
+          "command",
+          "off"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

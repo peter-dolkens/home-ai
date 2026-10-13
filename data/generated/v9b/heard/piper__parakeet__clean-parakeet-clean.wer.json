@@ -1,0 +1,562 @@
+{
+  "set": "piper__parakeet__clean",
+  "stt": "parakeet",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 139,
+  "words": 889,
+  "errors": 96,
+  "wer": 0.108,
+  "exact": 0.5612,
+  "vocab_words": 288,
+  "vocab_errors": 36,
+  "vocab_wer": 0.125,
+  "vocab": {
+    "room": {
+      "n": 83,
+      "err": 7,
+      "wer": 0.0843
+    },
+    "device": {
+      "n": 107,
+      "err": 19,
+      "wer": 0.1776
+    },
+    "person": {
+      "n": 11,
+      "err": 4,
+      "wer": 0.3636
+    },
+    "number": {
+      "n": 11,
+      "err": 1,
+      "wer": 0.0909
+    },
+    "command": {
+      "n": 76,
+      "err": 5,
+      "wer": 0.0658
+    }
+  },
+  "meaning_changed": 0.2086,
+  "meaning_changed_n": 29,
+  "meaning_by_kind": {
+    "room": 0.0432,
+    "device": 0.1079,
+    "person": 0.0288,
+    "number": 0.0072,
+    "command": 0.036
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 0.2695,
+    "p50": 0.2535,
+    "p90": 0.3681,
+    "rtf": 0.108,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-ca-p302": {
+      "turns": 8,
+      "wer": 0.2683,
+      "meaning_changed": 0.25
+    },
+    "t-ie-p245": {
+      "turns": 10,
+      "wer": 0.1129,
+      "meaning_changed": 0.2
+    },
+    "t-ie-p288": {
+      "turns": 12,
+      "wer": 0.0864,
+      "meaning_changed": 0.3333
+    },
+    "t-ld-p243": {
+      "turns": 11,
+      "wer": 0.1452,
+      "meaning_changed": 0.2727
+    },
+    "t-ni-p304": {
+      "turns": 10,
+      "wer": 0.1111,
+      "meaning_changed": 0.3
+    },
+    "t-nz-p335": {
+      "turns": 8,
+      "wer": 0.0909,
+      "meaning_changed": 0.125
+    },
+    "t-sc-p234": {
+      "turns": 8,
+      "wer": 0.0741,
+      "meaning_changed": 0.125
+    },
+    "t-sc-p237": {
+      "turns": 5,
+      "wer": 0.1212,
+      "meaning_changed": 0.4
+    },
+    "t-se-p225": {
+      "turns": 6,
+      "wer": 0.1277,
+      "meaning_changed": 0.1667
+    },
+    "t-sm-prudence": {
+      "turns": 11,
+      "wer": 0.1096,
+      "meaning_changed": 0.1818
+    },
+    "t-sm-spike": {
+      "turns": 6,
+      "wer": 0.0541,
+      "meaning_changed": 0.0
+    },
+    "t-wa-p253": {
+      "turns": 9,
+      "wer": 0.1364,
+      "meaning_changed": 0.1111
+    },
+    "t-yk-p267": {
+      "turns": 4,
+      "wer": 0.1154,
+      "meaning_changed": 0.25
+    },
+    "t-yk-p270": {
+      "turns": 5,
+      "wer": 0.0968,
+      "meaning_changed": 0.0
+    },
+    "t-za-p323": {
+      "turns": 13,
+      "wer": 0.0625,
+      "meaning_changed": 0.3077
+    },
+    "t-za-p347": {
+      "turns": 13,
+      "wer": 0.0769,
+      "meaning_changed": 0.1538
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 37,
+      "wer": 0.0996,
+      "meaning_changed": 0.2703
+    },
+    "1.0": {
+      "turns": 73,
+      "wer": 0.1062,
+      "meaning_changed": 0.1644
+    },
+    "1.15": {
+      "turns": 29,
+      "wer": 0.1243,
+      "meaning_changed": 0.2414
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 139,
+      "wer": 0.108,
+      "meaning_changed": 0.2086
+    }
+  },
+  "by_set": {
+    "piper__parakeet__clean": {
+      "turns": 139,
+      "wer": 0.108,
+      "meaning_changed": 0.2086
+    }
+  },
+  "samples": [
+    {
+      "id": "b300-108",
+      "turn": 0,
+      "voice": "t-ca-p302",
+      "written": "um, stop the dishwasher",
+      "heard": "Unstoppable district.",
+      "lost": [
+        [
+          "command",
+          "stop"
+        ],
+        [
+          "device",
+          "dishwasher"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-1725",
+      "turn": 0,
+      "voice": "t-se-p225",
+      "written": "Did I leave Pete's office light on?",
+      "heard": "Did I leave Pete's office like Tom?",
+      "lost": [
+        [
+          "device",
+          "light"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "b300-133",
+      "turn": 0,
+      "voice": "t-ld-p243",
+      "written": "Kill the dishwasher.",
+      "heard": "Here the dish of show.",
+      "lost": [
+        [
+          "device",
+          "dishwasher"
+        ]
+      ]
+    },
+    {
+      "id": "b300-1532",
+      "turn": 0,
+      "voice": "t-ie-p288",
+      "written": "lights off in the hallway and the master ensuite",
+      "heard": "Lights off in the hallway and the master in suit.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "b300-1654",
+      "turn": 0,
+      "voice": "t-za-p347",
+      "written": "Lights to 20 percent.",
+      "heard": "Rise to twenty per cent.",
+      "lost": [
+        [
+          "device",
+          "lights"
+        ]
+      ]
+    },
+    {
+      "id": "b300-1681",
+      "turn": 0,
+      "voice": "t-za-p323",
+      "written": "Dim the lights to 30 percent.",
+      "heard": "Dim the lies to thirty per cent.",
+      "lost": [
+        [
+          "device",
+          "lights"
+        ]
+      ]
+    },
+    {
+      "id": "b300-1867",
+      "turn": 0,
+      "voice": "t-ni-p304",
+      "written": "Let's get some light in the dining hall, then switch the lights off in carport",
+      "heard": "Let's get some light in the dining hall, then switch the lights off in Carlport.",
+      "lost": [
+        [
+          "room",
+          "carport"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2257",
+      "turn": 0,
+      "voice": "t-za-p323",
+      "written": "get the floor strip in the dining hall turned off thanks",
+      "heard": "Get the fourth strip in the dining hall turned off thanks.",
+      "lost": [
+        [
+          "device",
+          "floor strip"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2663",
+      "turn": 0,
+      "voice": "t-za-p323",
+      "written": "What's our power situation?",
+      "heard": "What's our past situation?",
+      "lost": [
+        [
+          "device",
+          "power"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2810",
+      "turn": 0,
+      "voice": "t-wa-p253",
+      "written": "Heading to bed, lock everything up",
+      "heard": "Heading to bed. Buck everything up.",
+      "lost": [
+        [
+          "command",
+          "lock"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3563",
+      "turn": 0,
+      "voice": "t-sc-p237",
+      "written": "um, can you make it quieter in the kitchen",
+      "heard": "Um, can you make it quite honour the kitchen?",
+      "lost": [
+        [
+          "command",
+          "quieter"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3566",
+      "turn": 0,
+      "voice": "t-sc-p237",
+      "written": "ok a bit louder",
+      "heard": "Okay bit loud.",
+      "lost": [
+        [
+          "command",
+          "louder"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3635",
+      "turn": 0,
+      "voice": "t-ie-p245",
+      "written": "Switch on the tv in the master ensuite.",
+      "heard": "Switch on the T V in the master and suit.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3688",
+      "turn": 0,
+      "voice": "t-yk-p267",
+      "written": "Can you start the fan in the hallway?",
+      "heard": "Can you start defending the hallway?",
+      "lost": [
+        [
+          "device",
+          "fan"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3826",
+      "turn": 0,
+      "voice": "t-ld-p243",
+      "written": "track down Amber for me",
+      "heard": "Track down Ember for me.",
+      "lost": [
+        [
+          "person",
+          "amber"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3989",
+      "turn": 0,
+      "voice": "t-ie-p288",
+      "written": "Do you know where Isla is?",
+      "heard": "Do you know where Allah is?",
+      "lost": [
+        [
+          "person",
+          "isla"
+        ]
+      ]
+    },
+    {
+      "id": "b300-4308",
+      "turn": 0,
+      "voice": "t-sc-p234",
+      "written": "what temperature is the guest ensuite",
+      "heard": "What temperature is the guest in seat?",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "b300-4350",
+      "turn": 0,
+      "voice": "t-sm-prudence",
+      "written": "Is the alarm armed?",
+      "heard": "Is the halong armed?",
+      "lost": [
+        [
+          "device",
+          "alarm"
+        ]
+      ]
+    },
+    {
+      "id": "b300-4648",
+      "turn": 0,
+      "voice": "t-ld-p243",
+      "written": "um, has Isla gotten home",
+      "heard": "Um has Ida gotten home?",
+      "lost": [
+        [
+          "person",
+          "isla"
+        ]
+      ]
+    },
+    {
+      "id": "b300-5058",
+      "turn": 0,
+      "voice": "t-za-p323",
+      "written": "hey house, we're heading to bed please",
+      "heard": "Hey, Hus we're heading to bed, please.",
+      "lost": [
+        [
+          "device",
+          "house"
+        ]
+      ]
+    },
+    {
+      "id": "b300-838",
+      "turn": 0,
+      "voice": "t-nz-p335",
+      "written": "Heater on now",
+      "heard": "Heat on now.",
+      "lost": [
+        [
+          "device",
+          "heater"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-1652",
+      "turn": 0,
+      "voice": "t-sm-prudence",
+      "written": "quick question, is there a light on in the battery shed",
+      "heard": "Quick question, is there a light on in the battery shet?",
+      "lost": [
+        [
+          "room",
+          "battery shed"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1867",
+      "turn": 0,
+      "voice": "t-ni-p304",
+      "written": "did the oven finish",
+      "heard": "To Delvin finish.",
+      "lost": [
+        [
+          "device",
+          "oven"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-10000-871",
+      "turn": 0,
+      "voice": "t-ie-p245",
+      "written": "power status report",
+      "heard": "How Satis Report",
+      "lost": [
+        [
+          "device",
+          "power"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-15000-1296",
+      "turn": 0,
+      "voice": "t-za-p347",
+      "written": "Turn on the garden zone 5 irrigation for 10 minutes.",
+      "heard": "ten on the gardens and five irrigation for ten minutes.",
+      "lost": [
+        [
+          "device",
+          "garden zone 5 irrigation"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-20000-1337",
+      "turn": 1,
+      "voice": "t-ca-p302",
+      "written": "Fire pit please.",
+      "heard": "Bye bye please.",
+      "lost": [
+        [
+          "room",
+          "fire pit"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-20000-1556",
+      "turn": 0,
+      "voice": "t-ie-p288",
+      "written": "switch the plug 8 on",
+      "heard": "Switch the pluggate on.",
+      "lost": [
+        [
+          "device",
+          "plug 8"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-20000-1556",
+      "turn": 1,
+      "voice": "t-ie-p288",
+      "written": "The one in the pantry.",
+      "heard": "The wall in the pantry.",
+      "lost": [
+        [
+          "number",
+          "1"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-20000-1584",
+      "turn": 0,
+      "voice": "t-ni-p304",
+      "written": "quick question, do you know where Tara is",
+      "heard": "Quick question, do you know where Tar is?",
+      "lost": [
+        [
+          "person",
+          "tara"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

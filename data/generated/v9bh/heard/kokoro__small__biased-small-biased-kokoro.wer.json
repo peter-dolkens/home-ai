@@ -1,0 +1,216 @@
+{
+  "set": "kokoro__small__biased",
+  "stt": "small",
+  "condition": "biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 87,
+  "words": 565,
+  "errors": 13,
+  "wer": 0.023,
+  "exact": 0.9195,
+  "vocab_words": 196,
+  "vocab_errors": 4,
+  "vocab_wer": 0.0204,
+  "vocab": {
+    "room": {
+      "n": 62,
+      "err": 2,
+      "wer": 0.0323
+    },
+    "device": {
+      "n": 71,
+      "err": 1,
+      "wer": 0.0141
+    },
+    "person": {
+      "n": 9,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 7,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 47,
+      "err": 1,
+      "wer": 0.0213
+    }
+  },
+  "meaning_changed": 0.0345,
+  "meaning_changed_n": 3,
+  "meaning_by_kind": {
+    "room": 0.023,
+    "device": 0.0,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0115
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 3.9432,
+    "p50": 4.0186,
+    "p90": 4.6475,
+    "rtf": 1.2423,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nicole": {
+      "turns": 5,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-nova": {
+      "turns": 9,
+      "wer": 0.0794,
+      "meaning_changed": 0.1111
+    },
+    "t-k-af-sarah": {
+      "turns": 3,
+      "wer": 0.0952,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sky": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-eric": {
+      "turns": 6,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-liam": {
+      "turns": 5,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-onyx": {
+      "turns": 8,
+      "wer": 0.0526,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-puck": {
+      "turns": 3,
+      "wer": 0.0667,
+      "meaning_changed": 0.3333
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 8,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 6,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 6,
+      "wer": 0.0526,
+      "meaning_changed": 0.1667
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 5,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 4,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 9,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 5,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 21,
+      "wer": 0.0317,
+      "meaning_changed": 0.0476
+    },
+    "1.0": {
+      "turns": 48,
+      "wer": 0.0208,
+      "meaning_changed": 0.0417
+    },
+    "1.15": {
+      "turns": 18,
+      "wer": 0.0194,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 87,
+      "wer": 0.023,
+      "meaning_changed": 0.0345
+    }
+  },
+  "by_set": {
+    "kokoro__small__biased": {
+      "turns": 87,
+      "wer": 0.023,
+      "meaning_changed": 0.0345
+    }
+  },
+  "samples": [
+    {
+      "id": "bbig-bundook_full-plan-481",
+      "turn": 0,
+      "voice": "t-k-bf-isabella-alice",
+      "written": "Turn off the master bedroom lights and then turn on the master ensuite lights.",
+      "heard": "Turn off the Master Bedroom lights and then turn on the Master End Suit lights.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-80",
+      "turn": 0,
+      "voice": "t-k-af-nova",
+      "written": "quick question, have the master ensuite blinds closed",
+      "heard": "Quick question, have the master and suit blinds closed?",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1202",
+      "turn": 0,
+      "voice": "t-k-am-puck",
+      "written": "floodlight 2 on now",
+      "heard": "Floodlight 2 and Now",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

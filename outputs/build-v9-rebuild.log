@@ -1,0 +1,46 @@
+{
+ "casing": 634,
+ "homophone": 468,
+ "homophone:ambiguous": 8,
+ "homophone:homophone": 226,
+ "homophone:number": 94,
+ "homophone:split": 140,
+ "roundtrip": 3153,
+ "roundtrip:base-clean": 85,
+ "roundtrip:kokoro": 2235,
+ "roundtrip:medium-biased": 287,
+ "roundtrip:parakeet-clean": 759,
+ "roundtrip:parakeet-farfield": 202,
+ "roundtrip:parakeet-noisy10": 178,
+ "roundtrip:piper": 918,
+ "roundtrip:small-biased": 621,
+ "roundtrip:small-clean": 442,
+ "roundtrip:small-farfield-biased": 140,
+ "roundtrip:small-noisy10-biased": 157,
+ "roundtrip:tiny-clean": 282,
+ "roundtrip_all_turns_kept_written": 124,
+ "roundtrip_turn_kept_written:empty": 1,
+ "roundtrip_turn_kept_written:garbled": 161,
+ "roundtrip_turns": 3509,
+ "unchanged": 2130,
+ "unchanged_inherited_overlap": 2587
+}
+leakage: {"file": "data/generated/train-v9.jsonl", "held_out_utterances": 18157, "augmented_rows": 4255, "augmented_overlap_turns": 0, "augmented_overlap_distinct": 0, "augmented_examples": [], "inherited_overlap_turns": 3155, "inherited_overlap_distinct": 383}
+  [casing] 'how much power is the fridge pulling?' -> 'How much power is the fridge pulling?'
+  [casing] 'can you turn off the master bedroom bedside lamp 1' -> 'Can you turn off the master bedroom bedside lamp 1?'
+  [casing] "where's Elena" -> "Where's Elena?"
+  [homophone:ambiguous] 'lock up' -> 'look up'
+  [homophone:ambiguous] 'time for bed, lock up please' -> 'time for bed, look up please'
+  [homophone:ambiguous] 'Lock all the doors' -> 'Look all the doors'
+  [homophone:homophone] 'Flick the lights on' -> 'Flick the likes on'
+  [homophone:homophone] 'Turn off the pool pump.' -> 'Turn of the pool pump.'
+  [homophone:homophone] 'please turn off the speaker in the master bedroom' -> 'please turn of the speaker in the master bedroom'
+  [homophone:number] 'set the heating to 23 degrees' -> 'set the heating to twenty three degrees'
+  [homophone:number] 'Can you bring the lights in storage up to 20 percent?' -> 'Can you bring the lights in storage up to twenty percent?'
+  [homophone:number] 'um, switch the games room lamp 1 off' -> 'um, switch the games room lamp one off'
+  [homophone:split] 'Pop the blinds open in bedroom' -> 'Pop the blinds open in bed room'
+  [homophone:split] 'Bathroom.' -> 'Bath room.'
+  [homophone:split] 'Turn off the lounge downlights and turn on the office heater' -> 'Turn off the lounge down lights and turn on the office heater'
+  [roundtrip] "ok we're off to bed please" -> "Okay, we're off to bed, please."
+  [roundtrip] 'Who made this song?' -> 'who made this song.'
+  [roundtrip] 'please play 80s music please please' -> 'Please play 80s music, please, please.'

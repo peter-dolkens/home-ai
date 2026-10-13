@@ -1,0 +1,411 @@
+{
+  "set": "piper__small__clean",
+  "stt": "small",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 88,
+  "words": 568,
+  "errors": 51,
+  "wer": 0.0898,
+  "exact": 0.6364,
+  "vocab_words": 190,
+  "vocab_errors": 21,
+  "vocab_wer": 0.1105,
+  "vocab": {
+    "room": {
+      "n": 54,
+      "err": 6,
+      "wer": 0.1111
+    },
+    "device": {
+      "n": 70,
+      "err": 9,
+      "wer": 0.1286
+    },
+    "person": {
+      "n": 5,
+      "err": 3,
+      "wer": 0.6
+    },
+    "number": {
+      "n": 12,
+      "err": 1,
+      "wer": 0.0833
+    },
+    "command": {
+      "n": 49,
+      "err": 2,
+      "wer": 0.0408
+    }
+  },
+  "meaning_changed": 0.2045,
+  "meaning_changed_n": 18,
+  "meaning_by_kind": {
+    "room": 0.0568,
+    "device": 0.0909,
+    "person": 0.0227,
+    "number": 0.0114,
+    "command": 0.0227
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 4.2438,
+    "p50": 4.4005,
+    "p90": 4.9988,
+    "rtf": 1.67,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-ca-p302": {
+      "turns": 4,
+      "wer": 0.0345,
+      "meaning_changed": 0.0
+    },
+    "t-ie-p245": {
+      "turns": 4,
+      "wer": 0.129,
+      "meaning_changed": 0.5
+    },
+    "t-ie-p288": {
+      "turns": 9,
+      "wer": 0.175,
+      "meaning_changed": 0.3333
+    },
+    "t-ld-p243": {
+      "turns": 11,
+      "wer": 0.0536,
+      "meaning_changed": 0.1818
+    },
+    "t-ni-p304": {
+      "turns": 5,
+      "wer": 0.0714,
+      "meaning_changed": 0.2
+    },
+    "t-nz-p335": {
+      "turns": 4,
+      "wer": 0.1515,
+      "meaning_changed": 0.25
+    },
+    "t-sc-p234": {
+      "turns": 2,
+      "wer": 0.3077,
+      "meaning_changed": 0.5
+    },
+    "t-sc-p237": {
+      "turns": 4,
+      "wer": 0.0645,
+      "meaning_changed": 0.0
+    },
+    "t-se-p225": {
+      "turns": 7,
+      "wer": 0.1176,
+      "meaning_changed": 0.2857
+    },
+    "t-sm-prudence": {
+      "turns": 4,
+      "wer": 0.0294,
+      "meaning_changed": 0.25
+    },
+    "t-sm-spike": {
+      "turns": 7,
+      "wer": 0.098,
+      "meaning_changed": 0.2857
+    },
+    "t-wa-p253": {
+      "turns": 4,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-yk-p267": {
+      "turns": 4,
+      "wer": 0.037,
+      "meaning_changed": 0.0
+    },
+    "t-yk-p270": {
+      "turns": 6,
+      "wer": 0.1613,
+      "meaning_changed": 0.3333
+    },
+    "t-za-p323": {
+      "turns": 6,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-za-p347": {
+      "turns": 7,
+      "wer": 0.125,
+      "meaning_changed": 0.1429
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 18,
+      "wer": 0.0714,
+      "meaning_changed": 0.1667
+    },
+    "1.0": {
+      "turns": 51,
+      "wer": 0.1012,
+      "meaning_changed": 0.2157
+    },
+    "1.15": {
+      "turns": 19,
+      "wer": 0.0769,
+      "meaning_changed": 0.2105
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 88,
+      "wer": 0.0898,
+      "meaning_changed": 0.2045
+    }
+  },
+  "by_set": {
+    "piper__small__clean": {
+      "turns": 88,
+      "wer": 0.0898,
+      "meaning_changed": 0.2045
+    }
+  },
+  "samples": [
+    {
+      "id": "b300-1015",
+      "turn": 1,
+      "voice": "t-ie-p288",
+      "written": "Entry please.",
+      "heard": "and cheapies.",
+      "lost": [
+        [
+          "room",
+          "entry"
+        ]
+      ]
+    },
+    {
+      "id": "b300-1571",
+      "turn": 0,
+      "voice": "t-sm-spike",
+      "written": "Pop the lights on in the family room, the ensuite and the media room",
+      "heard": "Pop the lights on in a family room, the in-suit and the media room.",
+      "lost": [
+        [
+          "room",
+          "ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "b300-1651",
+      "turn": 0,
+      "voice": "t-za-p347",
+      "written": "Dining room lights to 70 percent.",
+      "heard": "Dining rim lights to 70%.",
+      "lost": [
+        [
+          "room",
+          "dining room"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2592",
+      "turn": 0,
+      "voice": "t-sm-prudence",
+      "written": "How much solar tomorrow?",
+      "heard": "How much so tomorrow?",
+      "lost": [
+        [
+          "device",
+          "solar"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2775",
+      "turn": 0,
+      "voice": "t-yk-p270",
+      "written": "night house",
+      "heard": "My toes",
+      "lost": [
+        [
+          "device",
+          "house"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2931",
+      "turn": 0,
+      "voice": "t-sc-p234",
+      "written": "ok turn off the house lawn irrigation",
+      "heard": "Okay, turn off the house law and irrigation.",
+      "lost": [
+        [
+          "device",
+          "house lawn irrigation"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3350",
+      "turn": 0,
+      "voice": "t-ie-p288",
+      "written": "Stop.",
+      "heard": "FOP",
+      "lost": [
+        [
+          "command",
+          "stop"
+        ]
+      ]
+    },
+    {
+      "id": "b300-4103",
+      "turn": 0,
+      "voice": "t-yk-p270",
+      "written": "um, where's Owen",
+      "heard": "I'm was on",
+      "lost": [
+        [
+          "person",
+          "owen"
+        ]
+      ]
+    },
+    {
+      "id": "b300-4342",
+      "turn": 0,
+      "voice": "t-ie-p245",
+      "written": "are the lights on in the study",
+      "heard": "are the lights on in the stutter.",
+      "lost": [
+        [
+          "room",
+          "study"
+        ]
+      ]
+    },
+    {
+      "id": "b300-4637",
+      "turn": 0,
+      "voice": "t-sm-spike",
+      "written": "Is Kai in the house?",
+      "heard": "is kind the house.",
+      "lost": [
+        [
+          "person",
+          "kai"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1868",
+      "turn": 0,
+      "voice": "t-ni-p304",
+      "written": "Did we turn the alarm on?",
+      "heard": "Did we turn it along on?",
+      "lost": [
+        [
+          "device",
+          "alarm"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1919",
+      "turn": 1,
+      "voice": "t-ie-p288",
+      "written": "Bedside lamp 1.",
+      "heard": "Bedside lamp on.",
+      "lost": [
+        [
+          "device",
+          "bedside lamp 1"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-10000-943",
+      "turn": 0,
+      "voice": "t-ld-p243",
+      "written": "hey house, wall light 1 off",
+      "heard": "Hey house, we'll light one off.",
+      "lost": [
+        [
+          "device",
+          "house wall light 1"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-10000-943",
+      "turn": 1,
+      "voice": "t-ld-p243",
+      "written": "The nursery one.",
+      "heard": "The nursery won.",
+      "lost": [
+        [
+          "number",
+          "1"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-20000-1443",
+      "turn": 0,
+      "voice": "t-se-p225",
+      "written": "Lamp on now",
+      "heard": "Lump on no",
+      "lost": [
+        [
+          "device",
+          "lamp"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-20000-1443",
+      "turn": 1,
+      "voice": "t-se-p225",
+      "written": "Lamp 4.",
+      "heard": "lump four",
+      "lost": [
+        [
+          "device",
+          "lamp 4"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-20000-1494",
+      "turn": 0,
+      "voice": "t-nz-p335",
+      "written": "can you close the blinds in the study",
+      "heard": "Penny closed the blinds in the study.",
+      "lost": [
+        [
+          "command",
+          "close"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-6000-473",
+      "turn": 0,
+      "voice": "t-ie-p245",
+      "written": "Switch on the lights in the plant room and the study.",
+      "heard": "Switch on the lights in the planned room and the study.",
+      "lost": [
+        [
+          "room",
+          "plant room"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

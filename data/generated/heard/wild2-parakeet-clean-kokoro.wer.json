@@ -1,0 +1,274 @@
+{
+  "set": "wild2",
+  "stt": "parakeet",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 6 cpus, 5 GB",
+  "utterances": 344,
+  "words": 2217,
+  "errors": 86,
+  "wer": 0.0388,
+  "exact": 0.8343,
+  "vocab_words": 624,
+  "vocab_errors": 18,
+  "vocab_wer": 0.0288,
+  "vocab": {
+    "room": {
+      "n": 149,
+      "err": 7,
+      "wer": 0.047
+    },
+    "device": {
+      "n": 219,
+      "err": 4,
+      "wer": 0.0183
+    },
+    "person": {
+      "n": 20,
+      "err": 1,
+      "wer": 0.05
+    },
+    "number": {
+      "n": 22,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 214,
+      "err": 6,
+      "wer": 0.028
+    }
+  },
+  "meaning_changed": 0.0262,
+  "meaning_changed_n": 9,
+  "meaning_by_kind": {
+    "room": 0.0058,
+    "device": 0.0029,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0174
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 0.3479,
+    "p50": 0.3322,
+    "p90": 0.4826,
+    "rtf": 0.1182,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "k-af-bella": {
+      "turns": 35,
+      "wer": 0.0091,
+      "meaning_changed": 0.0286
+    },
+    "k-af-heart": {
+      "turns": 32,
+      "wer": 0.0096,
+      "meaning_changed": 0.0
+    },
+    "k-am-adam": {
+      "turns": 28,
+      "wer": 0.0769,
+      "meaning_changed": 0.0357
+    },
+    "k-am-michael": {
+      "turns": 35,
+      "wer": 0.026,
+      "meaning_changed": 0.0
+    },
+    "k-bf-alice": {
+      "turns": 42,
+      "wer": 0.0696,
+      "meaning_changed": 0.0238
+    },
+    "k-bf-emma": {
+      "turns": 26,
+      "wer": 0.0567,
+      "meaning_changed": 0.0385
+    },
+    "k-bf-isabella": {
+      "turns": 32,
+      "wer": 0.0469,
+      "meaning_changed": 0.0938
+    },
+    "k-bf-lily": {
+      "turns": 32,
+      "wer": 0.041,
+      "meaning_changed": 0.0312
+    },
+    "k-bm-daniel": {
+      "turns": 16,
+      "wer": 0.0084,
+      "meaning_changed": 0.0
+    },
+    "k-bm-fable": {
+      "turns": 23,
+      "wer": 0.036,
+      "meaning_changed": 0.0
+    },
+    "k-bm-george": {
+      "turns": 21,
+      "wer": 0.0149,
+      "meaning_changed": 0.0
+    },
+    "k-bm-lewis": {
+      "turns": 22,
+      "wer": 0.05,
+      "meaning_changed": 0.0455
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 76,
+      "wer": 0.0454,
+      "meaning_changed": 0.0395
+    },
+    "1.0": {
+      "turns": 177,
+      "wer": 0.0392,
+      "meaning_changed": 0.0226
+    },
+    "1.15": {
+      "turns": 91,
+      "wer": 0.0329,
+      "meaning_changed": 0.022
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 344,
+      "wer": 0.0388,
+      "meaning_changed": 0.0262
+    }
+  },
+  "by_set": {
+    "wild2": {
+      "turns": 344,
+      "wer": 0.0388,
+      "meaning_changed": 0.0262
+    }
+  },
+  "samples": [
+    {
+      "id": "wild-920001-dryer",
+      "turn": 1,
+      "voice": "k-af-bella",
+      "written": "eh start it anyway, need the towels",
+      "heard": "A started anyway. Need the towels.",
+      "lost": [
+        [
+          "command",
+          "start"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920001-toilet-light",
+      "turn": 0,
+      "voice": "k-bf-alice",
+      "written": "did I leave the toilet light on",
+      "heard": "Did I leave the toilet light ons?",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920005-ensuite",
+      "turn": 0,
+      "voice": "k-bf-isabella",
+      "written": "towel rail on in our ensuite, and the exhaust fan too",
+      "heard": "Towel Rail on in our in suit, and the exhaust fan too.",
+      "lost": [
+        [
+          "room",
+          "ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920006-a1",
+      "turn": 1,
+      "voice": "k-bf-emma",
+      "written": "start it up then",
+      "heard": "Started up then.",
+      "lost": [
+        [
+          "command",
+          "start"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920007-cl1",
+      "turn": 0,
+      "voice": "k-bf-isabella",
+      "written": "turn off the towel rail",
+      "heard": "Turn off the towel rig.",
+      "lost": [
+        [
+          "device",
+          "towel rail"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920007-cl1",
+      "turn": 1,
+      "voice": "k-bf-isabella",
+      "written": "guest one, no one's using it",
+      "heard": "Guessed one no one's using it.",
+      "lost": [
+        [
+          "room",
+          "guest"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920007-r1",
+      "turn": 0,
+      "voice": "k-bf-lily",
+      "written": "morning routine - open the blinds in the bedroom and the dining hall",
+      "heard": "Morning routine opened the blinds in the bedroom and the dining halls.",
+      "lost": [
+        [
+          "command",
+          "open"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920008-co1",
+      "turn": 0,
+      "voice": "k-bm-lewis",
+      "written": "unlock the front door for me",
+      "heard": "and lock the front door for me.",
+      "lost": [
+        [
+          "command",
+          "unlock"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920010-h10-master-cool",
+      "turn": 0,
+      "voice": "k-am-adam",
+      "written": "Can you turn the aircon down a touch in here, say 20",
+      "heard": "Can you turn the aircraft a touch in here, say twenty?",
+      "lost": [
+        [
+          "command",
+          "down"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

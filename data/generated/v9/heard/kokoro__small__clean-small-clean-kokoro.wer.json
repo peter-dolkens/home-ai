@@ -1,0 +1,415 @@
+{
+  "set": "kokoro__small__clean",
+  "stt": "small",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 349,
+  "words": 2265,
+  "errors": 77,
+  "wer": 0.034,
+  "exact": 0.8567,
+  "vocab_words": 716,
+  "vocab_errors": 26,
+  "vocab_wer": 0.0363,
+  "vocab": {
+    "room": {
+      "n": 226,
+      "err": 17,
+      "wer": 0.0752
+    },
+    "device": {
+      "n": 239,
+      "err": 3,
+      "wer": 0.0126
+    },
+    "person": {
+      "n": 28,
+      "err": 2,
+      "wer": 0.0714
+    },
+    "number": {
+      "n": 27,
+      "err": 2,
+      "wer": 0.0741
+    },
+    "command": {
+      "n": 196,
+      "err": 2,
+      "wer": 0.0102
+    }
+  },
+  "meaning_changed": 0.0516,
+  "meaning_changed_n": 18,
+  "meaning_by_kind": {
+    "room": 0.0401,
+    "device": 0.0,
+    "person": 0.0029,
+    "number": 0.0057,
+    "command": 0.0057
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 5.7918,
+    "p50": 5.7413,
+    "p90": 6.7264,
+    "rtf": 1.9123,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nicole": {
+      "turns": 20,
+      "wer": 0.0169,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-nova": {
+      "turns": 34,
+      "wer": 0.0171,
+      "meaning_changed": 0.0294
+    },
+    "t-k-af-sarah": {
+      "turns": 20,
+      "wer": 0.0148,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sky": {
+      "turns": 14,
+      "wer": 0.0337,
+      "meaning_changed": 0.0714
+    },
+    "t-k-am-eric": {
+      "turns": 26,
+      "wer": 0.0211,
+      "meaning_changed": 0.0385
+    },
+    "t-k-am-liam": {
+      "turns": 18,
+      "wer": 0.0326,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-onyx": {
+      "turns": 23,
+      "wer": 0.0539,
+      "meaning_changed": 0.1304
+    },
+    "t-k-am-puck": {
+      "turns": 25,
+      "wer": 0.057,
+      "meaning_changed": 0.04
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 22,
+      "wer": 0.0476,
+      "meaning_changed": 0.0909
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 21,
+      "wer": 0.0278,
+      "meaning_changed": 0.0476
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 25,
+      "wer": 0.024,
+      "meaning_changed": 0.08
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 15,
+      "wer": 0.0485,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 21,
+      "wer": 0.053,
+      "meaning_changed": 0.1905
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 26,
+      "wer": 0.0129,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 18,
+      "wer": 0.0323,
+      "meaning_changed": 0.0556
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 21,
+      "wer": 0.0727,
+      "meaning_changed": 0.0476
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 73,
+      "wer": 0.0361,
+      "meaning_changed": 0.0411
+    },
+    "1.0": {
+      "turns": 196,
+      "wer": 0.0298,
+      "meaning_changed": 0.0612
+    },
+    "1.15": {
+      "turns": 80,
+      "wer": 0.0435,
+      "meaning_changed": 0.0375
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 349,
+      "wer": 0.034,
+      "meaning_changed": 0.0516
+    }
+  },
+  "by_set": {
+    "kokoro__small__clean": {
+      "turns": 349,
+      "wer": 0.034,
+      "meaning_changed": 0.0516
+    }
+  },
+  "samples": [
+    {
+      "id": "209-203",
+      "turn": 1,
+      "voice": "t-k-bm-lewis-fable",
+      "written": "The master ensuite one.",
+      "heard": "The master and suit won.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ],
+        [
+          "number",
+          "1"
+        ]
+      ]
+    },
+    {
+      "id": "201-2295",
+      "turn": 0,
+      "voice": "t-k-am-puck",
+      "written": "lights on in the ensuite, the patio and the kitchen",
+      "heard": "Lights on in the in-suit the patio in the kitchen",
+      "lost": [
+        [
+          "room",
+          "ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "202-2724",
+      "turn": 0,
+      "voice": "t-k-am-eric",
+      "written": "Can you start the tv in the master ensuite?",
+      "heard": "Can you start the TV in the master and suit?",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "202-702",
+      "turn": 0,
+      "voice": "t-k-am-onyx",
+      "written": "did the master ensuite blinds close",
+      "heard": "Did the master in suit blinds close?",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "203-2879",
+      "turn": 0,
+      "voice": "t-k-bm-daniel-fable",
+      "written": "um, open the guest ensuite blinds",
+      "heard": "Um, open the guest in suit blinds.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "205-1271",
+      "turn": 0,
+      "voice": "t-k-bf-emma-isabella",
+      "written": "turn off the guest bedroom lights and then turn off the fan in the guest ensuite",
+      "heard": "Turn off the guest bedroom lights and then turn off the fan in the guest-in-suit.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "206-1046",
+      "turn": 1,
+      "voice": "t-k-am-onyx",
+      "written": "In the master ensuite.",
+      "heard": "in the master and suit.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "206-1144",
+      "turn": 0,
+      "voice": "t-k-bf-emma-lily",
+      "written": "hey house, pause that please",
+      "heard": "Hey house, pours that please.",
+      "lost": [
+        [
+          "command",
+          "pause"
+        ]
+      ]
+    },
+    {
+      "id": "207-2165",
+      "turn": 1,
+      "voice": "t-k-af-sky",
+      "written": "The one in the guest ensuite.",
+      "heard": "The one in the guest and suit.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "208-2248",
+      "turn": 0,
+      "voice": "t-k-bf-emma-lily",
+      "written": "Shut the lights off in master ensuite",
+      "heard": "Shut the lights off in master-in-suit.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "208-426",
+      "turn": 0,
+      "voice": "t-k-am-onyx",
+      "written": "Turn on the master ensuite lights and turn off the fan in the dining hall.",
+      "heard": "Turn on the master and suit lights and turn off the fan in the dining hall",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "209-2666",
+      "turn": 0,
+      "voice": "t-k-bf-alice-lily",
+      "written": "Make it louder",
+      "heard": "Let's make it loud-earth.",
+      "lost": [
+        [
+          "command",
+          "louder"
+        ]
+      ]
+    },
+    {
+      "id": "209-2849",
+      "turn": 0,
+      "voice": "t-k-af-nova",
+      "written": "could you turn off the ensuite lights and turn on the family room lights",
+      "heard": "Could you turn off the end-suit lights and turn on the family room lights?",
+      "lost": [
+        [
+          "room",
+          "ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "209-775",
+      "turn": 0,
+      "voice": "t-k-bf-alice-lily",
+      "written": "hey, has anyone seen Elena just now",
+      "heard": "Hey has anyone seen Alina just now?",
+      "lost": [
+        [
+          "person",
+          "elena"
+        ]
+      ]
+    },
+    {
+      "id": "abig-bundook_full-plan-1269",
+      "turn": 0,
+      "voice": "t-k-bm-daniel-fable",
+      "written": "turn on the master ensuite lights and turn off the entry lights",
+      "heard": "Turn on the master in suit lights and turn off the entry lights.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "abig-random-3000-185",
+      "turn": 0,
+      "voice": "t-k-bm-george-lewis",
+      "written": "turn off the guest ensuite plug 1",
+      "heard": "Turn off the guest in suit plug one",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "v5a-810001-clarify-ensuite",
+      "turn": 0,
+      "voice": "t-k-bm-daniel-fable",
+      "written": "Turn the exhaust fan on in the ensuite",
+      "heard": "Turn the exhaust fan on in the end-suit.",
+      "lost": [
+        [
+          "room",
+          "ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "v5a-810001-clarify-ensuite",
+      "turn": 1,
+      "voice": "t-k-bm-daniel-fable",
+      "written": "The guest one",
+      "heard": "The Guest Won",
+      "lost": [
+        [
+          "number",
+          "1"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

@@ -1,0 +1,174 @@
+6536 rows, 4706 eligible (no held-out user turn), 2288 to round-trip in 20 groups:
+  kokoro  base      clean               48 conversations,    52 turns
+  kokoro  medium    biased             141 conversations,   154 turns
+  kokoro  parakeet  clean              379 conversations,   411 turns
+  kokoro  parakeet  farfield           116 conversations,   128 turns
+  kokoro  parakeet  noisy10            100 conversations,   105 turns
+  kokoro  small     biased             317 conversations,   341 turns
+  kokoro  small     clean              233 conversations,   252 turns
+  kokoro  small     farfield-biased     75 conversations,    80 turns
+  kokoro  small     noisy10-biased      81 conversations,    86 turns
+  kokoro  tiny      clean              125 conversations,   136 turns
+  piper   base      clean               22 conversations,    22 turns
+  piper   medium    biased              63 conversations,    69 turns
+  piper   parakeet  clean              133 conversations,   139 turns
+  piper   parakeet  farfield            48 conversations,    55 turns
+  piper   parakeet  noisy10             36 conversations,    38 turns
+  piper   small     biased             153 conversations,   169 turns
+  piper   small     clean              101 conversations,   114 turns
+  piper   small     farfield-biased     28 conversations,    30 turns
+  piper   small     noisy10-biased      29 conversations,    30 turns
+  piper   tiny      clean               60 conversations,    63 turns
+  tts 400/1726 143s
+  tts 800/1726 284s
+  tts 1200/1726 463s
+  tts 1600/1726 683s
+tts: 1745 turns, 1739 distinct utterances, 1726 synthesised in 756s
+  tts 400/726 103s
+tts: 729 turns, 728 distinct utterances, 726 synthesised in 182s
+tts: 52 turns, 52 distinct utterances, 0 synthesised in 0s
+base: 52 transcriptions to run (0 cached), 5 workers x 2 threads
+  base 52/52 31s (0.61s each, 0s left)
+  kokoro__base__clean-base-clean-kokoro: WER 7.5%  vocab 8.6%  meaning changed 13.5%  (52 turns)
+tts: 154 turns, 154 distinct utterances, 0 synthesised in 0s
+medium: 154 transcriptions to run (0 cached), 3 workers x 3 threads
+  medium 154/154 804s (5.22s each, 0s left)
+  kokoro__medium__biased-medium-biased-kokoro: WER 1.6%  vocab 1.7%  meaning changed 3.2%  (154 turns)
+tts: 411 turns, 411 distinct utterances, 0 synthesised in 0s
+parakeet: 411 transcriptions to run (0 cached), 4 workers x 2 threads
+
+
+  parakeet 200/411 28s (0.14s each, 30s left)
+  parakeet 400/411 51s (0.13s each, 1s left)
+  parakeet 411/411 52s (0.13s each, 0s left)
+  kokoro__parakeet__clean-parakeet-clean-kokoro: WER 4.0%  vocab 4.0%  meaning changed 5.8%  (411 turns)
+tts: 128 turns, 128 distinct utterances, 0 synthesised in 0s
+parakeet: 128 transcriptions to run (0 cached), 4 workers x 2 threads
+Unknown CPU vendor. cpuinfo_vendor value: 0
+
+  parakeet 128/128 18s (0.14s each, 0s left)
+  kokoro__parakeet__farfield-parakeet-farfield-kokoro: WER 6.6%  vocab 6.0%  meaning changed 8.6%  (128 turns)
+tts: 105 turns, 105 distinct utterances, 0 synthesised in 0s
+parakeet: 105 transcriptions to run (0 cached), 4 workers x 2 threads
+  parakeet 105/105 15s (0.15s each, 0s left)
+  kokoro__parakeet__noisy10-parakeet-noisy10-kokoro: WER 11.1%  vocab 8.5%  meaning changed 11.4%  (105 turns)
+tts: 341 turns, 340 distinct utterances, 0 synthesised in 0s
+small: 341 transcriptions to run (0 cached), 5 workers x 2 threads
+  small 200/341 358s (1.79s each, 252s left)
+  small 341/341 599s (1.76s each, 0s left)
+  kokoro__small__biased-small-biased-kokoro: WER 3.2%  vocab 3.1%  meaning changed 4.1%  (341 turns)
+tts: 252 turns, 252 distinct utterances, 0 synthesised in 0s
+small: 252 transcriptions to run (0 cached), 5 workers x 2 threads
+  small 200/252 274s (1.37s each, 71s left)
+  small 252/252 325s (1.29s each, 0s left)
+  kokoro__small__clean-small-clean-kokoro: WER 3.9%  vocab 3.4%  meaning changed 5.2%  (252 turns)
+tts: 80 turns, 80 distinct utterances, 0 synthesised in 0s
+small: 80 transcriptions to run (0 cached), 5 workers x 2 threads
+  small 80/80 130s (1.62s each, 0s left)
+  kokoro__small__farfield-biased-small-farfield-biased-kokoro: WER 5.9%  vocab 8.1%  meaning changed 15.0%  (80 turns)
+tts: 86 turns, 86 distinct utterances, 0 synthesised in 0s
+small: 86 transcriptions to run (0 cached), 5 workers x 2 threads
+  small 86/86 143s (1.66s each, 0s left)
+  kokoro__small__noisy10-biased-small-noisy10-biased-kokoro: WER 5.4%  vocab 2.1%  meaning changed 4.7%  (86 turns)
+tts: 136 turns, 136 distinct utterances, 0 synthesised in 0s
+tiny: 136 transcriptions to run (0 cached), 5 workers x 2 threads
+  tiny 136/136 35s (0.26s each, 0s left)
+  kokoro__tiny__clean-tiny-clean-kokoro: WER 4.4%  vocab 3.9%  meaning changed 7.3%  (136 turns)
+tts: 22 turns, 22 distinct utterances, 0 synthesised in 0s
+base: 22 transcriptions to run (0 cached), 5 workers x 2 threads
+  base 6/22 9s (1.52s each, 24s left)
+  base 22/22 12s (0.54s each, 0s left)
+  piper__base__clean-base-clean: WER 19.7%  vocab 18.8%  meaning changed 31.8%  (22 turns)
+tts: 69 turns, 69 distinct utterances, 0 synthesised in 0s
+medium: 69 transcriptions to run (0 cached), 3 workers x 3 threads
+  medium 69/69 313s (4.54s each, 0s left)
+  piper__medium__biased-medium-biased: WER 5.2%  vocab 3.3%  meaning changed 7.2%  (69 turns)
+tts: 139 turns, 139 distinct utterances, 0 synthesised in 0s
+parakeet: 139 transcriptions to run (0 cached), 4 workers x 2 threads
+
+
+  parakeet 139/139 12s (0.09s each, 0s left)
+  piper__parakeet__clean-parakeet-clean: WER 10.8%  vocab 12.5%  meaning changed 20.9%  (139 turns)
+tts: 55 turns, 55 distinct utterances, 0 synthesised in 0s
+parakeet: 55 transcriptions to run (0 cached), 4 workers x 2 threads
+
+  parakeet 55/55 6s (0.11s each, 0s left)
+  piper__parakeet__farfield-parakeet-farfield: WER 22.2%  vocab 18.6%  meaning changed 38.2%  (55 turns)
+tts: 38 turns, 38 distinct utterances, 0 synthesised in 0s
+parakeet: 38 transcriptions to run (0 cached), 4 workers x 2 threads
+  parakeet 38/38 5s (0.13s each, 0s left)
+  piper__parakeet__noisy10-parakeet-noisy10: WER 40.6%  vocab 38.9%  meaning changed 57.9%  (38 turns)
+tts: 169 turns, 169 distinct utterances, 0 synthesised in 0s
+small: 169 transcriptions to run (0 cached), 5 workers x 2 threads
+  small 169/169 205s (1.21s each, 0s left)
+  piper__small__biased-small-biased: WER 6.4%  vocab 8.0%  meaning changed 13.0%  (169 turns)
+tts: 114 turns, 114 distinct utterances, 0 synthesised in 0s
+small: 114 transcriptions to run (0 cached), 5 workers x 2 threads
+  small 114/114 109s (0.96s each, 0s left)
+  piper__small__clean-small-clean: WER 13.4%  vocab 14.8%  meaning changed 26.3%  (114 turns)
+tts: 30 turns, 30 distinct utterances, 0 synthesised in 0s
+small: 30 transcriptions to run (0 cached), 5 workers x 2 threads
+  small 6/30 31s (5.20s each, 125s left)
+  small 30/30 39s (1.31s each, 0s left)
+  piper__small__farfield-biased-small-farfield-biased: WER 24.2%  vocab 23.3%  meaning changed 33.3%  (30 turns)
+tts: 30 turns, 30 distinct utterances, 0 synthesised in 0s
+small: 30 transcriptions to run (0 cached), 5 workers x 2 threads
+  small 6/30 30s (5.02s each, 121s left)
+  small 30/30 40s (1.32s each, 0s left)
+  piper__small__noisy10-biased-small-noisy10-biased: WER 34.7%  vocab 26.4%  meaning changed 43.3%  (30 turns)
+tts: 63 turns, 63 distinct utterances, 0 synthesised in 0s
+tiny: 63 transcriptions to run (0 cached), 5 workers x 2 threads
+  tiny 63/63 14s (0.22s each, 0s left)
+  piper__tiny__clean-tiny-clean: WER 15.4%  vocab 19.0%  meaning changed 27.0%  (63 turns)
+round trip: tts 943 s, stt 3125 s (host frogmouth)
+{
+ "casing": 464,
+ "homophone": 327,
+ "homophone:ambiguous": 7,
+ "homophone:homophone": 157,
+ "homophone:number": 65,
+ "homophone:split": 98,
+ "roundtrip": 2210,
+ "roundtrip:base-clean": 66,
+ "roundtrip:kokoro": 1592,
+ "roundtrip:medium-biased": 203,
+ "roundtrip:parakeet-clean": 503,
+ "roundtrip:parakeet-farfield": 159,
+ "roundtrip:parakeet-noisy10": 117,
+ "roundtrip:piper": 618,
+ "roundtrip:small-biased": 465,
+ "roundtrip:small-clean": 324,
+ "roundtrip:small-farfield-biased": 96,
+ "roundtrip:small-noisy10-biased": 100,
+ "roundtrip:tiny-clean": 177,
+ "roundtrip_all_turns_kept_written": 78,
+ "roundtrip_turn_kept_written:empty": 1,
+ "roundtrip_turn_kept_written:garbled": 107,
+ "roundtrip_turn_kept_written:held-out": 1,
+ "roundtrip_turns": 2365,
+ "unchanged": 1476,
+ "unchanged_inherited_overlap": 1830
+}
+leakage: {"file": "data/generated/train-b-v2.jsonl", "held_out_utterances": 18157, "augmented_rows": 3001, "augmented_overlap_turns": 0, "augmented_overlap_distinct": 0, "augmented_examples": [], "inherited_overlap_turns": 2120, "inherited_overlap_distinct": 358}
+  [casing] 'hey, flick the light on thanks' -> 'Hey, flick the light on thanks.'
+  [casing] "i'm heading to bed" -> "I'm heading to bed."
+  [casing] 'kill the aircon in the dining hall' -> 'Kill the aircon in the dining hall.'
+  [homophone:ambiguous] 'could you lock the front door' -> 'could you look the front door'
+  [homophone:ambiguous] 'lock the house up please' -> 'look the house up please'
+  [homophone:ambiguous] 'please lock the back door please' -> 'please look the back door please'
+  [homophone:homophone] 'turn off the lights in the pantry and then turn on the lights in the laundry toilet' -> 'turn off the likes in the pantry and then turn on the lights in the laundry toilet'
+  [homophone:homophone] 'flick off the hot water in here thanks' -> 'flick of the hot water in here thanks'
+  [homophone:homophone] 'has the front door been locked' -> 'has the front door been looked'
+  [homophone:number] 'volume at 10 percent in the guest bedroom thanks' -> 'volume at ten percent in the guest bedroom thanks'
+  [homophone:number] 'Aircon to 18 please.' -> 'Aircon to eighteen please.'
+  [homophone:number] 'um, turn on the lights in the bedroom 2, the driveway and the guest room please' -> 'um, turn on the lights in the bedroom two, the driveway and the guest room please'
+  [homophone:split] 'Kill the homepod in here' -> 'Kill the home pod in here'
+  [homophone:split] 'Lights off in carport' -> 'Lights off in car port'
+  [homophone:split] 'quick question, can you make it quieter in the master ensuite' -> 'quick question, can you make it quieter in the master en suite'
+  [roundtrip] 'cut the dishwasher off' -> 'Tap the dishwasher off.'
+  [roundtrip] 'alright to use the kettle' -> 'Alright to use the kettle.'
+  [roundtrip] 'ok pop the lights on in the guest bedroom and the vanity' -> 'Ok pop the lights on in the guest bedroom and the vanity.'
+{"file": "data/generated/train-b-v2.jsonl", "held_out_utterances": 18157, "augmented_rows": 3001, "augmented_overlap_turns": 0, "augmented_overlap_distinct": 0, "augmented_examples": [], "inherited_overlap_turns": 2120, "inherited_overlap_distinct": 358}
+  inherited, most common: [('yes please', 115), ('yes', 101), ('go ahead', 94), ('please', 70), ('yes do all that', 62), ('yep', 34), ('do it', 30), ('leave it', 23)]
+{"src": "data/generated/train-b-split.jsonl", "dst": "data/generated/train-b-v2.jsonl", "rows": 6536, "layouts": {"stable_prefix": 6536}, "problems": 0, "examples": []}
+2026-09-29 22:46:52 build-b-v2 done

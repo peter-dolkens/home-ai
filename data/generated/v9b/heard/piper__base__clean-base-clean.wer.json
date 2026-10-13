@@ -1,0 +1,252 @@
+{
+  "set": "piper__base__clean",
+  "stt": "base",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 22,
+  "words": 152,
+  "errors": 30,
+  "wer": 0.1974,
+  "exact": 0.4091,
+  "vocab_words": 48,
+  "vocab_errors": 9,
+  "vocab_wer": 0.1875,
+  "vocab": {
+    "room": {
+      "n": 16,
+      "err": 3,
+      "wer": 0.1875
+    },
+    "device": {
+      "n": 17,
+      "err": 5,
+      "wer": 0.2941
+    },
+    "person": {
+      "n": 2,
+      "err": 1,
+      "wer": 0.5
+    },
+    "number": {
+      "n": 1,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 12,
+      "err": 0,
+      "wer": 0.0
+    }
+  },
+  "meaning_changed": 0.3182,
+  "meaning_changed_n": 7,
+  "meaning_by_kind": {
+    "room": 0.0909,
+    "device": 0.2273,
+    "person": 0.0455,
+    "number": 0.0,
+    "command": 0.0
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 1.3528,
+    "p50": 1.3243,
+    "p90": 1.8721,
+    "rtf": 0.5461,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-ca-p302": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-ie-p245": {
+      "turns": 1,
+      "wer": 1.0,
+      "meaning_changed": 1.0
+    },
+    "t-ld-p243": {
+      "turns": 2,
+      "wer": 0.0833,
+      "meaning_changed": 0.5
+    },
+    "t-ni-p304": {
+      "turns": 1,
+      "wer": 0.2,
+      "meaning_changed": 0.0
+    },
+    "t-nz-p335": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-sc-p234": {
+      "turns": 4,
+      "wer": 0.2222,
+      "meaning_changed": 0.25
+    },
+    "t-sc-p237": {
+      "turns": 1,
+      "wer": 0.5,
+      "meaning_changed": 1.0
+    },
+    "t-se-p225": {
+      "turns": 2,
+      "wer": 0.375,
+      "meaning_changed": 0.0
+    },
+    "t-sm-prudence": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-sm-spike": {
+      "turns": 1,
+      "wer": 0.15,
+      "meaning_changed": 1.0
+    },
+    "t-yk-p267": {
+      "turns": 3,
+      "wer": 0.4737,
+      "meaning_changed": 0.3333
+    },
+    "t-yk-p270": {
+      "turns": 2,
+      "wer": 0.0833,
+      "meaning_changed": 0.5
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 5,
+      "wer": 0.32,
+      "meaning_changed": 0.4
+    },
+    "1.0": {
+      "turns": 12,
+      "wer": 0.2088,
+      "meaning_changed": 0.3333
+    },
+    "1.15": {
+      "turns": 5,
+      "wer": 0.0833,
+      "meaning_changed": 0.2
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 22,
+      "wer": 0.1974,
+      "meaning_changed": 0.3182
+    }
+  },
+  "by_set": {
+    "piper__base__clean": {
+      "turns": 22,
+      "wer": 0.1974,
+      "meaning_changed": 0.3182
+    }
+  },
+  "samples": [
+    {
+      "id": "b300-2112",
+      "turn": 0,
+      "voice": "t-yk-p267",
+      "written": "switch Pete's office track accent off",
+      "heard": "switchpeets off as track X and off.",
+      "lost": [
+        [
+          "room",
+          "petes office"
+        ],
+        [
+          "device",
+          "track accent"
+        ]
+      ]
+    },
+    {
+      "id": "b300-1485",
+      "turn": 0,
+      "voice": "t-yk-p270",
+      "written": "Start the lights in the kitchen and bedroom",
+      "heard": "Start the light in the kitchen and bedroom.",
+      "lost": [
+        [
+          "device",
+          "lights"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2589",
+      "turn": 0,
+      "voice": "t-ie-p245",
+      "written": "power update",
+      "heard": "Karabdi.",
+      "lost": [
+        [
+          "device",
+          "power"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2956",
+      "turn": 0,
+      "voice": "t-sc-p237",
+      "written": "Water the vegie beds.",
+      "heard": "What are the veggie beds?",
+      "lost": [
+        [
+          "device",
+          "water"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3674",
+      "turn": 0,
+      "voice": "t-ld-p243",
+      "written": "hey house, get the heater going in the kitchen",
+      "heard": "Hey, how's the heater going in the kitchen?",
+      "lost": [
+        [
+          "device",
+          "house"
+        ]
+      ]
+    },
+    {
+      "id": "b300-4079",
+      "turn": 0,
+      "voice": "t-sc-p234",
+      "written": "um, where's Kate right now",
+      "heard": "I'm whisky right now.",
+      "lost": [
+        [
+          "person",
+          "kate"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-6000-521",
+      "turn": 0,
+      "voice": "t-sm-spike",
+      "written": "pop the lights on in the guest ensuite and then can you get the lights off in the front deck",
+      "heard": "Pop the lights on and the guest is suit and then can you get the lights off in the front deck.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

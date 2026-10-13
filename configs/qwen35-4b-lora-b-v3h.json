@@ -1,0 +1,21 @@
+{
+ "_comment": "Design B, house-specific (3 Oct): B-v2's data plus 1,650 conversations on the Bundook plan (the new house; seeds 6.5M+, clear of every test set) with the same speech-to-text augmentation, 8186 rows; the 4B B-v2u recipe and user_context layout (cacheable on the Mac, no cost on the GPU: 82.5% mean). The random-house B sets stay the generalisation check; bigbench-b-bundook and its heard sets measure the house itself.",
+ "base_model": "Qwen/Qwen3.5-4B",
+ "hf_tokenizer": "Qwen/Qwen3.5-4B",
+ "ollama_template_from": "qwen3.5:4b",
+ "instruction_part": "<|im_start|>user\n",
+ "response_part": "<|im_start|>assistant\n",
+ "max_seq_len": 6144,
+ "lora_r": 16,
+ "lora_alpha": 16,
+ "epochs": 2,
+ "lr": 0.0002,
+ "batch_size": 1,
+ "grad_accum": 16,
+ "seed": 3407,
+ "train": "data/generated/train-b-v3h.jsonl",
+ "val": "data/generated/val-b.jsonl",
+ "out": "outputs/qwen35-4b-lora-b-v3h",
+ "load_in_4bit": false,
+ "prompt_layout": "user_context"
+}

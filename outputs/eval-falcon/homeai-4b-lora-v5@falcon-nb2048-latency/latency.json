@@ -1,0 +1,18 @@
+{
+  "model": "homeai-4b-lora-v5-nb2048",
+  "data": "data/generated/test-v2.jsonl",
+  "requests": 60,
+  "cold_mean": 14.384582163133334,
+  "cold_p50": 13.921809916999905,
+  "cold_p90": 18.243514791999985,
+  "warm_mean": 14.38159435828333,
+  "warm_p90": 18.242149041999994,
+  "calls_per_request": 2.033333333333333,
+  "seconds_per_call": 6.965750851827781,
+  "training_running": false,
+  "num_ctx": 8192,
+  "host": "falcon",
+  "hardware": "apple-m2pro",
+  "host_note": "falcon stream: Ollama 0.21.2 stock, PARAMETER num_batch 2048",
+  "ollama": "http://127.0.0.1:11610"
+}

@@ -1,0 +1,92 @@
+{
+  "model": "homeai-gemma4-e4b-v8",
+  "mode": "e2e",
+  "host": "falcon",
+  "hardware": "apple-m2pro",
+  "host_note": "falcon stream: Ollama 0.21.2, cassowary settings (KEEP_ALIVE=-1, NUM_PARALLEL=2), Q4_K_M, num_ctx 8192",
+  "ollama": "http://127.0.0.1:11610",
+  "data": "data/generated/wild2.jsonl",
+  "examples": 240,
+  "turns": 344,
+  "pass": 0.8357558139534884,
+  "conversation_pass": 0.7791666666666667,
+  "seconds_per_turn": 1.1183125700866967,
+  "calls_per_request": 1.9883720930232558,
+  "errors": 0,
+  "by_kind": {
+    "act": {
+      "n": 165,
+      "ok": 136
+    },
+    "state": {
+      "n": 344,
+      "ok": 314
+    },
+    "reply": {
+      "n": 344,
+      "ok": 317
+    },
+    "answer": {
+      "n": 179,
+      "ok": 151.5
+    }
+  },
+  "by_category": {
+    "wild_media": {
+      "n": 46,
+      "ok": 42
+    },
+    "wild_control": {
+      "n": 48,
+      "ok": 42
+    },
+    "wild_status": {
+      "n": 38,
+      "ok": 30
+    },
+    "wild_energy": {
+      "n": 25,
+      "ok": 22
+    },
+    "wild_water": {
+      "n": 15,
+      "ok": 12
+    },
+    "wild_confirm": {
+      "n": 26,
+      "ok": 24.5
+    },
+    "wild_clarify": {
+      "n": 28,
+      "ok": 26
+    },
+    "wild_missing": {
+      "n": 11,
+      "ok": 10
+    },
+    "wild_presence": {
+      "n": 25,
+      "ok": 17
+    },
+    "wild_appliance": {
+      "n": 18,
+      "ok": 17
+    },
+    "wild_routine": {
+      "n": 26,
+      "ok": 15
+    },
+    "wild_smalltalk": {
+      "n": 11,
+      "ok": 11
+    },
+    "wild_mixed": {
+      "n": 19,
+      "ok": 13
+    },
+    "wild_vehicle": {
+      "n": 8,
+      "ok": 6
+    }
+  }
+}

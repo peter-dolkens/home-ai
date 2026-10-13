@@ -1,0 +1,93 @@
+{
+  "model": "homeai-lfm25-1.2b-lora-v5-fix2",
+  "mode": "e2e",
+  "host": "lapwing",
+  "hardware": "rtx-3080",
+  "host_note": "lapwing ollama 0.21.2, client on lapwing",
+  "ollama": "http://127.0.0.1:11500",
+  "lockstep": 8,
+  "data": "data/generated/heard/wild-parakeet-noisy10.jsonl",
+  "examples": 303,
+  "turns": 409,
+  "pass": 0.628361858190709,
+  "conversation_pass": 0.5643564356435643,
+  "seconds_per_turn": 0.15053432833237687,
+  "calls_per_request": 2.1442542787286065,
+  "errors": 0,
+  "by_kind": {
+    "act": {
+      "n": 185,
+      "ok": 105
+    },
+    "state": {
+      "n": 409,
+      "ok": 310
+    },
+    "reply": {
+      "n": 409,
+      "ok": 344
+    },
+    "answer": {
+      "n": 224,
+      "ok": 152.0
+    }
+  },
+  "by_category": {
+    "wild_control": {
+      "n": 60,
+      "ok": 37
+    },
+    "wild_missing": {
+      "n": 23,
+      "ok": 19
+    },
+    "wild_appliance": {
+      "n": 20,
+      "ok": 16
+    },
+    "wild_media": {
+      "n": 44,
+      "ok": 23
+    },
+    "wild_clarify": {
+      "n": 36,
+      "ok": 23
+    },
+    "wild_presence": {
+      "n": 29,
+      "ok": 18
+    },
+    "wild_routine": {
+      "n": 27,
+      "ok": 8
+    },
+    "wild_smalltalk": {
+      "n": 17,
+      "ok": 17
+    },
+    "wild_energy": {
+      "n": 40,
+      "ok": 25
+    },
+    "wild_vehicle": {
+      "n": 8,
+      "ok": 7
+    },
+    "wild_water": {
+      "n": 19,
+      "ok": 13
+    },
+    "wild_confirm": {
+      "n": 37,
+      "ok": 24.0
+    },
+    "wild_status": {
+      "n": 33,
+      "ok": 18
+    },
+    "wild_mixed": {
+      "n": 16,
+      "ok": 9
+    }
+  }
+}

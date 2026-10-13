@@ -75,6 +75,39 @@ VOICES = {
     "us-ryan": ("en_US-ryan-medium", None, "us", "m"),
     "us-lessac": ("en_US-lessac-medium", None, "us", "f"),
 }
+# Kokoro-82M (Apache-2.0, --tts kokoro): a second synthesiser with its own G2P (misaki's lexicon, espeak only for
+# unknown words), to tell Piper's pronunciation artefacts from real recogniser errors. No Australian voice either.
+KOKORO = {
+    "k-bf-emma": ("bf_emma", "gb", "f"), "k-bf-isabella": ("bf_isabella", "gb", "f"), "k-bf-alice": ("bf_alice", "gb", "f"),
+    "k-bf-lily": ("bf_lily", "gb", "f"), "k-bm-george": ("bm_george", "gb", "m"), "k-bm-lewis": ("bm_lewis", "gb", "m"),
+    "k-bm-daniel": ("bm_daniel", "gb", "m"), "k-bm-fable": ("bm_fable", "gb", "m"), "k-af-heart": ("af_heart", "us", "f"),
+    "k-af-bella": ("af_bella", "us", "f"), "k-am-michael": ("am_michael", "us", "m"), "k-am-adam": ("am_adam", "us", "m"),
+}
+# Training voices (--voices train, homeai/datagen/asr_v9.py): none of them voices a heard test set. Piper: VCTK speakers
+# the test pool does not use (p335 is the corpus's New Zealand woman, the nearest to an Australian one) and Semaine;
+# Kokoro: American voices the test pool does not use and new British voices blended from two test voices' styles.
+PIPER_TRAIN = {
+    "t-nz-p335": ("en_GB-vctk-medium", "p335", "nz", "f"), "t-za-p323": ("en_GB-vctk-medium", "p323", "za", "f"),
+    "t-za-p347": ("en_GB-vctk-medium", "p347", "za", "m"), "t-sc-p234": ("en_GB-vctk-medium", "p234", "gb-scottish", "f"),
+    "t-sc-p237": ("en_GB-vctk-medium", "p237", "gb-scottish", "m"), "t-ie-p245": ("en_GB-vctk-medium", "p245", "ie", "m"),
+    "t-ie-p288": ("en_GB-vctk-medium", "p288", "ie", "f"), "t-wa-p253": ("en_GB-vctk-medium", "p253", "gb-welsh", "f"),
+    "t-yk-p267": ("en_GB-vctk-medium", "p267", "gb-yorkshire", "f"), "t-yk-p270": ("en_GB-vctk-medium", "p270", "gb-yorkshire", "m"),
+    "t-ld-p243": ("en_GB-vctk-medium", "p243", "gb-london", "m"), "t-se-p225": ("en_GB-vctk-medium", "p225", "gb", "f"),
+    "t-ca-p302": ("en_GB-vctk-medium", "p302", "ca", "m"), "t-ni-p304": ("en_GB-vctk-medium", "p304", "gb-ni", "m"),
+    "t-sm-prudence": ("en_GB-semaine-medium", "prudence", "gb", "f"), "t-sm-spike": ("en_GB-semaine-medium", "spike", "gb", "m"),
+}
+KOKORO_TRAIN = {
+    "t-k-bf-emma-isabella": ("bf_emma+bf_isabella", "gb", "f"), "t-k-bf-alice-lily": ("bf_alice+bf_lily", "gb", "f"),
+    "t-k-bf-emma-lily": ("bf_emma+bf_lily", "gb", "f"), "t-k-bf-isabella-alice": ("bf_isabella+bf_alice", "gb", "f"),
+    "t-k-bm-george-lewis": ("bm_george+bm_lewis", "gb", "m"), "t-k-bm-daniel-fable": ("bm_daniel+bm_fable", "gb", "m"),
+    "t-k-bm-george-daniel": ("bm_george+bm_daniel", "gb", "m"), "t-k-bm-lewis-fable": ("bm_lewis+bm_fable", "gb", "m"),
+    "t-k-af-nicole": ("af_nicole", "us", "f"), "t-k-af-sarah": ("af_sarah", "us", "f"), "t-k-af-sky": ("af_sky", "us", "f"),
+    "t-k-af-nova": ("af_nova", "us", "f"), "t-k-am-eric": ("am_eric", "us", "m"), "t-k-am-liam": ("am_liam", "us", "m"),
+    "t-k-am-onyx": ("am_onyx", "us", "m"), "t-k-am-puck": ("am_puck", "us", "m"),
+}
+ALL_PIPER, ALL_KOKORO = {**VOICES, **PIPER_TRAIN}, {**KOKORO, **KOKORO_TRAIN}
+KOKORO_FILES = ("https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/", "kokoro-v1.0.onnx",
+                "voices-v1.0.bin")
 PIPER_URL = "https://huggingface.co/rhasspy/piper-voices/resolve/main/en/{lang}/{name}/{q}/{model}.onnx"
 RATES = (0.85, 1.0, 1.0, 1.15)  # Piper length_scale: quick, normal (twice as likely), slow
 FEMALE = set("Amber Freya Hannah Grace Lucy Chloe Mia Jess Kate Priya Sophie Nina Tara Amelia Ella Isla Emma Ruby "
@@ -133,14 +166,17 @@ def user_turns(ex: dict) -> list[tuple]:
     return [(None, ex.get("_written", ex["query"]))]
 
 
-def voice_for(ex: dict) -> str:
+SALT = ""  # --seed-salt: training round trips draw voices, rates and noise apart from the test sets'
+
+
+def voice_for(ex: dict, voices: dict = VOICES) -> str:
     name = (ex.get("speaker") or {}).get("name")
-    pool = [v for v, (_, _, _, g) in VOICES.items() if (g == "f") == (name in FEMALE)] if name in FEMALE | MALE else list(VOICES)
-    return pool[int(h(ex.get("id"), "voice"), 16) % len(pool)]
+    pool = [v for v, spec in voices.items() if (spec[-1] == "f") == (name in FEMALE)] if name in FEMALE | MALE else list(voices)
+    return pool[int(h(*([SALT] if SALT else []), ex.get("id"), "voice"), 16) % len(pool)]
 
 
 def rate_for(ex: dict, k: int) -> float:
-    return RATES[int(h(ex.get("id"), k, "rate"), 16) % len(RATES)]
+    return RATES[int(h(*([SALT] if SALT else []), ex.get("id"), k, "rate"), 16) % len(RATES)]
 
 
 # ---------------------------------------------------------------------- TTS
@@ -150,6 +186,26 @@ class TTS:
 
     def path(self, key: str) -> str:
         return os.path.join(self.cache, "tts", key[:2], key + ".npy")
+
+    def kokoro(self, british: bool):
+        """(Kokoro model, misaki G2P for the accent), loaded once."""
+        if "kokoro" not in self.voices:
+            from kokoro_onnx import Kokoro
+            d = fetch_kokoro(self.cache)
+            threads = int(os.environ.get("HOMEAI_TTS_THREADS", "0"))
+            if threads:  # parallel TTS workers: one onnxruntime pool each, sized to its share of the CPUs
+                import onnxruntime as ort
+                so = ort.SessionOptions()
+                so.intra_op_num_threads = threads
+                sess = ort.InferenceSession(os.path.join(d, KOKORO_FILES[1]), so, providers=["CPUExecutionProvider"])
+                self.voices["kokoro"] = Kokoro.from_session(sess, os.path.join(d, KOKORO_FILES[2]))
+            else:
+                self.voices["kokoro"] = Kokoro(os.path.join(d, KOKORO_FILES[1]), os.path.join(d, KOKORO_FILES[2]))
+        key = f"g2p-{british}"
+        if key not in self.voices:
+            from misaki import en, espeak
+            self.voices[key] = en.G2P(trf=False, british=british, fallback=espeak.EspeakFallback(british=british))
+        return self.voices["kokoro"], self.voices[key]
 
     def voice(self, model: str):
         if model not in self.voices:
@@ -167,17 +223,39 @@ class TTS:
         p = self.path(key)
         if os.path.exists(p):
             return key, np.load(p)
-        model, spk, _, _ = VOICES[voice]
-        v = self.voice(model)
-        sid = v.config.speaker_id_map.get(spk) if spk else None
-        chunks = list(v.synthesize(text, syn_config=SynthesisConfig(speaker_id=sid, length_scale=rate)))
-        sr = chunks[0].sample_rate if chunks else 16000
-        x = np.concatenate([c.audio_float_array for c in chunks]) if chunks else np.zeros(1600, np.float32)
+        if voice in ALL_KOKORO:
+            kv, accent, _ = ALL_KOKORO[voice]
+            model, g2p = self.kokoro(accent == "gb")
+            if "+" in kv:  # a blended voice: the mean of two style vectors
+                a, b = kv.split("+")
+                kv = (model.get_voice_style(a) + model.get_voice_style(b)) / 2
+            phonemes, _ = g2p(text)
+            x, sr = model.create(phonemes, voice=kv, speed=1 / rate, lang="en-gb" if accent == "gb" else "en-us",
+                                 is_phonemes=True)
+        else:
+            model, spk, _, _ = ALL_PIPER[voice]
+            v = self.voice(model)
+            sid = v.config.speaker_id_map.get(spk) if spk else None
+            chunks = list(v.synthesize(text, syn_config=SynthesisConfig(speaker_id=sid, length_scale=rate)))
+            sr = chunks[0].sample_rate if chunks else 16000
+            x = np.concatenate([c.audio_float_array for c in chunks]) if chunks else np.zeros(1600, np.float32)
         y = (np.clip(resample(x, sr), -1, 1) * 32767).astype(np.int16)
         os.makedirs(os.path.dirname(p), exist_ok=True)
         np.save(p + ".tmp.npy", y)
         os.replace(p + ".tmp.npy", p)
         return key, y
+
+
+def fetch_kokoro(cache: str) -> str:
+    import urllib.request
+    d = os.path.join(cache, "kokoro")
+    os.makedirs(d, exist_ok=True)
+    for f in KOKORO_FILES[1:]:
+        if not os.path.exists(os.path.join(d, f)):
+            tmp = os.path.join(d, f"{f}.{os.getpid()}.tmp")
+            urllib.request.urlretrieve(KOKORO_FILES[0] + f, tmp)
+            os.replace(tmp, os.path.join(d, f))
+    return d
 
 
 def fetch_voice(model: str, cache: str) -> str:
@@ -189,8 +267,9 @@ def fetch_voice(model: str, cache: str) -> str:
         lang, name, q = model.split("-")
         url = PIPER_URL.format(lang=lang, name=name, q=q, model=model)
         for suffix in ("", ".json"):
-            urllib.request.urlretrieve(url + suffix, p + suffix + ".tmp")
-            os.replace(p + suffix + ".tmp", p + suffix)
+            tmp = f"{p}{suffix}.{os.getpid()}.tmp"  # parallel TTS workers may fetch the same voice
+            urllib.request.urlretrieve(url + suffix, tmp)
+            os.replace(tmp, p + suffix)
     return p
 
 
@@ -300,24 +379,50 @@ def report(set_name_: str, engine: str, cond: str, rows_out: list[dict], scored:
 
 
 # ---------------------------------------------------------------------- main passes
-def plan(sets: dict, tts: TTS, voice_override=None):
-    """Every user turn of every set, spoken: [(set, row index, turn k, msg index, text, voice, rate, tts key)]."""
-    turns, spoken = [], {}
-    t0, made = time.time(), 0
+_T: dict = {}
+
+
+def _tts_init(cache: str, threads: int):
+    os.environ["HOMEAI_TTS_THREADS"] = str(threads)
+    _T["tts"] = TTS(cache)
+
+
+def _tts_job(batch):
+    return [_T["tts"].speak(text, v, r)[0] for text, v, r in batch]
+
+
+def plan(sets: dict, tts: TTS, voices: dict = VOICES, workers: int = 1, cpus: int = 1):
+    """Every user turn of every set, spoken: [(set, row index, turn k, msg index, text, voice, rate, tts key)].
+    Missing audio is synthesised by `workers` processes (Kokoro is ~2 s an utterance on one CPU stream)."""
+    todo, turns = {}, []
+    t0 = time.time()
     for s, rows in sets.items():
         for i, ex in enumerate(rows):
-            v = voice_override or voice_for(ex)
+            v = voice_for(ex, voices)
             for k, (j, text) in enumerate(user_turns(ex)):
                 r = rate_for(ex, k)
-                sk = (text, v, r)
-                if sk not in spoken:
-                    had = os.path.exists(tts.path(h(TTS_VERSION, text, v, r)))
-                    spoken[sk] = tts.speak(text, v, r)[0]
-                    made += not had
-                    if made and made % 100 == 0 and not had:
-                        print(f"  tts {made} new utterances, {time.time() - t0:.0f}s", flush=True)
-                turns.append((s, i, k, j, text, v, r, spoken[sk]))
-    print(f"tts: {len(turns)} turns, {len(spoken)} distinct utterances, {made} synthesised in {time.time() - t0:.0f}s", flush=True)
+                key = h(TTS_VERSION, text, v, r)
+                if not os.path.exists(tts.path(key)):
+                    todo[(text, v, r)] = key
+                turns.append((s, i, k, j, text, v, r, key))
+    jobs = sorted(todo, key=lambda t: t[1])  # one voice at a time per batch: models load once
+    if jobs and workers > 1:
+        for v in {v for _, v, _ in jobs}:  # download once, before the workers race for it
+            fetch_voice(ALL_PIPER[v][0], tts.cache) if v in ALL_PIPER else fetch_kokoro(tts.cache)
+        batches = [jobs[b:b + 16] for b in range(0, len(jobs), 16)]
+        done = 0
+        with cf.ProcessPoolExecutor(workers, initializer=_tts_init, initargs=(tts.cache, max(1, cpus // workers))) as pool:
+            for f in cf.as_completed([pool.submit(_tts_job, b) for b in batches]):
+                done += len(f.result())
+                if done % 400 < 16:
+                    print(f"  tts {done}/{len(jobs)} {time.time() - t0:.0f}s", flush=True)
+    else:
+        for n, (text, v, r) in enumerate(jobs):
+            tts.speak(text, v, r)
+            if (n + 1) % 100 == 0:
+                print(f"  tts {n + 1}/{len(jobs)} {time.time() - t0:.0f}s", flush=True)
+    print(f"tts: {len(turns)} turns, {len({t[7] for t in turns})} distinct utterances, {len(jobs)} synthesised in "
+          f"{time.time() - t0:.0f}s", flush=True)
     return turns
 
 
@@ -343,7 +448,9 @@ def run(a, root: str):
     from .stt import ENGINES, WHISPER
     sets = {set_name(s): load_set(s, root) for s in a.sets.split(",")}
     tts = TTS(a.cache)
-    turns = plan(sets, tts)
+    pools = {("kokoro", "test"): KOKORO, ("piper", "test"): VOICES, ("kokoro", "train"): KOKORO_TRAIN,
+             ("piper", "train"): PIPER_TRAIN}
+    turns = plan(sets, tts, pools[(a.tts, a.voices)], a.tts_workers, a.cpus)
     beds = build_beds(tts, a.cache)
     if a.tts_only:
         return
@@ -365,7 +472,7 @@ def run(a, root: str):
                 s, i, k, j, text, v, r, tk = t
                 ex = sets[s][i]
                 prompt = houses.get(ex)[1] if biased else ""
-                seed = seed_of(ex.get("id"), k, base)
+                seed = seed_of(*([SALT] if SALT else []), ex.get("id"), k, base)
                 key = h("stt1", tk, base, AC_VERSION, seed, engine, a.beam_size if engine in WHISPER else 0, prompt)
                 keyed[(cond, t)] = key
                 if key not in cache.rows:
@@ -388,10 +495,10 @@ def run(a, root: str):
                               flush=True)
         for cond in conds:
             for s, rows in sets.items():
-                write_heard(a.out, s, engine, cond, rows, [t for t in turns if t[0] == s], keyed, cache, houses)
+                write_heard(a.out, s, engine, cond, rows, [t for t in turns if t[0] == s], keyed, cache, houses, a.tts)
 
 
-def write_heard(out, s, engine, cond, rows, turns, keyed, cache, houses):
+def write_heard(out, s, engine, cond, rows, turns, keyed, cache, houses, tts="piper"):
     biased = cond == "biased" or cond.endswith("-biased")
     by_row = collections.defaultdict(list)
     for t in turns:
@@ -416,13 +523,13 @@ def write_heard(out, s, engine, cond, rows, turns, keyed, cache, houses):
                                "lost": [f"{a}:{b}" for a, b in sc["lost"]]})
             scored.append({**sc, "id": ex.get("id"), "turn": k, "voice": v, "rate": r, "noise": c["m"].get("noise", "-"),
                            "set": ex.get("_set", s), "written": text, "heard": heard, "seconds": c["s"], "duration": c["d"]})
-        ex2["_voice"] = {"stt": engine, "condition": cond, "prompt": prompt if biased else None, "turns": meta_turns}
+        ex2["_voice"] = {"stt": engine, "condition": cond, "tts": tts, "prompt": prompt if biased else None, "turns": meta_turns}
         rows_out.append(ex2)
-    base = os.path.join(out, f"{s}-{engine}-{cond}")
+    base = os.path.join(out, f"{s}-{engine}-{cond}" + ("" if tts == "piper" else f"-{tts}"))
     with open(base + ".jsonl", "w") as fh:
         for r in rows_out:
             fh.write(json.dumps(r) + "\n")
-    rep = report(s, engine, cond, rows_out, scored, biased)
+    rep = {**report(s, engine, cond, rows_out, scored, biased), "tts": tts}
     json.dump(rep, open(base + ".wer.json", "w"), indent=2)
     print(f"  {os.path.basename(base)}: WER {rep['wer']:.1%}  vocab {rep['vocab_wer']:.1%}  meaning changed "
           f"{rep['meaning_changed']:.1%}  ({rep['utterances']} turns)", flush=True)
@@ -471,7 +578,7 @@ def summary(a):
     pooled = collections.defaultdict(lambda: collections.Counter())
     for r in reps:
         if r["set"] in want:
-            c = pooled[(r["stt"], r["condition"])]
+            c = pooled[(r["stt"], r["condition"] + ("" if r.get("tts", "piper") == "piper" else "@" + r["tts"]))]
             for k in ("utterances", "words", "errors", "vocab_words", "vocab_errors", "meaning_changed_n"):
                 c[k] += r[k]
             c["sets"] += 1
@@ -513,10 +620,17 @@ def main():
     ap.add_argument("--latency-threads", type=int, default=4)
     ap.add_argument("--summary", action="store_true", help="print the engine x condition table from existing reports")
     ap.add_argument("--summary-sets", default="probe")
+    ap.add_argument("--tts", choices=("piper", "kokoro"), default="piper", help="synthesiser for the user turns")
+    ap.add_argument("--voices", choices=("test", "train"), default="test", help="voice pool: the heard test sets' or "
+                    "the training pool (PIPER_TRAIN / KOKORO_TRAIN, no voice in common)")
+    ap.add_argument("--seed-salt", default="", help="salt for voice, rate and noise draws (training data: apart from test)")
+    ap.add_argument("--tts-workers", type=int, default=1, help="parallel TTS processes")
     ap.add_argument("--tts-only", action="store_true", help="synthesise and cache the sets' audio, then exit (run it "
                     "on one machine and copy <cache>/tts to the others: Piper sampling is random, the cache is the audio)")
     ap.add_argument("--fetch", action="store_true", help="download the Piper voices and the --stt models, then exit")
     a = ap.parse_args()
+    global SALT
+    SALT = a.seed_salt
     root = os.getcwd()
     if a.summary:
         return summary(a)

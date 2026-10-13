@@ -1,0 +1,37 @@
+{"heard_sets": 404, "layout": "user_context", "rows": 68995, "problems": 68995}
+{"data": "data/generated/test-v2-sp.jsonl", "layout": "stable_prefix", "examples": 150, "turns": 174, "pass": 1.0, "conversation_pass": 1.0, "errors": 0, "wrong_layout_calls": 0, "seconds": 0.8}
+{"data": "data/generated/wild-sp.jsonl", "layout": "stable_prefix", "examples": 303, "turns": 409, "pass": 1.0, "conversation_pass": 1.0, "errors": 0, "wrong_layout_calls": 0, "seconds": 1.8}
+{"data": "data/generated/wild2-sp.jsonl", "layout": "stable_prefix", "examples": 240, "turns": 344, "pass": 1.0, "conversation_pass": 1.0, "errors": 0, "wrong_layout_calls": 0, "seconds": 1.6}
+{"data": "data/generated/test-rules-sp.jsonl", "layout": "stable_prefix", "examples": 200, "turns": 300, "pass": 1.0, "conversation_pass": 1.0, "errors": 0, "wrong_layout_calls": 0, "seconds": 1.1}
+{"data": "data/generated/test-v2-b-sp.jsonl", "layout": "stable_prefix", "examples": 150, "turns": 174, "pass": 1.0, "conversation_pass": 1.0, "errors": 0, "wrong_layout_calls": 0, "seconds": 0.7}
+{"data": "data/generated/wild-b-sp.jsonl", "layout": "stable_prefix", "examples": 303, "turns": 409, "pass": 1.0, "conversation_pass": 1.0, "errors": 0, "wrong_layout_calls": 0, "seconds": 1.7}
+{"data": "data/generated/wild2-b-sp.jsonl", "layout": "stable_prefix", "examples": 240, "turns": 344, "pass": 1.0, "conversation_pass": 1.0, "errors": 0, "wrong_layout_calls": 0, "seconds": 1.7}
+oracle stable_prefix exit 0
+{"data": "data/generated/test-v2-sp.jsonl", "layout": "user_context", "examples": 150, "turns": 174, "pass": 1.0, "conversation_pass": 1.0, "errors": 0, "wrong_layout_calls": 0, "seconds": 0.6}
+{"data": "data/generated/wild-sp.jsonl", "layout": "user_context", "examples": 303, "turns": 409, "pass": 1.0, "conversation_pass": 1.0, "errors": 0, "wrong_layout_calls": 0, "seconds": 1.5}
+{"data": "data/generated/wild2-sp.jsonl", "layout": "user_context", "examples": 240, "turns": 344, "pass": 1.0, "conversation_pass": 1.0, "errors": 0, "wrong_layout_calls": 0, "seconds": 1.6}
+{"data": "data/generated/test-rules-sp.jsonl", "layout": "user_context", "examples": 200, "turns": 300, "pass": 1.0, "conversation_pass": 1.0, "errors": 0, "wrong_layout_calls": 0, "seconds": 1.0}
+{"data": "data/generated/bigbench-sp.jsonl", "layout": "user_context", "examples": 200, "turns": 232, "pass": 1.0, "conversation_pass": 1.0, "errors": 0, "wrong_layout_calls": 0, "seconds": 245.4}
+{"data": "data/generated/test-v2-b-sp.jsonl", "layout": "user_context", "examples": 150, "turns": 174, "pass": 1.0, "conversation_pass": 1.0, "errors": 0, "wrong_layout_calls": 0, "seconds": 0.9}
+{"data": "data/generated/wild-b-sp.jsonl", "layout": "user_context", "examples": 303, "turns": 409, "pass": 1.0, "conversation_pass": 1.0, "errors": 0, "wrong_layout_calls": 0, "seconds": 1.7}
+{"data": "data/generated/wild2-b-sp.jsonl", "layout": "user_context", "examples": 240, "turns": 344, "pass": 1.0, "conversation_pass": 1.0, "errors": 0, "wrong_layout_calls": 0, "seconds": 1.6}
+{"data": "data/generated/bigbench-b-sp.jsonl", "layout": "user_context", "examples": 200, "turns": 232, "pass": 1.0, "conversation_pass": 1.0, "errors": 0, "wrong_layout_calls": 0, "seconds": 246.4}
+{"data": "data/generated/heard/test-v2-small-biased.jsonl", "layout": "user_context", "examples": 150, "turns": 174, "pass": 1.0, "conversation_pass": 1.0, "errors": 0, "wrong_layout_calls": 0, "seconds": 0.6}
+{"data": "data/generated/heard/test-v2-parakeet-noisy10.jsonl", "layout": "user_context", "examples": 150, "turns": 174, "pass": 1.0, "conversation_pass": 1.0, "errors": 0, "wrong_layout_calls": 0, "seconds": 0.6}
+{"data": "data/generated/heard/wild-small-biased.jsonl", "layout": "user_context", "examples": 303, "turns": 409, "pass": 1.0, "conversation_pass": 1.0, "errors": 0, "wrong_layout_calls": 0, "seconds": 1.8}
+{"data": "data/generated/heard/wild-parakeet-noisy10.jsonl", "layout": "user_context", "examples": 303, "turns": 409, "pass": 1.0, "conversation_pass": 1.0, "errors": 0, "wrong_layout_calls": 0, "seconds": 1.5}
+{"data": "data/generated/heard/wild2-small-biased.jsonl", "layout": "user_context", "examples": 240, "turns": 344, "pass": 1.0, "conversation_pass": 1.0, "errors": 0, "wrong_layout_calls": 0, "seconds": 1.4}
+{"data": "data/generated/heard/wild2-parakeet-noisy10.jsonl", "layout": "user_context", "examples": 240, "turns": 344, "pass": 1.0, "conversation_pass": 1.0, "errors": 0, "wrong_layout_calls": 0, "seconds": 1.8}
+{"data": "data/generated/heard/bigbench-bundook-small-biased.jsonl", "layout": "user_context", "examples": 50, "turns": 57, "pass": 1.0, "conversation_pass": 1.0, "errors": 0, "wrong_layout_calls": 0, "seconds": 43.2}
+{"data": "data/generated/heard/bigbench-bundook-parakeet-noisy10.jsonl", "layout": "user_context", "examples": 50, "turns": 57, "pass": 1.0, "conversation_pass": 1.0, "errors": 0, "wrong_layout_calls": 0, "seconds": 42.6}
+{"data": "data/generated/heard/test-v2-b-small-biased.jsonl", "layout": "user_context", "examples": 150, "turns": 174, "pass": 1.0, "conversation_pass": 1.0, "errors": 0, "wrong_layout_calls": 0, "seconds": 0.9}
+{"data": "data/generated/heard/test-v2-b-parakeet-noisy10.jsonl", "layout": "user_context", "examples": 150, "turns": 174, "pass": 1.0, "conversation_pass": 1.0, "errors": 0, "wrong_layout_calls": 0, "seconds": 0.7}
+{"data": "data/generated/heard/wild-b-small-biased.jsonl", "layout": "user_context", "examples": 303, "turns": 409, "pass": 1.0, "conversation_pass": 1.0, "errors": 0, "wrong_layout_calls": 0, "seconds": 1.7}
+{"data": "data/generated/heard/wild-b-parakeet-noisy10.jsonl", "layout": "user_context", "examples": 303, "turns": 409, "pass": 1.0, "conversation_pass": 1.0, "errors": 0, "wrong_layout_calls": 0, "seconds": 1.7}
+{"data": "data/generated/heard/wild2-b-small-biased.jsonl", "layout": "user_context", "examples": 240, "turns": 344, "pass": 1.0, "conversation_pass": 1.0, "errors": 0, "wrong_layout_calls": 0, "seconds": 1.8}
+{"data": "data/generated/heard/wild2-b-parakeet-noisy10.jsonl", "layout": "user_context", "examples": 240, "turns": 344, "pass": 1.0, "conversation_pass": 1.0, "errors": 0, "wrong_layout_calls": 0, "seconds": 1.6}
+{"data": "data/generated/heard/bigbench-b-bundook-small-biased.jsonl", "layout": "user_context", "examples": 50, "turns": 57, "pass": 1.0, "conversation_pass": 1.0, "errors": 0, "wrong_layout_calls": 0, "seconds": 43.8}
+{"data": "data/generated/heard/bigbench-b-bundook-parakeet-noisy10.jsonl", "layout": "user_context", "examples": 50, "turns": 57, "pass": 1.0, "conversation_pass": 1.0, "errors": 0, "wrong_layout_calls": 0, "seconds": 44.0}
+oracle user_context exit 0 2026-09-30 07:59:49
+tiered {'pass': 1.0, 'turns': 174, 'errors': 0, 'history_errors': 0, 'prompt_layout': 'user_context'}
+all done 2026-09-30 07:59:50

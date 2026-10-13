@@ -9,3 +9,9 @@ unsloth_compiled_cache/
 *.safetensors
 /checkpoints/
 Modelfile
+outputs/eval-cassowary/
+# run folders hold merged weights, tokenizer copies and checkpoints (weights live in Ollama and the Piper archive)
+outputs/*/merged16/
+outputs/*/lora/
+outputs/*/checkpoints/
+outputs/*/gguf/

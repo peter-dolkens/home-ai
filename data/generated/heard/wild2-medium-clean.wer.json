@@ -1,0 +1,479 @@
+{
+  "set": "wild2",
+  "stt": "medium",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 344,
+  "words": 2217,
+  "errors": 170,
+  "wer": 0.0767,
+  "exact": 0.7355,
+  "vocab_words": 624,
+  "vocab_errors": 31,
+  "vocab_wer": 0.0497,
+  "vocab": {
+    "room": {
+      "n": 149,
+      "err": 8,
+      "wer": 0.0537
+    },
+    "device": {
+      "n": 219,
+      "err": 7,
+      "wer": 0.032
+    },
+    "person": {
+      "n": 20,
+      "err": 2,
+      "wer": 0.1
+    },
+    "number": {
+      "n": 22,
+      "err": 1,
+      "wer": 0.0455
+    },
+    "command": {
+      "n": 214,
+      "err": 13,
+      "wer": 0.0607
+    }
+  },
+  "meaning_changed": 0.0698,
+  "meaning_changed_n": 24,
+  "meaning_by_kind": {
+    "room": 0.0233,
+    "device": 0.0145,
+    "person": 0.0058,
+    "number": 0.0029,
+    "command": 0.032
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 9.5136,
+    "p50": 9.3159,
+    "p90": 10.8116,
+    "rtf": 3.3754,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "au-p326": {
+      "turns": 24,
+      "wer": 0.2,
+      "meaning_changed": 0.25
+    },
+    "au-p374": {
+      "turns": 33,
+      "wer": 0.1126,
+      "meaning_changed": 0.0606
+    },
+    "gb-alan": {
+      "turns": 27,
+      "wer": 0.0634,
+      "meaning_changed": 0.0
+    },
+    "gb-alba": {
+      "turns": 26,
+      "wer": 0.067,
+      "meaning_changed": 0.0385
+    },
+    "gb-cori": {
+      "turns": 32,
+      "wer": 0.0615,
+      "meaning_changed": 0.0625
+    },
+    "gb-jenny": {
+      "turns": 42,
+      "wer": 0.044,
+      "meaning_changed": 0.0
+    },
+    "gb-northern-m": {
+      "turns": 33,
+      "wer": 0.0927,
+      "meaning_changed": 0.1818
+    },
+    "gb-southern-f": {
+      "turns": 32,
+      "wer": 0.1458,
+      "meaning_changed": 0.1875
+    },
+    "us-amy": {
+      "turns": 32,
+      "wer": 0.024,
+      "meaning_changed": 0.0
+    },
+    "us-lessac": {
+      "turns": 35,
+      "wer": 0.0182,
+      "meaning_changed": 0.0286
+    },
+    "us-ryan": {
+      "turns": 28,
+      "wer": 0.0473,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 76,
+      "wer": 0.0972,
+      "meaning_changed": 0.1184
+    },
+    "1.0": {
+      "turns": 177,
+      "wer": 0.0776,
+      "meaning_changed": 0.0621
+    },
+    "1.15": {
+      "turns": 91,
+      "wer": 0.0593,
+      "meaning_changed": 0.044
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 344,
+      "wer": 0.0767,
+      "meaning_changed": 0.0698
+    }
+  },
+  "by_set": {
+    "wild2": {
+      "turns": 344,
+      "wer": 0.0767,
+      "meaning_changed": 0.0698
+    }
+  },
+  "samples": [
+    {
+      "id": "wild-920004-oven",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "is the oven off? I reckon I left it on",
+      "heard": "Is there enough? I reckon I left a ton.",
+      "lost": [
+        [
+          "device",
+          "oven"
+        ],
+        [
+          "command",
+          "off"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920002-fan-here",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "fan on in here",
+      "heard": "They're not in here.",
+      "lost": [
+        [
+          "device",
+          "fan"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920007-cl1",
+      "turn": 1,
+      "voice": "gb-southern-f",
+      "written": "guest one, no one's using it",
+      "heard": "Cursed when they once using it.",
+      "lost": [
+        [
+          "room",
+          "guest"
+        ],
+        [
+          "number",
+          "1"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920001-dryer",
+      "turn": 1,
+      "voice": "us-lessac",
+      "written": "eh start it anyway, need the towels",
+      "heard": "A started anyway, need the towels.",
+      "lost": [
+        [
+          "command",
+          "start"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920001-pete-aircon",
+      "turn": 0,
+      "voice": "gb-alba",
+      "written": "stick the aircon on in Pete's office, 22, he'll be in there soon",
+      "heard": "Stick the air cannon in Pete's office. 22. He'll be in there soon.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920002-deck-cold",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "is it cold out on the deck",
+      "heard": "Is it called out on the day?",
+      "lost": [
+        [
+          "room",
+          "deck"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920003-backdoor",
+      "turn": 1,
+      "voice": "gb-northern-m",
+      "written": "ugh. lock it at least",
+      "heard": "or block it at least.",
+      "lost": [
+        [
+          "command",
+          "lock"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920003-jazz-bed",
+      "turn": 0,
+      "voice": "au-p374",
+      "written": "play some jazz in the bedroom for Priya",
+      "heard": "Play some jazz in the bedroom for prayer.",
+      "lost": [
+        [
+          "person",
+          "priya"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920004-which-tv",
+      "turn": 1,
+      "voice": "gb-northern-m",
+      "written": "lounge obviously",
+      "heard": "Lunch, obviously.",
+      "lost": [
+        [
+          "room",
+          "lounge"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920005-ensuite",
+      "turn": 0,
+      "voice": "gb-southern-f",
+      "written": "towel rail on in our ensuite, and the exhaust fan too",
+      "heard": "Towel rail on in our own suit and the exhaust fan too.",
+      "lost": [
+        [
+          "room",
+          "ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920005-where-pete",
+      "turn": 0,
+      "voice": "gb-southern-f",
+      "written": "where's Pete",
+      "heard": "Respeed.",
+      "lost": [
+        [
+          "room",
+          "pete"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920006-m2",
+      "turn": 1,
+      "voice": "gb-southern-f",
+      "written": "bit louder thanks",
+      "heard": "Bit loud of thanks.",
+      "lost": [
+        [
+          "command",
+          "louder"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920007-mx1",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "quick check before my shower - is peter up, and get the bathroom fan going",
+      "heard": "Quick check before my shower is peed up, and get the bathroom fan-gun.",
+      "lost": [
+        [
+          "person",
+          "peter"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920007-r1",
+      "turn": 0,
+      "voice": "gb-cori",
+      "written": "morning routine - open the blinds in the bedroom and the dining hall",
+      "heard": "Morning routine open. The blinds in bedroom. Dining.",
+      "lost": [
+        [
+          "room",
+          "dining hall"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920007-s1",
+      "turn": 0,
+      "voice": "gb-southern-f",
+      "written": "is the oven still going",
+      "heard": "Is he up and still going?",
+      "lost": [
+        [
+          "device",
+          "oven"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920008-d1",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "turn the lounge light off, don't need it",
+      "heard": "Turn the live slide off, don't need it.",
+      "lost": [
+        [
+          "room",
+          "lounge"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920008-mx1",
+      "turn": 0,
+      "voice": "gb-northern-m",
+      "written": "before I head out - lock the front door and tell me if it's going to rain",
+      "heard": "before I head outlock the front door and tell me if it's going to rain.",
+      "lost": [
+        [
+          "command",
+          "lock"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920008-r1",
+      "turn": 2,
+      "voice": "au-p374",
+      "written": "and lock the mudroom door, it's sitting unlocked",
+      "heard": "Unlock the mudroom door, it's sitting unlocked.",
+      "lost": [
+        [
+          "command",
+          "lock"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920008-s1",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "is the mudroom door locked",
+      "heard": "Is it my dream to walk?",
+      "lost": [
+        [
+          "device",
+          "mudroom door"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920009-h9-kitchen-jazz",
+      "turn": 0,
+      "voice": "gb-southern-f",
+      "written": "Play some... actually nah, put some jazz on in the kitchen",
+      "heard": "Place some actually gnaw, put some dares on in the kitchen.",
+      "lost": [
+        [
+          "command",
+          "play"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920010-h10-amber-office-blinds",
+      "turn": 0,
+      "voice": "au-p326",
+      "written": "Open the blinds in Amber's office",
+      "heard": "Open the blinds in Amazon's office.",
+      "lost": [
+        [
+          "room",
+          "ambers office"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920010-h10-disarm",
+      "turn": 0,
+      "voice": "gb-northern-m",
+      "written": "Disarm the alarm",
+      "heard": "The Sunday Alarm.",
+      "lost": [
+        [
+          "command",
+          "disarm"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920010-h10-disarm",
+      "turn": 1,
+      "voice": "gb-northern-m",
+      "written": "Yes, disarm it",
+      "heard": "Yes, Desamit.",
+      "lost": [
+        [
+          "command",
+          "disarm"
+        ]
+      ]
+    },
+    {
+      "id": "wild-920010-h10-shark-plugged",
+      "turn": 0,
+      "voice": "gb-northern-m",
+      "written": "Is the Shark plugged in?",
+      "heard": "is the sharp plug-in.",
+      "lost": [
+        [
+          "device",
+          "shark"
+        ]
+      ]
+    }
+  ]
+}

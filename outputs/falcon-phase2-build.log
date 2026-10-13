@@ -1,0 +1,27 @@
+2026-09-29 13:19:18 llama-quantize Q4_0
+llama_model_quantize_impl: quant size  =  3117.09 MiB (5.61 BPW)
+qwen35.rope.dimension_sections = 11,11,10 -> /Users/peter.dolkens/Projects/home-ai/.mlx/exports/falcon/homeai-4b-lora-v5-q4_0.gguf.part
+2026-09-29 13:19:55 llama-quantize IQ4_XS
+llama_model_quantize_impl: quant size  =  3021.19 MiB (5.44 BPW)
+qwen35.rope.dimension_sections = 11,11,10 -> /Users/peter.dolkens/Projects/home-ai/.mlx/exports/falcon/homeai-4b-lora-v5-iq4_xs.gguf.part
+2026-09-29 13:27:23 llama-quantize Q5_K_M
+llama_model_quantize_impl: quant size  =  3638.28 MiB (6.55 BPW)
+qwen35.rope.dimension_sections = 11,11,10 -> /Users/peter.dolkens/Projects/home-ai/.mlx/exports/falcon/homeai-4b-lora-v5-q5_k_m.gguf.part
+2026-09-29 13:29:32 mlx_lm.convert mlx4
+[INFO] Loading
+[INFO] Using dtype: bfloat16
+[INFO] Quantizing
+[INFO] Quantized model with 4.503 bits per weight.
+2026-09-29 13:29:50 mlx_lm.convert mlx4g32
+[INFO] Loading
+[INFO] Using dtype: bfloat16
+[INFO] Quantizing
+[INFO] Quantized model with 5.003 bits per weight.
+2026-09-29 13:30:08 push mlx/homeai-4b-lora-v5-mlx4 (2290 MB)
+2026-09-29 13:31:28 push mlx/homeai-4b-lora-v5-mlx4g32 (2537 MB)
+2026-09-29 14:38:10 push mlx/homeai-4b-lora-v5-mlx4g32 (2537 MB)
+2026-09-29 19:23:47 push homeai-4b-lora-v5-q4_K_M-rebuilt.gguf (3232 MB)
+2026-09-29 22:53:43 push homeai-4b-lora-v5-q4_0.gguf (3131 MB)
+2026-09-30 00:02:36 push homeai-4b-lora-v5-iq4_xs.gguf (3035 MB)
+2026-09-30 15:58:22 push homeai-4b-lora-v5-q5_k_m.gguf (3659 MB)
+2026-09-30 16:00:38 phase 2 artifacts pushed

@@ -1,0 +1,229 @@
+{
+  "set": "kokoro__small__clean",
+  "stt": "small",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 60,
+  "words": 353,
+  "errors": 20,
+  "wer": 0.0567,
+  "exact": 0.8,
+  "vocab_words": 134,
+  "vocab_errors": 6,
+  "vocab_wer": 0.0448,
+  "vocab": {
+    "room": {
+      "n": 43,
+      "err": 4,
+      "wer": 0.093
+    },
+    "device": {
+      "n": 53,
+      "err": 2,
+      "wer": 0.0377
+    },
+    "person": {
+      "n": 2,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 3,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 33,
+      "err": 0,
+      "wer": 0.0
+    }
+  },
+  "meaning_changed": 0.0667,
+  "meaning_changed_n": 4,
+  "meaning_by_kind": {
+    "room": 0.05,
+    "device": 0.0167,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 3.3158,
+    "p50": 3.6097,
+    "p90": 4.2023,
+    "rtf": 1.1128,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nicole": {
+      "turns": 4,
+      "wer": 0.1429,
+      "meaning_changed": 0.25
+    },
+    "t-k-af-nova": {
+      "turns": 5,
+      "wer": 0.0625,
+      "meaning_changed": 0.2
+    },
+    "t-k-af-sarah": {
+      "turns": 6,
+      "wer": 0.0476,
+      "meaning_changed": 0.1667
+    },
+    "t-k-af-sky": {
+      "turns": 5,
+      "wer": 0.0345,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-eric": {
+      "turns": 2,
+      "wer": 0.1818,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-liam": {
+      "turns": 9,
+      "wer": 0.0263,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-onyx": {
+      "turns": 5,
+      "wer": 0.0714,
+      "meaning_changed": 0.2
+    },
+    "t-k-am-puck": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 5,
+      "wer": 0.1875,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 3,
+      "wer": 0.0588,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 6,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 16,
+      "wer": 0.0714,
+      "meaning_changed": 0.0625
+    },
+    "1.0": {
+      "turns": 27,
+      "wer": 0.0588,
+      "meaning_changed": 0.0741
+    },
+    "1.15": {
+      "turns": 17,
+      "wer": 0.0404,
+      "meaning_changed": 0.0588
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 60,
+      "wer": 0.0567,
+      "meaning_changed": 0.0667
+    }
+  },
+  "by_set": {
+    "kokoro__small__clean": {
+      "turns": 60,
+      "wer": 0.0567,
+      "meaning_changed": 0.0667
+    }
+  },
+  "samples": [
+    {
+      "id": "bbig-bundook_full-plan-467-s2",
+      "turn": 0,
+      "voice": "t-k-af-nicole",
+      "written": "turn on the batten lights thanks",
+      "heard": "Turn on the bat and lights things",
+      "lost": [
+        [
+          "device",
+          "batten lights"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-703-s2",
+      "turn": 0,
+      "voice": "t-k-af-sarah",
+      "written": "hey, turn on the lights in the guest ensuite",
+      "heard": "Hey turn on the lights in the guest-in suit.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-96-s2",
+      "turn": 0,
+      "voice": "t-k-af-nova",
+      "written": "Open the blinds in the master ensuite.",
+      "heard": "Open the blinds in the master-in-suit.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1146-s2",
+      "turn": 0,
+      "voice": "t-k-am-onyx",
+      "written": "what's this that's playing in the alfresco",
+      "heard": "What's this that's playing in the old fresco",
+      "lost": [
+        [
+          "room",
+          "alfresco"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

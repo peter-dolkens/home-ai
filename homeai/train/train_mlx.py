@@ -491,7 +491,7 @@ def train(cfg, max_steps=0, log_every=10):
     mx.set_memory_limit(int(cfg.get("mlx_memory_limit_gb", 16) * GB))
     mx.set_cache_limit(int(cfg.get("mlx_cache_limit_gb", 4) * GB))
     tok = text_tokenizer(AutoTokenizer.from_pretrained(cfg.get("hf_tokenizer", cfg["base_model"])))
-    rows, dropped, lengths = encode(tok, load_jsonl(cfg["train"]), cfg, cfg["max_seq_len"])
+    rows, dropped, lengths = encode(tok, load_jsonl(cfg["train"], cfg.get("prompt_layout")), cfg, cfg["max_seq_len"])
     print(f"train: {len(rows)} examples (dropped {dropped} over {cfg['max_seq_len']} tokens); "
           f"mean {statistics.mean(lengths):.0f} tokens, max {max(lengths)}")
     n_lab = sum(sum(1 for x in r["labels"] if x != -100) for r in rows[:50])
@@ -501,7 +501,7 @@ def train(cfg, max_steps=0, log_every=10):
     val = []
     if cfg.get("val") and os.path.exists(cfg["val"]):
         vmax = cfg.get("val_max_tokens", 2048)
-        val, vdrop, _ = encode(tok, load_jsonl(cfg["val"]), cfg, vmax)
+        val, vdrop, _ = encode(tok, load_jsonl(cfg["val"], cfg.get("prompt_layout")), cfg, vmax)
         val = val[: cfg.get("val_max_examples", 200)]
         print(f"val: {len(val)} examples (dropped {vdrop} over {vmax} tokens)")
 
@@ -594,8 +594,10 @@ def train(cfg, max_steps=0, log_every=10):
             log.write(json.dumps({"event": "eval", "step": step, "epoch": epoch + 1, "eval_loss": vl}) + "\n")
             log.flush()
     el = time.time() - t_start
-    losses = [json.loads(l)["loss"] for l in open(log_path) if '"loss"' in l]
-    summary = {"event": "done", **host_info(), "steps": step, "train_loss": statistics.mean(losses[-step:]) if losses else None,
+    by_step = {r["step"]: r for r in map(json.loads, open(log_path)) if "loss" in r}  # a resumed run may repeat steps
+    losses = [by_step[k]["loss"] for k in sorted(by_step)]
+    summary = {"event": "done", **host_info(), "steps": step, "train_loss": statistics.mean(losses) if losses else None,
+               "train_seconds_all_sessions": round(sum(r["step_s"] for r in by_step.values()), 1),
                "train_seconds": round(el, 1), "tokens": tok_seen, "trained_tokens": lab_seen, "tokens_per_s": round(tok_seen / el, 1),
                "peak_gb": round(mx.get_peak_memory() / GB, 2), "time": time.strftime("%F %T")}
     log.write(json.dumps(summary) + "\n")
@@ -625,7 +627,7 @@ def main():
     if a.dry_run:
         from transformers import AutoTokenizer
         tok = text_tokenizer(AutoTokenizer.from_pretrained(cfg.get("hf_tokenizer", cfg["base_model"])))
-        rows, dropped, lengths = encode(tok, load_jsonl(cfg["train"]), cfg, cfg["max_seq_len"])
+        rows, dropped, lengths = encode(tok, load_jsonl(cfg["train"], cfg.get("prompt_layout")), cfg, cfg["max_seq_len"])
         total, warmup, _ = schedule(cfg, len(rows))
         n_in, n_lab = sum(len(r["ids"]) for r in rows), sum(sum(1 for x in r["labels"] if x != -100) for r in rows)
         print(f"examples kept {len(rows)}, dropped {dropped}; tokens/epoch {n_in:,}, trained {n_lab:,} ({n_lab / n_in:.1%}); "

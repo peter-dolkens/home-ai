@@ -1,0 +1,275 @@
+{
+  "set": "piper__parakeet__clean",
+  "stt": "parakeet",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 33,
+  "words": 216,
+  "errors": 27,
+  "wer": 0.125,
+  "exact": 0.5455,
+  "vocab_words": 81,
+  "vocab_errors": 11,
+  "vocab_wer": 0.1358,
+  "vocab": {
+    "room": {
+      "n": 28,
+      "err": 4,
+      "wer": 0.1429
+    },
+    "device": {
+      "n": 29,
+      "err": 6,
+      "wer": 0.2069
+    },
+    "person": {
+      "n": 1,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 3,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 20,
+      "err": 1,
+      "wer": 0.05
+    }
+  },
+  "meaning_changed": 0.2424,
+  "meaning_changed_n": 8,
+  "meaning_by_kind": {
+    "room": 0.0909,
+    "device": 0.1212,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0303
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 0.1814,
+    "p50": 0.1694,
+    "p90": 0.2566,
+    "rtf": 0.0702,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-ca-p302": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-ie-p245": {
+      "turns": 3,
+      "wer": 0.1053,
+      "meaning_changed": 0.0
+    },
+    "t-ie-p288": {
+      "turns": 2,
+      "wer": 0.2727,
+      "meaning_changed": 0.5
+    },
+    "t-ld-p243": {
+      "turns": 3,
+      "wer": 0.1364,
+      "meaning_changed": 0.6667
+    },
+    "t-nz-p335": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-sc-p237": {
+      "turns": 1,
+      "wer": 0.1667,
+      "meaning_changed": 0.0
+    },
+    "t-se-p225": {
+      "turns": 2,
+      "wer": 0.15,
+      "meaning_changed": 0.0
+    },
+    "t-sm-prudence": {
+      "turns": 2,
+      "wer": 0.1333,
+      "meaning_changed": 0.0
+    },
+    "t-sm-spike": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-wa-p253": {
+      "turns": 3,
+      "wer": 0.5,
+      "meaning_changed": 0.6667
+    },
+    "t-yk-p267": {
+      "turns": 4,
+      "wer": 0.1111,
+      "meaning_changed": 0.25
+    },
+    "t-yk-p270": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-za-p323": {
+      "turns": 2,
+      "wer": 0.1,
+      "meaning_changed": 0.0
+    },
+    "t-za-p347": {
+      "turns": 4,
+      "wer": 0.1143,
+      "meaning_changed": 0.5
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 9,
+      "wer": 0.1091,
+      "meaning_changed": 0.1111
+    },
+    "1.0": {
+      "turns": 20,
+      "wer": 0.1221,
+      "meaning_changed": 0.25
+    },
+    "1.15": {
+      "turns": 4,
+      "wer": 0.1667,
+      "meaning_changed": 0.5
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 33,
+      "wer": 0.125,
+      "meaning_changed": 0.2424
+    }
+  },
+  "by_set": {
+    "piper__parakeet__clean": {
+      "turns": 33,
+      "wer": 0.125,
+      "meaning_changed": 0.2424
+    }
+  },
+  "samples": [
+    {
+      "id": "bbig-bundook_full-plan-865-s2",
+      "turn": 0,
+      "voice": "t-ld-p243",
+      "written": "hey house, can you get the batten lights off",
+      "heard": "Hey Howes, can you get the button lights off?",
+      "lost": [
+        [
+          "device",
+          "house"
+        ],
+        [
+          "device",
+          "batten lights"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-18-s2",
+      "turn": 0,
+      "voice": "t-ie-p288",
+      "written": "Turn the guest ensuite lights on.",
+      "heard": "Turn the guests and seatlights on.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-63-s2",
+      "turn": 0,
+      "voice": "t-ld-p243",
+      "written": "hey house, turn on the carport lights",
+      "heard": "Hey Howes, turn on the carport lights.",
+      "lost": [
+        [
+          "device",
+          "house"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-820-s2",
+      "turn": 0,
+      "voice": "t-za-p347",
+      "written": "hey house, put the lights on in the guest ensuite, then shut the fan off in laundry toilet please",
+      "heard": "Hey House, put the lights on in the guest and suit. Then shut the fan off in laundry toilet, please.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-842-s2",
+      "turn": 0,
+      "voice": "t-wa-p253",
+      "written": "is the telly on",
+      "heard": "Is it tellion?",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-852-s2",
+      "turn": 0,
+      "voice": "t-yk-p267",
+      "written": "Flip the floodlight 2 on",
+      "heard": "Flip the floodlight to on.",
+      "lost": [
+        [
+          "device",
+          "floodlight 2"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1392-s2",
+      "turn": 0,
+      "voice": "t-wa-p253",
+      "written": "Is the alarm set?",
+      "heard": "Is it a lampette?",
+      "lost": [
+        [
+          "device",
+          "alarm"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1461-s2",
+      "turn": 0,
+      "voice": "t-za-p347",
+      "written": "kill the fan in the laundry",
+      "heard": "Till the fan in the launcher.",
+      "lost": [
+        [
+          "room",
+          "laundry"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

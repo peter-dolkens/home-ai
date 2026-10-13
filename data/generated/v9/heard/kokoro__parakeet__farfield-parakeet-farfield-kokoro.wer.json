@@ -1,0 +1,428 @@
+{
+  "set": "kokoro__parakeet__farfield",
+  "stt": "parakeet",
+  "condition": "farfield",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 164,
+  "words": 1047,
+  "errors": 73,
+  "wer": 0.0697,
+  "exact": 0.7195,
+  "vocab_words": 350,
+  "vocab_errors": 24,
+  "vocab_wer": 0.0686,
+  "vocab": {
+    "room": {
+      "n": 108,
+      "err": 8,
+      "wer": 0.0741
+    },
+    "device": {
+      "n": 108,
+      "err": 6,
+      "wer": 0.0556
+    },
+    "person": {
+      "n": 15,
+      "err": 4,
+      "wer": 0.2667
+    },
+    "number": {
+      "n": 14,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 105,
+      "err": 6,
+      "wer": 0.0571
+    }
+  },
+  "meaning_changed": 0.1159,
+  "meaning_changed_n": 19,
+  "meaning_by_kind": {
+    "room": 0.0366,
+    "device": 0.0244,
+    "person": 0.0244,
+    "number": 0.0,
+    "command": 0.0366
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 0.4375,
+    "p50": 0.4143,
+    "p90": 0.6176,
+    "rtf": 0.1449,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nicole": {
+      "turns": 11,
+      "wer": 0.0746,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-nova": {
+      "turns": 9,
+      "wer": 0.0448,
+      "meaning_changed": 0.2222
+    },
+    "t-k-af-sarah": {
+      "turns": 11,
+      "wer": 0.0972,
+      "meaning_changed": 0.1818
+    },
+    "t-k-af-sky": {
+      "turns": 9,
+      "wer": 0.04,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-eric": {
+      "turns": 21,
+      "wer": 0.0685,
+      "meaning_changed": 0.0952
+    },
+    "t-k-am-liam": {
+      "turns": 6,
+      "wer": 0.1562,
+      "meaning_changed": 0.1667
+    },
+    "t-k-am-onyx": {
+      "turns": 12,
+      "wer": 0.1375,
+      "meaning_changed": 0.3333
+    },
+    "t-k-am-puck": {
+      "turns": 7,
+      "wer": 0.186,
+      "meaning_changed": 0.1429
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 12,
+      "wer": 0.0694,
+      "meaning_changed": 0.0833
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 10,
+      "wer": 0.0566,
+      "meaning_changed": 0.1
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 12,
+      "wer": 0.0435,
+      "meaning_changed": 0.1667
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 11,
+      "wer": 0.0435,
+      "meaning_changed": 0.1818
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 6,
+      "wer": 0.1667,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 7,
+      "wer": 0.037,
+      "meaning_changed": 0.1429
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 12,
+      "wer": 0.0211,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 8,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 40,
+      "wer": 0.0895,
+      "meaning_changed": 0.15
+    },
+    "1.0": {
+      "turns": 76,
+      "wer": 0.0503,
+      "meaning_changed": 0.1053
+    },
+    "1.15": {
+      "turns": 48,
+      "wer": 0.0831,
+      "meaning_changed": 0.1042
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 164,
+      "wer": 0.0697,
+      "meaning_changed": 0.1159
+    }
+  },
+  "by_set": {
+    "kokoro__parakeet__farfield": {
+      "turns": 164,
+      "wer": 0.0697,
+      "meaning_changed": 0.1159
+    }
+  },
+  "samples": [
+    {
+      "id": "201-1597",
+      "turn": 0,
+      "voice": "t-k-am-onyx",
+      "written": "start the island pendant",
+      "heard": "Starve the island of Pandu.",
+      "lost": [
+        [
+          "command",
+          "start"
+        ],
+        [
+          "device",
+          "island pendant"
+        ]
+      ]
+    },
+    {
+      "id": "200-191",
+      "turn": 0,
+      "voice": "t-k-bm-george-daniel",
+      "written": "Get the lamp off",
+      "heard": "Get the lamb offs.",
+      "lost": [
+        [
+          "command",
+          "off"
+        ]
+      ]
+    },
+    {
+      "id": "200-475",
+      "turn": 0,
+      "voice": "t-k-bf-isabella-alice",
+      "written": "right, shut off every lights in the house please",
+      "heard": "Right, shut off every light in the house, please.",
+      "lost": [
+        [
+          "device",
+          "lights"
+        ]
+      ]
+    },
+    {
+      "id": "201-2410",
+      "turn": 0,
+      "voice": "t-k-am-onyx",
+      "written": "kill every lights in the house",
+      "heard": "Kill every light in the house.",
+      "lost": [
+        [
+          "device",
+          "lights"
+        ]
+      ]
+    },
+    {
+      "id": "202-1060",
+      "turn": 0,
+      "voice": "t-k-af-sarah",
+      "written": "hey house, turn off the lights in the guest robe please",
+      "heard": "Hay House, turn off the lights in the guest row, please.",
+      "lost": [
+        [
+          "room",
+          "guest robe"
+        ]
+      ]
+    },
+    {
+      "id": "203-2958",
+      "turn": 0,
+      "voice": "t-k-am-onyx",
+      "written": "Turn on the laundry lights and turn off the fan in the master ensuite.",
+      "heard": "Turn on the laundry lights and turn off the fan in the master in suit.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "203-672",
+      "turn": 1,
+      "voice": "t-k-am-eric",
+      "written": "The rumpus room one.",
+      "heard": "The rump is room one.",
+      "lost": [
+        [
+          "room",
+          "rumpus room"
+        ]
+      ]
+    },
+    {
+      "id": "204-1667",
+      "turn": 0,
+      "voice": "t-k-af-nova",
+      "written": "did Yuki head to the study",
+      "heard": "Did Yuka head to the study?",
+      "lost": [
+        [
+          "person",
+          "yuki"
+        ]
+      ]
+    },
+    {
+      "id": "205-2685",
+      "turn": 0,
+      "voice": "t-k-bf-alice-lily",
+      "written": "get the blinds closed in the master ensuite",
+      "heard": "Get the blinds closed in the master and suit.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "207-1904",
+      "turn": 0,
+      "voice": "t-k-bf-emma-lily",
+      "written": "What windows are open?",
+      "heard": "What windows are opened",
+      "lost": [
+        [
+          "command",
+          "open"
+        ]
+      ]
+    },
+    {
+      "id": "207-203",
+      "turn": 0,
+      "voice": "t-k-am-onyx",
+      "written": "Light up the entry and vanity",
+      "heard": "Light up the entry on band.",
+      "lost": [
+        [
+          "room",
+          "vanity"
+        ]
+      ]
+    },
+    {
+      "id": "207-885",
+      "turn": 0,
+      "voice": "t-k-am-liam",
+      "written": "hey house, raise the blinds",
+      "heard": "Hay House raised the blinds.",
+      "lost": [
+        [
+          "command",
+          "raise"
+        ]
+      ]
+    },
+    {
+      "id": "abig-bundook_full-plan-1248",
+      "turn": 0,
+      "voice": "t-k-am-eric",
+      "written": "ok switch on the lights in the storage and the master ensuite please",
+      "heard": "Okay, switch on the lights in the storage and the master and suit please.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "abig-bundook_full-plan-1342",
+      "turn": 0,
+      "voice": "t-k-bf-emma-isabella",
+      "written": "um, pause thanks",
+      "heard": "Um poor sanksy.",
+      "lost": [
+        [
+          "command",
+          "pause"
+        ]
+      ]
+    },
+    {
+      "id": "abig-random-3000-19",
+      "turn": 0,
+      "voice": "t-k-am-puck",
+      "written": "hey, can you find Liam",
+      "heard": "A can you find the M.",
+      "lost": [
+        [
+          "person",
+          "liam"
+        ]
+      ]
+    },
+    {
+      "id": "abig-random-3000-201",
+      "turn": 0,
+      "voice": "t-k-af-nova",
+      "written": "hey, where is Charlie",
+      "heard": "Hey, where is Charley?",
+      "lost": [
+        [
+          "person",
+          "charlie"
+        ]
+      ]
+    },
+    {
+      "id": "abig-random-3000-212",
+      "turn": 0,
+      "voice": "t-k-bf-emma-lily",
+      "written": "Are any windows open?",
+      "heard": "Are any windows opened?",
+      "lost": [
+        [
+          "command",
+          "open"
+        ]
+      ]
+    },
+    {
+      "id": "v5a-800003-h3-19",
+      "turn": 0,
+      "voice": "t-k-af-sarah",
+      "written": "Where's Leo?",
+      "heard": "Where's Leah?",
+      "lost": [
+        [
+          "person",
+          "leo"
+        ]
+      ]
+    },
+    {
+      "id": "v5a-800014-h14-s11",
+      "turn": 0,
+      "voice": "t-k-bf-isabella-alice",
+      "written": "What's the air fryer doing?",
+      "heard": "What's the Air Friar doing?",
+      "lost": [
+        [
+          "device",
+          "air fryer"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

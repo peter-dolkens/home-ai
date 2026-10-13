@@ -1,0 +1,21 @@
+{
+  "_comment": "4B B-v2 in the user_context layout (2 Oct): the 2B with this layout tied the stable_prefix 2B on accuracy (falcon MLX6 80.5 vs 79.5% mean on the B sets) and answered warm on the Bundook plan in 1.77 s vs 4.36 s, because the system message stays identical per house; this is the 4B's version for the Mac's more accurate design-B option.",
+  "base_model": "Qwen/Qwen3.5-4B",
+  "hf_tokenizer": "Qwen/Qwen3.5-4B",
+  "ollama_template_from": "qwen3.5:4b",
+  "instruction_part": "<|im_start|>user\n",
+  "response_part": "<|im_start|>assistant\n",
+  "max_seq_len": 6144,
+  "lora_r": 16,
+  "lora_alpha": 16,
+  "epochs": 2,
+  "lr": 0.0002,
+  "batch_size": 1,
+  "grad_accum": 16,
+  "seed": 3407,
+  "train": "data/generated/train-b-v2.jsonl",
+  "val": "data/generated/val-b.jsonl",
+  "out": "outputs/qwen35-4b-lora-b-v2u",
+  "load_in_4bit": false,
+  "prompt_layout": "user_context"
+}

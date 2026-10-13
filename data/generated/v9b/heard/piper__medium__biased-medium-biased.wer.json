@@ -1,0 +1,242 @@
+{
+  "set": "piper__medium__biased",
+  "stt": "medium",
+  "condition": "biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 69,
+  "words": 458,
+  "errors": 24,
+  "wer": 0.0524,
+  "exact": 0.7536,
+  "vocab_words": 151,
+  "vocab_errors": 5,
+  "vocab_wer": 0.0331,
+  "vocab": {
+    "room": {
+      "n": 63,
+      "err": 1,
+      "wer": 0.0159
+    },
+    "device": {
+      "n": 46,
+      "err": 2,
+      "wer": 0.0435
+    },
+    "person": {
+      "n": 2,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 3,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 37,
+      "err": 2,
+      "wer": 0.0541
+    }
+  },
+  "meaning_changed": 0.0725,
+  "meaning_changed_n": 5,
+  "meaning_by_kind": {
+    "room": 0.0145,
+    "device": 0.029,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.029
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 13.0725,
+    "p50": 13.3229,
+    "p90": 15.1916,
+    "rtf": 5.0326,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-ca-p302": {
+      "turns": 3,
+      "wer": 0.05,
+      "meaning_changed": 0.0
+    },
+    "t-ie-p245": {
+      "turns": 3,
+      "wer": 0.0417,
+      "meaning_changed": 0.0
+    },
+    "t-ie-p288": {
+      "turns": 3,
+      "wer": 0.0625,
+      "meaning_changed": 0.3333
+    },
+    "t-ld-p243": {
+      "turns": 7,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-ni-p304": {
+      "turns": 6,
+      "wer": 0.2,
+      "meaning_changed": 0.1667
+    },
+    "t-nz-p335": {
+      "turns": 5,
+      "wer": 0.0345,
+      "meaning_changed": 0.0
+    },
+    "t-sc-p234": {
+      "turns": 4,
+      "wer": 0.0345,
+      "meaning_changed": 0.0
+    },
+    "t-sc-p237": {
+      "turns": 4,
+      "wer": 0.0435,
+      "meaning_changed": 0.0
+    },
+    "t-se-p225": {
+      "turns": 4,
+      "wer": 0.0952,
+      "meaning_changed": 0.0
+    },
+    "t-sm-prudence": {
+      "turns": 5,
+      "wer": 0.0294,
+      "meaning_changed": 0.0
+    },
+    "t-sm-spike": {
+      "turns": 3,
+      "wer": 0.0909,
+      "meaning_changed": 0.3333
+    },
+    "t-wa-p253": {
+      "turns": 5,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-yk-p267": {
+      "turns": 3,
+      "wer": 0.0476,
+      "meaning_changed": 0.3333
+    },
+    "t-yk-p270": {
+      "turns": 4,
+      "wer": 0.0286,
+      "meaning_changed": 0.25
+    },
+    "t-za-p323": {
+      "turns": 5,
+      "wer": 0.069,
+      "meaning_changed": 0.0
+    },
+    "t-za-p347": {
+      "turns": 5,
+      "wer": 0.0968,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 16,
+      "wer": 0.0476,
+      "meaning_changed": 0.125
+    },
+    "1.0": {
+      "turns": 39,
+      "wer": 0.0608,
+      "meaning_changed": 0.0513
+    },
+    "1.15": {
+      "turns": 14,
+      "wer": 0.0333,
+      "meaning_changed": 0.0714
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 69,
+      "wer": 0.0524,
+      "meaning_changed": 0.0725
+    }
+  },
+  "by_set": {
+    "piper__medium__biased": {
+      "turns": 69,
+      "wer": 0.0524,
+      "meaning_changed": 0.0725
+    }
+  },
+  "samples": [
+    {
+      "id": "b300-1633",
+      "turn": 0,
+      "voice": "t-ni-p304",
+      "written": "close the blinds in the lounge",
+      "heard": "Closer Blinds in the Lounge.",
+      "lost": [
+        [
+          "command",
+          "close"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2247",
+      "turn": 0,
+      "voice": "t-sm-spike",
+      "written": "Switch on the downlights in the master ensuite",
+      "heard": "Switch on the downlights in the master and suit.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2463",
+      "turn": 0,
+      "voice": "t-ie-p288",
+      "written": "What's the solar looking like",
+      "heard": "What's the cellar looking like?",
+      "lost": [
+        [
+          "device",
+          "solar"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-10000-694",
+      "turn": 0,
+      "voice": "t-yk-p270",
+      "written": "Turn off the living room plug 4.",
+      "heard": "Turn off the living room plug for.",
+      "lost": [
+        [
+          "device",
+          "plug 4"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-3000-258",
+      "turn": 0,
+      "voice": "t-yk-p267",
+      "written": "Time for bed, lock up please.",
+      "heard": "Time for bed. Look up, please.",
+      "lost": [
+        [
+          "command",
+          "lock"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

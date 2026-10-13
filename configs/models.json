@@ -1,270 +1,796 @@
 {
-  "_doc": "Models under comparison: Ollama name -> training config (null for untuned baselines). Used by homeai.eval.champions for the champion pick and outputs/results.csv. Append new runs at the end.",
-  "qwen3.5:4b": {
-    "config": null,
-    "method": "untuned",
-    "data": "-",
-    "train_examples": 0,
-    "tier": "4B"
-  },
-  "qwen3.5:9b": {
-    "config": null,
-    "method": "untuned",
-    "data": "-",
-    "train_examples": 0,
-    "tier": "8-9B"
-  },
-  "gemma4:e4b": {
-    "config": null,
-    "method": "untuned",
-    "data": "-",
-    "train_examples": 0,
-    "note": "Ollama gemma4:e4b Q4_K_M, thinking off",
-    "tier": "8B (Gemma E4B, ~4B active)"
-  },
-  "lfm2.5-1.2b": {
-    "config": null,
-    "method": "untuned",
-    "data": "-",
-    "train_examples": 0,
-    "note": "LiquidAI GGUF Q4_K_M, RENDERER/PARSER lfm2",
-    "tier": "1-2B"
-  },
-  "lfm2.5-350m": {
-    "config": null,
-    "method": "untuned",
-    "data": "-",
-    "train_examples": 0,
-    "note": "LiquidAI GGUF Q4_K_M, RENDERER/PARSER lfm2",
-    "tier": "<1B"
-  },
-  "lfm2.5-230m": {
-    "config": null,
-    "method": "untuned",
-    "data": "-",
-    "train_examples": 0,
-    "note": "LiquidAI GGUF Q4_K_M, RENDERER/PARSER lfm2",
-    "tier": "<1B"
-  },
-  "spark-x2.5-4b": {
-    "config": null,
-    "method": "untuned",
-    "data": "-",
-    "train_examples": 0,
-    "note": "XHToken/Spark-X2.5-4B Q4_K_M via Ollama 0.34.4 (ollama-next :11435), thinking off",
-    "ollama": "http://localhost:11435",
-    "ollama_container": "ollama-next",
-    "tier": "4B"
-  },
-  "homeai-4b": {
-    "config": "configs/qwen35-4b.json",
-    "method": "QLoRA",
-    "data": "v1",
-    "train_examples": 3000,
-    "retired": "dominated by homeai-4b-v2 on test-v2 and wild; no further evals",
-    "tier": "4B"
-  },
-  "homeai-9b": {
-    "config": "configs/qwen35-9b.json",
-    "method": "QLoRA",
-    "data": "v1",
-    "train_examples": 3000,
-    "retired": "dominated by homeai-4b-v2 on test-v2 and wild; no further evals",
-    "tier": "8-9B"
-  },
-  "homeai-4b-lora": {
-    "config": "configs/qwen35-4b-lora.json",
-    "method": "bf16 LoRA",
-    "data": "v1",
-    "train_examples": 3000,
-    "retired": "dominated by homeai-4b-v2 on test-v2 and wild; no further evals",
-    "tier": "4B"
-  },
-  "homeai-4b-v2": {
-    "config": "configs/qwen35-4b-v2.json",
-    "method": "QLoRA",
-    "data": "v2",
-    "train_examples": 5855,
-    "tier": "4B"
-  },
-  "homeai-9b-v2": {
-    "config": "configs/qwen35-9b-v2.json",
-    "method": "QLoRA",
-    "data": "v2",
-    "train_examples": 5855,
-    "tier": "8-9B"
-  },
-  "homeai-4b-v4": {
-    "config": "configs/qwen35-4b-v4.json",
-    "method": "QLoRA",
-    "data": "v4",
-    "train_examples": 8341,
-    "tier": "4B"
-  },
-  "homeai-4b-lora-v2": {
-    "config": "configs/qwen35-4b-lora-v2.json",
-    "method": "bf16 LoRA",
-    "data": "v2",
-    "train_examples": 5855,
-    "tier": "4B"
-  },
-  "homeai-4b-rft1": {
-    "config": "configs/qwen35-4b-rft1.json",
-    "method": "RFT on homeai-4b-lora-v2",
-    "data": "rft(v2)",
-    "train_examples": 2378,
-    "tier": "4B"
-  },
-  "homeai-4b-rft2": {
-    "config": "configs/qwen35-4b-rft2.json",
-    "method": "RFT on homeai-4b-lora-v2 (strict facts, confirm sensitive)",
-    "data": "rft(v2)",
-    "train_examples": 2284,
-    "tier": "4B"
-  },
-  "homeai-4b-v5": {
-    "config": "configs/qwen35-4b-v5.json",
-    "method": "QLoRA",
-    "data": "v5",
-    "train_examples": 7570,
-    "tier": "4B"
-  },
-  "homeai-gemma4-e4b-v2": {
-    "config": "configs/gemma4-e4b-v2.json",
-    "method": "QLoRA (Gemma 4 E4B)",
-    "data": "v2",
-    "train_examples": 5855,
-    "note": "first GGUF crashed on load (merge dropped text_config.global_head_dim); reconverted 26 Sep",
-    "tier": "8B (Gemma E4B, ~4B active)"
-  },
-  "homeai-4b-lora-v5": {
-    "config": "configs/qwen35-4b-lora-v5.json",
-    "method": "bf16 LoRA",
-    "data": "v5",
-    "train_examples": 7570,
-    "tier": "4B"
-  },
-  "homeai-4b-lora-v6": {
-    "config": "configs/qwen35-4b-lora-v6.json",
-    "method": "bf16 LoRA",
-    "data": "v6",
-    "train_examples": 8156,
-    "tier": "4B"
-  },
-  "homeai-lfm25-1.2b-lora-v5": {
-    "config": "configs/lfm25-1.2b-lora-v5.json",
-    "method": "bf16 LoRA (LFM2.5 1.2b)",
-    "data": "v5",
-    "train_examples": 7570,
-    "tier": "1-2B"
-  },
-  "homeai-lfm25-350m-lora-v5": {
-    "config": "configs/lfm25-350m-lora-v5.json",
-    "method": "bf16 LoRA (LFM2.5 350m)",
-    "data": "v5",
-    "train_examples": 7570,
-    "tier": "<1B"
-  },
-  "homeai-lfm25-230m-lora-v5": {
-    "config": "configs/lfm25-230m-lora-v5.json",
-    "method": "bf16 LoRA (LFM2.5 230m)",
-    "data": "v5",
-    "train_examples": 7570,
-    "retired": "not competitive (outcome ~36%); teacher-forced evals hang on runaway generations (2 min timeouts)",
-    "tier": "<1B"
-  },
-  "homeai-spark-x25-4b-lora-v5": {
-    "config": "configs/spark-x25-4b-lora-v5.json",
-    "method": "bf16 LoRA (Spark X2.5 4B, transformers+PEFT)",
-    "data": "v5",
-    "train_examples": 7570,
-    "ollama": "http://localhost:11435",
-    "ollama_container": "ollama-next",
-    "tier": "4B"
-  },
-  "homeai-gemma4-e4b-v5": {
-    "config": "configs/gemma4-e4b-v5.json",
-    "method": "QLoRA (Gemma 4 E4B, tool-response mask fixed)",
-    "data": "v5",
-    "train_examples": 7570,
-    "tier": "8B (Gemma E4B, ~4B active)"
-  },
-  "homeai-4b-lora-v5-r32": {
-    "config": "configs/qwen35-4b-lora-v5-r32.json",
-    "method": "bf16 LoRA r32",
-    "data": "v5",
-    "train_examples": 7570,
-    "tier": "4B"
-  },
-  "homeai-4b-lora-v7": {
-    "config": "configs/qwen35-4b-lora-v7.json",
-    "method": "bf16 LoRA",
-    "data": "v7",
-    "train_examples": 7864,
-    "tier": "4B"
-  },
-  "homeai-4b-lora-b": {
-    "config": "configs/qwen35-4b-lora-b.json",
-    "method": "bf16 LoRA, design B tools",
-    "data": "b",
-    "train_examples": 6536,
-    "track": "architecture",
-    "tier": "4B"
-  },
-  "homeai-4b-lora-orch": {
-    "config": "configs/qwen35-4b-lora-orch.json",
-    "method": "bf16 LoRA, design C/D orchestrator",
-    "data": "orch",
-    "train_examples": 6536,
-    "track": "architecture",
-    "tier": "4B"
-  },
-  "homeai-2b-lora-v5": {
-    "config": "configs/qwen35-2b-lora-v5.json",
-    "method": "bf16 LoRA (Qwen3.5-2B, design E fast model)",
-    "data": "v5",
-    "train_examples": 7570,
-    "ollama": "http://lapwing.dolkens.net:11500",
-    "host": "lapwing",
-    "tier": "2B"
-  },
-  "homeai-4b-lora-v8": {
-    "config": "configs/qwen35-4b-lora-v8.json",
-    "method": "bf16 LoRA, 8k sequences",
-    "data": "v8",
-    "train_examples": 9363,
-    "tier": "4B"
-  },
-  "qwen3.8:27b": {
-    "config": null,
-    "method": "untuned (Qwen3.8 27B dense, Aug 2026)",
-    "data": "-",
-    "note": "candidate slow model (design E), orchestrator or quality ceiling; 17.7 GB q4_K_M, partly CPU-offloaded on the 3090",
-    "tier": "27B"
-  },
-  "homeai-gemma4-e4b-v8": {
-    "config": "configs/gemma4-e4b-v8.json",
-    "method": "QLoRA (Gemma 4 E4B, v8 data)",
-    "data": "v8",
-    "train_examples": 9363,
-    "tier": "8B (Gemma E4B, ~4B active)"
-  },
-  "homeai-lfm25-1.2b-lora-v5-fix": {
-    "config": "configs/lfm25-1.2b-lora-v5-fix.json",
-    "method": "bf16 LoRA (LFM2.5 1.2b, LFM2 module names)",
-    "data": "v5",
-    "train_examples": 7570,
-    "tier": "1-2B",
-    "ollama": "http://lapwing.dolkens.net:11500",
-    "host": "lapwing"
-  },
-  "homeai-lfm25-350m-lora-v5-fix": {
-    "config": "configs/lfm25-350m-lora-v5-fix.json",
-    "method": "bf16 LoRA (LFM2.5 350m, LFM2 module names)",
-    "data": "v5",
-    "train_examples": 7570,
-    "tier": "<1B",
-    "ollama": "http://lapwing.dolkens.net:11500",
-    "host": "lapwing"
-  }
+ "_doc": "Models under comparison: Ollama name -> training config (null for untuned baselines). Used by homeai.eval.champions for the champion pick and outputs/results.csv. Append new runs at the end.",
+ "qwen3.5:4b": {
+  "config": null,
+  "method": "untuned",
+  "data": "-",
+  "train_examples": 0,
+  "tier": "4B"
+ },
+ "qwen3.5:9b": {
+  "config": null,
+  "method": "untuned",
+  "data": "-",
+  "train_examples": 0,
+  "tier": "8-9B"
+ },
+ "gemma4:e4b": {
+  "config": null,
+  "method": "untuned",
+  "data": "-",
+  "train_examples": 0,
+  "note": "Ollama gemma4:e4b Q4_K_M, thinking off",
+  "tier": "8B (Gemma E4B, ~4B active)"
+ },
+ "lfm2.5-1.2b": {
+  "config": null,
+  "method": "untuned",
+  "data": "-",
+  "train_examples": 0,
+  "note": "LiquidAI GGUF Q4_K_M, RENDERER/PARSER lfm2",
+  "tier": "1-2B"
+ },
+ "lfm2.5-350m": {
+  "config": null,
+  "method": "untuned",
+  "data": "-",
+  "train_examples": 0,
+  "note": "LiquidAI GGUF Q4_K_M, RENDERER/PARSER lfm2",
+  "tier": "<1B"
+ },
+ "lfm2.5-230m": {
+  "config": null,
+  "method": "untuned",
+  "data": "-",
+  "train_examples": 0,
+  "note": "LiquidAI GGUF Q4_K_M, RENDERER/PARSER lfm2",
+  "tier": "<1B"
+ },
+ "spark-x2.5-4b": {
+  "config": null,
+  "method": "untuned",
+  "data": "-",
+  "train_examples": 0,
+  "note": "XHToken/Spark-X2.5-4B Q4_K_M via Ollama 0.34.4 (ollama-next :11435), thinking off",
+  "ollama": "http://localhost:11435",
+  "ollama_container": "ollama-next",
+  "tier": "4B"
+ },
+ "homeai-4b": {
+  "config": "configs/qwen35-4b.json",
+  "method": "QLoRA",
+  "data": "v1",
+  "train_examples": 3000,
+  "retired": "dominated by homeai-4b-v2 on test-v2 and wild; no further evals",
+  "tier": "4B"
+ },
+ "homeai-9b": {
+  "config": "configs/qwen35-9b.json",
+  "method": "QLoRA",
+  "data": "v1",
+  "train_examples": 3000,
+  "retired": "dominated by homeai-4b-v2 on test-v2 and wild; no further evals",
+  "tier": "8-9B"
+ },
+ "homeai-4b-lora": {
+  "config": "configs/qwen35-4b-lora.json",
+  "method": "bf16 LoRA",
+  "data": "v1",
+  "train_examples": 3000,
+  "retired": "dominated by homeai-4b-v2 on test-v2 and wild; no further evals",
+  "tier": "4B"
+ },
+ "homeai-4b-v2": {
+  "config": "configs/qwen35-4b-v2.json",
+  "method": "QLoRA",
+  "data": "v2",
+  "train_examples": 5855,
+  "tier": "4B"
+ },
+ "homeai-9b-v2": {
+  "config": "configs/qwen35-9b-v2.json",
+  "method": "QLoRA",
+  "data": "v2",
+  "train_examples": 5855,
+  "tier": "8-9B"
+ },
+ "homeai-4b-v4": {
+  "config": "configs/qwen35-4b-v4.json",
+  "method": "QLoRA",
+  "data": "v4",
+  "train_examples": 8341,
+  "tier": "4B"
+ },
+ "homeai-4b-lora-v2": {
+  "config": "configs/qwen35-4b-lora-v2.json",
+  "method": "bf16 LoRA",
+  "data": "v2",
+  "train_examples": 5855,
+  "tier": "4B"
+ },
+ "homeai-4b-rft1": {
+  "config": "configs/qwen35-4b-rft1.json",
+  "method": "RFT on homeai-4b-lora-v2",
+  "data": "rft(v2)",
+  "train_examples": 2378,
+  "tier": "4B"
+ },
+ "homeai-4b-rft2": {
+  "config": "configs/qwen35-4b-rft2.json",
+  "method": "RFT on homeai-4b-lora-v2 (strict facts, confirm sensitive)",
+  "data": "rft(v2)",
+  "train_examples": 2284,
+  "tier": "4B"
+ },
+ "homeai-4b-v5": {
+  "config": "configs/qwen35-4b-v5.json",
+  "method": "QLoRA",
+  "data": "v5",
+  "train_examples": 7570,
+  "tier": "4B"
+ },
+ "homeai-gemma4-e4b-v2": {
+  "config": "configs/gemma4-e4b-v2.json",
+  "method": "QLoRA (Gemma 4 E4B)",
+  "data": "v2",
+  "train_examples": 5855,
+  "note": "first GGUF crashed on load (merge dropped text_config.global_head_dim); reconverted 26 Sep",
+  "tier": "8B (Gemma E4B, ~4B active)"
+ },
+ "homeai-4b-lora-v5": {
+  "config": "configs/qwen35-4b-lora-v5.json",
+  "method": "bf16 LoRA",
+  "data": "v5",
+  "train_examples": 7570,
+  "tier": "4B"
+ },
+ "homeai-4b-lora-v6": {
+  "config": "configs/qwen35-4b-lora-v6.json",
+  "method": "bf16 LoRA",
+  "data": "v6",
+  "train_examples": 8156,
+  "tier": "4B"
+ },
+ "homeai-lfm25-1.2b-lora-v5": {
+  "config": "configs/lfm25-1.2b-lora-v5.json",
+  "method": "bf16 LoRA (LFM2.5 1.2b)",
+  "data": "v5",
+  "train_examples": 7570,
+  "tier": "1-2B"
+ },
+ "homeai-lfm25-350m-lora-v5": {
+  "config": "configs/lfm25-350m-lora-v5.json",
+  "method": "bf16 LoRA (LFM2.5 350m)",
+  "data": "v5",
+  "train_examples": 7570,
+  "tier": "<1B"
+ },
+ "homeai-lfm25-230m-lora-v5": {
+  "config": "configs/lfm25-230m-lora-v5.json",
+  "method": "bf16 LoRA (LFM2.5 230m)",
+  "data": "v5",
+  "train_examples": 7570,
+  "retired": "not competitive (outcome ~36%); teacher-forced evals hang on runaway generations (2 min timeouts)",
+  "tier": "<1B"
+ },
+ "homeai-spark-x25-4b-lora-v5": {
+  "config": "configs/spark-x25-4b-lora-v5.json",
+  "method": "bf16 LoRA (Spark X2.5 4B, transformers+PEFT)",
+  "data": "v5",
+  "train_examples": 7570,
+  "ollama": "http://localhost:11435",
+  "ollama_container": "ollama-next",
+  "tier": "4B"
+ },
+ "homeai-gemma4-e4b-v5": {
+  "config": "configs/gemma4-e4b-v5.json",
+  "method": "QLoRA (Gemma 4 E4B, tool-response mask fixed)",
+  "data": "v5",
+  "train_examples": 7570,
+  "tier": "8B (Gemma E4B, ~4B active)"
+ },
+ "homeai-4b-lora-v5-r32": {
+  "config": "configs/qwen35-4b-lora-v5-r32.json",
+  "method": "bf16 LoRA r32",
+  "data": "v5",
+  "train_examples": 7570,
+  "tier": "4B"
+ },
+ "homeai-4b-lora-v7": {
+  "config": "configs/qwen35-4b-lora-v7.json",
+  "method": "bf16 LoRA",
+  "data": "v7",
+  "train_examples": 7864,
+  "tier": "4B"
+ },
+ "homeai-4b-lora-b": {
+  "config": "configs/qwen35-4b-lora-b.json",
+  "method": "bf16 LoRA, design B tools",
+  "data": "b",
+  "train_examples": 6536,
+  "track": "architecture",
+  "tier": "4B"
+ },
+ "homeai-4b-lora-orch": {
+  "config": "configs/qwen35-4b-lora-orch.json",
+  "method": "bf16 LoRA, design C/D orchestrator",
+  "data": "orch",
+  "train_examples": 6536,
+  "track": "architecture",
+  "tier": "4B"
+ },
+ "homeai-2b-lora-v5": {
+  "config": "configs/qwen35-2b-lora-v5.json",
+  "method": "bf16 LoRA (Qwen3.5-2B, design E fast model)",
+  "data": "v5",
+  "train_examples": 7570,
+  "tier": "2B",
+  "note": "served from cassowary since 29 Sep (Peter: timings compared with earlier results come from the 3090); lapwing-timed reports kept as *-lapwing"
+ },
+ "homeai-4b-lora-v8": {
+  "config": "configs/qwen35-4b-lora-v8.json",
+  "method": "bf16 LoRA, 8k sequences",
+  "data": "v8",
+  "train_examples": 9363,
+  "tier": "4B"
+ },
+ "qwen3.8:27b": {
+  "config": null,
+  "method": "untuned (Qwen3.8 27B dense, Aug 2026)",
+  "data": "-",
+  "note": "candidate slow model (design E), orchestrator or quality ceiling; 17.7 GB q4_K_M, partly CPU-offloaded on the 3090; needs Ollama >= 0.3x (0.21.2 refuses the pull), so it lives in ollama-next (0.35.0)",
+  "tier": "27B",
+  "ollama": "http://localhost:11435",
+  "ollama_container": "ollama-next"
+ },
+ "homeai-gemma4-e4b-v8": {
+  "config": "configs/gemma4-e4b-v8.json",
+  "method": "QLoRA (Gemma 4 E4B, v8 data)",
+  "data": "v8",
+  "train_examples": 9363,
+  "tier": "8B (Gemma E4B, ~4B active)"
+ },
+ "homeai-lfm25-1.2b-lora-v5-fix": {
+  "config": "configs/lfm25-1.2b-lora-v5-fix.json",
+  "method": "bf16 LoRA (LFM2.5 1.2b, LFM2 module names)",
+  "data": "v5",
+  "train_examples": 7570,
+  "tier": "1-2B",
+  "ollama": "http://lapwing.dolkens.net:11500",
+  "host": "lapwing",
+  "retired": true
+ },
+ "homeai-lfm25-350m-lora-v5-fix": {
+  "config": "configs/lfm25-350m-lora-v5-fix.json",
+  "method": "bf16 LoRA (LFM2.5 350m, LFM2 module names)",
+  "data": "v5",
+  "train_examples": 7570,
+  "tier": "<1B",
+  "note": "served from cassowary since 29 Sep (Peter: timings compared with earlier results come from the 3090); lapwing-timed reports kept as *-lapwing"
+ },
+ "homeai-4b-lora-v9": {
+  "config": "configs/qwen35-4b-lora-v9.json",
+  "method": "bf16 LoRA, 8k sequences, ASR-robust data",
+  "data": "v9",
+  "train_examples": 9363,
+  "tier": "4B"
+ },
+ "homeai-2b-lora-orch": {
+  "config": "configs/qwen35-2b-lora-orch.json",
+  "method": "bf16 LoRA, design C orchestrator on Qwen3.5-2B",
+  "data": "orch",
+  "train_examples": 6536,
+  "track": "architecture",
+  "tier": "2B"
+ },
+ "homeai-lfm25-1.2b-lora-v5-fix2": {
+  "config": "configs/lfm25-1.2b-lora-v5-fix2.json",
+  "method": "bf16 LoRA (LFM2.5 1.2b), all projections, 350M chat template",
+  "data": "v5",
+  "train_examples": 7570,
+  "tier": "1-2B",
+  "note": "served from cassowary since 29 Sep (Peter: timings compared with earlier results come from the 3090); lapwing-timed reports kept as *-lapwing"
+ },
+ "homeai-0.8b-lora-v5": {
+  "config": "configs/qwen35-0.8b-lora-v5.json",
+  "method": "bf16 LoRA (Qwen3.5-0.8B, trained with MLX on falcon)",
+  "data": "v5",
+  "train_examples": 7570,
+  "tier": "<1B"
+ },
+ "homeai-4b-lora-v10": {
+  "config": "configs/qwen35-4b-lora-v10.json",
+  "method": "bf16 LoRA, 8k sequences, ASR-robust data, stable-prefix prompt",
+  "data": "v10",
+  "train_examples": 9363,
+  "tier": "4B",
+  "prompt_layout": "stable_prefix"
+ },
+ "homeai-4b-lora-b-v2": {
+  "config": "configs/qwen35-4b-lora-b-v2.json",
+  "method": "bf16 LoRA, design B tools, ASR-robust data, stable-prefix prompt",
+  "data": "b-v2",
+  "train_examples": 6536,
+  "track": "architecture",
+  "tier": "4B",
+  "prompt_layout": "stable_prefix"
+ },
+ "homeai-4b-lora-v11": {
+  "config": "configs/qwen35-4b-lora-v11.json",
+  "method": "bf16 LoRA, 8k sequences, ASR-robust data, context in user turns",
+  "data": "v9",
+  "train_examples": 9363,
+  "tier": "4B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-lfm25-1.2b-lora-v9": {
+  "config": "configs/lfm25-1.2b-lora-v9.json",
+  "method": "bf16 LoRA (LFM2.5 1.2b), all projections, 350M chat template, ASR-robust v9 data",
+  "data": "v9",
+  "train_examples": 8324,
+  "tier": "1-2B"
+ },
+ "homeai-2b-lora-v9": {
+  "config": "configs/qwen35-2b-lora-v9.json",
+  "method": "bf16 LoRA (Qwen3.5-2B), ASR-robust v9 data",
+  "data": "v9",
+  "train_examples": 8324,
+  "tier": "2B"
+ },
+ "homeai-spark-x25-4b-lora-v9": {
+  "config": "configs/spark-x25-4b-lora-v9.json",
+  "method": "bf16 LoRA (Spark X2.5 4B, transformers+PEFT), ASR-robust v9 data",
+  "data": "v9",
+  "train_examples": 8324,
+  "ollama": "http://localhost:11435",
+  "ollama_container": "ollama-next",
+  "tier": "4B"
+ },
+ "homeai-4b-lora-v12": {
+  "config": "configs/qwen35-4b-lora-v12.json",
+  "method": "bf16 LoRA, 8k sequences, ASR-robust data, clock in user turn",
+  "data": "v9",
+  "train_examples": 9363,
+  "tier": "4B",
+  "prompt_layout": "clock_in_user"
+ },
+ "homeai-2b-lora-b-v2": {
+  "config": "configs/qwen35-2b-lora-b-v2.json",
+  "method": "bf16 LoRA (Qwen3.5-2B), design B tools, ASR-robust data, stable-prefix prompt; trained on lapwing, imported on cassowary",
+  "data": "b-v2",
+  "train_examples": 6284,
+  "track": "architecture",
+  "tier": "2B",
+  "prompt_layout": "stable_prefix"
+ },
+ "homeai-lfm25-1.2b-lora-b-v2": {
+  "config": "configs/lfm25-1.2b-lora-b-v2.json",
+  "method": "bf16 LoRA (LFM2.5 1.2B, fix2 recipe), design B tools, ASR-robust data, stable-prefix prompt; trained on lapwing, imported on cassowary",
+  "data": "b-v2",
+  "train_examples": 6287,
+  "track": "architecture",
+  "tier": "1-2B",
+  "prompt_layout": "stable_prefix"
+ },
+ "homeai-spark-x25-4b-lora-b-v2": {
+  "config": "configs/spark-x25-4b-lora-b-v2.json",
+  "method": "bf16 LoRA (Spark X2.5 4B, transformers+PEFT), design B tools, ASR-robust data, stable-prefix prompt",
+  "data": "b-v2",
+  "train_examples": 6536,
+  "ollama": "http://localhost:11435",
+  "ollama_container": "ollama-next",
+  "track": "architecture",
+  "tier": "4B",
+  "prompt_layout": "stable_prefix"
+ },
+ "homeai-4b-lora-b-v2u": {
+  "config": "configs/qwen35-4b-lora-b-v2u.json",
+  "method": "bf16 LoRA, design B tools, ASR-robust data, user_context prompt (Mac prompt cache)",
+  "data": "b-v2",
+  "train_examples": 6536,
+  "track": "architecture",
+  "tier": "4B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-4b-lora-b-v3h": {
+  "config": "configs/qwen35-4b-lora-b-v3h.json",
+  "method": "bf16 LoRA, design B tools, ASR-robust data + 1,650 Bundook-plan conversations, user_context prompt",
+  "data": "b-v3h",
+  "train_examples": 8186,
+  "track": "architecture",
+  "tier": "4B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-2b-lora-b-v2u": {
+  "config": "configs/qwen35-2b-lora-b-v2u.json",
+  "method": "bf16 LoRA (Qwen3.5-2B), design B tools, ASR-robust data, user_context prompt (Mac prompt cache); trained on lapwing",
+  "data": "b-v2",
+  "train_examples": 6279,
+  "track": "architecture",
+  "tier": "2B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-lfm25-1.2b-lora-b-v2u": {
+  "config": "configs/lfm25-1.2b-lora-b-v2u.json",
+  "method": "bf16 LoRA (LFM2.5 1.2B), design B tools, ASR-robust data, user_context prompt; trained on lapwing",
+  "data": "b-v2",
+  "train_examples": 6287,
+  "track": "architecture",
+  "tier": "1-2B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-4b-lora-b-v4w": {
+  "config": "configs/qwen35-4b-lora-b-v4w.json",
+  "method": "bf16 LoRA, design B tools, ASR-robust data + rejection-sampled B transcripts of the wild training conversations, user_context",
+  "data": "b-v4w",
+  "train_examples": 6536,
+  "track": "architecture",
+  "tier": "4B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-spark-x25-4b-lora-b-v4w": {
+  "config": "configs/spark-x25-4b-lora-b-v4w.json",
+  "method": "bf16 LoRA (Spark X2.5 4B), design B tools, ASR-robust data + rft-b wild transcripts, stable-prefix prompt",
+  "data": "b-v4w",
+  "train_examples": 6536,
+  "ollama": "http://localhost:11435",
+  "ollama_container": "ollama-next",
+  "track": "architecture",
+  "tier": "4B",
+  "prompt_layout": "stable_prefix"
+ },
+ "homeai-lfm25-1.2b-lora-b-v3h": {
+  "config": "configs/lfm25-1.2b-lora-b-v3h.json",
+  "method": "bf16 LoRA (LFM2.5 1.2B), design B tools, ASR-robust data + 1,650 Bundook-plan conversations, user_context; trained on lapwing",
+  "data": "b-v3h",
+  "train_examples": 6287,
+  "track": "architecture",
+  "tier": "1-2B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-spark-x25-4b-lora-b-v6n": {
+  "config": "configs/spark-x25-4b-lora-b-v6n.json",
+  "method": "bf16 LoRA (Spark X2.5 4B), design B tools, hard (far-field / noise) ASR augmentation, stable-prefix prompt",
+  "data": "b-v6n",
+  "train_examples": 6536,
+  "ollama": "http://localhost:11435",
+  "ollama_container": "ollama-next",
+  "track": "architecture",
+  "tier": "4B",
+  "prompt_layout": "stable_prefix"
+ },
+ "homeai-lfm25-1.2b-lora-b-v7": {
+  "config": "configs/lfm25-1.2b-lora-b-v7.json",
+  "method": "bf16 LoRA (LFM2.5 1.2B), design B tools, hard (far-field / noise) ASR augmentation + Bundook-plan conversations, user_context; trained on lapwing",
+  "data": "b-v7",
+  "train_examples": 7863,
+  "track": "architecture",
+  "tier": "1-2B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-2b-lora-b-v6n": {
+  "config": "configs/qwen35-2b-lora-b-v6n.json",
+  "method": "bf16 LoRA (Qwen3.5-2B), design B tools, hard (far-field / noise) ASR augmentation, user_context; trained on lapwing",
+  "data": "b-v6n",
+  "track": "architecture",
+  "tier": "2B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-lfm25-1.2b-lora-b-v8": {
+  "config": "configs/lfm25-1.2b-lora-b-v8.json",
+  "method": "bf16 LoRA (LFM2.5 1.2B), design B tools, hard ASR augmentation + Bundook-plan conversations + the 4B's verified wild transcripts, user_context; trained on lapwing",
+  "data": "b-v8",
+  "track": "architecture",
+  "tier": "1-2B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-spark-x25-4b-lora-b-v9": {
+  "config": "configs/spark-x25-4b-lora-b-v9.json",
+  "method": "bf16 LoRA (Spark X2.5 4B), design B tools, hard (far-field / noise) ASR augmentation, stable-prefix prompt + the 4B wild transcripts",
+  "data": "b-v9",
+  "ollama": "http://localhost:11435",
+  "ollama_container": "ollama-next",
+  "track": "architecture",
+  "tier": "4B",
+  "prompt_layout": "stable_prefix"
+ },
+ "homeai-lfm25-1.2b-lora-b-v7r32": {
+  "config": "configs/lfm25-1.2b-lora-b-v7r32.json",
+  "method": "bf16 LoRA r32 (LFM2.5 1.2B), design B tools, hard (far-field / noise) ASR augmentation + Bundook-plan conversations, user_context; trained on lapwing",
+  "data": "b-v7",
+  "train_examples": 7863,
+  "track": "architecture",
+  "tier": "1-2B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-lfm25-1.2b-lora-b-v10": {
+  "config": "configs/lfm25-1.2b-lora-b-v10.json",
+  "method": "bf16 LoRA r32 (LFM2.5 1.2B), design B tools, hard (far-field / noise) ASR augmentation x2 draws + Bundook-plan conversations, user_context; trained on lapwing",
+  "data": "b-v10",
+  "track": "architecture",
+  "tier": "1-2B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-2b-lora-b-v2u-r32": {
+  "config": "configs/qwen35-2b-lora-b-v2u-r32.json",
+  "method": "bf16 LoRA r32 (Qwen3.5-2B), design B tools, ASR-robust data, user_context prompt (Mac prompt cache); trained on lapwing",
+  "data": "b-v2",
+  "track": "architecture",
+  "tier": "2B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-lfm25-1.2b-lora-b-v7r64": {
+  "config": "configs/lfm25-1.2b-lora-b-v7r64.json",
+  "method": "bf16 LoRA r64 (LFM2.5 1.2B), design B tools, hard (far-field / noise) ASR augmentation + Bundook-plan conversations, user_context; trained on lapwing",
+  "data": "b-v7",
+  "train_examples": 7863,
+  "track": "architecture",
+  "tier": "1-2B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-spark-x25-4b-lora-b-v6n-r32": {
+  "config": "configs/spark-x25-4b-lora-b-v6n-r32.json",
+  "method": "bf16 LoRA r32 (Spark X2.5 4B), design B tools, hard (far-field / noise) ASR augmentation, stable-prefix prompt",
+  "data": "b-v6n",
+  "ollama": "http://localhost:11435",
+  "ollama_container": "ollama-next",
+  "track": "architecture",
+  "tier": "4B",
+  "prompt_layout": "stable_prefix"
+ },
+ "homeai-2b-lora-b-v6n-r32": {
+  "config": "configs/qwen35-2b-lora-b-v6n-r32.json",
+  "method": "bf16 LoRA r32 (Qwen3.5-2B), design B tools, hard (far-field / noise) ASR augmentation, user_context; trained on lapwing",
+  "data": "b-v6n",
+  "track": "architecture",
+  "tier": "2B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-lfm25-1.2b-lora-b-v7r128": {
+  "config": "configs/lfm25-1.2b-lora-b-v7r128.json",
+  "method": "bf16 LoRA r128 (LFM2.5 1.2B), design B tools, hard (far-field / noise) ASR augmentation + Bundook-plan conversations, user_context; trained on lapwing",
+  "data": "b-v7",
+  "train_examples": 7863,
+  "track": "architecture",
+  "tier": "1-2B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-2b-lora-b-v2u-r64": {
+  "config": "configs/qwen35-2b-lora-b-v2u-r64.json",
+  "method": "bf16 LoRA r64 (Qwen3.5-2B), design B tools, ASR-robust data, user_context prompt (Mac prompt cache); trained on lapwing",
+  "data": "b-v2",
+  "track": "architecture",
+  "tier": "2B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-lfm25-1.2b-lora-b-v7r256": {
+  "config": "configs/lfm25-1.2b-lora-b-v7r256.json",
+  "method": "bf16 LoRA r256 (LFM2.5 1.2B), design B tools, hard (far-field / noise) ASR augmentation + Bundook-plan conversations, user_context; trained on lapwing",
+  "data": "b-v7",
+  "train_examples": 7863,
+  "track": "architecture",
+  "tier": "1-2B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-spark-x25-4b-lora-b-v9-r32": {
+  "config": "configs/spark-x25-4b-lora-b-v9-r32.json",
+  "method": "bf16 LoRA r32 (Spark X2.5 4B), design B tools, hard (far-field / noise) ASR augmentation, stable-prefix prompt + the 4B wild transcripts",
+  "data": "b-v9",
+  "ollama": "http://localhost:11435",
+  "ollama_container": "ollama-next",
+  "track": "architecture",
+  "tier": "4B",
+  "prompt_layout": "stable_prefix"
+ },
+ "homeai-lfm25-1.2b-lora-b-v7r128s2": {
+  "config": "configs/lfm25-1.2b-lora-b-v7r128s2.json",
+  "method": "bf16 LoRA r128 (LFM2.5 1.2B), design B tools, hard (far-field / noise) ASR augmentation + Bundook-plan conversations, user_context; trained on lapwing (seed 1234)",
+  "data": "b-v7",
+  "train_examples": 7863,
+  "track": "architecture",
+  "tier": "1-2B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-lfm25-1.2b-lora-b-v8r256": {
+  "config": "configs/lfm25-1.2b-lora-b-v8r256.json",
+  "method": "bf16 LoRA r256 (LFM2.5 1.2B), design B tools, hard (far-field / noise) ASR augmentation + Bundook-plan conversations, user_context; trained on lapwing + the 4B wild transcripts",
+  "data": "b-v8",
+  "train_examples": 7863,
+  "track": "architecture",
+  "tier": "1-2B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-lfm25-1.2b-lora-b-v7r256s2": {
+  "config": "configs/lfm25-1.2b-lora-b-v7r256s2.json",
+  "method": "bf16 LoRA r256 (LFM2.5 1.2B), design B tools, hard (far-field / noise) ASR augmentation + Bundook-plan conversations, user_context; trained on lapwing (seed 1234)",
+  "data": "b-v7",
+  "train_examples": 7863,
+  "track": "architecture",
+  "tier": "1-2B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-spark-x25-4b-lora-b-v6n-r32s2": {
+  "config": "configs/spark-x25-4b-lora-b-v6n-r32s2.json",
+  "method": "bf16 LoRA r32 (Spark X2.5 4B), design B tools, hard (far-field / noise) ASR augmentation, stable-prefix prompt (seed 1234)",
+  "data": "b-v6n",
+  "ollama": "http://localhost:11435",
+  "ollama_container": "ollama-next",
+  "track": "architecture",
+  "tier": "4B",
+  "prompt_layout": "stable_prefix"
+ },
+ "homeai-lfm25-1.2b-lora-b-v8r256s2": {
+  "config": "configs/lfm25-1.2b-lora-b-v8r256s2.json",
+  "method": "bf16 LoRA r256 (LFM2.5 1.2B), design B tools, hard (far-field / noise) ASR augmentation + Bundook-plan conversations, user_context; trained on lapwing + the 4B wild transcripts (seed 1234)",
+  "data": "b-v8",
+  "train_examples": 7863,
+  "track": "architecture",
+  "tier": "1-2B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-lfm25-1.2b-lora-b-v11wr256": {
+  "config": "configs/lfm25-1.2b-lora-b-v11wr256.json",
+  "method": "bf16 LoRA r256 (LFM2.5 1.2B), design B tools, medium-Whisper names-biased ASR augmentation + Bundook-plan conversations + the 4B wild transcripts, user_context; trained on lapwing",
+  "data": "b-v11w",
+  "train_examples": 7863,
+  "track": "architecture",
+  "tier": "1-2B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-lfm25-1.2b-lora-b-v8r256lr1": {
+  "config": "configs/lfm25-1.2b-lora-b-v8r256lr1.json",
+  "method": "bf16 LoRA r256 (LFM2.5 1.2B), design B tools, hard (far-field / noise) ASR augmentation + Bundook-plan conversations, user_context; trained on lapwing + the 4B wild transcripts (lr 1e-4)",
+  "data": "b-v8",
+  "train_examples": 7863,
+  "track": "architecture",
+  "tier": "1-2B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-spark-x25-4b-lora-b-v7-r32": {
+  "config": "configs/spark-x25-4b-lora-b-v7-r32.json",
+  "method": "bf16 LoRA r32 (Spark X2.5 4B), design B tools, hard (far-field / noise) ASR augmentation, stable-prefix prompt + Bundook-plan conversations",
+  "data": "b-v7",
+  "ollama": "http://localhost:11435",
+  "ollama_container": "ollama-next",
+  "track": "architecture",
+  "tier": "4B",
+  "prompt_layout": "stable_prefix"
+ },
+ "homeai-lfm25-1.2b-lora-b-v8r256e3": {
+  "config": "configs/lfm25-1.2b-lora-b-v8r256e3.json",
+  "method": "bf16 LoRA r256 (LFM2.5 1.2B), design B tools, hard (far-field / noise) ASR augmentation + Bundook-plan conversations, user_context; trained on lapwing + the 4B wild transcripts (3 epochs)",
+  "data": "b-v8",
+  "train_examples": 7863,
+  "track": "architecture",
+  "tier": "1-2B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-lfm25-1.2b-lora-b-v8r256e3s2": {
+  "config": "configs/lfm25-1.2b-lora-b-v8r256e3s2.json",
+  "method": "bf16 LoRA r256 (LFM2.5 1.2B), design B tools, hard (far-field / noise) ASR augmentation + Bundook-plan conversations, user_context; trained on lapwing + the 4B wild transcripts (3 epochs) (seed 1234)",
+  "data": "b-v8",
+  "train_examples": 7863,
+  "track": "architecture",
+  "tier": "1-2B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-lfm25-1.2b-lora-b-v8r256e4": {
+  "config": "configs/lfm25-1.2b-lora-b-v8r256e4.json",
+  "method": "bf16 LoRA r256 (LFM2.5 1.2B), design B tools, hard (far-field / noise) ASR augmentation + Bundook-plan conversations, user_context; trained on lapwing + the 4B wild transcripts (4 epochs)",
+  "data": "b-v8",
+  "train_examples": 7863,
+  "track": "architecture",
+  "tier": "1-2B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-spark-x25-4b-lora-b-v7-r32s2": {
+  "config": "configs/spark-x25-4b-lora-b-v7-r32s2.json",
+  "method": "bf16 LoRA r32 (Spark X2.5 4B), design B tools, hard (far-field / noise) ASR augmentation, stable-prefix prompt + Bundook-plan conversations (seed 1234)",
+  "data": "b-v7",
+  "ollama": "http://localhost:11435",
+  "ollama_container": "ollama-next",
+  "track": "architecture",
+  "tier": "4B",
+  "prompt_layout": "stable_prefix"
+ },
+ "homeai-lfm25-1.2b-lora-b-v8r256e4s2": {
+  "config": "configs/lfm25-1.2b-lora-b-v8r256e4s2.json",
+  "method": "bf16 LoRA r256 (LFM2.5 1.2B), design B tools, hard (far-field / noise) ASR augmentation + Bundook-plan conversations, user_context; trained on lapwing + the 4B wild transcripts (4 epochs) (seed 1234)",
+  "data": "b-v8",
+  "train_examples": 7863,
+  "track": "architecture",
+  "tier": "1-2B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-lfm25-1.2b-lora-b-v8r256e6": {
+  "config": "configs/lfm25-1.2b-lora-b-v8r256e6.json",
+  "method": "bf16 LoRA r256 (LFM2.5 1.2B), design B tools, hard (far-field / noise) ASR augmentation + Bundook-plan conversations, user_context; trained on lapwing + the 4B wild transcripts (6 epochs)",
+  "data": "b-v8",
+  "train_examples": 7863,
+  "track": "architecture",
+  "tier": "1-2B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-spark-x25-4b-lora-b-v7-r32e3": {
+  "config": "configs/spark-x25-4b-lora-b-v7-r32e3.json",
+  "method": "bf16 LoRA r32 (Spark X2.5 4B), design B tools, hard (far-field / noise) ASR augmentation, stable-prefix prompt + Bundook-plan conversations (3 epochs)",
+  "data": "b-v7",
+  "ollama": "http://localhost:11435",
+  "ollama_container": "ollama-next",
+  "track": "architecture",
+  "tier": "4B",
+  "prompt_layout": "stable_prefix"
+ },
+ "homeai-lfm25-1.2b-lora-b-v7r256e4": {
+  "config": "configs/lfm25-1.2b-lora-b-v7r256e4.json",
+  "method": "bf16 LoRA r256 (LFM2.5 1.2B), design B tools, hard (far-field / noise) ASR augmentation + Bundook-plan conversations, user_context; trained on lapwing (4 epochs)",
+  "data": "b-v7",
+  "train_examples": 7863,
+  "track": "architecture",
+  "tier": "1-2B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-lfm25-350m-lora-b-v8r256e4": {
+  "config": "configs/lfm25-350m-lora-b-v8r256e4.json",
+  "method": "bf16 LoRA r256 (LFM2.5 350m), design B tools, hard (far-field / noise) ASR augmentation + Bundook-plan conversations, user_context; trained on lapwing + the 4B wild transcripts (4 epochs)",
+  "data": "b-v8",
+  "train_examples": 7863,
+  "track": "architecture",
+  "tier": "<1B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-lfm25-230m-lora-b-v8r256e4": {
+  "config": "configs/lfm25-230m-lora-b-v8r256e4.json",
+  "method": "bf16 LoRA r256 (LFM2.5 230m), design B tools, hard (far-field / noise) ASR augmentation + Bundook-plan conversations, user_context; trained with MLX on frogmouth + the 4B wild transcripts (4 epochs)",
+  "data": "b-v8",
+  "train_examples": 7863,
+  "track": "architecture",
+  "tier": "<1B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-lfm25-2.6b-lora-b-v8r128e4": {
+  "config": "configs/lfm25-2.6b-lora-b-v8r128e4.json",
+  "method": "bf16 LoRA r128 (LFM2.5 2.6B), design B tools, hard (far-field / noise) ASR augmentation + Bundook-plan conversations, user_context; trained on lapwing + the 4B wild transcripts (4 epochs)",
+  "data": "b-v8",
+  "train_examples": 7863,
+  "track": "architecture",
+  "tier": "2B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-lfm25-350m-lora-b-v8r256e4s2": {
+  "config": "configs/lfm25-350m-lora-b-v8r256e4s2.json",
+  "method": "bf16 LoRA r256 (LFM2.5 350m), design B tools, hard (far-field / noise) ASR augmentation + Bundook-plan conversations, user_context; trained on lapwing + the 4B wild transcripts (4 epochs) (seed 1234)",
+  "data": "b-v8",
+  "train_examples": 7863,
+  "track": "architecture",
+  "tier": "<1B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-lfm25-350m-lora-b-v8r256e6": {
+  "config": "configs/lfm25-350m-lora-b-v8r256e6.json",
+  "method": "bf16 LoRA r256 (LFM2.5 350m), design B tools, hard (far-field / noise) ASR augmentation + Bundook-plan conversations, user_context; trained on lapwing + the 4B wild transcripts (6 epochs)",
+  "data": "b-v8",
+  "train_examples": 7863,
+  "track": "architecture",
+  "tier": "<1B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-lfm25-230m-lora-b-v8r256e6": {
+  "config": "configs/lfm25-230m-lora-b-v8r256e6.json",
+  "method": "bf16 LoRA r256 (LFM2.5 230m), design B tools, hard (far-field / noise) ASR augmentation + Bundook-plan conversations, user_context; trained on lapwing + the 4B wild transcripts (6 epochs)",
+  "data": "b-v8",
+  "train_examples": 7863,
+  "track": "architecture",
+  "tier": "<1B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-lfm25-8b-a1b-lora-b-v8r128e4": {
+  "config": "configs/lfm25-8b-a1b-lora-b-v8r128e4.json",
+  "method": "bf16 LoRA r128 (LFM2.5 8B-A1B MoE, attention + conv + dense MLP), design B tools, hard (far-field / noise) ASR augmentation + Bundook-plan conversations, user_context; trained on lapwing + the 4B wild transcripts (4 epochs)",
+  "data": "b-v8",
+  "train_examples": 7863,
+  "track": "architecture",
+  "tier": "8-9B",
+  "prompt_layout": "user_context"
+ }
 }

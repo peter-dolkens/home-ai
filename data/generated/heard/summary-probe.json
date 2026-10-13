@@ -179,6 +179,94 @@
         "sets": 1
       }
     },
+    "large-v3-turbo": {
+      "clean": {
+        "wer": 0.0736,
+        "vocab_wer": 0.0543,
+        "meaning_changed": 0.1,
+        "utterances": 100,
+        "sets": 1
+      },
+      "biased": {
+        "wer": 0.2003,
+        "vocab_wer": 0.0707,
+        "meaning_changed": 0.1,
+        "utterances": 100,
+        "sets": 1
+      },
+      "farfield": {
+        "wer": 0.1158,
+        "vocab_wer": 0.125,
+        "meaning_changed": 0.19,
+        "utterances": 100,
+        "sets": 1
+      },
+      "noisy10": {
+        "wer": 0.2019,
+        "vocab_wer": 0.125,
+        "meaning_changed": 0.18,
+        "utterances": 100,
+        "sets": 1
+      },
+      "noisy5": {
+        "wer": 0.3255,
+        "vocab_wer": 0.2826,
+        "meaning_changed": 0.39,
+        "utterances": 100,
+        "sets": 1
+      },
+      "lowmic": {
+        "wer": 0.0673,
+        "vocab_wer": 0.0543,
+        "meaning_changed": 0.1,
+        "utterances": 100,
+        "sets": 1
+      }
+    },
+    "distil-large-v3": {
+      "clean": {
+        "wer": 0.0986,
+        "vocab_wer": 0.0978,
+        "meaning_changed": 0.15,
+        "utterances": 100,
+        "sets": 1
+      },
+      "biased": {
+        "wer": 0.169,
+        "vocab_wer": 0.087,
+        "meaning_changed": 0.14,
+        "utterances": 100,
+        "sets": 1
+      },
+      "farfield": {
+        "wer": 0.1299,
+        "vocab_wer": 0.1304,
+        "meaning_changed": 0.2,
+        "utterances": 100,
+        "sets": 1
+      },
+      "noisy10": {
+        "wer": 0.1894,
+        "vocab_wer": 0.1522,
+        "meaning_changed": 0.21,
+        "utterances": 100,
+        "sets": 1
+      },
+      "noisy5": {
+        "wer": 0.4006,
+        "vocab_wer": 0.3424,
+        "meaning_changed": 0.43,
+        "utterances": 100,
+        "sets": 1
+      },
+      "lowmic": {
+        "wer": 0.0955,
+        "vocab_wer": 0.087,
+        "meaning_changed": 0.15,
+        "utterances": 100,
+        "sets": 1
+      }
+    },
     "parakeet": {
       "clean": {
         "wer": 0.0782,
@@ -343,7 +431,9 @@
       "host": "frogmouth",
       "cpu": "aarch64",
       "cpus": 10,
-      "host_load_at_start": "1.85 4.15 4.63"
+      "host_load_at_start": "1.85 4.15 4.63",
+      "hardware": "apple-m5",
+      "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB"
     },
     "base": {
       "threads": 4,
@@ -359,7 +449,9 @@
       "host": "frogmouth",
       "cpu": "aarch64",
       "cpus": 10,
-      "host_load_at_start": "1.85 4.15 4.63"
+      "host_load_at_start": "1.85 4.15 4.63",
+      "hardware": "apple-m5",
+      "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB"
     },
     "small": {
       "threads": 4,
@@ -375,7 +467,9 @@
       "host": "frogmouth",
       "cpu": "aarch64",
       "cpus": 10,
-      "host_load_at_start": "1.85 4.15 4.63"
+      "host_load_at_start": "1.85 4.15 4.63",
+      "hardware": "apple-m5",
+      "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB"
     },
     "medium": {
       "threads": 4,
@@ -391,7 +485,9 @@
       "host": "frogmouth",
       "cpu": "aarch64",
       "cpus": 10,
-      "host_load_at_start": "1.85 4.15 4.63"
+      "host_load_at_start": "1.85 4.15 4.63",
+      "hardware": "apple-m5",
+      "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB"
     },
     "large-v3-turbo": {
       "threads": 4,
@@ -407,7 +503,9 @@
       "host": "frogmouth",
       "cpu": "aarch64",
       "cpus": 10,
-      "host_load_at_start": "1.85 4.15 4.63"
+      "host_load_at_start": "1.85 4.15 4.63",
+      "hardware": "apple-m5",
+      "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB"
     },
     "distil-large-v3": {
       "threads": 4,
@@ -423,7 +521,9 @@
       "host": "frogmouth",
       "cpu": "aarch64",
       "cpus": 10,
-      "host_load_at_start": "1.85 4.15 4.63"
+      "host_load_at_start": "1.85 4.15 4.63",
+      "hardware": "apple-m5",
+      "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB"
     },
     "parakeet": {
       "threads": 4,
@@ -439,7 +539,9 @@
       "host": "frogmouth",
       "cpu": "aarch64",
       "cpus": 10,
-      "host_load_at_start": "1.85 4.15 4.63"
+      "host_load_at_start": "1.85 4.15 4.63",
+      "hardware": "apple-m5",
+      "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB"
     },
     "moonshine-tiny": {
       "threads": 4,
@@ -455,7 +557,9 @@
       "host": "frogmouth",
       "cpu": "aarch64",
       "cpus": 10,
-      "host_load_at_start": "1.85 4.15 4.63"
+      "host_load_at_start": "1.85 4.15 4.63",
+      "hardware": "apple-m5",
+      "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB"
     },
     "moonshine-base": {
       "threads": 4,
@@ -471,7 +575,9 @@
       "host": "frogmouth",
       "cpu": "aarch64",
       "cpus": 10,
-      "host_load_at_start": "1.85 4.15 4.63"
+      "host_load_at_start": "1.85 4.15 4.63",
+      "hardware": "apple-m5",
+      "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB"
     },
     "kroko": {
       "threads": 4,
@@ -487,7 +593,9 @@
       "host": "frogmouth",
       "cpu": "aarch64",
       "cpus": 10,
-      "host_load_at_start": "1.85 4.15 4.63"
+      "host_load_at_start": "1.85 4.15 4.63",
+      "hardware": "apple-m5",
+      "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB"
     }
   }
 }

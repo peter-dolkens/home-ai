@@ -35,12 +35,20 @@ def fetch_sherpa(name: str, cache: str) -> str:
     d = os.path.join(cache, "sherpa")
     path = os.path.join(d, SHERPA[name])
     if not os.path.isdir(path):
+        # each pool worker loads its own engine: download and unpack under a per-process name, then rename into place,
+        # so concurrent first loads cannot leave a half-written model (3 Oct: a truncated parakeet encoder.int8.onnx)
+        import shutil
         os.makedirs(d, exist_ok=True)
-        tmp = path + ".tar.bz2"
+        tmp, stage = f"{path}.{os.getpid()}.tar.bz2", f"{path}.{os.getpid()}.d"
         urllib.request.urlretrieve(SHERPA_URL.format(SHERPA[name]), tmp)
         with tarfile.open(tmp) as t:
-            t.extractall(d)
+            t.extractall(stage)
         os.remove(tmp)
+        try:
+            os.rename(os.path.join(stage, SHERPA[name]), path)
+        except OSError:  # another worker finished first
+            pass
+        shutil.rmtree(stage, ignore_errors=True)
     return path
 
 

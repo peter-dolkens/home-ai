@@ -126,7 +126,12 @@ def main():
     ap.add_argument("--scale", type=float, default=1.0, help="multiply the per-scale example counts (quick runs)")
     ap.add_argument("--check", type=int, default=0, help="replay N examples of --out instead of building")
     ap.add_argument("--toolset", default="a", choices=["a", "b"], help="b: design-B transcripts of the same requests (write to bigbench-b.jsonl)")
+    ap.add_argument("--scales", default="", help="override SCALES: kind:n:count,... (4 Oct: 'bundook_full:0:200' for a larger held-out "
+                    "test of the new house itself)")
     a = ap.parse_args()
+    global SCALES
+    if a.scales:
+        SCALES = [(k, int(n), int(c)) for k, n, c in (x.split(":") for x in a.scales.split(","))]
     if a.check:
         return check(a.out, a.check)
     Conv.toolset = a.toolset

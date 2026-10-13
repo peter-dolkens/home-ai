@@ -1,0 +1,207 @@
+{
+  "set": "kokoro__medium__biased",
+  "stt": "medium",
+  "condition": "biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 98,
+  "words": 572,
+  "errors": 10,
+  "wer": 0.0175,
+  "exact": 0.9184,
+  "vocab_words": 205,
+  "vocab_errors": 5,
+  "vocab_wer": 0.0244,
+  "vocab": {
+    "room": {
+      "n": 59,
+      "err": 3,
+      "wer": 0.0508
+    },
+    "device": {
+      "n": 70,
+      "err": 0,
+      "wer": 0.0
+    },
+    "person": {
+      "n": 12,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 13,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 51,
+      "err": 2,
+      "wer": 0.0392
+    }
+  },
+  "meaning_changed": 0.0204,
+  "meaning_changed_n": 2,
+  "meaning_by_kind": {
+    "room": 0.0102,
+    "device": 0.0,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0102
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 9.3634,
+    "p50": 9.4441,
+    "p90": 10.3324,
+    "rtf": 3.1705,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nicole": {
+      "turns": 8,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-nova": {
+      "turns": 4,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sarah": {
+      "turns": 5,
+      "wer": 0.0741,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sky": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-eric": {
+      "turns": 5,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-liam": {
+      "turns": 4,
+      "wer": 0.0417,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-onyx": {
+      "turns": 5,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-puck": {
+      "turns": 5,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 8,
+      "wer": 0.0455,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 8,
+      "wer": 0.0328,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 9,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 9,
+      "wer": 0.037,
+      "meaning_changed": 0.1111
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 6,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 7,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 9,
+      "wer": 0.0196,
+      "meaning_changed": 0.1111
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 20,
+      "wer": 0.0364,
+      "meaning_changed": 0.0
+    },
+    "1.0": {
+      "turns": 53,
+      "wer": 0.0129,
+      "meaning_changed": 0.0189
+    },
+    "1.15": {
+      "turns": 25,
+      "wer": 0.0132,
+      "meaning_changed": 0.04
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 98,
+      "wer": 0.0175,
+      "meaning_changed": 0.0204
+    }
+  },
+  "by_set": {
+    "kokoro__medium__biased": {
+      "turns": 98,
+      "wer": 0.0175,
+      "meaning_changed": 0.0204
+    }
+  },
+  "samples": [
+    {
+      "id": "bbig-random-15000-1014",
+      "turn": 0,
+      "voice": "t-k-bf-isabella-alice",
+      "written": "start up ABC Radio National in the bedroom 3",
+      "heard": "Startup ABC Radio National in the Bedroom 3.",
+      "lost": [
+        [
+          "command",
+          "start"
+        ],
+        [
+          "command",
+          "up"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2254",
+      "turn": 0,
+      "voice": "t-k-bm-lewis-fable",
+      "written": "hey house, flick off the mirror lights in the master ensuite",
+      "heard": "Hey house, flick off the mirror lights in the master ensuit.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

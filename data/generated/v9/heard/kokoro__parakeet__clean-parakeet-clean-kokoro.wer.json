@@ -1,0 +1,450 @@
+{
+  "set": "kokoro__parakeet__clean",
+  "stt": "parakeet",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 606,
+  "words": 3801,
+  "errors": 135,
+  "wer": 0.0355,
+  "exact": 0.8482,
+  "vocab_words": 1237,
+  "vocab_errors": 29,
+  "vocab_wer": 0.0234,
+  "vocab": {
+    "room": {
+      "n": 397,
+      "err": 9,
+      "wer": 0.0227
+    },
+    "device": {
+      "n": 404,
+      "err": 9,
+      "wer": 0.0223
+    },
+    "person": {
+      "n": 57,
+      "err": 3,
+      "wer": 0.0526
+    },
+    "number": {
+      "n": 47,
+      "err": 3,
+      "wer": 0.0638
+    },
+    "command": {
+      "n": 332,
+      "err": 5,
+      "wer": 0.0151
+    }
+  },
+  "meaning_changed": 0.0347,
+  "meaning_changed_n": 21,
+  "meaning_by_kind": {
+    "room": 0.0116,
+    "device": 0.005,
+    "person": 0.005,
+    "number": 0.005,
+    "command": 0.0083
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 0.4134,
+    "p50": 0.3957,
+    "p90": 0.5368,
+    "rtf": 0.1374,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nicole": {
+      "turns": 54,
+      "wer": 0.0588,
+      "meaning_changed": 0.0556
+    },
+    "t-k-af-nova": {
+      "turns": 39,
+      "wer": 0.0116,
+      "meaning_changed": 0.0256
+    },
+    "t-k-af-sarah": {
+      "turns": 31,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sky": {
+      "turns": 40,
+      "wer": 0.0472,
+      "meaning_changed": 0.025
+    },
+    "t-k-am-eric": {
+      "turns": 31,
+      "wer": 0.0311,
+      "meaning_changed": 0.0323
+    },
+    "t-k-am-liam": {
+      "turns": 25,
+      "wer": 0.0226,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-onyx": {
+      "turns": 47,
+      "wer": 0.0456,
+      "meaning_changed": 0.0426
+    },
+    "t-k-am-puck": {
+      "turns": 26,
+      "wer": 0.0686,
+      "meaning_changed": 0.1154
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 39,
+      "wer": 0.0404,
+      "meaning_changed": 0.0513
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 42,
+      "wer": 0.0379,
+      "meaning_changed": 0.0238
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 35,
+      "wer": 0.0426,
+      "meaning_changed": 0.0286
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 52,
+      "wer": 0.0392,
+      "meaning_changed": 0.0192
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 40,
+      "wer": 0.0386,
+      "meaning_changed": 0.05
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 45,
+      "wer": 0.0262,
+      "meaning_changed": 0.0222
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 26,
+      "wer": 0.0314,
+      "meaning_changed": 0.0769
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 34,
+      "wer": 0.0142,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 150,
+      "wer": 0.0326,
+      "meaning_changed": 0.0267
+    },
+    "1.0": {
+      "turns": 303,
+      "wer": 0.0352,
+      "meaning_changed": 0.0363
+    },
+    "1.15": {
+      "turns": 153,
+      "wer": 0.0388,
+      "meaning_changed": 0.0392
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 606,
+      "wer": 0.0355,
+      "meaning_changed": 0.0347
+    }
+  },
+  "by_set": {
+    "kokoro__parakeet__clean": {
+      "turns": 606,
+      "wer": 0.0355,
+      "meaning_changed": 0.0347
+    }
+  },
+  "samples": [
+    {
+      "id": "131-36",
+      "turn": 1,
+      "voice": "t-k-af-nova",
+      "written": "Guest ensuite please.",
+      "heard": "Guest and suit please.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "201-2674",
+      "turn": 0,
+      "voice": "t-k-am-puck",
+      "written": "ok put the lights on in the ensuite, the bathroom and the lounge",
+      "heard": "Okay put the lights on in the in suit, the bathroom and the lounge.",
+      "lost": [
+        [
+          "room",
+          "ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "201-337",
+      "turn": 0,
+      "voice": "t-k-af-nicole",
+      "written": "Play 1989 by Taylor Swift.",
+      "heard": "Play nineteen eighty nine by Taylor Swift",
+      "lost": [
+        [
+          "number",
+          "1989"
+        ]
+      ]
+    },
+    {
+      "id": "203-2058",
+      "turn": 0,
+      "voice": "t-k-af-nicole",
+      "written": "Can you find Elena?",
+      "heard": "Can you find Alina?",
+      "lost": [
+        [
+          "person",
+          "elena"
+        ]
+      ]
+    },
+    {
+      "id": "203-2754",
+      "turn": 0,
+      "voice": "t-k-am-onyx",
+      "written": "hey house, pause the music in the family room thanks",
+      "heard": "Hay House paused the music in the family room thanks.",
+      "lost": [
+        [
+          "command",
+          "pause"
+        ]
+      ]
+    },
+    {
+      "id": "204-1117",
+      "turn": 0,
+      "voice": "t-k-bm-george-lewis",
+      "written": "Close the blinds in the guest ensuite.",
+      "heard": "close the blinds in the guest en suit.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "204-2",
+      "turn": 0,
+      "voice": "t-k-am-puck",
+      "written": "a bit quieter",
+      "heard": "A bit quieters.",
+      "lost": [
+        [
+          "command",
+          "quieter"
+        ]
+      ]
+    },
+    {
+      "id": "205-1052",
+      "turn": 0,
+      "voice": "t-k-am-eric",
+      "written": "quick question, where is Elena",
+      "heard": "Quick question: where is Alina?",
+      "lost": [
+        [
+          "person",
+          "elena"
+        ]
+      ]
+    },
+    {
+      "id": "205-1574",
+      "turn": 0,
+      "voice": "t-k-am-onyx",
+      "written": "shut the dryer down",
+      "heard": "Sut the dryer down.",
+      "lost": [
+        [
+          "command",
+          "shut"
+        ]
+      ]
+    },
+    {
+      "id": "206-2835",
+      "turn": 0,
+      "voice": "t-k-bm-george-lewis",
+      "written": "have you got a clue where Elena is",
+      "heard": "Have you got a clue where Alina is?",
+      "lost": [
+        [
+          "person",
+          "elena"
+        ]
+      ]
+    },
+    {
+      "id": "206-646",
+      "turn": 0,
+      "voice": "t-k-am-puck",
+      "written": "ok flick off the towel rail in the master ensuite thanks",
+      "heard": "Okay flick off the towel rail and the master in suit thanks.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "abig-random-10000-656",
+      "turn": 0,
+      "voice": "t-k-bm-daniel-fable",
+      "written": "turn off the lamp 2 in the living room",
+      "heard": "Turn off the lamp too in the living room.",
+      "lost": [
+        [
+          "device",
+          "lamp 2"
+        ]
+      ]
+    },
+    {
+      "id": "abig-random-15000-904",
+      "turn": 0,
+      "voice": "t-k-bf-alice-lily",
+      "written": "hey house, open the blinds",
+      "heard": "Hay House opened the blinds.",
+      "lost": [
+        [
+          "command",
+          "open"
+        ]
+      ]
+    },
+    {
+      "id": "abig-random-15000-904",
+      "turn": 1,
+      "voice": "t-k-bf-alice-lily",
+      "written": "The one in the bedroom 4.",
+      "heard": "The one in the bedroom fourth.",
+      "lost": [
+        [
+          "room",
+          "bedroom 4"
+        ]
+      ]
+    },
+    {
+      "id": "abig-random-15000-984",
+      "turn": 0,
+      "voice": "t-k-bm-daniel-fable",
+      "written": "Skip.",
+      "heard": "Skipper",
+      "lost": [
+        [
+          "command",
+          "skip"
+        ]
+      ]
+    },
+    {
+      "id": "abig-random-3000-220",
+      "turn": 1,
+      "voice": "t-k-af-nicole",
+      "written": "The driveway one.",
+      "heard": "The driveway won.",
+      "lost": [
+        [
+          "number",
+          "1"
+        ]
+      ]
+    },
+    {
+      "id": "abig-random-6000-364",
+      "turn": 0,
+      "voice": "t-k-bm-george-daniel",
+      "written": "Turn on the wall light 1.",
+      "heard": "Turn on the wall light ones.",
+      "lost": [
+        [
+          "device",
+          "wall light 1"
+        ]
+      ]
+    },
+    {
+      "id": "v5a-800010-h10-missing-pool-heater",
+      "turn": 0,
+      "voice": "t-k-bf-emma-isabella",
+      "written": "Turn on the pool heater",
+      "heard": "Turn on the pool heateth.",
+      "lost": [
+        [
+          "device",
+          "heater"
+        ]
+      ]
+    },
+    {
+      "id": "v5a-810027-solar-towel",
+      "turn": 0,
+      "voice": "t-k-bf-emma-lily",
+      "written": "What's the solar doing, and can you switch off the towel rail in the guest ensuite?",
+      "heard": "What's the solar doing, and can you switch off the towel rail in the guest end suit?",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "v5a-810034-alfresco-jazz",
+      "turn": 0,
+      "voice": "t-k-af-sky",
+      "written": "play some jazz out on the alfresco",
+      "heard": "play some jazz out on the olfresco.",
+      "lost": [
+        [
+          "room",
+          "alfresco"
+        ]
+      ]
+    },
+    {
+      "id": "v5light-131",
+      "turn": 1,
+      "voice": "t-k-bf-isabella-alice",
+      "written": "The laundry one.",
+      "heard": "The laundry ones.",
+      "lost": [
+        [
+          "number",
+          "1"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

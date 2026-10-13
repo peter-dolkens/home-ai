@@ -1,0 +1,296 @@
+[25/200] 92.6% 85.2% 77.8% 74.1% 85.2% 85.2% 88.9% 81.5% 99s
+[50/200] 88.5% 82.7% 71.2% 71.2% 84.6% 84.6% 86.5% 80.8% 217s
+[75/200] 89.0% 82.9% 72.6% 69.5% 81.7% 82.9% 85.4% 76.8% 338s
+[100/200] 87.5% 83.0% 74.6% 67.9% 78.6% 82.1% 84.8% 78.6% 455s
+[125/200] 86.5% 83.0% 70.6% 67.4% 78.7% 81.6% 84.4% 78.0% 573s
+[150/200] 87.5% 83.9% 72.9% 68.5% 79.2% 82.7% 84.5% 77.4% 676s
+[175/200] 86.8% 82.7% 70.8% 67.5% 78.2% 81.2% 83.8% 75.6% 792s
+[200/200] 86.8% 83.3% 73.0% 68.4% 78.9% 82.0% 84.2% 76.3% 931s
+{
+  "model": "homeai-lfm25-1.2b-lora-b-v8r256",
+  "mode": "e2e",
+  "host": "lapwing",
+  "hardware": "rtx-3080",
+  "host_note": "lapwing (accuracy only), user_context",
+  "ollama": "http://127.0.0.1:11500",
+  "lockstep": 8,
+  "prompt_layout": "user_context",
+  "data": "data/generated/bigbench-b-bundook200.jsonl",
+  "examples": 200,
+  "turns": 228,
+  "pass": 0.868421052631579,
+  "conversation_pass": 0.85,
+  "seconds_per_turn": 0.19038559674235528,
+  "calls_per_request": 2.1315789473684212,
+  "errors": 0,
+  "by_kind": {
+    "answer": {
+      "n": 124,
+      "ok": 102
+    },
+    "state": {
+      "n": 228,
+      "ok": 220
+    },
+    "reply": {
+      "n": 228,
+      "ok": 206
+    },
+    "act": {
+      "n": 104,
+      "ok": 96
+    }
+  }
+}
+{
+  "model": "homeai-lfm25-1.2b-lora-b-v8r256",
+  "mode": "e2e",
+  "host": "lapwing",
+  "hardware": "rtx-3080",
+  "host_note": "lapwing (accuracy only), user_context",
+  "ollama": "http://127.0.0.1:11500",
+  "lockstep": 8,
+  "prompt_layout": "user_context",
+  "data": "data/generated/heard/bigbench-b-bundook200-parakeet-clean.jsonl",
+  "examples": 200,
+  "turns": 228,
+  "pass": 0.8333333333333334,
+  "conversation_pass": 0.81,
+  "seconds_per_turn": 0.19166681231284627,
+  "calls_per_request": 2.1491228070175437,
+  "errors": 0,
+  "by_kind": {
+    "answer": {
+      "n": 124,
+      "ok": 99
+    },
+    "state": {
+      "n": 228,
+      "ok": 215
+    },
+    "reply": {
+      "n": 228,
+      "ok": 203
+    },
+    "act": {
+      "n": 104,
+      "ok": 91
+    }
+  }
+}
+{
+  "model": "homeai-lfm25-1.2b-lora-b-v8r256",
+  "mode": "e2e",
+  "host": "lapwing",
+  "hardware": "rtx-3080",
+  "host_note": "lapwing (accuracy only), user_context",
+  "ollama": "http://127.0.0.1:11500",
+  "lockstep": 8,
+  "prompt_layout": "user_context",
+  "data": "data/generated/heard/bigbench-b-bundook200-parakeet-farfield.jsonl",
+  "examples": 200,
+  "turns": 228,
+  "pass": 0.7302631578947368,
+  "conversation_pass": 0.695,
+  "seconds_per_turn": 0.19055861098354918,
+  "calls_per_request": 2.1096491228070176,
+  "errors": 0,
+  "by_kind": {
+    "answer": {
+      "n": 124,
+      "ok": 87.5
+    },
+    "state": {
+      "n": 228,
+      "ok": 200
+    },
+    "reply": {
+      "n": 228,
+      "ok": 193
+    },
+    "act": {
+      "n": 104,
+      "ok": 79
+    }
+  }
+}
+{
+  "model": "homeai-lfm25-1.2b-lora-b-v8r256",
+  "mode": "e2e",
+  "host": "lapwing",
+  "hardware": "rtx-3080",
+  "host_note": "lapwing (accuracy only), user_context",
+  "ollama": "http://127.0.0.1:11500",
+  "lockstep": 8,
+  "prompt_layout": "user_context",
+  "data": "data/generated/heard/bigbench-b-bundook200-parakeet-noisy10.jsonl",
+  "examples": 200,
+  "turns": 228,
+  "pass": 0.6842105263157895,
+  "conversation_pass": 0.65,
+  "seconds_per_turn": 0.19067099064956478,
+  "calls_per_request": 2.1315789473684212,
+  "errors": 0,
+  "by_kind": {
+    "answer": {
+      "n": 124,
+      "ok": 79
+    },
+    "state": {
+      "n": 228,
+      "ok": 193
+    },
+    "reply": {
+      "n": 228,
+      "ok": 185
+    },
+    "act": {
+      "n": 104,
+      "ok": 77
+    }
+  }
+}
+{
+  "model": "homeai-lfm25-1.2b-lora-b-v8r256",
+  "mode": "e2e",
+  "host": "lapwing",
+  "hardware": "rtx-3080",
+  "host_note": "lapwing (accuracy only), user_context",
+  "ollama": "http://127.0.0.1:11500",
+  "lockstep": 8,
+  "prompt_layout": "user_context",
+  "data": "data/generated/heard/bigbench-b-bundook200-small-clean.jsonl",
+  "examples": 200,
+  "turns": 228,
+  "pass": 0.7894736842105263,
+  "conversation_pass": 0.76,
+  "seconds_per_turn": 0.191013951645684,
+  "calls_per_request": 2.1271929824561404,
+  "errors": 0,
+  "by_kind": {
+    "answer": {
+      "n": 124,
+      "ok": 93
+    },
+    "state": {
+      "n": 228,
+      "ok": 210
+    },
+    "reply": {
+      "n": 228,
+      "ok": 197
+    },
+    "act": {
+      "n": 104,
+      "ok": 87
+    }
+  }
+}
+{
+  "model": "homeai-lfm25-1.2b-lora-b-v8r256",
+  "mode": "e2e",
+  "host": "lapwing",
+  "hardware": "rtx-3080",
+  "host_note": "lapwing (accuracy only), user_context",
+  "ollama": "http://127.0.0.1:11500",
+  "lockstep": 8,
+  "prompt_layout": "user_context",
+  "data": "data/generated/heard/bigbench-b-bundook200-small-biased.jsonl",
+  "examples": 200,
+  "turns": 228,
+  "pass": 0.8201754385964912,
+  "conversation_pass": 0.795,
+  "seconds_per_turn": 0.19186828170713702,
+  "calls_per_request": 2.1359649122807016,
+  "errors": 0,
+  "by_kind": {
+    "answer": {
+      "n": 124,
+      "ok": 96
+    },
+    "state": {
+      "n": 228,
+      "ok": 213
+    },
+    "reply": {
+      "n": 228,
+      "ok": 200
+    },
+    "act": {
+      "n": 104,
+      "ok": 91
+    }
+  }
+}
+{
+  "model": "homeai-lfm25-1.2b-lora-b-v8r256",
+  "mode": "e2e",
+  "host": "lapwing",
+  "hardware": "rtx-3080",
+  "host_note": "lapwing (accuracy only), user_context",
+  "ollama": "http://127.0.0.1:11500",
+  "lockstep": 8,
+  "prompt_layout": "user_context",
+  "data": "data/generated/heard/bigbench-b-bundook200-medium-biased.jsonl",
+  "examples": 200,
+  "turns": 228,
+  "pass": 0.8421052631578947,
+  "conversation_pass": 0.82,
+  "seconds_per_turn": 0.19105913609634212,
+  "calls_per_request": 2.1315789473684212,
+  "errors": 0,
+  "by_kind": {
+    "answer": {
+      "n": 124,
+      "ok": 99
+    },
+    "state": {
+      "n": 228,
+      "ok": 216
+    },
+    "reply": {
+      "n": 228,
+      "ok": 203
+    },
+    "act": {
+      "n": 104,
+      "ok": 93
+    }
+  }
+}
+{
+  "model": "homeai-lfm25-1.2b-lora-b-v8r256",
+  "mode": "e2e",
+  "host": "lapwing",
+  "hardware": "rtx-3080",
+  "host_note": "lapwing (accuracy only), user_context",
+  "ollama": "http://127.0.0.1:11500",
+  "lockstep": 8,
+  "prompt_layout": "user_context",
+  "data": "data/generated/heard/bigbench-b-bundook200-tiny-clean.jsonl",
+  "examples": 200,
+  "turns": 228,
+  "pass": 0.7631578947368421,
+  "conversation_pass": 0.735,
+  "seconds_per_turn": 0.19344330817153774,
+  "calls_per_request": 2.1271929824561404,
+  "errors": 0,
+  "by_kind": {
+    "answer": {
+      "n": 124,
+      "ok": 91
+    },
+    "state": {
+      "n": 228,
+      "ok": 206
+    },
+    "reply": {
+      "n": 228,
+      "ok": 195
+    },
+    "act": {
+      "n": 104,
+      "ok": 83
+    }
+  }
+}

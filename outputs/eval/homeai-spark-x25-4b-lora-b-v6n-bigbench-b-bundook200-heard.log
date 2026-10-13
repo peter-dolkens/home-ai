@@ -1,0 +1,296 @@
+[25/200] 85.2% 77.8% 70.4% 66.7% 74.1% 81.5% 77.8% 74.1% 168s
+[50/200] 82.7% 76.9% 65.4% 69.2% 76.9% 82.7% 80.8% 78.8% 382s
+[75/200] 85.4% 76.8% 65.2% 68.3% 75.6% 80.5% 81.7% 75.6% 594s
+[100/200] 86.6% 80.4% 69.2% 69.6% 77.7% 83.0% 84.8% 80.4% 813s
+[125/200] 85.1% 80.9% 67.0% 68.8% 78.0% 82.3% 83.7% 78.0% 1033s
+[150/200] 85.1% 80.4% 67.6% 67.9% 77.4% 81.5% 82.7% 78.0% 1222s
+[175/200] 84.8% 79.2% 66.8% 66.8% 77.2% 81.2% 82.2% 76.6% 1436s
+[200/200] 85.1% 80.3% 69.1% 67.8% 78.5% 82.0% 82.9% 77.6% 1697s
+{
+  "model": "homeai-spark-x25-4b-lora-b-v6n",
+  "mode": "e2e",
+  "host": "magpie",
+  "hardware": "apple-m2",
+  "host_note": "standalone ollama 0.21.2 (Metal) on magpie, e2e client elsewhere",
+  "ollama": "http://localhost:11435",
+  "lockstep": 8,
+  "prompt_layout": "stable_prefix",
+  "data": "data/generated/bigbench-b-bundook200.jsonl",
+  "examples": 200,
+  "turns": 228,
+  "pass": 0.8508771929824561,
+  "conversation_pass": 0.83,
+  "seconds_per_turn": 0.4371474447938585,
+  "calls_per_request": 2.1271929824561404,
+  "errors": 0,
+  "by_kind": {
+    "answer": {
+      "n": 124,
+      "ok": 101
+    },
+    "state": {
+      "n": 228,
+      "ok": 217
+    },
+    "reply": {
+      "n": 228,
+      "ok": 205
+    },
+    "act": {
+      "n": 104,
+      "ok": 93
+    }
+  }
+}
+{
+  "model": "homeai-spark-x25-4b-lora-b-v6n",
+  "mode": "e2e",
+  "host": "magpie",
+  "hardware": "apple-m2",
+  "host_note": "standalone ollama 0.21.2 (Metal) on magpie, e2e client elsewhere",
+  "ollama": "http://localhost:11435",
+  "lockstep": 8,
+  "prompt_layout": "stable_prefix",
+  "data": "data/generated/heard/bigbench-b-bundook200-parakeet-clean.jsonl",
+  "examples": 200,
+  "turns": 228,
+  "pass": 0.8026315789473685,
+  "conversation_pass": 0.775,
+  "seconds_per_turn": 0.3878012374814746,
+  "calls_per_request": 2.1184210526315788,
+  "errors": 0,
+  "by_kind": {
+    "answer": {
+      "n": 124,
+      "ok": 97
+    },
+    "state": {
+      "n": 228,
+      "ok": 210
+    },
+    "reply": {
+      "n": 228,
+      "ok": 201
+    },
+    "act": {
+      "n": 104,
+      "ok": 86
+    }
+  }
+}
+{
+  "model": "homeai-spark-x25-4b-lora-b-v6n",
+  "mode": "e2e",
+  "host": "magpie",
+  "hardware": "apple-m2",
+  "host_note": "standalone ollama 0.21.2 (Metal) on magpie, e2e client elsewhere",
+  "ollama": "http://localhost:11435",
+  "lockstep": 8,
+  "prompt_layout": "stable_prefix",
+  "data": "data/generated/heard/bigbench-b-bundook200-parakeet-farfield.jsonl",
+  "examples": 200,
+  "turns": 228,
+  "pass": 0.6907894736842105,
+  "conversation_pass": 0.65,
+  "seconds_per_turn": 0.38053082638099545,
+  "calls_per_request": 2.1403508771929824,
+  "errors": 0,
+  "by_kind": {
+    "answer": {
+      "n": 124,
+      "ok": 83.5
+    },
+    "state": {
+      "n": 228,
+      "ok": 194
+    },
+    "reply": {
+      "n": 228,
+      "ok": 189
+    },
+    "act": {
+      "n": 104,
+      "ok": 74
+    }
+  }
+}
+{
+  "model": "homeai-spark-x25-4b-lora-b-v6n",
+  "mode": "e2e",
+  "host": "magpie",
+  "hardware": "apple-m2",
+  "host_note": "standalone ollama 0.21.2 (Metal) on magpie, e2e client elsewhere",
+  "ollama": "http://localhost:11435",
+  "lockstep": 8,
+  "prompt_layout": "stable_prefix",
+  "data": "data/generated/heard/bigbench-b-bundook200-parakeet-noisy10.jsonl",
+  "examples": 200,
+  "turns": 228,
+  "pass": 0.6776315789473685,
+  "conversation_pass": 0.64,
+  "seconds_per_turn": 0.372159996790866,
+  "calls_per_request": 2.0964912280701755,
+  "errors": 0,
+  "by_kind": {
+    "answer": {
+      "n": 124,
+      "ok": 81.5
+    },
+    "state": {
+      "n": 228,
+      "ok": 196
+    },
+    "reply": {
+      "n": 228,
+      "ok": 186
+    },
+    "act": {
+      "n": 104,
+      "ok": 73
+    }
+  }
+}
+{
+  "model": "homeai-spark-x25-4b-lora-b-v6n",
+  "mode": "e2e",
+  "host": "magpie",
+  "hardware": "apple-m2",
+  "host_note": "standalone ollama 0.21.2 (Metal) on magpie, e2e client elsewhere",
+  "ollama": "http://localhost:11435",
+  "lockstep": 8,
+  "prompt_layout": "stable_prefix",
+  "data": "data/generated/heard/bigbench-b-bundook200-small-clean.jsonl",
+  "examples": 200,
+  "turns": 228,
+  "pass": 0.7850877192982456,
+  "conversation_pass": 0.755,
+  "seconds_per_turn": 0.382949141488559,
+  "calls_per_request": 2.1184210526315788,
+  "errors": 0,
+  "by_kind": {
+    "answer": {
+      "n": 124,
+      "ok": 97
+    },
+    "state": {
+      "n": 228,
+      "ok": 205
+    },
+    "reply": {
+      "n": 228,
+      "ok": 201
+    },
+    "act": {
+      "n": 104,
+      "ok": 82
+    }
+  }
+}
+{
+  "model": "homeai-spark-x25-4b-lora-b-v6n",
+  "mode": "e2e",
+  "host": "magpie",
+  "hardware": "apple-m2",
+  "host_note": "standalone ollama 0.21.2 (Metal) on magpie, e2e client elsewhere",
+  "ollama": "http://localhost:11435",
+  "lockstep": 8,
+  "prompt_layout": "stable_prefix",
+  "data": "data/generated/heard/bigbench-b-bundook200-small-biased.jsonl",
+  "examples": 200,
+  "turns": 228,
+  "pass": 0.8201754385964912,
+  "conversation_pass": 0.795,
+  "seconds_per_turn": 0.38054800378389597,
+  "calls_per_request": 2.1228070175438596,
+  "errors": 0,
+  "by_kind": {
+    "answer": {
+      "n": 124,
+      "ok": 98
+    },
+    "state": {
+      "n": 228,
+      "ok": 211
+    },
+    "reply": {
+      "n": 228,
+      "ok": 202
+    },
+    "act": {
+      "n": 104,
+      "ok": 89
+    }
+  }
+}
+{
+  "model": "homeai-spark-x25-4b-lora-b-v6n",
+  "mode": "e2e",
+  "host": "magpie",
+  "hardware": "apple-m2",
+  "host_note": "standalone ollama 0.21.2 (Metal) on magpie, e2e client elsewhere",
+  "ollama": "http://localhost:11435",
+  "lockstep": 8,
+  "prompt_layout": "stable_prefix",
+  "data": "data/generated/heard/bigbench-b-bundook200-medium-biased.jsonl",
+  "examples": 200,
+  "turns": 228,
+  "pass": 0.8289473684210527,
+  "conversation_pass": 0.805,
+  "seconds_per_turn": 0.3782285446901202,
+  "calls_per_request": 2.0964912280701755,
+  "errors": 0,
+  "by_kind": {
+    "answer": {
+      "n": 124,
+      "ok": 99
+    },
+    "state": {
+      "n": 228,
+      "ok": 214
+    },
+    "reply": {
+      "n": 228,
+      "ok": 203
+    },
+    "act": {
+      "n": 104,
+      "ok": 90
+    }
+  }
+}
+{
+  "model": "homeai-spark-x25-4b-lora-b-v6n",
+  "mode": "e2e",
+  "host": "magpie",
+  "hardware": "apple-m2",
+  "host_note": "standalone ollama 0.21.2 (Metal) on magpie, e2e client elsewhere",
+  "ollama": "http://localhost:11435",
+  "lockstep": 8,
+  "prompt_layout": "stable_prefix",
+  "data": "data/generated/heard/bigbench-b-bundook200-tiny-clean.jsonl",
+  "examples": 200,
+  "turns": 228,
+  "pass": 0.7763157894736842,
+  "conversation_pass": 0.75,
+  "seconds_per_turn": 0.38201144077965826,
+  "calls_per_request": 2.1140350877192984,
+  "errors": 0,
+  "by_kind": {
+    "answer": {
+      "n": 124,
+      "ok": 95
+    },
+    "state": {
+      "n": 228,
+      "ok": 205
+    },
+    "reply": {
+      "n": 228,
+      "ok": 199
+    },
+    "act": {
+      "n": 104,
+      "ok": 82
+    }
+  }
+}

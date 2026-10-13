@@ -1,0 +1,9 @@
+2026-10-05 15:53:10 fuse qwen35-2b-lora-b-v2u-r32 on /Users/peter.dolkens/Projects/home-ai/.mlx/bases/Qwen3.5-2B
+fused 96 weights -> outputs/qwen35-2b-lora-b-v2u-r32/merged16
+2026-10-05 15:53:20 mlx_lm.convert mlx6
+[INFO] Loading
+[INFO] Using dtype: bfloat16
+[INFO] Quantizing
+[INFO] Quantized model with 6.503 bits per weight.
+2026-10-05 15:53:39 push mlx/homeai-2b-lora-b-v2u-r32-mlx6 (1490 MB)
+2026-10-05 15:54:38 homeai-2b-lora-b-v2u-r32 MLX artifacts pushed: mlx6

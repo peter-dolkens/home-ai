@@ -1,0 +1,523 @@
+{
+  "set": "piper__small__noisy10-biased",
+  "stt": "small",
+  "condition": "noisy10-biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 64,
+  "words": 433,
+  "errors": 104,
+  "wer": 0.2402,
+  "exact": 0.3594,
+  "vocab_words": 142,
+  "vocab_errors": 34,
+  "vocab_wer": 0.2394,
+  "vocab": {
+    "room": {
+      "n": 49,
+      "err": 11,
+      "wer": 0.2245
+    },
+    "device": {
+      "n": 49,
+      "err": 10,
+      "wer": 0.2041
+    },
+    "person": {
+      "n": 3,
+      "err": 3,
+      "wer": 1.0
+    },
+    "number": {
+      "n": 6,
+      "err": 3,
+      "wer": 0.5
+    },
+    "command": {
+      "n": 35,
+      "err": 7,
+      "wer": 0.2
+    }
+  },
+  "meaning_changed": 0.3906,
+  "meaning_changed_n": 25,
+  "meaning_by_kind": {
+    "room": 0.0938,
+    "device": 0.1562,
+    "person": 0.0469,
+    "number": 0.0469,
+    "command": 0.0781
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 5.2212,
+    "p50": 5.2344,
+    "p90": 6.3515,
+    "rtf": 1.9839,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-ca-p302": {
+      "turns": 4,
+      "wer": 0.1429,
+      "meaning_changed": 0.25
+    },
+    "t-ie-p245": {
+      "turns": 4,
+      "wer": 0.2895,
+      "meaning_changed": 0.75
+    },
+    "t-ie-p288": {
+      "turns": 3,
+      "wer": 0.1905,
+      "meaning_changed": 0.0
+    },
+    "t-ld-p243": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-ni-p304": {
+      "turns": 1,
+      "wer": 0.2,
+      "meaning_changed": 1.0
+    },
+    "t-nz-p335": {
+      "turns": 10,
+      "wer": 0.3231,
+      "meaning_changed": 0.7
+    },
+    "t-sc-p234": {
+      "turns": 3,
+      "wer": 0.25,
+      "meaning_changed": 1.0
+    },
+    "t-sc-p237": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-se-p225": {
+      "turns": 7,
+      "wer": 0.4783,
+      "meaning_changed": 0.2857
+    },
+    "t-sm-prudence": {
+      "turns": 4,
+      "wer": 0.0435,
+      "meaning_changed": 0.25
+    },
+    "t-sm-spike": {
+      "turns": 3,
+      "wer": 0.1154,
+      "meaning_changed": 0.3333
+    },
+    "t-wa-p253": {
+      "turns": 4,
+      "wer": 0.0345,
+      "meaning_changed": 0.25
+    },
+    "t-yk-p267": {
+      "turns": 7,
+      "wer": 0.5405,
+      "meaning_changed": 0.4286
+    },
+    "t-yk-p270": {
+      "turns": 3,
+      "wer": 0.36,
+      "meaning_changed": 0.3333
+    },
+    "t-za-p323": {
+      "turns": 6,
+      "wer": 0.0488,
+      "meaning_changed": 0.1667
+    },
+    "t-za-p347": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 18,
+      "wer": 0.2647,
+      "meaning_changed": 0.5556
+    },
+    "1.0": {
+      "turns": 24,
+      "wer": 0.2036,
+      "meaning_changed": 0.2917
+    },
+    "1.15": {
+      "turns": 22,
+      "wer": 0.2615,
+      "meaning_changed": 0.3636
+    }
+  },
+  "by_noise": {
+    "kitchen": {
+      "turns": 34,
+      "wer": 0.2068,
+      "meaning_changed": 0.3235
+    },
+    "tv": {
+      "turns": 30,
+      "wer": 0.2806,
+      "meaning_changed": 0.4667
+    }
+  },
+  "by_set": {
+    "piper__small__noisy10-biased": {
+      "turns": 64,
+      "wer": 0.2402,
+      "meaning_changed": 0.3906
+    }
+  },
+  "samples": [
+    {
+      "id": "200-727",
+      "turn": 0,
+      "voice": "t-yk-p267",
+      "written": "right, shut the telly off thanks",
+      "heard": "Right, check to tell your things.",
+      "lost": [
+        [
+          "command",
+          "shut"
+        ],
+        [
+          "command",
+          "off"
+        ]
+      ]
+    },
+    {
+      "id": "204-166",
+      "turn": 0,
+      "voice": "t-se-p225",
+      "written": "hey house, lock all the doors thanks",
+      "heard": "Hey, how's it going? How's you on the night? I'm good. Look, all the jobs, thanks! Hope... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ...",
+      "lost": [
+        [
+          "device",
+          "house"
+        ],
+        [
+          "command",
+          "lock"
+        ]
+      ]
+    },
+    {
+      "id": "205-2578",
+      "turn": 0,
+      "voice": "t-ie-p245",
+      "written": "hey house, put the lights on in the guest ensuite, then shut the fan off in master ensuite",
+      "heard": "Hay House, put the lights on in the guest-in-suit, then shut the fan off in master-in-suit.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ],
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "abig-random-3000-57",
+      "turn": 0,
+      "voice": "t-se-p225",
+      "written": "turn the machinery shed lights off",
+      "heard": "Turn the engine, let's off.",
+      "lost": [
+        [
+          "room",
+          "machinery shed"
+        ],
+        [
+          "device",
+          "lights"
+        ]
+      ]
+    },
+    {
+      "id": "131-650",
+      "turn": 1,
+      "voice": "t-sm-prudence",
+      "written": "The living room one.",
+      "heard": "The Living Room",
+      "lost": [
+        [
+          "number",
+          "1"
+        ]
+      ]
+    },
+    {
+      "id": "132-32",
+      "turn": 0,
+      "voice": "t-nz-p335",
+      "written": "quick question, what's using power right now",
+      "heard": "Quick question, what's using how right now?",
+      "lost": [
+        [
+          "device",
+          "power"
+        ]
+      ]
+    },
+    {
+      "id": "132-669",
+      "turn": 0,
+      "voice": "t-nz-p335",
+      "written": "What's the solar forecast for tomorrow?",
+      "heard": "What's the song forecast for tomorrow?",
+      "lost": [
+        [
+          "device",
+          "solar"
+        ]
+      ]
+    },
+    {
+      "id": "132-74",
+      "turn": 0,
+      "voice": "t-sm-spike",
+      "written": "um, how's the solar looking for tomorrow",
+      "heard": "Amber, how's the solo looking for tomorrow?",
+      "lost": [
+        [
+          "device",
+          "solar"
+        ]
+      ]
+    },
+    {
+      "id": "201-1917",
+      "turn": 0,
+      "voice": "t-nz-p335",
+      "written": "hey, is the fan on in the bathroom",
+      "heard": "Hey, this is Sam on In the Bathroom.",
+      "lost": [
+        [
+          "device",
+          "fan"
+        ]
+      ]
+    },
+    {
+      "id": "203-1773",
+      "turn": 0,
+      "voice": "t-ca-p302",
+      "written": "make it 18 degrees in the master bedroom",
+      "heard": "Make it 80 degrees in the Master Bedroom.",
+      "lost": [
+        [
+          "number",
+          "18"
+        ]
+      ]
+    },
+    {
+      "id": "203-1898",
+      "turn": 0,
+      "voice": "t-ni-p304",
+      "written": "What's happening with the solar?",
+      "heard": "What's happening with the salt?",
+      "lost": [
+        [
+          "device",
+          "solar"
+        ]
+      ]
+    },
+    {
+      "id": "204-1864",
+      "turn": 1,
+      "voice": "t-za-p323",
+      "written": "Yeah, unlock it.",
+      "heard": "Yeah. Unluck it.",
+      "lost": [
+        [
+          "command",
+          "unlock"
+        ]
+      ]
+    },
+    {
+      "id": "204-2393",
+      "turn": 0,
+      "voice": "t-yk-p267",
+      "written": "Can you cool dining hall down?",
+      "heard": "Let me cool down, you hold on.",
+      "lost": [
+        [
+          "room",
+          "dining hall"
+        ]
+      ]
+    },
+    {
+      "id": "205-1322",
+      "turn": 0,
+      "voice": "t-nz-p335",
+      "written": "Any idea where Peter is?",
+      "heard": "Any idea where Pete's is?",
+      "lost": [
+        [
+          "person",
+          "peter"
+        ]
+      ]
+    },
+    {
+      "id": "205-502",
+      "turn": 0,
+      "voice": "t-wa-p253",
+      "written": "Any idea where Emma is?",
+      "heard": "Any idea where it is?",
+      "lost": [
+        [
+          "person",
+          "emma"
+        ]
+      ]
+    },
+    {
+      "id": "206-1368",
+      "turn": 0,
+      "voice": "t-nz-p335",
+      "written": "We're heading out for the day, lock everything up",
+      "heard": "We're heading out for the day. Look everything up.",
+      "lost": [
+        [
+          "command",
+          "lock"
+        ]
+      ]
+    },
+    {
+      "id": "206-703",
+      "turn": 0,
+      "voice": "t-nz-p335",
+      "written": "start the oven",
+      "heard": "Start the engine to me, that's all.",
+      "lost": [
+        [
+          "device",
+          "oven"
+        ]
+      ]
+    },
+    {
+      "id": "208-723",
+      "turn": 0,
+      "voice": "t-sc-p234",
+      "written": "Play some Glass Animals in the dining hall.",
+      "heard": "Place some glass animals in the dining hall.",
+      "lost": [
+        [
+          "command",
+          "play"
+        ]
+      ]
+    },
+    {
+      "id": "209-464",
+      "turn": 0,
+      "voice": "t-ie-p245",
+      "written": "cut the homepod in alfresco",
+      "heard": "Cut the HomePod in a Frasco.",
+      "lost": [
+        [
+          "room",
+          "alfresco"
+        ]
+      ]
+    },
+    {
+      "id": "abig-bundook_projected-plan-1477",
+      "turn": 0,
+      "voice": "t-sc-p234",
+      "written": "Any idea where Peter is?",
+      "heard": "Any idea what Pete is?",
+      "lost": [
+        [
+          "person",
+          "peter"
+        ]
+      ]
+    },
+    {
+      "id": "abig-random-10000-550",
+      "turn": 1,
+      "voice": "t-yk-p267",
+      "written": "The back garden one.",
+      "heard": "To Back Garden, Worker, View On The Night Of The...",
+      "lost": [
+        [
+          "number",
+          "1"
+        ]
+      ]
+    },
+    {
+      "id": "abig-random-15000-803",
+      "turn": 0,
+      "voice": "t-ie-p245",
+      "written": "Turn on the lamp 8 in the studio.",
+      "heard": "Turn on the light 8 in the studio.",
+      "lost": [
+        [
+          "device",
+          "lamp 8"
+        ]
+      ]
+    },
+    {
+      "id": "abig-random-15000-978",
+      "turn": 0,
+      "voice": "t-yk-p270",
+      "written": "what's playing in the media room",
+      "heard": "What's that in here?",
+      "lost": [
+        [
+          "room",
+          "media room"
+        ]
+      ]
+    },
+    {
+      "id": "abig-random-6000-334",
+      "turn": 0,
+      "voice": "t-sc-p234",
+      "written": "What's this song in the master ensuite?",
+      "heard": "What's this song in the mastering scene?",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "abig-random-6000-405",
+      "turn": 0,
+      "voice": "t-nz-p335",
+      "written": "hey house, give me an energy update",
+      "heard": "There you have it. Give me an energy update.",
+      "lost": [
+        [
+          "device",
+          "house"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

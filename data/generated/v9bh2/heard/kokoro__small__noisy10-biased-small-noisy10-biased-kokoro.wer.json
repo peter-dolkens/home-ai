@@ -1,0 +1,201 @@
+{
+  "set": "kokoro__small__noisy10-biased",
+  "stt": "small",
+  "condition": "noisy10-biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 26,
+  "words": 165,
+  "errors": 7,
+  "wer": 0.0424,
+  "exact": 0.8077,
+  "vocab_words": 58,
+  "vocab_errors": 4,
+  "vocab_wer": 0.069,
+  "vocab": {
+    "room": {
+      "n": 16,
+      "err": 0,
+      "wer": 0.0
+    },
+    "device": {
+      "n": 26,
+      "err": 3,
+      "wer": 0.1154
+    },
+    "person": {
+      "n": 1,
+      "err": 1,
+      "wer": 1.0
+    },
+    "number": {
+      "n": 0,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 15,
+      "err": 0,
+      "wer": 0.0
+    }
+  },
+  "meaning_changed": 0.1154,
+  "meaning_changed_n": 3,
+  "meaning_by_kind": {
+    "room": 0.0,
+    "device": 0.0769,
+    "person": 0.0385,
+    "number": 0.0,
+    "command": 0.0
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 2.953,
+    "p50": 2.8427,
+    "p90": 3.5599,
+    "rtf": 0.9912,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nova": {
+      "turns": 1,
+      "wer": 0.2,
+      "meaning_changed": 1.0
+    },
+    "t-k-af-sarah": {
+      "turns": 5,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sky": {
+      "turns": 5,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-eric": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-liam": {
+      "turns": 4,
+      "wer": 0.1053,
+      "meaning_changed": 0.25
+    },
+    "t-k-am-onyx": {
+      "turns": 1,
+      "wer": 0.5,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-puck": {
+      "turns": 1,
+      "wer": 0.5,
+      "meaning_changed": 1.0
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 8,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "1.0": {
+      "turns": 12,
+      "wer": 0.0704,
+      "meaning_changed": 0.25
+    },
+    "1.15": {
+      "turns": 6,
+      "wer": 0.0571,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_noise": {
+    "kitchen": {
+      "turns": 15,
+      "wer": 0.03,
+      "meaning_changed": 0.1333
+    },
+    "tv": {
+      "turns": 11,
+      "wer": 0.0615,
+      "meaning_changed": 0.0909
+    }
+  },
+  "by_set": {
+    "kokoro__small__noisy10-biased": {
+      "turns": 26,
+      "wer": 0.0424,
+      "meaning_changed": 0.1154
+    }
+  },
+  "samples": [
+    {
+      "id": "bbig-bundook_full-plan-559-s2",
+      "turn": 0,
+      "voice": "t-k-af-nova",
+      "written": "Any idea where Peter is?",
+      "heard": "Any idea where Pete is.",
+      "lost": [
+        [
+          "person",
+          "peter"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-810-s2",
+      "turn": 0,
+      "voice": "t-k-am-liam",
+      "written": "Did I lock BYD Shark?",
+      "heard": "Did I lock BYD sharp?",
+      "lost": [
+        [
+          "device",
+          "byd shark"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-840-s2",
+      "turn": 0,
+      "voice": "t-k-am-puck",
+      "written": "how's byd shark looking",
+      "heard": "How's Bideshark looking?",
+      "lost": [
+        [
+          "device",
+          "byd shark"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

@@ -1,0 +1,337 @@
+{
+  "set": "kokoro__small__farfield-biased",
+  "stt": "small",
+  "condition": "farfield-biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 80,
+  "words": 557,
+  "errors": 33,
+  "wer": 0.0592,
+  "exact": 0.7625,
+  "vocab_words": 173,
+  "vocab_errors": 14,
+  "vocab_wer": 0.0809,
+  "vocab": {
+    "room": {
+      "n": 64,
+      "err": 7,
+      "wer": 0.1094
+    },
+    "device": {
+      "n": 57,
+      "err": 4,
+      "wer": 0.0702
+    },
+    "person": {
+      "n": 5,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 5,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 42,
+      "err": 3,
+      "wer": 0.0714
+    }
+  },
+  "meaning_changed": 0.15,
+  "meaning_changed_n": 12,
+  "meaning_by_kind": {
+    "room": 0.075,
+    "device": 0.0375,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0375
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 7.8672,
+    "p50": 7.8186,
+    "p90": 9.3973,
+    "rtf": 2.5487,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-k-af-nicole": {
+      "turns": 3,
+      "wer": 0.1364,
+      "meaning_changed": 0.3333
+    },
+    "t-k-af-nova": {
+      "turns": 6,
+      "wer": 0.025,
+      "meaning_changed": 0.0
+    },
+    "t-k-af-sarah": {
+      "turns": 3,
+      "wer": 0.1765,
+      "meaning_changed": 0.6667
+    },
+    "t-k-af-sky": {
+      "turns": 6,
+      "wer": 0.04,
+      "meaning_changed": 0.1667
+    },
+    "t-k-am-eric": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-am-liam": {
+      "turns": 6,
+      "wer": 0.0625,
+      "meaning_changed": 0.1667
+    },
+    "t-k-am-onyx": {
+      "turns": 3,
+      "wer": 0.0345,
+      "meaning_changed": 0.3333
+    },
+    "t-k-am-puck": {
+      "turns": 8,
+      "wer": 0.0612,
+      "meaning_changed": 0.125
+    },
+    "t-k-bf-alice-lily": {
+      "turns": 13,
+      "wer": 0.0455,
+      "meaning_changed": 0.0769
+    },
+    "t-k-bf-emma-isabella": {
+      "turns": 5,
+      "wer": 0.1389,
+      "meaning_changed": 0.2
+    },
+    "t-k-bf-emma-lily": {
+      "turns": 3,
+      "wer": 0.0476,
+      "meaning_changed": 0.3333
+    },
+    "t-k-bf-isabella-alice": {
+      "turns": 4,
+      "wer": 0.0667,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-daniel-fable": {
+      "turns": 5,
+      "wer": 0.1333,
+      "meaning_changed": 0.4
+    },
+    "t-k-bm-george-daniel": {
+      "turns": 6,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-george-lewis": {
+      "turns": 5,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-k-bm-lewis-fable": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 20,
+      "wer": 0.08,
+      "meaning_changed": 0.25
+    },
+    "1.0": {
+      "turns": 42,
+      "wer": 0.0495,
+      "meaning_changed": 0.119
+    },
+    "1.15": {
+      "turns": 18,
+      "wer": 0.0565,
+      "meaning_changed": 0.1111
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 80,
+      "wer": 0.0592,
+      "meaning_changed": 0.15
+    }
+  },
+  "by_set": {
+    "kokoro__small__farfield-biased": {
+      "turns": 80,
+      "wer": 0.0592,
+      "meaning_changed": 0.15
+    }
+  },
+  "samples": [
+    {
+      "id": "b300-1544",
+      "turn": 0,
+      "voice": "t-k-bm-daniel-fable",
+      "written": "Cut the lights in master ensuite, dining hall and guest ensuite",
+      "heard": "Cut the lights in master and suit, dining hall and guest and suit.",
+      "lost": [
+        [
+          "room",
+          "master ensuite dining hall"
+        ],
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "b300-1484",
+      "turn": 0,
+      "voice": "t-k-bf-emma-isabella",
+      "written": "shut the fan off in master ensuite",
+      "heard": "Shut the fan off in Master In Suit.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "b300-1859",
+      "turn": 0,
+      "voice": "t-k-bm-daniel-fable",
+      "written": "Turn off the dining hall lights and turn off the fan in the guest ensuite.",
+      "heard": "Turn off the Dining Hall Lights and turn off the fan in the guest-in suit.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2140",
+      "turn": 0,
+      "voice": "t-k-af-nicole",
+      "written": "ok flip the shark backup feed on thanks",
+      "heard": "Okay, Flip. The shot back up. Feed on thanks.",
+      "lost": [
+        [
+          "device",
+          "shark backup feed"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3219",
+      "turn": 0,
+      "voice": "t-k-am-puck",
+      "written": "Chuck on something upbeat in the dining room",
+      "heard": "Check out something upbeat in the dining room.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3231",
+      "turn": 0,
+      "voice": "t-k-am-liam",
+      "written": "chuck on the Discovery album in the master bedroom",
+      "heard": "Check out the Discovery Album in the Master Bedroom.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_projected-plan-1887",
+      "turn": 0,
+      "voice": "t-k-bf-emma-lily",
+      "written": "can you switch the pendant 2 on thanks",
+      "heard": "Can you switch the pendant, too, on thanks?",
+      "lost": [
+        [
+          "device",
+          "pendant 2"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-10000-666",
+      "turn": 0,
+      "voice": "t-k-af-sarah",
+      "written": "Any idea where Alex's got to?",
+      "heard": "Any idea where Alex has got to.",
+      "lost": [
+        [
+          "room",
+          "alexs"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-10000-702",
+      "turn": 0,
+      "voice": "t-k-af-sky",
+      "written": "Can you turn the downlights on in the guest ensuite?",
+      "heard": "Can you turn the downlights on in the guest and suit?",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-15000-1156",
+      "turn": 0,
+      "voice": "t-k-bf-alice-lily",
+      "written": "Humidifier on.",
+      "heard": "Humidifier Ones.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-3000-111",
+      "turn": 0,
+      "voice": "t-k-am-onyx",
+      "written": "Can you get the lights on in the bedroom 2, and then flick off the lights in the dining room?",
+      "heard": "Can you get the lights on in the bedroom too and then flick off the lights in the dining room?",
+      "lost": [
+        [
+          "room",
+          "bedroom 2"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-3000-88",
+      "turn": 0,
+      "voice": "t-k-af-sarah",
+      "written": "Can you turn the night light off?",
+      "heard": "Can you turn the light off?",
+      "lost": [
+        [
+          "device",
+          "night light"
+        ]
+      ]
+    }
+  ],
+  "tts": "kokoro"
+}

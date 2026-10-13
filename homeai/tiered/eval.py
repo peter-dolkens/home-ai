@@ -39,6 +39,7 @@ from typing import Optional
 from ..eval.e2e import answer_ok, apply_ref, compare, sensitive_only_mismatch
 from ..eval.run_eval import to_ollama
 from ..eval.sensitive import HALF
+from .. import prompt_layout
 from ..host import host_info
 from ..house.bighouse import house_for
 from ..house.schema import Entity
@@ -87,10 +88,11 @@ def _dist(xs: list[float]) -> dict:
 
 
 def evaluate(rows: list[dict], orch=None, picker: Optional[LeafPicker] = None, mode: str = "routed", max_rounds: int = 4, workers: int = 8,
-             route_reads: bool = False, progress: bool = True, fails_fh=None) -> dict:
-    """orch None: the oracle orchestrator; picker None: the oracle leaf (both from to_orch's reference)."""
+             route_reads: bool = False, progress: bool = True, fails_fh=None, layout: Optional[str] = None) -> dict:
+    """orch None: the oracle orchestrator; picker None: the oracle leaf (both from to_orch's reference). layout: the
+    orchestrator's system prompt layout (homeai/prompt_layout.py; the prompt is built from the house here)."""
     oracle_leaf = OracleLeaf() if picker is None else None
-    pipe = Pipeline(orch, picker or LeafPicker(oracle_leaf), mode, max_rounds, workers)
+    pipe = Pipeline(orch, picker or LeafPicker(oracle_leaf), mode, max_rounds, workers, layout=layout)
     cats = collections.defaultdict(lambda: {"n": 0, "ok": 0})
     kinds = collections.defaultdict(lambda: {"n": 0, "ok": 0})
     scales = collections.defaultdict(lambda: {"n": 0, "ok": 0})
@@ -129,6 +131,7 @@ def evaluate(rows: list[dict], orch=None, picker: Optional[LeafPicker] = None, m
                 cend = cuser_idx[k + 1] if k + 1 < len(cuser_idx) else len(cmsgs)
                 ctx = to_ollama(cmsgs[:cj + 1])
                 ctx[0] = {"role": "system", "content": prompt}
+                ctx = pipe.request(ctx)  # the orchestrator's layout; scoring reads the stored turns
                 pipe.orch = orch if orch is not None else OracleOrchestrator([m for m in cmsgs[cj + 1:cend] if m["role"] == "assistant"])
                 try:
                     text, calls, st = pipe.run(ctx, got_house, msgs[j]["content"])
@@ -210,8 +213,9 @@ def main():
     out = a.out or os.path.join("outputs", "eval", f"{name}-{os.path.basename(a.data).replace('.jsonl', '')}-tiered")
     os.makedirs(out, exist_ok=True)
     rows = [json.loads(l) for l in open(a.data) if l.strip()][: a.limit or None]
+    layout = prompt_layout.for_model(None if a.model == "oracle" else a.model, a.prompt_layout)
     with open(os.path.join(out, "failures.jsonl"), "w") as fh:
-        rep = evaluate(rows, orch, picker, mode, a.max_rounds, a.workers, a.route_reads, fails_fh=fh)
+        rep = evaluate(rows, orch, picker, mode, a.max_rounds, a.workers, a.route_reads, fails_fh=fh, layout=layout)
     if rep["errors"] and rep["errors"] / max(1, rep["turns"]) > 0.2:
         print(f"{rep['errors']}/{rep['turns']} transport errors; not writing a report")
         return 2
@@ -220,7 +224,7 @@ def main():
         print(f"{rep['routing']['leaf_errors']}/{leaf_calls} leaf transport errors; not writing a report")
         return 2
     rep = {"model": a.model, "orchestrator_url": a.ollama, **host_info(), "leaves": picker.describe() if picker else {"default": "oracle"},
-           "data": a.data, "mode": "e2e-tiered", "pipeline": mode, "max_rounds": a.max_rounds, **rep}
+           "data": a.data, "mode": "e2e-tiered", "pipeline": mode, "max_rounds": a.max_rounds, "prompt_layout": layout, **rep}
     json.dump(rep, open(os.path.join(out, "report.json"), "w"), indent=2)
     print(json.dumps({k: v for k, v in rep.items() if k not in ("by_category",)}, indent=2))
     print(f"-> {out}")

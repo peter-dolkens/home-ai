@@ -1,0 +1,222 @@
+{
+  "set": "piper__base__clean",
+  "stt": "base",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 22,
+  "words": 151,
+  "errors": 15,
+  "wer": 0.0993,
+  "exact": 0.6364,
+  "vocab_words": 45,
+  "vocab_errors": 5,
+  "vocab_wer": 0.1111,
+  "vocab": {
+    "room": {
+      "n": 10,
+      "err": 3,
+      "wer": 0.3
+    },
+    "device": {
+      "n": 18,
+      "err": 1,
+      "wer": 0.0556
+    },
+    "person": {
+      "n": 0,
+      "err": 0,
+      "wer": 0.0
+    },
+    "number": {
+      "n": 3,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 14,
+      "err": 1,
+      "wer": 0.0714
+    }
+  },
+  "meaning_changed": 0.2273,
+  "meaning_changed_n": 5,
+  "meaning_by_kind": {
+    "room": 0.1364,
+    "device": 0.0455,
+    "person": 0.0,
+    "number": 0.0,
+    "command": 0.0455
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 1.0489,
+    "p50": 1.0744,
+    "p90": 1.1983,
+    "rtf": 0.432,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-ca-p302": {
+      "turns": 4,
+      "wer": 0.125,
+      "meaning_changed": 0.25
+    },
+    "t-ie-p245": {
+      "turns": 3,
+      "wer": 0.1765,
+      "meaning_changed": 0.6667
+    },
+    "t-ie-p288": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-nz-p335": {
+      "turns": 2,
+      "wer": 0.1333,
+      "meaning_changed": 0.0
+    },
+    "t-sc-p234": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-sc-p237": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-se-p225": {
+      "turns": 2,
+      "wer": 0.0556,
+      "meaning_changed": 0.0
+    },
+    "t-sm-prudence": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-wa-p253": {
+      "turns": 1,
+      "wer": 0.5,
+      "meaning_changed": 1.0
+    },
+    "t-yk-p267": {
+      "turns": 2,
+      "wer": 0.2727,
+      "meaning_changed": 0.5
+    },
+    "t-za-p323": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-za-p347": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 8,
+      "wer": 0.14,
+      "meaning_changed": 0.25
+    },
+    "1.0": {
+      "turns": 6,
+      "wer": 0.1389,
+      "meaning_changed": 0.3333
+    },
+    "1.15": {
+      "turns": 8,
+      "wer": 0.0462,
+      "meaning_changed": 0.125
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 22,
+      "wer": 0.0993,
+      "meaning_changed": 0.2273
+    }
+  },
+  "by_set": {
+    "piper__base__clean": {
+      "turns": 22,
+      "wer": 0.0993,
+      "meaning_changed": 0.2273
+    }
+  },
+  "samples": [
+    {
+      "id": "131-240",
+      "turn": 0,
+      "voice": "t-ie-p245",
+      "written": "blinds up please",
+      "heard": "blinds are pleased",
+      "lost": [
+        [
+          "command",
+          "up"
+        ]
+      ]
+    },
+    {
+      "id": "201-446",
+      "turn": 0,
+      "voice": "t-wa-p253",
+      "written": "Is the oven done?",
+      "heard": "Is he having done?",
+      "lost": [
+        [
+          "device",
+          "oven"
+        ]
+      ]
+    },
+    {
+      "id": "204-2688",
+      "turn": 0,
+      "voice": "t-yk-p267",
+      "written": "battery reading",
+      "heard": "But you're eating.",
+      "lost": [
+        [
+          "room",
+          "battery"
+        ]
+      ]
+    },
+    {
+      "id": "206-1575",
+      "turn": 0,
+      "voice": "t-ca-p302",
+      "written": "Switch on the tv in the ensuite.",
+      "heard": "Switch on the TV and insert.",
+      "lost": [
+        [
+          "room",
+          "ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "abig-random-20000-1196",
+      "turn": 0,
+      "voice": "t-ie-p245",
+      "written": "turn off the lamp 7 in the media room",
+      "heard": "Turn off the lamp 7 in the media's room.",
+      "lost": [
+        [
+          "room",
+          "media room"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

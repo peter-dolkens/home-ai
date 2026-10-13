@@ -1,0 +1,19 @@
+{
+  "model": "homeai-gemma4-e4b-v8",
+  "data": "data/generated/test-v2.jsonl",
+  "requests": 60,
+  "cold_mean": 5.724791894433339,
+  "cold_p50": 4.8778554589999885,
+  "cold_p90": 8.299068000000034,
+  "warm_mean": 2.7989524562000008,
+  "warm_p90": 5.994297582999991,
+  "calls_per_request": 2,
+  "seconds_per_call": 2.8659994338833368,
+  "training_running": false,
+  "num_ctx": 8192,
+  "prompt_layout": "classic",
+  "host": "falcon",
+  "hardware": "apple-m2pro",
+  "host_note": "falcon stream: Ollama 0.21.2, cassowary settings (KEEP_ALIVE=-1, NUM_PARALLEL=2), Q4_K_M, num_ctx 8192",
+  "ollama": "http://127.0.0.1:11610"
+}

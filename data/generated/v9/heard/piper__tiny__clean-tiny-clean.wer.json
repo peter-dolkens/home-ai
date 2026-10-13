@@ -1,0 +1,548 @@
+{
+  "set": "piper__tiny__clean",
+  "stt": "tiny",
+  "condition": "clean",
+  "prompted": false,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 85,
+  "words": 575,
+  "errors": 113,
+  "wer": 0.1965,
+  "exact": 0.3765,
+  "vocab_words": 182,
+  "vocab_errors": 42,
+  "vocab_wer": 0.2308,
+  "vocab": {
+    "room": {
+      "n": 53,
+      "err": 16,
+      "wer": 0.3019
+    },
+    "device": {
+      "n": 60,
+      "err": 16,
+      "wer": 0.2667
+    },
+    "person": {
+      "n": 6,
+      "err": 2,
+      "wer": 0.3333
+    },
+    "number": {
+      "n": 10,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 53,
+      "err": 8,
+      "wer": 0.1509
+    }
+  },
+  "meaning_changed": 0.3176,
+  "meaning_changed_n": 27,
+  "meaning_by_kind": {
+    "room": 0.1176,
+    "device": 0.1294,
+    "person": 0.0235,
+    "number": 0.0,
+    "command": 0.0941
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 1.0293,
+    "p50": 1.0195,
+    "p90": 1.292,
+    "rtf": 0.3976,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-ca-p302": {
+      "turns": 2,
+      "wer": 0.4615,
+      "meaning_changed": 0.5
+    },
+    "t-ie-p245": {
+      "turns": 4,
+      "wer": 0.1379,
+      "meaning_changed": 0.25
+    },
+    "t-ie-p288": {
+      "turns": 4,
+      "wer": 0.0625,
+      "meaning_changed": 0.25
+    },
+    "t-ld-p243": {
+      "turns": 9,
+      "wer": 0.0781,
+      "meaning_changed": 0.1111
+    },
+    "t-ni-p304": {
+      "turns": 2,
+      "wer": 0.3846,
+      "meaning_changed": 0.5
+    },
+    "t-nz-p335": {
+      "turns": 6,
+      "wer": 0.0571,
+      "meaning_changed": 0.3333
+    },
+    "t-sc-p234": {
+      "turns": 5,
+      "wer": 0.2222,
+      "meaning_changed": 0.2
+    },
+    "t-sc-p237": {
+      "turns": 6,
+      "wer": 0.1277,
+      "meaning_changed": 0.3333
+    },
+    "t-se-p225": {
+      "turns": 4,
+      "wer": 0.28,
+      "meaning_changed": 0.25
+    },
+    "t-sm-prudence": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-sm-spike": {
+      "turns": 3,
+      "wer": 0.1053,
+      "meaning_changed": 0.0
+    },
+    "t-wa-p253": {
+      "turns": 13,
+      "wer": 0.2386,
+      "meaning_changed": 0.3846
+    },
+    "t-yk-p267": {
+      "turns": 11,
+      "wer": 0.254,
+      "meaning_changed": 0.5455
+    },
+    "t-yk-p270": {
+      "turns": 3,
+      "wer": 0.5,
+      "meaning_changed": 1.0
+    },
+    "t-za-p323": {
+      "turns": 7,
+      "wer": 0.2,
+      "meaning_changed": 0.1429
+    },
+    "t-za-p347": {
+      "turns": 5,
+      "wer": 0.2778,
+      "meaning_changed": 0.2
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 15,
+      "wer": 0.2683,
+      "meaning_changed": 0.3333
+    },
+    "1.0": {
+      "turns": 45,
+      "wer": 0.1711,
+      "meaning_changed": 0.2889
+    },
+    "1.15": {
+      "turns": 25,
+      "wer": 0.2051,
+      "meaning_changed": 0.36
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 85,
+      "wer": 0.1965,
+      "meaning_changed": 0.3176
+    }
+  },
+  "by_set": {
+    "piper__tiny__clean": {
+      "turns": 85,
+      "wer": 0.1965,
+      "meaning_changed": 0.3176
+    }
+  },
+  "samples": [
+    {
+      "id": "202-745",
+      "turn": 0,
+      "voice": "t-wa-p253",
+      "written": "please lock up the door in the mudroom",
+      "heard": "Please lock out the door in the kitchen.",
+      "lost": [
+        [
+          "command",
+          "up"
+        ],
+        [
+          "room",
+          "mudroom"
+        ]
+      ]
+    },
+    {
+      "id": "206-1115",
+      "turn": 0,
+      "voice": "t-ni-p304",
+      "written": "brighten Pete's office lights to 20%",
+      "heard": "Brighton peats off a slice to 20%.",
+      "lost": [
+        [
+          "room",
+          "petes office"
+        ],
+        [
+          "device",
+          "lights"
+        ]
+      ]
+    },
+    {
+      "id": "208-167",
+      "turn": 0,
+      "voice": "t-wa-p253",
+      "written": "hey house, play lo-fi thanks",
+      "heard": "Here has playler for thanks.",
+      "lost": [
+        [
+          "device",
+          "house"
+        ],
+        [
+          "command",
+          "play"
+        ]
+      ]
+    },
+    {
+      "id": "208-1837",
+      "turn": 0,
+      "voice": "t-yk-p267",
+      "written": "front door unlock thanks",
+      "heard": "Friend to our luck thanks",
+      "lost": [
+        [
+          "device",
+          "front door"
+        ],
+        [
+          "command",
+          "unlock"
+        ]
+      ]
+    },
+    {
+      "id": "abig-bundook_projected-plan-1484",
+      "turn": 0,
+      "voice": "t-ie-p288",
+      "written": "Turn on Amber's office lights, and turn off the dining hall tv.",
+      "heard": "Turn on numbers, office lights, and turn off the dining hole TV.",
+      "lost": [
+        [
+          "room",
+          "ambers office"
+        ],
+        [
+          "room",
+          "dining hall"
+        ]
+      ]
+    },
+    {
+      "id": "132-252",
+      "turn": 0,
+      "voice": "t-za-p323",
+      "written": "um, what's the solar forecast for tomorrow",
+      "heard": "Um, what's the sole focus for tomorrow?",
+      "lost": [
+        [
+          "device",
+          "solar"
+        ]
+      ]
+    },
+    {
+      "id": "200-1985",
+      "turn": 0,
+      "voice": "t-za-p347",
+      "written": "get Glass Animals going in the alfresco",
+      "heard": "Take glass animals going in the old fresco.",
+      "lost": [
+        [
+          "room",
+          "alfresco"
+        ]
+      ]
+    },
+    {
+      "id": "201-2203",
+      "turn": 1,
+      "voice": "t-yk-p267",
+      "written": "The office one.",
+      "heard": "They are this one.",
+      "lost": [
+        [
+          "room",
+          "office"
+        ]
+      ]
+    },
+    {
+      "id": "201-2622",
+      "turn": 1,
+      "voice": "t-wa-p253",
+      "written": "Family room please.",
+      "heard": "than they were in peace.",
+      "lost": [
+        [
+          "room",
+          "family room"
+        ]
+      ]
+    },
+    {
+      "id": "202-343",
+      "turn": 0,
+      "voice": "t-yk-p267",
+      "written": "shut off every light in the house",
+      "heard": "just off every light in the house.",
+      "lost": [
+        [
+          "command",
+          "shut"
+        ]
+      ]
+    },
+    {
+      "id": "203-50",
+      "turn": 0,
+      "voice": "t-nz-p335",
+      "written": "um, what's happening with the dryer",
+      "heard": "Um, what's happening with the dry?",
+      "lost": [
+        [
+          "device",
+          "dryer"
+        ]
+      ]
+    },
+    {
+      "id": "205-2070",
+      "turn": 0,
+      "voice": "t-se-p225",
+      "written": "where's Josh right now",
+      "heard": "was just right now.",
+      "lost": [
+        [
+          "person",
+          "josh"
+        ]
+      ]
+    },
+    {
+      "id": "206-1702",
+      "turn": 1,
+      "voice": "t-ld-p243",
+      "written": "The one in Amber's office.",
+      "heard": "The one in Ambs Office.",
+      "lost": [
+        [
+          "room",
+          "ambers office"
+        ]
+      ]
+    },
+    {
+      "id": "206-1794",
+      "turn": 0,
+      "voice": "t-yk-p270",
+      "written": "um, get the front door locked",
+      "heard": "I'm good the front unlocked.",
+      "lost": [
+        [
+          "device",
+          "front door"
+        ]
+      ]
+    },
+    {
+      "id": "206-2294",
+      "turn": 0,
+      "voice": "t-wa-p253",
+      "written": "how much time left on the dishwasher",
+      "heard": "How much time left in the dishwasher?",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "206-2409",
+      "turn": 0,
+      "voice": "t-yk-p270",
+      "written": "what's the dishwasher up to",
+      "heard": "What's the dish or show up to?",
+      "lost": [
+        [
+          "device",
+          "dishwasher"
+        ]
+      ]
+    },
+    {
+      "id": "208-1837",
+      "turn": 1,
+      "voice": "t-yk-p267",
+      "written": "Yeah, unlock it.",
+      "heard": "Yeah, I'm lucky it.",
+      "lost": [
+        [
+          "command",
+          "unlock"
+        ]
+      ]
+    },
+    {
+      "id": "208-2646",
+      "turn": 0,
+      "voice": "t-ca-p302",
+      "written": "um, did anyone leave the media room window open",
+      "heard": "I'm to anyone leave the media room when to open.",
+      "lost": [
+        [
+          "device",
+          "window"
+        ]
+      ]
+    },
+    {
+      "id": "208-530",
+      "turn": 0,
+      "voice": "t-yk-p267",
+      "written": "quick question, can you find Leo",
+      "heard": "Quick question, can you find the O?",
+      "lost": [
+        [
+          "person",
+          "leo"
+        ]
+      ]
+    },
+    {
+      "id": "209-579",
+      "turn": 0,
+      "voice": "t-sc-p237",
+      "written": "Open the mudroom door up for me",
+      "heard": "Open the module and door up for me.",
+      "lost": [
+        [
+          "device",
+          "mudroom door"
+        ]
+      ]
+    },
+    {
+      "id": "abig-bundook_full-plan-1249",
+      "turn": 0,
+      "voice": "t-ie-p245",
+      "written": "is it a good time to run the dryer",
+      "heard": "Is it a good time to run the dry?",
+      "lost": [
+        [
+          "device",
+          "dryer"
+        ]
+      ]
+    },
+    {
+      "id": "abig-random-20000-1093",
+      "turn": 0,
+      "voice": "t-sc-p237",
+      "written": "could you play some Nick Cave in the bedroom 5",
+      "heard": "Could you please suddenly cave in the bedroom 5?",
+      "lost": [
+        [
+          "command",
+          "play"
+        ]
+      ]
+    },
+    {
+      "id": "abig-random-3000-3",
+      "turn": 0,
+      "voice": "t-yk-p270",
+      "written": "hey house, how long left on the oven",
+      "heard": "Hey house, how long have done the oven?",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "abig-random-6000-344",
+      "turn": 0,
+      "voice": "t-sc-p234",
+      "written": "Turn off the workshop iron.",
+      "heard": "Turn off the workshop, bye.",
+      "lost": [
+        [
+          "device",
+          "iron"
+        ]
+      ]
+    },
+    {
+      "id": "v5a-800010-h10-media-study-jazz",
+      "turn": 0,
+      "voice": "t-nz-p335",
+      "written": "Play some jazz in the study",
+      "heard": "Play some jazz in the sub.",
+      "lost": [
+        [
+          "room",
+          "study"
+        ]
+      ]
+    },
+    {
+      "id": "v5a-810013-h13-04",
+      "turn": 0,
+      "voice": "t-yk-p267",
+      "written": "Crank the ensuite window open a bit.",
+      "heard": "Prank the insert window open a bit.",
+      "lost": [
+        [
+          "room",
+          "ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "v5light-186",
+      "turn": 1,
+      "voice": "t-wa-p253",
+      "written": "In the master ensuite.",
+      "heard": "in the master and seat.",
+      "lost": [
+        [
+          "room",
+          "master ensuite"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

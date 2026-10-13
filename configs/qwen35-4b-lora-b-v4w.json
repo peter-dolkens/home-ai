@@ -1,0 +1,21 @@
+{
+ "_comment": "Design B + wild-style data (3 Oct): B-v2's data plus design-B transcripts of train-v9's 1,174 agent-written ('wild') conversations, made by rejection sampling with the 4B B-v2u (homeai/train/rft_b.py: k=4 at temperature 0.7, judged like the outcome eval, best success kept, model's own verified turns as history). B had no wild-style training data and is weakest on wild-b / wild2-b. 4B B-v2u recipe, user_context.",
+ "base_model": "Qwen/Qwen3.5-4B",
+ "hf_tokenizer": "Qwen/Qwen3.5-4B",
+ "ollama_template_from": "qwen3.5:4b",
+ "instruction_part": "<|im_start|>user\n",
+ "response_part": "<|im_start|>assistant\n",
+ "max_seq_len": 6144,
+ "lora_r": 16,
+ "lora_alpha": 16,
+ "epochs": 2,
+ "lr": 0.0002,
+ "batch_size": 1,
+ "grad_accum": 16,
+ "seed": 3407,
+ "train": "data/generated/train-b-v4w.jsonl",
+ "val": "data/generated/val-b.jsonl",
+ "out": "outputs/qwen35-4b-lora-b-v4w",
+ "load_in_4bit": false,
+ "prompt_layout": "user_context"
+}

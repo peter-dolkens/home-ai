@@ -1,0 +1,39 @@
+{
+ "_comment": "LFM 1.2B B-v10 (5 Oct): LFM B-v7's data plus 2,055 rows of a second, independently drawn hard speech-to-text augmentation (asr_v9 --preset hard --salt v9b; only rows whose heard user turns differ from the first draw; scripts/build-b-v10.sh). The hard preset lifted LFM 4.3 points at 3 m on the 200-conversation house set (B-v7 vs B-v3h); does more noisy exposure lift it further? At LoRA rank 32 (alpha 32), changed before training: LFM B-v7 at r32 beat r16 on all four B sets (79.2 vs 76.9% mean) and typed on the house set (84.2 vs 82.9%), so B-v10 compares with LFM B-v7r32.",
+ "base_model": "LiquidAI/LFM2.5-1.2B-Instruct",
+ "hf_tokenizer": "LiquidAI/LFM2.5-1.2B-Instruct",
+ "ollama_template_from": "lfm2.5-1.2b",
+ "instruction_part": "<|im_start|>user\n",
+ "response_part": "<|im_start|>assistant\n",
+ "max_seq_len": 4608,
+ "lora_r": 32,
+ "lora_alpha": 32,
+ "epochs": 2,
+ "lr": 0.0002,
+ "batch_size": 2,
+ "grad_accum": 8,
+ "seed": 3407,
+ "train": "data/generated/train-b-v10.jsonl",
+ "val": "data/generated/val-b.jsonl",
+ "out": "outputs/lfm25-1.2b-lora-b-v10",
+ "load_in_4bit": false,
+ "mask_spans": [
+  [
+   "<|im_start|>tool\n",
+   "<|im_end|>"
+  ]
+ ],
+ "target_modules": [
+  "q_proj",
+  "k_proj",
+  "v_proj",
+  "out_proj",
+  "in_proj",
+  "w1",
+  "w2",
+  "w3"
+ ],
+ "chat_template_from": "LiquidAI/LFM2.5-350M",
+ "note": "fix2: 350M's LFM2.5 template (the unsloth 1.2B mirror's template drops tool calls)",
+ "prompt_layout": "user_context"
+}

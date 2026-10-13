@@ -1,0 +1,39 @@
+{
+  "_comment": "LFM B-v7 at LoRA rank 64 (5 Oct): r32 beat r16 everywhere at the same speed (B sets 79.2 vs 76.9%, house typed 84.2 vs 82.9%, heard mean 75.4 vs 74.8%); does r64 (alpha 64) add more? Same data and recipe.",
+  "base_model": "LiquidAI/LFM2.5-1.2B-Instruct",
+  "hf_tokenizer": "LiquidAI/LFM2.5-1.2B-Instruct",
+  "ollama_template_from": "lfm2.5-1.2b",
+  "instruction_part": "<|im_start|>user\n",
+  "response_part": "<|im_start|>assistant\n",
+  "max_seq_len": 4608,
+  "lora_r": 64,
+  "lora_alpha": 64,
+  "epochs": 2,
+  "lr": 0.0002,
+  "batch_size": 2,
+  "grad_accum": 8,
+  "seed": 3407,
+  "train": "data/generated/train-b-v7.jsonl",
+  "val": "data/generated/val-b.jsonl",
+  "out": "outputs/lfm25-1.2b-lora-b-v7r64",
+  "load_in_4bit": false,
+  "mask_spans": [
+    [
+      "<|im_start|>tool\n",
+      "<|im_end|>"
+    ]
+  ],
+  "target_modules": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "out_proj",
+    "in_proj",
+    "w1",
+    "w2",
+    "w3"
+  ],
+  "chat_template_from": "LiquidAI/LFM2.5-350M",
+  "note": "fix2: 350M's LFM2.5 template (the unsloth 1.2B mirror's template drops tool calls)",
+  "prompt_layout": "user_context"
+}

@@ -1,0 +1,21 @@
+{
+ "_comment": "2B B-v5s (4 Oct): B-v3h's data + the 2B B-v3h's OWN verified design-B transcripts of the wild training conversations (homeai/train/rft_b.py on lapwing). The 4B gained from its own (B-v4w 83.9 vs 82.5%) but the 4B's transcripts did not help the 2B (B-v5 78.8 vs B-v3h 79.8%); self-distillation as the 4B did.",
+ "base_model": "Qwen/Qwen3.5-2B",
+ "hf_tokenizer": "Qwen/Qwen3.5-2B",
+ "ollama_template_from": "qwen3.5:2b",
+ "instruction_part": "<|im_start|>user\n",
+ "response_part": "<|im_start|>assistant\n",
+ "max_seq_len": 4608,
+ "lora_r": 16,
+ "lora_alpha": 16,
+ "epochs": 2,
+ "lr": 0.0002,
+ "batch_size": 1,
+ "grad_accum": 16,
+ "seed": 3407,
+ "train": "data/generated/train-b-v5s.jsonl",
+ "val": "data/generated/val-b.jsonl",
+ "out": "outputs/qwen35-2b-lora-b-v5s",
+ "load_in_4bit": false,
+ "prompt_layout": "user_context"
+}

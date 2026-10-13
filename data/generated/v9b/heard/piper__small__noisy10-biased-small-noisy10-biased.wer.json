@@ -1,0 +1,352 @@
+{
+  "set": "piper__small__noisy10-biased",
+  "stt": "small",
+  "condition": "noisy10-biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 30,
+  "words": 193,
+  "errors": 67,
+  "wer": 0.3472,
+  "exact": 0.3333,
+  "vocab_words": 72,
+  "vocab_errors": 19,
+  "vocab_wer": 0.2639,
+  "vocab": {
+    "room": {
+      "n": 23,
+      "err": 5,
+      "wer": 0.2174
+    },
+    "device": {
+      "n": 23,
+      "err": 8,
+      "wer": 0.3478
+    },
+    "person": {
+      "n": 3,
+      "err": 1,
+      "wer": 0.3333
+    },
+    "number": {
+      "n": 2,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 21,
+      "err": 5,
+      "wer": 0.2381
+    }
+  },
+  "meaning_changed": 0.4333,
+  "meaning_changed_n": 13,
+  "meaning_by_kind": {
+    "room": 0.1333,
+    "device": 0.2,
+    "person": 0.0333,
+    "number": 0.0,
+    "command": 0.1667
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 4.7891,
+    "p50": 4.9122,
+    "p90": 5.8088,
+    "rtf": 1.82,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-ca-p302": {
+      "turns": 4,
+      "wer": 0.5172,
+      "meaning_changed": 0.75
+    },
+    "t-ie-p245": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-ld-p243": {
+      "turns": 1,
+      "wer": 0.1429,
+      "meaning_changed": 1.0
+    },
+    "t-ni-p304": {
+      "turns": 1,
+      "wer": 0.125,
+      "meaning_changed": 0.0
+    },
+    "t-nz-p335": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-sc-p234": {
+      "turns": 2,
+      "wer": 0.2609,
+      "meaning_changed": 1.0
+    },
+    "t-sc-p237": {
+      "turns": 2,
+      "wer": 0.9333,
+      "meaning_changed": 1.0
+    },
+    "t-se-p225": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-sm-prudence": {
+      "turns": 3,
+      "wer": 0.45,
+      "meaning_changed": 0.3333
+    },
+    "t-sm-spike": {
+      "turns": 6,
+      "wer": 0.1111,
+      "meaning_changed": 0.0
+    },
+    "t-yk-p270": {
+      "turns": 3,
+      "wer": 0.5,
+      "meaning_changed": 0.6667
+    },
+    "t-za-p323": {
+      "turns": 1,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-za-p347": {
+      "turns": 4,
+      "wer": 0.4737,
+      "meaning_changed": 0.5
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 8,
+      "wer": 0.537,
+      "meaning_changed": 0.625
+    },
+    "1.0": {
+      "turns": 16,
+      "wer": 0.3091,
+      "meaning_changed": 0.4375
+    },
+    "1.15": {
+      "turns": 6,
+      "wer": 0.1379,
+      "meaning_changed": 0.1667
+    }
+  },
+  "by_noise": {
+    "kitchen": {
+      "turns": 21,
+      "wer": 0.2977,
+      "meaning_changed": 0.4762
+    },
+    "tv": {
+      "turns": 9,
+      "wer": 0.4516,
+      "meaning_changed": 0.3333
+    }
+  },
+  "by_set": {
+    "piper__small__noisy10-biased": {
+      "turns": 30,
+      "wer": 0.3472,
+      "meaning_changed": 0.4333
+    }
+  },
+  "samples": [
+    {
+      "id": "bbig-random-10000-801",
+      "turn": 0,
+      "voice": "t-ca-p302",
+      "written": "Off to bed, can you power the house down?",
+      "heard": "Off the bed, can you proud of how it's done?",
+      "lost": [
+        [
+          "device",
+          "power"
+        ],
+        [
+          "device",
+          "house"
+        ],
+        [
+          "command",
+          "down"
+        ]
+      ]
+    },
+    {
+      "id": "b300-980",
+      "turn": 0,
+      "voice": "t-ca-p302",
+      "written": "flick off the heater in here",
+      "heard": "Wake up if you do anything.",
+      "lost": [
+        [
+          "command",
+          "off"
+        ],
+        [
+          "device",
+          "heater"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-10000-877",
+      "turn": 0,
+      "voice": "t-sc-p234",
+      "written": "turn the plug 5 in the battery shed off",
+      "heard": "Turn the fourth fire to the battery shut off.",
+      "lost": [
+        [
+          "device",
+          "plug 5"
+        ],
+        [
+          "room",
+          "battery shed"
+        ]
+      ]
+    },
+    {
+      "id": "b300-144",
+      "turn": 0,
+      "voice": "t-ld-p243",
+      "written": "How much time left on the dishwasher?",
+      "heard": "How much time left for the dishwasher?",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2267",
+      "turn": 0,
+      "voice": "t-yk-p270",
+      "written": "Turn on the lamp in the lounge.",
+      "heard": "Turn of the lamp in the lounge.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2540",
+      "turn": 0,
+      "voice": "t-za-p347",
+      "written": "hey house, power report please",
+      "heard": "He has power for things.",
+      "lost": [
+        [
+          "device",
+          "house power"
+        ]
+      ]
+    },
+    {
+      "id": "b300-2906",
+      "turn": 0,
+      "voice": "t-sc-p237",
+      "written": "Run the orchard sprinklers for 10 minutes.",
+      "heard": "So I'm going to watch this video for 10 minutes.",
+      "lost": [
+        [
+          "device",
+          "orchard"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3250",
+      "turn": 0,
+      "voice": "t-sm-prudence",
+      "written": "Play some Fleetwood Mac in the kitchen.",
+      "heard": "Place some Fleetwood mat in the kitchen.",
+      "lost": [
+        [
+          "command",
+          "play"
+        ]
+      ]
+    },
+    {
+      "id": "b300-3675",
+      "turn": 0,
+      "voice": "t-sc-p237",
+      "written": "get the heater started in the media room",
+      "heard": "Get the heat to start to bring it in.",
+      "lost": [
+        [
+          "room",
+          "media room"
+        ]
+      ]
+    },
+    {
+      "id": "b300-4398",
+      "turn": 0,
+      "voice": "t-yk-p270",
+      "written": "Did we leave the patio lights on?",
+      "heard": "I did do an easy patch with the lights on.",
+      "lost": [
+        [
+          "room",
+          "patio"
+        ]
+      ]
+    },
+    {
+      "id": "b300-51",
+      "turn": 0,
+      "voice": "t-za-p347",
+      "written": "um, fan on please",
+      "heard": "I'm Sam on the Cheese.",
+      "lost": [
+        [
+          "device",
+          "fan"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-bundook_full-plan-1736",
+      "turn": 0,
+      "voice": "t-ca-p302",
+      "written": "quick question, do you know where Peter is",
+      "heard": "Quick question, do you know what he does?",
+      "lost": [
+        [
+          "person",
+          "peter"
+        ]
+      ]
+    },
+    {
+      "id": "bbig-random-3000-284",
+      "turn": 0,
+      "voice": "t-sc-p234",
+      "written": "Put the lights on in the bedroom 2, the master robe and the kitchen.",
+      "heard": "Put the lights on in the bedroom to the Master Robe in the kitchen.",
+      "lost": [
+        [
+          "room",
+          "bedroom 2"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

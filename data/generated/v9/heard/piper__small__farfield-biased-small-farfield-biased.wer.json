@@ -1,0 +1,357 @@
+{
+  "set": "piper__small__farfield-biased",
+  "stt": "small",
+  "condition": "farfield-biased",
+  "prompted": true,
+  "host": "frogmouth",
+  "hardware": "apple-m5",
+  "host_note": "docker linux/aarch64 VM, 10 cpus, 7 GB",
+  "utterances": 61,
+  "words": 447,
+  "errors": 85,
+  "wer": 0.1902,
+  "exact": 0.4918,
+  "vocab_words": 135,
+  "vocab_errors": 21,
+  "vocab_wer": 0.1556,
+  "vocab": {
+    "room": {
+      "n": 42,
+      "err": 7,
+      "wer": 0.1667
+    },
+    "device": {
+      "n": 44,
+      "err": 7,
+      "wer": 0.1591
+    },
+    "person": {
+      "n": 4,
+      "err": 2,
+      "wer": 0.5
+    },
+    "number": {
+      "n": 4,
+      "err": 0,
+      "wer": 0.0
+    },
+    "command": {
+      "n": 41,
+      "err": 5,
+      "wer": 0.122
+    }
+  },
+  "meaning_changed": 0.2295,
+  "meaning_changed_n": 14,
+  "meaning_by_kind": {
+    "room": 0.082,
+    "device": 0.0492,
+    "person": 0.0328,
+    "number": 0.0,
+    "command": 0.082
+  },
+  "empty": 0,
+  "seconds": {
+    "mean": 4.8094,
+    "p50": 4.9712,
+    "p90": 6.2192,
+    "rtf": 1.8085,
+    "note": "wall time per utterance with parallel workers; see latency.json for single-stream"
+  },
+  "by_voice": {
+    "t-ca-p302": {
+      "turns": 3,
+      "wer": 0.3103,
+      "meaning_changed": 0.6667
+    },
+    "t-ie-p245": {
+      "turns": 10,
+      "wer": 0.1343,
+      "meaning_changed": 0.1
+    },
+    "t-ie-p288": {
+      "turns": 5,
+      "wer": 0.1579,
+      "meaning_changed": 0.2
+    },
+    "t-ld-p243": {
+      "turns": 3,
+      "wer": 0.3333,
+      "meaning_changed": 0.3333
+    },
+    "t-ni-p304": {
+      "turns": 4,
+      "wer": 0.2917,
+      "meaning_changed": 0.25
+    },
+    "t-nz-p335": {
+      "turns": 5,
+      "wer": 0.0588,
+      "meaning_changed": 0.2
+    },
+    "t-sc-p234": {
+      "turns": 5,
+      "wer": 0.3214,
+      "meaning_changed": 0.2
+    },
+    "t-se-p225": {
+      "turns": 2,
+      "wer": 0.7,
+      "meaning_changed": 0.5
+    },
+    "t-sm-prudence": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-sm-spike": {
+      "turns": 3,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-wa-p253": {
+      "turns": 6,
+      "wer": 0.2982,
+      "meaning_changed": 0.3333
+    },
+    "t-yk-p267": {
+      "turns": 4,
+      "wer": 0.2,
+      "meaning_changed": 0.25
+    },
+    "t-za-p323": {
+      "turns": 2,
+      "wer": 0.0,
+      "meaning_changed": 0.0
+    },
+    "t-za-p347": {
+      "turns": 7,
+      "wer": 0.1296,
+      "meaning_changed": 0.2857
+    }
+  },
+  "by_rate": {
+    "0.85": {
+      "turns": 16,
+      "wer": 0.1148,
+      "meaning_changed": 0.1875
+    },
+    "1.0": {
+      "turns": 27,
+      "wer": 0.2157,
+      "meaning_changed": 0.2593
+    },
+    "1.15": {
+      "turns": 18,
+      "wer": 0.2231,
+      "meaning_changed": 0.2222
+    }
+  },
+  "by_noise": {
+    "-": {
+      "turns": 61,
+      "wer": 0.1902,
+      "meaning_changed": 0.2295
+    }
+  },
+  "by_set": {
+    "piper__small__farfield-biased": {
+      "turns": 61,
+      "wer": 0.1902,
+      "meaning_changed": 0.2295
+    }
+  },
+  "samples": [
+    {
+      "id": "203-2619",
+      "turn": 0,
+      "voice": "t-wa-p253",
+      "written": "hey house, chuck Triple J on in the dining hall",
+      "heard": "Here you have a structural journey to Dining Hall.",
+      "lost": [
+        [
+          "device",
+          "house"
+        ],
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "209-1384",
+      "turn": 0,
+      "voice": "t-ca-p302",
+      "written": "get the lights on in the ensuite and kill the lights in the deck",
+      "heard": "Get the lights on the minutes so you can kill the lights in the day.",
+      "lost": [
+        [
+          "room",
+          "ensuite"
+        ],
+        [
+          "room",
+          "deck"
+        ]
+      ]
+    },
+    {
+      "id": "200-1072",
+      "turn": 0,
+      "voice": "t-yk-p267",
+      "written": "hey house, play this everywhere thanks",
+      "heard": "Hey Houseplayers, if you were thanks.",
+      "lost": [
+        [
+          "command",
+          "play"
+        ]
+      ]
+    },
+    {
+      "id": "200-1659",
+      "turn": 0,
+      "voice": "t-se-p225",
+      "written": "Where's Raj?",
+      "heard": "Thanks for watching!",
+      "lost": [
+        [
+          "person",
+          "raj"
+        ]
+      ]
+    },
+    {
+      "id": "201-2406",
+      "turn": 0,
+      "voice": "t-za-p347",
+      "written": "right, turn on the entry lights, and turn off the ensuite lights",
+      "heard": "Right, turn on the Entry Lights and turn off the In-Seq Lights.",
+      "lost": [
+        [
+          "room",
+          "ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "202-279",
+      "turn": 1,
+      "voice": "t-sc-p234",
+      "written": "Guest ensuite please.",
+      "heard": "Test and see, please.",
+      "lost": [
+        [
+          "room",
+          "guest ensuite"
+        ]
+      ]
+    },
+    {
+      "id": "206-82",
+      "turn": 0,
+      "voice": "t-za-p347",
+      "written": "hey, is Sofia in the master bedroom",
+      "heard": "Hey, it's Sophia in the Master Bedroom.",
+      "lost": [
+        [
+          "person",
+          "sofia"
+        ]
+      ]
+    },
+    {
+      "id": "208-2637",
+      "turn": 0,
+      "voice": "t-ni-p304",
+      "written": "do you happen to know where Alex's at",
+      "heard": "Do you happen to know where Alex is at?",
+      "lost": [
+        [
+          "room",
+          "alexs"
+        ]
+      ]
+    },
+    {
+      "id": "abig-random-10000-498",
+      "turn": 0,
+      "voice": "t-ie-p288",
+      "written": "set the temperature in the office to 22",
+      "heard": "Set the temperature in Alpester 22.",
+      "lost": [
+        [
+          "room",
+          "office"
+        ]
+      ]
+    },
+    {
+      "id": "v5a-800001-disarm-preconfirmed",
+      "turn": 0,
+      "voice": "t-nz-p335",
+      "written": "disarm the alarm, I'm walking up now, go ahead",
+      "heard": "Descend the alarm. I'm walking up now. Go ahead.",
+      "lost": [
+        [
+          "command",
+          "disarm"
+        ]
+      ]
+    },
+    {
+      "id": "v5a-810005-battery-runtime-night",
+      "turn": 1,
+      "voice": "t-ca-p302",
+      "written": "cool, remind me, is the pump running",
+      "heard": "Cool. Remind me, it's about running.",
+      "lost": [
+        [
+          "device",
+          "pump"
+        ]
+      ]
+    },
+    {
+      "id": "v5a-810015-solar-check",
+      "turn": 0,
+      "voice": "t-ie-p245",
+      "written": "What's the solar doing at the moment?",
+      "heard": "What's this overdoing at the moment?",
+      "lost": [
+        [
+          "device",
+          "solar"
+        ]
+      ]
+    },
+    {
+      "id": "v5a-810027-dining-warm-ac",
+      "turn": 1,
+      "voice": "t-wa-p253",
+      "written": "Turn the aircon on then, make it a bit cooler.",
+      "heard": "Turn the egg in and then make it a bit cooler.",
+      "lost": [
+        [
+          "command",
+          "on"
+        ]
+      ]
+    },
+    {
+      "id": "v5a-810032-workshop-light-window",
+      "turn": 1,
+      "voice": "t-ld-p243",
+      "written": "is the window still shut",
+      "heard": "The window is still sharp.",
+      "lost": [
+        [
+          "command",
+          "shut"
+        ]
+      ]
+    }
+  ],
+  "tts": "piper"
+}

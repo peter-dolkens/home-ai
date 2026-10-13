@@ -40,14 +40,23 @@ case "${1:-}" in
       "mlx>=0.29" "mlx-lm>=0.28" transformers safetensors numpy jinja2 huggingface_hub $TORCH
     ;;
   ollama-serve)
-    # GPU discovery has a 30 s timeout that a cold Metal-library compile on a busy machine can miss; the server then
-    # runs everything on 4 CPU threads (a minute per call). Restart until it reports Metal (3 tries).
-    for try in 1 2 3; do
+    # GPU discovery has a 30 s timeout (not configurable in 0.21.2) and this Ollama compiles its embedded Metal library
+    # at start-up: 31-46 s on the M5, so a cold start falls back to 4 CPU threads (a minute per call). Warm the OS
+    # shader cache first with a bare runner (no timeout), then start the server; restart until it reports Metal (up
+    # to 6 tries; the last server is kept either way, with a warning).
+    if ! "$OLLAMA" list >/dev/null 2>&1; then
+      "$OLLAMA" runner --ollama-engine --port 11499 > "$MLX_ROOT/ollama-warm.log" 2>&1 & WARM=$!
+      until curl -s -m 5 127.0.0.1:11499/info 2>/dev/null | grep -q Metal || ! kill -0 $WARM 2>/dev/null; do sleep 3; done
+      kill $WARM 2>/dev/null
+    fi
+    for try in 1 2 3 4 5 6; do
       if ! "$OLLAMA" list >/dev/null 2>&1; then
         nohup "$OLLAMA" serve > "$MLX_ROOT/ollama-serve.log" 2>&1 < /dev/null &
         until grep -q "inference compute" "$MLX_ROOT/ollama-serve.log" 2>/dev/null; do sleep 2; done
+        sleep 2
       fi
       grep "inference compute" "$MLX_ROOT/ollama-serve.log" | grep -q "library=Metal" && break
+      [ $try = 6 ] && { echo "WARNING: ollama serve is on CPU after 6 tries"; break; }
       echo "ollama serve fell back to CPU (try $try): restarting"
       pkill -f "$OLLAMA serve"; sleep 3
     done
