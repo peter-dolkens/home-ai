@@ -43,7 +43,8 @@ case "${1:-}" in
   train)  run bash -c "python -m homeai.train.train --config '${2:-configs/qwen35-4b.json}' ${*:3} 2>&1 | tee '$LOG'" ;;
   export) run bash -c "python -m homeai.train.export --config '${2:-configs/qwen35-4b.json}' --name '${3:-homeai}' --no-create ${*:4} 2>&1 | tee '$LOG'" ;;
   collect) run python -m homeai.train.export --config "${2:-configs/qwen35-4b.json}" --collect-only ;;
+  dpo)    run bash -c "python -m homeai.train.dpo --config '${2}' ${*:3} 2>&1 | tee '$LOG'" ;;
   merge)  run python scripts/merge16.py "${2:-configs/qwen35-4b.json}" ;;
   shell)  run bash ;;
-  *) echo "usage: $0 {train|export|shell} [config] [name]"; exit 1 ;;
+  *) echo "usage: $0 {train|dpo|export|merge|shell} [config] [name]"; exit 1 ;;
 esac

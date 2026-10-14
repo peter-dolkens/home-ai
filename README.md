@@ -72,8 +72,9 @@ outcome evals on held-out houses and, for voice, on transcribed speech. What eac
 | **Full fine-tuning** (`"full_finetune": true`: every weight, lr 2e-5, 3 epochs) | LFM2.5 350M, 230M | Worse than LoRA: 350M heard 75.0 / typed 84.2 vs 77.0 / 85.5. Fully tuned weights also quantise badly (230M at Q4_K_M: typed 60.5, heard 53.5). |
 | **Seed averaging** ("model soup", `scripts/soup.py`) | LFM2.5 1.2B, 350M picks | Mixed: 1.2B soup worse (heard 79.9 vs 81.9), 350M soup slightly better on heard (78.4 vs 77.0). |
 | **MoE LoRA** (attention, convs and dense layers; experts frozen) | LFM2.5 8B-A1B | Too big to fine-tune on the shared 3090: the frozen bf16 weights leave ~1.2 GiB beside Frigate and Wyoming, and four runs ran out of memory (last at step ~370 of 2144). |
+| **Preference optimisation (DPO)** on the model's own failures (`homeai/train/dpo_b.py` samples k=4 attempts per turn and judges them like the eval; `homeai/train/dpo.py`: LoRA r64 on the merged pick, reference = adapter off) | LFM2.5 1.2B pick | Round 1 (2,081 pairs, beta 0.1, lr 2e-5): worse (heard 80.3 vs 81.5 for its parent). Round 2 (984 self-chosen pairs, beta 0.3, RPO-weighted chosen NLL, lr 1e-5): heard 81.7 / typed 89.0 vs 81.5 / 88.6, 3090 B sets +0.3 on average, Mac mini 6-bit B sets 84.2 vs 84.1: within seed noise. Only 6% of training turns fail, so there is little to learn from. |
 
-Not yet tried: continued pretraining, preference optimisation (DPO / ORPO / KTO on the models' own failures), logit-level
+Not yet tried: continued pretraining, logit-level
 distillation from a larger model, quantisation-aware training (or DWQ) for the Mac's 6-bit builds.
 
 ## How it works

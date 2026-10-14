@@ -1,0 +1,23 @@
+{
+ "_comment": "DPO round 1 on the Mac pick (14 Oct): pairs from the pick's own attempts on train-b-v8 conversations (homeai/train/dpo_b.py: k=4 at temperature 0.8 on cassowary's Q4_K_M Ollama build; chosen = best success or the reference, rejected = a failed attempt). Fresh LoRA r64 on the pick's merged16, beta 0.1, plus 0.2 x chosen NLL (RPO-style), 1 epoch.",
+ "base_model": "/ai/models/homeai/runs/lfm25-1.2b-lora-b-v8r256e4-merged16",
+ "hf_tokenizer": "/ai/models/homeai/runs/lfm25-1.2b-lora-b-v8r256e4-merged16",
+ "ollama_template_from": "lfm2.5-1.2b",
+ "response_part": "<|im_start|>assistant\n",
+ "end_part": "<|im_end|>",
+ "pairs": "data/generated/dpo-b-lfm12.jsonl",
+ "prompt_layout": "user_context",
+ "max_seq_len": 4608,
+ "lora_r": 64,
+ "lora_alpha": 64,
+ "target_modules": ["q_proj", "k_proj", "v_proj", "out_proj", "in_proj", "w1", "w2", "w3"],
+ "beta": 0.1,
+ "sft_weight": 0.2,
+ "lr": 2e-05,
+ "epochs": 1,
+ "grad_accum": 16,
+ "warmup_steps": 10,
+ "seed": 3407,
+ "cuda_memory_gb": 14,
+ "out": "outputs/lfm25-1.2b-dpo-b-v1"
+}

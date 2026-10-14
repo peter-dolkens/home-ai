@@ -13,7 +13,8 @@ ssh "${C[@]}" cassowary.dolkens.net 'cd /ai/experiments/home-ai
   docker ps --format "{{.Names}}: {{.Status}}" | grep -E "^(homeai|frigate)"
   echo "gpu: $(nvidia-smi --query-gpu=utilization.gpu,memory.used --format=csv,noheader)"
   grep -E "^2026" outputs/overnight.log | grep -vE ": exists$|already done|not rebuilding" | tail -3 | cut -c1-150
-  tr "\r" "\n" < "$(ls -t outputs/*-train.log | head -1)" | grep -E "[0-9]+/[0-9]+ \[" | tail -1 | cut -c1-90' 2>&1
+  tr "\r" "\n" < "$(ls -t outputs/*-train.log | head -1)" | grep -E "[0-9]+/[0-9]+ \[" | tail -1 | cut -c1-90
+  l=$(find outputs/dpo-b outputs -maxdepth 1 \( -path "outputs/dpo-b/*.log" -o -name "*-dpo.log" \) -printf "%T@ %p\n" 2>/dev/null | sort -n | tail -1 | cut -d" " -f2); [ -n "$l" ] && echo "dpo: $(basename $l) $(grep -E "^\[|^step|^sampled|^saved|^merged|rror" $l | tail -1 | cut -c1-110)"' 2>&1
 
 echo "== lapwing"
 # 6 Oct: lapwing's wired port lost its DHCP lease and it fell back to Wi-Fi (10.24.10.8) while DNS still gives the wired address

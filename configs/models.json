@@ -828,5 +828,21 @@
   "track": "architecture",
   "tier": "<1B",
   "prompt_layout": "user_context"
+ },
+ "homeai-lfm25-1.2b-dpo-b-v1": {
+  "config": "configs/lfm25-1.2b-dpo-b-v1.json",
+  "method": "DPO round 1 on the pick (LFM2.5 1.2b LoRA r256 e4): LoRA r64 on its merged weights, pairs from its own failures (beta 0.1 + 0.2 chosen NLL), design B",
+  "data": "b-v8 + fresh B (dpo pairs)",
+  "track": "architecture",
+  "tier": "1-2B",
+  "prompt_layout": "user_context"
+ },
+ "homeai-lfm25-1.2b-dpo-b-v2": {
+  "config": "configs/lfm25-1.2b-dpo-b-v2.json",
+  "method": "DPO round 2 on the pick: self-chosen pairs only, beta 0.3, chosen NLL weight 1.0 (RPO), lr 1e-5, LoRA r64, design B",
+  "data": "b-v8 + fresh B (dpo pairs)",
+  "track": "architecture",
+  "tier": "1-2B",
+  "prompt_layout": "user_context"
  }
 }

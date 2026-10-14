@@ -115,7 +115,7 @@ JOBS = [
                     ("350m-lora-b-v8r256e4s2", ("mlx6",)),
                     ("350m-lora-b-v8r256e6", ("mlx6",)), ("230m-lora-b-v8r256e6", ("mlx6",)),
                     ("350m-full-b-v8e3", ("mlx6",)), ("230m-full-b-v8e3", ("mlx6",)), ("1.2b-soup-b-v8r256e4", ("mlx6",)),
-                    ("350m-soup-b-v8r256e4", ("mlx6",))) for v in vs],
+                    ("350m-soup-b-v8r256e4", ("mlx6",)), ("1.2b-dpo-b-v1", ("mlx6",)), ("1.2b-dpo-b-v2", ("mlx6",))) for v in vs],
     # 4 Oct: B-v4w, the 4B B-v2u plus its own verified design-B transcripts of the wild training conversations: 83.9% mean on
     # the 3090 (B-v2u 82.5%); the Mac's accurate design-B option (B-v2u: 83.2% at 3.7 s warm on falcon)
     Job("homeai-4b-lora-b-v4w@falcon-mlx6", "mlx/homeai-4b-lora-b-v4w-mlx6", mlx=True, steps=("prefix", "e2e"), layout="user_context",

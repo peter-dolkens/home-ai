@@ -435,7 +435,8 @@ def ollama_section():
 MAC_RUNS = [("homeai-lfm25-1.2b-lora-b-v8r256e4", "pick"), ("homeai-lfm25-2.6b-lora-b-v8r128e4", ""),
             ("homeai-lfm25-350m-lora-b-v8r256e4", ""), ("homeai-lfm25-350m-lora-b-v8r256e4s2", "seed 2"),
             ("homeai-lfm25-350m-lora-b-v8r256e6", "6 epochs"), ("homeai-lfm25-230m-lora-b-v8r256e4", ""),
-            ("homeai-lfm25-230m-lora-b-v8r256e6", "6 epochs")]
+            ("homeai-lfm25-230m-lora-b-v8r256e6", "6 epochs"), ("homeai-lfm25-1.2b-dpo-b-v1", "DPO round 1"),
+            ("homeai-lfm25-1.2b-dpo-b-v2", "DPO round 2")]
 
 
 def mac_section():

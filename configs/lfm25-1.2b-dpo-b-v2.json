@@ -1,0 +1,32 @@
+{
+ "_comment": "DPO round 2 (14 Oct): round 1 (beta 0.1, 0.2 x chosen NLL, lr 2e-5, all 1,689 pairs) lost ~1.6 points on the house (heard 80.3 vs the pick's 81.9 seed mean, typed 87.3 vs 89.3) and pushed the chosen transcripts down too (-0.6 nats). Here only pairs whose chosen side is the model's own success (chosen_src self), beta 0.3, chosen NLL weight 1.0 (RPO), lr 1e-5.",
+ "base_model": "/ai/models/homeai/runs/lfm25-1.2b-lora-b-v8r256e4-merged16",
+ "hf_tokenizer": "/ai/models/homeai/runs/lfm25-1.2b-lora-b-v8r256e4-merged16",
+ "ollama_template_from": "lfm2.5-1.2b",
+ "response_part": "<|im_start|>assistant\n",
+ "end_part": "<|im_end|>",
+ "pairs": "data/generated/dpo-b-lfm12-self.jsonl",
+ "prompt_layout": "user_context",
+ "max_seq_len": 4608,
+ "lora_r": 64,
+ "lora_alpha": 64,
+ "target_modules": [
+  "q_proj",
+  "k_proj",
+  "v_proj",
+  "out_proj",
+  "in_proj",
+  "w1",
+  "w2",
+  "w3"
+ ],
+ "beta": 0.3,
+ "sft_weight": 1.0,
+ "lr": 1e-05,
+ "epochs": 1,
+ "grad_accum": 16,
+ "warmup_steps": 10,
+ "seed": 3407,
+ "cuda_memory_gb": 14,
+ "out": "outputs/lfm25-1.2b-dpo-b-v2"
+}
