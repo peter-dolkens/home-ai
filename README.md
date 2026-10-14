@@ -69,10 +69,9 @@ outcome evals on held-out houses and, for voice, on transcribed speech. What eac
 | **Designs** A-E (whole inventory, lookup tools, tiered rooms, fan-out, fast+slow pairs) | all | Design B (lookup tools) won or tied every comparison. |
 | **Base models** | Qwen3.5 0.8B-27B, Gemma 4 E4B, Spark X2.5 4B, LFM2.5 230M-2.6B, Cactus Needle | LFM2.5 1.2B is the Mac champion; untuned models score 31-60%. |
 | **Seeds** | picks | Two seeds per pick: seed alone moves the heard mean by 0.2-1.7 points. |
-
-Running (14 Oct): **full fine-tuning** of the 230M and 350M (`"full_finetune": true` in a training config: every weight, lr 2e-5,
-3 epochs), **seed averaging** ("model soup", `scripts/soup.py`) of the 1.2B and 350M picks, and the LFM2.5 **8B-A1B MoE** (LoRA on
-attention, convs and dense layers; experts frozen).
+| **Full fine-tuning** (`"full_finetune": true`: every weight, lr 2e-5, 3 epochs) | LFM2.5 350M, 230M | Worse than LoRA: 350M heard 75.0 / typed 84.2 vs 77.0 / 85.5. Fully tuned weights also quantise badly (230M at Q4_K_M: typed 60.5, heard 53.5). |
+| **Seed averaging** ("model soup", `scripts/soup.py`) | LFM2.5 1.2B, 350M picks | Mixed: 1.2B soup worse (heard 79.9 vs 81.9), 350M soup slightly better on heard (78.4 vs 77.0). |
+| **MoE LoRA** (attention, convs and dense layers; experts frozen) | LFM2.5 8B-A1B | Too big to fine-tune on the shared 3090: the frozen bf16 weights leave ~1.2 GiB beside Frigate and Wyoming, and four runs ran out of memory (last at step ~370 of 2144). |
 
 Not yet tried: continued pretraining, preference optimisation (DPO / ORPO / KTO on the models' own failures), logit-level
 distillation from a larger model, quantisation-aware training (or DWQ) for the Mac's 6-bit builds.
@@ -360,7 +359,7 @@ step so this plugs straight into Assist pipelines.
 - [x] first training run + baseline vs fine-tune eval
 - [x] `augment.py`: LLM paraphrasing of user utterances
 - [x] design B for very large houses; tiered (C/D) and fast+slow (E) designs evaluated
-- [x] base-model bake-off (Qwen3.5 0.8B-27B, Gemma 4 E4B, Spark X2.5 4B, LFM2.5 230M-2.6B; 8B-A1B training): LFM2.5 1.2B picked
+- [x] base-model bake-off (Qwen3.5 0.8B-27B, Gemma 4 E4B, Spark X2.5 4B, LFM2.5 230M-2.6B; 8B-A1B too big to train beside Frigate): LFM2.5 1.2B picked
 - [x] speech-to-text bake-off on the heard sets: Whisper medium with the house's names
 - [x] separate champions for the Mac mini and the 3090
 - [ ] real recordings in the house as a test set

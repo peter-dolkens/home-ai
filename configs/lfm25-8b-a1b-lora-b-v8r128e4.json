@@ -1,11 +1,11 @@
 {
- "_comment": "LFM2.5 8B-A1B (Liquid, May 2026; MoE: 8.3B total, ~1.5B active, 32 experts / 4 per token) on the pick's recipe (14 Oct, Peter). The experts are fused 3D parameters, so 4-bit loading cannot shrink them and LoRA covers attention, the short convs and the two dense MLP layers (experts and router frozen). bf16, batch 1 x 16, on cassowary's 3090; weights and outputs on /ai/models.",
+ "_comment": "LFM2.5 8B-A1B (Liquid, May 2026; MoE: 8.3B total, ~1.5B active, 32 experts / 4 per token) on the pick's recipe (14 Oct, Peter). The experts are fused 3D parameters, so 4-bit loading cannot shrink them and LoRA covers attention, the short convs and the two dense MLP layers (experts and router frozen). bf16, batch 1 x 16, on cassowary's 3090; weights and outputs on /ai/models. 14 Oct: OOM at step 557 with max_seq_len 4608 (a 932 MB logits block did not fit beside Frigate); now 4096 tokens and a 17.5 GB cap, so a full card stops this run before it can starve Frigate's decoders. Second OOM at step ~536 (a 932 MB logits block for a ~3.8k-token example): UNSLOTH_COMPILE_DISABLE had also switched off Unsloth's chunked cross-entropy, so compile is back on (experts stay eager); resumes from checkpoint-500. Unsloth's compiled MoE path needs torch._grouped_mm (not on the 3090) and without compile it builds full 128k-vocab logits (OOM twice): trained with backend hf (transformers + PEFT, eager experts) and logits only at labelled positions, as Spark. Third OOM (activations, step 73, 252 MB over the 17.5 GB cap; the rest of the card holds Frigate and Wyoming faster-whisper): max_seq_len 4096, dropping the longest 6.4% of rows (the other runs keep rows up to 4608). Fourth OOM (step ~370 of 2144, 14 Oct 11:41, again 252 MB over the cap; expandable_segments, gradient checkpointing and paged 8-bit Adam already on). The frozen bf16 weights take ~15.8 GiB of the ~18 GB the card has beside Frigate and Wyoming, leaving ~1.2 GiB for activations: stopped here, too big to fine-tune on the shared 3090. checkpoint-300 kept on /ai/models.",
  "base_model": "LiquidAI/LFM2.5-8B-A1B",
  "hf_tokenizer": "LiquidAI/LFM2.5-8B-A1B",
  "ollama_template_from": "lfm2.5-1.2b",
  "instruction_part": "<|im_start|>user\n",
  "response_part": "<|im_start|>assistant\n",
- "max_seq_len": 4608,
+ "max_seq_len": 4096,
  "lora_r": 128,
  "lora_alpha": 128,
  "epochs": 4,
@@ -36,11 +36,11 @@
  "note": "its own chat template (Liquid's repo; tokenizer re-issued for tool calls, commit feb5e04)",
  "prompt_layout": "user_context",
  "hf_cache": "/ai/models/homeai/hf-cache",
- "env": {
-  "UNSLOTH_COMPILE_DISABLE": "1"
- },
  "from_pretrained_kwargs": {
   "experts_implementation": "eager"
  },
- "cuda_memory_gb": 19.0
+ "cuda_memory_gb": 17.5,
+ "backend": "hf",
+ "end_part": "<|im_end|>",
+ "labelled_logits_only": true
 }

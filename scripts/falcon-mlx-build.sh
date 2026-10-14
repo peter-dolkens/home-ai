@@ -19,15 +19,24 @@ E="ssh -oControlPath=$HOME/.ssh/cm-%C -oControlMaster=auto -oControlPersist=30m 
 F=($E falcon.dolkens.net)
 FW='~/home-ai-falcon'
 
-if [ ! -f "$RUN/lora/adapter_model.safetensors" ]; then
+# full fine-tunes and model soups (14 Oct) have no adapter: their merged16 is the model
+if [ ! -f "$RUN/lora/adapter_model.safetensors" ] && [ ! -f "$RUN/merged16/config.json" ]; then
   note "fetch $RUN_ID lora"
   ssh -oBatchMode=yes piper.dolkens.net "tar -C home-ai-archive/runs/$RUN_ID -cf - lora config.used.json" | tar -xf - -C "$RUN" ||
     ssh -oBatchMode=yes cassowary.dolkens.net "tar -C /ai/experiments/home-ai/outputs/$RUN_ID -cf - lora config.used.json" | tar -xf - -C "$RUN"
 fi
-[ -f "$RUN/lora/adapter_model.safetensors" ] || { note "no adapter for $RUN_ID"; exit 1; }
+[ -f "$RUN/lora/adapter_model.safetensors" ] || [ -f "$RUN/merged16/config.json" ] || { note "no adapter for $RUN_ID"; exit 1; }
 BASE=${BASE:-$MLX_ROOT/bases/$(python -c "import json,sys; print(json.load(open(sys.argv[1]))['base_model'].split('/')[-1])" "$RUN/config.used.json")}
 [ -f "$RUN/merged16/config.json" ] || { note "fuse $RUN_ID on $BASE"; python -m homeai.train.fuse_peft --lora "$RUN/lora" --out "$RUN/merged16" --base "$BASE"; }
 
+# mlx-lm 0.31.3's LFM2 reads block_ff_dim; transformers-5 saves (LFM2.5 2.6B, full fine-tunes) keep only intermediate_size,
+# which Liquid's configs set to the same value (14 Oct)
+python - "$RUN/merged16/config.json" <<'PY'
+import json, sys
+p = sys.argv[1]; c = json.load(open(p))
+if c.get("model_type") == "lfm2" and c.get("block_ff_dim") is None and c.get("intermediate_size"):
+    c["block_ff_dim"] = c["intermediate_size"]; json.dump(c, open(p, "w"), indent=2); print("config: block_ff_dim =", c["block_ff_dim"])
+PY
 for n in "${VARIANTS[@]}"; do
   case $n in
     mlx4) q="-q --q-bits 4 --q-group-size 64" ;;

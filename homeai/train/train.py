@@ -125,8 +125,10 @@ def run_hf(cfg, train, val):
         tok.pad_token = tok.eos_token
     q = BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_quant_type="nf4", bnb_4bit_compute_dtype=torch.bfloat16,
                            bnb_4bit_use_double_quant=True) if cfg.get("load_in_4bit", True) else None
+    if cfg.get("cuda_memory_gb"):  # as in the Unsloth path: a full card fails this run, not Frigate's decoders
+        torch.cuda.set_per_process_memory_fraction(min(1.0, cfg["cuda_memory_gb"] * 2**30 / torch.cuda.get_device_properties(0).total_memory))
     model = AutoModelForCausalLM.from_pretrained(cfg["base_model"], trust_remote_code=True, dtype=torch.bfloat16,
-                                                 quantization_config=q, device_map={"": 0})
+                                                 quantization_config=q, device_map={"": 0}, **(cfg.get("from_pretrained_kwargs") or {}))
     if q is not None:
         model = prepare_model_for_kbit_training(model, use_gradient_checkpointing=True)
     else:
